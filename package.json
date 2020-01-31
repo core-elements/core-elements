@@ -1,0 +1,34 @@
+{
+  "name": "base-components",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "python -m SimpleHTTPServer 2000",
+    "dev": "rollup --config -w",
+    "build": "rollup --config"
+  },
+  "keywords": [
+    "web components"
+  ],
+  "author": "Leif Riksheim",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "glob": "^7.1.6",
+    "postcss": "^7.0.26",
+    "postcss-each": "^0.10.0",
+    "postcss-import": "^12.0.1",
+    "rollup": "^1.29.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-require-context": "^1.0.0",
+    "rollup-pluginutils": "^2.8.2",
+    "uglifycss": "0.0.29"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  }
+}

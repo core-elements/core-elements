@@ -1,0 +1,73 @@
+body {
+  font-family: arial;
+}
+
+base-select {
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease;
+}
+
+base-select::part(option-list) {
+  top: 120%;
+  border-radius: 5px;
+  animation-name: fade-in;
+  animation-duration: 100s;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+base-select::part(tag) {
+  border-radius: 5px;
+  background: #eee;
+  color: #333;
+}
+
+base-option[active]:not([disabled]),
+base-option:hover:not([disabled]) {
+  background: #2684ff;
+  color: white;
+}
+
+base-option[selected]:not([active]):not(:hover) {
+  background: transparent;
+  color: #333;
+}
+
+base-select:not([multiple]) base-option {
+  position: relative;
+  padding-left: 30px;
+}
+
+base-select:not([multiple]) base-option[selected]::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 8px;
+  width: 2px;
+  background-color: currentColor;
+  content: "";
+  transform: translateX(10px) translateY(-50%) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+base-select:not([multiple]) base-option[selected]::after {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 3px);
+  height: 2px;
+  width: 16px;
+  background-color: currentColor;
+  content: "";
+  transform: translateX(10px) translateY(-50%) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+@keyframes fade-in {
+  from {
+    background: red;
+    top: 100%;
+  }
+  to {
+    background: yellow;
+    top: 120%;
+  }
+}

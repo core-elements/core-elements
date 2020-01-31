@@ -1,0 +1,23 @@
+.base-optgroup {
+  display: block;
+}
+
+.base-optgroup__label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--base-color-ui-600);
+  padding: var(--base-spacing-200);
+  text-transform: uppercase;
+  font-size: var(--base-heading-100);
+}
+
+.base-optgroup__icon {
+  margin-right: var(--base-spacing-100);
+}
+
+.base-optgroup__option-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
