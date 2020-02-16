@@ -17,6 +17,8 @@ class AutoComplete extends LitElement {
     this.hideArrow = false;
     // show clear button
     this.clearable = false;
+    // disabled input
+    this.disabled = false;
     // disable default filter if you want you own custom filtering of the options
     this.disableFilter = false;
     // clear all selected values
@@ -66,6 +68,7 @@ class AutoComplete extends LitElement {
   static get properties() {
     return {
       ariaLabel: { type: String, attribute: "aria-label" },
+      disabled: { type: Boolean },
       showSuggestions: { type: Boolean },
       value: { type: String },
       multiple: { type: Boolean },
@@ -457,6 +460,7 @@ class AutoComplete extends LitElement {
               <div part="tag">
                 ${option.label}
                 <button
+                  ?disabled=${this.disabled}
                   @click="${() => _removeOption(option)}"
                   part="remove-tag"
                 >
@@ -468,6 +472,7 @@ class AutoComplete extends LitElement {
         : ""}
       <!-- Input field -->
       <input
+        ?disabled=${this.disabled}
         .value=${value}
         @keydown=${_handleKeyEvent}
         @input=${_handleInputEvent}
@@ -487,11 +492,17 @@ class AutoComplete extends LitElement {
         ?aria-expanded=${this.showSuggestions}
       />
 
-      <button ?hidden=${clearable} part="clear-button" @click=${clearSelected}>
+      <button
+        ?disabled=${this.disabled}
+        ?hidden=${clearable}
+        part="clear-button"
+        @click=${clearSelected}
+      >
         <slot name="clear">&#10005;</slot>
       </button>
 
       <button
+        ?disabled=${this.disabled}
         ?hidden=${hideArrow}
         part="arrow-button"
         @click=${_handleArrowButtonClick}
@@ -513,7 +524,7 @@ class AutoComplete extends LitElement {
       <div
         id="listbox"
         part="option-list"
-        ?hidden=${!showSuggestions}
+        ?hidden=${!showSuggestions || this.disabled}
         role="listbox"
         aria-activedescendant=${activeSuggestion && activeSuggestion.id
           ? activeSuggestion.id

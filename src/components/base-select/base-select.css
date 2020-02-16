@@ -24,6 +24,10 @@
   --base-select-border: 2px solid #cecece;
 }
 
+:host([disabled]) {
+  background: #eee;
+}
+
 input[part="input-field"] {
   cursor: pointer;
 }
@@ -57,7 +61,6 @@ button[part="clear-button"] {
   justify-content: center;
   align-items: center;
   position: absolute;
-  cursor: pointer;
   width: 30px;
   height: 30px;
   color: #333;
@@ -74,7 +77,7 @@ button[part="arrow-button"] {
   justify-content: center;
   align-items: center;
   position: absolute;
-  cursor: pointer;
+
   width: 30px;
   height: 30px;
   top: 5px;
@@ -116,7 +119,7 @@ button[part="remove-tag"] {
   border: 0;
   color: currentColor;
   background: none;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 div[part="option-list"] {

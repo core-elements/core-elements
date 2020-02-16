@@ -36,7 +36,7 @@ export default [
     input: components,
     output: [
       {
-        dir: "build/components",
+        dir: "dist/components",
         format: "esm"
       }
     ],
@@ -46,7 +46,7 @@ export default [
     input: ["src/main.js"],
     output: [
       {
-        file: "build/main.js",
+        file: "dist/main.js",
         format: "umd",
         name: "aprilabank"
       }
