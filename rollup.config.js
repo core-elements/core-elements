@@ -1,6 +1,7 @@
 // rollup.config.js
 const glob = require("glob");
 const path = require("path");
+import copy from "rollup-plugin-copy";
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 import requireContext from "rollup-plugin-require-context";
@@ -21,11 +22,15 @@ const defaultPlugins = [
 
 // Use code splitting to create a esm build where you can import
 // each component seperately
-const components = glob.sync(`src/components/**/bare-*.js`).reduce(
+const components = glob.sync(`src/components/**/base-*.js`).reduce(
   (acc, filePath) => {
+    const split = filePath.split("/");
+    const lastName = split[split.length - 1];
+    const fileName = lastName.slice(0, -3);
+    console.log(fileName);
     return {
       ...acc,
-      [`${filePath}`]: filePath
+      [`${fileName}`]: filePath
     };
   },
   { index: "src/main.js" }
@@ -51,6 +56,11 @@ export default [
         name: "aprilabank"
       }
     ],
-    plugins: defaultPlugins
+    plugins: [
+      copy({
+        targets: [{ src: "./src/themes/**/*", dest: "dist/themes" }]
+      }),
+      ...defaultPlugins
+    ]
   }
 ];
