@@ -18,54 +18,10 @@
      * http://polymer.github.io/PATENTS.txt
      */
     const directives = new WeakMap();
-    /**
-     * Brands a function as a directive factory function so that lit-html will call
-     * the function during template rendering, rather than passing as a value.
-     *
-     * A _directive_ is a function that takes a Part as an argument. It has the
-     * signature: `(part: Part) => void`.
-     *
-     * A directive _factory_ is a function that takes arguments for data and
-     * configuration and returns a directive. Users of directive usually refer to
-     * the directive factory as the directive. For example, "The repeat directive".
-     *
-     * Usually a template author will invoke a directive factory in their template
-     * with relevant arguments, which will then return a directive function.
-     *
-     * Here's an example of using the `repeat()` directive factory that takes an
-     * array and a function to render an item:
-     *
-     * ```js
-     * html`<ul><${repeat(items, (item) => html`<li>${item}</li>`)}</ul>`
-     * ```
-     *
-     * When `repeat` is invoked, it returns a directive function that closes over
-     * `items` and the template function. When the outer template is rendered, the
-     * return directive function is called with the Part for the expression.
-     * `repeat` then performs it's custom logic to render multiple items.
-     *
-     * @param f The directive factory function. Must be a function that returns a
-     * function of the signature `(part: Part) => void`. The returned function will
-     * be called with the part object.
-     *
-     * @example
-     *
-     * import {directive, html} from 'lit-html';
-     *
-     * const immutable = directive((v) => (part) => {
-     *   if (part.value !== v) {
-     *     part.setValue(v)
-     *   }
-     * });
-     */
-    const directive = (f) => ((...args) => {
-        const d = f(...args);
-        directives.set(d, true);
-        return d;
-    });
     const isDirective = (o) => {
         return typeof o === 'function' && directives.has(o);
     };
+    //# sourceMappingURL=directive.js.map
 
     /**
      * @license
@@ -97,6 +53,7 @@
             start = n;
         }
     };
+    //# sourceMappingURL=dom.js.map
 
     /**
      * @license
@@ -120,6 +77,7 @@
      * A sentinel value that signals a NodePart to fully clear its content.
      */
     const nothing = {};
+    //# sourceMappingURL=part.js.map
 
     /**
      * @license
@@ -333,6 +291,7 @@
      *    * (') then any non-(')
      */
     const lastAttributeNameRegex = /([ \x09\x0a\x0c\x0d])([^\0-\x1F\x7F-\x9F "'>=/]+)([ \x09\x0a\x0c\x0d]*=[ \x09\x0a\x0c\x0d]*(?:[^ \x09\x0a\x0c\x0d"'`<>=]*|"[^"]*|'[^']*))$/;
+    //# sourceMappingURL=template.js.map
 
     /**
      * @license
@@ -465,6 +424,7 @@
             return fragment;
         }
     }
+    //# sourceMappingURL=template-instance.js.map
 
     /**
      * @license
@@ -553,6 +513,7 @@
             return template;
         }
     }
+    //# sourceMappingURL=template-result.js.map
 
     /**
      * @license
@@ -992,6 +953,7 @@
         (eventOptionsSupported ?
             { capture: o.capture, passive: o.passive, once: o.once } :
             o.capture);
+    //# sourceMappingURL=parts.js.map
 
     /**
      * @license
@@ -1043,6 +1005,7 @@
         }
     }
     const defaultTemplateProcessor = new DefaultTemplateProcessor();
+    //# sourceMappingURL=default-template-processor.js.map
 
     /**
      * @license
@@ -1090,6 +1053,7 @@
         return template;
     }
     const templateCaches = new Map();
+    //# sourceMappingURL=template-factory.js.map
 
     /**
      * @license
@@ -1130,6 +1094,7 @@
         part.setValue(result);
         part.commit();
     };
+    //# sourceMappingURL=render.js.map
 
     /**
      * @license
@@ -1153,6 +1118,7 @@
      * render to and update a container.
      */
     const html = (strings, ...values) => new TemplateResult(strings, values, 'html', defaultTemplateProcessor);
+    //# sourceMappingURL=lit-html.js.map
 
     /**
      * @license
@@ -1277,6 +1243,7 @@
             }
         }
     }
+    //# sourceMappingURL=modify-template.js.map
 
     /**
      * @license
@@ -1546,6 +1513,7 @@
             window.ShadyCSS.styleElement(container.host);
         }
     };
+    //# sourceMappingURL=shady-render.js.map
 
     /**
      * @license
@@ -2171,6 +2139,7 @@
      * Marks class as having finished creating properties.
      */
     UpdatingElement[_a] = true;
+    //# sourceMappingURL=updating-element.js.map
 
     /**
     @license
@@ -2234,6 +2203,7 @@
         const cssText = values.reduce((acc, v, idx) => acc + textFromCSSResult(v) + strings[idx + 1], strings[0]);
         return new CSSResult(cssText, constructionToken);
     };
+    //# sourceMappingURL=css-tag.js.map
 
     /**
      * @license
@@ -2431,8 +2401,9 @@
      * @nocollapse
      */
     LitElement.render = render$1;
+    //# sourceMappingURL=lit-element.js.map
 
-    var selectStyles = css`:host{--base-select-padding:10px;--base-select-border:2px solid #eee;--base-select-border-radius:0;--base-select-option-list-border:2px solid #eee;display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;color:var(--base-color-black);background-color:var(--base-color-white);border:var(--base-select-border);border-radius:var(--base-select-border-radius);padding:var(--base-select-padding);position:relative}:host([focused]),:host:hover{--base-select-border:2px solid #cecece}:host([disabled]){background:#eee}input[part=input-field]{cursor:pointer}:host([searchable]) input[part=input-field]{cursor:text}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{color:#333;opacity:1}:host(:hover:not([multiple]):not([focused])){--base-select-border:2px solid #dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;padding:var(--base-spacing-200);border:0;outline:0;margin-bottom:var(--base-spacing-100)}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:30px;height:30px;top:5px;border:0}button[part=arrow-button]{text-align:center;background:0;right:5px}button[part=arrow-button]:focus{box-shadow:0 0 0 2px var(--base-color-active-600)}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:12px;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;padding:5px 0 5px 10px;margin-right:10px;background:#eee}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:5px}div[part=option-list]{position:absolute;left:0;top:110%;width:100%;z-index:600;box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;padding:var(--base-spacing-200);list-style:none;box-shadow:var(--base-depth-200);border-radius:var(--base-select-border-radius-200);background:var(--base-color-white);max-height:300px;overflow-y:scroll}`;
+    var selectStyles = css`:host{--base-select-background:0;--base-select-padding:var(--base-spacing-md,10px);--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,2px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#eee);--base-select-border-radius:var(--base-border-radius-1,0);display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);padding:var(--base-select-padding);position:relative}:host([focused]),:host:hover{--base-select-border-color:#cecece}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:30px;height:30px;top:5px;border:0}button[part=arrow-button]{text-align:center;background:0;right:5px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:12px;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;padding:5px 0 5px 10px;margin-right:10px;background:#eee}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:5px}div[part=option-list]{--base-select-option-list-border:2px solid #eee;--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;position:absolute;left:0;top:110%;width:100%;z-index:600;box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll}`;
 
     class AutoComplete extends LitElement {
       constructor() {
@@ -2496,7 +2467,9 @@
 
         this._removeOption = this._removeOption.bind(this); // scroll to active element in the sugggestion list
 
-        this._scrollToActive = this._scrollToActive.bind(this);
+        this._scrollToActive = this._scrollToActive.bind(this); // handle hover on list options
+
+        this._handleListMouseOver = this._handleListMouseOver.bind(this);
       }
 
       static get properties() {
@@ -2646,12 +2619,16 @@
           selected
         } = this; // Search for all matches and show the option
 
-        const shownOptions = this.allOptions.filter(option => {
+        this.allOptions.forEach(option => {
           // Return matched option, or return always match if filter@
           // is turned off
-          const isMatch = disableFilter ? true : option.getAttribute("label").toLowerCase().includes(value.toLowerCase()); // remove active state
+          const isMatch = disableFilter ? true : option.label.toLowerCase().includes(value.toLowerCase());
 
-          option.removeAttribute("active"); // determine if the option is selected
+          if (!isMatch && option.hasAttribute("active")) {
+            // remove active state
+            option.removeAttribute("active");
+          } // determine if the option is selected
+
 
           const optionSelected = multiple ? selected.includes(option.value) : selected === option.value;
 
@@ -2673,7 +2650,6 @@
             option.setAttribute("hidden", "");
           }
 
-          option.setAttribute("highlight", this.value);
           return isMatch;
         });
       }
@@ -2684,9 +2660,7 @@
         if (optionEl.disabled) return; // single select or multiple select
 
         const select = this.multiple ? this._addOption : this._chooseOption;
-        select(optionEl); // hide suggestions after select
-
-        this.showSuggestions = false;
+        select(optionEl);
       } //  choose option for single select
 
 
@@ -2749,6 +2723,16 @@
         this.value = "";
       }
 
+      _handleListMouseOver(e) {
+        if (e.target.tagName === "BASE-OPTION") {
+          if (this.activeSuggestion) {
+            this.activeSuggestion.removeAttribute("active");
+          }
+
+          e.target.setAttribute("active", "");
+        }
+      }
+
       _handleInputEvent(e) {
         e.stopPropagation(); // First set the value `base-select` to the target value of the input element
 
@@ -2774,11 +2758,13 @@
 
         if (keyCode === 27) {
           this.showSuggestions = false;
-        } // Enter
-
+        }
 
         if (keyCode === 13 && activeSuggestion) {
-          this._selectOption(activeSuggestion);
+          this._selectOption(activeSuggestion); // hide suggestions after select
+
+
+          this.showSuggestions = false;
         } // Backspace
 
 
@@ -2810,11 +2796,12 @@
 
           if (this.showSuggestions === false) {
             this.showSuggestions = true;
-          } // set last suggestion to active
+          }
 
+          const lastSuggestion = this._selectedEl || suggestions[suggestions.length - 1]; // set last suggestion to active
 
           if (!activeSuggestion) {
-            suggestions[suggestions.length - 1].setAttribute("active", "");
+            lastSuggestion.setAttribute("active", "");
             return;
           } // remove active attr
 
@@ -2844,7 +2831,7 @@
             this.showSuggestions = true;
           }
 
-          const firstOption = suggestions[0]; // set first suggestion to active
+          const firstOption = this._selectedEl || suggestions[0]; // set first suggestion to active
 
           if (!activeSuggestion && firstOption) {
             firstOption.setAttribute("active", "");
@@ -2860,7 +2847,7 @@
           if (nextOption) {
             nextOption.setAttribute("active", "");
           } else {
-            firstOption.setAttribute("active", "");
+            suggestions[0].setAttribute("active", "");
           }
 
           this._scrollToActive();
@@ -2877,14 +2864,18 @@
         } = this._suggestionList.getBoundingClientRect();
 
         const {
-          offsetTop
+          offsetTop,
+          offsetHeight
         } = this.activeSuggestion;
+        const offsetBottom = offsetTop + offsetHeight;
+        const bottom = scrollTop + height;
+        const top = scrollTop;
 
-        if (offsetTop > height) {
-          this._suggestionList.scrollTo(0, offsetTop);
+        if (offsetBottom > bottom) {
+          this._suggestionList.scrollTo(0, offsetBottom - height);
         }
 
-        if (offsetTop < scrollTop) {
+        if (offsetTop < top) {
           this._suggestionList.scrollTo(0, offsetTop);
         }
       }
@@ -2983,7 +2974,8 @@
       <div
         id="listbox"
         part="option-list"
-        ?hidden=${!showSuggestions || this.disabled}
+        @mouseover=${this._handleListMouseOver}
+        ?hidden=${!showSuggestions || this.disabled || this.suggestions.length === 0}
         role="listbox"
         aria-activedescendant=${activeSuggestion && activeSuggestion.id ? activeSuggestion.id : ""}
       >
@@ -2998,69 +2990,18 @@
       customElements.define("base-select", AutoComplete);
     }
 
-    /**
-     * @license
-     * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-     * This code may only be used under the BSD style license found at
-     * http://polymer.github.io/LICENSE.txt
-     * The complete set of authors may be found at
-     * http://polymer.github.io/AUTHORS.txt
-     * The complete set of contributors may be found at
-     * http://polymer.github.io/CONTRIBUTORS.txt
-     * Code distributed by Google as part of the polymer project is also
-     * subject to an additional IP rights grant found at
-     * http://polymer.github.io/PATENTS.txt
-     */
-    // For each part, remember the value that was last rendered to the part by the
-    // unsafeHTML directive, and the DocumentFragment that was last set as a value.
-    // The DocumentFragment is used as a unique key to check if the last value
-    // rendered to the part was with unsafeHTML. If not, we'll always re-render the
-    // value passed to unsafeHTML.
-    const previousValues = new WeakMap();
-    /**
-     * Renders the result as HTML, rather than text.
-     *
-     * Note, this is unsafe to use with any user-provided input that hasn't been
-     * sanitized or escaped, as it may lead to cross-site-scripting
-     * vulnerabilities.
-     */
-    const unsafeHTML = directive((value) => (part) => {
-        if (!(part instanceof NodePart)) {
-            throw new Error('unsafeHTML can only be used in text bindings');
-        }
-        const previousValue = previousValues.get(part);
-        if (previousValue !== undefined && isPrimitive(value) &&
-            value === previousValue.value && part.value === previousValue.fragment) {
-            return;
-        }
-        const template = document.createElement('template');
-        template.innerHTML = value; // innerHTML casts to string internally
-        const fragment = document.importNode(template.content, true);
-        part.setValue(fragment);
-        previousValues.set(part, { value, fragment });
-    });
-
-    var styles = css`:host{--base-option-padding:10px;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host(:not([disabled]):not([selected]):hover){background-color:#deebff}:host:focus{border-color:var(--base-color-active-600);background-color:var(--base-color-ui-200)}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){background-color:#deebff}:host([selected]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
+    var styles = css`:host{--base-option-padding:10px;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host:focus{border-color:var(--base-color-active-600);background-color:var(--base-color-ui-200)}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){background-color:#deebff}:host([selected]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
 
     class Option extends LitElement {
       constructor() {
         super();
-        this.name = "";
-        this.highlight = "";
-        this._selected = false;
-        this._active = false;
         this.hidden = false;
         this.disabled = false;
-        this.icon = "";
-        this.label = "";
-        this.desc = "";
-        this.value = "";
-        this.focus = this.focus.bind(this);
+        this.selected = false;
+        this.active = false;
         this.select = this.select.bind(this);
-        this.activeNext = this.activeNext.bind(this);
-        this.activePrevious = this.activePrevious.bind(this);
-        this._handleFocus = this._handleFocus.bind(this);
-        this._handleKeyPress = this._handleKeyPress.bind(this);
+        this._value = "";
+        this._label = "";
       }
 
       static get properties() {
@@ -3068,21 +3009,8 @@
           value: {
             type: String
           },
-          highlight: {
-            type: String
-          },
-          icon: {
-            type: String
-          },
           label: {
             type: String
-          },
-          desc: {
-            type: String
-          },
-          name: {
-            type: String,
-            reflect: true
           },
           selected: {
             type: Boolean,
@@ -3109,154 +3037,31 @@
 
       connectedCallback() {
         super.connectedCallback();
-        this.addEventListener("keydown", e => {
-          if (this.disabled) return;
-
-          this._handleKeyPress(e);
-        });
-        this.addEventListener("click", e => {
-          if (this.disabled) return;
-          this.select(e);
-        });
-        this.addEventListener("focus", e => {
-          this._handleFocus(e);
-        });
       }
 
-      get options() {
-        return [...document.querySelectorAll(`base-option[name="${this.name}"]`)];
+      get label() {
+        return this._label || this.innerText || this.value;
       }
 
-      get selectedOption() {
-        return this.options.find(option => option.selected);
+      set label(val) {
+        this._label = val;
       }
 
-      get activeOption() {
-        return this.options.find(option => option.active);
+      set value(value) {
+        this._value = value;
+      }
+
+      get value() {
+        return this._value || this.label || this.innerText;
       }
 
       select(e) {
         this.selected = true;
       }
 
-      get selected() {
-        return this._selected;
-      }
-
-      set selected(selected) {
-        if (selected === this._selected) {
-          return;
-        }
-
-        if (selected === true && this.selectedOption) {
-          this.selectedOption.selected = false;
-        }
-
-        if (selected === true) {
-          this.active = true;
-        }
-
-        this._selected = selected;
-        this.requestUpdate();
-      }
-
-      focus() {
-        this.shadowRoot.querySelector("button").focus();
-      }
-
-      get active() {
-        return this._active;
-      }
-
-      set active(active) {
-        if (active === this._active) {
-          return;
-        }
-
-        if (active === true && this.activeOption) {
-          this.activeOption.active = false;
-        }
-
-        this._active = active;
-        this.requestUpdate();
-      }
-
-      _handleFocus(e) {
-        this.active = true;
-      }
-
-      _handleKeyPress(e) {
-        // Up
-        if (e.keyCode === 38) {
-          e.preventDefault(); // no scrolling
-
-          this.activePrevious();
-        } // Down
-
-
-        if (e.keyCode === 40) {
-          e.preventDefault(); // no scrolling
-
-          this.activeNext();
-        }
-      }
-
-      activeNext() {
-        const options = this.options;
-        const activeIndex = options.findIndex(option => option.active);
-        const isLastOption = options.length === activeIndex + 1;
-        const nextIndex = isLastOption ? 0 : activeIndex + 1;
-        let nextOption = options[nextIndex];
-
-        if (nextOption.disabled) {
-          nextOption = options[nextIndex + 1];
-        }
-
-        nextOption.focus();
-        nextOption.active = true;
-      }
-
-      activePrevious() {
-        const options = this.options;
-        const activeIndex = options.findIndex(option => option.active);
-        const isFirstOption = activeIndex === 0;
-        const nextIndex = isFirstOption ? options.length - 1 : activeIndex - 1;
-        let nextOption = options[nextIndex];
-
-        if (nextOption.disabled) {
-          nextOption = options[nextIndex - 1];
-        }
-
-        nextOption.focus();
-        nextOption.active = true;
-      }
-
-      get _highlightedLabel() {
-        const match = this.label.match(new RegExp(this.highlight, "i"));
-        const highlighted = this.label.replace(match[0], `<b>${match[0]}</b>`);
-        return html`
-      ${unsafeHTML(highlighted)}
-    `;
-      }
-
       render() {
         return html`
-      ${this.icon ? html`
-            <div class="base-option__icon">
-              <base-icon name=${this.icon}></base-icon>
-            </div>
-          ` : null}
-
-      <div class="base-option__content">
-        ${this.label ? html`
-              <h3 class="base-option__label">
-                ${this.highlight ? this._highlightedLabel : this.label}
-              </h3>
-            ` : this.value}
-        ${this.desc ? html`
-              <p class="base-option__desc">${this.desc}</p>
-            ` : null}
-      </div>
+      <slot>${this.label}</slot>
     `;
       }
 
