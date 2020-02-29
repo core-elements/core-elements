@@ -20,10 +20,6 @@
   margin-top: 0;
 }
 
-:host(:not([disabled]):not([selected]):hover) {
-  background-color: #deebff;
-}
-
 :host:focus {
   border-color: var(--base-color-active-600);
   background-color: var(--base-color-ui-200);

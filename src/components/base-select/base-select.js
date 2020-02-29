@@ -63,6 +63,8 @@ class AutoComplete extends LitElement {
     this._removeOption = this._removeOption.bind(this);
     // scroll to active element in the sugggestion list
     this._scrollToActive = this._scrollToActive.bind(this);
+    // handle hover on list options
+    this._handleListMouseOver = this._handleListMouseOver.bind(this);
   }
 
   static get properties() {
@@ -183,18 +185,17 @@ class AutoComplete extends LitElement {
   _filterList() {
     const { value, multiple, disableFilter, selected } = this;
     // Search for all matches and show the option
-    const shownOptions = this.allOptions.filter(option => {
+    this.allOptions.forEach(option => {
       // Return matched option, or return always match if filter@
       // is turned off
       const isMatch = disableFilter
         ? true
-        : option
-            .getAttribute("label")
-            .toLowerCase()
-            .includes(value.toLowerCase());
+        : option.label.toLowerCase().includes(value.toLowerCase());
 
-      // remove active state
-      option.removeAttribute("active");
+      if (!isMatch && option.hasAttribute("active")) {
+        // remove active state
+        option.removeAttribute("active");
+      }
 
       // determine if the option is selected
       const optionSelected = multiple
@@ -219,8 +220,6 @@ class AutoComplete extends LitElement {
         option.setAttribute("hidden", "");
       }
 
-      option.setAttribute("highlight", this.value);
-
       return isMatch;
     });
   }
@@ -232,8 +231,6 @@ class AutoComplete extends LitElement {
     // single select or multiple select
     const select = this.multiple ? this._addOption : this._chooseOption;
     select(optionEl);
-    // hide suggestions after select
-    this.showSuggestions = false;
   }
 
   //  choose option for single select
@@ -293,6 +290,15 @@ class AutoComplete extends LitElement {
     this.value = "";
   }
 
+  _handleListMouseOver(e) {
+    if (e.target.tagName === "BASE-OPTION") {
+      if (this.activeSuggestion) {
+        this.activeSuggestion.removeAttribute("active");
+      }
+      e.target.setAttribute("active", "");
+    }
+  }
+
   _handleInputEvent(e) {
     e.stopPropagation();
     // First set the value `base-select` to the target value of the input element
@@ -317,9 +323,10 @@ class AutoComplete extends LitElement {
       this.showSuggestions = false;
     }
 
-    // Enter
     if (keyCode === 13 && activeSuggestion) {
       this._selectOption(activeSuggestion);
+      // hide suggestions after select
+      this.showSuggestions = false;
     }
 
     // Backspace
@@ -354,9 +361,13 @@ class AutoComplete extends LitElement {
       if (this.showSuggestions === false) {
         this.showSuggestions = true;
       }
+
+      const lastSuggestion =
+        this._selectedEl || suggestions[suggestions.length - 1];
+
       // set last suggestion to active
       if (!activeSuggestion) {
-        suggestions[suggestions.length - 1].setAttribute("active", "");
+        lastSuggestion.setAttribute("active", "");
         return;
       }
 
@@ -389,7 +400,7 @@ class AutoComplete extends LitElement {
         this.showSuggestions = true;
       }
 
-      const firstOption = suggestions[0];
+      const firstOption = this._selectedEl || suggestions[0];
 
       // set first suggestion to active
       if (!activeSuggestion && firstOption) {
@@ -406,7 +417,7 @@ class AutoComplete extends LitElement {
       if (nextOption) {
         nextOption.setAttribute("active", "");
       } else {
-        firstOption.setAttribute("active", "");
+        suggestions[0].setAttribute("active", "");
       }
 
       this._scrollToActive();
@@ -416,11 +427,16 @@ class AutoComplete extends LitElement {
   _scrollToActive() {
     const { scrollTop } = this._suggestionList;
     const { height } = this._suggestionList.getBoundingClientRect();
-    const { offsetTop } = this.activeSuggestion;
-    if (offsetTop > height) {
-      this._suggestionList.scrollTo(0, offsetTop);
+    const { offsetTop, offsetHeight } = this.activeSuggestion;
+
+    const offsetBottom = offsetTop + offsetHeight;
+    const bottom = scrollTop + height;
+    const top = scrollTop;
+
+    if (offsetBottom > bottom) {
+      this._suggestionList.scrollTo(0, offsetBottom - height);
     }
-    if (offsetTop < scrollTop) {
+    if (offsetTop < top) {
       this._suggestionList.scrollTo(0, offsetTop);
     }
   }
@@ -524,7 +540,10 @@ class AutoComplete extends LitElement {
       <div
         id="listbox"
         part="option-list"
-        ?hidden=${!showSuggestions || this.disabled}
+        @mouseover=${this._handleListMouseOver}
+        ?hidden=${!showSuggestions ||
+          this.disabled ||
+          this.suggestions.length === 0}
         role="listbox"
         aria-activedescendant=${activeSuggestion && activeSuggestion.id
           ? activeSuggestion.id
