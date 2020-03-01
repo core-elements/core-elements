@@ -11,8 +11,6 @@ class AutoComplete extends LitElement {
     this.multiple = false;
     // input aria-label
     this.ariaLabel = "Select an option";
-    // show suggestion list
-    this.showSuggestions = false;
     // hide arrow
     this.hideArrow = false;
     // show clear button
@@ -23,8 +21,12 @@ class AutoComplete extends LitElement {
     this.disableFilter = false;
     // clear all selected values
     this.clearSelected = this.clearSelected.bind(this);
+    // focus input
+    this.focus = this.focus.bind(this);
     // is searchable
     this.searchable = false;
+    // show suggestions
+    this._showSuggestions = false;
     // input value
     this._value = "";
     // input is focused
@@ -140,14 +142,22 @@ class AutoComplete extends LitElement {
   }
 
   get suggestions() {
-    const notSelected = [
+    const availableSuggestions = [
       ...this.querySelectorAll("base-option:not([disabled])")
     ];
-    return notSelected.filter(i => !i.hasAttribute("hidden"));
+    const suggestions = availableSuggestions.filter(i => {
+      const isDisplayNone = getComputedStyle(i, null).display === "none";
+      return !isDisplayNone && !i.hasAttribute("hidden");
+    });
+    return suggestions;
   }
 
   get activeSuggestion() {
     return this.suggestions.find(sugg => sugg.hasAttribute("active"));
+  }
+
+  get _inputField() {
+    return this.shadowRoot.querySelector("input");
   }
 
   get _suggestionList() {
@@ -164,6 +174,28 @@ class AutoComplete extends LitElement {
     this._value = value;
     // Request update so the setter works as an opbserved value
     this.requestUpdate();
+  }
+
+  get showSuggestions() {
+    return this._showSuggestions;
+  }
+
+  set showSuggestions(val) {
+    if (!this.suggestions.length) return;
+
+    this._showSuggestions = val;
+    // if suggestion list is shown, make either first or the selected value active
+    if (val === true) {
+      const firstActive =
+        this.activeSuggestion || this._selectedEl || this.suggestions[0];
+      firstActive.setAttribute("active", "");
+    }
+    this._scrollToActive();
+    this.requestUpdate();
+  }
+
+  focus() {
+    this._inputField.focus();
   }
 
   clearSelected() {
@@ -202,12 +234,6 @@ class AutoComplete extends LitElement {
         ? selected.includes(option.value)
         : selected === option.value;
 
-      if (multiple && optionSelected) {
-        option.setAttribute("selected", "");
-        option.setAttribute("hidden", "");
-        return false;
-      }
-
       if (optionSelected) {
         option.setAttribute("selected", "");
       } else {
@@ -245,18 +271,26 @@ class AutoComplete extends LitElement {
       // set input value as selected label as a placeholder
       this.value = "";
     }
+    this.showSuggestions = false;
   }
 
   // add option for multiple select
   _addOption(optionEl) {
-    // set new option to selected
     const isSelected = this.selected.includes(optionEl.value);
 
-    if (!isSelected) {
+    if (isSelected) {
+      this._selectedList = this._selectedList.filter(s => s !== optionEl);
+      this._dispatchChange(this.selected);
+    } else {
       this._selectedList = [...this._selectedList, optionEl];
       this._dispatchChange(this.selected);
     }
     this.value = "";
+
+    setTimeout(() => {
+      this.showSuggestions = true;
+      this.focus();
+    }, 0);
   }
 
   // remove option for multiple select
@@ -265,8 +299,10 @@ class AutoComplete extends LitElement {
       this._selectedList = this._selectedList.filter(
         o => o.value !== optionEl.value
       );
+
       this._dispatchChange(this.selected);
     }
+    optionEl.removeAttribute("active");
     this.requestUpdate();
   }
 
@@ -292,8 +328,9 @@ class AutoComplete extends LitElement {
 
   _handleListMouseOver(e) {
     if (e.target.tagName === "BASE-OPTION") {
-      if (this.activeSuggestion) {
-        this.activeSuggestion.removeAttribute("active");
+      if (this.activeSuggestion !== e.target) {
+        this.activeSuggestion &&
+          this.activeSuggestion.removeAttribute("active");
       }
       e.target.setAttribute("active", "");
     }
@@ -323,10 +360,9 @@ class AutoComplete extends LitElement {
       this.showSuggestions = false;
     }
 
+    // Enter
     if (keyCode === 13 && activeSuggestion) {
       this._selectOption(activeSuggestion);
-      // hide suggestions after select
-      this.showSuggestions = false;
     }
 
     // Backspace
@@ -360,21 +396,12 @@ class AutoComplete extends LitElement {
       // always show sugggestions when navigation with arrows
       if (this.showSuggestions === false) {
         this.showSuggestions = true;
-      }
-
-      const lastSuggestion =
-        this._selectedEl || suggestions[suggestions.length - 1];
-
-      // set last suggestion to active
-      if (!activeSuggestion) {
-        lastSuggestion.setAttribute("active", "");
         return;
       }
 
+      const currentIndex = suggestions.indexOf(activeSuggestion);
       // remove active attr
       activeSuggestion.removeAttribute("active");
-
-      const currentIndex = suggestions.indexOf(activeSuggestion);
 
       if (currentIndex === 0) {
         suggestions[suggestions.length - 1].setAttribute("active", "");
@@ -398,21 +425,12 @@ class AutoComplete extends LitElement {
       // always show sugggestions when navigation with arrows
       if (this.showSuggestions === false) {
         this.showSuggestions = true;
-      }
-
-      const firstOption = this._selectedEl || suggestions[0];
-
-      // set first suggestion to active
-      if (!activeSuggestion && firstOption) {
-        firstOption.setAttribute("active", "");
         return;
       }
 
-      if (!activeSuggestion) return;
-
+      const currentIndex = suggestions.indexOf(activeSuggestion);
       // remove active attr
       activeSuggestion.removeAttribute("active");
-      const currentIndex = suggestions.indexOf(activeSuggestion);
       const nextOption = suggestions[currentIndex + 1];
       if (nextOption) {
         nextOption.setAttribute("active", "");
@@ -425,6 +443,8 @@ class AutoComplete extends LitElement {
   }
 
   _scrollToActive() {
+    if (!this.activeSuggestion) return;
+
     const { scrollTop } = this._suggestionList;
     const { height } = this._suggestionList.getBoundingClientRect();
     const { offsetTop, offsetHeight } = this.activeSuggestion;

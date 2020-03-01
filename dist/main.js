@@ -2403,7 +2403,7 @@
     LitElement.render = render$1;
     //# sourceMappingURL=lit-element.js.map
 
-    var selectStyles = css`:host{--base-select-background:0;--base-select-padding:var(--base-spacing-md,10px);--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,2px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#eee);--base-select-border-radius:var(--base-border-radius-1,0);display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);padding:var(--base-select-padding);position:relative}:host([focused]),:host:hover{--base-select-border-color:#cecece}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:30px;height:30px;top:5px;border:0}button[part=arrow-button]{text-align:center;background:0;right:5px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:12px;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;padding:5px 0 5px 10px;margin-right:10px;background:#eee}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:5px}div[part=option-list]{--base-select-option-list-border:2px solid #eee;--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;position:absolute;left:0;top:110%;width:100%;z-index:600;box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll}`;
+    var selectStyles = css`:host{--base-select-font-size:14px;--base-select-min-height:36px;--base-select-background:0;--base-select-padding:var(--base-spacing-sm,4px);--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,2px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#eee);--base-select-border-radius:var(--base-border-radius-1,0);display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([focused]),:host:hover{--base-select-border-color:#cecece}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer;padding-left:var(--base-spacing-1,10px)}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:24px;height:24px;top:4px;border:0}button[part=arrow-button]{text-align:center;background:0;right:5px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:12px;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:24px;padding-left:4px;margin-right:4px;background:#eee}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:5px}div[part=option-list]{--base-select-option-list-border:2px solid #eee;--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;position:absolute;left:0;top:110%;width:100%;z-index:600;box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll}`;
 
     class AutoComplete extends LitElement {
       constructor() {
@@ -2413,9 +2413,7 @@
 
         this.multiple = false; // input aria-label
 
-        this.ariaLabel = "Select an option"; // show suggestion list
-
-        this.showSuggestions = false; // hide arrow
+        this.ariaLabel = "Select an option"; // hide arrow
 
         this.hideArrow = false; // show clear button
 
@@ -2425,9 +2423,13 @@
 
         this.disableFilter = false; // clear all selected values
 
-        this.clearSelected = this.clearSelected.bind(this); // is searchable
+        this.clearSelected = this.clearSelected.bind(this); // focus input
 
-        this.searchable = false; // input value
+        this.focus = this.focus.bind(this); // is searchable
+
+        this.searchable = false; // show suggestions
+
+        this._showSuggestions = false; // input value
 
         this._value = ""; // input is focused
 
@@ -2568,12 +2570,20 @@
       }
 
       get suggestions() {
-        const notSelected = [...this.querySelectorAll("base-option:not([disabled])")];
-        return notSelected.filter(i => !i.hasAttribute("hidden"));
+        const availableSuggestions = [...this.querySelectorAll("base-option:not([disabled])")];
+        const suggestions = availableSuggestions.filter(i => {
+          const isDisplayNone = getComputedStyle(i, null).display === "none";
+          return !isDisplayNone && !i.hasAttribute("hidden");
+        });
+        return suggestions;
       }
 
       get activeSuggestion() {
         return this.suggestions.find(sugg => sugg.hasAttribute("active"));
+      }
+
+      get _inputField() {
+        return this.shadowRoot.querySelector("input");
       }
 
       get _suggestionList() {
@@ -2590,6 +2600,28 @@
         this._value = value; // Request update so the setter works as an opbserved value
 
         this.requestUpdate();
+      }
+
+      get showSuggestions() {
+        return this._showSuggestions;
+      }
+
+      set showSuggestions(val) {
+        if (!this.suggestions.length) return;
+        this._showSuggestions = val; // if suggestion list is shown, make either first or the selected value active
+
+        if (val === true) {
+          const firstActive = this.activeSuggestion || this._selectedEl || this.suggestions[0];
+          firstActive.setAttribute("active", "");
+        }
+
+        this._scrollToActive();
+
+        this.requestUpdate();
+      }
+
+      focus() {
+        this._inputField.focus();
       }
 
       clearSelected() {
@@ -2632,12 +2664,6 @@
 
           const optionSelected = multiple ? selected.includes(option.value) : selected === option.value;
 
-          if (multiple && optionSelected) {
-            option.setAttribute("selected", "");
-            option.setAttribute("hidden", "");
-            return false;
-          }
-
           if (optionSelected) {
             option.setAttribute("selected", "");
           } else {
@@ -2676,20 +2702,29 @@
 
           this.value = "";
         }
+
+        this.showSuggestions = false;
       } // add option for multiple select
 
 
       _addOption(optionEl) {
-        // set new option to selected
         const isSelected = this.selected.includes(optionEl.value);
 
-        if (!isSelected) {
+        if (isSelected) {
+          this._selectedList = this._selectedList.filter(s => s !== optionEl);
+
+          this._dispatchChange(this.selected);
+        } else {
           this._selectedList = [...this._selectedList, optionEl];
 
           this._dispatchChange(this.selected);
         }
 
         this.value = "";
+        setTimeout(() => {
+          this.showSuggestions = true;
+          this.focus();
+        }, 0);
       } // remove option for multiple select
 
 
@@ -2700,6 +2735,7 @@
           this._dispatchChange(this.selected);
         }
 
+        optionEl.removeAttribute("active");
         this.requestUpdate();
       }
 
@@ -2725,8 +2761,8 @@
 
       _handleListMouseOver(e) {
         if (e.target.tagName === "BASE-OPTION") {
-          if (this.activeSuggestion) {
-            this.activeSuggestion.removeAttribute("active");
+          if (this.activeSuggestion !== e.target) {
+            this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
           }
 
           e.target.setAttribute("active", "");
@@ -2758,13 +2794,11 @@
 
         if (keyCode === 27) {
           this.showSuggestions = false;
-        }
+        } // Enter
+
 
         if (keyCode === 13 && activeSuggestion) {
-          this._selectOption(activeSuggestion); // hide suggestions after select
-
-
-          this.showSuggestions = false;
+          this._selectOption(activeSuggestion);
         } // Backspace
 
 
@@ -2796,18 +2830,12 @@
 
           if (this.showSuggestions === false) {
             this.showSuggestions = true;
+            return;
           }
 
-          const lastSuggestion = this._selectedEl || suggestions[suggestions.length - 1]; // set last suggestion to active
-
-          if (!activeSuggestion) {
-            lastSuggestion.setAttribute("active", "");
-            return;
-          } // remove active attr
-
+          const currentIndex = suggestions.indexOf(activeSuggestion); // remove active attr
 
           activeSuggestion.removeAttribute("active");
-          const currentIndex = suggestions.indexOf(activeSuggestion);
 
           if (currentIndex === 0) {
             suggestions[suggestions.length - 1].setAttribute("active", "");
@@ -2829,19 +2857,12 @@
 
           if (this.showSuggestions === false) {
             this.showSuggestions = true;
-          }
-
-          const firstOption = this._selectedEl || suggestions[0]; // set first suggestion to active
-
-          if (!activeSuggestion && firstOption) {
-            firstOption.setAttribute("active", "");
             return;
           }
 
-          if (!activeSuggestion) return; // remove active attr
+          const currentIndex = suggestions.indexOf(activeSuggestion); // remove active attr
 
           activeSuggestion.removeAttribute("active");
-          const currentIndex = suggestions.indexOf(activeSuggestion);
           const nextOption = suggestions[currentIndex + 1];
 
           if (nextOption) {
@@ -2855,6 +2876,7 @@
       }
 
       _scrollToActive() {
+        if (!this.activeSuggestion) return;
         const {
           scrollTop
         } = this._suggestionList;
@@ -2998,6 +3020,7 @@
         this.hidden = false;
         this.disabled = false;
         this.selected = false;
+        this.hidden = false;
         this.active = false;
         this.select = this.select.bind(this);
         this._value = "";
@@ -3011,6 +3034,10 @@
           },
           label: {
             type: String
+          },
+          hidden: {
+            type: Boolean,
+            reflect: true
           },
           selected: {
             type: Boolean,

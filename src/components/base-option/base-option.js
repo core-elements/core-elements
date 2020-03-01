@@ -9,6 +9,7 @@ class Option extends LitElement {
     this.hidden = false;
     this.disabled = false;
     this.selected = false;
+    this.hidden = false;
     this.active = false;
     this.select = this.select.bind(this);
     this._value = "";
@@ -19,6 +20,7 @@ class Option extends LitElement {
     return {
       value: { type: String },
       label: { type: String },
+      hidden: { type: Boolean, reflect: true },
       selected: {
         type: Boolean,
         reflect: true

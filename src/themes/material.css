@@ -11,6 +11,10 @@
   transition: box-shadow 0.2s ease;
 }
 
+[theme="minimal"] base-select[multiple] base-option[selected] {
+  display: none;
+}
+
 [theme="minimal"] base-select::part(option-list) {
   top: 120%;
   border-radius: 5px;
@@ -35,12 +39,12 @@
   color: #333;
 }
 
-[theme="minimal"] base-select:not([multiple]) base-option {
+[theme="minimal"] base-select base-option {
   position: relative;
   padding-left: 30px;
 }
 
-[theme="minimal"] base-select:not([multiple]) base-option[selected]::before {
+[theme="minimal"] base-select base-option[selected]::before {
   position: absolute;
   left: 0;
   top: 50%;
@@ -52,7 +56,7 @@
   transform-origin: left bottom;
 }
 
-[theme="minimal"] base-select:not([multiple]) base-option[selected]::after {
+[theme="minimal"] base-select base-option[selected]::after {
   position: absolute;
   left: 0;
   top: calc(50% + 3px);

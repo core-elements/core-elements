@@ -1,6 +1,8 @@
 :host {
+  --base-select-font-size: 14px;
+  --base-select-min-height: 36px;
   --base-select-background: none;
-  --base-select-padding: var(--base-spacing-md, 10px);
+  --base-select-padding: var(--base-spacing-sm, 4px);
   --base-select-placeholder-color: var(--base-color-neutral-3, #b3b3b3);
   --base-select-border-width: var(--base-border-width-1, 2px);
   --base-select-border-style: solid;
@@ -9,17 +11,20 @@
 }
 
 :host {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
+  font-size: var(--base-select-font-size);
+  min-height: var(--base-select-min-height);
+  padding: var(--base-select-padding);
   background-color: var(--base-color-white);
   border-width: var(--base-select-border-width);
   border-style: var(--base-select-border-style);
   border-color: var(--base-select-border-color);
   border-radius: var(--base-select-border-radius);
-  padding: var(--base-select-padding);
   position: relative;
 }
 
@@ -37,6 +42,7 @@
 
 input[part="input-field"] {
   cursor: pointer;
+  padding-left: var(--base-spacing-1, 10px);
 }
 
 :host([searchable]) input[part="input-field"] {
@@ -44,6 +50,7 @@ input[part="input-field"] {
 }
 
 :host input[part="input-field"]::placeholder {
+  font-size: var(--base-select-font-size);
   color: var(--base-select-placeholder-color);
 }
 
@@ -70,10 +77,10 @@ button[part="clear-button"] {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: #333;
-  top: 5px;
+  top: 4px;
   right: calc(35px + 0);
   border: 0;
   background: transparent;
@@ -86,9 +93,9 @@ button[part="arrow-button"] {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 5px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
   right: 5px;
   border: 0;
 }
@@ -114,8 +121,9 @@ div[part="tag"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0px 5px 10px;
-  margin-right: 10px;
+  height: 24px;
+  padding-left: 4px;
+  margin-right: 4px;
   background: #eee;
 }
 
