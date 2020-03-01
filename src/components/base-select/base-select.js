@@ -320,10 +320,11 @@ class AutoComplete extends LitElement {
   }
 
   _handleBlurEvent(e) {
+    console.log("blur");
     this._isFocused = false;
-    this.showSuggestions = false;
     this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
     this.value = "";
+    this.showSuggestions = false;
   }
 
   _handleListMouseOver(e) {

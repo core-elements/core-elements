@@ -1,5 +1,6 @@
 :host {
   --base-option-padding: 10px;
+  box-sizing: border-box;
   width: 100%;
   max-width: 100%;
   border: 0;

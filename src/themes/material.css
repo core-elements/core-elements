@@ -2,17 +2,13 @@
   --base-font-family: arial;
 }
 
-[theme="minimal"] body {
+[theme="minimal"] {
   font-family: var(--base-font-family);
 }
 
 [theme="minimal"] base-select {
   border-radius: 4px;
   transition: box-shadow 0.2s ease;
-}
-
-[theme="minimal"] base-select[multiple] base-option[selected] {
-  display: none;
 }
 
 [theme="minimal"] base-select::part(option-list) {

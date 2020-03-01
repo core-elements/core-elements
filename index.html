@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html theme="minimal" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,27 @@
     <link href="src/themes/material.css" rel="stylesheet" />
   </head>
   <body
+    theme="minimal"
     style="max-width: 600px; display: block; margin: 0 auto; margin-top: 100px;"
   >
+    <div style="margin-bottom: 100px">
+      <input
+        type="radio"
+        onchange="handleChange(this);"
+        checked
+        name="theme"
+        value="minimal"
+      />
+      Minimal
+      <input
+        type="radio"
+        onchange="handleChange(this);"
+        name="theme"
+        value="none"
+      />
+      None
+    </div>
+
     <base-select id="baseSelect" multiple searchable>
       <base-option value="value1"></base-option>
       <base-option value="value2"></base-option>
@@ -25,5 +44,10 @@
       <base-option value="value12"></base-option>
     </base-select>
     <script src="dist/main.js"></script>
+    <script>
+      function handleChange(e) {
+        document.body.setAttribute("theme", e.value);
+      }
+    </script>
   </body>
 </html>

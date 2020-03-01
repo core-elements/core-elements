@@ -11,7 +11,6 @@
 }
 
 :host {
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -143,6 +142,7 @@ div[part="option-list"] {
   left: 0;
   top: 110%;
   width: 100%;
+  max-width: 100%;
   z-index: 600;
   box-sizing: border-box;
   border: var(--base-select-option-list-border);
@@ -153,4 +153,5 @@ div[part="option-list"] {
   background: white;
   max-height: 300px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
