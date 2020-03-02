@@ -188,8 +188,6 @@ class AutoComplete extends LitElement {
     if (!this.suggestions.length) return;
     if (this._showSuggestions === show) return;
 
-    console.log("show suggestions", show);
-
     this._showSuggestions = show;
     // if suggestion list is shown, make either first or the selected value active
     if (show) {
