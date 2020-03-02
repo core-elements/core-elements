@@ -11,12 +11,18 @@
   transition: box-shadow 0.2s ease;
 }
 
-[theme="minimal"] base-select::part(option-list) {
-  top: 120%;
-  border-radius: 5px;
-  animation-name: fade-in;
-  animation-duration: 100s;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+[theme="minimal"] base-select {
+  --base-select-option-list-position: absolute;
+  --base-select-option-list-top: 120%;
+  --base-select-option-list-border-radius: 5px;
+  --base-select-option-list-border-radius: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
+  [theme="minimal"] base-select {
+    --base-select-option-list-position: fixed;
+    --base-select-option-list-top: calc(100% - 300px);
+  }
 }
 
 [theme="minimal"] base-select::part(tag) {
