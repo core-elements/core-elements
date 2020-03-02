@@ -191,11 +191,13 @@ class AutoComplete extends LitElement {
     this._showSuggestions = show;
     // if suggestion list is shown, make either first or the selected value active
     if (show) {
+      this.setAttribute("menu-is-open", "");
       const firstActive =
         this.activeSuggestion || this._selectedEl || this.suggestions[0];
       firstActive.setAttribute("active", "");
       this._scrollToActive();
     } else {
+      this.removeAttribute("menu-is-open");
       this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
     }
     this.requestUpdate();

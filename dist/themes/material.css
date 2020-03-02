@@ -21,7 +21,13 @@
 @media (max-width: 800px) {
   [theme="minimal"] base-select {
     --base-select-option-list-position: fixed;
+    --base-select-option-list-top: calc(100%);
+    --base-select-option-list-opacity: 0;
+  }
+
+  [theme="minimal"] base-select[menu-is-open] {
     --base-select-option-list-top: calc(100% - 300px);
+    --base-select-option-list-opacity: 1;
   }
 }
 

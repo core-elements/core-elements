@@ -16,6 +16,8 @@
   --base-select-option-list-box-shadow: 0px;
   --base-select-option-list-position: absolute;
   --base-select-option-list-top: 110%;
+  --base-select-option-list-transition: none;
+  --base-select-option-list-opacity: 1;
 }
 
 :host {
@@ -146,6 +148,11 @@ button[part="remove-tag"] {
   margin-left: 4px;
 }
 
+div[part="option-list"][hidden] {
+  display: block;
+  visibility: hidden;
+}
+
 div[part="option-list"] {
   position: var(--base-select-option-list-position);
   left: 0;
@@ -153,9 +160,11 @@ div[part="option-list"] {
   width: 100%;
   max-width: 100%;
   z-index: 600;
+  transition: var(--base-select-option-list-transition);
   box-sizing: border-box;
   border: var(--base-select-option-list-border);
   margin: 0;
+  opacity: var(--base-select-option-list-opacity);
   list-style: none;
   box-shadow: var(--base-select-option-list-box-shadow);
   border-radius: var(--base-select-option-list-border-radius);
