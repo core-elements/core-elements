@@ -11,10 +11,6 @@
   transition: box-shadow 0.2s ease;
 }
 
-[theme="minimal"] base-select[multiple] base-option[selected] {
-  display: block;
-}
-
 [theme="minimal"] base-select::part(option-list) {
   top: 120%;
   border-radius: 5px;
@@ -25,8 +21,6 @@
 
 [theme="minimal"] base-select::part(tag) {
   border-radius: 5px;
-  background: #eee;
-  color: #333;
 }
 
 [theme="minimal"] base-option[active]:not([disabled]) {

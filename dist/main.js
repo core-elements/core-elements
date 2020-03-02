@@ -2403,7 +2403,7 @@
     LitElement.render = render$1;
     //# sourceMappingURL=lit-element.js.map
 
-    var selectStyles = css`:host{--base-select-font-size:14px;--base-select-min-height:36px;--base-select-background:0;--base-select-padding:var(--base-spacing-sm,4px);--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,2px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#eee);--base-select-border-radius:var(--base-border-radius-1,0);display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([focused]),:host:hover{--base-select-border-color:#cecece}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer;padding-left:var(--base-spacing-1,10px)}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:24px;height:24px;top:4px;border:0}button[part=arrow-button]{text-align:center;background:0;right:5px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:12px;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:24px;padding-left:4px;margin-right:4px;background:#eee}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:5px}div[part=option-list]{--base-select-option-list-border:2px solid #eee;--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;position:absolute;left:0;top:110%;width:100%;max-width:100%;z-index:600;box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+    var selectStyles = css`:host{--base-select-active-color:var(--base-color-active,#2684ff);--base-select-font-size:14px;--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0 68px 4px 8px;--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,1px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#e6e6e6);--base-select-border-radius:var(--base-border-radius-1,0);display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host:hover{--base-select-border-color:#cecece}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer;padding-left:4px;margin-top:4px}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:26px;height:26px;top:4px;border:0;outline:0}button[part=arrow-button]{text-align:center;background:0;right:4px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:22px;margin-top:6px;padding-left:8px;margin-right:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}div[part=option-list]{--base-select-option-list-border:var(--base-select-border-width) solid var(--base-neutral--2,#e6e6e6);--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;position:absolute;left:0;top:110%;width:100%;max-width:100%;z-index:600;box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
 
     class AutoComplete extends LitElement {
       constructor() {
@@ -2419,7 +2419,9 @@
 
         this.clearable = false; // disabled input
 
-        this.disabled = false; // disable default filter if you want you own custom filtering of the options
+        this.disabled = false; // input is focused
+
+        this.isFocused = false; // disable default filter if you want you own custom filtering of the options
 
         this.disableFilter = false; // clear all selected values
 
@@ -2427,13 +2429,13 @@
 
         this.focus = this.focus.bind(this); // is searchable
 
-        this.searchable = false; // show suggestions
+        this.searchable = false; // keep menu open on select
+
+        this.menuOpenOnSelect = false; // show suggestions
 
         this._showSuggestions = false; // input value
 
-        this._value = ""; // input is focused
-
-        this._isFocused = false; // the selected element
+        this._value = ""; // the selected element
 
         this._selectedEL = null;
         /**
@@ -2489,6 +2491,11 @@
           value: {
             type: String
           },
+          isFocused: {
+            type: Boolean,
+            reflect: true,
+            attribute: "is-focused"
+          },
           multiple: {
             type: Boolean
           },
@@ -2507,6 +2514,10 @@
           },
           selected: {
             type: Object
+          },
+          menuOpenOnSelect: {
+            type: Boolean,
+            attribute: "menu-open-on-select"
           },
           disableFilter: {
             type: Boolean,
@@ -2606,16 +2617,18 @@
         return this._showSuggestions;
       }
 
-      set showSuggestions(val) {
+      set showSuggestions(show) {
         if (!this.suggestions.length) return;
-        this._showSuggestions = val; // if suggestion list is shown, make either first or the selected value active
+        this._showSuggestions = show; // if suggestion list is shown, make either first or the selected value active
 
-        if (val === true) {
+        if (show) {
           const firstActive = this.activeSuggestion || this._selectedEl || this.suggestions[0];
           firstActive.setAttribute("active", "");
-        }
 
-        this._scrollToActive();
+          this._scrollToActive();
+        } else {
+          this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
+        }
 
         this.requestUpdate();
       }
@@ -2703,7 +2716,8 @@
           this.value = "";
         }
 
-        this.showSuggestions = false;
+        this.focus();
+        this.showSuggestions = this.menuOpenOnSelect ? true : false;
       } // add option for multiple select
 
 
@@ -2722,8 +2736,8 @@
 
         this.value = "";
         setTimeout(() => {
-          this.showSuggestions = true;
           this.focus();
+          this.showSuggestions = this.menuOpenOnSelect ? true : false;
         }, 0);
       } // remove option for multiple select
 
@@ -2748,14 +2762,12 @@
       }
 
       _handleFocusEvent(e) {
-        this._isFocused = true;
+        this.isFocused = true;
         this.showSuggestions = true;
       }
 
       _handleBlurEvent(e) {
-        console.log("blur");
-        this._isFocused = false;
-        this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
+        this.isFocused = false;
         this.value = "";
         this.showSuggestions = false;
       }
@@ -2834,6 +2846,14 @@
             return;
           }
 
+          if (!activeSuggestion) {
+            suggestions[suggestions.length - 1].setAttribute("active", "");
+
+            this._scrollToActive();
+
+            return;
+          }
+
           const currentIndex = suggestions.indexOf(activeSuggestion); // remove active attr
 
           activeSuggestion.removeAttribute("active");
@@ -2858,6 +2878,11 @@
 
           if (this.showSuggestions === false) {
             this.showSuggestions = true;
+            return;
+          }
+
+          if (!activeSuggestion) {
+            suggestions[0].setAttribute("active", "");
             return;
           }
 
@@ -2944,7 +2969,7 @@
                 </button>
               </div>
             `;
-    }) : ""}
+    }) : null}
       <!-- Input field -->
       <input
         ?disabled=${this.disabled}
@@ -2968,6 +2993,7 @@
       />
 
       <button
+        tabindex="-1"
         ?disabled=${this.disabled}
         ?hidden=${clearable}
         part="clear-button"
@@ -2977,6 +3003,7 @@
       </button>
 
       <button
+        tabindex="-1"
         ?disabled=${this.disabled}
         ?hidden=${hideArrow}
         part="arrow-button"
@@ -3013,7 +3040,7 @@
       customElements.define("base-select", AutoComplete);
     }
 
-    var styles = css`:host{--base-option-padding:10px;box-sizing:border-box;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host:focus{border-color:var(--base-color-active-600);background-color:var(--base-color-ui-200)}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){background-color:#deebff}:host([selected]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
+    var styles = css`:host{--base-option-padding:10px;box-sizing:border-box;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected]:not([active]):not([disabled])){background-color:#deebff}:host([selected][active]){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
 
     class Option extends LitElement {
       constructor() {

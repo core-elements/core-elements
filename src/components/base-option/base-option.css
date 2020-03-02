@@ -21,11 +21,6 @@
   margin-top: 0;
 }
 
-:host:focus {
-  border-color: var(--base-color-active-600);
-  background-color: var(--base-color-ui-200);
-}
-
 :host([disabled]) {
   opacity: 0.5;
   cursor: not-allowed;
@@ -36,10 +31,15 @@
 }
 
 :host([active]:not([disabled])) {
+  background-color: #2684ff;
+  color: white;
+}
+
+:host([selected]:not([active]):not([disabled])) {
   background-color: #deebff;
 }
 
-:host([selected]:not([disabled])) {
+:host([selected][active]) {
   background-color: #2684ff;
   color: white;
 }

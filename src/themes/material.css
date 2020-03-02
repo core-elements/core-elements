@@ -21,8 +21,6 @@
 
 [theme="minimal"] base-select::part(tag) {
   border-radius: 5px;
-  background: #eee;
-  color: #333;
 }
 
 [theme="minimal"] base-option[active]:not([disabled]) {

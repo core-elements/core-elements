@@ -7,46 +7,76 @@
     <title>Document</title>
     <link href="src/themes/material.css" rel="stylesheet" />
   </head>
-  <body
-    theme="minimal"
-    style="max-width: 600px; display: block; margin: 0 auto; margin-top: 100px;"
-  >
-    <div style="margin-bottom: 100px">
-      <input
-        type="radio"
-        onchange="handleChange(this);"
-        checked
-        name="theme"
-        value="minimal"
-      />
-      Minimal
-      <input
-        type="radio"
-        onchange="handleChange(this);"
-        name="theme"
-        value="none"
-      />
-      None
+  <style>
+    body {
+      font-family: arial;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+  </style>
+  <body theme="minimal">
+    <div>
+      <label>
+        <input
+          type="radio"
+          onchange="handleThemeChange(this);"
+          checked
+          name="theme"
+          value="minimal"
+        />
+        Minimal
+      </label>
+      <label>
+        <input
+          type="radio"
+          onchange="handleThemeChange(this);"
+          name="theme"
+          value="none"
+        />
+        None
+      </label>
     </div>
 
-    <base-select id="baseSelect" multiple searchable>
-      <base-option value="value1"></base-option>
-      <base-option value="value2"></base-option>
-      <base-option value="value3"></base-option>
-      <base-option value="value4"></base-option>
-      <base-option value="value5"></base-option>
-      <base-option value="value6"></base-option>
-      <base-option value="value7"></base-option>
-      <base-option value="value8"></base-option>
-      <base-option value="value9"></base-option>
-      <base-option value="value10"></base-option>
-      <base-option value="value11"></base-option>
-      <base-option value="value12"></base-option>
+    <div style="margin-bottom: 100px">
+      <label>
+        <input
+          type="checkbox"
+          onchange="toggleMultiple(this);"
+          name="type"
+          value="multiple"
+        />
+        Multiple
+      </label>
+    </div>
+
+    <base-select id="baseSelect" menu-open-on-select searchable>
+      <base-option value="Banana"></base-option>
+      <base-option value="Apple"></base-option>
+      <base-option value="Pear"></base-option>
+      <base-option value="Papaya"></base-option>
+      <base-option value="Fig"></base-option>
+      <base-option value="Watermellom"></base-option>
+      <base-option value="Strawberries"></base-option>
+      <base-option value="Plum"></base-option>
+      <base-option value="Guanabana"></base-option>
+      <base-option value="Orange"></base-option>
+      <base-option value="Melon"></base-option>
+      <base-option value="Mandarin"></base-option>
     </base-select>
     <script src="dist/main.js"></script>
     <script>
-      function handleChange(e) {
+      function handleThemeChange(e) {
         document.body.setAttribute("theme", e.value);
+      }
+
+      function toggleMultiple(e) {
+        if (e.checked) {
+          baseSelect.setAttribute("multiple", "");
+        } else {
+          baseSelect.removeAttribute("multiple");
+        }
       }
     </script>
   </body>

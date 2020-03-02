@@ -17,6 +17,8 @@ class AutoComplete extends LitElement {
     this.clearable = false;
     // disabled input
     this.disabled = false;
+    // input is focused
+    this.isFocused = false;
     // disable default filter if you want you own custom filtering of the options
     this.disableFilter = false;
     // clear all selected values
@@ -25,12 +27,12 @@ class AutoComplete extends LitElement {
     this.focus = this.focus.bind(this);
     // is searchable
     this.searchable = false;
+    // keep menu open on select
+    this.menuOpenOnSelect = false;
     // show suggestions
     this._showSuggestions = false;
     // input value
     this._value = "";
-    // input is focused
-    this._isFocused = false;
     // the selected element
     this._selectedEL = null;
     /**
@@ -75,12 +77,14 @@ class AutoComplete extends LitElement {
       disabled: { type: Boolean },
       showSuggestions: { type: Boolean },
       value: { type: String },
+      isFocused: { type: Boolean, reflect: true, attribute: "is-focused" },
       multiple: { type: Boolean },
       hideArrow: { type: Boolean, attribute: "hide-arrow" },
       placeholder: { type: String },
       searchable: { type: Boolean },
       clearable: { type: Boolean },
       selected: { type: Object },
+      menuOpenOnSelect: { type: Boolean, attribute: "menu-open-on-select" },
       disableFilter: { type: Boolean, attribute: "disable-filter" }
     };
   }
@@ -180,17 +184,19 @@ class AutoComplete extends LitElement {
     return this._showSuggestions;
   }
 
-  set showSuggestions(val) {
+  set showSuggestions(show) {
     if (!this.suggestions.length) return;
 
-    this._showSuggestions = val;
+    this._showSuggestions = show;
     // if suggestion list is shown, make either first or the selected value active
-    if (val === true) {
+    if (show) {
       const firstActive =
         this.activeSuggestion || this._selectedEl || this.suggestions[0];
       firstActive.setAttribute("active", "");
+      this._scrollToActive();
+    } else {
+      this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
     }
-    this._scrollToActive();
     this.requestUpdate();
   }
 
@@ -271,7 +277,9 @@ class AutoComplete extends LitElement {
       // set input value as selected label as a placeholder
       this.value = "";
     }
-    this.showSuggestions = false;
+
+    this.focus();
+    this.showSuggestions = this.menuOpenOnSelect ? true : false;
   }
 
   // add option for multiple select
@@ -288,8 +296,8 @@ class AutoComplete extends LitElement {
     this.value = "";
 
     setTimeout(() => {
-      this.showSuggestions = true;
       this.focus();
+      this.showSuggestions = this.menuOpenOnSelect ? true : false;
     }, 0);
   }
 
@@ -315,14 +323,12 @@ class AutoComplete extends LitElement {
   }
 
   _handleFocusEvent(e) {
-    this._isFocused = true;
+    this.isFocused = true;
     this.showSuggestions = true;
   }
 
   _handleBlurEvent(e) {
-    console.log("blur");
-    this._isFocused = false;
-    this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
+    this.isFocused = false;
     this.value = "";
     this.showSuggestions = false;
   }
@@ -400,6 +406,12 @@ class AutoComplete extends LitElement {
         return;
       }
 
+      if (!activeSuggestion) {
+        suggestions[suggestions.length - 1].setAttribute("active", "");
+        this._scrollToActive();
+        return;
+      }
+
       const currentIndex = suggestions.indexOf(activeSuggestion);
       // remove active attr
       activeSuggestion.removeAttribute("active");
@@ -426,6 +438,11 @@ class AutoComplete extends LitElement {
       // always show sugggestions when navigation with arrows
       if (this.showSuggestions === false) {
         this.showSuggestions = true;
+        return;
+      }
+
+      if (!activeSuggestion) {
+        suggestions[0].setAttribute("active", "");
         return;
       }
 
@@ -506,7 +523,7 @@ class AutoComplete extends LitElement {
               </div>
             `;
           })
-        : ""}
+        : null}
       <!-- Input field -->
       <input
         ?disabled=${this.disabled}
@@ -530,6 +547,7 @@ class AutoComplete extends LitElement {
       />
 
       <button
+        tabindex="-1"
         ?disabled=${this.disabled}
         ?hidden=${clearable}
         part="clear-button"
@@ -539,6 +557,7 @@ class AutoComplete extends LitElement {
       </button>
 
       <button
+        tabindex="-1"
         ?disabled=${this.disabled}
         ?hidden=${hideArrow}
         part="arrow-button"
