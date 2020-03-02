@@ -2473,7 +2473,13 @@
 
         this._scrollToActive = this._scrollToActive.bind(this); // handle hover on list options
 
-        this._handleListMouseOver = this._handleListMouseOver.bind(this);
+        this._handleListMouseOver = this._handleListMouseOver.bind(this); // handle mouse click on list options
+
+        this._handleListMouseDown = this._handleListMouseDown.bind(this); // handle mouse click on list options
+
+        this._handleListMouseUp = this._handleListMouseUp.bind(this); // an option was just clicked, used for timeout
+
+        this._menuJustClicked = false;
       }
 
       static get properties() {
@@ -2546,11 +2552,6 @@
             this._selectedList = [...this._selectedList, option];
           }
         });
-        this.addEventListener("mousedown", e => {
-          if (e.target.tagName === "BASE-OPTION") {
-            this._selectOption(e.target);
-          }
-        });
       }
 
       get allOptions() {
@@ -2619,6 +2620,8 @@
 
       set showSuggestions(show) {
         if (!this.suggestions.length) return;
+        if (this._showSuggestions === show) return;
+        console.log("show suggestions", show);
         this._showSuggestions = show; // if suggestion list is shown, make either first or the selected value active
 
         if (show) {
@@ -2735,10 +2738,8 @@
         }
 
         this.value = "";
-        setTimeout(() => {
-          this.focus();
-          this.showSuggestions = this.menuOpenOnSelect ? true : false;
-        }, 0);
+        this.focus();
+        this.showSuggestions = this.menuOpenOnSelect ? true : false;
       } // remove option for multiple select
 
 
@@ -2761,15 +2762,23 @@
         }));
       }
 
-      _handleFocusEvent(e) {
+      _handleFocusEvent() {
         this.isFocused = true;
         this.showSuggestions = true;
       }
 
       _handleBlurEvent(e) {
-        this.isFocused = false;
-        this.value = "";
-        this.showSuggestions = false;
+        setTimeout(() => {
+          if (this._menuJustClicked) {
+            e.preventDefault();
+            this._menuJustClicked = false;
+            return;
+          }
+
+          this.isFocused = false;
+          this.value = "";
+          this.showSuggestions = false;
+        }, 100);
       }
 
       _handleListMouseOver(e) {
@@ -2779,6 +2788,16 @@
           }
 
           e.target.setAttribute("active", "");
+        }
+      }
+
+      _handleListMouseDown() {
+        this._menuJustClicked = true;
+      }
+
+      _handleListMouseUp(e) {
+        if (e.target.tagName === "BASE-OPTION") {
+          this._selectOption(e.target);
         }
       }
 
@@ -2841,10 +2860,7 @@
           e.preventDefault();
           if (!this.suggestions.length) return; // always show sugggestions when navigation with arrows
 
-          if (this.showSuggestions === false) {
-            this.showSuggestions = true;
-            return;
-          }
+          this.showSuggestions = true;
 
           if (!activeSuggestion) {
             suggestions[suggestions.length - 1].setAttribute("active", "");
@@ -2876,10 +2892,7 @@
           e.preventDefault();
           if (!this.suggestions.length) return; // always show sugggestions when navigation with arrows
 
-          if (this.showSuggestions === false) {
-            this.showSuggestions = true;
-            return;
-          }
+          this.showSuggestions = true;
 
           if (!activeSuggestion) {
             suggestions[0].setAttribute("active", "");
@@ -3024,7 +3037,9 @@
       <div
         id="listbox"
         part="option-list"
+        @mousedown=${this._handleListMouseDown}
         @mouseover=${this._handleListMouseOver}
+        @mouseup=${this._handleListMouseUp}
         ?hidden=${!showSuggestions || this.disabled || this.suggestions.length === 0}
         role="listbox"
         aria-activedescendant=${activeSuggestion && activeSuggestion.id ? activeSuggestion.id : ""}
@@ -3040,7 +3055,7 @@
       customElements.define("base-select", AutoComplete);
     }
 
-    var styles = css`:host{--base-option-padding:10px;box-sizing:border-box;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected]:not([active]):not([disabled])){background-color:#deebff}:host([selected][active]){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
+    var styles = css`:host{--base-option-padding:10px;box-sizing:border-box;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host(:active),:host([active]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected]:not([active]):not([disabled])){background-color:#deebff}:host([selected][active]){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
 
     class Option extends LitElement {
       constructor() {

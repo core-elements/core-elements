@@ -30,6 +30,11 @@
   display: none;
 }
 
+:host(:active) {
+  background-color: #2684ff;
+  color: white;
+}
+
 :host([active]:not([disabled])) {
   background-color: #2684ff;
   color: white;

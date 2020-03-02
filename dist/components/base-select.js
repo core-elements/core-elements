@@ -70,7 +70,13 @@ class AutoComplete extends LitElement {
 
     this._scrollToActive = this._scrollToActive.bind(this); // handle hover on list options
 
-    this._handleListMouseOver = this._handleListMouseOver.bind(this);
+    this._handleListMouseOver = this._handleListMouseOver.bind(this); // handle mouse click on list options
+
+    this._handleListMouseDown = this._handleListMouseDown.bind(this); // handle mouse click on list options
+
+    this._handleListMouseUp = this._handleListMouseUp.bind(this); // an option was just clicked, used for timeout
+
+    this._menuJustClicked = false;
   }
 
   static get properties() {
@@ -143,11 +149,6 @@ class AutoComplete extends LitElement {
         this._selectedList = [...this._selectedList, option];
       }
     });
-    this.addEventListener("mousedown", e => {
-      if (e.target.tagName === "BASE-OPTION") {
-        this._selectOption(e.target);
-      }
-    });
   }
 
   get allOptions() {
@@ -216,6 +217,8 @@ class AutoComplete extends LitElement {
 
   set showSuggestions(show) {
     if (!this.suggestions.length) return;
+    if (this._showSuggestions === show) return;
+    console.log("show suggestions", show);
     this._showSuggestions = show; // if suggestion list is shown, make either first or the selected value active
 
     if (show) {
@@ -332,10 +335,8 @@ class AutoComplete extends LitElement {
     }
 
     this.value = "";
-    setTimeout(() => {
-      this.focus();
-      this.showSuggestions = this.menuOpenOnSelect ? true : false;
-    }, 0);
+    this.focus();
+    this.showSuggestions = this.menuOpenOnSelect ? true : false;
   } // remove option for multiple select
 
 
@@ -358,15 +359,23 @@ class AutoComplete extends LitElement {
     }));
   }
 
-  _handleFocusEvent(e) {
+  _handleFocusEvent() {
     this.isFocused = true;
     this.showSuggestions = true;
   }
 
   _handleBlurEvent(e) {
-    this.isFocused = false;
-    this.value = "";
-    this.showSuggestions = false;
+    setTimeout(() => {
+      if (this._menuJustClicked) {
+        e.preventDefault();
+        this._menuJustClicked = false;
+        return;
+      }
+
+      this.isFocused = false;
+      this.value = "";
+      this.showSuggestions = false;
+    }, 100);
   }
 
   _handleListMouseOver(e) {
@@ -376,6 +385,16 @@ class AutoComplete extends LitElement {
       }
 
       e.target.setAttribute("active", "");
+    }
+  }
+
+  _handleListMouseDown() {
+    this._menuJustClicked = true;
+  }
+
+  _handleListMouseUp(e) {
+    if (e.target.tagName === "BASE-OPTION") {
+      this._selectOption(e.target);
     }
   }
 
@@ -438,10 +457,7 @@ class AutoComplete extends LitElement {
       e.preventDefault();
       if (!this.suggestions.length) return; // always show sugggestions when navigation with arrows
 
-      if (this.showSuggestions === false) {
-        this.showSuggestions = true;
-        return;
-      }
+      this.showSuggestions = true;
 
       if (!activeSuggestion) {
         suggestions[suggestions.length - 1].setAttribute("active", "");
@@ -473,10 +489,7 @@ class AutoComplete extends LitElement {
       e.preventDefault();
       if (!this.suggestions.length) return; // always show sugggestions when navigation with arrows
 
-      if (this.showSuggestions === false) {
-        this.showSuggestions = true;
-        return;
-      }
+      this.showSuggestions = true;
 
       if (!activeSuggestion) {
         suggestions[0].setAttribute("active", "");
@@ -621,7 +634,9 @@ class AutoComplete extends LitElement {
       <div
         id="listbox"
         part="option-list"
+        @mousedown=${this._handleListMouseDown}
         @mouseover=${this._handleListMouseOver}
+        @mouseup=${this._handleListMouseUp}
         ?hidden=${!showSuggestions || this.disabled || this.suggestions.length === 0}
         role="listbox"
         aria-activedescendant=${activeSuggestion && activeSuggestion.id ? activeSuggestion.id : ""}

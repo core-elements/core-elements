@@ -53,6 +53,7 @@
     </div>
 
     <base-select id="baseSelect" menu-open-on-select searchable>
+      <h1>Select all</h1>
       <base-option value="Banana"></base-option>
       <base-option value="Apple"></base-option>
       <base-option value="Pear"></base-option>
@@ -73,6 +74,7 @@
       }
 
       function toggleMultiple(e) {
+        console.log(baseSelect.propsData);
         if (e.checked) {
           baseSelect.setAttribute("multiple", "");
         } else {
