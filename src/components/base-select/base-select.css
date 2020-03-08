@@ -148,12 +148,12 @@ button[part="remove-tag"] {
   margin-left: 4px;
 }
 
-div[part="option-list"][hidden] {
-  display: block;
-  visibility: hidden;
+:host([menu-is-open]) div[part="option-list"] {
+  visibility: visible;
 }
 
 div[part="option-list"] {
+  visibility: hidden;
   position: var(--base-select-option-list-position);
   left: 0;
   top: var(--base-select-option-list-top);

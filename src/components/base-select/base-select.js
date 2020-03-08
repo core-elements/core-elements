@@ -594,9 +594,6 @@ class AutoComplete extends LitElement {
         @mousedown=${this._handleListMouseDown}
         @mouseover=${this._handleListMouseOver}
         @mouseup=${this._handleListMouseUp}
-        ?hidden=${!showSuggestions ||
-          this.disabled ||
-          this.suggestions.length === 0}
         role="listbox"
         aria-activedescendant=${activeSuggestion && activeSuggestion.id
           ? activeSuggestion.id
