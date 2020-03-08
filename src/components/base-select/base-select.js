@@ -185,7 +185,10 @@ class AutoComplete extends LitElement {
   }
 
   set showSuggestions(show) {
-    if (!this.suggestions.length) return;
+    if (!this.suggestions.length) {
+      this.removeAttribute("menu-is-open");
+      return;
+    }
     if (this._showSuggestions === show) return;
 
     this._showSuggestions = show;
@@ -417,8 +420,11 @@ class AutoComplete extends LitElement {
 
       if (!this.suggestions.length) return;
 
-      // always show sugggestions when navigation with arrows
-      this.showSuggestions = true;
+      if (!this.showSuggestions) {
+        // always show sugggestions when navigation with arrows
+        this.showSuggestions = true;
+        return;
+      }
 
       if (!activeSuggestion) {
         suggestions[suggestions.length - 1].setAttribute("active", "");
@@ -449,8 +455,11 @@ class AutoComplete extends LitElement {
 
       if (!this.suggestions.length) return;
 
-      // always show sugggestions when navigation with arrows
-      this.showSuggestions = true;
+      if (!this.showSuggestions) {
+        // always show sugggestions when navigation with arrows
+        this.showSuggestions = true;
+        return;
+      }
 
       if (!activeSuggestion) {
         suggestions[0].setAttribute("active", "");

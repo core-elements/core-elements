@@ -18,12 +18,16 @@
   --base-select-option-list-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+[theme="minimal"] base-select[multiple] base-option[selected] {
+  display: none;
+}
+
 @media (max-width: 800px) {
   [theme="minimal"] base-select {
     --base-select-option-list-box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.1);
     --base-select-option-list-position: fixed;
     --base-select-option-list-top: calc(100% - 280px);
-    --base-select-option-list-opacity: 0;
+    --base-select-option-list-opacity: 1;
     --base-select-option-list-transition: all 0.2s ease-in-out;
   }
 

@@ -21,6 +21,7 @@
     const isDirective = (o) => {
         return typeof o === 'function' && directives.has(o);
     };
+    //# sourceMappingURL=directive.js.map
 
     /**
      * @license
@@ -52,6 +53,7 @@
             start = n;
         }
     };
+    //# sourceMappingURL=dom.js.map
 
     /**
      * @license
@@ -75,6 +77,7 @@
      * A sentinel value that signals a NodePart to fully clear its content.
      */
     const nothing = {};
+    //# sourceMappingURL=part.js.map
 
     /**
      * @license
@@ -288,6 +291,7 @@
      *    * (') then any non-(')
      */
     const lastAttributeNameRegex = /([ \x09\x0a\x0c\x0d])([^\0-\x1F\x7F-\x9F "'>=/]+)([ \x09\x0a\x0c\x0d]*=[ \x09\x0a\x0c\x0d]*(?:[^ \x09\x0a\x0c\x0d"'`<>=]*|"[^"]*|'[^']*))$/;
+    //# sourceMappingURL=template.js.map
 
     /**
      * @license
@@ -420,6 +424,7 @@
             return fragment;
         }
     }
+    //# sourceMappingURL=template-instance.js.map
 
     /**
      * @license
@@ -508,6 +513,7 @@
             return template;
         }
     }
+    //# sourceMappingURL=template-result.js.map
 
     /**
      * @license
@@ -947,6 +953,7 @@
         (eventOptionsSupported ?
             { capture: o.capture, passive: o.passive, once: o.once } :
             o.capture);
+    //# sourceMappingURL=parts.js.map
 
     /**
      * @license
@@ -998,6 +1005,7 @@
         }
     }
     const defaultTemplateProcessor = new DefaultTemplateProcessor();
+    //# sourceMappingURL=default-template-processor.js.map
 
     /**
      * @license
@@ -1045,6 +1053,7 @@
         return template;
     }
     const templateCaches = new Map();
+    //# sourceMappingURL=template-factory.js.map
 
     /**
      * @license
@@ -1085,6 +1094,7 @@
         part.setValue(result);
         part.commit();
     };
+    //# sourceMappingURL=render.js.map
 
     /**
      * @license
@@ -1108,6 +1118,7 @@
      * render to and update a container.
      */
     const html = (strings, ...values) => new TemplateResult(strings, values, 'html', defaultTemplateProcessor);
+    //# sourceMappingURL=lit-html.js.map
 
     /**
      * @license
@@ -1232,6 +1243,7 @@
             }
         }
     }
+    //# sourceMappingURL=modify-template.js.map
 
     /**
      * @license
@@ -1501,6 +1513,7 @@
             window.ShadyCSS.styleElement(container.host);
         }
     };
+    //# sourceMappingURL=shady-render.js.map
 
     /**
      * @license
@@ -2126,6 +2139,7 @@
      * Marks class as having finished creating properties.
      */
     UpdatingElement[_a] = true;
+    //# sourceMappingURL=updating-element.js.map
 
     /**
     @license
@@ -2189,6 +2203,7 @@
         const cssText = values.reduce((acc, v, idx) => acc + textFromCSSResult(v) + strings[idx + 1], strings[0]);
         return new CSSResult(cssText, constructionToken);
     };
+    //# sourceMappingURL=css-tag.js.map
 
     /**
      * @license
@@ -2386,6 +2401,7 @@
      * @nocollapse
      */
     LitElement.render = render$1;
+    //# sourceMappingURL=lit-element.js.map
 
     var selectStyles = css`:host{--base-select-active-color:var(--base-color-active,#2684ff);--base-select-font-size:14px;--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0 68px 4px 8px;--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,1px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#e6e6e6);--base-select-border-radius:var(--base-border-radius-1,0);--base-select-option-list-border:var(--base-select-border-width) solid var(--base-neutral--2,#e6e6e6);--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host:hover{--base-select-border-color:#cecece}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer;padding-left:4px;margin-top:4px}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:26px;height:26px;top:4px;border:0;outline:0}button[part=arrow-button]{text-align:center;background:0;right:4px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:22px;margin-top:6px;padding-left:8px;margin-right:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
 
@@ -2603,7 +2619,11 @@
       }
 
       set showSuggestions(show) {
-        if (!this.suggestions.length) return;
+        if (!this.suggestions.length) {
+          this.removeAttribute("menu-is-open");
+          return;
+        }
+
         if (this._showSuggestions === show) return;
         this._showSuggestions = show; // if suggestion list is shown, make either first or the selected value active
 
@@ -2843,9 +2863,13 @@
 
         if (keyCode === 38) {
           e.preventDefault();
-          if (!this.suggestions.length) return; // always show sugggestions when navigation with arrows
+          if (!this.suggestions.length) return;
 
-          this.showSuggestions = true;
+          if (!this.showSuggestions) {
+            // always show sugggestions when navigation with arrows
+            this.showSuggestions = true;
+            return;
+          }
 
           if (!activeSuggestion) {
             suggestions[suggestions.length - 1].setAttribute("active", "");
@@ -2875,9 +2899,13 @@
 
         if (keyCode == 40) {
           e.preventDefault();
-          if (!this.suggestions.length) return; // always show sugggestions when navigation with arrows
+          if (!this.suggestions.length) return;
 
-          this.showSuggestions = true;
+          if (!this.showSuggestions) {
+            // always show sugggestions when navigation with arrows
+            this.showSuggestions = true;
+            return;
+          }
 
           if (!activeSuggestion) {
             suggestions[0].setAttribute("active", "");

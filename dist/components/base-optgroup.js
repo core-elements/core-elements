@@ -1,4 +1,4 @@
-import { c as css, L as LitElement, h as html } from './lit-element-7a30dcec.js';
+import { c as css, L as LitElement, h as html } from './lit-element-c5717db0.js';
 
 var styles = css`.base-optgroup{display:block}.base-optgroup__label{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;font-weight:500;color:var(--base-color-ui-600);padding:var(--base-spacing-200);text-transform:uppercase;font-size:var(--base-heading-100)}.base-optgroup__icon{margin-right:var(--base-spacing-100)}.base-optgroup__option-list{list-style:none;padding:0;margin:0}`;
 
