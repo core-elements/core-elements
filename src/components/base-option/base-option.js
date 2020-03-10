@@ -1,9 +1,7 @@
 import { LitElement, html } from "lit-element";
-import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
-import classnames from "../../utils/classnames";
 import styles from "./base-option.css";
 
-class Option extends LitElement {
+class BaseOption extends LitElement {
   constructor() {
     super();
     this.hidden = false;
@@ -67,7 +65,7 @@ class Option extends LitElement {
 }
 
 if (!customElements.get("base-option")) {
-  customElements.define("base-option", Option);
+  customElements.define("base-option", BaseOption);
 }
 
-export default Option;
+export default BaseOption;

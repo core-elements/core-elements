@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (global = global || self, factory(global.aprilabank = {}));
+    (global = global || self, factory(global.base = {}));
 }(this, (function (exports) { 'use strict';
 
     /**
@@ -2403,9 +2403,9 @@
     LitElement.render = render$1;
     //# sourceMappingURL=lit-element.js.map
 
-    var selectStyles = css`:host{--base-select-active-color:var(--base-color-active,#2684ff);--base-select-font-size:14px;--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0 68px 4px 8px;--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,1px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#e6e6e6);--base-select-border-radius:var(--base-border-radius-1,0);--base-select-option-list-border:var(--base-select-border-width) solid var(--base-neutral--2,#e6e6e6);--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host:hover{--base-select-border-color:#cecece}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}input[part=input-field]{cursor:pointer;padding-left:4px;margin-top:4px}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:#dedede}input[part=input-field]{background:transparent;min-width:100px;-webkit-box-flex:1;flex-grow:1;font-size:16px;border:0;outline:0}button[part=clear-button]{color:#333;right:35px;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;width:26px;height:26px;top:4px;border:0;outline:0}button[part=arrow-button]{text-align:center;background:0;right:4px}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:22px;margin-top:6px;padding-left:8px;margin-right:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+    var selectStyles = css`:host{--base-select-active-color:var(--base-color-active,#2684ff);--base-select-font-size:14px;--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-neutral-3,#b3b3b3);--base-select-border-width:var(--base-border-width-1,1px);--base-select-border-style:solid;--base-select-border-color:var(--base-color-neutral-2,#e6e6e6);--base-select-border-radius:var(--base-border-radius-1,0);--base-select-option-list-border:var(--base-select-border-width) solid var(--base-neutral--2,#e6e6e6);--base-select-option-list-border-radius:var(--base-select-border-radius);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host:hover{--base-select-border-color:#cecece}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:#dedede}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;cursor:pointer;padding-left:8px;background:transparent;min-width:100px;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
 
-    class AutoComplete extends LitElement {
+    class BaseSelect extends LitElement {
       constructor() {
         super(); // placeholder input value
 
@@ -2492,7 +2492,8 @@
             type: Boolean
           },
           showSuggestions: {
-            type: Boolean
+            type: Boolean,
+            attribute: "show-suggestions"
           },
           value: {
             type: String
@@ -2519,7 +2520,7 @@
             type: Boolean
           },
           selected: {
-            type: Object
+            type: String
           },
           menuOpenOnSelect: {
             type: Boolean,
@@ -2571,7 +2572,7 @@
         this._selected = val;
 
         if (this.multiple) {
-          this._selectedList = this.allOptions.filter(o => val.includes(o.getAttribute("value")));
+          this._selectedList = this.allOptions.filter(o => val.split(",").includes(o.getAttribute("value")));
         } else {
           this._selectedEl = this.allOptions.find(o => {
             return o.getAttribute("value") === val;
@@ -2982,69 +2983,73 @@
         } = this;
         return html`
       <!-- Selected tags -->
-      ${multiple ? _selectedList.map(option => {
+      <div class="input-wrapper">
+        ${multiple ? _selectedList.map(option => {
       return html`
-              <div part="tag">
-                ${option.label}
-                <button
-                  ?disabled=${this.disabled}
-                  @click="${() => _removeOption(option)}"
-                  part="remove-tag"
-                >
-                  <slot name="remove-tag">&#10005;</slot>
-                </button>
-              </div>
-            `;
+                <div part="tag">
+                  ${option.label}
+                  <button
+                    ?disabled=${this.disabled}
+                    @click="${() => _removeOption(option)}"
+                    part="remove-tag"
+                  >
+                    <slot name="remove-tag">&#10005;</slot>
+                  </button>
+                </div>
+              `;
     }) : null}
-      <!-- Input field -->
-      <input
-        ?disabled=${this.disabled}
-        .value=${value}
-        @keydown=${_handleKeyEvent}
-        @input=${_handleInputEvent}
-        @focus=${_handleFocusEvent}
-        @blur=${_handleBlurEvent}
-        @click=${() => this.showSuggestions = true}
-        ?readonly=${!searchable}
-        autocomplete="off"
-        autocorrect="off"
-        aria-label=${ariaLabel}
-        ?has-value=${selected ? true : false}
-        placeholder=${!multiple && selected ? _selectedEl.label : placeholder}
-        aria-owns="listbox"
-        part="input-field"
-        type="text"
-        role="textbox"
-        ?aria-expanded=${this.showSuggestions}
-      />
+        <!-- Input field -->
+        <input
+          ?disabled=${this.disabled}
+          .value=${value}
+          @keydown=${_handleKeyEvent}
+          @input=${_handleInputEvent}
+          @focus=${_handleFocusEvent}
+          @blur=${_handleBlurEvent}
+          @click=${() => this.showSuggestions = true}
+          ?readonly=${!searchable}
+          autocomplete="off"
+          autocorrect="off"
+          aria-label=${ariaLabel}
+          ?has-value=${selected ? true : false}
+          placeholder=${!multiple && selected ? _selectedEl.label : placeholder}
+          aria-owns="listbox"
+          part="input-field"
+          type="text"
+          role="textbox"
+          ?aria-expanded=${this.showSuggestions}
+        />
+      </div>
 
-      <button
-        tabindex="-1"
-        ?disabled=${this.disabled}
-        ?hidden=${clearable}
-        part="clear-button"
-        @click=${clearSelected}
-      >
-        <slot name="clear">&#10005;</slot>
-      </button>
+      <div class="buttons-wrapper">
+        <button
+          tabindex="-1"
+          ?disabled=${this.disabled}
+          ?hidden=${!clearable}
+          part="clear-button"
+          @click=${clearSelected}
+        >
+          <slot name="clear">&#10005;</slot>
+        </button>
 
-      <button
-        tabindex="-1"
-        ?disabled=${this.disabled}
-        ?hidden=${hideArrow}
-        part="arrow-button"
-        @click=${_handleArrowButtonClick}
-      >
-        ${showSuggestions ? html`
-              <slot name="arrow-up">
-                <div class="arrow-up"></div>
-              </slot>
-            ` : html`
-              <slot name="arrow-down">
-                <div class="arrow-down"></div>
-              </slot>
-            `}
-      </button>
+        <button
+          tabindex="-1"
+          ?disabled=${this.disabled}
+          ?hidden=${hideArrow}
+          part="arrow-button"
+          @click=${_handleArrowButtonClick}
+        >
+          ${showSuggestions ? html`
+                <slot name="arrow-up">
+                  <div class="arrow-up"></div>
+                </slot>
+              ` : html`
+                <slot name="arrow-down">
+                  <div class="arrow-down"></div>
+                </slot>
+              `}
+        </button>
+      </div>
 
       <!-- Sugggestion list -->
       <div
@@ -3064,12 +3069,12 @@
     }
 
     if (!customElements.get("base-select")) {
-      customElements.define("base-select", AutoComplete);
+      customElements.define("base-select", BaseSelect);
     }
 
     var styles = css`:host{--base-option-padding:10px;box-sizing:border-box;width:100%;max-width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-color-white);text-align:left;border-radius:var(--base-border-radius-200);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host(:active),:host([active]:not([disabled])){background-color:#2684ff;color:#fff}:host([selected]:not([active]):not([disabled])){background-color:#deebff}:host([selected][active]){background-color:#2684ff;color:#fff}:host([selected] .base-option__desc),:host([selected] .base-option__icon),:host([selected] .base-option__label){color:var(--base-color-active-800)}.base-option__icon{margin-right:var(--base-spacing-300)}.base-option__label{margin:0;padding:0;color:var(--base-color-ui-800);font-size:var(--base-heading-300);font-weight:400;display:block}.base-option__label b{font-weight:600}.base-option__desc{margin:0;padding:0;margin-top:var(--base-spacing-200);font-size:var(--base-paragraph-400);color:var(--base-color-ui-600);display:block;font-weight:400}.base-option--disabled{opacity:.5;color:var(--base-color-ui-500);cursor:not-allowed;background-color:var(--base-color-white)}`;
 
-    class Option extends LitElement {
+    class BaseOption extends LitElement {
       constructor() {
         super();
         this.hidden = false;
@@ -3150,12 +3155,12 @@
     }
 
     if (!customElements.get("base-option")) {
-      customElements.define("base-option", Option);
+      customElements.define("base-option", BaseOption);
     }
 
     var styles$1 = css`.base-optgroup{display:block}.base-optgroup__label{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;font-weight:500;color:var(--base-color-ui-600);padding:var(--base-spacing-200);text-transform:uppercase;font-size:var(--base-heading-100)}.base-optgroup__icon{margin-right:var(--base-spacing-100)}.base-optgroup__option-list{list-style:none;padding:0;margin:0}`;
 
-    class OptGroup extends LitElement {
+    class BaseOptGroup extends LitElement {
       constructor() {
         super();
         this.label = "";
@@ -3198,12 +3203,12 @@
     }
 
     if (!customElements.get("base-optgroup")) {
-      customElements.define("base-optgroup", OptGroup);
+      customElements.define("base-optgroup", BaseOptGroup);
     }
 
-    exports.OptGroup = OptGroup;
-    exports.Option = Option;
-    exports.Select = AutoComplete;
+    exports.BaseOptGroup = BaseOptGroup;
+    exports.BaseOption = BaseOption;
+    exports.BaseSelect = BaseSelect;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

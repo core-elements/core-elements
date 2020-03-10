@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link href="src/themes/material.css" rel="stylesheet" />
+    <script src="dist/main.es.js" type="module"></script>
   </head>
   <style>
     body {
@@ -18,80 +18,21 @@
     }
   </style>
   <body>
-    <div>
-      <label>
-        <input
-          type="radio"
-          onchange="setAttr(this, 'body');"
-          name="theme"
-          value=""
-        />
-        None
-      </label>
-      <label>
-        <input
-          type="radio"
-          onchange="setAttr(this, 'body');"
-          name="theme"
-          value="minimal"
-        />
-        Minimal
-      </label>
-    </div>
+    <base-knobs src="./docs/components.json" name="base-select">
+      <base-select>
+        <base-option value="halla"></base-option>
+        <base-option value="halla2"></base-option>
+        <base-option value="halla3"></base-option>
+        <base-option value="halla4"></base-option>
+        <base-option value="halla5"></base-option>
+        <base-option value="halla6"></base-option>
+        <base-option value="halla7"></base-option>
+        <base-option value="halla8"></base-option>
+        <base-option value="halla9"></base-option>
+        <base-option value="halla10"></base-option>
+      </base-select>
+    </base-knobs>
 
-    <div style="margin-bottom: 100px">
-      <label>
-        <input
-          type="checkbox"
-          onchange="toggleAttr(this, '#baseSelect');"
-          value="multiple"
-        />
-        Multiple
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          onchange="toggleAttr(this, '#baseSelect');"
-          value="menu-open-on-select"
-        />
-        Keep menu open
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          onchange="toggleAttr(this, '#baseSelect');"
-          value="searchable"
-        />
-        Searchable
-      </label>
-    </div>
-
-    <base-select id="baseSelect">
-      <base-option value="Banana"></base-option>
-      <base-option value="Apple"></base-option>
-      <base-option value="Pear"></base-option>
-      <base-option value="Papaya"></base-option>
-      <base-option value="Fig"></base-option>
-      <base-option value="Watermellom"></base-option>
-      <base-option value="Strawberries"></base-option>
-      <base-option value="Plum"></base-option>
-      <base-option value="Guanabana"></base-option>
-      <base-option value="Orange"></base-option>
-      <base-option value="Melon"></base-option>
-      <base-option value="Mandarin"></base-option>
-    </base-select>
-    <script src="dist/main.js"></script>
-    <script>
-      function setAttr(input, selector) {
-        const el = document.querySelector(selector);
-        el.setAttribute(input.name, input.value);
-      }
-
-      function toggleAttr(input, selector) {
-        const el = document.querySelector(selector);
-        if (input.checked) el.setAttribute(input.value, "");
-        else el.removeAttribute(input.value);
-      }
-    </script>
+    <script type="module" src="./docs/main.js"></script>
   </body>
 </html>

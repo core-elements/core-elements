@@ -3,7 +3,7 @@
   --base-select-font-size: 14px;
   --base-select-min-height: 38px;
   --base-select-background: none;
-  --base-select-padding: 0 68px 4px 8px;
+  --base-select-padding: 0px;
   --base-select-placeholder-color: var(--base-color-neutral-3, #b3b3b3);
   --base-select-border-width: var(--base-border-width-1, 1px);
   --base-select-border-style: solid;
@@ -23,6 +23,9 @@
 :host {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: between;
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -37,6 +40,10 @@
   position: relative;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 :host:hover {
   --base-select-border-color: #cecece;
 }
@@ -48,12 +55,6 @@
 
 :host([disabled]) {
   --base-select-background: #eee;
-}
-
-input[part="input-field"] {
-  cursor: pointer;
-  padding-left: 4px;
-  margin-top: 4px;
 }
 
 :host([searchable]) input[part="input-field"] {
@@ -74,25 +75,36 @@ input[part="input-field"] {
   --base-select-border-color: #dedede;
 }
 
+.input-wrapper {
+  flex-wrap: wrap;
+  display: flex;
+  flex: 1;
+  min-height: var(--base-select-min-height);
+}
+
 input[part="input-field"] {
+  flex: 1;
+  cursor: pointer;
+  padding-left: 8px;
   background: transparent;
   min-width: 100px;
-  flex-grow: 1;
+  height: var(--base-select-min-height);
   font-size: 16px;
   border: 0;
   outline: 0;
+}
+
+.buttons-wrapper {
+  display: flex;
 }
 
 button[part="clear-button"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 26px;
-  height: 26px;
+  width: var(--base-select-min-height);
+  height: var(--base-select-min-height);
   color: #333;
-  top: 4px;
-  right: calc(35px + 0);
   border: 0;
   background: transparent;
   outline: 0;
@@ -104,11 +116,8 @@ button[part="arrow-button"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 4px;
-  width: 26px;
-  height: 26px;
-  right: 4px;
+  width: var(--base-select-min-height);
+  height: var(--base-select-min-height);
   border: 0;
   outline: 0;
 }
@@ -134,10 +143,11 @@ div[part="tag"] {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  height: 22px;
-  margin-top: 6px;
-  padding-left: 8px;
-  margin-right: 4px;
+  height: calc(var(--base-select-min-height) - 8px);
+  padding-left: 4px;
+  margin-left: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   background: var(--base-neutral--2, #e6e6e6);
 }
 

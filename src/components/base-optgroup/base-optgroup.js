@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit-element";
 import styles from "./base-optgroup.css";
 
-class OptGroup extends LitElement {
+class BaseOptGroup extends LitElement {
   constructor() {
     super();
     this.label = "";
@@ -41,7 +41,7 @@ class OptGroup extends LitElement {
 }
 
 if (!customElements.get("base-optgroup")) {
-  customElements.define("base-optgroup", OptGroup);
+  customElements.define("base-optgroup", BaseOptGroup);
 }
 
-export default OptGroup;
+export default BaseOptGroup;

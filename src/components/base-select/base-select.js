@@ -2,7 +2,7 @@ import { LitElement, html } from "lit-element";
 import classnames from "../../utils/classnames";
 import selectStyles from "./base-select.css";
 
-class AutoComplete extends LitElement {
+class BaseSelect extends LitElement {
   constructor() {
     super();
     // placeholder input value
@@ -81,7 +81,7 @@ class AutoComplete extends LitElement {
     return {
       ariaLabel: { type: String, attribute: "aria-label" },
       disabled: { type: Boolean },
-      showSuggestions: { type: Boolean },
+      showSuggestions: { type: Boolean, attribute: "show-suggestions" },
       value: { type: String },
       isFocused: { type: Boolean, reflect: true, attribute: "is-focused" },
       multiple: { type: Boolean },
@@ -89,7 +89,7 @@ class AutoComplete extends LitElement {
       placeholder: { type: String },
       searchable: { type: Boolean },
       clearable: { type: Boolean },
-      selected: { type: Object },
+      selected: { type: String },
       menuOpenOnSelect: { type: Boolean, attribute: "menu-open-on-select" },
       disableFilter: { type: Boolean, attribute: "disable-filter" }
     };
@@ -134,7 +134,7 @@ class AutoComplete extends LitElement {
 
     if (this.multiple) {
       this._selectedList = this.allOptions.filter(o =>
-        val.includes(o.getAttribute("value"))
+        val.split(",").includes(o.getAttribute("value"))
       );
     } else {
       this._selectedEl = this.allOptions.find(o => {
@@ -528,73 +528,77 @@ class AutoComplete extends LitElement {
 
     return html`
       <!-- Selected tags -->
-      ${multiple
-        ? _selectedList.map(option => {
-            return html`
-              <div part="tag">
-                ${option.label}
-                <button
-                  ?disabled=${this.disabled}
-                  @click="${() => _removeOption(option)}"
-                  part="remove-tag"
-                >
-                  <slot name="remove-tag">&#10005;</slot>
-                </button>
-              </div>
-            `;
-          })
-        : null}
-      <!-- Input field -->
-      <input
-        ?disabled=${this.disabled}
-        .value=${value}
-        @keydown=${_handleKeyEvent}
-        @input=${_handleInputEvent}
-        @focus=${_handleFocusEvent}
-        @blur=${_handleBlurEvent}
-        @click=${() => (this.showSuggestions = true)}
-        ?readonly=${!searchable}
-        autocomplete="off"
-        autocorrect="off"
-        aria-label=${ariaLabel}
-        ?has-value=${selected ? true : false}
-        placeholder=${!multiple && selected ? _selectedEl.label : placeholder}
-        aria-owns="listbox"
-        part="input-field"
-        type="text"
-        role="textbox"
-        ?aria-expanded=${this.showSuggestions}
-      />
+      <div class="input-wrapper">
+        ${multiple
+          ? _selectedList.map(option => {
+              return html`
+                <div part="tag">
+                  ${option.label}
+                  <button
+                    ?disabled=${this.disabled}
+                    @click="${() => _removeOption(option)}"
+                    part="remove-tag"
+                  >
+                    <slot name="remove-tag">&#10005;</slot>
+                  </button>
+                </div>
+              `;
+            })
+          : null}
+        <!-- Input field -->
+        <input
+          ?disabled=${this.disabled}
+          .value=${value}
+          @keydown=${_handleKeyEvent}
+          @input=${_handleInputEvent}
+          @focus=${_handleFocusEvent}
+          @blur=${_handleBlurEvent}
+          @click=${() => (this.showSuggestions = true)}
+          ?readonly=${!searchable}
+          autocomplete="off"
+          autocorrect="off"
+          aria-label=${ariaLabel}
+          ?has-value=${selected ? true : false}
+          placeholder=${!multiple && selected ? _selectedEl.label : placeholder}
+          aria-owns="listbox"
+          part="input-field"
+          type="text"
+          role="textbox"
+          ?aria-expanded=${this.showSuggestions}
+        />
+      </div>
 
-      <button
-        tabindex="-1"
-        ?disabled=${this.disabled}
-        ?hidden=${clearable}
-        part="clear-button"
-        @click=${clearSelected}
-      >
-        <slot name="clear">&#10005;</slot>
-      </button>
+      <div class="buttons-wrapper">
+        <button
+          tabindex="-1"
+          ?disabled=${this.disabled}
+          ?hidden=${!clearable}
+          part="clear-button"
+          @click=${clearSelected}
+        >
+          <slot name="clear">&#10005;</slot>
+        </button>
 
-      <button
-        tabindex="-1"
-        ?disabled=${this.disabled}
-        ?hidden=${hideArrow}
-        part="arrow-button"
-        @click=${_handleArrowButtonClick}
-      >
-        ${showSuggestions
-          ? html`
-              <slot name="arrow-up">
-                <div class="arrow-up"></div>
-              </slot>
-            `
-          : html`
-              <slot name="arrow-down">
-                <div class="arrow-down"></div>
-              </slot>
-            `}
-      </button>
+        <button
+          tabindex="-1"
+          ?disabled=${this.disabled}
+          ?hidden=${hideArrow}
+          part="arrow-button"
+          @click=${_handleArrowButtonClick}
+        >
+          ${showSuggestions
+            ? html`
+                <slot name="arrow-up">
+                  <div class="arrow-up"></div>
+                </slot>
+              `
+            : html`
+                <slot name="arrow-down">
+                  <div class="arrow-down"></div>
+                </slot>
+              `}
+        </button>
+      </div>
 
       <!-- Sugggestion list -->
       <div
@@ -615,7 +619,7 @@ class AutoComplete extends LitElement {
 }
 
 if (!customElements.get("base-select")) {
-  customElements.define("base-select", AutoComplete);
+  customElements.define("base-select", BaseSelect);
 }
 
-export default AutoComplete;
+export default BaseSelect;

@@ -27,7 +27,6 @@ const components = glob.sync(`src/components/**/base-*.js`).reduce(
     const split = filePath.split("/");
     const lastName = split[split.length - 1];
     const fileName = lastName.slice(0, -3);
-    console.log(fileName);
     return {
       ...acc,
       [`${fileName}`]: filePath
@@ -53,7 +52,11 @@ export default [
       {
         file: "dist/main.js",
         format: "umd",
-        name: "aprilabank"
+        name: "base"
+      },
+      {
+        file: "dist/main.es.js",
+        format: "es"
       }
     ],
     plugins: [
