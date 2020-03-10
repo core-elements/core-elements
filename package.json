@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
     "dev": "npm run analyze && run-p dev:*",
-    "build": "npm-run-all build:*",
+    "build": "npm run analyze && npm-s build:*",
     "analyze": "wca analyze src/components/**/*.{js,ts} --format json --outFile docs/components.json",
     "dev:rollup": "rollup --config -w",
     "dev:serve": "npx live-server",
