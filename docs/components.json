@@ -110,14 +110,14 @@
       "attributes": [
         {
           "name": "selected",
-          "type": "object"
+          "type": "string"
         },
         {
           "name": "value",
           "type": "string"
         },
         {
-          "name": "showSuggestions",
+          "name": "show-suggestions",
           "type": "boolean"
         },
         {
@@ -179,7 +179,7 @@
         {
           "name": "selected",
           "attribute": "selected",
-          "type": "object"
+          "type": "string"
         },
         {
           "name": "suggestions",
@@ -196,7 +196,7 @@
         },
         {
           "name": "showSuggestions",
-          "attribute": "showSuggestions",
+          "attribute": "show-suggestions",
           "type": "boolean"
         },
         {
