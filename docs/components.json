@@ -109,10 +109,6 @@
       "path": "./../src/components/base-select/base-select.js",
       "attributes": [
         {
-          "name": "selected",
-          "type": "string"
-        },
-        {
           "name": "value",
           "type": "string"
         },
@@ -161,6 +157,11 @@
           "default": "false"
         },
         {
+          "name": "selected",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "searchable",
           "type": "boolean",
           "default": "false"
@@ -175,11 +176,6 @@
         {
           "name": "allOptions",
           "type": "Element[]"
-        },
-        {
-          "name": "selected",
-          "attribute": "selected",
-          "type": "string"
         },
         {
           "name": "suggestions",
@@ -246,6 +242,12 @@
           "attribute": "disable-filter",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "string",
+          "default": "\"\""
         },
         {
           "name": "clearSelected"

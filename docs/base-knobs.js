@@ -13,7 +13,9 @@ class BaseKnobs extends LitElement {
     this.attributes = [];
     this.properties = [];
     this._fetchJson = this._fetchJson.bind(this);
-    this._getInputType = this._getInputType.bind(this);
+    this._getPropType = this._getPropType.bind(this);
+    this._observeProps = this._observeProps.bind(this);
+    this._getPropType = this._getPropType.bind(this);
     this._handleAttrChange = this._handleAttrChange.bind(this);
     this._renderTabs = this._renderTabs.bind(this);
     this._renderSrcTab = this._renderSrcTab.bind(this);
@@ -33,6 +35,16 @@ class BaseKnobs extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this._fetchJson();
+    this._observeProps();
+  }
+
+  _observeProps() {
+    var observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        this.requestUpdate();
+      });
+    });
+    observer.observe(this.componentEl, { attributes: true });
   }
 
   get componentEl() {
@@ -51,13 +63,26 @@ class BaseKnobs extends LitElement {
     }
   }
 
-  _getInputType(type) {
-    if (type === "boolean") return "checkbox";
-    if (type === "string") return "text";
+  get srcHTML() {
+    return this.innerHTML;
+  }
+
+  _getPropType(attr) {
+    if (attr.type === "boolean") return "checkbox";
+    if (attr.type === "string") return "text";
+  }
+
+  _getPropValue(attr) {
+    if (attr.type === "boolean") {
+      return this.componentEl.hasAttribute(attr.name);
+    }
+    if (attr.type === "string") {
+      return this.componentEl[attr.name];
+    }
+    return null;
   }
 
   _handleAttrChange(e, attr) {
-    console.log(e);
     if (attr.type === "string") {
       this.componentEl.setAttribute(attr.name, e.target.value);
     }
@@ -88,8 +113,11 @@ class BaseKnobs extends LitElement {
             <div class="prop">
               <label>
                 <input
+                  name=${attr.name}
+                  ?checked=${this._getPropValue(attr)}
+                  .value=${this._getPropValue(attr)}
                   @input=${e => this._handleAttrChange(e, attr)}
-                  type=${this._getInputType(attr.type)}
+                  type=${this._getPropType(attr)}
                 />
                 ${attr.name}
               </label>
@@ -103,7 +131,7 @@ class BaseKnobs extends LitElement {
   _renderSrcTab() {
     return html`
       <div class="src">
-        <h2>Src</h2>
+        <h2>${this.srcHTML}</h2>
       </div>
     `;
   }

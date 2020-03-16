@@ -33,18 +33,11 @@ class BaseSelect extends LitElement {
     this._showSuggestions = false;
     // input value
     this._value = "";
-    // the selected element
-    this._selectedEL = null;
     /**
      * https://lit-element.polymer-project.org/guide/properties#accessors
      * Selected value
      */
     this._selected = "";
-    /**
-     *  a list to hold multiple selected elements in
-     * the order they are selected by the user
-     */
-    this._selectedList = [];
     // filter list
     this._filterList = this._filterList.bind(this);
     // handle all key events
@@ -102,47 +95,46 @@ class BaseSelect extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     // add mousedown event listener to catch click before focus dissapears
+  }
 
-    this.allOptions.forEach(option => {
-      const isSelected = option.hasAttribute("selected");
-      if (!this.multiple && isSelected) {
-        // TODO: Why doesnt this set as default selected?
-        this._selectedEl = option;
-      }
-      // init all selected options in the selected list
-      if (this.multiple && isSelected) {
-        this._selectedList = [...this._selectedList, option];
-      }
+  set selected(val) {
+    if (this.multiple) {
+      this.allOptions.forEach(option => {
+        const isSelected = val.split(",").includes(option.value);
+        if (isSelected) option.setAttribute("selected", "");
+        else option.removeAttribute("selected");
+      });
+    } else {
+      this.allOptions.forEach(option => {
+        if (option.selected && option.value !== val)
+          option.removeAttribute("selected");
+        if (!option.selected && option.value === val)
+          option.setAttribute("selected", "");
+      });
+    }
+
+    this._selected = val;
+    this.requestUpdate();
+  }
+
+  get selected() {
+    return this._selected;
+  }
+
+  get _selectedElements() {
+    return this.allOptions.filter(o =>
+      this.selected.split(",").includes(o.value)
+    );
+  }
+
+  get _selectedEl() {
+    return this.allOptions.find(o => {
+      return o.getAttribute("value") === this.selected;
     });
   }
 
   get allOptions() {
     return [...this.querySelectorAll("base-option")];
-  }
-
-  get selected() {
-    if (this.multiple) {
-      return this._selectedList.map(opt => opt.value);
-    } else {
-      return this._selectedEl ? this._selectedEl.getAttribute("value") : "";
-    }
-  }
-
-  set selected(val) {
-    const oldVal = this._selected;
-    this._selected = val;
-
-    if (this.multiple) {
-      this._selectedList = this.allOptions.filter(o =>
-        val.split(",").includes(o.getAttribute("value"))
-      );
-    } else {
-      this._selectedEl = this.allOptions.find(o => {
-        return o.getAttribute("value") === val;
-      });
-    }
-
-    this.requestUpdate("selected", oldVal);
   }
 
   get suggestions() {
@@ -157,7 +149,7 @@ class BaseSelect extends LitElement {
   }
 
   get activeSuggestion() {
-    return this.suggestions.find(sugg => sugg.hasAttribute("active"));
+    return this.suggestions.find(sugg => sugg.active);
   }
 
   get _inputField() {
@@ -176,6 +168,7 @@ class BaseSelect extends LitElement {
     const value = val ? val : "";
     // Set new value
     this._value = value;
+    this._filterList();
     // Request update so the setter works as an opbserved value
     this.requestUpdate();
   }
@@ -211,19 +204,8 @@ class BaseSelect extends LitElement {
   }
 
   clearSelected() {
-    if (this.multiple) {
-      this.allOptions.forEach(option => option.removeAttribute("selected"));
-      this._selectedList = [];
-      this._dispatchChange([]);
-    } else {
-      this._selectedEl = null;
-      this._dispatchChange("");
-    }
+    this.selected = "";
     this.value = "";
-  }
-
-  updated(changedProperties) {
-    this._filterList();
   }
 
   _filterList() {
@@ -236,20 +218,9 @@ class BaseSelect extends LitElement {
         ? true
         : option.label.toLowerCase().includes(value.toLowerCase());
 
-      if (!isMatch && option.hasAttribute("active")) {
+      if (!isMatch && option.active) {
         // remove active state
         option.removeAttribute("active");
-      }
-
-      // determine if the option is selected
-      const optionSelected = multiple
-        ? selected.includes(option.value)
-        : selected === option.value;
-
-      if (optionSelected) {
-        option.setAttribute("selected", "");
-      } else {
-        option.removeAttribute("selected");
       }
 
       if (isMatch) {
@@ -257,8 +228,6 @@ class BaseSelect extends LitElement {
       } else {
         option.setAttribute("hidden", "");
       }
-
-      return isMatch;
     });
   }
 
@@ -274,10 +243,10 @@ class BaseSelect extends LitElement {
   //  choose option for single select
   _chooseOption(optionEl) {
     if (optionEl.value === this.selected) {
-      // set the input value to the option label again
+      // reset value
       this.value = "";
     } else {
-      this._selectedEl = optionEl;
+      this.selected = optionEl.value;
 
       this._dispatchChange(optionEl.value);
       // set input value as selected label as a placeholder
@@ -290,39 +259,31 @@ class BaseSelect extends LitElement {
 
   // add option for multiple select
   _addOption(optionEl) {
-    const isSelected = this.selected.includes(optionEl.value);
-
-    if (isSelected) {
-      this._selectedList = this._selectedList.filter(s => s !== optionEl);
-      this._dispatchChange(this.selected);
-    } else {
-      this._selectedList = [...this._selectedList, optionEl];
-      this._dispatchChange(this.selected);
-    }
+    // reset value
     this.value = "";
+    this.selected = this.selected.concat("," + optionEl.value);
+    this._dispatchChange();
     this.focus();
     this.showSuggestions = this.menuOpenOnSelect ? true : false;
+    this.requestUpdate();
   }
 
   // remove option for multiple select
   _removeOption(optionEl) {
     if (this.multiple) {
-      this._selectedList = this._selectedList.filter(
-        o => o.value !== optionEl.value
-      );
-
-      this._dispatchChange(this.selected);
+      this.selected = this.selected
+        .split(",")
+        .filter(val => val !== optionEl.value)
+        .toString();
+    } else {
+      this.selected = "";
     }
-    optionEl.removeAttribute("active");
+    this._dispatchChange();
     this.requestUpdate();
   }
 
-  _dispatchChange(value) {
-    this.dispatchEvent(
-      new CustomEvent("change", {
-        detail: { selected: value }
-      })
-    );
+  _dispatchChange() {
+    this.dispatchEvent(new CustomEvent("change"));
   }
 
   _handleFocusEvent() {
@@ -402,8 +363,10 @@ class BaseSelect extends LitElement {
         // don't delete if there's something in the input
         if (this.value) return;
 
-        if (this._selectedList.length) {
-          this._removeOption(this._selectedList[this._selectedList.length - 1]);
+        if (this._selectedElements.length) {
+          this._removeOption(
+            this._selectedElements[this._selectedElements.length - 1]
+          );
         }
       } else {
         if (this.value.length === 0) {
@@ -518,7 +481,7 @@ class BaseSelect extends LitElement {
       _selectedEl,
       _removeOption,
       showSuggestions,
-      _selectedList,
+      _selectedElements,
       _handleArrowButtonClick,
       _handleInputEvent,
       _handleKeyEvent,
@@ -530,7 +493,7 @@ class BaseSelect extends LitElement {
       <!-- Selected tags -->
       <div class="input-wrapper">
         ${multiple
-          ? _selectedList.map(option => {
+          ? _selectedElements.map(option => {
               return html`
                 <div part="tag">
                   ${option.label}
@@ -559,7 +522,11 @@ class BaseSelect extends LitElement {
           autocorrect="off"
           aria-label=${ariaLabel}
           ?has-value=${selected ? true : false}
-          placeholder=${!multiple && selected ? _selectedEl.label : placeholder}
+          placeholder=${!multiple && selected
+            ? _selectedEl
+              ? _selectedEl.label
+              : ""
+            : placeholder}
           aria-owns="listbox"
           part="input-field"
           type="text"
