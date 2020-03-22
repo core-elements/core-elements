@@ -1,8 +1,4 @@
-import {
-  LitElement,
-  html,
-  css
-} from "https://unpkg.com/@polymer/lit-element@latest/lit-element.js?module";
+import { LitElement, html, css } from "lit-element";
 
 class BaseKnobs extends LitElement {
   constructor() {

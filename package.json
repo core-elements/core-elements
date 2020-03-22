@@ -6,11 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
-    "dev": "npm run analyze && run-p dev:*",
-    "build": "npm run analyze && npm-s build:*",
-    "analyze": "wca analyze src/components/**/*.{js,ts} --format json --outFile docs/components.json",
+    "dev": "run-p dev:*",
+    "build": "npm-s build:*",
     "dev:rollup": "rollup --config -w",
-    "dev:serve": "npx live-server",
     "build:rollup": "rollup --config"
   },
   "keywords": [
@@ -34,8 +32,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-require-context": "^1.0.0",
     "rollup-pluginutils": "^2.8.2",
-    "uglifycss": "0.0.29",
-    "web-component-analyzer": "^1.0.3"
+    "uglifycss": "0.0.29"
   },
   "dependencies": {
     "lit-element": "^2.2.1"

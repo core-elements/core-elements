@@ -2,8 +2,42 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "base-button-group",
+      "path": "./../../src/components/base-button-group/base-button-group.js"
+    },
+    {
+      "name": "base-button",
+      "path": "./../../src/components/base-button/base-button.js",
+      "attributes": [
+        {
+          "name": "type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "style",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "attribute": "type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "style",
+          "attribute": "style",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
       "name": "base-optgroup",
-      "path": "./../src/components/base-optgroup/base-optgroup.js",
+      "path": "./../../src/components/base-optgroup/base-optgroup.js",
       "attributes": [
         {
           "name": "label",
@@ -33,7 +67,7 @@
     },
     {
       "name": "base-option",
-      "path": "./../src/components/base-option/base-option.js",
+      "path": "./../../src/components/base-option/base-option.js",
       "attributes": [
         {
           "name": "label",
@@ -106,8 +140,12 @@
     },
     {
       "name": "base-select",
-      "path": "./../src/components/base-select/base-select.js",
+      "path": "./../../src/components/base-select/base-select.js",
       "attributes": [
+        {
+          "name": "selected",
+          "type": "string"
+        },
         {
           "name": "value",
           "type": "string"
@@ -157,11 +195,6 @@
           "default": "false"
         },
         {
-          "name": "selected",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
           "name": "searchable",
           "type": "boolean",
           "default": "false"
@@ -173,6 +206,11 @@
         }
       ],
       "properties": [
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "string"
+        },
         {
           "name": "allOptions",
           "type": "Element[]"
@@ -242,12 +280,6 @@
           "attribute": "disable-filter",
           "type": "boolean",
           "default": "false"
-        },
-        {
-          "name": "selected",
-          "attribute": "selected",
-          "type": "string",
-          "default": "\"\""
         },
         {
           "name": "clearSelected"
