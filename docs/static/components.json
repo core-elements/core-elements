@@ -2,10 +2,6 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "base-button-group",
-      "path": "./../../src/components/base-button-group/base-button-group.js"
-    },
-    {
       "name": "base-button",
       "path": "./../../src/components/base-button/base-button.js",
       "attributes": [

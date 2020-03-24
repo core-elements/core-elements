@@ -18527,16 +18527,12 @@ module.exports = {
     "name": "base-button",
     "content": "\n## Base Button\n\n### Types\n\n<base-button>Halla</base-button>\n<base-button type=\"primary\">Halla</base-button>\n<base-button type=\"secondary\">Halla</base-button>\n<base-button type=\"success\">Halla</base-button>\n<base-button type=\"danger\">Halla</base-button>\n\n### Outline\n\n<base-button style=\"outline\">Halla</base-button>\n<base-button style=\"outline\" type=\"primary\">Halla</base-button>\n<base-button style=\"outline\" type=\"secondary\">Halla</base-button>\n<base-button style=\"outline\" type=\"success\">Halla</base-button>\n<base-button style=\"outline\" type=\"danger\">Halla</base-button>\n"
   }, {
-    "path": "../src/components/base-button-group/base-button.md",
-    "name": "base-button-group",
-    "content": "\n## Base Button Group\n\n### Types\n\n<base-button-group>\n<base-button>Halla</base-button>\n<base-button type=\"primary\">Halla</base-button>\n<base-button type=\"secondary\">Halla</base-button>\n<base-button type=\"success\">Halla</base-button>\n<base-button type=\"danger\">Halla</base-button>\n</base-button-group>\n"
+    "path": "../src/components/base-modal/base-modal.md",
+    "content": ""
   }, {
     "path": "../src/components/base-select/base-select.md",
     "name": "base-select",
     "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
-  }, {
-    "path": "../src/components/base-modal/base-modal.md",
-    "content": ""
   }]
 };
 },{}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
@@ -18991,7 +18987,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62073" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49523" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
