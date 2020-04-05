@@ -6,16 +6,16 @@ class BaseKnobs extends LitElement {
     this.src = "";
     this.name = "";
     this.tab = "props";
+    this.hideProps = false;
     this.attributes = [];
     this.properties = [];
     this._fetchJson = this._fetchJson.bind(this);
-    this._getPropType = this._getPropType.bind(this);
     this._observeProps = this._observeProps.bind(this);
-    this._getPropType = this._getPropType.bind(this);
     this._handleAttrChange = this._handleAttrChange.bind(this);
     this._renderTabs = this._renderTabs.bind(this);
     this._renderSrcTab = this._renderSrcTab.bind(this);
     this._renderPropTab = this._renderPropTab.bind(this);
+    this._propComponent = this._propComponent.bind(this);
   }
 
   static get properties() {
@@ -24,7 +24,8 @@ class BaseKnobs extends LitElement {
       src: { type: String },
       name: { type: String },
       attributes: { type: Array },
-      properties: { type: Array }
+      properties: { type: Array },
+      hideProps: { type: Boolean }
     };
   }
 
@@ -63,12 +64,10 @@ class BaseKnobs extends LitElement {
     return this.innerHTML;
   }
 
-  _getPropType(attr) {
-    if (attr.type === "boolean") return "checkbox";
-    if (attr.type === "string") return "text";
-  }
-
   _getPropValue(attr) {
+    if (attr.type.includes("|")) {
+      return attr.type.split("|")[0];
+    }
     if (attr.type === "boolean") {
       return this.componentEl.hasAttribute(attr.name);
     }
@@ -79,6 +78,10 @@ class BaseKnobs extends LitElement {
   }
 
   _handleAttrChange(e, attr) {
+    if (attr.type.includes("|")) {
+      console.log(e.target.value);
+      this.componentEl.setAttribute(attr.name, e.target.value);
+    }
     if (attr.type === "string") {
       this.componentEl.setAttribute(attr.name, e.target.value);
     }
@@ -100,25 +103,71 @@ class BaseKnobs extends LitElement {
     if (this.tab === "src") return this._renderSrcTab();
   }
 
+  _propComponent(attr) {
+    if (attr.type.includes("|")) {
+      const options = attr.type.replace(/"/g, "").split("|");
+
+      return html`
+        <div class="prop">
+          <label>
+            <select @change=${e => this._handleAttrChange(e, attr)}>
+              ${options.map(opt => {
+                return html`
+                  <option
+                    ?selected=${this.componentEl.getAttribute(attr.name) ===
+                      opt}
+                    value=${opt}
+                    >${opt}</option
+                  >
+                `;
+              })}
+            </select>
+          </label>
+        </div>
+      `;
+    }
+
+    if (attr.type === "string") {
+      return html`
+        <div class="prop">
+          <label>
+            <input
+              name=${attr.name}
+              .value=${this.componentEl[attr.name]}
+              @input=${e => this._handleAttrChange(e, attr)}
+              type="text"
+            />
+            ${attr.name}
+          </label>
+        </div>
+      `;
+    }
+
+    if (attr.type === "boolean") {
+      return html`
+        <div class="prop">
+          <label>
+            <input
+              name=${attr.name}
+              ?checked=${this.componentEl.hasAttribute(attr.name)}
+              .value=${this.componentEl[attr.name]}
+              @input=${e => this._handleAttrChange(e, attr)}
+              type="checkbox"
+            />
+            ${attr.name}
+          </label>
+        </div>
+      `;
+    }
+
+    return null;
+  }
+
   _renderPropTab() {
     return html`
       <div class="props">
-        <h2>Props</h2>
         ${this.attributes.map(attr => {
-          return html`
-            <div class="prop">
-              <label>
-                <input
-                  name=${attr.name}
-                  ?checked=${this._getPropValue(attr)}
-                  .value=${this._getPropValue(attr)}
-                  @input=${e => this._handleAttrChange(e, attr)}
-                  type=${this._getPropType(attr)}
-                />
-                ${attr.name}
-              </label>
-            </div>
-          `;
+          return this._propComponent(attr);
         })}
       </div>
     `;
@@ -229,13 +278,17 @@ class BaseKnobs extends LitElement {
       </style>
       <slot></slot>
       <nav>
-        <button
-          ?active=${this.tab === "props"}
-          value="props"
-          @click=${this._handleTabChange}
-        >
-          Props
-        </button>
+        ${this.hideProps
+          ? html`
+              <button
+                ?active=${this.tab === "props"}
+                value="props"
+                @click=${this._handleTabChange}
+              >
+                Props
+              </button>
+            `
+          : null}
         <button
           ?active=${this.tab === "src"}
           value="src"

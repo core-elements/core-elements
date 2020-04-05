@@ -4496,16 +4496,16 @@ class BaseKnobs extends _litElement.LitElement {
     this.src = "";
     this.name = "";
     this.tab = "props";
+    this.hideProps = false;
     this.attributes = [];
     this.properties = [];
     this._fetchJson = this._fetchJson.bind(this);
-    this._getPropType = this._getPropType.bind(this);
     this._observeProps = this._observeProps.bind(this);
-    this._getPropType = this._getPropType.bind(this);
     this._handleAttrChange = this._handleAttrChange.bind(this);
     this._renderTabs = this._renderTabs.bind(this);
     this._renderSrcTab = this._renderSrcTab.bind(this);
     this._renderPropTab = this._renderPropTab.bind(this);
+    this._propComponent = this._propComponent.bind(this);
   }
 
   static get properties() {
@@ -4524,6 +4524,9 @@ class BaseKnobs extends _litElement.LitElement {
       },
       properties: {
         type: Array
+      },
+      hideProps: {
+        type: Boolean
       }
     };
   }
@@ -4567,12 +4570,11 @@ class BaseKnobs extends _litElement.LitElement {
     return this.innerHTML;
   }
 
-  _getPropType(attr) {
-    if (attr.type === "boolean") return "checkbox";
-    if (attr.type === "string") return "text";
-  }
-
   _getPropValue(attr) {
+    if (attr.type.includes("|")) {
+      return attr.type.split("|")[0];
+    }
+
     if (attr.type === "boolean") {
       return this.componentEl.hasAttribute(attr.name);
     }
@@ -4585,6 +4587,11 @@ class BaseKnobs extends _litElement.LitElement {
   }
 
   _handleAttrChange(e, attr) {
+    if (attr.type.includes("|")) {
+      console.log(e.target.value);
+      this.componentEl.setAttribute(attr.name, e.target.value);
+    }
+
     if (attr.type === "string") {
       this.componentEl.setAttribute(attr.name, e.target.value);
     }
@@ -4607,25 +4614,69 @@ class BaseKnobs extends _litElement.LitElement {
     if (this.tab === "src") return this._renderSrcTab();
   }
 
+  _propComponent(attr) {
+    if (attr.type.includes("|")) {
+      const options = attr.type.replace(/"/g, "").split("|");
+      return (0, _litElement.html)`
+        <div class="prop">
+          <label>
+            <select @change=${e => this._handleAttrChange(e, attr)}>
+              ${options.map(opt => {
+        return (0, _litElement.html)`
+                  <option
+                    ?selected=${this.componentEl.getAttribute(attr.name) === opt}
+                    value=${opt}
+                    >${opt}</option
+                  >
+                `;
+      })}
+            </select>
+          </label>
+        </div>
+      `;
+    }
+
+    if (attr.type === "string") {
+      return (0, _litElement.html)`
+        <div class="prop">
+          <label>
+            <input
+              name=${attr.name}
+              .value=${this.componentEl[attr.name]}
+              @input=${e => this._handleAttrChange(e, attr)}
+              type="text"
+            />
+            ${attr.name}
+          </label>
+        </div>
+      `;
+    }
+
+    if (attr.type === "boolean") {
+      return (0, _litElement.html)`
+        <div class="prop">
+          <label>
+            <input
+              name=${attr.name}
+              ?checked=${this.componentEl.hasAttribute(attr.name)}
+              .value=${this.componentEl[attr.name]}
+              @input=${e => this._handleAttrChange(e, attr)}
+              type="checkbox"
+            />
+            ${attr.name}
+          </label>
+        </div>
+      `;
+    }
+
+    return null;
+  }
+
   _renderPropTab() {
     return (0, _litElement.html)`
       <div class="props">
-        <h2>Props</h2>
         ${this.attributes.map(attr => {
-      return (0, _litElement.html)`
-            <div class="prop">
-              <label>
-                <input
-                  name=${attr.name}
-                  ?checked=${this._getPropValue(attr)}
-                  .value=${this._getPropValue(attr)}
-                  @input=${e => this._handleAttrChange(e, attr)}
-                  type=${this._getPropType(attr)}
-                />
-                ${attr.name}
-              </label>
-            </div>
-          `;
+      return this._propComponent(attr);
     })}
       </div>
     `;
@@ -4736,13 +4787,15 @@ class BaseKnobs extends _litElement.LitElement {
       </style>
       <slot></slot>
       <nav>
-        <button
-          ?active=${this.tab === "props"}
-          value="props"
-          @click=${this._handleTabChange}
-        >
-          Props
-        </button>
+        ${this.hideProps ? (0, _litElement.html)`
+              <button
+                ?active=${this.tab === "props"}
+                value="props"
+                @click=${this._handleTabChange}
+              >
+                Props
+              </button>
+            ` : null}
         <button
           ?active=${this.tab === "src"}
           value="src"
@@ -8288,7 +8341,19 @@ var global = arguments[3];
   class BaseButton extends LitElement {
     constructor() {
       super();
+      /**
+       * Button state
+       * @type {"primary"|"secondary"|"transparent"|"success"|"danger"}
+       * @attr
+       */
+
       this.type = "";
+      /**
+       * Button state
+       * @type {"normal"|"outline"}
+       * @attr
+       */
+
       this.style = "";
     }
 
@@ -18523,16 +18588,16 @@ module.exports = marked;
 },{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./InlineLexer.js":"node_modules/marked/src/InlineLexer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
-    "path": "../src/components/base-button/base-button.md",
+    "path": "../lib/src/components/base-button/base-button.md",
     "name": "base-button",
-    "content": "\n## Base Button\n\n### Types\n\n<base-button>Halla</base-button>\n<base-button type=\"primary\">Halla</base-button>\n<base-button type=\"secondary\">Halla</base-button>\n<base-button type=\"success\">Halla</base-button>\n<base-button type=\"danger\">Halla</base-button>\n\n### Outline\n\n<base-button style=\"outline\">Halla</base-button>\n<base-button style=\"outline\" type=\"primary\">Halla</base-button>\n<base-button style=\"outline\" type=\"secondary\">Halla</base-button>\n<base-button style=\"outline\" type=\"success\">Halla</base-button>\n<base-button style=\"outline\" type=\"danger\">Halla</base-button>\n"
+    "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n\n### Types\n\n<base-button>Halla</base-button>\n<base-button type=\"primary\">Halla</base-button>\n<base-button type=\"secondary\">Halla</base-button>\n<base-button type=\"success\">Halla</base-button>\n<base-button type=\"danger\">Halla</base-button>\n\n### Outline\n\n<base-button style=\"outline\">Halla</base-button>\n<base-button style=\"outline\" type=\"primary\">Halla</base-button>\n<base-button style=\"outline\" type=\"secondary\">Halla</base-button>\n<base-button style=\"outline\" type=\"success\">Halla</base-button>\n<base-button style=\"outline\" type=\"danger\">Halla</base-button>\n"
   }, {
-    "path": "../src/components/base-modal/base-modal.md",
-    "content": ""
-  }, {
-    "path": "../src/components/base-select/base-select.md",
+    "path": "../lib/src/components/base-select/base-select.md",
     "name": "base-select",
     "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "content": ""
   }]
 };
 },{}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
@@ -18987,7 +19052,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49523" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57562" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

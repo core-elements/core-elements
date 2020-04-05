@@ -3,16 +3,18 @@
   "tags": [
     {
       "name": "base-button",
-      "path": "./../../src/components/base-button/base-button.js",
+      "path": "./../../lib/src/components/base-button/base-button.js",
       "attributes": [
         {
           "name": "type",
-          "type": "string",
+          "description": "Button state",
+          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
         {
           "name": "style",
-          "type": "string",
+          "description": "Button state",
+          "type": "\"normal\"|\"outline\"",
           "default": "\"\""
         }
       ],
@@ -20,20 +22,22 @@
         {
           "name": "type",
           "attribute": "type",
-          "type": "string",
+          "description": "Button state",
+          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
         {
           "name": "style",
           "attribute": "style",
-          "type": "string",
+          "description": "Button state",
+          "type": "\"normal\"|\"outline\"",
           "default": "\"\""
         }
       ]
     },
     {
       "name": "base-optgroup",
-      "path": "./../../src/components/base-optgroup/base-optgroup.js",
+      "path": "./../../lib/src/components/base-optgroup/base-optgroup.js",
       "attributes": [
         {
           "name": "label",
@@ -63,7 +67,7 @@
     },
     {
       "name": "base-option",
-      "path": "./../../src/components/base-option/base-option.js",
+      "path": "./../../lib/src/components/base-option/base-option.js",
       "attributes": [
         {
           "name": "label",
@@ -136,7 +140,7 @@
     },
     {
       "name": "base-select",
-      "path": "./../../src/components/base-select/base-select.js",
+      "path": "./../../lib/src/components/base-select/base-select.js",
       "attributes": [
         {
           "name": "selected",

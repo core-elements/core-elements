@@ -8,7 +8,7 @@
     "start": "npm run dev",
     "dev": "npm run analyze && run-p dev:*",
     "build": "npm run analyze && npm-s build:*",
-    "analyze": "wca analyze ../src/components/**/*.{js,ts} --format json --outFile static/components.json",
+    "analyze": "wca analyze ../lib/src/components/**/*.{js,ts} --format json --outFile static/components.json",
     "dev:markdown": "markdown-db create src -w",
     "dev:web": "parcel index.html",
     "build:markdown": "markdown-db create src",
