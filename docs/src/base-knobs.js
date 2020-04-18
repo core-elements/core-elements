@@ -83,7 +83,7 @@ class BaseKnobs extends LitElement {
 
   _handleAttrChange(e, attr) {
     if (attr.type.includes("|")) {
-      this.componentEl.setAttribute(attr.name, e.target.value);
+      this.componentEl.setAttribute(attr.name, e.target.selected);
     }
     if (attr.type === "string") {
       this.componentEl.setAttribute(attr.name, e.target.value);
@@ -112,20 +112,19 @@ class BaseKnobs extends LitElement {
 
       return html`
         <div class="prop">
-          <label>
-            <select @change=${(e) => this._handleAttrChange(e, attr)}>
+            <base-select @change=${(e) => this._handleAttrChange(e, attr)}>
               ${options.map((opt) => {
                 return html`
-                  <option
+                  <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) ===
                       opt}
                     value=${opt}
-                    >${opt}</option
+                    >${opt}</base-option
                   >
                 `;
               })}
             </select>
-          </label>
+
         </div>
       `;
     }
@@ -149,16 +148,14 @@ class BaseKnobs extends LitElement {
     if (attr.type === "boolean") {
       return html`
         <div class="prop">
-          <label>
-            <input
+          <base-checkbox
               name=${attr.name}
               ?checked=${this.componentEl.hasAttribute(attr.name)}
               .value=${this.componentEl[attr.name]}
-              @input=${(e) => this._handleAttrChange(e, attr)}
-              type="checkbox"
+              @change=${(e) => this._handleAttrChange(e, attr)}
             />
             ${attr.name}
-          </label>
+          </base-checkbox>
         </div>
       `;
     }
@@ -224,59 +221,6 @@ class BaseKnobs extends LitElement {
         }
         nav button:last-of-type {
           border-radius: 0 4px 4px 0;
-        }
-        input[type="checkbox"]:checked,
-        input[type="radio"]:checked {
-          background-color: #34f;
-          border-color: #34f;
-          color: #fff;
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
-        }
-
-        input[type="checkbox"]:checked:before,
-        input[type="radio"]:checked:before {
-          opacity: 1;
-        }
-        input[type="checkbox"],
-        input[type="radio"] {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          color: #34f;
-          width: 18px;
-          height: 18px;
-          border-radius: 4px;
-          border: 1px solid #e3e3e3;
-          cursor: pointer;
-          position: relative;
-          background: #f1f2f4;
-          vertical-align: middle;
-        }
-        input[type="radio"] {
-          border-radius: 100%;
-        }
-        input[type="checkbox"]:before,
-        input[type="radio"]:before {
-          content: "";
-          position: absolute;
-          pointer-events: none;
-          left: 50%;
-          top: 50%;
-          height: 5px;
-          width: 10px;
-          border-radius: 2px 0 2px 2px;
-          border-bottom: 2px solid;
-          border-left: 2px solid;
-          transform: translate(-50%, calc(-50% - 1px)) rotate(-45deg);
-          opacity: 0;
-        }
-        input[type="radio"]:before {
-          border-radius: 100%;
-          border: 0;
-          width: 8px;
-          height: 8px;
-          transform: translate(-50%, -50%);
-          background-color: currentColor;
         }
       </style>
       <slot></slot>

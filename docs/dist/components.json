@@ -115,6 +115,9 @@
       "events": [
         {
           "name": "change"
+        },
+        {
+          "name": "input"
         }
       ]
     },
@@ -131,11 +134,6 @@
           "name": "no-backdrop",
           "type": "boolean",
           "default": "false"
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "default": "\"\""
         }
       ],
       "properties": [
@@ -150,17 +148,6 @@
           "attribute": "no-backdrop",
           "type": "boolean",
           "default": "false"
-        },
-        {
-          "name": "hideHeader",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "title",
-          "attribute": "title",
-          "type": "string",
-          "default": "\"\""
         },
         {
           "name": "hideModal"
@@ -286,10 +273,6 @@
       "path": "./../../lib/src/components/base-select/base-select.js",
       "attributes": [
         {
-          "name": "selected",
-          "type": "string"
-        },
-        {
           "name": "value",
           "type": "string"
         },
@@ -350,8 +333,8 @@
       ],
       "properties": [
         {
-          "name": "selected",
-          "attribute": "selected",
+          "name": "value",
+          "attribute": "value",
           "type": "string"
         },
         {
@@ -367,9 +350,7 @@
           "type": "Element | undefined"
         },
         {
-          "name": "value",
-          "attribute": "value",
-          "type": "string"
+          "name": "inputValue"
         },
         {
           "name": "showSuggestions",

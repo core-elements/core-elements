@@ -4596,7 +4596,7 @@ class BaseKnobs extends _litElement.LitElement {
 
   _handleAttrChange(e, attr) {
     if (attr.type.includes("|")) {
-      this.componentEl.setAttribute(attr.name, e.target.value);
+      this.componentEl.setAttribute(attr.name, e.target.selected);
     }
 
     if (attr.type === "string") {
@@ -4626,19 +4626,18 @@ class BaseKnobs extends _litElement.LitElement {
       const options = attr.type.replace(/"/g, "").split("|");
       return (0, _litElement.html)`
         <div class="prop">
-          <label>
-            <select @change=${e => this._handleAttrChange(e, attr)}>
+            <base-select @change=${e => this._handleAttrChange(e, attr)}>
               ${options.map(opt => {
         return (0, _litElement.html)`
-                  <option
+                  <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) === opt}
                     value=${opt}
-                    >${opt}</option
+                    >${opt}</base-option
                   >
                 `;
       })}
             </select>
-          </label>
+
         </div>
       `;
     }
@@ -4662,16 +4661,14 @@ class BaseKnobs extends _litElement.LitElement {
     if (attr.type === "boolean") {
       return (0, _litElement.html)`
         <div class="prop">
-          <label>
-            <input
+          <base-checkbox
               name=${attr.name}
               ?checked=${this.componentEl.hasAttribute(attr.name)}
               .value=${this.componentEl[attr.name]}
-              @input=${e => this._handleAttrChange(e, attr)}
-              type="checkbox"
+              @change=${e => this._handleAttrChange(e, attr)}
             />
             ${attr.name}
-          </label>
+          </base-checkbox>
         </div>
       `;
     }
@@ -4737,59 +4734,6 @@ class BaseKnobs extends _litElement.LitElement {
         }
         nav button:last-of-type {
           border-radius: 0 4px 4px 0;
-        }
-        input[type="checkbox"]:checked,
-        input[type="radio"]:checked {
-          background-color: #34f;
-          border-color: #34f;
-          color: #fff;
-          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
-        }
-
-        input[type="checkbox"]:checked:before,
-        input[type="radio"]:checked:before {
-          opacity: 1;
-        }
-        input[type="checkbox"],
-        input[type="radio"] {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          color: #34f;
-          width: 18px;
-          height: 18px;
-          border-radius: 4px;
-          border: 1px solid #e3e3e3;
-          cursor: pointer;
-          position: relative;
-          background: #f1f2f4;
-          vertical-align: middle;
-        }
-        input[type="radio"] {
-          border-radius: 100%;
-        }
-        input[type="checkbox"]:before,
-        input[type="radio"]:before {
-          content: "";
-          position: absolute;
-          pointer-events: none;
-          left: 50%;
-          top: 50%;
-          height: 5px;
-          width: 10px;
-          border-radius: 2px 0 2px 2px;
-          border-bottom: 2px solid;
-          border-left: 2px solid;
-          transform: translate(-50%, calc(-50% - 1px)) rotate(-45deg);
-          opacity: 0;
-        }
-        input[type="radio"]:before {
-          border-radius: 100%;
-          border: 0;
-          width: 8px;
-          height: 8px;
-          transform: translate(-50%, -50%);
-          background-color: currentColor;
         }
       </style>
       <slot></slot>
@@ -7621,13 +7565,13 @@ var global = arguments[3];
 
       this._showSuggestions = false; // input value
 
-      this._value = "";
+      this._inputValue = "";
       /**
        * https://lit-element.polymer-project.org/guide/properties#accessors
        * Selected value
        */
 
-      this._selected = ""; // filter list
+      this._value = ""; // filter list
 
       this._filterList = this._filterList.bind(this); // handle all key events
 
@@ -7697,7 +7641,7 @@ var global = arguments[3];
         clearable: {
           type: Boolean
         },
-        selected: {
+        value: {
           type: String
         },
         menuOpenOnSelect: {
@@ -7719,7 +7663,7 @@ var global = arguments[3];
       super.connectedCallback(); // add mousedown event listener to catch click before focus dissapears
     }
 
-    set selected(val) {
+    set value(val) {
       if (this.multiple) {
         this.allOptions.forEach(option => {
           const isSelected = val.split(",").includes(option.value);
@@ -7732,16 +7676,16 @@ var global = arguments[3];
         });
       }
 
-      this._selected = val;
+      this._value = val;
       this.requestUpdate();
     }
 
-    get selected() {
-      return this._selected;
+    get value() {
+      return this._value;
     }
 
     get _selectedElements() {
-      return this.allOptions.filter(o => this.selected.split(",").includes(o.value));
+      return this.allOptions.filter(o => this.value.split(",").includes(o.value));
     }
 
     get _selectedEl() {
@@ -7775,14 +7719,14 @@ var global = arguments[3];
       return this.shadowRoot.querySelector("div[part='option-list']");
     }
 
-    get value() {
-      return this._value;
+    get inputValue() {
+      return this._inputValue;
     }
 
-    set value(val) {
+    set inputValue(val) {
       const value = val ? val : ""; // Set new value
 
-      this._value = value;
+      this._inputValue = value;
 
       this._filterList(); // Request update so the setter works as an opbserved value
 
@@ -7822,20 +7766,20 @@ var global = arguments[3];
     }
 
     clearSelected() {
-      this.selected = "";
       this.value = "";
+      this.inputValue = "";
     }
 
     _filterList() {
       const {
-        value,
+        inputValue,
         disableFilter
       } = this; // Search for all matches and show the option
 
       this.allOptions.forEach(option => {
         // Return matched option, or return always match if filter@
         // is turned off
-        const isMatch = disableFilter ? true : option.label.toLowerCase().includes(value.toLowerCase());
+        const isMatch = disableFilter ? true : option.label.toLowerCase().includes(inputValue.toLowerCase());
 
         if (!isMatch && option.active) {
           // remove active state
@@ -7861,16 +7805,16 @@ var global = arguments[3];
 
 
     _chooseOption(optionEl) {
-      if (optionEl.value === this.selected) {
+      if (optionEl.value === this.value) {
         // reset value
-        this.value = "";
+        this.inputValue = "";
       } else {
-        this.selected = optionEl.value;
+        this.value = optionEl.value;
 
         this._dispatchChange(optionEl.value); // set input value as selected label as a placeholder
 
 
-        this.value = "";
+        this.inputValue = "";
       }
 
       this.focus();
@@ -7880,8 +7824,8 @@ var global = arguments[3];
 
     _addOption(optionEl) {
       // reset value
-      this.value = "";
-      this.selected = this.selected.concat("," + optionEl.value);
+      this.inputValue = "";
+      this.value = this.selected.concat("," + optionEl.value);
 
       this._dispatchChange();
 
@@ -7893,9 +7837,9 @@ var global = arguments[3];
 
     _removeOption(optionEl) {
       if (this.multiple) {
-        this.selected = this.selected.split(",").filter(val => val !== optionEl.value).toString();
+        this.value = this.value.split(",").filter(val => val !== optionEl.value).toString();
       } else {
-        this.selected = "";
+        this.value = "";
       }
 
       this._dispatchChange();
@@ -7921,7 +7865,7 @@ var global = arguments[3];
         }
 
         this.isFocused = false;
-        this.value = "";
+        this.inputValue = "";
         this.showSuggestions = false;
       }, 100);
     }
@@ -7949,7 +7893,7 @@ var global = arguments[3];
     _handleInputEvent(e) {
       e.stopPropagation(); // First set the value `base-select` to the target value of the input element
 
-      this.value = e.target.value; // Then when we dispatch the event, the event.target.value will be correct
+      this.inputValue = e.target.value; // Then when we dispatch the event, the event.target.value will be correct
 
       this.dispatchEvent(new CustomEvent("input", e));
       this.showSuggestions = true;
@@ -7986,13 +7930,13 @@ var global = arguments[3];
 
         if (this.multiple) {
           // don't delete if there's something in the input
-          if (this.value) return;
+          if (this.inputValue) return;
 
           if (this._selectedElements.length) {
             this._removeOption(this._selectedElements[this._selectedElements.length - 1]);
           }
         } else {
-          if (this.value.length === 0) {
+          if (this.inputValue.length === 0) {
             // Remove selected option if user presses backspace when input is empty
             this.clearSelected();
             this.requestUpdate();
@@ -8100,13 +8044,13 @@ var global = arguments[3];
 
     render() {
       const {
-        value,
+        inputValue,
         multiple,
         ariaLabel,
         searchable,
         placeholder,
         activeSuggestion,
-        selected,
+        value,
         clearSelected,
         clearable,
         hideArrow,
@@ -8140,7 +8084,7 @@ var global = arguments[3];
         <!-- Input field -->
         <input
           ?disabled=${this.disabled}
-          .value=${value}
+          .value=${inputValue}
           @keydown=${_handleKeyEvent}
           @input=${_handleInputEvent}
           @focus=${_handleFocusEvent}
@@ -8150,8 +8094,8 @@ var global = arguments[3];
           autocomplete="off"
           autocorrect="off"
           aria-label=${ariaLabel}
-          ?has-value=${selected ? true : false}
-          placeholder=${!multiple && selected ? _selectedEl ? _selectedEl.label : "" : placeholder}
+          ?has-value=${value ? true : false}
+          placeholder=${!multiple && value ? _selectedEl ? _selectedEl.label : "" : placeholder}
           aria-owns="listbox"
           part="input-field"
           type="text"
@@ -8427,7 +8371,8 @@ var global = arguments[3];
     static get properties() {
       return {
         checked: {
-          type: Boolean
+          type: Boolean,
+          reflect: true
         },
         disabled: {
           type: Boolean
@@ -8453,6 +8398,7 @@ var global = arguments[3];
       e.stopPropagation();
       this.checked = e.target.checked;
       this.dispatchEvent(new CustomEvent("change", e));
+      this.dispatchEvent(new CustomEvent("input", e));
     }
 
     render() {
@@ -18772,13 +18718,13 @@ module.exports = {
     "name": "base-button",
     "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n\n### Types\n\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n\n### Outline\n\n<base-button style=\"outline\">Halla</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n"
   }, {
-    "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "base-modal",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n</base-modal>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "base-select",
     "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "name": "base-modal",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n</base-modal>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
@@ -19233,7 +19179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63108" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61299" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
