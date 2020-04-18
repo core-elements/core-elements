@@ -277,6 +277,10 @@
           "type": "string"
         },
         {
+          "name": "input-value",
+          "type": "string"
+        },
+        {
           "name": "show-suggestions",
           "type": "boolean"
         },
@@ -350,7 +354,9 @@
           "type": "Element | undefined"
         },
         {
-          "name": "inputValue"
+          "name": "inputValue",
+          "attribute": "input-value",
+          "type": "string"
         },
         {
           "name": "showSuggestions",

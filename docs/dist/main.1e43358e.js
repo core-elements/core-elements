@@ -4596,7 +4596,7 @@ class BaseKnobs extends _litElement.LitElement {
 
   _handleAttrChange(e, attr) {
     if (attr.type.includes("|")) {
-      this.componentEl.setAttribute(attr.name, e.target.selected);
+      this.componentEl.setAttribute(attr.name, e.target.value);
     }
 
     if (attr.type === "string") {
@@ -7644,6 +7644,10 @@ var global = arguments[3];
         value: {
           type: String
         },
+        inputValue: {
+          type: String,
+          attribute: "input-value"
+        },
         menuOpenOnSelect: {
           type: Boolean,
           attribute: "menu-open-on-select"
@@ -7677,6 +7681,9 @@ var global = arguments[3];
       }
 
       this._value = val;
+
+      this._dispatchChange();
+
       this.requestUpdate();
     }
 
@@ -7809,10 +7816,7 @@ var global = arguments[3];
         // reset value
         this.inputValue = "";
       } else {
-        this.value = optionEl.value;
-
-        this._dispatchChange(optionEl.value); // set input value as selected label as a placeholder
-
+        this.value = optionEl.value; // set input value as selected label as a placeholder
 
         this.inputValue = "";
       }
@@ -7826,9 +7830,6 @@ var global = arguments[3];
       // reset value
       this.inputValue = "";
       this.value = this.selected.concat("," + optionEl.value);
-
-      this._dispatchChange();
-
       this.focus();
       this.showSuggestions = this.menuOpenOnSelect ? true : false;
       this.requestUpdate();
@@ -18710,21 +18711,21 @@ module.exports = marked;
 },{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./InlineLexer.js":"node_modules/marked/src/InlineLexer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
-    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-    "name": "base-checkbox",
-    "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "name": "base-modal",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n</base-modal>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "base-button",
     "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n\n### Types\n\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n\n### Outline\n\n<base-button style=\"outline\">Halla</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n"
   }, {
+    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
+    "name": "base-checkbox",
+    "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "base-select",
     "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "base-modal",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n</base-modal>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
@@ -19179,7 +19180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61677" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -83,7 +83,7 @@ class BaseKnobs extends LitElement {
 
   _handleAttrChange(e, attr) {
     if (attr.type.includes("|")) {
-      this.componentEl.setAttribute(attr.name, e.target.selected);
+      this.componentEl.setAttribute(attr.name, e.target.value);
     }
     if (attr.type === "string") {
       this.componentEl.setAttribute(attr.name, e.target.value);
