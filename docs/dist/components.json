@@ -16,6 +16,12 @@
           "description": "Button state",
           "type": "\"normal\"|\"outline\"",
           "default": "\"\""
+        },
+        {
+          "name": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -32,6 +38,13 @@
           "description": "Button state",
           "type": "\"normal\"|\"outline\"",
           "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
         }
       ]
     },

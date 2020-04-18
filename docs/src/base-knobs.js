@@ -7,6 +7,8 @@ class BaseKnobs extends LitElement {
     this.name = "";
     this.tab = "props";
     this.hideProps = false;
+    this.hideSrc = false;
+    this.hideEvents = false;
     this.attributes = [];
     this.properties = [];
     this._fetchJson = this._fetchJson.bind(this);
@@ -25,7 +27,9 @@ class BaseKnobs extends LitElement {
       name: { type: String },
       attributes: { type: Array },
       properties: { type: Array },
-      hideProps: { type: Boolean }
+      hideProps: { type: Boolean },
+      hideSrc: { type: Boolean },
+      hideEvents: { type: Boolean },
     };
   }
 
@@ -36,8 +40,8 @@ class BaseKnobs extends LitElement {
   }
 
   _observeProps() {
-    var observer = new MutationObserver(mutations => {
-      mutations.forEach(mutation => {
+    var observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
         this.requestUpdate();
       });
     });
@@ -52,7 +56,7 @@ class BaseKnobs extends LitElement {
     try {
       const res = await fetch(this.src);
       const json = await res.json();
-      const component = json.tags.find(tag => tag.name === this.name);
+      const component = json.tags.find((tag) => tag.name === this.name);
       this.properties = component.properties;
       this.attributes = component.attributes;
     } catch (e) {
@@ -79,7 +83,6 @@ class BaseKnobs extends LitElement {
 
   _handleAttrChange(e, attr) {
     if (attr.type.includes("|")) {
-      console.log(e.target.value);
       this.componentEl.setAttribute(attr.name, e.target.value);
     }
     if (attr.type === "string") {
@@ -110,8 +113,8 @@ class BaseKnobs extends LitElement {
       return html`
         <div class="prop">
           <label>
-            <select @change=${e => this._handleAttrChange(e, attr)}>
-              ${options.map(opt => {
+            <select @change=${(e) => this._handleAttrChange(e, attr)}>
+              ${options.map((opt) => {
                 return html`
                   <option
                     ?selected=${this.componentEl.getAttribute(attr.name) ===
@@ -134,7 +137,7 @@ class BaseKnobs extends LitElement {
             <input
               name=${attr.name}
               .value=${this.componentEl[attr.name]}
-              @input=${e => this._handleAttrChange(e, attr)}
+              @input=${(e) => this._handleAttrChange(e, attr)}
               type="text"
             />
             ${attr.name}
@@ -151,7 +154,7 @@ class BaseKnobs extends LitElement {
               name=${attr.name}
               ?checked=${this.componentEl.hasAttribute(attr.name)}
               .value=${this.componentEl[attr.name]}
-              @input=${e => this._handleAttrChange(e, attr)}
+              @input=${(e) => this._handleAttrChange(e, attr)}
               type="checkbox"
             />
             ${attr.name}
@@ -166,7 +169,7 @@ class BaseKnobs extends LitElement {
   _renderPropTab() {
     return html`
       <div class="props">
-        ${this.attributes.map(attr => {
+        ${this.attributes.map((attr) => {
           return this._propComponent(attr);
         })}
       </div>
@@ -279,7 +282,8 @@ class BaseKnobs extends LitElement {
       <slot></slot>
       <nav>
         ${this.hideProps
-          ? html`
+          ? null
+          : html`
               <button
                 ?active=${this.tab === "props"}
                 value="props"
@@ -287,22 +291,29 @@ class BaseKnobs extends LitElement {
               >
                 Props
               </button>
-            `
-          : null}
-        <button
-          ?active=${this.tab === "src"}
-          value="src"
-          @click=${this._handleTabChange}
-        >
-          Src
-        </button>
-        <button
-          ?active=${this.tab === "events"}
-          value="events"
-          @click=${this._handleTabChange}
-        >
-          Events
-        </button>
+            `}
+        ${this.hideSrc
+          ? null
+          : html`
+              <button
+                ?active=${this.tab === "src"}
+                value="src"
+                @click=${this._handleTabChange}
+              >
+                Src
+              </button>
+            `}
+        ${this.hideEvents
+          ? null
+          : html`
+              <button
+                ?active=${this.tab === "events"}
+                value="events"
+                @click=${this._handleTabChange}
+              >
+                Events
+              </button>
+            `}
       </nav>
 
       <div class="tabs">

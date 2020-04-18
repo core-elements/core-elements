@@ -1,70 +1,84 @@
 :host {
   display: inline-block;
-  --base-button-padding: 10px 15px;
-  --base-button-background: var(--base-color-neutral-1, GAINSBORO);
+  --base-button-padding: var(--base-space-sm) var(--base-space-md);
+  --base-button-bg-color: var(--base-color-ui-lighter);
   --base-button-border: none;
-  --base-button-border-radius: 0px;
-  --base-button-font-size: 16px;
-  --base-button-outline-color: var(--base-color-focus, #2684ff);
-  --base-button-outline: 0 0 0 2px var(--base-button-outline-color);
-  --base-button-text-color: inherit;
+  --base-button-border-radius: var(--base-border-radius-sm);
+  --base-button-font-size: var(--base-font-size-sm);
+  --base-button-text-color: currentColor;
+  --base-button-box-shadow: 0;
+  --base-button-transform: scale(1);
+  --base-button-transition: all 0.2s ease;
+  --base-button-cursor: pointer;
+  --base-button-display: inline-block;
 }
 
 button {
   outline: 0;
   color: var(--base-button-text-color);
-  cursor: pointer;
-  display: inline-block;
+  cursor: var(--base-button-cursor);
+  display: var(--base-button-display);
+  box-shadow: var(--base-button-box-shadow);
   border-radius: var(--base-button-border-radius);
   font-size: var(--base-button-font-size);
   padding: var(--base-button-padding);
-  background: var(--base-button-background);
+  background: var(--base-button-bg-color);
   border: var(--base-button-border);
-  transition: all 0.2s ease;
+  transform: var(--base-button-transform);
+  transition: var(--base-button-transition);
 }
 
 button:hover {
-  --base-button-background: var(--base-color-neutral-2, LIGHTGRAY);
+  --base-button-bg-color: var(--base-color-ui-light);
 }
 
 button:focus {
-  box-shadow: var(--base-button-outline);
+  --base-button-box-shadow: 0 0 0 2px var(--base-color-focus);
 }
 
 /* Types */
 
+:host[full] button {
+  width: 100%;
+}
+
 :host([type="primary"]) button {
-  --base-button-background: var(--base-color-primary, black);
-  --base-button-text-color: var(--base-color-neutral-0, white);
+  --base-button-bg-color: var(--base-color-primary-light);
+  --base-button-text-color: var(--base-color-white);
+}
+
+:host([type="primary"]) button:hover {
+  --base-button-bg-color: var(--base-color-primary);
 }
 
 :host([type="secondary"]) button {
-  --base-button-background: var(--base-color-neutral-3, DIMGRAY);
-  --base-button-text-color: var(--base-color-neutral-0, white);
+  --base-button-bg-color: var(--base-color-ui);
+  --base-button-text-color: var(--base-color-white);
 }
 
 :host([type="transparent"]) button {
-  --base-button-background: transparent;
+  --base-button-bg-color: transparent;
+  --base-button-text-color: var(--base-color-ui-light);
 }
 
 :host([type="success"]) button {
-  --base-button-background: var(--base-color-success, MEDIUMSEAGREEN);
-  --base-button-text-color: var(--base-color-neutral-0, white);
+  --base-button-bg-color: var(--base-color-success);
+  --base-button-text-color: var(--base-color-white);
 }
 
 :host([type="danger"]) button {
-  --base-button-background: var(--base-color-danger, ORANGERED);
-  --base-button-text-color: var(--base-color-neutral-0, white);
+  --base-button-bg-color: var(--base-color-danger);
+  --base-button-text-color: var(--base-color-white);
 }
 
 /* Styles */
 
 :host([style="outline"]) button {
-  --base-button-border: 2px solid var(--base-button-background);
-  color: var(--base-button-background);
+  --base-button-border: 2px solid var(--base-button-bg-color);
+  color: var(--base-button-bg-color);
   background: none !important;
 }
 
 :host([style="outline"]):not([type]) {
-  color: black;
+  color: var(--base-color-black);
 }
