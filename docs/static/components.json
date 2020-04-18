@@ -49,6 +49,136 @@
       ]
     },
     {
+      "name": "base-checkbox",
+      "path": "./../../lib/src/components/base-checkbox/base-checkbox.js",
+      "attributes": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "base-modal",
+      "path": "./../../lib/src/components/base-modal/base-modal.js",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "no-backdrop",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "noBackdrop",
+          "attribute": "no-backdrop",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideHeader",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideModal"
+        },
+        {
+          "name": "showModal"
+        },
+        {
+          "name": "toggle"
+        }
+      ],
+      "events": [
+        {
+          "name": "toggle"
+        }
+      ]
+    },
+    {
       "name": "base-optgroup",
       "path": "./../../lib/src/components/base-optgroup/base-optgroup.js",
       "attributes": [

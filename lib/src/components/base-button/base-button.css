@@ -5,7 +5,7 @@
   --base-button-border: none;
   --base-button-border-radius: var(--base-border-radius-sm);
   --base-button-font-size: var(--base-font-size-sm);
-  --base-button-text-color: currentColor;
+  --base-button-text-color: var(--base-font-color);
   --base-button-box-shadow: 0;
   --base-button-transform: scale(1);
   --base-button-transition: all 0.2s ease;
@@ -13,7 +13,7 @@
   --base-button-display: inline-block;
 }
 
-button {
+:host button {
   outline: 0;
   color: var(--base-button-text-color);
   cursor: var(--base-button-cursor);
@@ -28,11 +28,11 @@ button {
   transition: var(--base-button-transition);
 }
 
-button:hover {
+:host button:hover {
   --base-button-bg-color: var(--base-color-ui-light);
 }
 
-button:focus {
+:host button:focus {
   --base-button-box-shadow: 0 0 0 2px var(--base-color-focus);
 }
 
@@ -52,23 +52,39 @@ button:focus {
 }
 
 :host([type="secondary"]) button {
-  --base-button-bg-color: var(--base-color-ui);
+  --base-button-bg-color: var(--base-color-secondary-light);
   --base-button-text-color: var(--base-color-white);
+}
+
+:host([type="secondary"]) button:hover {
+  --base-button-bg-color: var(--base-color-secondary);
 }
 
 :host([type="transparent"]) button {
   --base-button-bg-color: transparent;
-  --base-button-text-color: var(--base-color-ui-light);
+  --base-button-text-color: var(--base-color-black);
+}
+
+:host([type="transparent"]) button:hover {
+  --base-button-bg-color: var(--base-color-ui-lighter);
 }
 
 :host([type="success"]) button {
-  --base-button-bg-color: var(--base-color-success);
+  --base-button-bg-color: var(--base-color-success-light);
   --base-button-text-color: var(--base-color-white);
 }
 
+:host([type="success"]) button:hover {
+  --base-button-bg-color: var(--base-color-success);
+}
+
 :host([type="danger"]) button {
-  --base-button-bg-color: var(--base-color-danger);
+  --base-button-bg-color: var(--base-color-danger-light);
   --base-button-text-color: var(--base-color-white);
+}
+
+:host([type="danger"]) button:hover {
+  --base-button-bg-color: var(--base-color-danger);
 }
 
 /* Styles */

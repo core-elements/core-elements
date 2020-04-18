@@ -43,7 +43,7 @@
   display: none !important;
 }
 
-:host:hover {
+:host(:hover:not([multiple]):not([is-focused])) {
   --base-select-border-color: var(--base-color-ui);
 }
 
@@ -68,10 +68,6 @@
 :host(:not([multiple])) input[part="input-field"][has-value]::placeholder {
   --base-select-placeholder-color: #333;
   opacity: 1;
-}
-
-:host(:hover:not([multiple]):not([is-focused])) {
-  --base-select-border-color: #dedede;
 }
 
 .input-wrapper {
