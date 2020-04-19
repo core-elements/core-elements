@@ -39,9 +39,9 @@ export default {
 .page {
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr;
   grid-gap: 1rem;
-  max-width: 1200px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
 }

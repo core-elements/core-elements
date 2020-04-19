@@ -1,5 +1,6 @@
 :root {
-  --base-font-family: arial;
+  --base-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   --base-lightness-lightest: 95%;
   --base-lightness-lighter: 80%;
@@ -17,7 +18,7 @@
   --base-saturation-lower: 20%;
   --base-saturation-lowest: 0%;
 
-  --base-color-primary-hue: 239;
+  --base-color-primary-hue: 259;
   --base-color-primary: hsl(
     var(--base-color-primary-hue),
     var(--base-saturation-high),
@@ -34,21 +35,21 @@
     var(--base-lightness-dark)
   );
 
-  --base-color-secondary-hue: 272;
+  --base-color-secondary-hue: 258;
   --base-color-secondary: hsl(
-    var(--base-color-secondary-hue),
-    var(--base-saturation-high),
-    var(--base-lightness-default)
-  );
-  --base-color-secondary-light: hsl(
     var(--base-color-secondary-hue),
     var(--base-saturation-high),
     var(--base-lightness-light)
   );
+  --base-color-secondary-light: hsl(
+    var(--base-color-secondary-hue),
+    var(--base-saturation-high),
+    var(--base-lightness-lighter)
+  );
   --base-color-secondary-dark: hsl(
     var(--base-color-secondary-hue),
     var(--base-saturation-high),
-    var(--base-lightness-dark)
+    var(--base-lightness)
   );
 
   --base-color-success-hue: 130;

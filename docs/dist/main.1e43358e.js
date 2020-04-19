@@ -848,13 +848,13 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"../lib/dist/components/lit-element-36e30fe7.js":[function(require,module,exports) {
+},{}],"../lib/dist/components/lit-element-6bb3323a.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.h = exports.d = exports.c = exports.L = exports.A = void 0;
+exports.i = exports.h = exports.d = exports.c = exports.N = exports.L = exports.A = void 0;
 
 /**
  * @license
@@ -1503,6 +1503,8 @@ const isPrimitive = value => {
   return value === null || !(typeof value === 'object' || typeof value === 'function');
 };
 
+exports.i = isPrimitive;
+
 const isIterable = value => {
   return Array.isArray(value) || // tslint:disable-next-line:no-any
   !!(value && value[Symbol.iterator]);
@@ -1831,6 +1833,8 @@ class NodePart {
  * ''. If the value is falsey, the attribute is removed.
  */
 
+
+exports.N = NodePart;
 
 class BooleanAttributePart {
   constructor(element, name, strings) {
@@ -3653,7 +3657,19 @@ LitElement['finalized'] = true;
  */
 
 LitElement.render = render$1;
-},{}],"../lib/dist/components/base-knobs.js":[function(require,module,exports) {
+},{}],"../lib/dist/components/sharedstyles-fd1d7228.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.s = void 0;
+
+var _litElement6bb3323a = require("./lit-element-6bb3323a.js");
+
+var sharedStyles = (0, _litElement6bb3323a.c)`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
+exports.s = sharedStyles;
+},{"./lit-element-6bb3323a.js":"../lib/dist/components/lit-element-6bb3323a.js"}],"../lib/dist/components/base-knobs.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -3662,7 +3678,58 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _litElement36e30fe = require("./lit-element-36e30fe7.js");
+var _litElement6bb3323a = require("./lit-element-6bb3323a.js");
+
+var _sharedstylesFd1d = require("./sharedstyles-fd1d7228.js");
+
+/**
+ * @license
+ * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at
+ * http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at
+ * http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at
+ * http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at
+ * http://polymer.github.io/PATENTS.txt
+ */
+// For each part, remember the value that was last rendered to the part by the
+// unsafeHTML directive, and the DocumentFragment that was last set as a value.
+// The DocumentFragment is used as a unique key to check if the last value
+// rendered to the part was with unsafeHTML. If not, we'll always re-render the
+// value passed to unsafeHTML.
+const previousValues = new WeakMap();
+/**
+ * Renders the result as HTML, rather than text.
+ *
+ * Note, this is unsafe to use with any user-provided input that hasn't been
+ * sanitized or escaped, as it may lead to cross-site-scripting
+ * vulnerabilities.
+ */
+
+const unsafeHTML = (0, _litElement6bb3323a.d)(value => part => {
+  if (!(part instanceof _litElement6bb3323a.N)) {
+    throw new Error('unsafeHTML can only be used in text bindings');
+  }
+
+  const previousValue = previousValues.get(part);
+
+  if (previousValue !== undefined && (0, _litElement6bb3323a.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
+    return;
+  }
+
+  const template = document.createElement('template');
+  template.innerHTML = value; // innerHTML casts to string internally
+
+  const fragment = document.importNode(template.content, true);
+  part.setValue(fragment);
+  previousValues.set(part, {
+    value,
+    fragment
+  });
+});
 
 function createCommonjsModule(fn, module) {
   return module = {
@@ -17784,8 +17851,10 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
+var highlightStyles = (0, _litElement6bb3323a.c)`pre{white-space:normal}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:16px;border-radius:10px;margin-bottom:30px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}`;
 
-class BaseKnobs extends _litElement36e30fe.L {
+class BaseKnobs extends _litElement6bb3323a.L {
   constructor() {
     super();
     this.src = "";
@@ -17834,8 +17903,8 @@ class BaseKnobs extends _litElement36e30fe.L {
     };
   }
 
-  styles() {
-    return [highlightStyles];
+  static get styles() {
+    return [styles, highlightStyles, _sharedstylesFd1d.s];
   }
 
   connectedCallback() {
@@ -17874,10 +17943,7 @@ class BaseKnobs extends _litElement36e30fe.L {
   }
 
   get srcHTML() {
-    const div = document.createElement("pre");
-    div.innerHTML = `<code class="html">${this.innerHTML}</code>`;
-    lib.highlightBlock(div);
-    return div.innerHTML;
+    return `<pre><code><div class="hljs">${lib.highlightAuto(this.innerHTML).value}</div></code></pre>`;
   }
 
   _getPropValue(attr) {
@@ -17926,11 +17992,11 @@ class BaseKnobs extends _litElement36e30fe.L {
   _propComponent(attr) {
     if (attr.type.includes("|")) {
       const options = attr.type.replace(/"/g, "").split("|");
-      return (0, _litElement36e30fe.h)`
+      return (0, _litElement6bb3323a.h)`
         <div class="prop">
             <base-select .value=${this.componentEl.getAttribute(attr.name)} @change=${e => this._handleAttrChange(e, attr)}>
               ${options.map(opt => {
-        return (0, _litElement36e30fe.h)`
+        return (0, _litElement6bb3323a.h)`
                   <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) === opt}
                     value=${opt}
@@ -17945,7 +18011,7 @@ class BaseKnobs extends _litElement36e30fe.L {
     }
 
     if (attr.type === "string") {
-      return (0, _litElement36e30fe.h)`
+      return (0, _litElement6bb3323a.h)`
         <div class="prop">
           <label>
             <base-input
@@ -17961,7 +18027,7 @@ class BaseKnobs extends _litElement36e30fe.L {
     }
 
     if (attr.type === "boolean") {
-      return (0, _litElement36e30fe.h)`
+      return (0, _litElement6bb3323a.h)`
         <div class="prop">
           <base-checkbox
               name=${attr.name}
@@ -17979,7 +18045,7 @@ class BaseKnobs extends _litElement36e30fe.L {
   }
 
   _renderPropTab() {
-    return (0, _litElement36e30fe.h)`
+    return (0, _litElement6bb3323a.h)`
       <div class="props">
         ${this.attributes.map(attr => {
       return this._propComponent(attr);
@@ -17989,58 +18055,18 @@ class BaseKnobs extends _litElement36e30fe.L {
   }
 
   _renderSrcTab() {
-    return (0, _litElement36e30fe.h)`
+    return (0, _litElement6bb3323a.h)`
       <div class="src">
-        <h2>${this.srcHTML}</h2>
+        <h2>${unsafeHTML(this.srcHTML)}</h2>
       </div>
     `;
   }
 
   render() {
-    return (0, _litElement36e30fe.h)`
-      <style>
-        .prop {
-          margin-top: 10px;
-        }
-        nav {
-          margin-top: 20px;
-          display: flex;
-        }
-        nav[vertical] {
-          display: flex;
-          flex-direction: column;
-        }
-        button {
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 14px;
-          padding: 10px 15px;
-          border: 1px solid #eee;
-          cursor: pointer;
-          border-radius: 4px;
-          background: white;
-        }
-        button:hover:not([active]) {
-          background: #eee;
-        }
-        button[active] {
-          background: #34f;
-          border: 1px solid #34f;
-          color: white;
-        }
-        nav button:not(:first-of-type),
-        nav button:not(:last-of-type) {
-          border-radius: 0;
-        }
-        nav button:first-of-type {
-          border-radius: 4px 0 0 4px;
-        }
-        nav button:last-of-type {
-          border-radius: 0 4px 4px 0;
-        }
-      </style>
+    return (0, _litElement6bb3323a.h)`
       <slot></slot>
       <nav>
-        ${this.hideProps ? null : (0, _litElement36e30fe.h)`
+        ${this.hideProps ? null : (0, _litElement6bb3323a.h)`
               <button
                 ?active=${this.tab === "props"}
                 value="props"
@@ -18049,7 +18075,7 @@ class BaseKnobs extends _litElement36e30fe.L {
                 Props
               </button>
             `}
-        ${this.hideSrc ? null : (0, _litElement36e30fe.h)`
+        ${this.hideSrc ? null : (0, _litElement6bb3323a.h)`
               <button
                 ?active=${this.tab === "src"}
                 value="src"
@@ -18058,7 +18084,7 @@ class BaseKnobs extends _litElement36e30fe.L {
                 Src
               </button>
             `}
-        ${this.hideEvents ? null : (0, _litElement36e30fe.h)`
+        ${this.hideEvents ? null : (0, _litElement6bb3323a.h)`
               <button
                 ?active=${this.tab === "events"}
                 value="events"
@@ -18083,7 +18109,7 @@ if (!customElements.get("base-knobs")) {
 
 var _default = BaseKnobs;
 exports.default = _default;
-},{"./lit-element-36e30fe7.js":"../lib/dist/components/lit-element-36e30fe7.js"}],"../lib/dist/main.js":[function(require,module,exports) {
+},{"./lit-element-6bb3323a.js":"../lib/dist/components/lit-element-6bb3323a.js","./sharedstyles-fd1d7228.js":"../lib/dist/components/sharedstyles-fd1d7228.js"}],"../lib/dist/main.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -20882,7 +20908,7 @@ var global = arguments[3];
 
   LitElement.render = render$1;
   var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:var(--base-border-radius-sm);--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;cursor:pointer;padding-left:8px;background:transparent;min-width:100px;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
-  var sharedStyles = css`:host{box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
+  var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
     constructor() {
@@ -22168,7 +22194,7 @@ var global = arguments[3];
     return new StringMask(pattern, options).validate(value);
   };
 
-  var styles$5 = css`:host{display:inline-block;--base-input-height:40px;--base-input-border-radius:var(--base-border-radius-md)}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{border:1px solid var(--base-color-focus)}:host([valid]) [part=input]{border:1px solid var(--base-color-success)}:host([invalid]) [part=input]{border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-sm)}[part=label]{display:block;font-size:var(--base-font-size-sm);margin-bottom:var(--base-space-sm)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
+  var styles$5 = css`:host{min-width:200px;display:inline-block;--base-input-height:40px;--base-input-border-radius:var(--base-border-radius-md)}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{border:1px solid var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{border:1px solid var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-sm)}[part=label]{display:block;font-size:var(--base-font-size-sm);margin-bottom:var(--base-space-sm)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
 
   class BaseInput extends LitElement {
     constructor() {
@@ -22182,6 +22208,7 @@ var global = arguments[3];
       this.full = false;
       this._value = "";
       this.required = false;
+      this.full = false;
       this.valid = false;
       this.invalid = false;
       /**
@@ -22232,6 +22259,9 @@ var global = arguments[3];
           type: String
         },
         readonly: {
+          type: Boolean
+        },
+        full: {
           type: Boolean
         },
         full: {
@@ -32621,21 +32651,21 @@ module.exports = {
     "name": "base-checkbox",
     "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "base-input",
-    "content": "\n## Base Input\n\n<style>\nbase-input .check {\n  display: none;\n}\n\nbase-input[valid] .check {\ndisplay: block;\ncolor: var(--base-color-success);\n}\n\nbase-input .danger {\ndisplay: none;\ncolor: var(--base-color-danger);\n}\n\nbase-input[invalid] .danger {\ndisplay: block;\n}\n</style>\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" errormessage=\"nei\"  autovalidate>\nHalla\n<div class=\"check\" slot=\"append\">&#10004;</div>\n<div class=\"danger\" slot=\"append\">&#x2620;</div>\n<div slot=\"help\">Help text</div>\n</base-input>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "base-button",
     "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "base-modal",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "base-input",
+    "content": "\n## Base Input\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" errormessage=\"nei\"  autovalidate>\nHalla\n</base-input>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "base-select",
     "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "name": "base-modal",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
@@ -33160,7 +33190,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51896" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60324" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

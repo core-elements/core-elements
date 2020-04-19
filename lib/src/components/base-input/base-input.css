@@ -1,7 +1,13 @@
 :host {
+  min-width: 200px;
   display: inline-block;
   --base-input-height: 40px;
   --base-input-border-radius: var(--base-border-radius-md);
+}
+
+:host([full]) {
+  width: 100%;
+  display: block;
 }
 
 :host [part="input"] {
@@ -21,11 +27,11 @@
   border: 1px solid var(--base-color-focus);
 }
 
-:host([valid]) [part="input"] {
+:host(:not([focused])[valid]) [part="input"] {
   border: 1px solid var(--base-color-success);
 }
 
-:host([invalid]) [part="input"] {
+:host(:not([focused])[invalid]) [part="input"] {
   border: 1px solid var(--base-color-danger);
 }
 

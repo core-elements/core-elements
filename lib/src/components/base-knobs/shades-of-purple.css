@@ -6,15 +6,19 @@
  * @version 1.5.0
  */
 
+pre {
+  white-space: normal;
+}
+
 .hljs {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+    monospace;
+  font-size: 16px;
   border-radius: 10px;
-  font-size: 0.9em;
   margin-bottom: 30px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
   display: block;
   overflow-x: auto;
-  /* Custom font is optional */
-  /* font-family: 'Operator Mono', 'Fira Code', 'Menlo', 'Monaco', 'Courier New', 'monospace';  */
   line-height: 1.45;
   padding: 2rem;
   background: #2d2b57;
