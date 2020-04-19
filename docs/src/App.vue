@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <div class="sidebar">
       <div v-for="(menuGroup, name) in db" :key="name">
         {{ name }}
@@ -10,7 +10,6 @@
         </ul>
       </div>
     </div>
-
     <main v-if="active">
       <div v-html="html(active.content)"></div>
     </main>
@@ -25,13 +24,25 @@ export default {
   data() {
     return {
       active: "",
-      db
+      db,
     };
   },
   methods: {
     html(content) {
       return marked(content);
-    }
-  }
+    },
+  },
 };
 </script>
+
+<style>
+.page {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+</style>

@@ -1,0 +1,55 @@
+:host {
+  display: inline-block;
+  --base-input-height: 40px;
+  --base-input-border-radius: var(--base-border-radius-md);
+}
+
+:host [part="input"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--base-input-border-radius);
+  height: var(--base-input-height);
+  border: 1px solid var(--base-color-ui-light);
+}
+
+:host [part="input"]:hover {
+  border: 1px solid var(--base-color-ui);
+}
+
+:host([focused]) [part="input"] {
+  border: 1px solid var(--base-color-focus);
+}
+
+:host [part="input-field"] {
+  width: 100%;
+  font-size: var(--base-font-size-sm);
+  border-radius: var(--base-input-border-radius);
+  height: 100%;
+  outline: 0;
+  border: 0;
+  padding: 0 var(--base-space-sm);
+}
+
+:host [part="label"] {
+  display: block;
+  font-size: var(--base-font-size-sm);
+  margin-bottom: var(--base-space-sm);
+}
+
+:host [part="help"] {
+  display: block;
+  font-size: var(--base-font-size-xs);
+  color: var(--base-color-font-light);
+  margin-top: var(--base-space-sm);
+}
+
+:host [part="prepend"] {
+  display: block;
+  margin-left: var(--base-space-sm);
+}
+
+:host [part="append"] {
+  display: block;
+  margin-right: var(--base-space-sm);
+}

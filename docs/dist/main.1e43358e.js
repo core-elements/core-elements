@@ -7534,6 +7534,7 @@ var global = arguments[3];
 
   LitElement.render = render$1;
   var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:var(--base-border-radius-sm);--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;cursor:pointer;padding-left:8px;background:transparent;min-width:100px;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+  var sharedStyles = css`:host{box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
     constructor() {
@@ -7660,7 +7661,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [selectStyles];
+      return [selectStyles, sharedStyles];
     }
 
     connectedCallback() {
@@ -7697,7 +7698,7 @@ var global = arguments[3];
 
     get _selectedEl() {
       return this.allOptions.find(o => {
-        return o.getAttribute("value") === this.selected;
+        return o.getAttribute("value") === this.value;
       });
     }
 
@@ -7816,8 +7817,7 @@ var global = arguments[3];
         // reset value
         this.inputValue = "";
       } else {
-        this.value = optionEl.value; // set input value as selected label as a placeholder
-
+        this.value = optionEl.value;
         this.inputValue = "";
       }
 
@@ -7829,7 +7829,7 @@ var global = arguments[3];
     _addOption(optionEl) {
       // reset value
       this.inputValue = "";
-      this.value = this.selected.concat("," + optionEl.value);
+      this.value = this.value.concat("," + optionEl.value);
       this.focus();
       this.showSuggestions = this.menuOpenOnSelect ? true : false;
       this.requestUpdate();
@@ -8096,7 +8096,7 @@ var global = arguments[3];
           autocorrect="off"
           aria-label=${ariaLabel}
           ?has-value=${value ? true : false}
-          placeholder=${!multiple && value ? _selectedEl ? _selectedEl.label : "" : placeholder}
+          placeholder=${!multiple && value ? _selectedEl ? _selectedEl.value : "" : placeholder}
           aria-owns="listbox"
           part="input-field"
           type="text"
@@ -8203,7 +8203,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles];
+      return [styles, sharedStyles];
     }
 
     connectedCallback() {
@@ -8231,9 +8231,7 @@ var global = arguments[3];
     }
 
     render() {
-      return html`
-      <slot>${this.label}</slot>
-    `;
+      return html` <slot>${this.label}</slot> `;
     }
 
   }
@@ -8333,7 +8331,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$2];
+      return [styles$2, sharedStyles];
     }
 
     connectedCallback() {
@@ -8392,7 +8390,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$3];
+      return [styles$3, sharedStyles];
     }
 
     _handleChange(e) {
@@ -8431,8 +8429,8 @@ var global = arguments[3];
       this.open = false;
       this.noBackdrop = false;
       this._onToggle = this._onToggle.bind(this);
-      this.hideModal = this.hideModal.bind(this);
-      this.showModal = this.showModal.bind(this);
+      this.close = this.close.bind(this);
+      this.show = this.show.bind(this);
       this.toggle = this.toggle.bind(this);
     }
 
@@ -8462,7 +8460,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return styles$4;
+      return [styles$4, sharedStyles];
     }
 
     _onToggle(e) {
@@ -8470,13 +8468,13 @@ var global = arguments[3];
       this.dispatchEvent(new CustomEvent("toggle", e));
     }
 
-    hideModal(e) {
+    close(e) {
       this.open = false;
 
       this._onToggle(e);
     }
 
-    showModal(e) {
+    show(e) {
       this.open = true;
 
       this._onToggle(e);
@@ -8490,9 +8488,9 @@ var global = arguments[3];
 
     render() {
       return html`
-      <div part="backdrop" @click=${this.hideModal}></div>
+      <div part="backdrop" @click=${this.close}></div>
       <div part="box">
-        <slot part="close-button" name="close-button" @click=${this.hideModal}>
+        <slot part="close-button" name="close-button" @click=${this.close}>
           &#10005;
         </slot>
 
@@ -8509,8 +8507,418 @@ var global = arguments[3];
     customElements.define("base-modal", BaseModal);
   }
 
+  var tokens = {
+    "0": {
+      pattern: /\d/,
+      _default: "0"
+    },
+    "9": {
+      pattern: /\d/,
+      optional: true
+    },
+    "#": {
+      pattern: /\d/,
+      optional: true,
+      recursive: true
+    },
+    A: {
+      pattern: /[a-zA-Z0-9]/
+    },
+    S: {
+      pattern: /[a-zA-Z]/
+    },
+    U: {
+      pattern: /[a-zA-Z]/,
+      transform: function (c) {
+        return c.toLocaleUpperCase();
+      }
+    },
+    L: {
+      pattern: /[a-zA-Z]/,
+      transform: function (c) {
+        return c.toLocaleLowerCase();
+      }
+    },
+    $: {
+      escape: true
+    }
+  };
+
+  function isEscaped(pattern, pos) {
+    var count = 0;
+    var i = pos - 1;
+    var token = {
+      escape: true
+    };
+
+    while (i >= 0 && token && token.escape) {
+      token = tokens[pattern.charAt(i)];
+      count += token && token.escape ? 1 : 0;
+      i--;
+    }
+
+    return count > 0 && count % 2 === 1;
+  }
+
+  function calcOptionalNumbersToUse(pattern, value) {
+    var numbersInP = pattern.replace(/[^0]/g, "").length;
+    var numbersInV = value.replace(/[^\d]/g, "").length;
+    return numbersInV - numbersInP;
+  }
+
+  function concatChar(text, character, options, token) {
+    if (token && typeof token.transform === "function") {
+      character = token.transform(character);
+    }
+
+    if (options.reverse) {
+      return character + text;
+    }
+
+    return text + character;
+  }
+
+  function hasMoreTokens(pattern, pos, inc) {
+    var pc = pattern.charAt(pos);
+    var token = tokens[pc];
+
+    if (pc === "") {
+      return false;
+    }
+
+    return token && !token.escape ? true : hasMoreTokens(pattern, pos + inc, inc);
+  }
+
+  function hasMoreRecursiveTokens(pattern, pos, inc) {
+    var pc = pattern.charAt(pos);
+    var token = tokens[pc];
+
+    if (pc === "") {
+      return false;
+    }
+
+    return token && token.recursive ? true : hasMoreRecursiveTokens(pattern, pos + inc, inc);
+  }
+
+  function insertChar(text, char, position) {
+    var t = text.split("");
+    t.splice(position, 0, char);
+    return t.join("");
+  }
+
+  function StringMask(pattern, opt) {
+    this.options = opt || {};
+    this.options = {
+      reverse: this.options.reverse || false,
+      usedefaults: this.options.usedefaults || this.options.reverse
+    };
+    this.pattern = pattern;
+  }
+
+  StringMask.prototype.process = function proccess(value) {
+    if (!value) {
+      return {
+        result: "",
+        valid: false
+      };
+    }
+
+    value = value + "";
+    var pattern2 = this.pattern;
+    var valid = true;
+    var formatted = "";
+    var valuePos = this.options.reverse ? value.length - 1 : 0;
+    var patternPos = 0;
+    var optionalNumbersToUse = calcOptionalNumbersToUse(pattern2, value);
+    var escapeNext = false;
+    var recursive = [];
+    var inRecursiveMode = false;
+    var steps = {
+      start: this.options.reverse ? pattern2.length - 1 : 0,
+      end: this.options.reverse ? -1 : pattern2.length,
+      inc: this.options.reverse ? -1 : 1
+    };
+
+    function continueCondition(options) {
+      if (!inRecursiveMode && !recursive.length && hasMoreTokens(pattern2, patternPos, steps.inc)) {
+        // continue in the normal iteration
+        return true;
+      } else if (!inRecursiveMode && recursive.length && hasMoreRecursiveTokens(pattern2, patternPos, steps.inc)) {
+        // continue looking for the recursive tokens
+        // Note: all chars in the patterns after the recursive portion will be handled as static string
+        return true;
+      } else if (!inRecursiveMode) {
+        // start to handle the recursive portion of the pattern
+        inRecursiveMode = recursive.length > 0;
+      }
+
+      if (inRecursiveMode) {
+        var pc = recursive.shift();
+        recursive.push(pc);
+
+        if (options.reverse && valuePos >= 0) {
+          patternPos++;
+          pattern2 = insertChar(pattern2, pc, patternPos);
+          return true;
+        } else if (!options.reverse && valuePos < value.length) {
+          pattern2 = insertChar(pattern2, pc, patternPos);
+          return true;
+        }
+      }
+
+      return patternPos < pattern2.length && patternPos >= 0;
+    }
+    /**
+     * Iterate over the pattern's chars parsing/matching the input value chars
+     * until the end of the pattern. If the pattern ends with recursive chars
+     * the iteration will continue until the end of the input value.
+     *
+     * Note: The iteration must stop if an invalid char is found.
+     */
+
+
+    for (patternPos = steps.start; continueCondition(this.options); patternPos = patternPos + steps.inc) {
+      // Value char
+      var vc = value.charAt(valuePos); // Pattern char to match with the value char
+
+      var pc = pattern2.charAt(patternPos);
+      var token = tokens[pc];
+
+      if (recursive.length && token && !token.recursive) {
+        // In the recursive portion of the pattern: tokens not recursive must be seen as static chars
+        token = null;
+      } // 1. Handle escape tokens in pattern
+      // go to next iteration: if the pattern char is a escape char or was escaped
+
+
+      if (!inRecursiveMode || vc) {
+        if (this.options.reverse && isEscaped(pattern2, patternPos)) {
+          // pattern char is escaped, just add it and move on
+          formatted = concatChar(formatted, pc, this.options, token); // skip escape token
+
+          patternPos = patternPos + steps.inc;
+          continue;
+        } else if (!this.options.reverse && escapeNext) {
+          // pattern char is escaped, just add it and move on
+          formatted = concatChar(formatted, pc, this.options, token);
+          escapeNext = false;
+          continue;
+        } else if (!this.options.reverse && token && token.escape) {
+          // mark to escape the next pattern char
+          escapeNext = true;
+          continue;
+        }
+      } // 2. Handle recursive tokens in pattern
+      // go to next iteration: if the value str is finished or
+      //                       if there is a normal token in the recursive portion of the pattern
+
+
+      if (!inRecursiveMode && token && token.recursive) {
+        // save it to repeat in the end of the pattern and handle the value char now
+        recursive.push(pc);
+      } else if (inRecursiveMode && !vc) {
+        // in recursive mode but value is finished. Add the pattern char if it is not a recursive token
+        formatted = concatChar(formatted, pc, this.options, token);
+        continue;
+      } else if (!inRecursiveMode && recursive.length > 0 && !vc) {
+        // recursiveMode not started but already in the recursive portion of the pattern
+        continue;
+      } // 3. Handle the value
+      // break iterations: if value is invalid for the given pattern
+
+
+      if (!token) {
+        // add char of the pattern
+        formatted = concatChar(formatted, pc, this.options, token);
+
+        if (!inRecursiveMode && recursive.length) {
+          // save it to repeat in the end of the pattern
+          recursive.push(pc);
+        }
+      } else if (token.optional) {
+        // if token is optional, only add the value char if it matchs the token pattern
+        //                       if not, move on to the next pattern char
+        if (token.pattern.test(vc) && optionalNumbersToUse) {
+          formatted = concatChar(formatted, vc, this.options, token);
+          valuePos = valuePos + steps.inc;
+          optionalNumbersToUse--;
+        } else if (recursive.length > 0 && vc) {
+          valid = false;
+          break;
+        }
+      } else if (token.pattern.test(vc)) {
+        // if token isn't optional the value char must match the token pattern
+        formatted = concatChar(formatted, vc, this.options, token);
+        valuePos = valuePos + steps.inc;
+      } else if (!vc && token._default && this.options.usedefaults) {
+        // if the token isn't optional and has a default value, use it if the value is finished
+        formatted = concatChar(formatted, token._default, this.options, token);
+      } else {
+        // the string value don't match the given pattern
+        valid = false;
+        break;
+      }
+    }
+
+    return {
+      result: formatted,
+      valid: valid
+    };
+  };
+
+  StringMask.prototype.apply = function (value) {
+    return this.process(value).result;
+  };
+
+  StringMask.prototype.validate = function (value) {
+    return this.process(value).valid;
+  };
+
+  StringMask.process = function (value, pattern, options) {
+    return new StringMask(pattern, options).process(value);
+  };
+
+  StringMask.apply = function (value, pattern, options) {
+    return new StringMask(pattern, options).apply(value);
+  };
+
+  StringMask.validate = function (value, pattern, options) {
+    return new StringMask(pattern, options).validate(value);
+  };
+
+  var styles$5 = css`:host{display:inline-block;--base-input-height:40px;--base-input-border-radius:var(--base-border-radius-md)}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{border:1px solid var(--base-color-focus)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-sm)}:host [part=label]{display:block;font-size:var(--base-font-size-sm);margin-bottom:var(--base-space-sm)}:host [part=help]{display:block;font-size:var(--base-font-size-xs);color:var(--base-color-font-light);margin-top:var(--base-space-sm)}:host [part=prepend]{display:block;margin-left:var(--base-space-sm)}:host [part=append]{display:block;margin-right:var(--base-space-sm)}`;
+
+  class BaseInput extends LitElement {
+    constructor() {
+      super();
+      /**
+       * Full input
+       * @type {Boolean}
+       * @attr
+       */
+
+      this.full = false;
+      this._value = "";
+      /**
+       * Button state
+       * @type {"text"|"password"|"email"|"tel"}
+       * @attr
+       */
+
+      this.type = "text";
+      this.mask = "";
+      this.focused = false;
+      this.autofocus = false;
+      this._handleInputEvent = this._handleInputEvent.bind(this);
+      this._handleChangeEvent = this._handleChangeEvent.bind(this);
+      this._handleBlurEvent = this._handleBlurEvent.bind(this);
+      this._handleFocusEvent = this._handleFocusEvent.bind(this);
+    }
+
+    static get properties() {
+      return {
+        full: {
+          type: Boolean
+        },
+        type: {
+          type: String
+        },
+        value: {
+          type: String
+        },
+        mask: {
+          type: String
+        },
+        focused: {
+          type: Boolean,
+          reflect: true
+        },
+        autofocus: {
+          type: Boolean,
+          reclect: true
+        }
+      };
+    }
+
+    static get styles() {
+      return [styles$5, sharedStyles];
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+    }
+
+    get value() {
+      return this._value;
+    }
+
+    set value(val) {
+      this._value = val;
+      this.requestUpdate();
+    }
+
+    get maskedValue() {
+      const formatter = new StringMask(this.mask);
+      const res = formatter.apply(this.value);
+      console.log("res", res);
+      return res;
+    }
+
+    _handleFocusEvent() {
+      this.focused = true;
+      this.showSuggestions = true;
+    }
+
+    _handleBlurEvent() {
+      this.focused = false;
+    }
+
+    _handleInputEvent(e) {
+      // First stop default input event to bubble up
+      e.stopPropagation(); // Set the value to the target value
+      // this will then become the e.target.value of the custom event
+
+      this.value = e.target.value;
+      this.dispatchEvent(new CustomEvent("input", e));
+    }
+
+    _handleChangeEvent(e) {
+      // First stop default input event to bubble up
+      e.stopPropagation(); // Set the value to the target value
+      // this will then become the e.target.value of the custom event
+
+      this.value = e.target.value;
+      this.dispatchEvent(new CustomEvent("change", e));
+    }
+
+    render() {
+      return html`
+      <slot part="label"></slot>
+      <div part="input">
+        <slot part="prepend" name="prepend"></slot>
+        <input
+          @input=${this._handleInputEvent}
+          @focus=${this._handleFocusEvent}
+          @blur=${this._handleBlurEvent}
+          part="input-field"
+          type=${this.type}
+          .value=${this.mask ? this.maskedValue : this.value}
+        />
+        <slot part="append" name="append"></slot>
+      </div>
+      <slot part="help" name="help"></slot>
+    `;
+    }
+
+  }
+
+  if (!customElements.get("base-input")) {
+    customElements.define("base-input", BaseInput);
+  }
+
   exports.BaseButton = BaseButton;
   exports.BaseCheckbox = BaseCheckbox;
+  exports.BaseInput = BaseInput;
   exports.BaseModal = BaseModal;
   exports.BaseOptGroup = BaseOptGroup;
   exports.BaseOption = BaseOption;
@@ -18717,7 +19125,7 @@ module.exports = {
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "base-button",
-    "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n\n### Types\n\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n\n### Outline\n\n<base-button style=\"outline\">Halla</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n"
+    "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "base-checkbox",
@@ -18726,9 +19134,84 @@ module.exports = {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "base-select",
     "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-button copy/base-button.md",
+    "name": "base-button",
+    "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "base-input",
+    "content": "\n## Base Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input mask=\"+00 (00) 0000-0000\">\n<div slot=\"prepend\">$</div>\nHalla\n<div slot=\"append\">NOK</div>\n<div slot=\"help\">Help<div>\n</base-input>\n</base-knobs>\n"
   }]
 };
-},{}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -19035,7 +19518,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
 var _default = {
   data() {
     return {
@@ -19064,7 +19546,7 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "page" }, [
     _c(
       "div",
       { staticClass: "sidebar" },
@@ -19130,9 +19612,13 @@ render._withStripped = true
         }
 
         
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
       }
     })();
-},{"marked":"node_modules/marked/src/marked.js","./db.json":"src/db.json","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
+},{"marked":"node_modules/marked/src/marked.js","./db.json":"src/db.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
