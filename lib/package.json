@@ -17,9 +17,11 @@
     "build:rollup": "rollup --config"
   },
   "dependencies": {
+    "highlight.js": "^9.18.1",
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
     "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",

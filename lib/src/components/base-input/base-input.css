@@ -21,6 +21,14 @@
   border: 1px solid var(--base-color-focus);
 }
 
+:host([valid]) [part="input"] {
+  border: 1px solid var(--base-color-success);
+}
+
+:host([invalid]) [part="input"] {
+  border: 1px solid var(--base-color-danger);
+}
+
 :host [part="input-field"] {
   width: 100%;
   font-size: var(--base-font-size-sm);
@@ -31,25 +39,30 @@
   padding: 0 var(--base-space-sm);
 }
 
-:host [part="label"] {
+[part="label"] {
   display: block;
   font-size: var(--base-font-size-sm);
   margin-bottom: var(--base-space-sm);
 }
 
-:host [part="help"] {
+::slotted([slot="help"]) {
   display: block;
   font-size: var(--base-font-size-xs);
   color: var(--base-color-font-light);
   margin-top: var(--base-space-sm);
 }
 
-:host [part="prepend"] {
+::slotted([slot="error"]) {
   display: block;
-  margin-left: var(--base-space-sm);
+  font-size: var(--base-font-size-xs);
+  color: var(--base-color-danger);
+  margin-top: var(--base-space-sm);
 }
 
-:host [part="append"] {
-  display: block;
-  margin-right: var(--base-space-sm);
+::slotted([slot="prepend"]) {
+  padding-left: var(--base-space-sm);
+}
+
+::slotted([slot="append"]) {
+  padding-right: var(--base-space-sm);
 }

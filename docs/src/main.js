@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime";
 
-import "./base-knobs.js";
+import "../../lib/dist/components/base-knobs";
 
 import "../../lib/dist/main.js";
 

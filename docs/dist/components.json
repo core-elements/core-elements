@@ -122,6 +122,325 @@
       ]
     },
     {
+      "name": "base-input",
+      "path": "./../../lib/src/components/base-input/base-input.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "full",
+          "description": "Full input",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "valid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "type",
+          "description": "Button state",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"",
+          "default": "\"text\""
+        },
+        {
+          "name": "mask",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "errormessage",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "maxlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "minlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "pattern",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "readonly",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autovalidate",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autofocus",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "inputEl",
+          "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full input",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "valid",
+          "attribute": "valid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "invalid",
+          "attribute": "invalid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "Button state",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"",
+          "default": "\"text\""
+        },
+        {
+          "name": "mask",
+          "attribute": "mask",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "errormessage",
+          "attribute": "errormessage",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "maxlength",
+          "attribute": "maxlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "min",
+          "attribute": "min",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "minlength",
+          "attribute": "minlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "pattern",
+          "attribute": "pattern",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "readonly",
+          "attribute": "readonly",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autovalidate",
+          "attribute": "autovalidate",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "attribute": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autofocus",
+          "attribute": "autofocus",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checkValidity"
+        }
+      ],
+      "events": [
+        {
+          "name": "keypress"
+        },
+        {
+          "name": "input"
+        },
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "base-knobs",
+      "path": "./../../lib/src/components/base-knobs/base-knobs.js",
+      "attributes": [
+        {
+          "name": "src",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "tab",
+          "type": "string",
+          "default": "\"props\""
+        },
+        {
+          "name": "hideProps",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideSrc",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideEvents",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "attributes",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "properties",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "componentEl",
+          "type": "Element"
+        },
+        {
+          "name": "srcHTML",
+          "type": "string"
+        },
+        {
+          "name": "src",
+          "attribute": "src",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "tab",
+          "attribute": "tab",
+          "type": "string",
+          "default": "\"props\""
+        },
+        {
+          "name": "hideProps",
+          "attribute": "hideProps",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideSrc",
+          "attribute": "hideSrc",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideEvents",
+          "attribute": "hideEvents",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "attributes",
+          "attribute": "attributes",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "properties",
+          "attribute": "properties",
+          "type": "array",
+          "default": "[]"
+        }
+      ]
+    },
+    {
       "name": "base-modal",
       "path": "./../../lib/src/components/base-modal/base-modal.js",
       "attributes": [
@@ -150,10 +469,10 @@
           "default": "false"
         },
         {
-          "name": "hideModal"
+          "name": "close"
         },
         {
-          "name": "showModal"
+          "name": "show"
         },
         {
           "name": "toggle"

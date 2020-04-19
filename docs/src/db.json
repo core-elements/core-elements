@@ -1,9 +1,14 @@
 {
   "components": [
     {
-      "path": "../lib/src/components/base-modal/base-modal.md",
-      "name": "base-modal",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n</base-modal>\n</base-knobs>\n"
+      "path": "../lib/src/components/base-checkbox/base-checkbox.md",
+      "name": "base-checkbox",
+      "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-input/base-input.md",
+      "name": "base-input",
+      "content": "\n## Base Input\n\n<style>\nbase-input .check {\n  display: none;\n}\n\nbase-input[valid] .check {\ndisplay: block;\ncolor: var(--base-color-success);\n}\n\nbase-input .danger {\ndisplay: none;\ncolor: var(--base-color-danger);\n}\n\nbase-input[invalid] .danger {\ndisplay: block;\n}\n</style>\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" errormessage=\"nei\"  autovalidate>\nHalla\n<div class=\"check\" slot=\"append\">&#10004;</div>\n<div class=\"danger\" slot=\"append\">&#x2620;</div>\n<div slot=\"help\">Help text</div>\n</base-input>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-button/base-button.md",
@@ -11,24 +16,14 @@
       "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-      "name": "base-checkbox",
-      "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+      "path": "../lib/src/components/base-modal/base-modal.md",
+      "name": "base-modal",
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-select/base-select.md",
       "name": "base-select",
       "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
-    },
-    {
-      "path": "../lib/src/components/base-button copy/base-button.md",
-      "name": "base-button",
-      "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
-    },
-    {
-      "path": "../lib/src/components/base-input/base-input.md",
-      "name": "base-input",
-      "content": "\n## Base Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input mask=\"+00 (00) 0000-0000\">\n<div slot=\"prepend\">$</div>\nHalla\n<div slot=\"append\">NOK</div>\n<div slot=\"help\">Help<div>\n</base-input>\n</base-knobs>\n"
     }
   ]
 }
