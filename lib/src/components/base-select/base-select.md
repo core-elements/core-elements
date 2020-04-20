@@ -1,8 +1,8 @@
 ---
-name: base-select
+name: Select
 ---
 
-## Base Select
+# Select
 
 <base-knobs src="./components.json" name="base-select">
   <base-select>

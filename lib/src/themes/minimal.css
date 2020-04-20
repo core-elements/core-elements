@@ -44,7 +44,7 @@
   --base-color-secondary-light: hsl(
     var(--base-color-secondary-hue),
     var(--base-saturation-high),
-    var(--base-lightness-lighter)
+    var(--base-lightness-lightest)
   );
   --base-color-secondary-dark: hsl(
     var(--base-color-secondary-hue),

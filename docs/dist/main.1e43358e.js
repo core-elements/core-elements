@@ -17851,8 +17851,8 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
-var highlightStyles = (0, _litElement6bb3323a.c)`pre{white-space:normal}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:16px;border-radius:10px;margin-bottom:30px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}.props{margin-top:15px;display:block}table{text-align:left;display:inline-block;max-width:100%;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);border:2px solid #eee}table thead tr{background:#f3eeff;border-bottom:3px solid #eee}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{width:100%}table tr{background-color:#fff;border-bottom:1px solid #eee}table tr:nth-child(2n){background-color:hsla(0,0%,98%,.98)}`;
+var highlightStyles = (0, _litElement6bb3323a.c)`pre{white-space:normal}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}table{text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);border:2px solid var(--base-color-secondary-light)}table thead tr{background:var(--base-color-secondary-light);border-bottom:3px solid var(--base-color-secondary-light)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr{background-color:#fff;border-bottom:1px solid var(--base-color-secondary-light)}table tr:nth-child(2n){background-color:hsla(0,0%,98%,.98)}`;
 
 class BaseKnobs extends _litElement6bb3323a.L {
   constructor() {
@@ -18060,14 +18060,18 @@ class BaseKnobs extends _litElement6bb3323a.L {
   _renderPropTab() {
     return (0, _litElement6bb3323a.h)`
       <table class="props">
-        <tr>
-          <th>Attribute</th>
-          <th>Type</th>
-          <th>Value</th>
-        </tr>
-        ${this.attributes.map(attr => {
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${this.attributes.map(attr => {
       return this._propComponent(attr);
     })}
+        </tbody>
       </table>
     `;
   }
@@ -32792,32 +32796,32 @@ module.exports = marked;
 module.exports = {
   "components": [{
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-    "name": "base-checkbox",
-    "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    "name": "Checkbox",
+    "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-input/base-input.md",
-    "name": "base-input",
-    "content": "\n## Base Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n"
+    "name": "Input",
+    "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
-    "name": "base-button",
-    "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
+    "name": "Button",
+    "content": "\n# Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
-    "name": "base-grid",
-    "content": "\n## Base Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n  <base-grid>\n        <base-grid-item sm=\"12\" md=\"6\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"4\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"2\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"hide\" md=\"8\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n      </base-grid>\n</base-knobs>\n"
+    "name": "Grid",
+    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n  <base-grid>\n        <base-grid-item sm=\"12\" md=\"6\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"4\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"2\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"hide\" md=\"8\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n      </base-grid>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
-    "name": "base-label",
-    "content": "\n## Base Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
+    "name": "Label",
+    "content": "\n# Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "base-modal",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
+    "name": "Modal",
+    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
-    "name": "base-select",
-    "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+    "name": "Select",
+    "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
@@ -33223,34 +33227,38 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "page" }, [
-    _c(
-      "div",
-      { staticClass: "sidebar" },
-      _vm._l(_vm.db, function(menuGroup, name) {
-        return _c("div", { key: name }, [
-          _vm._v("\n      " + _vm._s(name) + "\n      "),
-          _c(
-            "ul",
-            _vm._l(menuGroup, function(page, i) {
-              return _c(
-                "li",
-                {
-                  key: i,
-                  on: {
-                    click: function($event) {
-                      _vm.active = page
+    _c("div", { staticClass: "sidebar" }, [
+      _c(
+        "nav",
+        { attrs: { toc: "" } },
+        _vm._l(_vm.db, function(menuGroup, name) {
+          return _c(
+            "div",
+            { key: name },
+            [
+              _c("label", [_vm._v(_vm._s(name))]),
+              _vm._v(" "),
+              _vm._l(menuGroup, function(page, i) {
+                return _c(
+                  "a",
+                  {
+                    key: i,
+                    on: {
+                      click: function($event) {
+                        _vm.active = page
+                      }
                     }
-                  }
-                },
-                [_vm._v("\n          " + _vm._s(page.name) + "\n        ")]
-              )
-            }),
-            0
+                  },
+                  [_vm._v("\n          " + _vm._s(page.name) + "\n        ")]
+                )
+              })
+            ],
+            2
           )
-        ])
-      }),
-      0
-    ),
+        }),
+        0
+      )
+    ]),
     _vm._v(" "),
     _vm.active
       ? _c("main", [

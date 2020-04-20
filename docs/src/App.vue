@@ -1,14 +1,14 @@
 <template>
   <div class="page">
     <div class="sidebar">
-      <div v-for="(menuGroup, name) in db" :key="name">
-        {{ name }}
-        <ul>
-          <li @click="active = page" v-for="(page, i) in menuGroup" :key="i">
+      <nav toc>
+        <div v-for="(menuGroup, name) in db" :key="name">
+          <label>{{ name }}</label>
+          <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">
             {{ page.name }}
-          </li>
-        </ul>
-      </div>
+          </a>
+        </div>
+      </nav>
     </div>
     <main v-if="active">
       <div v-html="html(active.content)"></div>
@@ -39,10 +39,33 @@ export default {
 .page {
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 80%;
   grid-gap: 1rem;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+}
+
+nav[toc] {
+  font-size: 18px;
+}
+
+nav[toc] label {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+nav[toc] a {
+  margin-bottom: 10px;
+  color: currentColor;
+  text-decoration: none;
+  display: block;
+}
+
+nav[toc] a[active="true"] {
+  font-weight: 600;
 }
 </style>

@@ -1,6 +1,8 @@
 ---
-name: base-modal
+name: Modal
 ---
+
+# Modal
 
 <base-knobs src="./components.json" name="base-modal">
 <base-modal>

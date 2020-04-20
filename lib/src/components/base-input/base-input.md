@@ -1,8 +1,8 @@
 ---
-name: base-input
+name: Input
 ---
 
-## Base Input
+# Input
 
 <base-knobs src="./components.json" name="base-input">
 <base-label>Name:</base-label>

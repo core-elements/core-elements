@@ -1,8 +1,8 @@
 ---
-name: base-grid
+name: Grid
 ---
 
-## Base Grid
+# Grid
 
 <base-knobs src="./components.json" name="base-grid">
   <base-grid>

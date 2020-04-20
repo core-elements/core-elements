@@ -1,8 +1,8 @@
 ---
-name: base-label
+name: Label
 ---
 
-## Base Label
+# Label
 
 <base-knobs hideEvents tab="src" src="./components.json" name="base-label">
 <base-label>Label</base-label>
