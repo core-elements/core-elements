@@ -60,6 +60,14 @@ table th {
   padding: 10px 23px;
 }
 
+table tr td:first-of-type {
+  white-space: nowrap;
+}
+
+table tr td:last-of-type {
+  width: 100%;
+}
+
 table tr {
   background-color: #fff;
   border-bottom: 1px solid #eee;
