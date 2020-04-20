@@ -135,6 +135,79 @@
       ]
     },
     {
+      "name": "base-grid-item",
+      "path": "./../../lib/src/components/base-grid/base-grid-item.js",
+      "attributes": [
+        {
+          "name": "sm",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "md",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "lg",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "xl",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "sm",
+          "attribute": "sm",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "md",
+          "attribute": "md",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "lg",
+          "attribute": "lg",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "xl",
+          "attribute": "xl",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "base-grid",
+      "path": "./../../lib/src/components/base-grid/base-grid.js",
+      "attributes": [
+        {
+          "name": "gutter",
+          "description": "Grid gutter",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"sm\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "gutter",
+          "attribute": "gutter",
+          "description": "Grid gutter",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"sm\""
+        }
+      ]
+    },
+    {
       "name": "base-input",
       "path": "./../../lib/src/components/base-input/base-input.js",
       "attributes": [
@@ -160,6 +233,11 @@
         },
         {
           "name": "invalid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
           "type": "boolean",
           "default": "false"
         },
@@ -257,6 +335,12 @@
         {
           "name": "invalid",
           "attribute": "invalid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
           "type": "boolean",
           "default": "false"
         },
@@ -548,7 +632,7 @@
     },
     {
       "name": "base-option",
-      "path": "./../../lib/src/components/base-option/base-option.js",
+      "path": "./../../lib/src/components/base-select/base-option.js",
       "attributes": [
         {
           "name": "label",

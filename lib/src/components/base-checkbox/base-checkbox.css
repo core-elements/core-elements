@@ -12,16 +12,20 @@
   align-items: center;
 }
 
-:host[full] {
+:host([full]) {
   display: flex;
   width: 100%;
+}
+
+:host([disabled]) {
+  color: var(--base-color-font-light);
 }
 
 :host label {
   display: inline-block;
 }
 
-input[type="checkbox"] {
+:host input[type="checkbox"] {
   outline: 0;
   box-shadow: var(--base-button-box-shadow);
   -webkit-appearance: none;

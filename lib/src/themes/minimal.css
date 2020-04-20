@@ -87,8 +87,8 @@
   );
 
   --base-color-font: #333;
-  --base-color-font-light: #333;
-  --base-color-font-dark: black;
+  --base-color-font-light: #696969;
+  --base-color-font-dark: #000;
 
   --base-color-focus: #1f00ff;
   --base-color-focus-light: #d2daff;
@@ -122,9 +122,9 @@
   --base-border-radius-md: 4px;
   --base-border-radius-lg: 8px;
 
-  --base-size: 32px;
-  --base-size-md: 32px;
-  --base-size-sm: 24px;
+  --base-size: 36px;
+  --base-size-md: 36px;
+  --base-size-sm: 28px;
   --base-size-lg: 48px;
 
   /* DEPTH */

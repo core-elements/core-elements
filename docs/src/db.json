@@ -1,19 +1,24 @@
 {
   "components": [
     {
-      "path": "../lib/src/components/base-input/base-input.md",
-      "name": "base-input",
-      "content": "\n## Base Input\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input required type=\"email\" errormessage=\"nei\"  autovalidate></base-input>\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-checkbox/base-checkbox.md",
       "name": "base-checkbox",
-      "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+      "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-input/base-input.md",
+      "name": "base-input",
+      "content": "\n## Base Input\n\n<base-knobs hideEvents hideProps tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n\n## Base Input\n\n<base-knobs hideEvents  tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input type=\"email\"  autovalidate></base-input>\n</base-knobs>\n\n<base-knobs hideEvents hideProps tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input type=\"email\"  autovalidate></base-input>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-button/base-button.md",
       "name": "base-button",
       "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-grid/base-grid.md",
+      "name": "base-grid",
+      "content": "\n## Base Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n  <base-grid>\n        <base-grid-item sm=\"12\" md=\"6\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"4\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"2\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"hide\" md=\"8\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n      </base-grid>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-label/base-label.md",

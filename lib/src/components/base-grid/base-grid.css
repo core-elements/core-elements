@@ -1,0 +1,25 @@
+:host {
+  --base-grid-gutter: var(--base-space-md);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: var(--base-grid-gutter);
+  grid-column-gap: var(--base-grid-gutter);
+  margin: 0;
+}
+
+:host([gutter="none"]) {
+  --base-grid-gutter: 0px;
+}
+
+:host([gutter="sm"]) {
+  --base-grid-gutter: var(--base-space-sm);
+}
+
+:host([gutter="md"]) {
+  --base-grid-gutter: var(--base-space-md);
+}
+
+:host([gutter="lg"]) {
+  --base-grid-gutter: var(--base-space-lg);
+}

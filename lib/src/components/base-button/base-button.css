@@ -24,14 +24,17 @@
 
 :host([size="sm"]) {
   --base-button-height: var(--base-size-sm);
+  --base-button-padding: 0 var(--base-space-sm);
 }
 
 :host([size="md"]) {
   --base-button-height: var(--base-size-md);
+  --base-button-padding: 0 var(--base-space-md);
 }
 
 :host([size="lg"]) {
   --base-button-height: var(--base-size-lg);
+  --base-button-padding: 0 var(--base-space-lg);
 }
 
 :host button {
