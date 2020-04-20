@@ -22,6 +22,12 @@
           "description": "Full button",
           "type": "Boolean",
           "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
         }
       ],
       "properties": [
@@ -45,6 +51,13 @@
           "description": "Full button",
           "type": "Boolean",
           "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
         }
       ]
     },
@@ -130,14 +143,14 @@
           "type": "string"
         },
         {
-          "name": "full",
-          "description": "Full input",
-          "type": "Boolean",
+          "name": "required",
+          "type": "boolean",
           "default": "false"
         },
         {
-          "name": "required",
-          "type": "boolean",
+          "name": "full",
+          "description": "Full input",
+          "type": "Boolean",
           "default": "false"
         },
         {
@@ -223,16 +236,16 @@
           "type": "HTMLInputElement | null"
         },
         {
+          "name": "required",
+          "attribute": "required",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "full",
           "attribute": "full",
           "description": "Full input",
           "type": "Boolean",
-          "default": "false"
-        },
-        {
-          "name": "required",
-          "attribute": "required",
-          "type": "boolean",
           "default": "false"
         },
         {
@@ -437,6 +450,25 @@
           "attribute": "properties",
           "type": "array",
           "default": "[]"
+        }
+      ]
+    },
+    {
+      "name": "base-label",
+      "path": "./../../lib/src/components/base-label/base-label.js",
+      "attributes": [
+        {
+          "name": "for",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "for",
+          "attribute": "for",
+          "type": "string",
+          "default": "\"\""
         }
       ]
     },

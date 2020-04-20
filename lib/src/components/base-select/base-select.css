@@ -2,7 +2,7 @@
   /* ASSIGN TO LOCAL VARIABLES */
   --base-select-active-color: var(--base-color-focus);
   --base-select-font-size: var(--base-font-size-sm);
-  --base-select-min-height: 38px;
+  --base-select-min-height: var(--base-size-md);
   --base-select-background: none;
   --base-select-padding: 0px;
   --base-select-placeholder-color: var(--base-color-ui);
@@ -79,6 +79,7 @@
 
 input[part="input-field"] {
   flex: 1;
+  width: 100%;
   cursor: pointer;
   padding-left: 8px;
   background: transparent;

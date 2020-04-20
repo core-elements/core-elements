@@ -1,8 +1,12 @@
 :host {
+  --base-input-height: var(--base-size-md);
+  --base-input-border-radius: var(--base-border-radius-md);
+  --base-input-box-shadow: none;
+}
+
+:host {
   min-width: 200px;
   display: inline-block;
-  --base-input-height: 40px;
-  --base-input-border-radius: var(--base-border-radius-md);
 }
 
 :host([full]) {
@@ -14,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: var(--base-input-box-shadow);
   border-radius: var(--base-input-border-radius);
   height: var(--base-input-height);
   border: 1px solid var(--base-color-ui-light);
@@ -24,14 +29,17 @@
 }
 
 :host([focused]) [part="input"] {
+  --base-input-box-shadow: 0px 0px 0px 1px var(--base-color-focus);
   border: 1px solid var(--base-color-focus);
 }
 
 :host(:not([focused])[valid]) [part="input"] {
+  --base-input-box-shadow: 0px 0px 0px 1px var(--base-color-success);
   border: 1px solid var(--base-color-success);
 }
 
 :host(:not([focused])[invalid]) [part="input"] {
+  --base-input-box-shadow: 0px 0px 0px 1px var(--base-color-danger);
   border: 1px solid var(--base-color-danger);
 }
 
@@ -43,12 +51,6 @@
   outline: 0;
   border: 0;
   padding: 0 var(--base-space-sm);
-}
-
-[part="label"] {
-  display: block;
-  font-size: var(--base-font-size-sm);
-  margin-bottom: var(--base-space-sm);
 }
 
 ::slotted([slot="help"]) {

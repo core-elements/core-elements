@@ -3,6 +3,22 @@
   --base-checkbox-border: 1px solid var(--base-color-ui-light);
   --base-checkbox-cursor: pointer;
   --base-checkbox-box-shadow: none;
+  --base-checkbox-height: var(--base-size);
+}
+
+:host {
+  height: var(--base-checkbox-height);
+  display: inline-flex;
+  align-items: center;
+}
+
+:host[full] {
+  display: flex;
+  width: 100%;
+}
+
+:host label {
+  display: inline-block;
 }
 
 input[type="checkbox"] {

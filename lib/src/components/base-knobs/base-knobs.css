@@ -28,3 +28,11 @@ button:hover {
 button[active] {
   color: black;
 }
+
+.props {
+  margin-top: 15px;
+  border-radius: var(--base-border-radius-md);
+  display: block;
+  padding: var(--base-space-md);
+  background: var(--base-color-ui-lighter);
+}

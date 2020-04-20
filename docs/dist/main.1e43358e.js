@@ -17852,7 +17852,7 @@ highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
 var highlightStyles = (0, _litElement6bb3323a.c)`pre{white-space:normal}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:16px;border-radius:10px;margin-bottom:30px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}`;
+var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}.props{margin-top:15px;border-radius:var(--base-border-radius-md);display:block;padding:var(--base-space-md);background:var(--base-color-ui-lighter)}`;
 
 class BaseKnobs extends _litElement6bb3323a.L {
   constructor() {
@@ -17994,6 +17994,7 @@ class BaseKnobs extends _litElement6bb3323a.L {
       const options = attr.type.replace(/"/g, "").split("|");
       return (0, _litElement6bb3323a.h)`
         <div class="prop">
+          <base-label>${attr.name}</base-label>
             <base-select .value=${this.componentEl.getAttribute(attr.name)} @change=${e => this._handleAttrChange(e, attr)}>
               ${options.map(opt => {
         return (0, _litElement6bb3323a.h)`
@@ -18013,15 +18014,14 @@ class BaseKnobs extends _litElement6bb3323a.L {
     if (attr.type === "string") {
       return (0, _litElement6bb3323a.h)`
         <div class="prop">
-          <label>
-            <base-input
-              name=${attr.name}
-              .value=${this.componentEl[attr.name]}
-              @input=${e => this._handleAttrChange(e, attr)}
-              type="text"
-            />
-            ${attr.name}
-          </label>
+          <base-label>${attr.name}</base-label>
+          <base-input
+            name=${attr.name}
+            .value=${this.componentEl[attr.name]}
+            @input=${e => this._handleAttrChange(e, attr)}
+            type="text"
+          >
+          </base-input>
         </div>
       `;
     }
@@ -18035,7 +18035,7 @@ class BaseKnobs extends _litElement6bb3323a.L {
               .value=${this.componentEl[attr.name]}
               @change=${e => this._handleAttrChange(e, attr)}
             />
-            ${attr.name}
+${attr.name}
           </base-checkbox>
         </div>
       `;
@@ -20907,7 +20907,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:38px;--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:var(--base-border-radius-sm);--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;cursor:pointer;padding-left:8px;background:transparent;min-width:100px;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:var(--base-border-radius-sm);--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;min-width:100px;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
@@ -21533,7 +21533,7 @@ var global = arguments[3];
     customElements.define("base-select", BaseSelect);
   }
 
-  var styles = css`:host{--base-option-padding:var(--base-space-sm);--base-option-bg-color:var(--base-color-white);--base-option-border-radius:var(--base-border-radius-sm);--base-option-active-color:var(--base-color-focus-light);--base-option-selected-color:var(--base-color-focus);--base-option-font-color:var(--base-color-black);box-sizing:border-box;width:100%;max-width:100%;display:-webkit-box;display:flex;color:var(--base-option-font-color);-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-option-bg-color);text-align:left;border-radius:var(--base-option-border-radius);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){--base-color-font-color:var(--base-color-black);--base-option-bg-color:var(--base-option-active-color)}:host([selected]:not([active]):not([disabled])),:host([selected][active]){--base-option-bg-color:var(--base-option-selected-color);--base-option-font-color:var(--base-color-white)}`;
+  var styles = css`:host{--base-option-padding:0 var(--base-space-sm);--base-option-bg-color:var(--base-color-white);--base-option-border-radius:var(--base-border-radius-sm);--base-option-active-color:var(--base-color-focus-light);--base-option-selected-color:var(--base-color-focus);--base-option-font-color:var(--base-color-black);--base-option-min-height:var(--base-size-md);box-sizing:border-box;width:100%;max-width:100%;min-height:var(--base-option-min-height);display:-webkit-box;display:flex;color:var(--base-option-font-color);-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-option-bg-color);text-align:left;border-radius:var(--base-option-border-radius);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){--base-color-font-color:var(--base-color-black);--base-option-bg-color:var(--base-option-active-color)}:host([selected]:not([active]):not([disabled])),:host([selected][active]){--base-option-bg-color:var(--base-option-selected-color);--base-option-font-color:var(--base-color-white)}`;
 
   class BaseOption extends LitElement {
     constructor() {
@@ -21665,7 +21665,7 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$2 = css`:host{display:inline-block;--base-button-padding:var(--base-space-sm) var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:var(--base-border-radius-sm);--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block}:host button{outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light);--base-button-text-color:var(--base-color-white)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([style=outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([style=outline]):not([type]){color:var(--base-color-black)}`;
+  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:var(--base-border-radius-sm);--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);display:inline-block}:host([full]){display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm)}:host([size=md]){--base-button-height:var(--base-size-md)}:host([size=lg]){--base-button-height:var(--base-size-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light);--base-button-text-color:var(--base-color-white)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([style=outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([style=outline]):not([type]){color:var(--base-color-black)}`;
 
   class BaseButton extends LitElement {
     constructor() {
@@ -21691,6 +21691,13 @@ var global = arguments[3];
        */
 
       this.full = false;
+      /**
+       * Button size
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
+      this.size = "";
     }
 
     static get properties() {
@@ -21699,6 +21706,9 @@ var global = arguments[3];
           type: String
         },
         style: {
+          type: String
+        },
+        size: {
           type: String
         },
         full: {
@@ -21725,7 +21735,7 @@ var global = arguments[3];
     customElements.define("base-button", BaseButton);
   }
 
-  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-ui-lightest);--base-checkbox-border:1px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none}input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:var(--base-space-lg);height:var(--base-space-lg);border-radius:var(--base-border-radius-sm);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:#fff;-webkit-filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
+  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-ui-lightest);--base-checkbox-border:1px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size);height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center}:host[full]{display:-webkit-box;display:flex;width:100%}:host label{display:inline-block}input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:var(--base-space-lg);height:var(--base-space-lg);border-radius:var(--base-border-radius-sm);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:#fff;-webkit-filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
 
   class BaseCheckbox extends LitElement {
     constructor() {
@@ -22194,7 +22204,7 @@ var global = arguments[3];
     return new StringMask(pattern, options).validate(value);
   };
 
-  var styles$5 = css`:host{min-width:200px;display:inline-block;--base-input-height:40px;--base-input-border-radius:var(--base-border-radius-md)}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{border:1px solid var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{border:1px solid var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-sm)}[part=label]{display:block;font-size:var(--base-font-size-sm);margin-bottom:var(--base-space-sm)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
+  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-radius:var(--base-border-radius-md);--base-input-box-shadow:none;min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);border:1px solid var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-success);border:1px solid var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-danger);border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-sm)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
 
   class BaseInput extends LitElement {
     constructor() {
@@ -22316,7 +22326,7 @@ var global = arguments[3];
     }
 
     set value(val) {
-      this._value = val;
+      this._value = val || "";
       this.requestUpdate();
     }
 
@@ -22410,7 +22420,6 @@ var global = arguments[3];
 
     render() {
       return html`
-      <slot part="label"></slot>
       <div part="input">
         <slot part="prepend" name="prepend"></slot>
         <input
@@ -22444,9 +22453,44 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
+  var styles$6 = css`:host{display:block;width:100%;margin-bottom:var(--base-space-sm)}`;
+
+  class BaseLabel extends LitElement {
+    constructor() {
+      super();
+      this.for = "";
+    }
+
+    static get properties() {
+      return {
+        for: {
+          type: String
+        }
+      };
+    }
+
+    static get styles() {
+      return [styles$6, sharedStyles];
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+    }
+
+    render() {
+      return html` <label for=${this.for}><slot></slot></label> `;
+    }
+
+  }
+
+  if (!customElements.get("base-label")) {
+    customElements.define("base-label", BaseLabel);
+  }
+
   exports.BaseButton = BaseButton;
   exports.BaseCheckbox = BaseCheckbox;
   exports.BaseInput = BaseInput;
+  exports.BaseLabel = BaseLabel;
   exports.BaseModal = BaseModal;
   exports.BaseOptGroup = BaseOptGroup;
   exports.BaseOption = BaseOption;
@@ -32647,6 +32691,10 @@ module.exports = marked;
 },{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./InlineLexer.js":"node_modules/marked/src/InlineLexer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "base-input",
+    "content": "\n## Base Input\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input required type=\"email\" errormessage=\"nei\"  autovalidate></base-input>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "base-checkbox",
     "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
@@ -32655,17 +32703,17 @@ module.exports = {
     "name": "base-button",
     "content": "\n## Base Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "base-input",
-    "content": "\n## Base Input\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" errormessage=\"nei\"  autovalidate>\nHalla\n</base-input>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-select/base-select.md",
-    "name": "base-select",
-    "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-label/base-label.md",
+    "name": "base-label",
+    "content": "\n## Base Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "base-modal",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-select/base-select.md",
+    "name": "base-select",
+    "content": "\n## Base Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
@@ -33190,7 +33238,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60324" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59715" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,10 +1,11 @@
 :host {
-  --base-option-padding: var(--base-space-sm);
+  --base-option-padding: 0 var(--base-space-sm);
   --base-option-bg-color: var(--base-color-white);
   --base-option-border-radius: var(--base-border-radius-sm);
   --base-option-active-color: var(--base-color-focus-light);
   --base-option-selected-color: var(--base-color-focus);
   --base-option-font-color: var(--base-color-black);
+  --base-option-min-height: var(--base-size-md);
 }
 
 :host {
@@ -12,6 +13,7 @@
   width: 100%;
   max-width: 100%;
   border: 0;
+  min-height: var(--base-option-min-height);
   display: flex;
   color: var(--base-option-font-color);
   align-items: center;
