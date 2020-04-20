@@ -1,0 +1,75 @@
+:host {
+  --base-radio-height: var(--ab-size-md);
+}
+
+:host {
+  cursor: pointer;
+  display: inline-block;
+  height: var(--base-radio-height);
+}
+
+:host label {
+  height: var(--base-radio-height);
+  display: inline-block;
+  font-size: var(--hw-font-size-small);
+  position: relative;
+  line-height: 1.5;
+}
+
+:host [part="indicator"] {
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-top: 0;
+  margin-right: 0.4rem;
+  border: 2px solid var(--base-color-ui-light);
+  border-radius: 50%;
+  background: var(--hw-color-white);
+  width: var(--base-space-lg);
+  height: var(--base-space-lg);
+  transition: border-color 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+}
+
+:host [part="label"] {
+  display: inline-block;
+  max-width: calc(100% - 22px - 0.4rem);
+}
+
+:host [part="input-field"] {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  vertical-align: middle;
+}
+
+:host
+  [part="input-field"]:hover:not([disabled]):not(:checked)
+  ~ [part="indicator"] {
+  background-color: var(--base-color-ui-lighter);
+}
+
+:host [part="input-field"]:checked ~ [part="indicator"] {
+  border-color: var(--base-color-focus);
+}
+
+:host [part="input-field"]:checked ~ [part="indicator"]:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background: var(--base-color-focus);
+}
+
+:host [part="input-field"]:focus ~ [part="indicator"] {
+  border-color: var(--base-color-focus);
+}
+
+:host [part="input-field"]:disabled ~ [part="indicator"] {
+  border-color: var(--base-color-ui-lighter);
+  background-color: transparent;
+  cursor: not-allowed;
+}

@@ -212,6 +212,10 @@
       "path": "./../../lib/src/components/base-input/base-input.js",
       "attributes": [
         {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
           "name": "value",
           "type": "string"
         },
@@ -242,9 +246,14 @@
           "default": "false"
         },
         {
+          "name": "autocomplete",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "type",
-          "description": "Button state",
-          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"",
+          "description": "Input type",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"",
           "default": "\"text\""
         },
         {
@@ -305,6 +314,11 @@
       ],
       "properties": [
         {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "type": "string"
+        },
+        {
           "name": "value",
           "attribute": "value",
           "type": "string"
@@ -345,10 +359,16 @@
           "default": "false"
         },
         {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "type",
           "attribute": "type",
-          "description": "Button state",
-          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"",
+          "description": "Input type",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"",
           "default": "\"text\""
         },
         {
@@ -450,7 +470,12 @@
         {
           "name": "tab",
           "type": "string",
-          "default": "\"props\""
+          "default": "\"src\""
+        },
+        {
+          "name": "hideTab",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "hideProps",
@@ -481,7 +506,7 @@
       "properties": [
         {
           "name": "componentEl",
-          "type": "Element"
+          "type": "Element | undefined"
         },
         {
           "name": "srcHTML",
@@ -503,7 +528,13 @@
           "name": "tab",
           "attribute": "tab",
           "type": "string",
-          "default": "\"props\""
+          "default": "\"src\""
+        },
+        {
+          "name": "hideTab",
+          "attribute": "hideTab",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "hideProps",
@@ -601,8 +632,106 @@
       ]
     },
     {
+      "name": "base-radio",
+      "path": "./../../lib/src/components/base-radio/base-radio.js",
+      "attributes": [
+        {
+          "name": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "options",
+          "type": "Element[]"
+        },
+        {
+          "name": "currentCheckedItem",
+          "type": "Element | undefined"
+        },
+        {
+          "name": "formElement",
+          "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focus"
+        },
+        {
+          "name": "selectNext"
+        },
+        {
+          "name": "selectPrevious"
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
       "name": "base-optgroup",
-      "path": "./../../lib/src/components/base-optgroup/base-optgroup.js",
+      "path": "./../../lib/src/components/base-select/base-optgroup.js",
       "attributes": [
         {
           "name": "label",

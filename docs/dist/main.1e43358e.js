@@ -17859,7 +17859,8 @@ class BaseKnobs extends _litElement6bb3323a.L {
     super();
     this.src = "";
     this.name = "";
-    this.tab = "props";
+    this.tab = "src";
+    this.hideTab = false;
     this.hideProps = false;
     this.hideSrc = false;
     this.hideEvents = false;
@@ -17890,6 +17891,9 @@ class BaseKnobs extends _litElement6bb3323a.L {
       },
       properties: {
         type: Array
+      },
+      hideTab: {
+        type: Boolean
       },
       hideProps: {
         type: Boolean
@@ -18087,35 +18091,35 @@ class BaseKnobs extends _litElement6bb3323a.L {
   render() {
     return (0, _litElement6bb3323a.h)`
       <slot></slot>
-      <nav>
-        ${this.hideProps ? null : (0, _litElement6bb3323a.h)`
-              <button
-                ?active=${this.tab === "props"}
-                value="props"
-                @click=${this._handleTabChange}
-              >
-                Props
-              </button>
-            `}
-        ${this.hideSrc ? null : (0, _litElement6bb3323a.h)`
-              <button
-                ?active=${this.tab === "src"}
-                value="src"
-                @click=${this._handleTabChange}
-              >
-                Src
-              </button>
-            `}
-        ${this.hideEvents ? null : (0, _litElement6bb3323a.h)`
-              <button
-                ?active=${this.tab === "events"}
-                value="events"
-                @click=${this._handleTabChange}
-              >
-                Events
-              </button>
-            `}
-      </nav>
+      ${this.hideTab ? null : (0, _litElement6bb3323a.h)` <nav>
+            ${this.hideSrc ? null : (0, _litElement6bb3323a.h)`
+                  <button
+                    ?active=${this.tab === "src"}
+                    value="src"
+                    @click=${this._handleTabChange}
+                  >
+                    Src
+                  </button>
+                `}
+            ${this.hideProps ? null : (0, _litElement6bb3323a.h)`
+                  <button
+                    ?active=${this.tab === "props"}
+                    value="props"
+                    @click=${this._handleTabChange}
+                  >
+                    Props
+                  </button>
+                `}
+            ${this.hideEvents ? null : (0, _litElement6bb3323a.h)`
+                  <button
+                    ?active=${this.tab === "events"}
+                    value="events"
+                    @click=${this._handleTabChange}
+                  >
+                    Events
+                  </button>
+                `}
+          </nav>`}
 
       <div class="tabs">
         ${this._renderTabs()}
@@ -21660,7 +21664,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$1];
+      return [styles$1, sharedStyles];
     }
 
     render() {
@@ -22244,13 +22248,15 @@ var global = arguments[3];
       this.valid = false;
       this.invalid = false;
       this.disabled = false;
+      this.autocomplete = "";
       /**
        * Input type
-       * @type {"text"|"password"|"email"|"tel"|"number"}
+       * @type {"text"|"password"|"email"|"tel"|"number"|"url"}
        * @attr
        */
 
       this.type = "text";
+      this.type = "placeholder";
       this.mask = "";
       this.errormessage = "";
       this.max = undefined;
@@ -22289,6 +22295,12 @@ var global = arguments[3];
           type: String
         },
         pattern: {
+          type: String
+        },
+        placeholder: {
+          type: String
+        },
+        autocomplete: {
           type: String
         },
         readonly: {
@@ -22446,6 +22458,7 @@ var global = arguments[3];
       <div part="input">
         <slot part="prepend" name="prepend"></slot>
         <input
+          autocomplete=${ifDefined(this.autocomplete)}
           ?disabled=${this.disabled}
           @invalid=${this._handleInvalidEvent}
           ?readonly=${this.readonly}
@@ -22460,6 +22473,7 @@ var global = arguments[3];
           @focus=${this._handleFocusEvent}
           @blur=${this._handleBlurEvent}
           ?required=${this.required}
+          placeholder=${ifDefined(this.placeholder)}
           part="input-field"
           type=${this.type}
           .value=${this.value}
@@ -22477,7 +22491,152 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
-  var styles$6 = css`:host{display:block;width:100%;margin-bottom:var(--base-space-sm)}`;
+  var styles$6 = css`:host{--base-radio-height:var(--ab-size-md);cursor:pointer}:host,:host label{display:inline-block;height:var(--base-radio-height)}:host label{font-size:var(--hw-font-size-small);position:relative;line-height:1.5}:host [part=indicator]{display:inline-block;float:left;position:relative;margin-top:0;margin-right:.4rem;border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:var(--base-space-lg);height:var(--base-space-lg);-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host [part=label]{display:inline-block;max-width:calc(100% - 22px - .4rem)}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=input-field]:hover:not([disabled]):not(:checked)~[part=indicator]{background-color:var(--base-color-ui-lighter)}:host [part=input-field]:checked~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:checked~[part=indicator]:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;top:50%;left:50%;-webkit-transform:translateY(-50%) translateX(-50%);transform:translateY(-50%) translateX(-50%);background:var(--base-color-focus)}:host [part=input-field]:focus~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:disabled~[part=indicator]{border-color:var(--base-color-ui-lighter);background-color:transparent;cursor:not-allowed}`;
+
+  class BaseRadio extends LitElement {
+    constructor() {
+      super();
+      this.value = "";
+      this.name = "";
+      this.size = "";
+      this.full = false;
+      this.disabled = false;
+      this._checked = false;
+      this.focus = this.focus.bind(this);
+      this.selectNext = this.selectNext.bind(this);
+      this.selectPrevious = this.selectPrevious.bind(this);
+      this._handleChange = this._handleChange.bind(this);
+      this._handleKeyPress = this._handleKeyPress.bind(this);
+    }
+
+    static get properties() {
+      return {
+        checked: {
+          type: Boolean,
+          reflect: true
+        },
+        disabled: {
+          type: Boolean
+        },
+        full: {
+          type: Boolean
+        },
+        size: {
+          type: String
+        },
+        name: {
+          type: String,
+          reflect: true
+        },
+        value: {
+          type: String
+        }
+      };
+    }
+
+    static get styles() {
+      return [styles$6];
+    }
+
+    get options() {
+      return [...document.querySelectorAll(`base-radio[name="${this.name}"]`)];
+    }
+
+    get currentCheckedItem() {
+      return this.options.find(option => option.checked);
+    }
+
+    get formElement() {
+      return this.shadowRoot.querySelector("input");
+    }
+
+    get checked() {
+      return this._checked;
+    }
+
+    set checked(checked) {
+      if (checked === this._checked) {
+        return;
+      }
+
+      if (checked === true && this.currentCheckedItem) {
+        this.currentCheckedItem.checked = false;
+      }
+
+      if (this.formElement) {
+        this.formElement.checked = checked;
+      }
+
+      this._checked = checked;
+      this.requestUpdate();
+    }
+
+    selectNext() {
+      const options = this.options;
+      const checkedIndex = options.findIndex(option => option.checked);
+      const isLastOption = options.length === checkedIndex + 1;
+      const nextIndex = isLastOption ? 0 : checkedIndex + 1;
+      options[nextIndex].focus();
+      options[nextIndex].checked = true;
+    }
+
+    selectPrevious() {
+      const options = this.options;
+      const checkedIndex = options.findIndex(option => option.checked);
+      const isFirstOption = checkedIndex === 0;
+      const nextIndex = isFirstOption ? options.length - 1 : checkedIndex - 1;
+      options[nextIndex].focus();
+      options[nextIndex].checked = true;
+    }
+
+    focus() {
+      this.formElement.focus();
+    }
+
+    _handleChange(e) {
+      e.stopPropagation();
+      this.checked = e.target.checked;
+      this.dispatchEvent(new CustomEvent("change", e));
+    }
+
+    _handleKeyPress(e) {
+      // Left
+      if (e.keyCode === 37) {
+        this.selectPrevious();
+      } // Right
+
+
+      if (e.keyCode === 39) {
+        this.selectNext();
+      }
+    }
+
+    render() {
+      return html`
+    <label>
+      <span part="label"><slot><slot></span>
+      <input
+        part="input-field"
+        name=${this.name}
+        ?disabled=${this.disabled}
+        @keydown=${this._handleKeyPress}
+        @change=${this._handleChange}
+        ?checked=${this.checked}
+        value=${this.value}
+        type="radio"
+      />
+      <i part="indicator"></i>
+  </label>
+    `;
+    }
+
+  }
+
+  if (!customElements.get("base-radio")) {
+    customElements.define("base-radio", BaseRadio);
+  }
+
+  var styles$7 = css`:host{display:block;width:100%;margin-bottom:var(--base-space-sm)}`;
 
   class BaseLabel extends LitElement {
     constructor() {
@@ -22494,7 +22653,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$6, sharedStyles];
+      return [styles$7, sharedStyles];
     }
 
     connectedCallback() {
@@ -22511,7 +22670,7 @@ var global = arguments[3];
     customElements.define("base-label", BaseLabel);
   }
 
-  var styles$7 = css`:host{--base-grid-gutter:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(12,1fr);grid-row-gap:var(--base-grid-gutter);grid-column-gap:var(--base-grid-gutter);margin:0}:host([gutter=none]){--base-grid-gutter:0}:host([gutter=sm]){--base-grid-gutter:var(--base-space-sm)}:host([gutter=md]){--base-grid-gutter:var(--base-space-md)}:host([gutter=lg]){--base-grid-gutter:var(--base-space-lg)}`;
+  var styles$8 = css`:host{--base-grid-gutter:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(12,1fr);grid-row-gap:var(--base-grid-gutter);grid-column-gap:var(--base-grid-gutter);margin:0}:host([gutter=none]){--base-grid-gutter:0}:host([gutter=sm]){--base-grid-gutter:var(--base-space-sm)}:host([gutter=md]){--base-grid-gutter:var(--base-space-md)}:host([gutter=lg]){--base-grid-gutter:var(--base-space-lg)}`;
 
   class BaseGrid extends LitElement {
     constructor() {
@@ -22534,7 +22693,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$7, sharedStyles];
+      return [styles$8, sharedStyles];
     }
 
     render() {
@@ -22547,7 +22706,7 @@ var global = arguments[3];
     customElements.define("base-grid", BaseGrid);
   }
 
-  var styles$8 = css`:host{display:block;width:100%;max-width:100%;grid-column-end:span var(--ab-grid-ce,1);grid-row-end:span var(--ab-grid-re,1);-webkit-appearance:none;-moz-appearance:none;appearance:none;margin-bottom:0;box-sizing:border-box;padding:0}:host:first-of-type{margin-top:unset}:host([sm="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([sm="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([sm="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([sm="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([sm="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([sm="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([sm="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([sm="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([sm="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([sm="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([sm="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([sm="12"]){display:block;max-width:100%;--ab-grid-ce:12}@media(min-width:600px){:host([md="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([md="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([md="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([md="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([md="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([md="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([md="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([md="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([md="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([md="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([md="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([md="12"]){display:block;max-width:100%;--ab-grid-ce:12}}@media(min-width:1280px){:host([lg="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([lg="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([lg="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([lg="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([lg="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([lg="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([lg="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([lg="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([lg="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([lg="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([lg="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([lg="12"]){display:block;max-width:100%;--ab-grid-ce:12}}@media(min-width:1400px){:host([xl="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([xl="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([xl="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([xl="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([xl="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([xl="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([xl="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([xl="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([xl="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([xl="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([xl="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([xl="12"]){display:block;max-width:100%;--ab-grid-ce:12}}`;
+  var styles$9 = css`:host{display:block;width:100%;max-width:100%;grid-column-end:span var(--ab-grid-ce,1);grid-row-end:span var(--ab-grid-re,1);-webkit-appearance:none;-moz-appearance:none;appearance:none;margin-bottom:0;box-sizing:border-box;padding:0}:host:first-of-type{margin-top:unset}:host([sm="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([sm="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([sm="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([sm="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([sm="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([sm="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([sm="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([sm="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([sm="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([sm="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([sm="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([sm="12"]){display:block;max-width:100%;--ab-grid-ce:12}@media(min-width:600px){:host([md="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([md="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([md="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([md="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([md="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([md="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([md="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([md="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([md="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([md="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([md="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([md="12"]){display:block;max-width:100%;--ab-grid-ce:12}}@media(min-width:1280px){:host([lg="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([lg="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([lg="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([lg="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([lg="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([lg="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([lg="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([lg="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([lg="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([lg="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([lg="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([lg="12"]){display:block;max-width:100%;--ab-grid-ce:12}}@media(min-width:1400px){:host([xl="1"]){display:block;max-width:100%;--ab-grid-ce:1}:host([xl="2"]){display:block;max-width:100%;--ab-grid-ce:2}:host([xl="3"]){display:block;max-width:100%;--ab-grid-ce:3}:host([xl="4"]){display:block;max-width:100%;--ab-grid-ce:4}:host([xl="5"]){display:block;max-width:100%;--ab-grid-ce:5}:host([xl="6"]){display:block;max-width:100%;--ab-grid-ce:6}:host([xl="7"]){display:block;max-width:100%;--ab-grid-ce:7}:host([xl="8"]){display:block;max-width:100%;--ab-grid-ce:8}:host([xl="9"]){display:block;max-width:100%;--ab-grid-ce:9}:host([xl="10"]){display:block;max-width:100%;--ab-grid-ce:10}:host([xl="11"]){display:block;max-width:100%;--ab-grid-ce:11}:host([xl="12"]){display:block;max-width:100%;--ab-grid-ce:12}}`;
 
   class BaseGridItem extends LitElement {
     constructor() {
@@ -22576,7 +22735,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$8, sharedStyles];
+      return [styles$9, sharedStyles];
     }
 
     render() {
@@ -22598,6 +22757,7 @@ var global = arguments[3];
   exports.BaseModal = BaseModal;
   exports.BaseOptGroup = BaseOptGroup;
   exports.BaseOption = BaseOption;
+  exports.BaseRadio = BaseRadio;
   exports.BaseSelect = BaseSelect;
   Object.defineProperty(exports, '__esModule', {
     value: true
@@ -32795,33 +32955,37 @@ module.exports = marked;
 },{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./InlineLexer.js":"node_modules/marked/src/InlineLexer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
+    "path": "../lib/src/components/base-grid/base-grid.md",
+    "name": "Grid",
+    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n  <base-grid>\n        <base-grid-item sm=\"12\" md=\"6\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"4\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"2\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"hide\" md=\"8\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n      </base-grid>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
     "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "Input",
-    "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
     "content": "\n# Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-grid/base-grid.md",
-    "name": "Grid",
-    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n  <base-grid>\n        <base-grid-item sm=\"12\" md=\"6\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"4\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"2\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"hide\" md=\"8\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n      </base-grid>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "Input",
+    "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n<base-radio name=\"hei\">Radio two</base-radio>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
     "content": "\n# Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "Modal",
-    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\nHey\n<div slot=\"error\">Error</div>\n<div slot=\"success\">Success</div>\n</base-modal>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
     "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "name": "Modal",
+    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
@@ -33350,7 +33514,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54959" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52202" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
