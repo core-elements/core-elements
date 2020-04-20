@@ -17852,7 +17852,7 @@ highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
 var highlightStyles = (0, _litElement6bb3323a.c)`pre{white-space:normal}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:16px;border-radius:10px;margin-bottom:30px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}.props{margin-top:15px;border-radius:var(--base-border-radius-md);display:block;padding:var(--base-space-md);background:var(--base-color-ui-lighter)}`;
+var styles = (0, _litElement6bb3323a.c)`.prop{margin-top:10px}nav{margin-top:20px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{outline:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;padding-right:10px;border:0;cursor:pointer;background:transparent;border-radius:4px;color:var(--base-color-ui)}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000}.props{margin-top:15px;display:block}table{text-align:left;display:inline-block;max-width:100%;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);border:2px solid #eee}table thead tr{background:#f3eeff;border-bottom:3px solid #eee}table th{font-weight:600}table td,table th{padding:10px 23px}table tr{background-color:#fff;border-bottom:1px solid #eee}table tr:nth-child(2n){background-color:hsla(0,0%,98%,.98)}`;
 
 class BaseKnobs extends _litElement6bb3323a.L {
   constructor() {
@@ -17927,7 +17927,9 @@ class BaseKnobs extends _litElement6bb3323a.L {
   }
 
   get componentEl() {
-    return this.children[0];
+    return [...this.children].find(el => {
+      return el.tagName.toLowerCase() === this.name;
+    });
   }
 
   async _fetchJson() {
@@ -17993,9 +17995,14 @@ class BaseKnobs extends _litElement6bb3323a.L {
     if (attr.type.includes("|")) {
       const options = attr.type.replace(/"/g, "").split("|");
       return (0, _litElement6bb3323a.h)`
-        <div class="prop">
-          <base-label>${attr.name}</base-label>
-            <base-select .value=${this.componentEl.getAttribute(attr.name)} @change=${e => this._handleAttrChange(e, attr)}>
+        <tr>
+          <td>${attr.name}</td>
+          <td>string</td>
+          <td>
+            <base-select
+              .value=${this.componentEl.getAttribute(attr.name)}
+              @change=${e => this._handleAttrChange(e, attr)}
+            >
               ${options.map(opt => {
         return (0, _litElement6bb3323a.h)`
                   <base-option
@@ -18005,39 +18012,45 @@ class BaseKnobs extends _litElement6bb3323a.L {
                   >
                 `;
       })}
-            </select>
-
-        </div>
+            </base-select>
+          </td>
+        </tr>
       `;
     }
 
     if (attr.type === "string") {
       return (0, _litElement6bb3323a.h)`
-        <div class="prop">
-          <base-label>${attr.name}</base-label>
-          <base-input
-            name=${attr.name}
-            .value=${this.componentEl[attr.name]}
-            @input=${e => this._handleAttrChange(e, attr)}
-            type="text"
-          >
-          </base-input>
-        </div>
+        <tr>
+          <td>${attr.name}</td>
+          <td>${attr.type}</td>
+          <td>
+            <base-input
+              name=${attr.name}
+              .value=${this.componentEl[attr.name]}
+              @input=${e => this._handleAttrChange(e, attr)}
+              type="text"
+            >
+            </base-input>
+          </td>
+        </tr>
       `;
     }
 
     if (attr.type === "boolean") {
       return (0, _litElement6bb3323a.h)`
-        <div class="prop">
-          <base-checkbox
+        <tr>
+          <td>${attr.name}</td>
+          <td>${attr.type}</td>
+          <td>
+            <base-checkbox
               name=${attr.name}
               ?checked=${this.componentEl.hasAttribute(attr.name)}
               .value=${this.componentEl[attr.name]}
               @change=${e => this._handleAttrChange(e, attr)}
-            />
-${attr.name}
-          </base-checkbox>
-        </div>
+            >
+            </base-checkbox>
+          </td>
+        </tr>
       `;
     }
 
@@ -18046,11 +18059,16 @@ ${attr.name}
 
   _renderPropTab() {
     return (0, _litElement6bb3323a.h)`
-      <div class="props">
+      <table class="props">
+        <tr>
+          <th>Attribute</th>
+          <th>Type</th>
+          <th>Value</th>
+        </tr>
         ${this.attributes.map(attr => {
       return this._propComponent(attr);
     })}
-      </div>
+      </table>
     `;
   }
 
@@ -22223,7 +22241,7 @@ var global = arguments[3];
       this.invalid = false;
       this.disabled = false;
       /**
-       * Button state
+       * Input type
        * @type {"text"|"password"|"email"|"tel"|"number"}
        * @attr
        */
@@ -22273,9 +22291,6 @@ var global = arguments[3];
           type: Boolean
         },
         disabled: {
-          type: Boolean
-        },
-        full: {
           type: Boolean
         },
         full: {
@@ -32778,11 +32793,11 @@ module.exports = {
   "components": [{
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "base-checkbox",
-    "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-input/base-input.md",
     "name": "base-input",
-    "content": "\n## Base Input\n\n<base-knobs hideEvents hideProps tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n\n## Base Input\n\n<base-knobs hideEvents  tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input type=\"email\"  autovalidate></base-input>\n</base-knobs>\n\n<base-knobs hideEvents hideProps tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input type=\"email\"  autovalidate></base-input>\n</base-knobs>\n"
+    "content": "\n## Base Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "base-button",

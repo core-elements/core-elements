@@ -31,8 +31,40 @@ button[active] {
 
 .props {
   margin-top: 15px;
-  border-radius: var(--base-border-radius-md);
   display: block;
-  padding: var(--base-space-md);
-  background: var(--base-color-ui-lighter);
+}
+
+table {
+  text-align: left;
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+  border: 2px solid #eee;
+}
+
+table thead tr {
+  background: #f3eeff;
+  border-bottom: 3px solid #eee;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table td,
+table th {
+  padding: 10px 23px;
+}
+
+table tr {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+table tr:nth-child(2n) {
+  background-color: #fafafafa;
 }

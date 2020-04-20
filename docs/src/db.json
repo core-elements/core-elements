@@ -3,12 +3,12 @@
     {
       "path": "../lib/src/components/base-checkbox/base-checkbox.md",
       "name": "base-checkbox",
-      "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+      "content": "\n## Base Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-input/base-input.md",
       "name": "base-input",
-      "content": "\n## Base Input\n\n<base-knobs hideEvents hideProps tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n\n## Base Input\n\n<base-knobs hideEvents  tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input type=\"email\"  autovalidate></base-input>\n</base-knobs>\n\n<base-knobs hideEvents hideProps tab=\"src\" src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input type=\"email\"  autovalidate></base-input>\n</base-knobs>\n"
+      "content": "\n## Base Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-label>Name:</base-label>\n<base-input></base-input>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-button/base-button.md",
