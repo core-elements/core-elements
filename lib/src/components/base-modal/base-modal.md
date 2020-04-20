@@ -1,5 +1,6 @@
 ---
 name: Modal
+category: Elements
 ---
 
 # Modal

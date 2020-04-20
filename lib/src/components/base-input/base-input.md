@@ -1,5 +1,6 @@
 ---
 name: Input
+category: Form
 ---
 
 # Input

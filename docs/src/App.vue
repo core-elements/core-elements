@@ -2,11 +2,9 @@
   <div class="page">
     <div class="sidebar">
       <nav toc>
-        <div v-for="(menuGroup, name) in db" :key="name">
+        <div v-for="(menuGroup, name) in groupedComponents" :key="name">
           <label>{{ name }}</label>
-          <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">
-            {{ page.name }}
-          </a>
+          <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">{{ page.name }}</a>
         </div>
       </nav>
     </div>
@@ -18,20 +16,41 @@
 
 <script>
 import marked from "marked";
-import db from "./db.json";
+import { components } from "./db.json";
 
 export default {
   data() {
     return {
       active: "",
-      db,
+      components
     };
+  },
+  computed: {
+    groupedComponents() {
+      return this.components.reduce(
+        (acc, comp) => {
+          const catName = comp.category || "Uncategorized";
+
+          const prevComps = acc[`${catName}`] ? acc[`${catName}`] : [];
+
+          return {
+            ...acc,
+            [`${catName}`]: [...prevComps, { ...comp }]
+          };
+        },
+        {
+          Layout: [],
+          Elements: [],
+          Form: []
+        }
+      );
+    }
   },
   methods: {
     html(content) {
       return marked(content);
-    },
-  },
+    }
+  }
 };
 </script>
 

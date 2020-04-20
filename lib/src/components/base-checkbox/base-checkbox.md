@@ -1,5 +1,6 @@
 ---
 name: Checkbox
+category: Form
 ---
 
 # Checkbox

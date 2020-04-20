@@ -2,6 +2,66 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "base-box",
+      "path": "./../../lib/src/components/base-box/base-box.js",
+      "attributes": [
+        {
+          "name": "radius",
+          "description": "Button state",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "depth",
+          "description": "Button state",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "padding",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "radius",
+          "attribute": "radius",
+          "description": "Button state",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "depth",
+          "attribute": "depth",
+          "description": "Button state",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "padding",
+          "attribute": "padding",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
       "name": "base-button",
       "path": "./../../lib/src/components/base-button/base-button.js",
       "attributes": [

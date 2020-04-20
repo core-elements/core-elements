@@ -1,5 +1,6 @@
 ---
 name: Label
+category: Form
 ---
 
 # Label

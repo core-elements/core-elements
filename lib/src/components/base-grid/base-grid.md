@@ -1,5 +1,6 @@
 ---
 name: Grid
+category: Layout
 ---
 
 # Grid

@@ -17973,11 +17973,11 @@ class BaseKnobs extends _litElement6bb3323a.L {
       this.componentEl.setAttribute(attr.name, e.target.value);
     }
 
-    if (attr.type === "string") {
+    if (attr.type === "string" || attr.type === "String") {
       this.componentEl.setAttribute(attr.name, e.target.value);
     }
 
-    if (attr.type === "boolean") {
+    if (attr.type === "boolean" || attr.type === "Boolean") {
       if (e.target.checked) {
         this.componentEl.setAttribute(attr.name, "");
       } else {
@@ -18022,7 +18022,7 @@ class BaseKnobs extends _litElement6bb3323a.L {
       `;
     }
 
-    if (attr.type === "string") {
+    if (attr.type === "string" || attr.type === "String") {
       return (0, _litElement6bb3323a.h)`
         <tr>
           <td>${attr.name}</td>
@@ -18040,7 +18040,7 @@ class BaseKnobs extends _litElement6bb3323a.L {
       `;
     }
 
-    if (attr.type === "boolean") {
+    if (attr.type === "boolean" || attr.type === "Boolean") {
       return (0, _litElement6bb3323a.h)`
         <tr>
           <td>${attr.name}</td>
@@ -22748,6 +22748,92 @@ var global = arguments[3];
     customElements.define("base-grid-item", BaseGridItem);
   }
 
+  var styles$a = css`:host{display:inline-block}:host([full]){display:block;width:100%}:host([depth=none]){box-shadow:0 0}:host([depth=sm]){box-shadow:var(--base-depth-sm)}:host([depth=md]){box-shadow:var(--base-depth-md)}:host([depth=lg]){box-shadow:var(--base-depth-lg)}:host([padding=none]){padding:0}:host([padding=sm]){padding:var(--base-space-sm)}:host([padding=md]){padding:var(--base-space-md)}:host([padding=lg]){padding:var(--base-space-lg)}:host([margin=none]){margin:0}:host([margin=sm]){margin:var(--base-space-sm)}:host([margin=md]){margin:var(--base-space-md)}:host([margin=lg]){margin:var(--base-space-lg)}:host([radius=none]){border-radius:0}:host([radius=sm]){border-radius:var(--base-border-radius-sm)}:host([radius=md]){border-radius:var(--base-border-radius-md)}:host([radius=lg]){border-radius:var(--base-border-radius-lg)}`;
+
+  class BaseBox extends LitElement {
+    constructor() {
+      super();
+      /**
+       * Box border radius
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
+      this.radius = "sm";
+      /**
+       * Box depth
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
+      this.depth = "sm";
+      /**
+       * Full box
+       * @type {Boolean}
+       * @attr
+       */
+
+      this.full = false;
+      /**
+       * Box padding
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
+      this.padding = "sm";
+      /**
+       * Box margin
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
+      this.margin = "";
+    }
+
+    static get properties() {
+      return {
+        depth: {
+          type: String,
+          reflect: true
+        },
+        radius: {
+          type: String,
+          reflect: true
+        },
+        padding: {
+          type: String,
+          reflect: true
+        },
+        margin: {
+          type: String,
+          reflect: true
+        },
+        full: {
+          type: Boolean,
+          reflect: true
+        }
+      };
+    }
+
+    static get styles() {
+      return [styles$a, sharedStyles];
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+    }
+
+    render() {
+      return html`<slot></slot>`;
+    }
+
+  }
+
+  if (!customElements.get("base-box")) {
+    customElements.define("base-box", BaseBox);
+  }
+
+  exports.BaseBox = BaseBox;
   exports.BaseButton = BaseButton;
   exports.BaseCheckbox = BaseCheckbox;
   exports.BaseGrid = BaseGrid;
@@ -32955,37 +33041,50 @@ module.exports = marked;
 },{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./InlineLexer.js":"node_modules/marked/src/InlineLexer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
+    "path": "../lib/src/components/base-box/base-box.md",
+    "name": "Box",
+    "category": "Elements",
+    "content": "\n# Button\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box>Box</base-box>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
+    "category": "Layout",
     "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n  <base-grid>\n        <base-grid-item sm=\"12\" md=\"6\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"4\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"12\" md=\"2\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n        <base-grid-item sm=\"hide\" md=\"8\">\n          Lorem Ipsum is simply dummy text of the printing and typesetting\n          industry. Lorem Ipsum has been the industry's standard dummy text ever\n          since the 1500s, when an unknown printer took a galley of type and\n          scrambled it to make a type specimen book.\n        </base-grid-item>\n      </base-grid>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
+    "category": "Form",
     "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
+    "category": "Elements",
     "content": "\n# Button\n\n<base-knobs src=\"./components.json\" name=\"base-button\">\n<base-button>Halla</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-input/base-input.md",
     "name": "Input",
+    "category": "Form",
     "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n<base-radio name=\"hei\">Radio two</base-radio>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
+    "category": "Form",
     "content": "\n# Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-select/base-select.md",
-    "name": "Select",
-    "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
+    "category": "Elements",
     "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "category": "Form",
+    "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n<base-radio name=\"hei\">Radio two</base-radio>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-select/base-select.md",
+    "name": "Select",
+    "category": "Form",
+    "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
   }]
 };
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
@@ -33340,12 +33439,10 @@ exports.default = void 0;
 
 var _marked = _interopRequireDefault(require("marked"));
 
-var _db = _interopRequireDefault(require("./db.json"));
+var _db = require("./db.json");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
 //
 //
 //
@@ -33366,10 +33463,27 @@ var _default = {
   data() {
     return {
       active: "",
-      db: _db.default
+      components: _db.components
     };
   },
 
+  computed: {
+    groupedComponents() {
+      return this.components.reduce((acc, comp) => {
+        const catName = comp.category || "Uncategorized";
+        const prevComps = acc[`${catName}`] ? acc[`${catName}`] : [];
+        return { ...acc,
+          [`${catName}`]: [...prevComps, { ...comp
+          }]
+        };
+      }, {
+        Layout: [],
+        Elements: [],
+        Form: []
+      });
+    }
+
+  },
   methods: {
     html(content) {
       return (0, _marked.default)(content);
@@ -33378,14 +33492,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $4191e6 = exports.default || module.exports;
+        var $35d33c = exports.default || module.exports;
       
-      if (typeof $4191e6 === 'function') {
-        $4191e6 = $4191e6.options;
+      if (typeof $35d33c === 'function') {
+        $35d33c = $35d33c.options;
       }
     
         /* template */
-        Object.assign($4191e6, (function () {
+        Object.assign($35d33c, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -33395,7 +33509,7 @@ exports.default = _default;
       _c(
         "nav",
         { attrs: { toc: "" } },
-        _vm._l(_vm.db, function(menuGroup, name) {
+        _vm._l(_vm.groupedComponents, function(menuGroup, name) {
           return _c(
             "div",
             { key: name },
@@ -33413,7 +33527,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [_vm._v("\n          " + _vm._s(page.name) + "\n        ")]
+                  [_vm._v(_vm._s(page.name))]
                 )
               })
             ],
@@ -33453,9 +33567,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$4191e6', $4191e6);
+            api.createRecord('$35d33c', $35d33c);
           } else {
-            api.reload('$4191e6', $4191e6);
+            api.reload('$35d33c', $35d33c);
           }
         }
 
@@ -33514,7 +33628,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52202" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52008" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

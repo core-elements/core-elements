@@ -1,5 +1,6 @@
 ---
 name: Button
+category: Elements
 ---
 
 # Button
