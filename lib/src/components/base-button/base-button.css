@@ -81,7 +81,6 @@
 
 :host([type="secondary"]) button {
   --base-button-bg-color: var(--base-color-secondary-light);
-  --base-button-text-color: var(--base-color-white);
 }
 
 :host([type="secondary"]) button:hover {

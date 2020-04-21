@@ -2,8 +2,8 @@
   --base-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  --base-lightness-lightest: 95%;
-  --base-lightness-lighter: 80%;
+  --base-lightness-lightest: 90%;
+  --base-lightness-lighter: 82%;
   --base-lightness-light: 65%;
   --base-lightness-default: 50%;
   --base-lightness-dark: 35%;
@@ -35,11 +35,11 @@
     var(--base-lightness-darker)
   );
 
-  --base-color-secondary-hue: 258;
+  --base-color-secondary-hue: 259;
   --base-color-secondary: hsl(
     var(--base-color-secondary-hue),
     var(--base-saturation-high),
-    var(--base-lightness-light)
+    var(--base-lightness-lighter)
   );
   --base-color-secondary-light: hsl(
     var(--base-color-secondary-hue),
@@ -49,7 +49,7 @@
   --base-color-secondary-dark: hsl(
     var(--base-color-secondary-hue),
     var(--base-saturation-high),
-    var(--base-lightness)
+    var(--base-lightness-default)
   );
 
   --base-color-success-hue: 142;

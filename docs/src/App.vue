@@ -10,7 +10,7 @@
         </div>
       </nav>
     </div>
-    <main v-if="active">
+    <main class="main" v-if="active">
       <div v-html="html(active.content)"></div>
     </main>
   </div>
@@ -59,12 +59,20 @@ export default {
 <style>
 .page {
   padding-top: 100px;
-  display: grid;
-  grid-template-columns: 25% 80%;
-  grid-gap: 1rem;
-  max-width: 1000px;
+  display: flex;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+}
+
+.sidebar {
+  width: 22%;
+  position: sticky;
+  top: 0;
+}
+
+.main {
+  width: 78%;
 }
 
 nav[toc] {
@@ -90,7 +98,11 @@ nav[toc] a[active="true"] {
   font-weight: 600;
 }
 
+main h1 {
+  margin-bottom: 50px;
+}
+
 main h2 {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 </style>

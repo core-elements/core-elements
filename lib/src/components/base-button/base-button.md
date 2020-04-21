@@ -5,6 +5,8 @@ category: Elements
 
 # Button
 
+A general button element
+
 <base-knobs src="./components.json" tab="props" name="base-button">
 <base-button>Button</base-button>
 </base-knobs>
