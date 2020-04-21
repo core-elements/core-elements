@@ -27766,6 +27766,12 @@ var global = arguments[3];
       super();
       this.value = "";
       this.name = "";
+      /**
+       * Sizes
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
       this.size = "";
       this.full = false;
       this.disabled = false;
