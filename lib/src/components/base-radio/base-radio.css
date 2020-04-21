@@ -13,6 +13,18 @@
   width: 100%;
 }
 
+:host([size="sm"]) {
+  --base-radio-height: var(--base-size-sm);
+}
+
+:host([size="md"]) {
+  --base-radio-height: var(--base-size-md);
+}
+
+:host([size="lg"]) {
+  --base-radio-height: var(--base-size-lg);
+}
+
 :host label {
   height: var(--base-radio-height);
   display: inline-flex;
@@ -35,8 +47,8 @@
   border: 2px solid var(--base-color-ui-light);
   border-radius: 50%;
   background: var(--hw-color-white);
-  width: calc(var(--base-radio-height) - var(--base-space-sm));
-  height: calc(var(--base-radio-height) - var(--base-space-sm));
+  width: calc(var(--base-radio-height) - var(--base-space-md));
+  height: calc(var(--base-radio-height) - var(--base-space-md));
   transition: border-color 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
 }
 

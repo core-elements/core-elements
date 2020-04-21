@@ -3,7 +3,7 @@
   --base-checkbox-border: 1px solid var(--base-color-ui-light);
   --base-checkbox-cursor: pointer;
   --base-checkbox-box-shadow: none;
-  --base-checkbox-height: var(--base-size);
+  --base-checkbox-height: var(--base-size-md);
 }
 
 :host {
@@ -15,6 +15,18 @@
 :host([full]) {
   display: flex;
   width: 100%;
+}
+
+:host([size="sm"]) {
+  --base-checkbox-height: var(--base-size-sm);
+}
+
+:host([size="md"]) {
+  --base-checkbox-height: var(--base-size-md);
+}
+
+:host([size="lg"]) {
+  --base-checkbox-height: var(--base-size-lg);
 }
 
 :host([disabled]) {
@@ -33,8 +45,8 @@
   appearance: none;
   background-color: var(--base-checkbox-bg-color);
   color: var(--base-color-font);
-  width: var(--base-space-lg);
-  height: var(--base-space-lg);
+  width: calc(var(--base-checkbox-height) - var(--base-space-md));
+  height: calc(var(--base-checkbox-height) - var(--base-space-md));
   border-radius: var(--base-border-radius-sm);
   border: var(--base-checkbox-border);
   position: relative;

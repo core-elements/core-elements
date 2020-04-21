@@ -105,11 +105,11 @@
   --base-color-ui-darker: #565656;
   --base-color-ui-darkest: #333;
 
-  --base-space-xs: 0.4rem;
-  --base-space-sm: 0.8rem;
-  --base-space-md: 1rem;
-  --base-space-lg: 1.4rem;
-  --base-space-xl: 2rem;
+  --base-space-xs: 4px;
+  --base-space-sm: 8px;
+  --base-space-md: 16px;
+  --base-space-lg: 32px;
+  --base-space-xl: 64px;
 
   --base-font-size-xs: 14px;
   --base-font-size-sm: 16px;
@@ -124,10 +124,10 @@
   --base-border-radius-lg: 16px;
   --base-border-radius-xl: 32px;
 
-  --base-size: 36px;
-  --base-size-md: 36px;
-  --base-size-sm: 28px;
-  --base-size-lg: 48px;
+  --base-size: 48px;
+  --base-size-md: 48px;
+  --base-size-sm: 36px;
+  --base-size-lg: 64px;
 
   /* DEPTH */
   --base-depth-none: none;
