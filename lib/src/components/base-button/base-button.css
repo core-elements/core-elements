@@ -13,11 +13,13 @@
   --base-button-height: var(--base-size-md);
 }
 
-:host {
+:host,
+:host button {
   display: inline-block;
 }
 
-:host([full]) {
+:host([full]),
+:host button {
   display: block;
   width: 100%;
 }

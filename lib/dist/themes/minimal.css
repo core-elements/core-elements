@@ -118,9 +118,11 @@
   --base-font-size-xl: 30px;
   --base-font-size-xxl: 40px;
 
-  --base-border-radius-sm: 2px;
-  --base-border-radius-md: 4px;
-  --base-border-radius-lg: 8px;
+  --base-border-radius-xs: 2px;
+  --base-border-radius-sm: 4px;
+  --base-border-radius-md: 8px;
+  --base-border-radius-lg: 16px;
+  --base-border-radius-xl: 32px;
 
   --base-size: 36px;
   --base-size-md: 36px;
@@ -143,77 +145,4 @@
 
 [theme="minimal"] {
   font-family: var(--base-font-family);
-}
-
-[theme="minimal"] base-select {
-  transition: box-shadow 0.2s ease;
-}
-
-[theme="minimal"] base-select {
-  --base-select-option-list-position: absolute;
-  --base-select-option-list-top: 120%;
-  --base-select-option-list-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-}
-
-[theme="minimal"] base-select[multiple] base-option[selected] {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  [theme="minimal"] base-select {
-    --base-select-option-list-box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.1);
-    --base-select-option-list-position: fixed;
-    --base-select-option-list-top: calc(100% - 280px);
-    --base-select-option-list-opacity: 1;
-    --base-select-option-list-transition: all 0.2s ease-in-out;
-  }
-
-  [theme="minimal"] base-select[menu-is-open] {
-    --base-select-option-list-top: calc(100% - 300px);
-    --base-select-option-list-opacity: 1;
-  }
-}
-
-[theme="minimal"] base-select::part(tag) {
-  border-radius: 5px;
-}
-
-[theme="minimal"] base-select base-option {
-  position: relative;
-  padding-left: 30px;
-}
-
-[theme="minimal"] base-select base-option[selected]::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 8px;
-  width: 2px;
-  background-color: currentColor;
-  content: "";
-  transform: translateX(10px) translateY(-50%) rotate(-45deg);
-  transform-origin: left bottom;
-}
-
-[theme="minimal"] base-select base-option[selected]::after {
-  position: absolute;
-  left: 0;
-  top: calc(50% + 3px);
-  height: 2px;
-  width: 16px;
-  background-color: currentColor;
-  content: "";
-  transform: translateX(10px) translateY(-50%) rotate(-45deg);
-  transform-origin: left bottom;
-}
-
-@keyframes fade-in {
-  from {
-    background: red;
-    top: 100%;
-  }
-  to {
-    background: yellow;
-    top: 120%;
-  }
 }

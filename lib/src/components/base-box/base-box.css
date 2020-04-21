@@ -2,74 +2,61 @@
 }
 
 :host {
+  display: block;
+}
+
+:host([inline]) {
   display: inline-block;
 }
 
-:host([full]) {
-  display: block;
-  width: 100%;
+@each $i in none, xs, sm, md, lg, xl {
+  :host([depth="$(i)"]) {
+    box-shadow: var(--base-depth-$(i));
+  }
 }
 
-:host([depth="none"]) {
-  box-shadow: 0;
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding="$(i)"]) {
+    padding: var(--base-space-$(i));
+  }
 }
 
-:host([depth="sm"]) {
-  box-shadow: var(--base-depth-sm);
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-x="$(i)"]) {
+    padding-left: var(--base-space-$(i));
+    padding-right: var(--base-space-$(i));
+  }
 }
 
-:host([depth="md"]) {
-  box-shadow: var(--base-depth-md);
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-y="$(i)"]) {
+    padding-top: var(--base-space-$(i));
+    padding-bottom: var(--base-space-$(i));
+  }
 }
 
-:host([depth="lg"]) {
-  box-shadow: var(--base-depth-lg);
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin="$(i)"]) {
+    margin: var(--base-space-$(i));
+  }
 }
 
-:host([padding="none"]) {
-  padding: 0;
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-x="$(i)"]) {
+    margin-left: var(--base-space-$(i));
+    margin-right: var(--base-space-$(i));
+  }
 }
 
-:host([padding="sm"]) {
-  padding: var(--base-space-sm);
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-y="$(i)"]) {
+    margin-top: var(--base-space-$(i));
+    margin-bottom: var(--base-space-$(i));
+  }
 }
 
-:host([padding="md"]) {
-  padding: var(--base-space-md);
-}
-
-:host([padding="lg"]) {
-  padding: var(--base-space-lg);
-}
-
-:host([margin="none"]) {
-  margin: 0;
-}
-
-:host([margin="sm"]) {
-  margin: var(--base-space-sm);
-}
-
-:host([margin="md"]) {
-  margin: var(--base-space-md);
-}
-
-:host([margin="lg"]) {
-  margin: var(--base-space-lg);
-}
-
-:host([radius="none"]) {
-  border-radius: 0;
-}
-
-:host([radius="sm"]) {
-  border-radius: var(--base-border-radius-sm);
-}
-
-:host([radius="md"]) {
-  border-radius: var(--base-border-radius-md);
-}
-
-:host([radius="lg"]) {
-  border-radius: var(--base-border-radius-lg);
+@each $i in none, xs, sm, md, lg, xl {
+  :host([radius="$(i)"]) {
+    border-radius: var(--base-border-radius-$(i));
+  }
 }

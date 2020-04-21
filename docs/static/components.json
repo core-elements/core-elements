@@ -7,26 +7,56 @@
       "attributes": [
         {
           "name": "radius",
-          "description": "Button state",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "description": "Box border radius",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "depth",
-          "description": "Button state",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "description": "Box depth",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "full",
-          "description": "Full button",
+          "name": "inline",
+          "description": "Full box",
           "type": "Boolean",
           "default": "false"
         },
         {
           "name": "padding",
-          "description": "Button size",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "description": "Box padding",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-x",
+          "description": "Box padding horistonal",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin",
+          "description": "Box margin",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-x",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         }
       ],
@@ -34,29 +64,64 @@
         {
           "name": "radius",
           "attribute": "radius",
-          "description": "Button state",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "description": "Box border radius",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "depth",
           "attribute": "depth",
-          "description": "Button state",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "description": "Box depth",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "full",
-          "attribute": "full",
-          "description": "Full button",
+          "name": "inline",
+          "attribute": "inline",
+          "description": "Full box",
           "type": "Boolean",
           "default": "false"
         },
         {
           "name": "padding",
           "attribute": "padding",
-          "description": "Button size",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "description": "Box padding",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingX",
+          "attribute": "padding-x",
+          "description": "Box padding horistonal",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingY",
+          "attribute": "padding-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin",
+          "attribute": "margin",
+          "description": "Box margin",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginX",
+          "attribute": "margin-x",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginY",
+          "attribute": "margin-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         }
       ]
@@ -533,7 +598,7 @@
           "default": "\"src\""
         },
         {
-          "name": "hideTab",
+          "name": "hideTabs",
           "type": "boolean",
           "default": "false"
         },
@@ -569,8 +634,7 @@
           "type": "Element | undefined"
         },
         {
-          "name": "srcHTML",
-          "type": "string"
+          "name": "srcHTML"
         },
         {
           "name": "src",
@@ -591,8 +655,8 @@
           "default": "\"src\""
         },
         {
-          "name": "hideTab",
-          "attribute": "hideTab",
+          "name": "hideTabs",
+          "attribute": "hideTabs",
           "type": "boolean",
           "default": "false"
         },

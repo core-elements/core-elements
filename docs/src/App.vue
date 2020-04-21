@@ -4,7 +4,9 @@
       <nav toc>
         <div v-for="(menuGroup, name) in groupedComponents" :key="name">
           <label>{{ name }}</label>
-          <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">{{ page.name }}</a>
+          <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">{{
+            page.name
+          }}</a>
         </div>
       </nav>
     </div>
@@ -22,7 +24,7 @@ export default {
   data() {
     return {
       active: "",
-      components
+      components,
     };
   },
   computed: {
@@ -35,22 +37,22 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }]
+            [`${catName}`]: [...prevComps, { ...comp }],
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: []
+          Form: [],
         }
       );
-    }
+    },
   },
   methods: {
     html(content) {
       return marked(content);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -86,5 +88,9 @@ nav[toc] a {
 
 nav[toc] a[active="true"] {
   font-weight: 600;
+}
+
+main h2 {
+  margin-top: 100px;
 }
 </style>

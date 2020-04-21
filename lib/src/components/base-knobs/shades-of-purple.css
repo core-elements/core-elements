@@ -7,7 +7,7 @@
  */
 
 pre {
-  white-space: normal;
+  white-space: pre;
 }
 
 .hljs {
