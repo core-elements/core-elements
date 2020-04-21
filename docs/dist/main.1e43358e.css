@@ -1,19 +1,63 @@
-.page {
-  padding-top: 100px;
+.header {
+  width: 100%;
+
+  background: white;
+}
+
+.header__inner {
+  height: 60px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav-item {
+  margin-left: 15px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
 }
 
 .sidebar {
-  width: 22%;
-  position: sticky;
-  top: 0;
+  width: 100%;
+  position: initial;
 }
 
 .main {
-  width: 78%;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .page {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .sidebar {
+    width: 22%;
+    height: max-content;
+    position: sticky;
+    top: 0;
+  }
+
+  .main {
+    width: 78%;
+  }
 }
 
 nav[toc] {
@@ -33,6 +77,13 @@ nav[toc] a {
   color: currentColor;
   text-decoration: none;
   display: block;
+  margin-right: 10px;
+}
+
+@media (min-width: 800px) {
+  nav[toc] a {
+    display: block;
+  }
 }
 
 nav[toc] a[active="true"] {

@@ -38742,7 +38742,81 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"src/App.vue":[function(require,module,exports) {
+},{}],"src/components/Header.vue":[function(require,module,exports) {
+
+        var $f6521b = exports.default || module.exports;
+      
+      if (typeof $f6521b === 'function') {
+        $f6521b = $f6521b.options;
+      }
+    
+        /* template */
+        Object.assign($f6521b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("header", [
+      _c("div", { staticClass: "header__inner" }, [
+        _c("h3", [_vm._v("Base Elements")]),
+        _vm._v(" "),
+        _c("nav", { staticClass: "header__nav" }, [
+          _c("div", { staticClass: "header__nav-item" }, [
+            _vm._v("Installation")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "header__nav-item" }, [
+            _vm._v("Components")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "header__nav-item" }, [_vm._v("Themes")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "header__nav-item" }, [_vm._v("Github")])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f6521b', $f6521b);
+          } else {
+            api.reload('$f6521b', $f6521b);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38753,6 +38827,8 @@ exports.default = void 0;
 var _marked = _interopRequireDefault(require("marked"));
 
 var _db = require("./db.json");
+
+var _Header = _interopRequireDefault(require("./components/Header"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38774,7 +38850,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
+  components: {
+    Header: _Header.default
+  },
+
   data() {
     return {
       active: "",
@@ -38819,48 +38904,60 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "page" }, [
-    _c("div", { staticClass: "sidebar" }, [
-      _c(
-        "nav",
-        { attrs: { toc: "" } },
-        _vm._l(_vm.groupedComponents, function(menuGroup, name) {
-          return _c(
-            "div",
-            { key: name },
-            [
-              _c("label", [_vm._v(_vm._s(name))]),
-              _vm._v(" "),
-              _vm._l(menuGroup, function(page, i) {
-                return _c(
-                  "a",
-                  {
-                    key: i,
-                    on: {
-                      click: function($event) {
-                        _vm.active = page
-                      }
-                    }
-                  },
-                  [_vm._v(_vm._s(page.name))]
-                )
-              })
-            ],
-            2
+  return _c(
+    "div",
+    [
+      _c("Header"),
+      _vm._v(" "),
+      _c("div", { staticClass: "page" }, [
+        _c("div", { staticClass: "sidebar" }, [
+          _c(
+            "nav",
+            { attrs: { toc: "" } },
+            _vm._l(_vm.groupedComponents, function(menuGroup, name) {
+              return _c(
+                "div",
+                { key: name },
+                [
+                  _c("label", [_vm._v(_vm._s(name))]),
+                  _vm._v(" "),
+                  _vm._l(menuGroup, function(page, i) {
+                    return _c(
+                      "a",
+                      {
+                        key: i,
+                        on: {
+                          click: function($event) {
+                            _vm.active = page
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n            " + _vm._s(page.name) + "\n          "
+                        )
+                      ]
+                    )
+                  })
+                ],
+                2
+              )
+            }),
+            0
           )
-        }),
-        0
-      )
-    ]),
-    _vm._v(" "),
-    _vm.active
-      ? _c("main", { staticClass: "main" }, [
-          _c("div", {
-            domProps: { innerHTML: _vm._s(_vm.html(_vm.active.content)) }
-          })
-        ])
-      : _vm._e()
-  ])
+        ]),
+        _vm._v(" "),
+        _vm.active
+          ? _c("main", { staticClass: "main" }, [
+              _c("div", {
+                domProps: { innerHTML: _vm._s(_vm.html(_vm.active.content)) }
+              })
+            ])
+          : _vm._e()
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38895,7 +38992,7 @@ render._withStripped = true
       
       }
     })();
-},{"marked":"node_modules/marked/src/marked.js","./db.json":"src/db.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
+},{"marked":"node_modules/marked/src/marked.js","./db.json":"src/db.json","./components/Header":"src/components/Header.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
