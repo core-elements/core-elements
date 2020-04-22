@@ -1,6 +1,9 @@
 <template>
   <div>
-    <Header @route-menu-click="showSidebar = !showSidebar"></Header>
+    <Header
+      :showSidebar="showSidebar"
+      @toggle-sidebar="showSidebar = !showSidebar"
+    ></Header>
     <router-view
       :showSidebar="showSidebar"
       @toggle-sidebar="showSidebar = !showSidebar"

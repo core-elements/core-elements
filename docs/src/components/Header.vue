@@ -4,15 +4,13 @@
       <div class="header__left">
         <router-link to="/" class="header__logo">
           <ion-icon name="shapes-outline"></ion-icon>
-          <span>BaseElements</span>
+          <span>Base Elements</span>
         </router-link>
-        <button
-          @click="handleRouteButtonClick"
-          class="header__route-menu-button"
-        >
-          Components
+        <button @click="handleToggleButton" class="header__route-menu-button">
+          {{ $route.meta.title }}
           <ion-icon
-            :name="showRoutes ? 'chevron-up-outline' : 'chevron-down-outline'"
+            v-if="$route.meta.hasSidebar"
+            :name="showSidebar ? 'chevron-up-outline' : 'chevron-down-outline'"
           ></ion-icon>
         </button>
       </div>
@@ -26,6 +24,13 @@
 
         <div class="header__nav-wrapper" :class="{ show: showMenu }">
           <nav class="header__nav">
+            <router-link
+              v-on:click.native="showMenu = false"
+              to="/"
+              class="header__nav-item home"
+            >
+              Home
+            </router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/installation"
@@ -56,16 +61,15 @@
 
 <script>
 export default {
+  props: { showSidebar: Boolean },
   data() {
     return {
-      showRoutes: false,
       showMenu: false,
     };
   },
   methods: {
-    handleRouteButtonClick() {
-      this.$emit("route-menu-click");
-      this.showRoutes = !this.showRoutes;
+    handleToggleButton() {
+      this.$emit("toggle-sidebar");
     },
   },
 };
@@ -94,12 +98,19 @@ export default {
   align-items: center;
 }
 
+.header__logo span {
+  display: none;
+}
+
 .header__route-menu-button {
   border: 0;
   font-size: 1rem;
   display: flex;
   align-items: center;
   background: transparent;
+  padding: 0;
+  outline: 0;
+  font-weight: 500;
 }
 
 .header__route-menu-button ion-icon {
@@ -111,13 +122,8 @@ export default {
   color: currentColor;
   font-weight: 600;
   font-size: 1rem;
-  margin-right: 20px;
   display: flex;
   align-items: center;
-}
-
-.header__logo span {
-  display: none;
 }
 
 .header__logo ion-icon {
@@ -163,16 +169,24 @@ export default {
 }
 
 @media (min-width: 800px) {
+  .header__nav-item.home {
+    display: none;
+  }
+
+  .header__route-menu-button {
+    display: none;
+  }
+
+  .header__route-menu-button ion-icon {
+    display: none;
+  }
+
   .header__menu-button {
     display: none;
   }
 
   .header__logo span {
     display: block;
-  }
-
-  .header__route-menu-button {
-    display: none;
   }
 
   .header__nav-wrapper {

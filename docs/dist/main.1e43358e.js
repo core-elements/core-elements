@@ -26959,7 +26959,7 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:var(--base-border-radius-sm);--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
+  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:var(--base-border-radius-sm);--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md)}:host,:host button{display:inline-block;margin-bottom:var(--base-space-xs)}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
 
   class BaseButton extends LitElement {
     constructor() {
@@ -39788,18 +39788,25 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
+  props: {
+    showSidebar: Boolean
+  },
+
   data() {
     return {
-      showRoutes: false,
       showMenu: false
     };
   },
 
   methods: {
-    handleRouteButtonClick() {
-      this.$emit("route-menu-click");
-      this.showRoutes = !this.showRoutes;
+    handleToggleButton() {
+      this.$emit("toggle-sidebar");
     }
 
   }
@@ -39829,7 +39836,7 @@ exports.default = _default;
             [
               _c("ion-icon", { attrs: { name: "shapes-outline" } }),
               _vm._v(" "),
-              _c("span", [_vm._v("BaseElements")])
+              _c("span", [_vm._v("Base Elements")])
             ],
             1
           ),
@@ -39838,17 +39845,21 @@ exports.default = _default;
             "button",
             {
               staticClass: "header__route-menu-button",
-              on: { click: _vm.handleRouteButtonClick }
+              on: { click: _vm.handleToggleButton }
             },
             [
-              _vm._v("\n        Components\n        "),
-              _c("ion-icon", {
-                attrs: {
-                  name: _vm.showRoutes
-                    ? "chevron-up-outline"
-                    : "chevron-down-outline"
-                }
-              })
+              _vm._v(
+                "\n        " + _vm._s(_vm.$route.meta.title) + "\n        "
+              ),
+              _vm.$route.meta.hasSidebar
+                ? _c("ion-icon", {
+                    attrs: {
+                      name: _vm.showSidebar
+                        ? "chevron-up-outline"
+                        : "chevron-down-outline"
+                    }
+                  })
+                : _vm._e()
             ],
             1
           )
@@ -39887,6 +39898,20 @@ exports.default = _default;
               "nav",
               { staticClass: "header__nav" },
               [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "header__nav-item home",
+                    attrs: { to: "/" },
+                    nativeOn: {
+                      click: function($event) {
+                        _vm.showMenu = false
+                      }
+                    }
+                  },
+                  [_vm._v("\n            Home\n          ")]
+                ),
+                _vm._v(" "),
                 _c(
                   "router-link",
                   {
@@ -39992,6 +40017,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 var _default = {
   components: {
     Header: _Header.default
@@ -40021,8 +40049,9 @@ exports.default = _default;
     "div",
     [
       _c("Header", {
+        attrs: { showSidebar: _vm.showSidebar },
         on: {
-          "route-menu-click": function($event) {
+          "toggle-sidebar": function($event) {
             _vm.showSidebar = !_vm.showSidebar
           }
         }
@@ -42089,7 +42118,7 @@ module.exports = {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
     "category": "Layout",
-    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
+    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
@@ -42455,17 +42484,36 @@ _vue.default.use(_vueRouter.default);
 const router = new _vueRouter.default({
   routes: [{
     path: "/",
-    component: _Home.default
+    component: _Home.default,
+    meta: {
+      title: "Base Components",
+      showInHeader: true,
+      hasSidebar: false
+    }
   }, {
     path: "/components",
+    meta: {
+      title: "Components",
+      showInHeader: true,
+      hasSidebar: true
+    },
     component: _Components.default,
     children: [{
       path: ":element",
-      component: _Component.default
+      component: _Component.default,
+      meta: {
+        title: "Components",
+        hasSidebar: true
+      }
     }]
   }, {
     path: "/installation",
-    component: _Installation.default
+    component: _Installation.default,
+    meta: {
+      title: "Installation",
+      showInHeader: true,
+      hasSidebar: false
+    }
   }]
 });
 new _vue.default({

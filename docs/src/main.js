@@ -16,13 +16,32 @@ Vue.use(Router);
 
 const router = new Router({
   routes: [
-    { path: "/", component: Home },
+    {
+      path: "/",
+      component: Home,
+      meta: {
+        title: "Base Components",
+        showInHeader: true,
+        hasSidebar: false,
+      },
+    },
     {
       path: "/components",
+      meta: { title: "Components", showInHeader: true, hasSidebar: true },
       component: Components,
-      children: [{ path: ":element", component: Component }],
+      children: [
+        {
+          path: ":element",
+          component: Component,
+          meta: { title: "Components", hasSidebar: true },
+        },
+      ],
     },
-    { path: "/installation", component: Installation },
+    {
+      path: "/installation",
+      component: Installation,
+      meta: { title: "Installation", showInHeader: true, hasSidebar: false },
+    },
   ],
 });
 

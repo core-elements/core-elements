@@ -68,7 +68,7 @@ nav[toc] {
   nav[toc] {
     padding-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
