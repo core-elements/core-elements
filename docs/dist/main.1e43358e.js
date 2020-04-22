@@ -35337,6 +35337,7 @@ exports.default = _default;
                     [
                       _c(
                         "base-grid-item",
+                        { attrs: { sm: "6" } },
                         [
                           _c(
                             "base-select",
