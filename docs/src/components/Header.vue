@@ -164,6 +164,7 @@ export default {
 
 .header__menu-button {
   border: 0;
+  padding: 0;
   background: transparent;
   font-size: 1rem;
 }
