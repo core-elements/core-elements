@@ -137,10 +137,9 @@
           "default": "\"\""
         },
         {
-          "name": "style",
-          "description": "Button state",
-          "type": "\"normal\"|\"outline\"",
-          "default": "\"\""
+          "name": "outline",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "full",
@@ -164,11 +163,10 @@
           "default": "\"\""
         },
         {
-          "name": "style",
-          "attribute": "style",
-          "description": "Button state",
-          "type": "\"normal\"|\"outline\"",
-          "default": "\"\""
+          "name": "outline",
+          "attribute": "outline",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "full",
@@ -775,7 +773,8 @@
         },
         {
           "name": "size",
-          "type": "string",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
         },
         {
@@ -822,7 +821,8 @@
         {
           "name": "size",
           "attribute": "size",
-          "type": "string",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
         },
         {
@@ -1124,6 +1124,75 @@
         },
         {
           "name": "input"
+        }
+      ]
+    },
+    {
+      "name": "base-button",
+      "path": "./../../lib/src/components/base-text/base-text.js",
+      "attributes": [
+        {
+          "name": "tag",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "description": "Button state",
+          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "style",
+          "description": "Button state",
+          "type": "\"normal\"|\"outline\"",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "tag",
+          "attribute": "tag",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "Button state",
+          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "style",
+          "attribute": "style",
+          "description": "Button state",
+          "type": "\"normal\"|\"outline\"",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
         }
       ]
     }

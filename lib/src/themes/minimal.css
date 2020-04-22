@@ -18,7 +18,7 @@
   --base-saturation-lower: 20%;
   --base-saturation-lowest: 0%;
 
-  --base-color-primary-hue: 259;
+  --base-color-primary-hue: 250;
   --base-color-primary: hsl(
     var(--base-color-primary-hue),
     var(--base-saturation-highest),

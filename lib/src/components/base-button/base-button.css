@@ -116,12 +116,12 @@
 
 /* Styles */
 
-:host([style="outline"]) button {
+:host([outline]) button {
   --base-button-border: 2px solid var(--base-button-bg-color);
   color: var(--base-button-bg-color);
   background: none !important;
 }
 
-:host([style="outline"]):not([type]) {
+:host([outline]):not([type]) {
   color: var(--base-color-black);
 }

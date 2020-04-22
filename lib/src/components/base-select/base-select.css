@@ -83,7 +83,6 @@ input[part="input-field"] {
   cursor: pointer;
   padding-left: 8px;
   background: transparent;
-  min-width: 100px;
   height: var(--base-select-min-height);
   font-size: 16px;
   border: 0;

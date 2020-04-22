@@ -60,6 +60,10 @@ table tr td:first-of-type {
   white-space: nowrap;
 }
 
+table tr td:last-of-type {
+  min-width: 140px;
+}
+
 table tr {
   background-color: #fff;
   border-bottom: 1px solid var(--base-color-secondary-light);

@@ -2,27 +2,51 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__left">
-        <h3 class="header__logo">
+        <router-link to="/" class="header__logo">
           <ion-icon name="shapes-outline"></ion-icon>
           <span>BaseElements</span>
-        </h3>
-        <button @click="handleRouteButtonClick" class="header__route-menu-button">
+        </router-link>
+        <button
+          @click="handleRouteButtonClick"
+          class="header__route-menu-button"
+        >
           Components
-          <ion-icon :name="showRoutes ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+          <ion-icon
+            :name="showRoutes ? 'chevron-up-outline' : 'chevron-down-outline'"
+          ></ion-icon>
         </button>
       </div>
 
       <div class="header__right">
         <button @click="showMenu = !showMenu" class="header__menu-button">
-          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          <ion-icon
+            :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"
+          ></ion-icon>
         </button>
 
-        <div class="header__nav-wrapper" :class="{show: showMenu}">
+        <div class="header__nav-wrapper" :class="{ show: showMenu }">
           <nav class="header__nav">
-            <div class="header__nav-item">Installation</div>
-            <div class="header__nav-item">Components</div>
-            <div class="header__nav-item">Themes</div>
-            <div class="header__nav-item">Github</div>
+            <router-link
+              v-on:click.native="showMenu = false"
+              to="/installation"
+              class="header__nav-item"
+            >
+              Installation
+            </router-link>
+            <router-link
+              v-on:click.native="showMenu = false"
+              to="/components"
+              class="header__nav-item"
+            >
+              Components
+            </router-link>
+            <router-link
+              v-on:click.native="showMenu = false"
+              to="/themes"
+              class="header__nav-item"
+            >
+              Themes
+            </router-link>
           </nav>
         </div>
       </div>
@@ -35,15 +59,15 @@ export default {
   data() {
     return {
       showRoutes: false,
-      showMenu: false
+      showMenu: false,
     };
   },
   methods: {
     handleRouteButtonClick() {
       this.$emit("route-menu-click");
       this.showRoutes = !this.showRoutes;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -83,6 +107,9 @@ export default {
 }
 
 .header__logo {
+  text-decoration: none;
+  color: currentColor;
+  font-weight: 600;
   font-size: 1rem;
   margin-right: 20px;
   display: flex;
@@ -103,10 +130,11 @@ export default {
   z-index: 999;
   width: 100%;
   animation: fade-in 0.3s ease;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 60px;
   left: 0;
   display: none;
   height: calc(100vh - 60px);
@@ -124,6 +152,8 @@ export default {
   margin-bottom: 30px;
   display: block;
   font-size: 2rem;
+  text-decoration: none;
+  color: currentColor;
 }
 
 .header__menu-button {
@@ -152,6 +182,9 @@ export default {
     top: 0;
     left: 0;
     height: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
   }
 
   .header__nav-item {
