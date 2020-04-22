@@ -13,10 +13,14 @@
   --base-button-height: var(--base-size-md);
 }
 
+:host {
+  margin-bottom: var(--base-space-xs);
+  margin-right: var(--base-space-xs);
+}
+
 :host,
 :host button {
   display: inline-block;
-  margin-bottom: var(--base-space-xs);
 }
 
 :host([full]),

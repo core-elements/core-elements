@@ -2,8 +2,8 @@
   display: block;
   width: 100%;
   max-width: 100%;
-  grid-column-end: span var(--ab-grid-ce, 1);
-  grid-row-end: span var(--ab-grid-re, 1);
+  grid-column-end: span var(--base-grid-ce, 1);
+  grid-row-end: span var(--base-grid-re, 1);
   appearance: none;
   margin-bottom: 0;
   box-sizing: border-box;
@@ -18,26 +18,26 @@
   :host([sm="$(i)"]) {
     display: block;
     max-width: 100%;
-    --ab-grid-ce: $(i);
+    --base-grid-ce: $(i);
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   @each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
     :host([md="$(i)"]) {
       display: block;
       max-width: 100%;
-      --ab-grid-ce: $(i);
+      --base-grid-ce: $(i);
     }
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   @each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
     :host([lg="$(i)"]) {
       display: block;
       max-width: 100%;
-      --ab-grid-ce: $(i);
+      --base-grid-ce: $(i);
     }
   }
 }
@@ -47,7 +47,7 @@
     :host([xl="$(i)"]) {
       display: block;
       max-width: 100%;
-      --ab-grid-ce: $(i);
+      --base-grid-ce: $(i);
     }
   }
 }

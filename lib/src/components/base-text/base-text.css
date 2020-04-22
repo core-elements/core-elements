@@ -1,0 +1,32 @@
+:host {
+  display: inline-block;
+}
+
+:host h1,
+:host h2,
+:host h3,
+:host h4,
+:host h5,
+:host h6,
+:host p,
+:host small {
+  font-weight: inherit;
+  margin-top: 0;
+}
+
+:host([inline]) h1,
+:host([inline]) h2,
+:host([inline]) h3,
+:host([inline]) h4,
+:host([inline]) h5,
+:host([inline]) h6,
+:host([inline]) p,
+:host([inline]) small {
+  display: inline-block;
+}
+
+@each $i in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+  :host([weight="$(i)"]) {
+    font-weight: $(i);
+  }
+}

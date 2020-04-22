@@ -524,8 +524,37 @@
         {
           "name": "gutter",
           "description": "Grid gutter",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"sm\""
+        },
+        {
+          "name": "gutterSm",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gutterMd",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gutterLg",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gutterXl",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "columns",
+          "type": "string",
+          "default": "\"12\""
         }
       ],
       "properties": [
@@ -533,8 +562,42 @@
           "name": "gutter",
           "attribute": "gutter",
           "description": "Grid gutter",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"sm\""
+        },
+        {
+          "name": "gutterSm",
+          "attribute": "gutterSm",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gutterMd",
+          "attribute": "gutterMd",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gutterLg",
+          "attribute": "gutterLg",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gutterXl",
+          "attribute": "gutterXl",
+          "description": "Grid gutter",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "columns",
+          "attribute": "columns",
+          "type": "string",
+          "default": "\"12\""
         }
       ]
     },
@@ -1344,6 +1407,11 @@
           "description": "Button state",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
           "default": "\"\""
+        },
+        {
+          "name": "weight",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "properties": [
@@ -1352,6 +1420,12 @@
           "attribute": "tag",
           "description": "Button state",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
+          "default": "\"\""
+        },
+        {
+          "name": "weight",
+          "attribute": "weight",
+          "type": "string",
           "default": "\"\""
         }
       ]
