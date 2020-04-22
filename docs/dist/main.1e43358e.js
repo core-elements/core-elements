@@ -38743,7 +38743,61 @@ function patchScopedSlots (instance) {
 }
 
 },{}],"src/components/Header.vue":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data() {
+    return {
+      showRoutes: false,
+      showMenu: false
+    };
+  },
+
+  methods: {
+    handleRouteButtonClick() {
+      this.$emit("route-menu-click");
+      this.showRoutes = !this.showRoutes;
+    }
+
+  }
+};
+exports.default = _default;
         var $f6521b = exports.default || module.exports;
       
       if (typeof $f6521b === 'function') {
@@ -38756,31 +38810,77 @@ function patchScopedSlots (instance) {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("header", { staticClass: "header" }, [
+    _c("div", { staticClass: "header__inner" }, [
+      _c("div", { staticClass: "header__left" }, [
+        _c(
+          "h3",
+          { staticClass: "header__logo" },
+          [
+            _c("ion-icon", { attrs: { name: "shapes-outline" } }),
+            _vm._v(" "),
+            _c("span", [_vm._v("BaseElements")])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "header__route-menu-button",
+            on: { click: _vm.handleRouteButtonClick }
+          },
+          [
+            _vm._v("\n        Components\n        "),
+            _c("ion-icon", {
+              attrs: {
+                name: _vm.showRoutes
+                  ? "chevron-up-outline"
+                  : "chevron-down-outline"
+              }
+            })
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "header__right" }, [
+        _c(
+          "button",
+          {
+            staticClass: "header__menu-button",
+            on: {
+              click: function($event) {
+                _vm.showMenu = !_vm.showMenu
+              }
+            }
+          },
+          [_c("ion-icon", { attrs: { name: "ellipsis-vertical-outline" } })],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "header__nav-wrapper", class: { show: _vm.showMenu } },
+          [_vm._m(0)]
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", [
-      _c("div", { staticClass: "header__inner" }, [
-        _c("h3", [_vm._v("Base Elements")]),
-        _vm._v(" "),
-        _c("nav", { staticClass: "header__nav" }, [
-          _c("div", { staticClass: "header__nav-item" }, [
-            _vm._v("Installation")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "header__nav-item" }, [
-            _vm._v("Components")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "header__nav-item" }, [_vm._v("Themes")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "header__nav-item" }, [_vm._v("Github")])
-        ])
-      ])
+    return _c("nav", { staticClass: "header__nav" }, [
+      _c("div", { staticClass: "header__nav-item" }, [_vm._v("Installation")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "header__nav-item" }, [_vm._v("Components")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "header__nav-item" }, [_vm._v("Themes")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "header__nav-item" }, [_vm._v("Github")])
     ])
   }
 ]
@@ -38855,6 +38955,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
 var _default = {
   components: {
     Header: _Header.default
@@ -38863,6 +38965,7 @@ var _default = {
   data() {
     return {
       active: "",
+      showSidebar: false,
       components: _db.components
     };
   },
@@ -38907,53 +39010,67 @@ exports.default = _default;
   return _c(
     "div",
     [
-      _c("Header"),
+      _c("Header", {
+        on: {
+          "route-menu-click": function($event) {
+            _vm.showSidebar = !_vm.showSidebar
+          }
+        }
+      }),
       _vm._v(" "),
       _c("div", { staticClass: "page" }, [
-        _c("div", { staticClass: "sidebar" }, [
+        _c("div", { staticClass: "page__inner" }, [
           _c(
-            "nav",
-            { attrs: { toc: "" } },
-            _vm._l(_vm.groupedComponents, function(menuGroup, name) {
-              return _c(
-                "div",
-                { key: name },
-                [
-                  _c("label", [_vm._v(_vm._s(name))]),
-                  _vm._v(" "),
-                  _vm._l(menuGroup, function(page, i) {
-                    return _c(
-                      "a",
-                      {
-                        key: i,
-                        on: {
-                          click: function($event) {
-                            _vm.active = page
-                          }
-                        }
-                      },
-                      [
-                        _vm._v(
-                          "\n            " + _vm._s(page.name) + "\n          "
+            "div",
+            { staticClass: "sidebar", class: { show: _vm.showSidebar } },
+            [
+              _c(
+                "nav",
+                { attrs: { toc: "" } },
+                _vm._l(_vm.groupedComponents, function(menuGroup, name) {
+                  return _c(
+                    "div",
+                    { key: name },
+                    [
+                      _c("label", [_vm._v(_vm._s(name))]),
+                      _vm._v(" "),
+                      _vm._l(menuGroup, function(page, i) {
+                        return _c(
+                          "a",
+                          {
+                            key: i,
+                            on: {
+                              click: function($event) {
+                                _vm.active = page
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(page.name) +
+                                "\n            "
+                            )
+                          ]
                         )
-                      ]
-                    )
-                  })
-                ],
-                2
+                      })
+                    ],
+                    2
+                  )
+                }),
+                0
               )
-            }),
-            0
-          )
-        ]),
-        _vm._v(" "),
-        _vm.active
-          ? _c("main", { staticClass: "main" }, [
-              _c("div", {
-                domProps: { innerHTML: _vm._s(_vm.html(_vm.active.content)) }
-              })
-            ])
-          : _vm._e()
+            ]
+          ),
+          _vm._v(" "),
+          _vm.active
+            ? _c("main", { staticClass: "main" }, [
+                _c("div", {
+                  domProps: { innerHTML: _vm._s(_vm.html(_vm.active.content)) }
+                })
+              ])
+            : _vm._e()
+        ])
       ])
     ],
     1

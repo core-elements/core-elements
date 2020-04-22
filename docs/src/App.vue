@@ -1,22 +1,24 @@
 <template>
   <div>
-    <Header></Header>
+    <Header @route-menu-click="showSidebar = !showSidebar"></Header>
     <div class="page">
-      <div class="sidebar">
-        <nav toc>
-          <div v-for="(menuGroup, name) in groupedComponents" :key="name">
-            <label>{{ name }}</label>
-            <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">
-              {{
-              page.name
-              }}
-            </a>
-          </div>
-        </nav>
+      <div class="page__inner">
+        <div class="sidebar" :class="{show: showSidebar}">
+          <nav toc>
+            <div v-for="(menuGroup, name) in groupedComponents" :key="name">
+              <label>{{ name }}</label>
+              <a @click="active = page" v-for="(page, i) in menuGroup" :key="i">
+                {{
+                page.name
+                }}
+              </a>
+            </div>
+          </nav>
+        </div>
+        <main class="main" v-if="active">
+          <div v-html="html(active.content)"></div>
+        </main>
       </div>
-      <main class="main" v-if="active">
-        <div v-html="html(active.content)"></div>
-      </main>
     </div>
   </div>
 </template>
@@ -31,6 +33,7 @@ export default {
   data() {
     return {
       active: "",
+      showSidebar: false,
       components
     };
   },
@@ -64,12 +67,28 @@ export default {
 </script>
 
 <style>
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
 .page {
+  width: 100%;
+  padding: 30px;
+}
+
+.page__inner {
+  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;
@@ -77,9 +96,32 @@ body {
   margin: 0 auto;
 }
 
+.page__menu-button {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .page__menu-button {
+    display: none;
+  }
+}
+
 .sidebar {
+  top: 60px;
+  left: 0;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 100%;
-  position: initial;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  background: white;
+  font-size: 1.5em;
+  height: calc(100vh - 60px);
+}
+
+.sidebar.show {
+  display: block;
 }
 
 .main {
@@ -93,10 +135,14 @@ body {
   }
 
   .sidebar {
+    display: block;
     width: 22%;
     height: max-content;
     position: sticky;
     top: 0;
+    font-size: 1.2em;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .main {
@@ -105,11 +151,18 @@ body {
 }
 
 nav[toc] {
-  font-size: 18px;
+  font-size: 1em;
+}
+
+@media (max-width: 800px) {
+  nav[toc] {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 nav[toc] label {
-  margin-top: 50px;
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
@@ -124,6 +177,10 @@ nav[toc] a {
   margin-right: 10px;
 }
 
+nav[toc] a:last-of-type {
+  margin-bottom: 50px;
+}
+
 @media (min-width: 800px) {
   nav[toc] a {
     display: block;
@@ -135,6 +192,7 @@ nav[toc] a[active="true"] {
 }
 
 main h1 {
+  margin-top: 0;
   margin-bottom: 50px;
 }
 
