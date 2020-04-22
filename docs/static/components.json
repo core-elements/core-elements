@@ -258,6 +258,214 @@
       ]
     },
     {
+      "name": "base-flex",
+      "path": "./../../lib/src/components/base-flex/base-flex.js",
+      "attributes": [
+        {
+          "name": "justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "sm-justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sm-align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sm-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sm-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "md-justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "md-align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "md-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "m-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lg-justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lg-align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lg-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lg-wrap",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "j",
+          "attribute": "justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "a",
+          "attribute": "align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "d",
+          "attribute": "direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "wrap",
+          "attribute": "wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "sJ",
+          "attribute": "sm-justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sA",
+          "attribute": "sm-align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sD",
+          "attribute": "sm-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sWrap",
+          "attribute": "sm-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "mJ",
+          "attribute": "md-justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "mA",
+          "attribute": "md-align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "mD",
+          "attribute": "md-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "mWrap",
+          "attribute": "m-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lJ",
+          "attribute": "lg-justify",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lA",
+          "attribute": "lg-align",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lD",
+          "attribute": "lg-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lWrap",
+          "attribute": "lg-wrap",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
       "name": "base-grid-item",
       "path": "./../../lib/src/components/base-grid/base-grid-item.js",
       "attributes": [
@@ -1128,35 +1336,13 @@
       ]
     },
     {
-      "name": "base-button",
+      "name": "base-text",
       "path": "./../../lib/src/components/base-text/base-text.js",
       "attributes": [
         {
           "name": "tag",
-          "type": "string"
-        },
-        {
-          "name": "type",
           "description": "Button state",
-          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
-          "default": "\"\""
-        },
-        {
-          "name": "style",
-          "description": "Button state",
-          "type": "\"normal\"|\"outline\"",
-          "default": "\"\""
-        },
-        {
-          "name": "full",
-          "description": "Full button",
-          "type": "Boolean",
-          "default": "false"
-        },
-        {
-          "name": "size",
-          "description": "Button size",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
           "default": "\"\""
         }
       ],
@@ -1164,34 +1350,8 @@
         {
           "name": "tag",
           "attribute": "tag",
-          "type": "string"
-        },
-        {
-          "name": "type",
-          "attribute": "type",
           "description": "Button state",
-          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
-          "default": "\"\""
-        },
-        {
-          "name": "style",
-          "attribute": "style",
-          "description": "Button state",
-          "type": "\"normal\"|\"outline\"",
-          "default": "\"\""
-        },
-        {
-          "name": "full",
-          "attribute": "full",
-          "description": "Full button",
-          "type": "Boolean",
-          "default": "false"
-        },
-        {
-          "name": "size",
-          "attribute": "size",
-          "description": "Button size",
-          "type": "\"sm\"|\"md\"|\"lg\"",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
           "default": "\"\""
         }
       ]
