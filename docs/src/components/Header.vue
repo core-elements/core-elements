@@ -17,9 +17,7 @@
 
       <div class="header__right">
         <button @click="showMenu = !showMenu" class="header__menu-button">
-          <ion-icon
-            :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"
-          ></ion-icon>
+          <ion-icon :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"></ion-icon>
         </button>
 
         <div class="header__nav-wrapper" :class="{ show: showMenu }">
@@ -28,30 +26,22 @@
               v-on:click.native="showMenu = false"
               to="/"
               class="header__nav-item home"
-            >
-              Home
-            </router-link>
+            >Home</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/installation"
               class="header__nav-item"
-            >
-              Installation
-            </router-link>
+            >Installation</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/components"
               class="header__nav-item"
-            >
-              Components
-            </router-link>
+            >Components</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/themes"
               class="header__nav-item"
-            >
-              Themes
-            </router-link>
+            >Themes</router-link>
           </nav>
         </div>
       </div>
@@ -64,14 +54,14 @@ export default {
   props: { showSidebar: Boolean },
   data() {
     return {
-      showMenu: false,
+      showMenu: false
     };
   },
   methods: {
     handleToggleButton() {
       this.$emit("toggle-sidebar");
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -120,8 +110,8 @@ export default {
 .header__logo {
   text-decoration: none;
   color: currentColor;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
 }
@@ -155,11 +145,19 @@ export default {
 }
 
 .header__nav-item {
+  color: #718096;
   margin-bottom: 30px;
   display: block;
   font-size: 2rem;
   text-decoration: none;
-  color: currentColor;
+}
+
+.header__nav-item:hover {
+  color: #1a202c;
+}
+
+.header__nav-item.router-link-exact-active {
+  color: #1a202c;
 }
 
 .header__menu-button {

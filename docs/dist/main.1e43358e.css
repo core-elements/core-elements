@@ -42,8 +42,8 @@
 .header__logo {
   text-decoration: none;
   color: currentColor;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
 }
@@ -77,11 +77,19 @@
 }
 
 .header__nav-item {
+  color: #718096;
   margin-bottom: 30px;
   display: block;
   font-size: 2rem;
   text-decoration: none;
-  color: currentColor;
+}
+
+.header__nav-item:hover {
+  color: #1a202c;
+}
+
+.header__nav-item.router-link-exact-active {
+  color: #1a202c;
 }
 
 .header__menu-button {
@@ -241,6 +249,7 @@ nav[toc] {
 }
 
 nav[toc] label {
+  color: #a0aec0;
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
@@ -248,11 +257,19 @@ nav[toc] label {
 }
 
 nav[toc] a {
+  color: #718096;
   margin-bottom: 10px;
-  color: currentColor;
   text-decoration: none;
   display: block;
   margin-right: 10px;
+}
+
+nav[toc] a.router-link-exact-active {
+  color: #1a202c;
+}
+
+nav[toc] a:hover {
+  color: #1a202c;
 }
 
 nav[toc] a:last-of-type {

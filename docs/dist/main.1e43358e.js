@@ -39783,16 +39783,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -39909,7 +39899,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [_vm._v("\n            Home\n          ")]
+                  [_vm._v("Home")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -39923,7 +39913,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [_vm._v("\n            Installation\n          ")]
+                  [_vm._v("Installation")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -39937,7 +39927,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [_vm._v("\n            Components\n          ")]
+                  [_vm._v("Components")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -39951,7 +39941,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [_vm._v("\n            Themes\n          ")]
+                  [_vm._v("Themes")]
                 )
               ],
               1
@@ -42210,8 +42200,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -42281,7 +42269,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [_vm._v("\n          " + _vm._s(page.name) + "\n        ")]
+                  [_vm._v(_vm._s(page.name))]
                 )
               })
             ],

@@ -9,9 +9,7 @@
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-          >
-            {{ page.name }}
-          </router-link>
+          >{{ page.name }}</router-link>
         </div>
       </nav>
     </div>
@@ -32,7 +30,7 @@ export default {
   components: { SidebarLayout },
   data() {
     return {
-      components,
+      components
     };
   },
   computed: {
@@ -45,17 +43,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevComps, { ...comp }]
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: [],
+          Form: []
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -73,6 +71,7 @@ nav[toc] {
 }
 
 nav[toc] label {
+  color: #a0aec0;
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
@@ -80,11 +79,19 @@ nav[toc] label {
 }
 
 nav[toc] a {
+  color: #718096;
   margin-bottom: 10px;
-  color: currentColor;
   text-decoration: none;
   display: block;
   margin-right: 10px;
+}
+
+nav[toc] a.router-link-exact-active {
+  color: #1a202c;
+}
+
+nav[toc] a:hover {
+  color: #1a202c;
 }
 
 nav[toc] a:last-of-type {
