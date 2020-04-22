@@ -40179,6 +40179,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
   components: {
     Page: _Page.default
@@ -40202,12 +40208,21 @@ exports.default = _default;
       "div",
       { staticClass: "content" },
       [
-        _c("h1", [_vm._v("Base Elements")]),
+        _c("h1", [
+          _c("b", [_vm._v("Base Elements")]),
+          _vm._v(
+            " is a\n      free collection of essential components for any web application\n    "
+          )
+        ]),
         _vm._v(" "),
         _c("p", { staticClass: "lead" }, [
-          _vm._v("\n      Lightweight and easily "),
-          _c("b", [_vm._v("stylable components")]),
-          _vm._v(" for React, Vue,\n      Angular or any other framwork.\n    ")
+          _vm._v("\n      Components that work in\n      "),
+          _c("b", [_vm._v("React")]),
+          _vm._v(",\n      "),
+          _c("b", [_vm._v("Vue")]),
+          _vm._v(",\n      "),
+          _c("b", [_vm._v("Angular")]),
+          _vm._v(", or any\n      other framwork.\n    ")
         ]),
         _vm._v(" "),
         _c("base-button", { attrs: { type: "primary" } }, [

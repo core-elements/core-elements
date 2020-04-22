@@ -1,10 +1,16 @@
 <template>
   <Page class="landing">
     <div class="content">
-      <h1>Base Elements</h1>
+      <h1>
+        <b>Base Elements</b> is a
+        free collection of essential components for any web application
+      </h1>
       <p class="lead">
-        Lightweight and easily <b>stylable components</b> for React, Vue,
-        Angular or any other framwork.
+        Components that work in
+        <b>React</b>,
+        <b>Vue</b>,
+        <b>Angular</b>, or any
+        other framwork.
       </p>
       <base-button type="primary">Get Started</base-button>
       <base-button outline type="primary">The Components</base-button>
@@ -16,12 +22,13 @@
 import Page from "../layouts/Page";
 
 export default {
-  components: { Page },
+  components: { Page }
 };
 </script>
 
 <style>
 .landing h1 {
+  font-weight: 300;
   font-size: 3rem;
 }
 
@@ -33,6 +40,6 @@ export default {
 }
 
 .content {
-  max-width: 650px;
+  max-width: 700px;
 }
 </style>
