@@ -9,7 +9,7 @@
   --base-select-border-width: 1px;
   --base-select-border-style: solid;
   --base-select-border-color: var(--base-color-ui-light);
-  --base-select-border-radius: var(--base-border-radius-sm);
+  --base-select-border-radius: none;
   --base-select-option-list-border: 1px solid var(--base-color-ui-light);
   --base-select-option-list-border-radius: var(--base-select-border-radius-sm);
   --base-select-option-list-box-shadow: 0px;

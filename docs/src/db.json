@@ -1,12 +1,6 @@
 {
   "components": [
     {
-      "path": "../lib/src/components/base-box/base-box.md",
-      "name": "Box",
-      "category": "Elements",
-      "content": "\n# Button\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-button/base-button.md",
       "name": "Button",
       "category": "Elements",
@@ -19,22 +13,28 @@
       "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
     },
     {
+      "path": "../lib/src/components/base-container/base-container.md",
+      "name": "Container",
+      "category": "Layout",
+      "content": "\n# Container\n\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid #eee\">Container</base-container>\n</base-knobs>\n"
+    },
+    {
       "path": "../lib/src/components/base-flex/base-flex.md",
       "name": "Flex",
       "category": "Layout",
       "content": "\n# Flex\n\nFlex\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-grid/base-grid.md",
-      "name": "Grid",
-      "category": "Layout",
-      "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-input/base-input.md",
       "name": "Input",
       "category": "Form",
       "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-grid/base-grid.md",
+      "name": "Grid",
+      "category": "Layout",
+      "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-label/base-label.md",
@@ -55,10 +55,22 @@
       "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n</base-knobs>\n"
     },
     {
+      "path": "../lib/src/components/base-text/base-text.md",
+      "name": "Text",
+      "category": "Elements",
+      "content": "\n# Text\n\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text>Container</base-text>\n</base-knobs>\n"
+    },
+    {
       "path": "../lib/src/components/base-select/base-select.md",
       "name": "Select",
       "category": "Form",
       "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-box/base-box.md",
+      "name": "Box",
+      "category": "Elements",
+      "content": "\n# Box\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
     }
   ]
 }

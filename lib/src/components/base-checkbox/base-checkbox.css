@@ -4,17 +4,20 @@
   --base-checkbox-cursor: pointer;
   --base-checkbox-box-shadow: none;
   --base-checkbox-height: var(--base-size-md);
+  --base-checkbox-border-radius: none;
 }
 
 :host {
   height: var(--base-checkbox-height);
   display: inline-flex;
   align-items: center;
+  margin-right: var(--base-space-sm);
 }
 
 :host([full]) {
   display: flex;
   width: 100%;
+  margin-right: 0;
 }
 
 :host([size="sm"]) {
@@ -47,7 +50,7 @@
   color: var(--base-color-font);
   width: calc(var(--base-checkbox-height) - var(--base-space-md));
   height: calc(var(--base-checkbox-height) - var(--base-space-md));
-  border-radius: var(--base-border-radius-sm);
+  border-radius: var(--base-checkbox-border-radius);
   border: var(--base-checkbox-border);
   position: relative;
   vertical-align: middle;

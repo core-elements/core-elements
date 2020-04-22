@@ -105,6 +105,12 @@
   --base-color-ui-darker: #565656;
   --base-color-ui-darkest: #333;
 
+  --base-container: 800px;
+  --base-container-sm: 650px;
+  --base-container-md: 800px;
+  --base-container-lg: 1200px;
+  --base-container-xl: 1400px;
+
   --base-space-xs: 4px;
   --base-space-sm: 8px;
   --base-space-md: 16px;

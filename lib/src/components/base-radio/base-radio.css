@@ -6,11 +6,13 @@
   cursor: pointer;
   display: inline-block;
   height: var(--base-radio-height);
+  margin-right: var(--base-space-sm);
 }
 
 :host([full]) {
   display: block;
   width: 100%;
+  margin-right: 0;
 }
 
 :host([size="sm"]) {
@@ -33,7 +35,6 @@
   font-size: var(--hw-font-size-small);
   position: relative;
   line-height: 1.5;
-  margin-right: var(--base-space-xs);
 }
 
 :host([full]) label {

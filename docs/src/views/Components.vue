@@ -88,6 +88,13 @@ nav[toc] a {
 
 nav[toc] a.router-link-exact-active {
   color: #1a202c;
+  transition: all 0.5s ease;
+}
+
+nav[toc] a.router-link-exact-active:before {
+  color: #1a202c;
+  content: "\2022";
+  padding-right: var(--base-space-sm);
 }
 
 nav[toc] a:hover {

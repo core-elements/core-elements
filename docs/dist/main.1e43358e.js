@@ -17929,8 +17929,8 @@ class BaseKnobs extends _sharedstyles48eb.L {
       const res = await fetch(this.src);
       const json = await res.json();
       const component = json.tags.find(tag => tag.name === this.name);
-      this.properties = component.properties;
-      this.attributes = component.attributes;
+      this.properties = component ? component.properties : [];
+      this.attributes = component ? component.attributes : [];
     } catch (e) {
       console.log("error", e);
     }
@@ -20923,7 +20923,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:var(--base-border-radius-sm);--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
@@ -21681,7 +21681,7 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:var(--base-border-radius-sm);--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);margin-bottom:var(--base-space-xs);margin-right:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
+  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);margin-bottom:var(--base-space-xs);margin-right:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
 
   class BaseButton extends LitElement {
     constructor() {
@@ -21745,7 +21745,7 @@ var global = arguments[3];
     customElements.define("base-button", BaseButton);
   }
 
-  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-ui-lightest);--base-checkbox-border:1px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center}:host([full]){display:-webkit-box;display:flex;width:100%}:host([size=sm]){--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}:host input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-border-radius-sm);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:#fff;-webkit-filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
+  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-ui-lightest);--base-checkbox-border:1px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}:host input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:#fff;-webkit-filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
 
   class BaseCheckbox extends LitElement {
     constructor() {
@@ -22214,7 +22214,7 @@ var global = arguments[3];
     return new StringMask(pattern, options).validate(value);
   };
 
-  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-radius:var(--base-border-radius-sm);--base-input-box-shadow:none;min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);border:1px solid var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-success);border:1px solid var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-danger);border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
+  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-radius:none;--base-input-box-shadow:none;min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);border:1px solid var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-success);border:1px solid var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-danger);border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
 
   class BaseInput extends LitElement {
     constructor() {
@@ -22475,7 +22475,7 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
-  var styles$6 = css`:host{--base-radio-height:var(--base-size-md);cursor:pointer;display:inline-block;height:var(--base-radio-height)}:host([full]){display:block;width:100%}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host label{height:var(--base-radio-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse;font-size:var(--hw-font-size-small);position:relative;line-height:1.5;margin-right:var(--base-space-xs)}:host([full]) label{display:-webkit-box;display:flex}:host [part=indicator]{display:inline-block;position:relative;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host [part=label]{display:inline-block}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=input-field]:hover:not([disabled]):not(:checked)~[part=indicator]{background-color:var(--base-color-ui-lighter)}:host [part=input-field]:checked~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:checked~[part=indicator]:after{content:"";position:absolute;width:60%;height:60%;border-radius:50%;top:50%;left:50%;-webkit-transform:translateY(-50%) translateX(-50%);transform:translateY(-50%) translateX(-50%);background:var(--base-color-focus)}:host [part=input-field]:focus~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:disabled~[part=indicator]{border-color:var(--base-color-ui-lighter);background-color:transparent;cursor:not-allowed}`;
+  var styles$6 = css`:host{--base-radio-height:var(--base-size-md);cursor:pointer;display:inline-block;height:var(--base-radio-height);margin-right:var(--base-space-sm)}:host([full]){display:block;width:100%;margin-right:0}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host label{height:var(--base-radio-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse;font-size:var(--hw-font-size-small);position:relative;line-height:1.5}:host([full]) label{display:-webkit-box;display:flex}:host [part=indicator]{display:inline-block;position:relative;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host [part=label]{display:inline-block}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=input-field]:hover:not([disabled]):not(:checked)~[part=indicator]{background-color:var(--base-color-ui-lighter)}:host [part=input-field]:checked~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:checked~[part=indicator]:after{content:"";position:absolute;width:60%;height:60%;border-radius:50%;top:50%;left:50%;-webkit-transform:translateY(-50%) translateX(-50%);transform:translateY(-50%) translateX(-50%);background:var(--base-color-focus)}:host [part=input-field]:focus~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:disabled~[part=indicator]{border-color:var(--base-color-ui-lighter);background-color:transparent;cursor:not-allowed}`;
 
   class BaseRadio extends LitElement {
     constructor() {
@@ -23149,6 +23149,9 @@ var global = arguments[3];
 
           case "div":
             return html`<div><slot></slot></div>`;
+
+          default:
+            return html`<p><slot></slot></p>`;
         }
       }
     }
@@ -23159,9 +23162,60 @@ var global = arguments[3];
     customElements.define("base-text", BaseText);
   }
 
+  var styles$d = css`:host{max-width:var(--base-container);display:block}:host([center]){margin:0 auto}:host([size=xs]){max-width:var(--base-container-xs)}:host([size=sm]){max-width:var(--base-container-sm)}:host([size=md]){max-width:var(--base-container-md)}:host([size=lg]){max-width:var(--base-container-lg)}:host([size=xl]){max-width:var(--base-container-xl)}`;
+
+  class BaseContainer extends LitElement {
+    constructor() {
+      super();
+      /**
+       * Center  container
+       * @type {Boolean}
+       * @attr
+       */
+
+      this.center;
+      /**
+       * Width of container
+       * @type {"xs"|"sm"|"md"|"lg"|"xl"}
+       * @attr
+       */
+
+      this.size;
+    }
+
+    static get properties() {
+      return {
+        center: {
+          type: Boolean
+        },
+        size: {
+          type: String
+        }
+      };
+    }
+
+    static get styles() {
+      return [styles$d, sharedStyles];
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+    }
+
+    render() {
+      return html`<slot></slot>`;
+    }
+
+  }
+
+  if (!customElements.get("base-container")) {
+    customElements.define("base-container", BaseContainer);
+  }
+
   exports.BaseBox = BaseBox;
   exports.BaseButton = BaseButton;
   exports.BaseCheckbox = BaseCheckbox;
+  exports.BaseContainer = BaseContainer;
   exports.BaseFlex = BaseFlex;
   exports.BaseGrid = BaseGrid;
   exports.BaseGridItem = BaseGridItem;
@@ -34941,7 +34995,7 @@ exports.default = _default;
                   "router-link",
                   {
                     staticClass: "header__nav-item",
-                    attrs: { to: "/components" },
+                    attrs: { to: "/components/Container" },
                     nativeOn: {
                       click: function($event) {
                         _vm.showMenu = false
@@ -35230,13 +35284,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   components: {
     Page: _Page.default
@@ -35267,30 +35314,30 @@ exports.default = _default;
     { staticClass: "landing" },
     [
       _c(
-        "base-grid",
-        { attrs: { columns: "12", gutter: "md", "gutter-md": "xl" } },
+        "base-container",
+        { attrs: { size: "md" } },
         [
+          _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
+            _c("b", [_vm._v("Base Elements")]),
+            _vm._v(
+              " is a free collection of essential UI components for\n      any web application\n    "
+            )
+          ]),
+          _vm._v(" "),
+          _c("base-text", { staticClass: "lead", attrs: { tag: "p" } }, [
+            _vm._v("\n      Components that work in\n      "),
+            _c("b", [_vm._v("React")]),
+            _vm._v(",\n      "),
+            _c("b", [_vm._v("Vue")]),
+            _vm._v(",\n      "),
+            _c("b", [_vm._v("Angular")]),
+            _vm._v(", or any other framwork.\n    ")
+          ]),
+          _vm._v(" "),
           _c(
-            "base-grid-item",
-            { attrs: { sm: "12", md: "5" } },
+            "base-box",
+            { attrs: { "padding-y": "md" } },
             [
-              _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
-                _c("b", [_vm._v("Base Elements")]),
-                _vm._v(
-                  " is a free collection of essential UI components for\n      any web application\n    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("base-text", { staticClass: "lead", attrs: { tag: "p" } }, [
-                _vm._v("\n      Components that work in\n      "),
-                _c("b", [_vm._v("React")]),
-                _vm._v(", "),
-                _c("b", [_vm._v("Vue")]),
-                _vm._v(", "),
-                _c("b", [_vm._v("Angular")]),
-                _vm._v(", or any other framwork.\n    ")
-              ]),
-              _vm._v(" "),
               _c(
                 "router-link",
                 {
@@ -35300,7 +35347,7 @@ exports.default = _default;
                     type: "primary"
                   }
                 },
-                [_vm._v("\n    Get Started\n    ")]
+                [_vm._v("Get Started")]
               ),
               _vm._v(" "),
               _c(
@@ -35308,141 +35355,147 @@ exports.default = _default;
                 {
                   attrs: {
                     tag: "base-button",
-                    outline: "",
-                    to: "/components",
-                    type: "primary"
+                    to: "/components/Container",
+                    type: "primary",
+                    outline: ""
                   }
                 },
-                [_vm._v("\n      Components\n    ")]
+                [_vm._v("Components")]
               )
             ],
             1
-          ),
-          _vm._v(" "),
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "base-container",
+        { attrs: { size: "sm" } },
+        [
           _c(
-            "base-grid-item",
-            { attrs: { sm: "12", md: "7" } },
+            "base-box",
+            {
+              attrs: {
+                depth: "sm",
+                "margin-y": "xl",
+                "padding-y": "lg",
+                "padding-x": "lg"
+              }
+            },
             [
+              _c("base-text", { attrs: { tag: "h2" } }, [
+                _vm._v("Try them out")
+              ]),
+              _vm._v(" "),
               _c(
-                "base-box",
-                { attrs: { depth: "md", padding: "lg", radius: "lg" } },
+                "base-grid",
+                { attrs: { columns: "2" } },
                 [
-                  _c("base-text", { attrs: { tag: "h2" } }, [
-                    _vm._v("Examples")
-                  ]),
-                  _vm._v(" "),
                   _c(
-                    "base-grid",
-                    { attrs: { columns: "2" } },
+                    "base-grid-item",
+                    { attrs: { sm: "1" } },
                     [
                       _c(
-                        "base-grid-item",
-                        { attrs: { sm: "6" } },
+                        "base-select",
+                        { attrs: { placeholder: "Select an option" } },
                         [
-                          _c(
-                            "base-select",
-                            { attrs: { placeholder: "Select an option" } },
-                            [
-                              _c("base-option", {
-                                attrs: { label: "Option 1" }
-                              }),
-                              _vm._v(" "),
-                              _c("base-option", {
-                                attrs: { label: "Option 2" }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        [
-                          _c("base-checkbox", { attrs: { size: "sm" } }, [
-                            _vm._v("Option 1")
-                          ]),
+                          _c("base-option", { attrs: { label: "Option 1" } }),
                           _vm._v(" "),
-                          _c("base-checkbox", { attrs: { size: "sm" } }, [
-                            _vm._v("Option 2")
-                          ])
+                          _c("base-option", { attrs: { label: "Option 2" } })
                         ],
                         1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "base-grid-item",
+                    { attrs: { sm: "1" } },
+                    [
+                      _c("base-checkbox", { attrs: { size: "sm" } }, [
+                        _vm._v("Option 1")
+                      ]),
+                      _vm._v(" "),
+                      _c("base-checkbox", { attrs: { size: "sm" } }, [
+                        _vm._v("Option 2")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "base-grid-item",
+                    [
+                      _c("base-input", {
+                        attrs: { placeholder: "Regular input" }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "base-grid-item",
+                    { attrs: { sm: "1" } },
+                    [
+                      _c(
+                        "base-radio",
+                        { attrs: { size: "sm", name: "radio" } },
+                        [_vm._v("Option 1")]
                       ),
                       _vm._v(" "),
                       _c(
-                        "base-grid-item",
-                        [
-                          _c("base-input", {
-                            attrs: { placeholder: "Regular input" }
-                          })
-                        ],
-                        1
+                        "base-radio",
+                        { attrs: { size: "sm", name: "radio" } },
+                        [_vm._v("Option 2")]
                       ),
                       _vm._v(" "),
                       _c(
-                        "base-grid-item",
+                        "base-radio",
+                        { attrs: { size: "sm", name: "radio" } },
+                        [_vm._v("Option 3")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "base-grid-item",
+                    { attrs: { sm: "1" } },
+                    [
+                      _c(
+                        "base-modal",
+                        {
+                          attrs: { open: _vm.modalOpen },
+                          on: {
+                            toggle: function(e) {
+                              return (_vm.modalOpen = e.open)
+                            }
+                          }
+                        },
                         [
                           _c(
-                            "base-radio",
-                            { attrs: { size: "sm", name: "radio" } },
-                            [_vm._v("Option 1")]
+                            "header",
+                            { attrs: { slot: "header" }, slot: "header" },
+                            [_vm._v("Title")]
                           ),
                           _vm._v(" "),
-                          _c(
-                            "base-radio",
-                            { attrs: { size: "sm", name: "radio" } },
-                            [_vm._v("Option 2")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "base-radio",
-                            { attrs: { size: "sm", name: "radio" } },
-                            [_vm._v("Option 3")]
-                          )
-                        ],
-                        1
+                          _c("div", [_vm._v("Content")])
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
-                        "base-grid-item",
-                        [
-                          _c(
-                            "base-modal",
-                            {
-                              attrs: { open: _vm.modalOpen },
-                              on: {
-                                toggle: function(e) {
-                                  return (_vm.modalOpen = e.open)
-                                }
-                              }
-                            },
-                            [
-                              _c(
-                                "header",
-                                { attrs: { slot: "header" }, slot: "header" },
-                                [_vm._v("Title")]
-                              ),
-                              _vm._v(" "),
-                              _c("div", [_vm._v("Content")])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "base-button",
-                            {
-                              attrs: { size: "sm", type: "primary" },
-                              on: {
-                                click: function($event) {
-                                  _vm.modalOpen = true
-                                }
-                              }
-                            },
-                            [_vm._v("Show modal")]
-                          )
-                        ],
-                        1
+                        "base-button",
+                        {
+                          attrs: { size: "sm", type: "primary" },
+                          on: {
+                            click: function($event) {
+                              _vm.modalOpen = true
+                            }
+                          }
+                        },
+                        [_vm._v("Show modal")]
                       )
                     ],
                     1
@@ -35452,9 +35505,7 @@ exports.default = _default;
               )
             ],
             1
-          ),
-          _vm._v(" "),
-          _c("base-grid")
+          )
         ],
         1
       )
@@ -37350,11 +37401,6 @@ module.exports = marked;
 },{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./InlineLexer.js":"node_modules/marked/src/InlineLexer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
-    "path": "../lib/src/components/base-box/base-box.md",
-    "name": "Box",
-    "category": "Elements",
-    "content": "\n# Button\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
     "category": "Elements",
@@ -37365,20 +37411,25 @@ module.exports = {
     "category": "Form",
     "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "category": "Layout",
+    "content": "\n# Container\n\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid #eee\">Container</base-container>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
     "category": "Layout",
     "content": "\n# Flex\n\nFlex\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-grid/base-grid.md",
-    "name": "Grid",
-    "category": "Layout",
-    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-input/base-input.md",
     "name": "Input",
     "category": "Form",
     "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-grid/base-grid.md",
+    "name": "Grid",
+    "category": "Layout",
+    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
@@ -37395,10 +37446,20 @@ module.exports = {
     "category": "Form",
     "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-text/base-text.md",
+    "name": "Text",
+    "category": "Elements",
+    "content": "\n# Text\n\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text>Container</base-text>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
     "category": "Form",
     "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-box/base-box.md",
+    "name": "Box",
+    "category": "Elements",
+    "content": "\n# Box\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -37793,7 +37854,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52537" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55978" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

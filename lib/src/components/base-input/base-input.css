@@ -1,6 +1,6 @@
 :host {
   --base-input-height: var(--base-size-md);
-  --base-input-border-radius: var(--base-border-radius-sm);
+  --base-input-border-radius: none;
   --base-input-box-shadow: none;
 }
 

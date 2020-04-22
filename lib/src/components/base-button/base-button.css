@@ -2,7 +2,7 @@
   --base-button-padding: 0 var(--base-space-md);
   --base-button-bg-color: var(--base-color-ui-lighter);
   --base-button-border: none;
-  --base-button-border-radius: var(--base-border-radius-sm);
+  --base-button-border-radius: none;
   --base-button-font-size: var(--base-font-size-sm);
   --base-button-text-color: var(--base-font-color);
   --base-button-box-shadow: 0;

@@ -34,7 +34,7 @@
             >Installation</router-link>
             <router-link
               v-on:click.native="showMenu = false"
-              to="/components"
+              to="/components/Container"
               class="header__nav-item"
             >Components</router-link>
             <router-link
@@ -156,7 +156,7 @@ export default {
   color: #1a202c;
 }
 
-.header__nav-item.router-link-exact-active {
+.header__nav-item.router-link-active {
   color: #1a202c;
 }
 

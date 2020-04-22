@@ -258,6 +258,32 @@
       ]
     },
     {
+      "name": "base-container",
+      "path": "./../../lib/src/components/base-container/base-container.js",
+      "attributes": [
+        {
+          "name": "center",
+          "type": "boolean"
+        },
+        {
+          "name": "size",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "center",
+          "attribute": "center",
+          "type": "boolean"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string"
+        }
+      ]
+    },
+    {
       "name": "base-flex",
       "path": "./../../lib/src/components/base-flex/base-flex.js",
       "attributes": [
