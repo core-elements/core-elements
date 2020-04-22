@@ -50,6 +50,7 @@ export default {
   }
 
   .sidebar {
+    background: transparent;
     display: block;
     width: 22%;
     height: max-content;
