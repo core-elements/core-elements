@@ -34,6 +34,11 @@
             >Installation</router-link>
             <router-link
               v-on:click.native="showMenu = false"
+              to="/getting-started"
+              class="header__nav-item"
+            >Getting started</router-link>
+            <router-link
+              v-on:click.native="showMenu = false"
               to="/components/Container"
               class="header__nav-item"
             >Components</router-link>

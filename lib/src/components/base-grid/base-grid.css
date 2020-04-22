@@ -1,46 +1,46 @@
 :host {
   --base-grid-columns: 12;
-  --base-grid-gutter: var(--base-space-md);
+  --base-grid-gap: var(--base-space-md);
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(var(--base-grid-columns), 1fr);
-  grid-row-gap: var(--base-grid-gutter);
-  grid-column-gap: var(--base-grid-gutter);
+  grid-row-gap: var(--base-grid-gap);
+  grid-column-gap: var(--base-grid-gap);
   margin: 0;
 }
 
 @each $i in sm, md, lg, xl {
-  :host([gutter="$(i)"]) {
-    --base-grid-gutter: var(--base-space-$(i));
+  :host([gap="$(i)"]) {
+    --base-grid-gap: var(--base-space-$(i));
   }
 }
 
 @each $i in sm, md, lg, xl {
-  :host([gutter-sm="$(i)"]) {
-    --base-grid-gutter: var(--base-space-$(i));
+  :host([gap-sm="$(i)"]) {
+    --base-grid-gap: var(--base-space-$(i));
   }
 }
 
 @media (min-width: 800px) {
   @each $i in sm, md, lg, xl {
-    :host([gutter-md="$(i)"]) {
-      --base-grid-gutter: var(--base-space-$(i));
+    :host([gap-md="$(i)"]) {
+      --base-grid-gap: var(--base-space-$(i));
     }
   }
 }
 
 @media (min-width: 1200px) {
   @each $i in sm, md, lg, xl {
-    :host([gutter-lg="$(i)"]) {
-      --base-grid-gutter: var(--base-space-$(i));
+    :host([gap-lg="$(i)"]) {
+      --base-grid-gap: var(--base-space-$(i));
     }
   }
 }
 
 @media (min-width: 1400px) {
   @each $i in sm, md, lg, xl {
-    :host([gutter-xl="$(i)"]) {
-      --base-grid-gutter: var(--base-space-$(i));
+    :host([gap-xl="$(i)"]) {
+      --base-grid-gap: var(--base-space-$(i));
     }
   }
 }

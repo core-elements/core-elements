@@ -2,6 +2,8 @@
   --base-input-height: var(--base-size-md);
   --base-input-border-radius: none;
   --base-input-box-shadow: none;
+  --base-input-placeholder-color: var(--base-color-ui);
+  --base-input-font-size: var(--base-font-size-sm);
 }
 
 :host {
@@ -51,6 +53,11 @@
   outline: 0;
   border: 0;
   padding: 0 var(--base-space-md);
+}
+
+:host [part="input-field"]::placeholder {
+  font-size: var(--base-input-font-size);
+  color: var(--base-input-placeholder-color);
 }
 
 ::slotted([slot="help"]) {

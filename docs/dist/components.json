@@ -548,32 +548,32 @@
       "path": "./../../lib/src/components/base-grid/base-grid.js",
       "attributes": [
         {
-          "name": "gutter",
-          "description": "Grid gutter",
+          "name": "gap",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"sm\""
         },
         {
-          "name": "gutterSm",
-          "description": "Grid gutter",
+          "name": "gapSm",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "gutterMd",
-          "description": "Grid gutter",
+          "name": "gapMd",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "gutterLg",
-          "description": "Grid gutter",
+          "name": "gapLg",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "gutterXl",
-          "description": "Grid gutter",
+          "name": "gapXl",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
@@ -585,37 +585,37 @@
       ],
       "properties": [
         {
-          "name": "gutter",
-          "attribute": "gutter",
-          "description": "Grid gutter",
+          "name": "gap",
+          "attribute": "gap",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"sm\""
         },
         {
-          "name": "gutterSm",
-          "attribute": "gutterSm",
-          "description": "Grid gutter",
+          "name": "gapSm",
+          "attribute": "gapSm",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "gutterMd",
-          "attribute": "gutterMd",
-          "description": "Grid gutter",
+          "name": "gapMd",
+          "attribute": "gapMd",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "gutterLg",
-          "attribute": "gutterLg",
-          "description": "Grid gutter",
+          "name": "gapLg",
+          "attribute": "gapLg",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "gutterXl",
-          "attribute": "gutterXl",
-          "description": "Grid gutter",
+          "name": "gapXl",
+          "attribute": "gapXl",
+          "description": "Grid gap",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },

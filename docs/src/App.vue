@@ -25,6 +25,9 @@ export default {
 </script>
 
 <style>
+@import "./styles/github-markdown.css";
+@import "../../lib/src/components/base-knobs/shades-of-purple.css";
+
 html {
   box-sizing: border-box;
 }
