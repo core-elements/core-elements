@@ -6,6 +6,38 @@
   display: inline-block;
 }
 
+:host([tag="h1"]) > *,
+:host([look="h1"]) > * {
+  font-size: var(--base-font-size-xl);
+}
+
+:host([tag="h2"]) > *,
+:host([look="h2"]) > * {
+  font-size: var(--base-font-size-lg);
+}
+
+:host([tag="h3"]) > *,
+:host([look="h3"]) > * {
+  font-size: var(--base-font-size-md);
+}
+
+:host([tag="h4"]) > *,
+:host([look="h4"]) > * {
+  font-size: var(--base-font-size-sm);
+}
+
+:host([tag="h5"]) > *,
+:host([look="h5"]) > * {
+  font-size: var(--base-font-size-xs);
+}
+
+:host([tag="h6"]) > *,
+:host([look="h6"]) > *,
+:host([tag="small"]) > *,
+:host([look="small"]) > * {
+  font-size: var(--base-font-size-xs);
+}
+
 :host([tag="h1"]:not([inline])),
 :host([tag="h2"]:not([inline])),
 :host([tag="h3"]:not([inline])),
@@ -74,7 +106,7 @@
   color: var(--base-color-font);
 }
 
-:host([look="lead"]) p {
+:host([look="lead"]) > * {
   font-size: 1.4rem;
   line-height: 32px;
   font-weight: 300;

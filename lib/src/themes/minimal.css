@@ -49,12 +49,11 @@
   --base-space-lg: 32px;
   --base-space-xl: 64px;
 
-  --base-font-size-xs: 14px;
-  --base-font-size-sm: 16px;
-  --base-font-size-md: 20px;
-  --base-font-size-lg: 26px;
-  --base-font-size-xl: 30px;
-  --base-font-size-xxl: 40px;
+  --base-font-size-xs: 0.83em;
+  --base-font-size-sm: 1em;
+  --base-font-size-md: 1.17em;
+  --base-font-size-lg: 1.5em;
+  --base-font-size-xl: 2em;
 
   --base-border-radius-xs: 2px;
   --base-border-radius-sm: 4px;
