@@ -24,22 +24,16 @@
           :key="name"
         >
           <base-text tag="h2">{{ name }}</base-text>
-          <base-grid columns="1" gap="lg">
-            <base-grid-item sm="1" :key="i" v-for="(page, i) in menuGroup">
-              <router-link
-                tag="base-box"
-                clickable
-                full
-                depth="md"
-                radius="md"
-                padding="lg"
-                :to="`/components/${page.name}`"
-              >
-                <base-text tag="h3">{{ page.name }}</base-text>
-                <base-text tag="small">{{ page.desc }}</base-text>
-              </router-link>
-            </base-grid-item>
-          </base-grid>
+          <base-box margin-y="xl">
+            <base-grid columns="1" gap="lg">
+              <base-grid-item sm="1" :key="i" v-for="(page, i) in menuGroup">
+                <router-link tag="base-box" clickable full :to="`/components/${page.name}`">
+                  <base-text tag="h3">{{ page.name }}</base-text>
+                  <base-text tag="small">{{ page.desc }}</base-text>
+                </router-link>
+              </base-grid-item>
+            </base-grid>
+          </base-box>
         </base-grid-item>
       </base-grid>
     </base-box>

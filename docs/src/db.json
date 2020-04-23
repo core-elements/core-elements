@@ -11,7 +11,8 @@
       "path": "../lib/src/components/base-checkbox/base-checkbox.md",
       "name": "Checkbox",
       "category": "Form",
-      "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n",
+      "desc": "A checkbox element"
     },
     {
       "path": "../lib/src/components/base-box/base-box.md",

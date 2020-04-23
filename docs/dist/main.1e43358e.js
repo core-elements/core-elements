@@ -35672,7 +35672,8 @@ module.exports = {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
     "category": "Form",
-    "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n",
+    "desc": "A checkbox element"
   }, {
     "path": "../lib/src/components/base-box/base-box.md",
     "name": "Box",
@@ -35749,12 +35750,6 @@ var _db = require("../db.json");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -35883,41 +35878,45 @@ exports.default = _default;
                   ]),
                   _vm._v(" "),
                   _c(
-                    "base-grid",
-                    { attrs: { columns: "1", gap: "lg" } },
-                    _vm._l(menuGroup, function(page, i) {
-                      return _c(
-                        "base-grid-item",
-                        { key: i, attrs: { sm: "1" } },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              attrs: {
-                                tag: "base-box",
-                                clickable: "",
-                                full: "",
-                                depth: "md",
-                                radius: "md",
-                                padding: "lg",
-                                to: "/components/" + page.name
-                              }
-                            },
+                    "base-box",
+                    { attrs: { "margin-y": "xl" } },
+                    [
+                      _c(
+                        "base-grid",
+                        { attrs: { columns: "1", gap: "lg" } },
+                        _vm._l(menuGroup, function(page, i) {
+                          return _c(
+                            "base-grid-item",
+                            { key: i, attrs: { sm: "1" } },
                             [
-                              _c("base-text", { attrs: { tag: "h3" } }, [
-                                _vm._v(_vm._s(page.name))
-                              ]),
-                              _vm._v(" "),
-                              _c("base-text", { attrs: { tag: "small" } }, [
-                                _vm._v(_vm._s(page.desc))
-                              ])
+                              _c(
+                                "router-link",
+                                {
+                                  attrs: {
+                                    tag: "base-box",
+                                    clickable: "",
+                                    full: "",
+                                    to: "/components/" + page.name
+                                  }
+                                },
+                                [
+                                  _c("base-text", { attrs: { tag: "h3" } }, [
+                                    _vm._v(_vm._s(page.name))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("base-text", { attrs: { tag: "small" } }, [
+                                    _vm._v(_vm._s(page.desc))
+                                  ])
+                                ],
+                                1
+                              )
                             ],
                             1
                           )
-                        ],
+                        }),
                         1
                       )
-                    }),
+                    ],
                     1
                   )
                 ],
