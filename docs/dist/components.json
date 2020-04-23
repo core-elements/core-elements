@@ -1613,8 +1613,9 @@
           "default": "\"\""
         },
         {
-          "name": "type",
-          "type": "string",
+          "name": "look",
+          "description": "Button look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
           "default": "\"p\""
         },
         {
@@ -1632,9 +1633,10 @@
           "default": "\"\""
         },
         {
-          "name": "type",
-          "attribute": "type",
-          "type": "string",
+          "name": "look",
+          "attribute": "look",
+          "description": "Button look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
           "default": "\"p\""
         },
         {

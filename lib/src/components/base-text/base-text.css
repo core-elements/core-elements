@@ -16,12 +16,12 @@
   width: 100%;
 }
 
-:host([type="h1"]:not([inline])),
-:host([type="h2"]:not([inline])),
-:host([type="h3"]:not([inline])),
-:host([type="h4"]:not([inline])),
-:host([type="h5"]:not([inline])),
-:host([type="h6"]:not([inline])) {
+:host([look="h1"]:not([inline])),
+:host([look="h2"]:not([inline])),
+:host([look="h3"]:not([inline])),
+:host([look="h4"]:not([inline])),
+:host([look="h5"]:not([inline])),
+:host([look="h6"]:not([inline])) {
   display: block;
   width: 100%;
 }
@@ -74,7 +74,7 @@
   color: var(--base-color-font);
 }
 
-:host([type="lead"]) p {
+:host([look="lead"]) p {
   font-size: 1.4rem;
   line-height: 32px;
   font-weight: 300;

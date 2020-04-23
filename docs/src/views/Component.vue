@@ -15,8 +15,8 @@
       </nav>
     </div>
     <main class="main">
-      <base-text type="h1">{{component.name}}</base-text>
-      <base-text type="lead">{{component.desc}}</base-text>
+      <base-text tag="h1">{{component.name}}</base-text>
+      <base-text tag="p" look="lead">{{component.desc}}</base-text>
       <base-box margin-y="xl" v-html="html"></base-box>
     </main>
   </SidebarLayout>
