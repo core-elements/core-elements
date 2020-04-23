@@ -38,12 +38,10 @@
   line-height: 1.5;
 }
 
-:host([full]) label {
-  display: flex;
-}
-
-:host [part="indicator"] {
-  display: inline-block;
+:host [part="box"] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin-right: var(--base-space-xs);
   border: 2px solid var(--base-color-ui-light);
@@ -56,6 +54,7 @@
 
 :host [part="label"] {
   display: inline-block;
+  margin-left: var(--base-space-xs);
 }
 
 :host [part="input-field"] {
@@ -65,25 +64,18 @@
   vertical-align: middle;
 }
 
-:host
-  [part="input-field"]:hover:not([disabled]):not(:checked)
-  ~ [part="indicator"] {
+:host [part="input-field"]:hover:not([disabled]):not(:checked) ~ [part="box"] {
   background-color: var(--base-color-ui-lighter);
 }
 
-:host [part="input-field"]:checked ~ [part="indicator"] {
+:host [part="input-field"]:checked ~ [part="box"] {
   border-color: var(--base-color-focus);
 }
 
-:host [part="input-field"]:checked ~ [part="indicator"]:after {
-  content: "";
-  position: absolute;
+:host [part="input-field"]:checked ~ [part="box"] [part="indicator"] i {
+  border-radius: 50%;
   width: 60%;
   height: 60%;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
   background: var(--base-color-focus);
 }
 
