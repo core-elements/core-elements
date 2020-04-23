@@ -20923,12 +20923,14 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;vertical-align:top;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;vertical-align:top;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;max-width:100%;font-size:var(--base-select-font-size);height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([multiple]){min-height:var(--base-select-min-height);height:auto}:host([full]){display:-webkit-box;display:flex}[hidden]{display:none !important}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:var(--base-color-ui)}:host([focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
     constructor() {
-      super(); // placeholder input value
+      super(); // full width
+
+      this.full = false; // placeholder input value
 
       this.placeholder = ""; // support multiple select
 
@@ -20942,7 +20944,7 @@ var global = arguments[3];
 
       this.disabled = false; // input is focused
 
-      this.isFocused = false; // disable default filter if you want you own custom filtering of the options
+      this.focused = false; // disable default filter if you want you own custom filtering of the options
 
       this.disableFilter = false; // clear all selected values
 
@@ -20997,6 +20999,9 @@ var global = arguments[3];
 
     static get properties() {
       return {
+        full: {
+          type: Boolean
+        },
         ariaLabel: {
           type: String,
           attribute: "aria-label"
@@ -21011,10 +21016,9 @@ var global = arguments[3];
         value: {
           type: String
         },
-        isFocused: {
+        focused: {
           type: Boolean,
-          reflect: true,
-          attribute: "is-focused"
+          reflect: true
         },
         multiple: {
           type: Boolean
@@ -21082,7 +21086,13 @@ var global = arguments[3];
     }
 
     get value() {
-      return this._value;
+      if (this._value) {
+        return this._value;
+      } else if (this.multiple) {
+        return this.allOptions.filter(o => o.hasAttribute("selected")).map(o => o.value).toString();
+      } else {
+        return this._selectedEl ? this._selectedEl.value : "";
+      }
     }
 
     get _selectedElements() {
@@ -21222,7 +21232,13 @@ var global = arguments[3];
     _addOption(optionEl) {
       // reset value
       this.inputValue = "";
-      this.value = this.value.concat("," + optionEl.value);
+
+      if (optionEl.hasAttribute("selected")) {
+        this._removeOption(optionEl);
+      } else {
+        this.value = this.value.concat("," + optionEl.value);
+      }
+
       this.focus();
       this.showSuggestions = this.menuOpenOnSelect ? true : false;
       this.requestUpdate();
@@ -21246,7 +21262,7 @@ var global = arguments[3];
     }
 
     _handleFocusEvent() {
-      this.isFocused = true;
+      this.focused = true;
       this.showSuggestions = true;
     }
 
@@ -21258,7 +21274,7 @@ var global = arguments[3];
           return;
         }
 
-        this.isFocused = false;
+        this.focused = false;
         this.inputValue = "";
         this.showSuggestions = false;
       }, 100);
@@ -23254,7 +23270,7 @@ var global = arguments[3];
     customElements.define("base-container", BaseContainer);
   }
 
-  var styles$e = css`:host{--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:4px;--base-toggle-indicator-size:calc(var(--base-toggle-box-size) - var(--base-toggle-indicator-margin)*2);--base-toggle-icon-size:calc(var(--base-toggle-indicator-size)*0.8);vertical-align:top;cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;height:var(--base-toggle-height)}:host([full]){width:100%}:host([full]),:host label{display:-webkit-box;display:flex}:host label{-webkit-box-align:center;align-items:center}:host input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host input:focus+[part=box]{box-shadow:0 0 0 2px var(--base-color-focus)}[part=box]{position:relative;background:var(--base-color-ui-light);border:2px solid var(--base-color-ui-light);border-radius:300px;display:inline-block;-webkit-transition:all .2s ease;transition:all .2s ease;height:var(--base-toggle-box-size);width:calc(var(--base-toggle-box-size)*1.8);flex-basis:calc(var(--base-toggle-box-size)*1.8);flex-shrink:0;-webkit-box-flex:0;flex-grow:0}:host:hover [part=box]{background:var(--base-color-ui-dark)}:host input:checked+[part=box]{border-color:var(--base-color-focus);background:var(--base-color-focus)}:host:hover input:checked+[part=box]{background:var(--base-color-focus-light)}[part=box] [part=on]{left:var(--base-toggle-indicator-margin)}[part=box] [part=off],[part=box] [part=on]{text-align:center;color:var(--base-color-white);position:absolute;width:var(--base-toggle-icon-size);height:var(--base-toggle-icon-size);border-radius:50%;display:block;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);content:""}[part=box] [part=off]{right:var(--base-toggle-indicator-margin)}@-webkit-keyframes rotate{0%{-webkit-transform:translateY(-50%) rotate(0);transform:translateY(-50%) rotate(0)}to{-webkit-transform:translateY(-50%) rotate(1turn);transform:translateY(-50%) rotate(1turn)}}@keyframes rotate{0%{-webkit-transform:translateY(-50%) rotate(0);transform:translateY(-50%) rotate(0)}to{-webkit-transform:translateY(-50%) rotate(1turn);transform:translateY(-50%) rotate(1turn)}}[part=indicator]{background:var(--base-color-white);position:absolute;left:var(--base-toggle-indicator-margin);top:50%;-webkit-transition:all .2s ease;transition:all .2s ease;-webkit-transform:translateY(-50%) translateX(0);transform:translateY(-50%) translateX(0);border-radius:50%;width:var(--base-toggle-indicator-size);height:var(--base-toggle-indicator-size)}:host input:checked+[part=box] [part=indicator]{left:calc(100% - var(--base-toggle-indicator-margin));-webkit-transform:translateY(-50%) translateX(-100%);transform:translateY(-50%) translateX(-100%)}[part=label]{padding-left:var(--base-space-md);font-weight:400}:host([size=sm]){--base-toggle-height:var(--base-size-sm);--base-toggle-box-size:var(--base-size-xs);--base-toggle-indicator-margin:4px}:host([size=md]){--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:4px}:host([size=lg]){--base-toggle-height:var(--base-size-lg);--base-toggle-box-size:var(--base-size-md);--base-toggle-indicator-margin:4px}`;
+  var styles$e = css`:host{--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:var(--base-space-xs);--base-toggle-indicator-size:calc(var(--base-toggle-box-size) - var(--base-toggle-indicator-margin)*2);--base-toggle-icon-size:calc(var(--base-toggle-indicator-size)*0.8);vertical-align:top;cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;height:var(--base-toggle-height)}:host([full]){width:100%}:host([full]),:host label{display:-webkit-box;display:flex}:host label{-webkit-box-align:center;align-items:center}:host input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host input:focus+[part=box]{box-shadow:0 0 0 2px var(--base-color-focus)}[part=box]{position:relative;background:var(--base-color-ui-light);border:2px solid var(--base-color-ui-light);border-radius:300px;display:inline-block;-webkit-transition:all .2s ease;transition:all .2s ease;height:var(--base-toggle-box-size);width:calc(var(--base-toggle-box-size)*1.8);flex-basis:calc(var(--base-toggle-box-size)*1.8);flex-shrink:0;-webkit-box-flex:0;flex-grow:0}:host:hover [part=box]{background:var(--base-color-ui-dark)}:host input:checked+[part=box]{border-color:var(--base-color-focus);background:var(--base-color-focus)}:host:hover input:checked+[part=box]{background:var(--base-color-focus-light)}[part=box] [part=on]{left:var(--base-toggle-indicator-margin)}[part=box] [part=off],[part=box] [part=on]{text-align:center;color:var(--base-color-white);position:absolute;width:var(--base-toggle-icon-size);height:var(--base-toggle-icon-size);border-radius:50%;display:block;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);content:""}[part=box] [part=off]{right:var(--base-toggle-indicator-margin)}@-webkit-keyframes rotate{0%{-webkit-transform:translateY(-50%) rotate(0);transform:translateY(-50%) rotate(0)}to{-webkit-transform:translateY(-50%) rotate(1turn);transform:translateY(-50%) rotate(1turn)}}@keyframes rotate{0%{-webkit-transform:translateY(-50%) rotate(0);transform:translateY(-50%) rotate(0)}to{-webkit-transform:translateY(-50%) rotate(1turn);transform:translateY(-50%) rotate(1turn)}}[part=indicator]{background:var(--base-color-white);position:absolute;left:var(--base-toggle-indicator-margin);top:50%;-webkit-transition:all .2s ease;transition:all .2s ease;-webkit-transform:translateY(-50%) translateX(0);transform:translateY(-50%) translateX(0);border-radius:50%;width:var(--base-toggle-indicator-size);height:var(--base-toggle-indicator-size)}:host input:checked+[part=box] [part=indicator]{left:calc(100% - var(--base-toggle-indicator-margin));-webkit-transform:translateY(-50%) translateX(-100%);transform:translateY(-50%) translateX(-100%)}[part=label]{padding-left:var(--base-space-md);font-weight:400}:host([size=sm]){--base-toggle-height:var(--base-size-sm);--base-toggle-box-size:var(--base-size-xs);--base-toggle-indicator-margin:4px}:host([size=md]){--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:4px}:host([size=lg]){--base-toggle-height:var(--base-size-lg);--base-toggle-box-size:var(--base-size-md);--base-toggle-indicator-margin:4px}`;
 
   class BaseToggle extends LitElement {
     constructor() {
@@ -35624,7 +35640,7 @@ exports.default = _default;
                             },
                             [
                               _c("base-option", {
-                                attrs: { label: "Option 1" }
+                                attrs: { selected: "", label: "Option 1" }
                               }),
                               _vm._v(" "),
                               _c("base-option", {
@@ -35771,7 +35787,7 @@ module.exports = {
     "name": "Input",
     "desc": "A input element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"call-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Auto Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  base-input [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  base-input [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  base-input[valid] .check {\n    display: block;\n  }\n  base-input[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input type=\"email\" autovalidate placeholder=\"Valid\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
@@ -35801,7 +35817,7 @@ module.exports = {
     "name": "Select",
     "desc": "Element with option for multiselect, search and more",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-toggle/base-toggle.md",
     "name": "Toggle",

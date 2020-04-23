@@ -20,11 +20,10 @@ category: Form
 
 <base-knobs hideTabs src="./components.json" name="base-input">
 <base-input type="tel" mask="+(00) 000 00 000" placeholder="Enter phone number">
-  <ion-icon style="font-size: 2rem" slot="prepend" name="call-outline"></ion-icon>
 </base-input>
 </base-knobs>
 
-## Auto Validation
+## Validation
 
 ### Required input
 
@@ -36,7 +35,7 @@ category: Form
 ### Simple email validation
 
 <base-knobs hideTabs src="./components.json" name="base-input">
-<base-input type="email" autovalidate placeholder="Enter email">
+<base-input required type="email" autovalidate placeholder="Enter email">
   <ion-icon style="font-size: 2rem" slot="prepend" name="mail-outline"></ion-icon>
 </base-input>
 </base-knobs>
@@ -45,22 +44,22 @@ category: Form
 
 <base-knobs hideTabs src="./components.json" name="base-input">
 <style>
-  base-input [slot="append"] {
+  .input-with-status [slot="append"] {
     font-size: 2em;
     display: none;
   }
-  base-input [slot="prepend"] {
+  .input-with-status [slot="prepend"] {
     font-size: 2em;
     display: block;
   }
-  base-input[valid] .check {
+  .input-with-status[valid] .check {
     display: block;
   }
-  base-input[invalid] .error {
+  .input-with-status[invalid] .error {
     display: block;
   }
 </style>
-<base-input type="email" autovalidate placeholder="Valid">
+<base-input class="input-with-status" type="email" autovalidate placeholder="Enter email">
   <ion-icon slot="prepend" name="mail-outline"></ion-icon>
   <ion-icon slot="append" class="check" name="checkmark-outline"></ion-icon>
   <ion-icon slot="append" class="error" name="alert-circle-outline"></ion-icon>

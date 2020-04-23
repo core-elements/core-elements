@@ -41,7 +41,7 @@
             </base-grid-item>
             <base-grid-item sm="2" md="1">
               <base-select multiple placeholder="Multiple select">
-                <base-option label="Option 1"></base-option>
+                <base-option selected label="Option 1"></base-option>
                 <base-option label="Option 2"></base-option>
               </base-select>
             </base-grid-item>

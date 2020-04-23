@@ -21,16 +21,15 @@
 
 :host {
   vertical-align: top;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: between;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 100%;
   max-width: 100%;
   font-size: var(--base-select-font-size);
-  min-height: var(--base-select-min-height);
+  height: var(--base-select-min-height);
   padding: var(--base-select-padding);
   background-color: var(--base-color-white);
   border-width: var(--base-select-border-width);
@@ -40,15 +39,24 @@
   position: relative;
 }
 
+:host([multiple]) {
+  min-height: var(--base-select-min-height);
+  height: auto;
+}
+
+:host([full]) {
+  display: flex;
+}
+
 [hidden] {
   display: none !important;
 }
 
-:host(:hover:not([multiple]):not([is-focused])) {
+:host(:hover:not([multiple]):not([focused])) {
   --base-select-border-color: var(--base-color-ui);
 }
 
-:host([is-focused]) {
+:host([focused]) {
   box-shadow: 0px 0px 0px 1px var(--base-select-active-color);
   --base-select-border-color: var(--base-select-active-color);
 }

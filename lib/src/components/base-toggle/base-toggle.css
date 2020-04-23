@@ -1,7 +1,7 @@
 :host {
   --base-toggle-height: var(--base-size-md);
   --base-toggle-box-size: var(--base-size-sm);
-  --base-toggle-indicator-margin: 4px;
+  --base-toggle-indicator-margin: var(--base-space-xs);
   --base-toggle-indicator-size: calc(
     var(--base-toggle-box-size) - (var(--base-toggle-indicator-margin) * 2)
   );
