@@ -27,13 +27,13 @@ const router = new Router({
     },
     {
       path: "/components",
-      meta: { title: "Components", showInHeader: true, hasSidebar: true },
+      meta: { title: "Components", showInHeader: true, hasSidebar: false },
       component: Components,
     },
     {
       path: "/components/:element",
       component: Component,
-      meta: { title: "Components", hasSidebar: true },
+      meta: { title: "Select component", hasSidebar: true },
     },
     {
       path: "/installation",

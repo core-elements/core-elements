@@ -1174,6 +1174,10 @@ body {
 .content {
   max-width: 700px;
 }
+
+b {
+  color: #333;
+}
 .sidebar {
   top: 60px;
   left: 0;

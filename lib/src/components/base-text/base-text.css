@@ -16,16 +16,14 @@
   width: 100%;
 }
 
-:host h1,
-:host h2,
-:host h3,
-:host h4,
-:host h5,
-:host h6,
-:host p,
-:host small {
-  font-weight: inherit;
-  margin-top: 0;
+:host([type="h1"]:not([inline])),
+:host([type="h2"]:not([inline])),
+:host([type="h3"]:not([inline])),
+:host([type="h4"]:not([inline])),
+:host([type="h5"]:not([inline])),
+:host([type="h6"]:not([inline])) {
+  display: block;
+  width: 100%;
 }
 
 :host([inline]) h1,
@@ -35,7 +33,9 @@
 :host([inline]) h5,
 :host([inline]) h6,
 :host([inline]) p,
-:host([inline]) small {
+:host([inline]) small,
+:host([inline]) b,
+:host([inline]) i {
   display: inline-block;
 }
 
@@ -43,4 +43,40 @@
   :host([weight="$(i)"]) {
     font-weight: $(i);
   }
+}
+
+:host h1,
+:host h2,
+:host h3,
+:host h4,
+:host h5,
+:host h6,
+:host p,
+:host small,
+:host b,
+:host i {
+  font-weight: inherit;
+  margin-top: 0;
+}
+
+:host h1,
+:host h2,
+:host h3,
+:host h4,
+:host h5,
+:host h6,
+:host b {
+  color: var(--base-color-font-dark);
+}
+
+:host small,
+:host p {
+  color: var(--base-color-font);
+}
+
+:host([type="lead"]) p {
+  font-size: 1.4rem;
+  line-height: 32px;
+  font-weight: 300;
+  color: var(--base-color-font-light);
 }

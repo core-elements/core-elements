@@ -2,11 +2,7 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <router-link
-          v-on:click.native="$emit('toggle-sidebar')"
-          :to="`/components`"
-          >Overview</router-link
-        >
+        <router-link v-on:click.native="$emit('toggle-sidebar')" :to="`/components`">Overview</router-link>
         <div v-for="(menuGroup, name) in groupedComponents" :key="name">
           <label>{{ name }}</label>
           <router-link
@@ -14,13 +10,14 @@
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-            >{{ page.name }}</router-link
-          >
+          >{{ page.name }}</router-link>
         </div>
       </nav>
     </div>
     <main class="main">
-      <div v-html="html"></div>
+      <base-text type="h1">{{component.name}}</base-text>
+      <base-text type="lead">{{component.desc}}</base-text>
+      <base-box margin-y="xl" v-html="html"></base-box>
     </main>
   </SidebarLayout>
 </template>
@@ -35,12 +32,12 @@ export default {
   components: { SidebarLayout },
   data() {
     return {
-      components,
+      components
     };
   },
   computed: {
     component() {
-      return components.find((c) => c.name === this.$route.params.element);
+      return components.find(c => c.name === this.$route.params.element);
     },
     html() {
       return marked(this.component.content);
@@ -54,17 +51,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevComps, { ...comp }]
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: [],
+          Form: []
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>
 

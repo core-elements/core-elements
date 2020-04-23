@@ -2,12 +2,16 @@
   <Page>
     <base-container size="sm">
       <base-text tag="h1" weight="700" full>Components</base-text>
-      <base-text tag="p">
-        Ionic apps are made of high-level building blocks called Components,
-        which allow you to quickly construct the UI for your app. Ionic comes
-        stock with a number of components, including cards, lists, and tabs.
-        Once you’re familiar with the basics, refer to the API Index for a
-        complete list of each component and sub-component.
+      <base-text type="lead">
+        The library consists of only a few
+        <b>essential UI components</b> that work across all frameworks. They are flexible enough that you will be
+        able to style them to your needs, but also good enough looking that you
+        could use them out of the box.
+        <p>
+          If you're in a rush, and don't have time to style the components
+          youself, have a look at the available themes, or try our theme editor to
+          get the look you're after.
+        </p>
       </base-text>
     </base-container>
     <base-box margin-y="xl">
@@ -50,7 +54,7 @@ export default {
   components: { Page },
   data() {
     return {
-      components,
+      components
     };
   },
   computed: {
@@ -63,16 +67,16 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevComps, { ...comp }]
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: [],
+          Form: []
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>

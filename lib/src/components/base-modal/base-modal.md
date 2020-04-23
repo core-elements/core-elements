@@ -1,5 +1,6 @@
 ---
 name: Modal
+desc: A modal
 category: Elements
 ---
 

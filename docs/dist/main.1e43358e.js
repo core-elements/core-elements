@@ -23107,7 +23107,7 @@ var global = arguments[3];
     customElements.define("base-flex", BaseFlex);
   }
 
-  var styles$c = css`:host,:host([inline]){display:inline-block}:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host p,:host small{font-weight:inherit;margin-top:0}:host([inline]) h1,:host([inline]) h2,:host([inline]) h3,:host([inline]) h4,:host([inline]) h5,:host([inline]) h6,:host([inline]) p,:host([inline]) small{display:inline-block}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}`;
+  var styles$c = css`:host,:host([inline]){display:inline-block}:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])),:host([type=h1]:not([inline])),:host([type=h2]:not([inline])),:host([type=h3]:not([inline])),:host([type=h4]:not([inline])),:host([type=h5]:not([inline])),:host([type=h6]:not([inline])){display:block;width:100%}:host([inline]) b,:host([inline]) h1,:host([inline]) h2,:host([inline]) h3,:host([inline]) h4,:host([inline]) h5,:host([inline]) h6,:host([inline]) i,:host([inline]) p,:host([inline]) small{display:inline-block}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([type=lead]) p{font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
 
   class BaseText extends LitElement {
     constructor() {
@@ -23119,12 +23119,16 @@ var global = arguments[3];
        */
 
       this.tag = "";
+      this.type = "p";
       this.weight = "";
     }
 
     static get properties() {
       return {
         tag: {
+          type: String
+        },
+        type: {
           type: String
         },
         weight: {
@@ -23142,8 +23146,8 @@ var global = arguments[3];
     }
 
     render() {
-      if (this.tag) {
-        switch (this.tag) {
+      if (this.tag || this.type) {
+        switch (this.tag || this.type) {
           case "h1":
             return html`<h1><slot></slot></h1>`;
 
@@ -23168,11 +23172,20 @@ var global = arguments[3];
           case "small":
             return html`<small><slot></slot></small>`;
 
+          case "b":
+            return html`<b><slot></slot></b>`;
+
+          case "i":
+            return html`<i><slot></slot></i>`;
+
           case "span":
             return html`<span><slot></slot></span>`;
 
           case "div":
             return html`<div><slot></slot></div>`;
+
+          case "lead":
+            return html`<p><slot></slot></p>`;
 
           default:
             return html`<p><slot></slot></p>`;
@@ -35405,7 +35418,7 @@ exports.default = _default;
                 )
               ]),
               _vm._v(" "),
-              _c("base-text", { staticClass: "lead", attrs: { tag: "p" } }, [
+              _c("base-text", { attrs: { type: "lead" } }, [
                 _vm._v("\n        Components that work in\n        "),
                 _c("b", [_vm._v("React")]),
                 _vm._v(", "),
@@ -35653,7 +35666,8 @@ module.exports = {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
     "category": "Elements",
-    "content": "\n# Button\n\nA general button element\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n",
+    "desc": "A general button element"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
@@ -35662,54 +35676,63 @@ module.exports = {
   }, {
     "path": "../lib/src/components/base-box/base-box.md",
     "name": "Box",
-    "desc": "A little box that shows stuff",
+    "desc": "A general purpose box with padding, border, depth and more",
     "category": "Layout",
-    "content": "\n# Box\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-container/base-container.md",
     "name": "Container",
     "category": "Layout",
-    "content": "\n# Container\n\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n",
+    "desc": "An element to limit the width of your content"
   }, {
     "path": "../lib/src/components/base-input/base-input.md",
     "name": "Input",
     "category": "Form",
-    "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n",
+    "desc": "A input element"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
     "category": "Layout",
-    "content": "\n# Flex\n\nFlex\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n",
+    "desc": "Utility element to flex children"
   }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
     "category": "Layout",
-    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n",
+    "desc": "Grid system elements"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
     "category": "Form",
-    "content": "\n# Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
+    "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n",
+    "desc": "Input label"
   }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
     "category": "Elements",
-    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
+    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n",
+    "desc": "A modal"
   }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",
     "category": "Elements",
-    "content": "\n# Text\n\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text>Container</base-text>\n</base-knobs>\n"
+    "content": "\n# Text\n\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text>Container</base-text>\n</base-knobs>\n",
+    "desc": "A general purpose text element"
   }, {
     "path": "../lib/src/components/base-radio/base-radio.md",
     "name": "Radio",
     "category": "Form",
-    "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n</base-knobs>\n",
+    "desc": "Radio button"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
     "category": "Form",
-    "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n",
+    "desc": "Advanced select with option for multiple, search and more"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -35726,6 +35749,10 @@ var _db = require("../db.json");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
 //
 //
 //
@@ -35823,10 +35850,17 @@ exports.default = _default;
             _vm._v("Components")
           ]),
           _vm._v(" "),
-          _c("base-text", { attrs: { tag: "p" } }, [
+          _c("base-text", { attrs: { type: "lead" } }, [
+            _vm._v("\n      The library consists of only a few\n      "),
+            _c("b", [_vm._v("essential UI components")]),
             _vm._v(
-              "\n      Ionic apps are made of high-level building blocks called Components,\n      which allow you to quickly construct the UI for your app. Ionic comes\n      stock with a number of components, including cards, lists, and tabs.\n      Once you’re familiar with the basics, refer to the API Index for a\n      complete list of each component and sub-component.\n    "
-            )
+              " that work across all frameworks. They are flexible enough that you will be\n      able to style them to your needs, but also good enough looking that you\n      could use them out of the box.\n      "
+            ),
+            _c("p", [
+              _vm._v(
+                "\n        If you're in a rush, and don't have time to style the components\n        youself, have a look at the available themes, or try our theme editor to\n        get the look you're after.\n      "
+              )
+            ])
           ])
         ],
         1
@@ -37636,9 +37670,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -37742,9 +37773,25 @@ exports.default = _default;
       )
     ]),
     _vm._v(" "),
-    _c("main", { staticClass: "main" }, [
-      _c("div", { domProps: { innerHTML: _vm._s(_vm.html) } })
-    ])
+    _c(
+      "main",
+      { staticClass: "main" },
+      [
+        _c("base-text", { attrs: { type: "h1" } }, [
+          _vm._v(_vm._s(_vm.component.name))
+        ]),
+        _vm._v(" "),
+        _c("base-text", { attrs: { type: "lead" } }, [
+          _vm._v(_vm._s(_vm.component.desc))
+        ]),
+        _vm._v(" "),
+        _c("base-box", {
+          attrs: { "margin-y": "xl" },
+          domProps: { innerHTML: _vm._s(_vm.html) }
+        })
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -61460,14 +61507,14 @@ const router = new _vueRouter.default({
     meta: {
       title: "Components",
       showInHeader: true,
-      hasSidebar: true
+      hasSidebar: false
     },
     component: _Components.default
   }, {
     path: "/components/:element",
     component: _Component.default,
     meta: {
-      title: "Components",
+      title: "Select component",
       hasSidebar: true
     }
   }, {

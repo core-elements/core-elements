@@ -18,9 +18,9 @@
   --base-color-danger: hsl(var(--base-color-danger-hue), 100%, 40%);
   --base-color-danger-hover: hsl(var(--base-color-danger-hue), 100%, 30%);
 
-  --base-color-font: #333;
-  --base-color-font-light: #696969;
-  --base-color-font-dark: #000;
+  --base-color-font: #666;
+  --base-color-font-light: #888;
+  --base-color-font-dark: #333;
 
   --base-color-focus: #1f00ff;
   --base-color-focus-light: #d2daff;

@@ -1,9 +1,8 @@
 ---
 name: Grid
+desc: Grid system elements
 category: Layout
 ---
-
-# Grid
 
 <base-knobs src="./components.json" name="base-grid">
 <base-grid>

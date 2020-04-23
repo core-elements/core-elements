@@ -1,5 +1,6 @@
 ---
 name: Text
+desc: A general purpose text element
 category: Elements
 ---
 

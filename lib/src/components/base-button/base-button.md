@@ -1,11 +1,8 @@
 ---
 name: Button
+desc: A general button element
 category: Elements
 ---
-
-# Button
-
-A general button element
 
 <base-knobs src="./components.json" tab="props" name="base-button">
 <base-button>Button</base-button>

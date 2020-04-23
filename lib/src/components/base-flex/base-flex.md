@@ -1,11 +1,8 @@
 ---
 name: Flex
+desc: Utility element to flex children
 category: Layout
 ---
-
-# Flex
-
-Flex
 
 <base-knobs src="./components.json" tab="props" name="base-flex">
 <base-flex>

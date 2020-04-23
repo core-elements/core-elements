@@ -1,10 +1,8 @@
 ---
 name: Box
-desc: A little box that shows stuff
+desc: A general purpose box with padding, border, depth and more
 category: Layout
 ---
-
-# Box
 
 <base-knobs src="./components.json" name="base-box">
 <base-box padding="lg" depth="md">Box</base-box>

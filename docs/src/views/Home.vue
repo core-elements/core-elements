@@ -6,7 +6,7 @@
           <b>Base Elements</b> is a free collection of essential UI components
           for any web application
         </base-text>
-        <base-text tag="p" class="lead">
+        <base-text type="lead">
           Components that work in
           <b>React</b>, <b>Vue</b>, <b>Angular</b>, or any other framwork.
         </base-text>
@@ -97,5 +97,9 @@ export default {
 
 .content {
   max-width: 700px;
+}
+
+b {
+  color: #333;
 }
 </style>
