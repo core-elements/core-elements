@@ -1,0 +1,69 @@
+.ab-details {
+  display: block;
+  width: 100%;
+}
+
+.ab-details > .ab-details__summary {
+  outline: 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  color: var(--ab-color-ui-800);
+  padding: var(--ab-spacing-200) var(--ab-spacing-300);
+  padding-left: var(--ab-spacing-500); /* To avoid the left icon */
+  border-radius: var(--ab-border-radius-200);
+}
+
+.ab-details > .ab-details__summary:focus {
+  box-shadow: 0px 0px 0px 2px var(--ab-color-active-600);
+}
+
+.ab-details > .ab-details__summary:hover {
+  background: var(--ab-color-ui-200);
+}
+
+.ab-details[open] > .ab-details__summary {
+  background: var(--ab-color-ui-600);
+  color: white;
+}
+
+.ab-details > .ab-details__summary::-webkit-details-marker {
+  display: none;
+}
+
+.ab-details > .ab-details__summary:before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  left: var(--ab-spacing-100);
+  top: 50%;
+  transform: rotate(0deg) translateY(-50%);
+  transition: all 0.2s ease;
+  transform-origin: top;
+  background-position: left;
+  background-size: contain;
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M12 17.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L12 17.586zM8.707 9.707a1 1 0 1 1-1.414-1.414l4-4a1 1 0 0 1 1.414 0l4 4a1 1 0 1 1-1.414 1.414L12 6.414 8.707 9.707z" fill="rgb(151, 151, 151)"/></g></svg>');
+}
+
+.ab-details[open] > .ab-details__summary:before {
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8.707 19.707a1 1 0 1 1-1.414-1.414l4-4a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414L12 16.414l-3.293 3.293zM12 7.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L12 7.586z" fill="rgb(255,255,255)"/></g></svg>');
+}
+
+.ab-details > .ab-details__content {
+  backface-visibility: visible;
+  transform-origin: center top;
+  animation: fade-in 0.4s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: perspective(1500px) rotateX(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform-origin: center top;
+    transform: perspective(1500px) rotateX(0deg);
+  }
+}

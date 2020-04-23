@@ -3,6 +3,7 @@
 }
 
 :host {
+  vertical-align: top;
   cursor: pointer;
   display: inline-block;
   height: var(--base-radio-height);

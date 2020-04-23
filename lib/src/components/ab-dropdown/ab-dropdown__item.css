@@ -1,0 +1,17 @@
+.ab-dropdown__item {
+  cursor: pointer;
+  color: currentColor;
+  text-decoration: none;
+  text-align: left;
+  border: 0;
+  padding: var(--ab-spacing-200) var(--ab-spacing-300);
+  border-bottom: 1px solid var(--ab-color-ui-200);
+}
+
+.ab-dropdown__item:hover {
+  background-color: var(--ab-color-ui-100);
+}
+
+.ab-dropdown__item:active {
+  background-color: var(--ab-color-ui-200);
+}

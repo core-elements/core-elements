@@ -1,0 +1,55 @@
+.ab-list {
+  list-style: none;
+  margin: 0;
+  padding-left: var(--ab-spacing-400);
+  color: var(--ab-color-ui-800);
+}
+
+.ab-list--full {
+  padding-left: 0;
+}
+
+.ab-list--inside {
+  list-style-position: inside;
+}
+
+.ab-list--bullets {
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" ><circle cx="9" cy="11"  r="3" fill="currentColor" /></svg>');
+}
+
+.ab-list--numbered {
+  list-style-type: decimal;
+}
+
+.ab-list > li,
+.ab-list > .ab-list__item {
+  position: relative;
+  padding-top: var(--ab-spacing-200);
+  padding-bottom: var(--ab-spacing-200);
+}
+
+.ab-list--compact > li,
+.ab-list--compact > .ab-list__item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ab-list--large > li,
+.ab-list--large > .ab-list__item {
+  padding-top: var(--ab-spacing-300);
+  padding-bottom: var(--ab-spacing-300);
+}
+
+.ab-list--bordered > .ab-list__item,
+.ab-list--bordered > li {
+  border-bottom: 1px solid var(--ab-color-ui-300);
+}
+
+.ab-list--bordered > .ab-list__item:last-of-type,
+.ab-list--bordered > li:last-of-type {
+  border-bottom: 0;
+}
+
+.ab-list > .ab-list__item--check {
+  list-style-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><g transform='translate(5, 7)' fill='none' fill-rule='evenodd'><path d='M0 0h16v16H0z'/><path fill='currentColor' d='M4.884 7.18a.5.5 0 1 0-.768.64l2.5 3a.5.5 0 0 0 .756.014l4.5-5a.5.5 0 1 0-.744-.668l-4.113 4.57-2.13-2.556z'/></g></svg>");
+}

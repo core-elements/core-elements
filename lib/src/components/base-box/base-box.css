@@ -2,6 +2,7 @@
 }
 
 :host {
+  vertical-align: top;
   display: block;
   width: 100%;
 }

@@ -8,6 +8,7 @@
 }
 
 :host {
+  vertical-align: top;
   height: var(--base-checkbox-height);
   display: inline-flex;
   align-items: center;

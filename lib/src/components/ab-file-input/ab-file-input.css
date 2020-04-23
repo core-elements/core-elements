@@ -1,0 +1,65 @@
+.ab-file-input {
+  --ab-file-input-height: var(--ab-size-medium);
+  display: inline-block;
+}
+
+.ab-file-input__cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+  cursor: pointer;
+  height: var(--ab-file-input-height);
+  color: var(--ab-color-black);
+  background-color: var(--ab-color-ui-100);
+  padding: var(--ab-spacing-200);
+  border: 2px solid var(--ab-color-ui-300);
+  border-radius: var(--ab-border-radius-200);
+  transition: border 0.2s ease;
+  color: var(--ab-color-ui-600);
+}
+
+.ab-file-input__cta:hover {
+  border-color: var(--ab-color-ui-400);
+  background-color: var(--ab-color-ui-200);
+  color: var(--ab-color-ui-800);
+}
+
+.ab-file-input input:focus + .ab-file-input__cta {
+  border-color: var(--ab-color-active-600);
+  background-color: var(--ab-color-white);
+  color: var(--ab-color-ui-800);
+}
+
+.ab-file-input input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.ab-file-input__label-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.ab-file-input--full {
+  display: block;
+}
+
+.ab-file-input--full .ab-file-input__cta {
+  width: 100%;
+}
+
+/* SIZES */
+
+.ab-file-input--small .ab-file-input__cta {
+  --ab-file-input-height: var(--ab-size-small);
+}
+
+.ab-file-input--medium .ab-file-input__cta {
+  --ab-file-input-height: var(--ab-size-medium);
+}

@@ -2,9 +2,162 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "ab-dropdown-item",
+      "path": "./../../lib/src/components/ab-dropdown/ab-dropdown-item.wc.js"
+    },
+    {
+      "name": "ab-dropdown",
+      "path": "./../../lib/src/components/ab-dropdown/ab-dropdown.wc.js",
+      "attributes": [
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "left",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "top",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hoverable",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "left",
+          "attribute": "left",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "top",
+          "attribute": "top",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hoverable",
+          "attribute": "hoverable",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "ab-progress",
+      "path": "./../../lib/src/components/ab-progress/ab-progress.wc.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "100"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "shape",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "type": "number",
+          "default": "100"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "attribute": "border",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "shape",
+          "attribute": "shape",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
       "name": "base-box",
       "path": "./../../lib/src/components/base-box/base-box.js",
       "attributes": [
+        {
+          "name": "bg",
+          "description": "Box background color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "description": "Box border",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
         {
           "name": "radius",
           "description": "Box border radius",
@@ -16,6 +169,11 @@
           "description": "Box depth",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
+        },
+        {
+          "name": "clickable",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "inline",
@@ -58,26 +216,23 @@
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
-        },
+        }
+      ],
+      "properties": [
         {
           "name": "bg",
+          "attribute": "bg",
           "description": "Box background color",
           "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
         {
           "name": "border",
+          "attribute": "border",
           "description": "Box border",
           "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
-        {
-          "name": "clickable",
-          "type": "boolean",
-          "default": "false"
-        }
-      ],
-      "properties": [
         {
           "name": "radius",
           "attribute": "radius",
@@ -91,6 +246,12 @@
           "description": "Box depth",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
+        },
+        {
+          "name": "clickable",
+          "attribute": "clickable",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "inline",
@@ -140,26 +301,6 @@
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
-        },
-        {
-          "name": "bg",
-          "attribute": "bg",
-          "description": "Box background color",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
-          "default": "\"\""
-        },
-        {
-          "name": "border",
-          "attribute": "border",
-          "description": "Box border",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
-          "default": "\"\""
-        },
-        {
-          "name": "clickable",
-          "attribute": "clickable",
-          "type": "boolean",
-          "default": "false"
         }
       ]
     },
@@ -1472,6 +1613,11 @@
           "default": "\"\""
         },
         {
+          "name": "type",
+          "type": "string",
+          "default": "\"p\""
+        },
+        {
           "name": "weight",
           "type": "string",
           "default": "\"\""
@@ -1486,10 +1632,86 @@
           "default": "\"\""
         },
         {
+          "name": "type",
+          "attribute": "type",
+          "type": "string",
+          "default": "\"p\""
+        },
+        {
           "name": "weight",
           "attribute": "weight",
           "type": "string",
           "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "base-toggle",
+      "path": "./../../lib/src/components/base-toggle/base-toggle.js",
+      "attributes": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Toggle size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "attribute": "loading",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Toggle size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
         }
       ]
     }

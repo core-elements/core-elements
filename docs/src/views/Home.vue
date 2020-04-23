@@ -8,15 +8,13 @@
         </base-text>
         <base-text type="lead">
           Components that work in
-          <b>React</b>, <b>Vue</b>, <b>Angular</b>, or any other framwork.
+          <b>React</b>,
+          <b>Vue</b>,
+          <b>Angular</b>, or any other framwork.
         </base-text>
         <base-box>
-          <router-link tag="base-button" to="/installation" type="primary"
-            >Get Started</router-link
-          >
-          <router-link tag="base-button" to="/components" type="secondary"
-            >Components</router-link
-          >
+          <router-link tag="base-button" to="/installation" type="primary">Get Started</router-link>
+          <router-link tag="base-button" to="/components" type="secondary">Components</router-link>
         </base-box>
       </base-grid-item>
 
@@ -48,19 +46,12 @@
               </base-select>
             </base-grid-item>
             <base-grid-item sm="2" md="1">
-              <base-modal
-                @toggle="(e) => (modalOpen = e.open)"
-                :open="modalOpen"
-              >
+              <base-modal @toggle="(e) => (modalOpen = e.open)" :open="modalOpen">
                 <header slot="header">Title</header>
                 <div>Content</div>
               </base-modal>
-              <base-button type="primary" @click="modalOpen = true">
-                Show modal
-              </base-button>
-              <base-button type="success" outline>
-                Button
-              </base-button>
+              <base-button type="primary" @click="modalOpen = true">Show modal</base-button>
+              <base-toggle>Toggle</base-toggle>
             </base-grid-item>
           </base-grid>
         </base-box>
@@ -76,9 +67,9 @@ export default {
   components: { Page },
   data() {
     return {
-      modalOpen: false,
+      modalOpen: false
     };
-  },
+  }
 };
 </script>
 
