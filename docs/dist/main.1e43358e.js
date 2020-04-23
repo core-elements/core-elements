@@ -21860,27 +21860,26 @@ var global = arguments[3];
       return [styles$4, sharedStyles];
     }
 
-    _onToggle(e) {
-      e.stopPropagation();
-      this.dispatchEvent(new CustomEvent("toggle", e));
+    _onToggle() {
+      this.dispatchEvent(new CustomEvent("toggle"));
     }
 
-    close(e) {
+    close() {
       this.open = false;
 
-      this._onToggle(e);
+      this._onToggle();
     }
 
-    show(e) {
+    show() {
       this.open = true;
 
-      this._onToggle(e);
+      this._onToggle();
     }
 
     toggle(e) {
       this.open = !this.open;
 
-      this._onToggle(e);
+      this._onToggle();
     }
 
     render() {
@@ -35778,7 +35777,7 @@ module.exports = {
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
-    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-radio/base-radio.md",
     "name": "Radio",

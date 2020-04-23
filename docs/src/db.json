@@ -61,7 +61,7 @@
       "name": "Modal",
       "desc": "A modal",
       "category": "Elements",
-      "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-radio/base-radio.md",
