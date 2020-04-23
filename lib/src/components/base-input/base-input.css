@@ -1,5 +1,6 @@
 :host {
   --base-input-height: var(--base-size-md);
+  --base-input-border-color: var(--base-color-ui-light);
   --base-input-border-radius: none;
   --base-input-box-shadow: none;
   --base-input-placeholder-color: var(--base-color-ui);
@@ -24,26 +25,24 @@
   box-shadow: var(--base-input-box-shadow);
   border-radius: var(--base-input-border-radius);
   height: var(--base-input-height);
-  border: 2px solid var(--base-color-ui-light);
+  border: 2px solid var(--base-input-border-color);
 }
 
 :host [part="input"]:hover {
-  border-color: var(--base-color-ui);
+  --base-input-border-color: var(--base-color-ui);
 }
 
 :host([focused]) [part="input"] {
   --base-input-box-shadow: 0px 0px 0px 1px var(--base-color-focus);
-  border-color: var(--base-color-focus);
+  --base-input-border-color: var(--base-color-focus);
 }
 
 :host(:not([focused])[valid]) [part="input"] {
-  --base-input-box-shadow: 0px 0px 0px 1px var(--base-color-success);
-  border-color: var(--base-color-success);
+  --base-input-border-color: var(--base-color-success);
 }
 
 :host(:not([focused])[invalid]) [part="input"] {
-  --base-input-box-shadow: 0px 0px 0px 1px var(--base-color-danger);
-  border-color: var(--base-color-danger);
+  --base-input-border-color: var(--base-color-danger);
 }
 
 :host [part="input-field"] {
@@ -76,9 +75,11 @@
 }
 
 ::slotted([slot="prepend"]) {
+  fill: var(--base-input-border-color);
   padding-left: var(--base-space-sm);
 }
 
 ::slotted([slot="append"]) {
+  fill: var(--base-input-border-color);
   padding-right: var(--base-space-sm);
 }

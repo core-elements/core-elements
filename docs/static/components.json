@@ -851,7 +851,7 @@
         {
           "name": "type",
           "description": "Input type",
-          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"|\"search\"",
           "default": "\"text\""
         },
         {
@@ -966,7 +966,7 @@
           "name": "type",
           "attribute": "type",
           "description": "Input type",
-          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"|\"search\"",
           "default": "\"text\""
         },
         {
