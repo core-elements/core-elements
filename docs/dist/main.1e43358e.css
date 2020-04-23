@@ -95,8 +95,12 @@
 .header__menu-button {
   border: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  outline: 0;
   background: transparent;
-  font-size: 1rem;
+  font-size: 1.1em;
 }
 
 @media (min-width: 800px) {
@@ -205,6 +209,7 @@
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  max-width: 100%;
   color: #2c2b57;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
@@ -543,6 +548,7 @@
 }
 
 .markdown-body pre {
+  overflow: scroll;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -1243,12 +1249,6 @@ nav[toc] a {
 nav[toc] a.router-link-exact-active {
   color: #1a202c;
   transition: all 0.5s ease;
-}
-
-nav[toc] a.router-link-exact-active:before {
-  color: #1a202c;
-  content: "\2022";
-  padding-right: var(--base-space-sm);
 }
 
 nav[toc] a:hover {

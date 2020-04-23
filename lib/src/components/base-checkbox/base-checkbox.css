@@ -1,6 +1,6 @@
 :host {
-  --base-checkbox-bg-color: var(--base-color-ui-lightest);
-  --base-checkbox-border: 1px solid var(--base-color-ui-light);
+  --base-checkbox-bg-color: var(--base-color-white);
+  --base-checkbox-border: 2px solid var(--base-color-ui-light);
   --base-checkbox-cursor: pointer;
   --base-checkbox-box-shadow: none;
   --base-checkbox-height: var(--base-size-md);
@@ -67,8 +67,7 @@ input[type="checkbox"]:hover {
 input[type="checkbox"]:checked {
   --base-checkbox-bg-color: var(--base-color-focus);
   --base-checkbox-border: 1px solid var(--base-color-focus);
-  color: #fff;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  color: var(--base-color-white);
 }
 
 input[type="checkbox"]:checked:before {
@@ -76,6 +75,7 @@ input[type="checkbox"]:checked:before {
 }
 
 input[type="checkbox"]:before {
+  border-color: var(--base-color-white);
   content: "";
   position: absolute;
   pointer-events: none;

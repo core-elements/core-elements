@@ -20923,7 +20923,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:1px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - 8px);padding-left:4px;margin-left:8px;margin-top:4px;margin-bottom:4px;background:var(--base-neutral--2,#e6e6e6)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:4px}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;width:100%;max-width:100%;font-size:var(--base-select-font-size);min-height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}[hidden]{display:none !important}:host(:hover:not([multiple]):not([is-focused])){--base-select-border-color:var(--base-color-ui)}:host([is-focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
@@ -21681,7 +21681,7 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);margin-bottom:var(--base-space-xs);margin-right:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary-light);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary-light)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success-light);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger-light);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
+  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);margin-bottom:var(--base-space-xs);margin-right:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary-hover)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary);color:var(--base-color-primary)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary-hover)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success-hover)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger-hover)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
 
   class BaseButton extends LitElement {
     constructor() {
@@ -21745,7 +21745,7 @@ var global = arguments[3];
     customElements.define("base-button", BaseButton);
   }
 
-  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-ui-lightest);--base-checkbox-border:1px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}:host input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:#fff;-webkit-filter:drop-shadow(0 1px 1px rgba(0,0,0,.2));filter:drop-shadow(0 1px 1px rgba(0,0,0,.2))}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
+  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-white);--base-checkbox-border:2px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}:host input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:var(--base-color-white)}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{border-color:var(--base-color-white);content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
 
   class BaseCheckbox extends LitElement {
     constructor() {
@@ -22214,7 +22214,7 @@ var global = arguments[3];
     return new StringMask(pattern, options).validate(value);
   };
 
-  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-radius:none;--base-input-box-shadow:none;--base-input-placeholder-color:var(--base-color-ui);--base-input-font-size:var(--base-font-size-sm);min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:1px solid var(--base-color-ui-light)}:host [part=input]:hover{border:1px solid var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);border:1px solid var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-success);border:1px solid var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-danger);border:1px solid var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
+  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-radius:none;--base-input-box-shadow:none;--base-input-placeholder-color:var(--base-color-ui);--base-input-font-size:var(--base-font-size-sm);min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:2px solid var(--base-color-ui-light)}:host [part=input]:hover{border-color:var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);border-color:var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-success);border-color:var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-danger);border-color:var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){padding-left:var(--base-space-sm)}::slotted([slot=append]){padding-right:var(--base-space-sm)}`;
 
   class BaseInput extends LitElement {
     constructor() {
@@ -22660,7 +22660,7 @@ var global = arguments[3];
     customElements.define("base-label", BaseLabel);
   }
 
-  var styles$8 = css`:host{--base-grid-columns:12;--base-grid-gap:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(var(--base-grid-columns),1fr);grid-row-gap:var(--base-grid-gap);grid-column-gap:var(--base-grid-gap);margin:0}:host([gap=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap=md]){--base-grid-gap:var(--base-space-md)}:host([gap=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap=xl]){--base-grid-gap:var(--base-space-xl)}:host([gap-sm=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-sm=md]){--base-grid-gap:var(--base-space-md)}:host([gap-sm=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-sm=xl]){--base-grid-gap:var(--base-space-xl)}@media(min-width:800px){:host([gap-md=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-md=md]){--base-grid-gap:var(--base-space-md)}:host([gap-md=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-md=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1200px){:host([gap-lg=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-lg=md]){--base-grid-gap:var(--base-space-md)}:host([gap-lg=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-lg=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1400px){:host([gap-xl=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-xl=md]){--base-grid-gap:var(--base-space-md)}:host([gap-xl=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-xl=xl]){--base-grid-gap:var(--base-space-xl)}}:host([columns="1"]){--base-grid-columns:1}:host([columns="2"]){--base-grid-columns:2}:host([columns="3"]){--base-grid-columns:3}:host([columns="4"]){--base-grid-columns:4}:host([columns="5"]){--base-grid-columns:5}:host([columns="6"]){--base-grid-columns:6}:host([columns="7"]){--base-grid-columns:7}:host([columns="8"]){--base-grid-columns:8}:host([columns="9"]){--base-grid-columns:9}:host([columns="10"]){--base-grid-columns:10}:host([columns="11"]){--base-grid-columns:11}:host([columns="12"]){--base-grid-columns:12}`;
+  var styles$8 = css`:host{--base-grid-columns:12;--base-grid-gap:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(var(--base-grid-columns),1fr);grid-row-gap:var(--base-grid-gap);grid-column-gap:var(--base-grid-gap);margin:0;width:100%;max-width:100%}:host([gap=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap=md]){--base-grid-gap:var(--base-space-md)}:host([gap=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap=xl]){--base-grid-gap:var(--base-space-xl)}:host([gap-sm=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-sm=md]){--base-grid-gap:var(--base-space-md)}:host([gap-sm=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-sm=xl]){--base-grid-gap:var(--base-space-xl)}@media(min-width:800px){:host([gap-md=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-md=md]){--base-grid-gap:var(--base-space-md)}:host([gap-md=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-md=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1200px){:host([gap-lg=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-lg=md]){--base-grid-gap:var(--base-space-md)}:host([gap-lg=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-lg=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1400px){:host([gap-xl=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-xl=md]){--base-grid-gap:var(--base-space-md)}:host([gap-xl=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-xl=xl]){--base-grid-gap:var(--base-space-xl)}}:host([columns="1"]){--base-grid-columns:1}:host([columns="2"]){--base-grid-columns:2}:host([columns="3"]){--base-grid-columns:3}:host([columns="4"]){--base-grid-columns:4}:host([columns="5"]){--base-grid-columns:5}:host([columns="6"]){--base-grid-columns:6}:host([columns="7"]){--base-grid-columns:7}:host([columns="8"]){--base-grid-columns:8}:host([columns="9"]){--base-grid-columns:9}:host([columns="10"]){--base-grid-columns:10}:host([columns="11"]){--base-grid-columns:11}:host([columns="12"]){--base-grid-columns:12}`;
 
   class BaseGrid extends LitElement {
     constructor() {
@@ -22782,11 +22782,25 @@ var global = arguments[3];
     customElements.define("base-grid-item", BaseGridItem);
   }
 
-  var styles$a = css`:host{display:block}:host([inline]){display:inline-block}:host([depth=none]){box-shadow:var(--base-depth-none)}:host([depth=xs]){box-shadow:var(--base-depth-xs)}:host([depth=sm]){box-shadow:var(--base-depth-sm)}:host([depth=md]){box-shadow:var(--base-depth-md)}:host([depth=lg]){box-shadow:var(--base-depth-lg)}:host([depth=xl]){box-shadow:var(--base-depth-xl)}:host([padding=none]){padding:var(--base-space-none)}:host([padding=xs]){padding:var(--base-space-xs)}:host([padding=sm]){padding:var(--base-space-sm)}:host([padding=md]){padding:var(--base-space-md)}:host([padding=lg]){padding:var(--base-space-lg)}:host([padding=xl]){padding:var(--base-space-xl)}:host([padding-x=none]){padding-left:var(--base-space-none);padding-right:var(--base-space-none)}:host([padding-x=xs]){padding-left:var(--base-space-xs);padding-right:var(--base-space-xs)}:host([padding-x=sm]){padding-left:var(--base-space-sm);padding-right:var(--base-space-sm)}:host([padding-x=md]){padding-left:var(--base-space-md);padding-right:var(--base-space-md)}:host([padding-x=lg]){padding-left:var(--base-space-lg);padding-right:var(--base-space-lg)}:host([padding-x=xl]){padding-left:var(--base-space-xl);padding-right:var(--base-space-xl)}:host([padding-y=none]){padding-top:var(--base-space-none);padding-bottom:var(--base-space-none)}:host([padding-y=xs]){padding-top:var(--base-space-xs);padding-bottom:var(--base-space-xs)}:host([padding-y=sm]){padding-top:var(--base-space-sm);padding-bottom:var(--base-space-sm)}:host([padding-y=md]){padding-top:var(--base-space-md);padding-bottom:var(--base-space-md)}:host([padding-y=lg]){padding-top:var(--base-space-lg);padding-bottom:var(--base-space-lg)}:host([padding-y=xl]){padding-top:var(--base-space-xl);padding-bottom:var(--base-space-xl)}:host([margin=none]){margin:var(--base-space-none)}:host([margin=xs]){margin:var(--base-space-xs)}:host([margin=sm]){margin:var(--base-space-sm)}:host([margin=md]){margin:var(--base-space-md)}:host([margin=lg]){margin:var(--base-space-lg)}:host([margin=xl]){margin:var(--base-space-xl)}:host([margin-x=none]){margin-left:var(--base-space-none);margin-right:var(--base-space-none)}:host([margin-x=xs]){margin-left:var(--base-space-xs);margin-right:var(--base-space-xs)}:host([margin-x=sm]){margin-left:var(--base-space-sm);margin-right:var(--base-space-sm)}:host([margin-x=md]){margin-left:var(--base-space-md);margin-right:var(--base-space-md)}:host([margin-x=lg]){margin-left:var(--base-space-lg);margin-right:var(--base-space-lg)}:host([margin-x=xl]){margin-left:var(--base-space-xl);margin-right:var(--base-space-xl)}:host([margin-y=none]){margin-top:var(--base-space-none);margin-bottom:var(--base-space-none)}:host([margin-y=xs]){margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs)}:host([margin-y=sm]){margin-top:var(--base-space-sm);margin-bottom:var(--base-space-sm)}:host([margin-y=md]){margin-top:var(--base-space-md);margin-bottom:var(--base-space-md)}:host([margin-y=lg]){margin-top:var(--base-space-lg);margin-bottom:var(--base-space-lg)}:host([margin-y=xl]){margin-top:var(--base-space-xl);margin-bottom:var(--base-space-xl)}:host([radius=none]){border-radius:var(--base-border-radius-none)}:host([radius=xs]){border-radius:var(--base-border-radius-xs)}:host([radius=sm]){border-radius:var(--base-border-radius-sm)}:host([radius=md]){border-radius:var(--base-border-radius-md)}:host([radius=lg]){border-radius:var(--base-border-radius-lg)}:host([radius=xl]){border-radius:var(--base-border-radius-xl)}`;
+  var styles$a = css`:host{display:block;width:100%}:host([inline]){display:inline-block;width:auto}:host([clickable]){cursor:pointer;-webkit-transition:all .2s ease;transition:all .2s ease}:host([clickable]:hover){-webkit-transform:translateY(-2px);transform:translateY(-2px)}:host([clickable]:active){-webkit-transform:translateY(0);transform:translateY(0)}:host([bg=primary]){background-color:var(--base-color-primary)}:host([bg=secondary]){background-color:var(--base-color-secondary)}:host([bg=success]){background-color:var(--base-color-success)}:host([bg=danger]){background-color:var(--base-color-danger)}:host([border=primary]){border:1px solid var(--base-color-primary)}:host([border=secondary]){border:1px solid var(--base-color-secondary)}:host([border=success]){border:1px solid var(--base-color-success)}:host([border=danger]){border:1px solid var(--base-color-danger)}:host([depth=none]){box-shadow:var(--base-depth-none)}:host([depth=xs]){box-shadow:var(--base-depth-xs)}:host([depth=sm]){box-shadow:var(--base-depth-sm)}:host([depth=md]){box-shadow:var(--base-depth-md)}:host([depth=lg]){box-shadow:var(--base-depth-lg)}:host([depth=xl]){box-shadow:var(--base-depth-xl)}:host([padding=none]){padding:var(--base-space-none)}:host([padding=xs]){padding:var(--base-space-xs)}:host([padding=sm]){padding:var(--base-space-sm)}:host([padding=md]){padding:var(--base-space-md)}:host([padding=lg]){padding:var(--base-space-lg)}:host([padding=xl]){padding:var(--base-space-xl)}:host([padding-x=none]){padding-left:var(--base-space-none);padding-right:var(--base-space-none)}:host([padding-x=xs]){padding-left:var(--base-space-xs);padding-right:var(--base-space-xs)}:host([padding-x=sm]){padding-left:var(--base-space-sm);padding-right:var(--base-space-sm)}:host([padding-x=md]){padding-left:var(--base-space-md);padding-right:var(--base-space-md)}:host([padding-x=lg]){padding-left:var(--base-space-lg);padding-right:var(--base-space-lg)}:host([padding-x=xl]){padding-left:var(--base-space-xl);padding-right:var(--base-space-xl)}:host([padding-y=none]){padding-top:var(--base-space-none);padding-bottom:var(--base-space-none)}:host([padding-y=xs]){padding-top:var(--base-space-xs);padding-bottom:var(--base-space-xs)}:host([padding-y=sm]){padding-top:var(--base-space-sm);padding-bottom:var(--base-space-sm)}:host([padding-y=md]){padding-top:var(--base-space-md);padding-bottom:var(--base-space-md)}:host([padding-y=lg]){padding-top:var(--base-space-lg);padding-bottom:var(--base-space-lg)}:host([padding-y=xl]){padding-top:var(--base-space-xl);padding-bottom:var(--base-space-xl)}:host([margin=none]){margin:var(--base-space-none)}:host([margin=xs]){margin:var(--base-space-xs)}:host([margin=sm]){margin:var(--base-space-sm)}:host([margin=md]){margin:var(--base-space-md)}:host([margin=lg]){margin:var(--base-space-lg)}:host([margin=xl]){margin:var(--base-space-xl)}:host([margin-x=none]){margin-left:var(--base-space-none);margin-right:var(--base-space-none)}:host([margin-x=xs]){margin-left:var(--base-space-xs);margin-right:var(--base-space-xs)}:host([margin-x=sm]){margin-left:var(--base-space-sm);margin-right:var(--base-space-sm)}:host([margin-x=md]){margin-left:var(--base-space-md);margin-right:var(--base-space-md)}:host([margin-x=lg]){margin-left:var(--base-space-lg);margin-right:var(--base-space-lg)}:host([margin-x=xl]){margin-left:var(--base-space-xl);margin-right:var(--base-space-xl)}:host([margin-y=none]){margin-top:var(--base-space-none);margin-bottom:var(--base-space-none)}:host([margin-y=xs]){margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs)}:host([margin-y=sm]){margin-top:var(--base-space-sm);margin-bottom:var(--base-space-sm)}:host([margin-y=md]){margin-top:var(--base-space-md);margin-bottom:var(--base-space-md)}:host([margin-y=lg]){margin-top:var(--base-space-lg);margin-bottom:var(--base-space-lg)}:host([margin-y=xl]){margin-top:var(--base-space-xl);margin-bottom:var(--base-space-xl)}:host([radius=none]){border-radius:var(--base-border-radius-none)}:host([radius=xs]){border-radius:var(--base-border-radius-xs)}:host([radius=sm]){border-radius:var(--base-border-radius-sm)}:host([radius=md]){border-radius:var(--base-border-radius-md)}:host([radius=lg]){border-radius:var(--base-border-radius-lg)}:host([radius=xl]){border-radius:var(--base-border-radius-xl)}`;
 
   class BaseBox extends LitElement {
     constructor() {
       super();
+      /**
+       * Box background color
+       * @type {"primary"|"secondary"|"success"|"danger"}
+       * @attr
+       */
+
+      this.bg = "";
+      /**
+       * Box border
+       * @type {"primary"|"secondary"|"success"|"danger"}
+       * @attr
+       */
+
+      this.border = "";
       /**
        * Box border radius
        * @type {"xs"|"sm"|"md"|"lg"|"xl"}
@@ -22801,6 +22815,7 @@ var global = arguments[3];
        */
 
       this.depth = "";
+      this.clickable = false;
       /**
        * Full box
        * @type {Boolean}
@@ -22854,6 +22869,12 @@ var global = arguments[3];
 
     static get properties() {
       return {
+        border: {
+          type: String
+        },
+        bg: {
+          type: String
+        },
         depth: {
           type: String
         },
@@ -22883,6 +22904,9 @@ var global = arguments[3];
           attribute: "margin-y"
         },
         inline: {
+          type: Boolean
+        },
+        clickable: {
           type: Boolean
         }
       };
@@ -23083,7 +23107,7 @@ var global = arguments[3];
     customElements.define("base-flex", BaseFlex);
   }
 
-  var styles$c = css`:host{display:inline-block}:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host p,:host small{font-weight:inherit;margin-top:0}:host([inline]) h1,:host([inline]) h2,:host([inline]) h3,:host([inline]) h4,:host([inline]) h5,:host([inline]) h6,:host([inline]) p,:host([inline]) small{display:inline-block}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}`;
+  var styles$c = css`:host,:host([inline]){display:inline-block}:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host p,:host small{font-weight:inherit;margin-top:0}:host([inline]) h1,:host([inline]) h2,:host([inline]) h3,:host([inline]) h4,:host([inline]) h5,:host([inline]) h6,:host([inline]) p,:host([inline]) small{display:inline-block}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}`;
 
   class BaseText extends LitElement {
     constructor() {
@@ -34863,6 +34887,13 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35014,7 +35045,7 @@ exports.default = _default;
                   "router-link",
                   {
                     staticClass: "header__nav-item",
-                    attrs: { to: "/components/Container" },
+                    attrs: { to: "/components" },
                     nativeOn: {
                       click: function($event) {
                         _vm.showMenu = false
@@ -35326,6 +35357,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   components: {
     Page: _Page.default
@@ -35357,7 +35392,7 @@ exports.default = _default;
     [
       _c(
         "base-grid",
-        { attrs: { columns: "8", gap: "xl" } },
+        { attrs: { columns: "8", gap: "xl", "gap-sm": "md" } },
         [
           _c(
             "base-grid-item",
@@ -35366,23 +35401,22 @@ exports.default = _default;
               _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
                 _c("b", [_vm._v("Base Elements")]),
                 _vm._v(
-                  " is a free collection of essential UI components for\n        any web application\n      "
+                  " is a free collection of essential UI components\n        for any web application\n      "
                 )
               ]),
               _vm._v(" "),
               _c("base-text", { staticClass: "lead", attrs: { tag: "p" } }, [
                 _vm._v("\n        Components that work in\n        "),
                 _c("b", [_vm._v("React")]),
-                _vm._v(",\n        "),
+                _vm._v(", "),
                 _c("b", [_vm._v("Vue")]),
-                _vm._v(",\n        "),
+                _vm._v(", "),
                 _c("b", [_vm._v("Angular")]),
                 _vm._v(", or any other framwork.\n      ")
               ]),
               _vm._v(" "),
               _c(
                 "base-box",
-                { attrs: { "padding-y": "md" } },
                 [
                   _c(
                     "router-link",
@@ -35401,9 +35435,8 @@ exports.default = _default;
                     {
                       attrs: {
                         tag: "base-button",
-                        to: "/components/Container",
-                        type: "primary",
-                        outline: ""
+                        to: "/components",
+                        type: "secondary"
                       }
                     },
                     [_vm._v("Components")]
@@ -35435,7 +35468,7 @@ exports.default = _default;
                     [
                       _c(
                         "base-grid-item",
-                        { attrs: { sm: "1" } },
+                        { attrs: { sm: "2", md: "1" } },
                         [
                           _c(
                             "base-select",
@@ -35457,13 +35490,35 @@ exports.default = _default;
                       _vm._v(" "),
                       _c(
                         "base-grid-item",
-                        { attrs: { sm: "1" } },
+                        { attrs: { sm: "2", md: "1" } },
                         [
-                          _c("base-checkbox", { attrs: { size: "sm" } }, [
+                          _c("base-checkbox", [_vm._v("Option 1")]),
+                          _vm._v(" "),
+                          _c("base-checkbox", [_vm._v("Option 2")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "base-grid-item",
+                        { attrs: { sm: "2", md: "1" } },
+                        [
+                          _c("base-input", {
+                            attrs: { full: "", placeholder: "Regular input" }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "base-grid-item",
+                        { attrs: { sm: "2", md: "1" } },
+                        [
+                          _c("base-radio", { attrs: { name: "radio" } }, [
                             _vm._v("Option 1")
                           ]),
                           _vm._v(" "),
-                          _c("base-checkbox", { attrs: { size: "sm" } }, [
+                          _c("base-radio", { attrs: { name: "radio" } }, [
                             _vm._v("Option 2")
                           ])
                         ],
@@ -35472,42 +35527,7 @@ exports.default = _default;
                       _vm._v(" "),
                       _c(
                         "base-grid-item",
-                        [
-                          _c("base-input", {
-                            attrs: { placeholder: "Regular input" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "1" } },
-                        [
-                          _c(
-                            "base-radio",
-                            { attrs: { size: "sm", name: "radio" } },
-                            [_vm._v("Option 1")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "base-radio",
-                            { attrs: { size: "sm", name: "radio" } },
-                            [_vm._v("Option 2")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "base-radio",
-                            { attrs: { size: "sm", name: "radio" } },
-                            [_vm._v("Option 3")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "1" } },
+                        { attrs: { sm: "2", md: "1" } },
                         [
                           _c(
                             "base-select",
@@ -35534,7 +35554,7 @@ exports.default = _default;
                       _vm._v(" "),
                       _c(
                         "base-grid-item",
-                        { attrs: { sm: "1" } },
+                        { attrs: { sm: "2", md: "1" } },
                         [
                           _c(
                             "base-modal",
@@ -35560,14 +35580,20 @@ exports.default = _default;
                           _c(
                             "base-button",
                             {
-                              attrs: { size: "sm", type: "primary" },
+                              attrs: { type: "primary" },
                               on: {
                                 click: function($event) {
                                   _vm.modalOpen = true
                                 }
                               }
                             },
-                            [_vm._v("Show modal")]
+                            [_vm._v("\n              Show modal\n            ")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-button",
+                            { attrs: { type: "success", outline: "" } },
+                            [_vm._v("\n              Button\n            ")]
                           )
                         ],
                         1
@@ -35621,7 +35647,72 @@ render._withStripped = true
       
       }
     })();
-},{"../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/layouts/SidebarLayout.vue":[function(require,module,exports) {
+},{"../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/db.json":[function(require,module,exports) {
+module.exports = {
+  "components": [{
+    "path": "../lib/src/components/base-button/base-button.md",
+    "name": "Button",
+    "category": "Elements",
+    "content": "\n# Button\n\nA general button element\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
+    "name": "Checkbox",
+    "category": "Form",
+    "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-box/base-box.md",
+    "name": "Box",
+    "desc": "A little box that shows stuff",
+    "category": "Layout",
+    "content": "\n# Box\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "category": "Layout",
+    "content": "\n# Container\n\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "Input",
+    "category": "Form",
+    "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-flex/base-flex.md",
+    "name": "Flex",
+    "category": "Layout",
+    "content": "\n# Flex\n\nFlex\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-grid/base-grid.md",
+    "name": "Grid",
+    "category": "Layout",
+    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-label/base-label.md",
+    "name": "Label",
+    "category": "Form",
+    "content": "\n# Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "name": "Modal",
+    "category": "Elements",
+    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-text/base-text.md",
+    "name": "Text",
+    "category": "Elements",
+    "content": "\n# Text\n\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text>Container</base-text>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "category": "Form",
+    "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-select/base-select.md",
+    "name": "Select",
+    "category": "Form",
+    "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
+  }]
+};
+},{}],"src/views/Components.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35629,10 +35720,45 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _Page = _interopRequireDefault(require("./Page"));
+var _Page = _interopRequireDefault(require("../layouts/Page"));
+
+var _db = require("../db.json");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -35648,33 +35774,130 @@ var _default = {
   components: {
     Page: _Page.default
   },
-  props: {
-    showSidebar: Boolean
+
+  data() {
+    return {
+      components: _db.components
+    };
+  },
+
+  computed: {
+    groupedComponents() {
+      return this.components.reduce((acc, comp) => {
+        const catName = comp.category || "Uncategorized";
+        const prevComps = acc[`${catName}`] ? acc[`${catName}`] : [];
+        return { ...acc,
+          [`${catName}`]: [...prevComps, { ...comp
+          }]
+        };
+      }, {
+        Layout: [],
+        Elements: [],
+        Form: []
+      });
+    }
+
   }
 };
 exports.default = _default;
-        var $437c37 = exports.default || module.exports;
+        var $c5436c = exports.default || module.exports;
       
-      if (typeof $437c37 === 'function') {
-        $437c37 = $437c37.options;
+      if (typeof $c5436c === 'function') {
+        $c5436c = $c5436c.options;
       }
     
         /* template */
-        Object.assign($437c37, (function () {
+        Object.assign($c5436c, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Page", [
-    _c(
-      "div",
-      { staticClass: "sidebar", class: { show: _vm.showSidebar } },
-      [_vm._t("sidebar")],
-      2
-    ),
-    _vm._v(" "),
-    _c("main", { staticClass: "main" }, [_vm._t("default")], 2)
-  ])
+  return _c(
+    "Page",
+    [
+      _c(
+        "base-container",
+        { attrs: { size: "sm" } },
+        [
+          _c("base-text", { attrs: { tag: "h1", weight: "700", full: "" } }, [
+            _vm._v("Components")
+          ]),
+          _vm._v(" "),
+          _c("base-text", { attrs: { tag: "p" } }, [
+            _vm._v(
+              "\n      Ionic apps are made of high-level building blocks called Components,\n      which allow you to quickly construct the UI for your app. Ionic comes\n      stock with a number of components, including cards, lists, and tabs.\n      Once you’re familiar with the basics, refer to the API Index for a\n      complete list of each component and sub-component.\n    "
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "base-box",
+        { attrs: { "margin-y": "xl" } },
+        [
+          _c(
+            "base-grid",
+            { attrs: { gap: "lg", columns: "4" } },
+            _vm._l(_vm.groupedComponents, function(menuGroup, name) {
+              return _c(
+                "base-grid-item",
+                { key: name, attrs: { sm: "4", md: "2", lg: "1" } },
+                [
+                  _c("base-text", { attrs: { tag: "h2" } }, [
+                    _vm._v(_vm._s(name))
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "base-grid",
+                    { attrs: { columns: "1", gap: "lg" } },
+                    _vm._l(menuGroup, function(page, i) {
+                      return _c(
+                        "base-grid-item",
+                        { key: i, attrs: { sm: "1" } },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              attrs: {
+                                tag: "base-box",
+                                clickable: "",
+                                full: "",
+                                depth: "md",
+                                radius: "md",
+                                padding: "lg",
+                                to: "/components/" + page.name
+                              }
+                            },
+                            [
+                              _c("base-text", { attrs: { tag: "h3" } }, [
+                                _vm._v(_vm._s(page.name))
+                              ]),
+                              _vm._v(" "),
+                              _c("base-text", { attrs: { tag: "small" } }, [
+                                _vm._v(_vm._s(page.desc))
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    }),
+                    1
+                  )
+                ],
+                1
+              )
+            }),
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35696,20 +35919,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$437c37', $437c37);
+            api.createRecord('$c5436c', $c5436c);
           } else {
-            api.reload('$437c37', $437c37);
+            api.reload('$c5436c', $c5436c);
           }
         }
 
         
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
       }
     })();
-},{"./Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/marked/lib/marked.js":[function(require,module,exports) {
+},{"../layouts/Page":"src/layouts/Page.vue","../db.json":"src/db.json","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/marked/lib/marked.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**
@@ -37289,71 +37508,7 @@ var global = arguments[3];
     root.marked = marked;
   }
 })(this || (typeof window !== 'undefined' ? window : global));
-},{}],"src/db.json":[function(require,module,exports) {
-module.exports = {
-  "components": [{
-    "path": "../lib/src/components/base-box/base-box.md",
-    "name": "Box",
-    "category": "Elements",
-    "content": "\n# Box\n\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-button/base-button.md",
-    "name": "Button",
-    "category": "Elements",
-    "content": "\n# Button\n\nA general button element\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Small</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-    "name": "Checkbox",
-    "category": "Form",
-    "content": "\n# Checkbox\n\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "category": "Layout",
-    "content": "\n# Container\n\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "Input",
-    "category": "Form",
-    "content": "\n# Input\n\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-grid/base-grid.md",
-    "name": "Grid",
-    "category": "Layout",
-    "content": "\n# Grid\n\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-flex/base-flex.md",
-    "name": "Flex",
-    "category": "Layout",
-    "content": "\n# Flex\n\nFlex\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-label/base-label.md",
-    "name": "Label",
-    "category": "Form",
-    "content": "\n# Label\n\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "Modal",
-    "category": "Elements",
-    "content": "\n# Modal\n\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal>\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-select/base-select.md",
-    "name": "Select",
-    "category": "Form",
-    "content": "\n# Select\n\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"halla\"></base-option>\n    <base-option value=\"halla2\"></base-option>\n    <base-option value=\"halla3\"></base-option>\n  </base-select>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "category": "Form",
-    "content": "\n# Radio\n\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"hei\">Radio</base-radio>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-text/base-text.md",
-    "name": "Text",
-    "category": "Elements",
-    "content": "\n# Text\n\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text>Container</base-text>\n</base-knobs>\n"
-  }]
-};
-},{}],"src/views/Components.vue":[function(require,module,exports) {
+},{}],"src/layouts/SidebarLayout.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37361,16 +37516,108 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _SidebarLayout = _interopRequireDefault(require("../layouts/SidebarLayout"));
+var _Page = _interopRequireDefault(require("./Page"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  components: {
+    Page: _Page.default
+  },
+  props: {
+    showSidebar: Boolean
+  }
+};
+exports.default = _default;
+        var $437c37 = exports.default || module.exports;
+      
+      if (typeof $437c37 === 'function') {
+        $437c37 = $437c37.options;
+      }
+    
+        /* template */
+        Object.assign($437c37, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("Page", [
+    _c(
+      "div",
+      { staticClass: "sidebar", class: { show: _vm.showSidebar } },
+      [_vm._t("sidebar")],
+      2
+    ),
+    _vm._v(" "),
+    _c("main", { staticClass: "main" }, [_vm._t("default")], 2)
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$437c37', $437c37);
+          } else {
+            api.reload('$437c37', $437c37);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Component.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
 var _marked = _interopRequireDefault(require("marked"));
 
 var _db = require("../db.json");
 
-var _Header = _interopRequireDefault(require("../components/Header"));
+var _SidebarLayout = _interopRequireDefault(require("../layouts/SidebarLayout"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37407,6 +37654,14 @@ var _default = {
   },
 
   computed: {
+    component() {
+      return _db.components.find(c => c.name === this.$route.params.element);
+    },
+
+    html() {
+      return (0, _marked.default)(this.component.content);
+    },
+
     groupedComponents() {
       return this.components.reduce((acc, comp) => {
         const catName = comp.category || "Uncategorized";
@@ -37425,120 +37680,6 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $c5436c = exports.default || module.exports;
-      
-      if (typeof $c5436c === 'function') {
-        $c5436c = $c5436c.options;
-      }
-    
-        /* template */
-        Object.assign($c5436c, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("SidebarLayout", { attrs: { showSidebar: _vm.showSidebar } }, [
-    _c("div", { attrs: { slot: "sidebar" }, slot: "sidebar" }, [
-      _c(
-        "nav",
-        { attrs: { toc: "" } },
-        _vm._l(_vm.groupedComponents, function(menuGroup, name) {
-          return _c(
-            "div",
-            { key: name },
-            [
-              _c("label", [_vm._v(_vm._s(name))]),
-              _vm._v(" "),
-              _vm._l(menuGroup, function(page, i) {
-                return _c(
-                  "router-link",
-                  {
-                    key: i,
-                    attrs: { to: "/components/" + page.name },
-                    nativeOn: {
-                      click: function($event) {
-                        return _vm.$emit("toggle-sidebar")
-                      }
-                    }
-                  },
-                  [_vm._v(_vm._s(page.name))]
-                )
-              })
-            ],
-            2
-          )
-        }),
-        0
-      )
-    ]),
-    _vm._v(" "),
-    _c("main", { staticClass: "main" }, [_c("router-view")], 1)
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$c5436c', $c5436c);
-          } else {
-            api.reload('$c5436c', $c5436c);
-          }
-        }
-
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"../layouts/SidebarLayout":"src/layouts/SidebarLayout.vue","marked":"node_modules/marked/lib/marked.js","../db.json":"src/db.json","../components/Header":"src/components/Header.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Component.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _marked = _interopRequireDefault(require("marked"));
-
-var _db = require("../db.json");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-var _default = {
-  computed: {
-    component() {
-      return _db.components.find(c => c.name === this.$route.params.element);
-    },
-
-    html() {
-      return (0, _marked.default)(this.component.content);
-    }
-
-  }
-};
-exports.default = _default;
         var $d15d68 = exports.default || module.exports;
       
       if (typeof $d15d68 === 'function') {
@@ -37551,7 +37692,60 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { domProps: { innerHTML: _vm._s(_vm.html) } })
+  return _c("SidebarLayout", { attrs: { showSidebar: _vm.showSidebar } }, [
+    _c("div", { attrs: { slot: "sidebar" }, slot: "sidebar" }, [
+      _c(
+        "nav",
+        { attrs: { toc: "" } },
+        [
+          _c(
+            "router-link",
+            {
+              attrs: { to: "/components" },
+              nativeOn: {
+                click: function($event) {
+                  return _vm.$emit("toggle-sidebar")
+                }
+              }
+            },
+            [_vm._v("Overview")]
+          ),
+          _vm._v(" "),
+          _vm._l(_vm.groupedComponents, function(menuGroup, name) {
+            return _c(
+              "div",
+              { key: name },
+              [
+                _c("label", [_vm._v(_vm._s(name))]),
+                _vm._v(" "),
+                _vm._l(menuGroup, function(page, i) {
+                  return _c(
+                    "router-link",
+                    {
+                      key: i,
+                      attrs: { to: "/components/" + page.name },
+                      nativeOn: {
+                        click: function($event) {
+                          return _vm.$emit("toggle-sidebar")
+                        }
+                      }
+                    },
+                    [_vm._v(_vm._s(page.name))]
+                  )
+                })
+              ],
+              2
+            )
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("main", { staticClass: "main" }, [
+      _c("div", { domProps: { innerHTML: _vm._s(_vm.html) } })
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37580,9 +37774,13 @@ render._withStripped = true
         }
 
         
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
       }
     })();
-},{"marked":"node_modules/marked/lib/marked.js","../db.json":"src/db.json","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/highlight.js/lib/highlight.js":[function(require,module,exports) {
+},{"marked":"node_modules/marked/lib/marked.js","../db.json":"src/db.json","../layouts/SidebarLayout":"src/layouts/SidebarLayout.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/highlight.js/lib/highlight.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /*
@@ -61264,15 +61462,14 @@ const router = new _vueRouter.default({
       showInHeader: true,
       hasSidebar: true
     },
-    component: _Components.default,
-    children: [{
-      path: ":element",
-      component: _Component.default,
-      meta: {
-        title: "Components",
-        hasSidebar: true
-      }
-    }]
+    component: _Components.default
+  }, {
+    path: "/components/:element",
+    component: _Component.default,
+    meta: {
+      title: "Components",
+      hasSidebar: true
+    }
   }, {
     path: "/installation",
     component: _Installation.default,
@@ -61317,7 +61514,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64625" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57767" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

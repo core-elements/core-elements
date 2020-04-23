@@ -7,6 +7,8 @@
   grid-row-gap: var(--base-grid-gap);
   grid-column-gap: var(--base-grid-gap);
   margin: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 @each $i in sm, md, lg, xl {

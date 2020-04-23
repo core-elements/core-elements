@@ -33,7 +33,7 @@ A general button element
 ## Full
 
 <base-knobs hideTabs src="./components.json" name="base-button">
-<base-button full>Small</base-button>
+<base-button full>Full</base-button>
 </base-knobs>
 
 ## Outline

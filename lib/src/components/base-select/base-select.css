@@ -6,7 +6,7 @@
   --base-select-background: none;
   --base-select-padding: 0px;
   --base-select-placeholder-color: var(--base-color-ui);
-  --base-select-border-width: 1px;
+  --base-select-border-width: 2px;
   --base-select-border-style: solid;
   --base-select-border-color: var(--base-color-ui-light);
   --base-select-border-radius: none;
@@ -138,19 +138,19 @@ div[part="tag"] {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(var(--base-select-min-height) - 8px);
-  padding-left: 4px;
-  margin-left: 8px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  background: var(--base-neutral--2, #e6e6e6);
+  height: calc(var(--base-select-min-height) - var(--base-space-sm));
+  padding-left: var(--base-space-xs);
+  margin-left: var(--base-space-sm);
+  margin-top: var(--base-space-xs);
+  margin-bottom: var(--base-space-xs);
+  background: var(--base-color-ui-lighter);
 }
 
 button[part="remove-tag"] {
   border: 0;
   color: currentColor;
   background: none;
-  margin-left: 4px;
+  margin-left: var(--base-space-xs);
 }
 
 :host([menu-is-open]) div[part="option-list"] {

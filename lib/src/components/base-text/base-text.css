@@ -2,6 +2,20 @@
   display: inline-block;
 }
 
+:host([inline]) {
+  display: inline-block;
+}
+
+:host([tag="h1"]:not([inline])),
+:host([tag="h2"]:not([inline])),
+:host([tag="h3"]:not([inline])),
+:host([tag="h4"]:not([inline])),
+:host([tag="h5"]:not([inline])),
+:host([tag="h6"]:not([inline])) {
+  display: block;
+  width: 100%;
+}
+
 :host h1,
 :host h2,
 :host h3,

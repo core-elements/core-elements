@@ -76,20 +76,21 @@
 }
 
 :host([type="primary"]) button {
-  --base-button-bg-color: var(--base-color-primary-light);
+  --base-button-bg-color: var(--base-color-primary);
   --base-button-text-color: var(--base-color-white);
 }
 
 :host([type="primary"]) button:hover {
-  --base-button-bg-color: var(--base-color-primary);
+  --base-button-bg-color: var(--base-color-primary-hover);
 }
 
 :host([type="secondary"]) button {
-  --base-button-bg-color: var(--base-color-secondary-light);
+  --base-button-bg-color: var(--base-color-secondary);
+  color: var(--base-color-primary);
 }
 
 :host([type="secondary"]) button:hover {
-  --base-button-bg-color: var(--base-color-secondary);
+  --base-button-bg-color: var(--base-color-secondary-hover);
 }
 
 :host([type="transparent"]) button {
@@ -102,21 +103,21 @@
 }
 
 :host([type="success"]) button {
-  --base-button-bg-color: var(--base-color-success-light);
+  --base-button-bg-color: var(--base-color-success);
   --base-button-text-color: var(--base-color-white);
 }
 
 :host([type="success"]) button:hover {
-  --base-button-bg-color: var(--base-color-success);
+  --base-button-bg-color: var(--base-color-success-hover);
 }
 
 :host([type="danger"]) button {
-  --base-button-bg-color: var(--base-color-danger-light);
+  --base-button-bg-color: var(--base-color-danger);
   --base-button-text-color: var(--base-color-white);
 }
 
 :host([type="danger"]) button:hover {
-  --base-button-bg-color: var(--base-color-danger);
+  --base-button-bg-color: var(--base-color-danger-hover);
 }
 
 /* Styles */

@@ -1,36 +1,56 @@
 <template>
-  <SidebarLayout :showSidebar="showSidebar">
-    <div slot="sidebar">
-      <nav toc>
-        <div v-for="(menuGroup, name) in groupedComponents" :key="name">
-          <label>{{ name }}</label>
-          <router-link
-            v-on:click.native="$emit('toggle-sidebar')"
-            :to="`/components/${page.name}`"
-            v-for="(page, i) in menuGroup"
-            :key="i"
-          >{{ page.name }}</router-link>
-        </div>
-      </nav>
-    </div>
-    <main class="main">
-      <router-view></router-view>
-    </main>
-  </SidebarLayout>
+  <Page>
+    <base-container size="sm">
+      <base-text tag="h1" weight="700" full>Components</base-text>
+      <base-text tag="p">
+        Ionic apps are made of high-level building blocks called Components,
+        which allow you to quickly construct the UI for your app. Ionic comes
+        stock with a number of components, including cards, lists, and tabs.
+        Once you’re familiar with the basics, refer to the API Index for a
+        complete list of each component and sub-component.
+      </base-text>
+    </base-container>
+    <base-box margin-y="xl">
+      <base-grid gap="lg" columns="4">
+        <base-grid-item
+          sm="4"
+          md="2"
+          lg="1"
+          v-for="(menuGroup, name) in groupedComponents"
+          :key="name"
+        >
+          <base-text tag="h2">{{ name }}</base-text>
+          <base-grid columns="1" gap="lg">
+            <base-grid-item sm="1" :key="i" v-for="(page, i) in menuGroup">
+              <router-link
+                tag="base-box"
+                clickable
+                full
+                depth="md"
+                radius="md"
+                padding="lg"
+                :to="`/components/${page.name}`"
+              >
+                <base-text tag="h3">{{ page.name }}</base-text>
+                <base-text tag="small">{{ page.desc }}</base-text>
+              </router-link>
+            </base-grid-item>
+          </base-grid>
+        </base-grid-item>
+      </base-grid>
+    </base-box>
+  </Page>
 </template>
 
 <script>
-import SidebarLayout from "../layouts/SidebarLayout";
-import marked from "marked";
+import Page from "../layouts/Page";
 import { components } from "../db.json";
-import Header from "../components/Header";
 
 export default {
-  props: { showSidebar: Boolean },
-  components: { SidebarLayout },
+  components: { Page },
   data() {
     return {
-      components
+      components,
     };
   },
   computed: {
@@ -43,84 +63,16 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }]
+            [`${catName}`]: [...prevComps, { ...comp }],
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: []
+          Form: [],
         }
       );
-    }
-  }
+    },
+  },
 };
 </script>
-
-<style>
-nav[toc] {
-  font-size: 1em;
-}
-
-@media (max-width: 800px) {
-  nav[toc] {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-nav[toc] label {
-  color: #a0aec0;
-  text-transform: uppercase;
-  font-size: 0.7em;
-  display: block;
-  margin-bottom: 10px;
-}
-
-nav[toc] a {
-  color: #718096;
-  margin-bottom: 10px;
-  text-decoration: none;
-  display: block;
-  margin-right: 10px;
-}
-
-nav[toc] a.router-link-exact-active {
-  color: #1a202c;
-  transition: all 0.5s ease;
-}
-
-nav[toc] a.router-link-exact-active:before {
-  color: #1a202c;
-  content: "\2022";
-  padding-right: var(--base-space-sm);
-}
-
-nav[toc] a:hover {
-  color: #1a202c;
-}
-
-nav[toc] a:last-of-type {
-  margin-bottom: 50px;
-}
-
-@media (min-width: 800px) {
-  nav[toc] a {
-    display: block;
-  }
-}
-
-nav[toc] a[active="true"] {
-  font-weight: 600;
-}
-
-main h1 {
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-main h2 {
-  margin-top: 80px;
-}
-</style>

@@ -1,6 +1,7 @@
 ---
 name: Box
-category: Elements
+desc: A little box that shows stuff
+category: Layout
 ---
 
 # Box

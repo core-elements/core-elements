@@ -58,6 +58,23 @@
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
+        },
+        {
+          "name": "bg",
+          "description": "Box background color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "description": "Box border",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "clickable",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -123,6 +140,26 @@
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
+        },
+        {
+          "name": "bg",
+          "attribute": "bg",
+          "description": "Box background color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "attribute": "border",
+          "description": "Box border",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "clickable",
+          "attribute": "clickable",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },
