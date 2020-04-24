@@ -12,6 +12,9 @@ import Components from "./views/Components";
 import Component from "./views/Component";
 import Installation from "./views/Installation";
 
+Vue.config.ignoredElements = [/base-\w*/];
+Vue.config.ignoredElements = [/ion-\w*/];
+
 Vue.use(Router);
 
 const router = new Router({

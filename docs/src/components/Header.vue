@@ -69,6 +69,12 @@ export default {
       showMenu: false,
     };
   },
+  watch: {
+    showSidebar: function(val) {
+      if (val) document.body.style.overflow = "hidden";
+      else document.body.style.overflow = "";
+    },
+  },
   methods: {
     handleToggleButton() {
       this.$emit("toggle-sidebar");
@@ -181,6 +187,10 @@ export default {
   outline: 0;
   background: transparent;
   font-size: 1.1em;
+}
+
+.header__nav-item.home.router-link-active {
+  color: #718096;
 }
 
 @media (min-width: 800px) {

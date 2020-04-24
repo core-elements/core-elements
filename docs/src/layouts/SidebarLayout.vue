@@ -33,6 +33,7 @@ export default {
   background: white;
   font-size: 1.5em;
   height: calc(100vh - 60px);
+  overflow-y: scroll;
 }
 
 .sidebar.show {

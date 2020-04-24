@@ -1,23 +1,25 @@
-.base-optgroup {
+:host {
   display: block;
 }
 
-.base-optgroup__label {
+:host [part="label"] {
   display: flex;
+  padding-left: var(--base-space-sm);
+  height: var(--base-size-sm);
   align-items: center;
-  font-weight: 500;
-  color: var(--base-color-ui-600);
-  padding: var(--base-spacing-200);
+  font-weight: 400;
+  color: var(--base-color-font);
+  padding: var(--base-space-xs);
   text-transform: uppercase;
-  font-size: var(--base-heading-100);
+  font-size: var(--base-font-size-xs);
 }
 
-.base-optgroup__icon {
-  margin-right: var(--base-spacing-100);
-}
-
-.base-optgroup__option-list {
+:host [part="list"] {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+::slotted([slot="prepend"]) {
+  margin-right: var(--base-space-sm);
 }

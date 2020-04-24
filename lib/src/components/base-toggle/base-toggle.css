@@ -64,7 +64,9 @@
 }
 
 [part="box"] [part="on"] {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--base-color-white);
   position: absolute;
   width: var(--base-toggle-icon-size);

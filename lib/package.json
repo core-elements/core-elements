@@ -17,6 +17,7 @@
     "build:rollup": "rollup --config"
   },
   "dependencies": {
+    "flatpickr": "^4.6.3",
     "highlight.js": "^9.18.1",
     "lit-element": "^2.2.1",
     "prettier": "^2.0.4"

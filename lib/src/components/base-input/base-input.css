@@ -75,11 +75,9 @@
 }
 
 ::slotted([slot="prepend"]) {
-  fill: var(--base-input-border-color);
-  padding-left: var(--base-space-sm);
+  margin-left: var(--base-space-sm);
 }
 
 ::slotted([slot="append"]) {
-  fill: var(--base-input-border-color);
-  padding-right: var(--base-space-sm);
+  margin-right: var(--base-space-sm);
 }

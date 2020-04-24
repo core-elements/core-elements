@@ -8,11 +8,11 @@
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-container/base-container.md",
-      "name": "Container",
-      "desc": "An element to limit the width of your content",
-      "category": "Layout",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+      "path": "../lib/src/components/base-button/base-button.md",
+      "name": "Button",
+      "desc": "A general button element",
+      "category": "Elements",
+      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-checkbox/base-checkbox.md",
@@ -22,18 +22,18 @@
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-button/base-button.md",
-      "name": "Button",
-      "desc": "A general button element",
-      "category": "Elements",
-      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-flex/base-flex.md",
       "name": "Flex",
       "desc": "Utility element to flex children",
       "category": "Layout",
       "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-container/base-container.md",
+      "name": "Container",
+      "desc": "An element to limit the width of your content",
+      "category": "Layout",
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-grid/base-grid.md",
@@ -47,7 +47,7 @@
       "name": "Input",
       "desc": "A input element",
       "category": "Form",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-label/base-label.md",
@@ -57,6 +57,13 @@
       "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
     },
     {
+      "path": "../lib/src/components/base-modal/base-modal.md",
+      "name": "Modal",
+      "desc": "A modal",
+      "category": "Elements",
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
+    },
+    {
       "path": "../lib/src/components/base-radio/base-radio.md",
       "name": "Radio",
       "desc": "Radio button",
@@ -64,11 +71,11 @@
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-modal/base-modal.md",
-      "name": "Modal",
-      "desc": "A modal",
-      "category": "Elements",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
+      "path": "../lib/src/components/base-select/base-select.md",
+      "name": "Select",
+      "desc": "Element with option for multiselect, search and more",
+      "category": "Form",
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-text/base-text.md",
@@ -78,18 +85,11 @@
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-select/base-select.md",
-      "name": "Select",
-      "desc": "Element with option for multiselect, search and more",
-      "category": "Form",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-toggle/base-toggle.md",
       "name": "Toggle",
       "desc": "A general toggle element",
       "category": "Form",
-      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
     }
   ]
 }

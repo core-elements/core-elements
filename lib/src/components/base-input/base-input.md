@@ -29,10 +29,14 @@ category: Form
 
 <base-knobs hideTabs src="./components.json" name="base-input">
 <base-input required  autovalidate placeholder="Required input">
+<div slot="error">This field is required</div>
 </base-input>
 </base-knobs>
 
 ### Simple email validation
+
+When using without an error slot the default validation error message on input fields is show.
+Use a error slot to provide your own error text.
 
 <base-knobs hideTabs src="./components.json" name="base-input">
 <base-input required type="email" autovalidate placeholder="Enter email">

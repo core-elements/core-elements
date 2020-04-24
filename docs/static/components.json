@@ -1448,6 +1448,11 @@
           "type": "boolean"
         },
         {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "placeholder",
           "type": "string",
           "default": "\"\""
@@ -1478,7 +1483,7 @@
           "default": "false"
         },
         {
-          "name": "is-focused",
+          "name": "focused",
           "type": "boolean",
           "default": "false"
         },
@@ -1527,6 +1532,12 @@
           "type": "boolean"
         },
         {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "placeholder",
           "attribute": "placeholder",
           "type": "string",
@@ -1563,8 +1574,8 @@
           "default": "false"
         },
         {
-          "name": "isFocused",
-          "attribute": "is-focused",
+          "name": "focused",
+          "attribute": "focused",
           "type": "boolean",
           "default": "false"
         },

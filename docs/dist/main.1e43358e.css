@@ -103,6 +103,10 @@
   font-size: 1.1em;
 }
 
+.header__nav-item.home.router-link-active {
+  color: #718096;
+}
+
 @media (min-width: 800px) {
   .header__nav-item.home {
     display: none;
@@ -1174,6 +1178,7 @@ b {
   background: white;
   font-size: 1.5em;
   height: calc(100vh - 60px);
+  overflow-y: scroll;
 }
 
 .sidebar.show {
