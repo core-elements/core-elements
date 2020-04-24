@@ -7,16 +7,17 @@ category: Form
 <base-knobs src="./components.json" name="base-select">
   <base-select>
     <base-option value="Option 1" selected></base-option>
-    <base-option value="Option 2"></base-option>
+    <base-option value="Option 2" disabled></base-option>
     <base-option value="Option 3"></base-option>
+    <base-option value="Option 4"></base-option>
   </base-select>
 </base-knobs>
 
 ## Searchable
 
 <base-knobs hideTabs src="./components.json" name="base-select">
-  <base-select searchable clearable>
-    <base-option value="Option 1" selected></base-option>
+  <base-select searchable clearable placeholder="Search">
+    <base-option value="Option 1"></base-option>
     <base-option value="Option 2"></base-option>
     <base-option value="Option 3"></base-option>
   </base-select>
@@ -25,8 +26,8 @@ category: Form
 ## No options feedback
 
 <base-knobs hideTabs src="./components.json" name="base-select">
-  <base-select searchable clearable>
-    <base-option value="Option 1" selected></base-option>
+  <base-select searchable placeholder="Search with no results">
+    <base-option value="Option 1"></base-option>
     <div slot="no-options">No options</div>
   </base-select>
 </base-knobs>

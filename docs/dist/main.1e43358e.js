@@ -848,7 +848,7 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"../lib/dist/components/sharedstyles-656ad3ab.js":[function(require,module,exports) {
+},{}],"../lib/dist/components/sharedstyles-be6ff695.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3668,7 +3668,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _sharedstyles656ad3ab = require("./sharedstyles-656ad3ab.js");
+var _sharedstylesBe6ff = require("./sharedstyles-be6ff695.js");
 
 /**
  * @license
@@ -3697,14 +3697,14 @@ const previousValues = new WeakMap();
  * vulnerabilities.
  */
 
-const unsafeHTML = (0, _sharedstyles656ad3ab.d)(value => part => {
-  if (!(part instanceof _sharedstyles656ad3ab.N)) {
+const unsafeHTML = (0, _sharedstylesBe6ff.d)(value => part => {
+  if (!(part instanceof _sharedstylesBe6ff.N)) {
     throw new Error('unsafeHTML can only be used in text bindings');
   }
 
   const previousValue = previousValues.get(part);
 
-  if (previousValue !== undefined && (0, _sharedstyles656ad3ab.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
+  if (previousValue !== undefined && (0, _sharedstylesBe6ff.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
     return;
   }
 
@@ -17839,10 +17839,10 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
-var highlightStyles = (0, _sharedstyles656ad3ab.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _sharedstyles656ad3ab.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
+var highlightStyles = (0, _sharedstylesBe6ff.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _sharedstylesBe6ff.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
 
-class BaseKnobs extends _sharedstyles656ad3ab.L {
+class BaseKnobs extends _sharedstylesBe6ff.L {
   constructor() {
     super();
     this.src = "";
@@ -17896,7 +17896,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   static get styles() {
-    return [styles, highlightStyles, _sharedstyles656ad3ab.s];
+    return [styles, highlightStyles, _sharedstylesBe6ff.s];
   }
 
   connectedCallback() {
@@ -17986,7 +17986,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   _propComponent(attr) {
     if (attr.type.includes("|")) {
       const options = attr.type.replace(/"/g, "").split("|");
-      return (0, _sharedstyles656ad3ab.h)`
+      return (0, _sharedstylesBe6ff.h)`
         <tr>
           <td>${attr.name}</td>
           <td>string</td>
@@ -17996,7 +17996,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
               @change=${e => this._handleAttrChange(e, attr)}
             >
               ${options.map(opt => {
-        return (0, _sharedstyles656ad3ab.h)`
+        return (0, _sharedstylesBe6ff.h)`
                   <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) === opt}
                     value=${opt}
@@ -18011,7 +18011,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
     }
 
     if (attr.type === "string" || attr.type === "String") {
-      return (0, _sharedstyles656ad3ab.h)`
+      return (0, _sharedstylesBe6ff.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18029,7 +18029,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
     }
 
     if (attr.type === "boolean" || attr.type === "Boolean") {
-      return (0, _sharedstyles656ad3ab.h)`
+      return (0, _sharedstylesBe6ff.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18050,7 +18050,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   _renderPropTab() {
-    return (0, _sharedstyles656ad3ab.h)`
+    return (0, _sharedstylesBe6ff.h)`
       <table class="props">
         <thead>
           <tr>
@@ -18069,7 +18069,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   _renderSrcTab() {
-    return (0, _sharedstyles656ad3ab.h)`
+    return (0, _sharedstylesBe6ff.h)`
       <div class="src">
         <h2>
           <pre><code><div class="hljs">${unsafeHTML(this.srcHTML)}</div></code></pre>
@@ -18079,10 +18079,10 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   render() {
-    return (0, _sharedstyles656ad3ab.h)`
+    return (0, _sharedstylesBe6ff.h)`
       <slot></slot>
-      ${this.hideTabs ? null : (0, _sharedstyles656ad3ab.h)` <nav>
-            ${this.hideSrc ? null : (0, _sharedstyles656ad3ab.h)`
+      ${this.hideTabs ? null : (0, _sharedstylesBe6ff.h)` <nav>
+            ${this.hideSrc ? null : (0, _sharedstylesBe6ff.h)`
                   <button
                     ?active=${this.tab === "src"}
                     value="src"
@@ -18091,7 +18091,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
                     Src
                   </button>
                 `}
-            ${this.hideProps ? null : (0, _sharedstyles656ad3ab.h)`
+            ${this.hideProps ? null : (0, _sharedstylesBe6ff.h)`
                   <button
                     ?active=${this.tab === "props"}
                     value="props"
@@ -18100,7 +18100,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
                     Props
                   </button>
                 `}
-            ${this.hideEvents ? null : (0, _sharedstyles656ad3ab.h)`
+            ${this.hideEvents ? null : (0, _sharedstylesBe6ff.h)`
                   <button
                     ?active=${this.tab === "events"}
                     value="events"
@@ -18125,7 +18125,7 @@ if (!customElements.get("base-knobs")) {
 
 var _default = BaseKnobs;
 exports.default = _default;
-},{"./sharedstyles-656ad3ab.js":"../lib/dist/components/sharedstyles-656ad3ab.js"}],"../lib/dist/main.js":[function(require,module,exports) {
+},{"./sharedstyles-be6ff695.js":"../lib/dist/components/sharedstyles-be6ff695.js"}],"../lib/dist/main.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -35787,23 +35787,23 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-    "name": "Checkbox",
-    "desc": "A checkbox element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
     "desc": "A general button element",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-grid/base-grid.md",
-    "name": "Grid",
-    "desc": "Grid system elements",
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "desc": "An element to limit the width of your content",
     "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
+    "name": "Checkbox",
+    "desc": "A checkbox element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
@@ -35817,17 +35817,23 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "desc": "An element to limit the width of your content",
+    "path": "../lib/src/components/base-grid/base-grid.md",
+    "name": "Grid",
+    "desc": "Grid system elements",
     "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-input/base-input.md",
     "name": "Input",
     "desc": "A input element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-modal/base-modal.md",
+    "name": "Modal",
+    "desc": "A modal",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-radio/base-radio.md",
     "name": "Radio",
@@ -35847,23 +35853,17 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-textarea\">\n<base-textarea></base-textarea>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-select/base-select.md",
-    "name": "Select",
-    "desc": "Element with option for multiselect, search and more",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable>\n    <base-option value=\"Option 1\" selected></base-option>\n    <div slot=\"no-options\">No options</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-toggle/base-toggle.md",
     "name": "Toggle",
     "desc": "A general toggle element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-modal/base-modal.md",
-    "name": "Modal",
-    "desc": "A modal",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-select/base-select.md",
+    "name": "Select",
+    "desc": "Element with option for multiselect, search and more",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No options</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -61881,7 +61881,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51121" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56126" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
