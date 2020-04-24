@@ -22,6 +22,15 @@ category: Form
   </base-select>
 </base-knobs>
 
+## No options feedback
+
+<base-knobs hideTabs src="./components.json" name="base-select">
+  <base-select searchable clearable>
+    <base-option value="Option 1" selected></base-option>
+    <div slot="no-options">No options</div>
+  </base-select>
+</base-knobs>
+
 ## Multiple
 
 <base-knobs hideTabs src="./components.json" name="base-select">

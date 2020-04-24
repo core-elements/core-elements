@@ -187,3 +187,11 @@ div[part="option-list"] {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+::slotted([slot="no-options"]) {
+  display: flex;
+  align-items: center;
+  height: var(--base-size-md);
+  padding: 0 var(--base-space-sm);
+  background: white;
+}

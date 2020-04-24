@@ -1444,7 +1444,7 @@
           "type": "string"
         },
         {
-          "name": "show-suggestions",
+          "name": "list-open",
           "type": "boolean"
         },
         {
@@ -1498,7 +1498,7 @@
           "default": "false"
         },
         {
-          "name": "menu-open-on-select",
+          "name": "list-open-on-select",
           "type": "boolean",
           "default": "false"
         }
@@ -1527,8 +1527,8 @@
           "type": "string"
         },
         {
-          "name": "showSuggestions",
-          "attribute": "show-suggestions",
+          "name": "listOpen",
+          "attribute": "list-open",
           "type": "boolean"
         },
         {
@@ -1598,8 +1598,8 @@
           "default": "false"
         },
         {
-          "name": "menuOpenOnSelect",
-          "attribute": "menu-open-on-select",
+          "name": "listOpenOnSelect",
+          "attribute": "list-open-on-select",
           "type": "boolean",
           "default": "false"
         }
@@ -1663,6 +1663,10 @@
       "path": "./../../lib/src/components/base-textarea/base-textarea.js",
       "attributes": [
         {
+          "name": "full",
+          "type": "boolean"
+        },
+        {
           "name": "cols",
           "type": "string"
         },
@@ -1672,6 +1676,11 @@
         }
       ],
       "properties": [
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean"
+        },
         {
           "name": "cols",
           "attribute": "cols",
