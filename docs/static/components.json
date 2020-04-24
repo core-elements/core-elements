@@ -1614,6 +1614,75 @@
       ]
     },
     {
+      "name": "base-tab",
+      "path": "./../../lib/src/components/base-tabs/base-tab.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "base-tabs",
+      "path": "./../../lib/src/components/base-tabs/base-tabs.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tabElements",
+          "type": "Element[]"
+        },
+        {
+          "name": "selectedTab",
+          "type": "Element | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
       "name": "base-text",
       "path": "./../../lib/src/components/base-text/base-text.js",
       "attributes": [
@@ -1633,6 +1702,11 @@
           "name": "weight",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -1655,6 +1729,12 @@
           "attribute": "weight",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },

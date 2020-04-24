@@ -12,9 +12,17 @@
           <b>Vue</b>,
           <b>Angular</b>, or any other framwork.
         </base-text>
-        <base-box>
+        <base-box margin-y="md">
           <router-link tag="base-button" to="/installation" type="primary">Get Started</router-link>
           <router-link tag="base-button" to="/components" type="secondary">Components</router-link>
+        </base-box>
+        <base-box margin-y="md">
+          <base-tabs @change="e => installMethod = e.target.value" :value="installMethod">
+            <base-tab>NPM</base-tab>
+            <base-tab>CDN</base-tab>
+          </base-tabs>
+          <pre v-if="installMethod === 'NPM'"><code align="center" class="hljs">npm install --save base-elements</code></pre>
+          <pre v-if="installMethod === 'CDN'"><code align="center" class="hljs">https://unpkg.com/base-elements</code></pre>
         </base-box>
       </base-grid-item>
 
@@ -53,6 +61,12 @@
               <base-button type="primary" @click="modalOpen = true">Show modal</base-button>
               <base-toggle>Toggle</base-toggle>
             </base-grid-item>
+            <base-grid-item sm="2" md="1">
+              <base-tabs>
+                <base-tab selected>Tab 1</base-tab>
+                <base-tab>Tab 2</base-tab>
+              </base-tabs>
+            </base-grid-item>
           </base-grid>
         </base-box>
       </base-grid-item>
@@ -67,6 +81,7 @@ export default {
   components: { Page },
   data() {
     return {
+      installMethod: "NPM",
       modalOpen: false
     };
   }
