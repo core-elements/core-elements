@@ -22,14 +22,17 @@
 }
 
 :host([size="sm"]) {
+  --base-checkbox-indicator-font-size: 0.8em;
   --base-checkbox-height: var(--base-size-sm);
 }
 
 :host([size="md"]) {
+  --base-checkbox-indicator-font-size: 1em;
   --base-checkbox-height: var(--base-size-md);
 }
 
 :host([size="lg"]) {
+  --base-checkbox-indicator-font-size: 1.4em;
   --base-checkbox-height: var(--base-size-lg);
 }
 
@@ -41,52 +44,50 @@
   display: inline-block;
 }
 
-:host input[type="checkbox"] {
-  outline: 0;
+input {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  vertical-align: middle;
+}
+
+input ~ [part="box"] {
   box-shadow: var(--base-button-box-shadow);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background-color: var(--base-checkbox-bg-color);
   color: var(--base-color-font);
   width: calc(var(--base-checkbox-height) - var(--base-space-md));
   height: calc(var(--base-checkbox-height) - var(--base-space-md));
   border-radius: var(--base-checkbox-border-radius);
   border: var(--base-checkbox-border);
+  margin-right: var(--base-space-sm);
   position: relative;
   vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-input[type="checkbox"]:focus {
+input:focus ~ [part="box"] {
   --base-button-box-shadow: 0 0 0 2px var(--base-color-focus);
 }
 
-input[type="checkbox"]:hover {
+input:hover ~ [part="box"] {
   --base-checkbox-bg-color: var(--base-color-ui-lighter);
 }
 
-input[type="checkbox"]:checked {
+input:checked ~ [part="box"] {
   --base-checkbox-bg-color: var(--base-color-focus);
   --base-checkbox-border: 1px solid var(--base-color-focus);
+}
+
+[part="box"] [part="indicator"] {
+  font-size: var(--base-checkbox-indicator-font-size);
   color: var(--base-color-white);
-}
-
-input[type="checkbox"]:checked:before {
-  opacity: 1;
-}
-
-input[type="checkbox"]:before {
-  border-color: var(--base-color-white);
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  left: 50%;
-  top: 50%;
-  height: 5px;
-  width: 10px;
-  border-radius: 2px 0 2px 2px;
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-  transform: translate(-50%, calc(-50% - 1px)) rotate(-45deg);
+  fill: currentColor;
+  display: block;
   opacity: 0;
+}
+
+input:checked ~ [part="box"] [part="indicator"] {
+  opacity: 1;
 }

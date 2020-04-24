@@ -2,8 +2,15 @@
   display: inline-block;
 }
 
-:host([inline]) {
+:host([inline]),
+:host([inline]) > * {
   display: inline-block;
+}
+
+:host([full]),
+:host([full]) > * {
+  display: block;
+  width: 100%;
 }
 
 :host([tag="h1"]) > *,
@@ -38,6 +45,37 @@
   font-size: var(--base-font-size-xs);
 }
 
+:host([look="h1"]) > *,
+:host([tag="h1"]) > *,
+:host([look="h2"]) > *,
+:host([tag="h2"]) > *,
+:host([look="h4"]) > *,
+:host([tag="h4"]) > *,
+:host([look="h5"]) > *,
+:host([tag="h5"]) > *,
+:host([look="h6"]) > *,
+:host([tag="h6"]) > * {
+  color: var(--base-color-font-dark);
+}
+
+:host([look="p"]) > *,
+:host([tag="p"]) > *,
+:host([look="small"]) > *,
+:host([tag="small"]) > * {
+  color: var(--base-color-font);
+}
+
+:host([look="i"]) > *,
+:host([tag="i"]) > *,
+:host([look="lead"]) > * {
+  color: var(--base-color-font-light);
+}
+
+:host([tag="h6"]) > *,
+:host([look="h6"]) > * {
+  text-transform: uppercase;
+}
+
 :host([tag="h1"]:not([inline])),
 :host([tag="h2"]:not([inline])),
 :host([tag="h3"]:not([inline])),
@@ -56,19 +94,6 @@
 :host([look="h6"]:not([inline])) {
   display: block;
   width: 100%;
-}
-
-:host([inline]) h1,
-:host([inline]) h2,
-:host([inline]) h3,
-:host([inline]) h4,
-:host([inline]) h5,
-:host([inline]) h6,
-:host([inline]) p,
-:host([inline]) small,
-:host([inline]) b,
-:host([inline]) i {
-  display: inline-block;
 }
 
 @each $i in 100, 200, 300, 400, 500, 600, 700, 800, 900 {

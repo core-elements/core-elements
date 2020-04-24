@@ -26,7 +26,7 @@
     <main class="main">
       <base-text tag="h1">{{ component.name }}</base-text>
       <base-text tag="p" look="lead">{{ component.desc }}</base-text>
-      <base-box margin-y="xl" v-html="html"></base-box>
+      <base-box class="markdown-body" margin-y="xl" v-html="html"></base-box>
     </main>
   </SidebarLayout>
 </template>

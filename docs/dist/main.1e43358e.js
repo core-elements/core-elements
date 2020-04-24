@@ -848,7 +848,7 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"../lib/dist/components/sharedstyles-be6ff695.js":[function(require,module,exports) {
+},{}],"../lib/dist/components/sharedstyles-656ad3ab.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3668,7 +3668,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _sharedstylesBe6ff = require("./sharedstyles-be6ff695.js");
+var _sharedstyles656ad3ab = require("./sharedstyles-656ad3ab.js");
 
 /**
  * @license
@@ -3697,14 +3697,14 @@ const previousValues = new WeakMap();
  * vulnerabilities.
  */
 
-const unsafeHTML = (0, _sharedstylesBe6ff.d)(value => part => {
-  if (!(part instanceof _sharedstylesBe6ff.N)) {
+const unsafeHTML = (0, _sharedstyles656ad3ab.d)(value => part => {
+  if (!(part instanceof _sharedstyles656ad3ab.N)) {
     throw new Error('unsafeHTML can only be used in text bindings');
   }
 
   const previousValue = previousValues.get(part);
 
-  if (previousValue !== undefined && (0, _sharedstylesBe6ff.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
+  if (previousValue !== undefined && (0, _sharedstyles656ad3ab.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
     return;
   }
 
@@ -17839,10 +17839,10 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
-var highlightStyles = (0, _sharedstylesBe6ff.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _sharedstylesBe6ff.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
+var highlightStyles = (0, _sharedstyles656ad3ab.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _sharedstyles656ad3ab.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
 
-class BaseKnobs extends _sharedstylesBe6ff.L {
+class BaseKnobs extends _sharedstyles656ad3ab.L {
   constructor() {
     super();
     this.src = "";
@@ -17896,7 +17896,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
   }
 
   static get styles() {
-    return [styles, highlightStyles, _sharedstylesBe6ff.s];
+    return [styles, highlightStyles, _sharedstyles656ad3ab.s];
   }
 
   connectedCallback() {
@@ -17986,7 +17986,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
   _propComponent(attr) {
     if (attr.type.includes("|")) {
       const options = attr.type.replace(/"/g, "").split("|");
-      return (0, _sharedstylesBe6ff.h)`
+      return (0, _sharedstyles656ad3ab.h)`
         <tr>
           <td>${attr.name}</td>
           <td>string</td>
@@ -17996,7 +17996,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
               @change=${e => this._handleAttrChange(e, attr)}
             >
               ${options.map(opt => {
-        return (0, _sharedstylesBe6ff.h)`
+        return (0, _sharedstyles656ad3ab.h)`
                   <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) === opt}
                     value=${opt}
@@ -18011,7 +18011,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
     }
 
     if (attr.type === "string" || attr.type === "String") {
-      return (0, _sharedstylesBe6ff.h)`
+      return (0, _sharedstyles656ad3ab.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18029,7 +18029,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
     }
 
     if (attr.type === "boolean" || attr.type === "Boolean") {
-      return (0, _sharedstylesBe6ff.h)`
+      return (0, _sharedstyles656ad3ab.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18050,7 +18050,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
   }
 
   _renderPropTab() {
-    return (0, _sharedstylesBe6ff.h)`
+    return (0, _sharedstyles656ad3ab.h)`
       <table class="props">
         <thead>
           <tr>
@@ -18069,7 +18069,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
   }
 
   _renderSrcTab() {
-    return (0, _sharedstylesBe6ff.h)`
+    return (0, _sharedstyles656ad3ab.h)`
       <div class="src">
         <h2>
           <pre><code><div class="hljs">${unsafeHTML(this.srcHTML)}</div></code></pre>
@@ -18079,10 +18079,10 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
   }
 
   render() {
-    return (0, _sharedstylesBe6ff.h)`
+    return (0, _sharedstyles656ad3ab.h)`
       <slot></slot>
-      ${this.hideTabs ? null : (0, _sharedstylesBe6ff.h)` <nav>
-            ${this.hideSrc ? null : (0, _sharedstylesBe6ff.h)`
+      ${this.hideTabs ? null : (0, _sharedstyles656ad3ab.h)` <nav>
+            ${this.hideSrc ? null : (0, _sharedstyles656ad3ab.h)`
                   <button
                     ?active=${this.tab === "src"}
                     value="src"
@@ -18091,7 +18091,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
                     Src
                   </button>
                 `}
-            ${this.hideProps ? null : (0, _sharedstylesBe6ff.h)`
+            ${this.hideProps ? null : (0, _sharedstyles656ad3ab.h)`
                   <button
                     ?active=${this.tab === "props"}
                     value="props"
@@ -18100,7 +18100,7 @@ class BaseKnobs extends _sharedstylesBe6ff.L {
                     Props
                   </button>
                 `}
-            ${this.hideEvents ? null : (0, _sharedstylesBe6ff.h)`
+            ${this.hideEvents ? null : (0, _sharedstyles656ad3ab.h)`
                   <button
                     ?active=${this.tab === "events"}
                     value="events"
@@ -18125,7 +18125,7 @@ if (!customElements.get("base-knobs")) {
 
 var _default = BaseKnobs;
 exports.default = _default;
-},{"./sharedstyles-be6ff695.js":"../lib/dist/components/sharedstyles-be6ff695.js"}],"../lib/dist/main.js":[function(require,module,exports) {
+},{"./sharedstyles-656ad3ab.js":"../lib/dist/components/sharedstyles-656ad3ab.js"}],"../lib/dist/main.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -21762,7 +21762,7 @@ var global = arguments[3];
     customElements.define("base-button", BaseButton);
   }
 
-  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-white);--base-checkbox-border:2px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;vertical-align:top;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}:host input[type=checkbox]{outline:0;box-shadow:var(--base-button-box-shadow);-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);position:relative;vertical-align:middle}input[type=checkbox]:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input[type=checkbox]:hover{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input[type=checkbox]:checked{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus);color:var(--base-color-white)}input[type=checkbox]:checked:before{opacity:1}input[type=checkbox]:before{border-color:var(--base-color-white);content:"";position:absolute;pointer-events:none;left:50%;top:50%;height:5px;width:10px;border-radius:2px 0 2px 2px;border-bottom:2px solid;border-left:2px solid;-webkit-transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);transform:translate(-50%,calc(-50% - 1px)) rotate(-45deg);opacity:0}`;
+  var styles$3 = css`:host{--base-checkbox-bg-color:var(--base-color-white);--base-checkbox-border:2px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;vertical-align:top;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-indicator-font-size:.8em;--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-indicator-font-size:1em;--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-indicator-font-size:1.4em;--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}input~[part=box]{box-shadow:var(--base-button-box-shadow);background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);margin-right:var(--base-space-sm);position:relative;vertical-align:middle;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}input:focus~[part=box]{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input:hover~[part=box]{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input:checked~[part=box]{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus)}[part=box] [part=indicator]{font-size:var(--base-checkbox-indicator-font-size);color:var(--base-color-white);fill:currentColor;display:block;opacity:0}input:checked~[part=box] [part=indicator]{opacity:1}`;
 
   class BaseCheckbox extends LitElement {
     constructor() {
@@ -21824,7 +21824,10 @@ var global = arguments[3];
           value=${this.value}
           type="checkbox"
         />
-        <slot></slot>
+        <span part="box">
+          <slot name="indicator" part="indicator">&#10003;</slot>
+        </span>
+        <span part="label"><slot></slot></span>
       </label>
     `;
     }
@@ -23125,7 +23128,7 @@ var global = arguments[3];
     customElements.define("base-flex", BaseFlex);
   }
 
-  var styles$c = css`:host,:host([inline]){display:inline-block}:host([look=h1])>*,:host([tag=h1])>*{font-size:var(--base-font-size-xl)}:host([look=h2])>*,:host([tag=h2])>*{font-size:var(--base-font-size-lg)}:host([look=h3])>*,:host([tag=h3])>*{font-size:var(--base-font-size-md)}:host([look=h4])>*,:host([tag=h4])>*{font-size:var(--base-font-size-sm)}:host([look=h5])>*,:host([look=h6])>*,:host([look=small])>*,:host([tag=h5])>*,:host([tag=h6])>*,:host([tag=small])>*{font-size:var(--base-font-size-xs)}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([inline]) b,:host([inline]) h1,:host([inline]) h2,:host([inline]) h3,:host([inline]) h4,:host([inline]) h5,:host([inline]) h6,:host([inline]) i,:host([inline]) p,:host([inline]) small{display:inline-block}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>*{font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
+  var styles$c = css`:host,:host([inline]),:host([inline])>*{display:inline-block}:host([full]),:host([full])>*{display:block;width:100%}:host([look=h1])>*,:host([tag=h1])>*{font-size:var(--base-font-size-xl)}:host([look=h2])>*,:host([tag=h2])>*{font-size:var(--base-font-size-lg)}:host([look=h3])>*,:host([tag=h3])>*{font-size:var(--base-font-size-md)}:host([look=h4])>*,:host([tag=h4])>*{font-size:var(--base-font-size-sm)}:host([look=h5])>*,:host([look=h6])>*,:host([look=small])>*,:host([tag=h5])>*,:host([tag=h6])>*,:host([tag=small])>*{font-size:var(--base-font-size-xs)}:host([look=h1])>*,:host([look=h2])>*,:host([look=h4])>*,:host([look=h5])>*,:host([look=h6])>*,:host([tag=h1])>*,:host([tag=h2])>*,:host([tag=h4])>*,:host([tag=h5])>*,:host([tag=h6])>*{color:var(--base-color-font-dark)}:host([look=p])>*,:host([look=small])>*,:host([tag=p])>*,:host([tag=small])>*{color:var(--base-color-font)}:host([look=i])>*,:host([look=lead])>*,:host([tag=i])>*{color:var(--base-color-font-light)}:host([look=h6])>*,:host([tag=h6])>*{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>*{font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
 
   class BaseText extends LitElement {
     constructor() {
@@ -23145,6 +23148,7 @@ var global = arguments[3];
 
       this.look = "p";
       this.weight = "";
+      this.full = false;
     }
 
     static get properties() {
@@ -23157,6 +23161,9 @@ var global = arguments[3];
         },
         weight: {
           type: String
+        },
+        full: {
+          type: Boolean
         }
       };
     }
@@ -23170,47 +23177,45 @@ var global = arguments[3];
     }
 
     render() {
-      if (this.tag) {
-        switch (this.tag) {
-          case "h1":
-            return html`<h1><slot></slot></h1>`;
+      switch (this.tag) {
+        case "h1":
+          return html`<h1><slot></slot></h1>`;
 
-          case "h2":
-            return html`<h2><slot></slot></h2>`;
+        case "h2":
+          return html`<h2><slot></slot></h2>`;
 
-          case "h3":
-            return html`<h3><slot></slot></h3>`;
+        case "h3":
+          return html`<h3><slot></slot></h3>`;
 
-          case "h4":
-            return html`<h4><slot></slot></h4>`;
+        case "h4":
+          return html`<h4><slot></slot></h4>`;
 
-          case "h5":
-            return html`<h5><slot></slot></h5>`;
+        case "h5":
+          return html`<h5><slot></slot></h5>`;
 
-          case "h6":
-            return html`<h6><slot></slot></h6>`;
+        case "h6":
+          return html`<h6><slot></slot></h6>`;
 
-          case "p":
-            return html`<p><slot></slot></p>`;
+        case "p":
+          return html`<p><slot></slot></p>`;
 
-          case "small":
-            return html`<small><slot></slot></small>`;
+        case "small":
+          return html`<small><slot></slot></small>`;
 
-          case "b":
-            return html`<b><slot></slot></b>`;
+        case "b":
+          return html`<b><slot></slot></b>`;
 
-          case "i":
-            return html`<i><slot></slot></i>`;
+        case "i":
+          return html`<i><slot></slot></i>`;
 
-          case "span":
-            return html`<span><slot></slot></span>`;
+        case "span":
+          return html`<span><slot></slot></span>`;
 
-          case "div":
-            return html`<div><slot></slot></div>`;
+        case "div":
+          return html`<div><slot></slot></div>`;
 
-          default:
-            return html`<p><slot></slot></p>`;
-        }
+        default:
+          return html`<p><slot></slot></p>`;
       }
     }
 
@@ -35803,7 +35808,7 @@ module.exports = {
     "name": "Checkbox",
     "desc": "A checkbox element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
@@ -35833,7 +35838,7 @@ module.exports = {
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n<header slot=\"header\">Header</header>\ncontent\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-radio/base-radio.md",
     "name": "Radio",
@@ -35845,7 +35850,7 @@ module.exports = {
     "name": "Text",
     "desc": "A general purpose text element",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-textarea/base-textarea.md",
     "name": "Text Area",
@@ -37982,6 +37987,7 @@ exports.default = _default;
         ]),
         _vm._v(" "),
         _c("base-box", {
+          staticClass: "markdown-body",
           attrs: { "margin-y": "xl" },
           domProps: { innerHTML: _vm._s(_vm.html) }
         })
