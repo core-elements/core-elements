@@ -36014,7 +36014,7 @@ exports.default = _default;
                         _vm._l(menuGroup, function(page, i) {
                           return _c(
                             "base-grid-item",
-                            { key: i, attrs: { sm: "4", md: "1", lg: "1" } },
+                            { key: i, attrs: { sm: "2", md: "1", lg: "1" } },
                             [
                               _c(
                                 "router-link",
