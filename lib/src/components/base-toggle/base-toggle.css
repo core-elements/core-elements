@@ -50,17 +50,25 @@
   flex-grow: 0;
 }
 
-:host:hover [part="box"] {
-  background: var(--base-color-ui-dark);
-}
-
 :host input:checked + [part="box"] {
   border-color: var(--base-color-focus);
   background: var(--base-color-focus);
 }
 
-:host:hover input:checked + [part="box"] {
-  background: var(--base-color-focus-light);
+[part="indicator"] {
+  background: var(--base-color-white);
+  position: absolute;
+  left: var(--base-toggle-indicator-margin);
+  top: 50%;
+  transition: all 0.2s ease;
+  transform: translateY(-50%) translateX(0);
+  border-radius: 50%;
+  width: var(--base-toggle-indicator-size);
+  height: var(--base-toggle-indicator-size);
+}
+
+:host(:hover) [part="indicator"] {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 [part="box"] [part="on"] {
@@ -91,27 +99,6 @@
   top: 50%;
   transform: translateY(-50%);
   content: "";
-}
-
-@keyframes rotate {
-  from {
-    transform: translateY(-50%) rotate(0deg);
-  }
-  to {
-    transform: translateY(-50%) rotate(360deg);
-  }
-}
-
-[part="indicator"] {
-  background: var(--base-color-white);
-  position: absolute;
-  left: var(--base-toggle-indicator-margin);
-  top: 50%;
-  transition: all 0.2s ease;
-  transform: translateY(-50%) translateX(0);
-  border-radius: 50%;
-  width: var(--base-toggle-indicator-size);
-  height: var(--base-toggle-indicator-size);
 }
 
 :host input:checked + [part="box"] [part="indicator"] {

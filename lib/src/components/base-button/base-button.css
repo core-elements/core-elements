@@ -16,7 +16,6 @@
 :host {
   vertical-align: top;
   margin-bottom: var(--base-space-xs);
-  margin-right: var(--base-space-xs);
 }
 
 :host,

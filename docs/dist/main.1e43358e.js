@@ -17839,8 +17839,8 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
-var highlightStyles = (0, _sharedstyles48eb.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _sharedstyles48eb.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;box-shadow:0 10px 20px 0 rgba(0,0,0,.15);border:2px solid var(--base-color-secondary-light)}table thead tr{background:var(--base-color-secondary-light);border-bottom:3px solid var(--base-color-secondary-light)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}table tr{background-color:#fff;border-bottom:1px solid var(--base-color-secondary-light)}table tr:nth-child(2n){background-color:hsla(0,0%,98%,.98)}`;
+var highlightStyles = (0, _sharedstyles48eb.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _sharedstyles48eb.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
 
 class BaseKnobs extends _sharedstyles48eb.L {
   constructor() {
@@ -21692,7 +21692,7 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);vertical-align:top;margin-bottom:var(--base-space-xs);margin-right:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary-hover)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary);color:var(--base-color-primary)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary-hover)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success-hover)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger-hover)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
+  var styles$2 = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);vertical-align:top;margin-bottom:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary-hover)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary);color:var(--base-color-primary)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary-hover)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success-hover)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger-hover)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
 
   class BaseButton extends LitElement {
     constructor() {
@@ -23264,7 +23264,7 @@ var global = arguments[3];
     customElements.define("base-container", BaseContainer);
   }
 
-  var styles$e = css`:host{--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:var(--base-space-xs);--base-toggle-indicator-size:calc(var(--base-toggle-box-size) - var(--base-toggle-indicator-margin)*2);--base-toggle-icon-size:calc(var(--base-toggle-indicator-size)*0.8);vertical-align:top;cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;height:var(--base-toggle-height)}:host([full]){width:100%}:host([full]),:host label{display:-webkit-box;display:flex}:host label{-webkit-box-align:center;align-items:center}:host input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host input:focus+[part=box]{box-shadow:0 0 0 2px var(--base-color-focus)}[part=box]{position:relative;background:var(--base-color-ui-light);border:2px solid var(--base-color-ui-light);border-radius:300px;display:inline-block;-webkit-transition:all .2s ease;transition:all .2s ease;height:var(--base-toggle-box-size);width:calc(var(--base-toggle-box-size)*1.8);flex-basis:calc(var(--base-toggle-box-size)*1.8);flex-shrink:0;-webkit-box-flex:0;flex-grow:0}:host:hover [part=box]{background:var(--base-color-ui-dark)}:host input:checked+[part=box]{border-color:var(--base-color-focus);background:var(--base-color-focus)}:host:hover input:checked+[part=box]{background:var(--base-color-focus-light)}[part=box] [part=on]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;display:block;left:var(--base-toggle-indicator-margin)}[part=box] [part=off],[part=box] [part=on]{color:var(--base-color-white);position:absolute;width:var(--base-toggle-icon-size);height:var(--base-toggle-icon-size);border-radius:50%;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);content:""}[part=box] [part=off]{text-align:center;display:block;right:var(--base-toggle-indicator-margin)}@-webkit-keyframes rotate{0%{-webkit-transform:translateY(-50%) rotate(0);transform:translateY(-50%) rotate(0)}to{-webkit-transform:translateY(-50%) rotate(1turn);transform:translateY(-50%) rotate(1turn)}}@keyframes rotate{0%{-webkit-transform:translateY(-50%) rotate(0);transform:translateY(-50%) rotate(0)}to{-webkit-transform:translateY(-50%) rotate(1turn);transform:translateY(-50%) rotate(1turn)}}[part=indicator]{background:var(--base-color-white);position:absolute;left:var(--base-toggle-indicator-margin);top:50%;-webkit-transition:all .2s ease;transition:all .2s ease;-webkit-transform:translateY(-50%) translateX(0);transform:translateY(-50%) translateX(0);border-radius:50%;width:var(--base-toggle-indicator-size);height:var(--base-toggle-indicator-size)}:host input:checked+[part=box] [part=indicator]{left:calc(100% - var(--base-toggle-indicator-margin));-webkit-transform:translateY(-50%) translateX(-100%);transform:translateY(-50%) translateX(-100%)}[part=label]{padding-left:var(--base-space-md);font-weight:400}:host([size=sm]){--base-toggle-height:var(--base-size-sm);--base-toggle-box-size:var(--base-size-xs);--base-toggle-indicator-margin:4px}:host([size=md]){--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:4px}:host([size=lg]){--base-toggle-height:var(--base-size-lg);--base-toggle-box-size:var(--base-size-md);--base-toggle-indicator-margin:4px}`;
+  var styles$e = css`:host{--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:var(--base-space-xs);--base-toggle-indicator-size:calc(var(--base-toggle-box-size) - var(--base-toggle-indicator-margin)*2);--base-toggle-icon-size:calc(var(--base-toggle-indicator-size)*0.8);vertical-align:top;cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;height:var(--base-toggle-height)}:host([full]){width:100%}:host([full]),:host label{display:-webkit-box;display:flex}:host label{-webkit-box-align:center;align-items:center}:host input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host input:focus+[part=box]{box-shadow:0 0 0 2px var(--base-color-focus)}[part=box]{position:relative;background:var(--base-color-ui-light);border:2px solid var(--base-color-ui-light);border-radius:300px;display:inline-block;-webkit-transition:all .2s ease;transition:all .2s ease;height:var(--base-toggle-box-size);width:calc(var(--base-toggle-box-size)*1.8);flex-basis:calc(var(--base-toggle-box-size)*1.8);flex-shrink:0;-webkit-box-flex:0;flex-grow:0}:host input:checked+[part=box]{border-color:var(--base-color-focus);background:var(--base-color-focus)}[part=indicator]{background:var(--base-color-white);position:absolute;left:var(--base-toggle-indicator-margin);top:50%;-webkit-transition:all .2s ease;transition:all .2s ease;-webkit-transform:translateY(-50%) translateX(0);transform:translateY(-50%) translateX(0);border-radius:50%;width:var(--base-toggle-indicator-size);height:var(--base-toggle-indicator-size)}:host(:hover) [part=indicator]{box-shadow:0 1px 4px 0 rgba(0,0,0,.2)}[part=box] [part=on]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;display:block;left:var(--base-toggle-indicator-margin)}[part=box] [part=off],[part=box] [part=on]{color:var(--base-color-white);position:absolute;width:var(--base-toggle-icon-size);height:var(--base-toggle-icon-size);border-radius:50%;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);content:""}[part=box] [part=off]{text-align:center;display:block;right:var(--base-toggle-indicator-margin)}:host input:checked+[part=box] [part=indicator]{left:calc(100% - var(--base-toggle-indicator-margin));-webkit-transform:translateY(-50%) translateX(-100%);transform:translateY(-50%) translateX(-100%)}[part=label]{padding-left:var(--base-space-md);font-weight:400}:host([size=sm]){--base-toggle-height:var(--base-size-sm);--base-toggle-box-size:var(--base-size-xs);--base-toggle-indicator-margin:4px}:host([size=md]){--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:4px}:host([size=lg]){--base-toggle-height:var(--base-size-lg);--base-toggle-box-size:var(--base-size-md);--base-toggle-indicator-margin:4px}`;
 
   class BaseToggle extends LitElement {
     constructor() {
@@ -35009,11 +35009,6 @@ var _default = {
     };
   },
 
-  watch: {
-    showSidebar: function (val) {
-      if (val) document.body.style.overflow = "hidden";else document.body.style.overflow = "";
-    }
-  },
   methods: {
     handleToggleButton() {
       this.$emit("toggle-sidebar");
@@ -35756,7 +35751,7 @@ module.exports = {
     "name": "Button",
     "desc": "A general button element",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button style=\"outline\">Default</base-button>\n<base-button style=\"outline\" type=\"primary\">Primary</base-button>\n<base-button style=\"outline\" type=\"secondary\">Secondary</base-button>\n<base-button style=\"outline\" type=\"success\">Success</base-button>\n<base-button style=\"outline\" type=\"danger\">Danger</base-button>\n<base-button style=\"outline\" type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
@@ -61573,7 +61568,106 @@ render._withStripped = true
         
       }
     })();
-},{"highlight.js":"node_modules/highlight.js/lib/index.js","marked":"node_modules/marked/lib/marked.js","../markdown/installation.md":"src/markdown/installation.md","../layouts/Page":"src/layouts/Page.vue","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
+},{"highlight.js":"node_modules/highlight.js/lib/index.js","marked":"node_modules/marked/lib/marked.js","../markdown/installation.md":"src/markdown/installation.md","../layouts/Page":"src/layouts/Page.vue","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/GettingStarted.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _highlight = _interopRequireDefault(require("highlight.js"));
+
+var _marked = _interopRequireDefault(require("marked"));
+
+var _gettingStarted = _interopRequireDefault(require("../markdown/getting-started.md"));
+
+var _Page = _interopRequireDefault(require("../layouts/Page"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+function removeWhiteSpace(string) {
+  return string.replace(/\n/g, "").replace(/[\t ]+\</g, "<").replace(/\>[\t ]+\</g, "><").replace(/\>[\t ]+$/g, ">");
+}
+
+_marked.default.setOptions({
+  highlight: function (code, lang) {
+    console.log("highlighting");
+    return `<div class="halla">${_highlight.default.highlight(lang, code).value}</div>`;
+  }
+});
+
+var _default = {
+  components: {
+    Page: _Page.default
+  },
+  methods: {
+    gettingstarted() {
+      return (0, _marked.default)(_gettingStarted.default);
+    }
+
+  }
+};
+exports.default = _default;
+        var $4f77e4 = exports.default || module.exports;
+      
+      if (typeof $4f77e4 === 'function') {
+        $4f77e4 = $4f77e4.options;
+      }
+    
+        /* template */
+        Object.assign($4f77e4, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("Page", [
+    _c("div", {
+      staticClass: "markdown-body",
+      domProps: { innerHTML: _vm._s(_vm.gettingstarted()) }
+    })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$4f77e4', $4f77e4);
+          } else {
+            api.reload('$4f77e4', $4f77e4);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"highlight.js":"node_modules/highlight.js/lib/index.js","marked":"node_modules/marked/lib/marked.js","../markdown/getting-started.md":"src/markdown/getting-started.md","../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
@@ -61595,6 +61689,8 @@ var _Components = _interopRequireDefault(require("./views/Components"));
 var _Component = _interopRequireDefault(require("./views/Component"));
 
 var _Installation = _interopRequireDefault(require("./views/Installation"));
+
+var _GettingStarted = _interopRequireDefault(require("./views/GettingStarted"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -61635,6 +61731,14 @@ const router = new _vueRouter.default({
       showInHeader: true,
       hasSidebar: false
     }
+  }, {
+    path: "/getting-started",
+    component: _GettingStarted.default,
+    meta: {
+      title: "Getting Started",
+      showInHeader: true,
+      hasSidebar: false
+    }
   }]
 });
 new _vue.default({
@@ -61643,7 +61747,7 @@ new _vue.default({
     return h(_App.default);
   }
 }).$mount("#app");
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/Installation":"src/views/Installation.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/Installation":"src/views/Installation.vue","./views/GettingStarted":"src/views/GettingStarted.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -61937,6 +62041,6 @@ module.exports = function loadHTMLBundle(bundle) {
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require("node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("html",require("node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js"));b.load([["installation.09c2fe22.html","src/markdown/installation.md"]]).then(function(){require("src/main.js");});
+var b=require("node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("html",require("node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js"));b.load([["installation.09c2fe22.html","src/markdown/installation.md"],["getting-started.0e7cd387.html","src/markdown/getting-started.md"]]).then(function(){require("src/main.js");});
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/main.1e43358e.js.map

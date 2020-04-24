@@ -69,12 +69,6 @@ export default {
       showMenu: false,
     };
   },
-  watch: {
-    showSidebar: function(val) {
-      if (val) document.body.style.overflow = "hidden";
-      else document.body.style.overflow = "";
-    },
-  },
   methods: {
     handleToggleButton() {
       this.$emit("toggle-sidebar");

@@ -42,4 +42,8 @@ body {
   padding: 0;
   margin: 0;
 }
+
+a {
+  color: currentColor;
+}
 </style>

@@ -1,0 +1,38 @@
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="why">Why?</h2>
+<p>Normal CSS frameworks will often come with quite a lot of boilerplate. Let&#39;s take an input example from Bootstrap:</p>
+<base-knobs hideTabs="">
+<label for="validation">Username</label>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="prepend-username">@</span>
+  </div>
+  <input type="text" class="form-control" id="validation" aria-describedby="prepend-username" required="">
+  <div class="invalid-feedback">Please choose a username.</div>
+</div>
+
+<script>const input = document.querySelector("#validation");
+input.addEventListener('input', e => {
+  const isValid = e.target.checkValidity();
+
+  if (isValid) {
+    input.classList.remove('is-invalid');
+  } else {
+    input.classList.add('is-invalid');
+  }
+});</script>
+
+</base-knobs>
+
+<p>Compare this to a <strong>BaseElement</strong> where we can provide the attribute <code>autovalidate</code> and make the input element validate itself based on the normal validation rules of an input element (using <code>pattern</code> for example).</p>
+<p>If you want you can still toggle the <code>valid</code> or <code>invalid</code> attribute on the input field to control the validation yourself.</p>
+<base-knobs hideTabs="">
+<base-label for="validation-2">Username</base-label>
+<base-input id="validation-2" aria-describedby="prepend-username" required="" autovalidate="">
+  <span slot="prepend" id="prepend-username">@</span>
+  <div slot="error">Please choose a username.</div>
+</base-input>
+</base-knobs>
+
+<h2 id="how-it-works">How it Works</h2>
+<p>Let&#39;s take the grid-wrapper as an example:</p>

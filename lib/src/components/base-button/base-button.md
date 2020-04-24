@@ -43,3 +43,14 @@ category: Elements
 <base-button style="outline" type="danger">Danger</base-button>
 <base-button style="outline" type="transparent">Transparent</base-button>
 </base-knobs>
+
+## Group
+
+<base-knobs hideTabs src="./components.json" name="base-button">
+<base-flex>
+  <base-button >Option</base-button>
+  <base-button >Option</base-button>
+  <base-button  type="primary">Active</base-button>
+  <base-button>Option</base-button>
+</base-flex>
+</base-knobs>
