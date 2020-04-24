@@ -1149,6 +1149,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -1254,6 +1255,15 @@ nav[toc] a:hover {
 
 nav[toc] a:last-of-type {
   margin-bottom: 50px;
+}
+
+nav[toc] a div {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+nav[toc] a a {
+  font-size: 1rem;
 }
 
 @media (min-width: 800px) {

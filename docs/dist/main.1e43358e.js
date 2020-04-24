@@ -848,7 +848,7 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"../lib/dist/components/sharedstyles-48eb6882.js":[function(require,module,exports) {
+},{}],"../lib/dist/components/sharedstyles-656ad3ab.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3657,7 +3657,7 @@ LitElement['finalized'] = true;
  */
 
 LitElement.render = render$1;
-var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
+var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}:host([hidden]){display:none}*,:after,:before{box-sizing:inherit}`;
 exports.s = sharedStyles;
 },{}],"../lib/dist/components/base-knobs.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -3668,7 +3668,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _sharedstyles48eb = require("./sharedstyles-48eb6882.js");
+var _sharedstyles656ad3ab = require("./sharedstyles-656ad3ab.js");
 
 /**
  * @license
@@ -3697,14 +3697,14 @@ const previousValues = new WeakMap();
  * vulnerabilities.
  */
 
-const unsafeHTML = (0, _sharedstyles48eb.d)(value => part => {
-  if (!(part instanceof _sharedstyles48eb.N)) {
+const unsafeHTML = (0, _sharedstyles656ad3ab.d)(value => part => {
+  if (!(part instanceof _sharedstyles656ad3ab.N)) {
     throw new Error('unsafeHTML can only be used in text bindings');
   }
 
   const previousValue = previousValues.get(part);
 
-  if (previousValue !== undefined && (0, _sharedstyles48eb.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
+  if (previousValue !== undefined && (0, _sharedstyles656ad3ab.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
     return;
   }
 
@@ -17839,10 +17839,10 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
-var highlightStyles = (0, _sharedstyles48eb.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _sharedstyles48eb.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
+var highlightStyles = (0, _sharedstyles656ad3ab.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _sharedstyles656ad3ab.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
 
-class BaseKnobs extends _sharedstyles48eb.L {
+class BaseKnobs extends _sharedstyles656ad3ab.L {
   constructor() {
     super();
     this.src = "";
@@ -17896,7 +17896,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
   }
 
   static get styles() {
-    return [styles, highlightStyles, _sharedstyles48eb.s];
+    return [styles, highlightStyles, _sharedstyles656ad3ab.s];
   }
 
   connectedCallback() {
@@ -17986,7 +17986,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
   _propComponent(attr) {
     if (attr.type.includes("|")) {
       const options = attr.type.replace(/"/g, "").split("|");
-      return (0, _sharedstyles48eb.h)`
+      return (0, _sharedstyles656ad3ab.h)`
         <tr>
           <td>${attr.name}</td>
           <td>string</td>
@@ -17996,7 +17996,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
               @change=${e => this._handleAttrChange(e, attr)}
             >
               ${options.map(opt => {
-        return (0, _sharedstyles48eb.h)`
+        return (0, _sharedstyles656ad3ab.h)`
                   <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) === opt}
                     value=${opt}
@@ -18011,7 +18011,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
     }
 
     if (attr.type === "string" || attr.type === "String") {
-      return (0, _sharedstyles48eb.h)`
+      return (0, _sharedstyles656ad3ab.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18029,7 +18029,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
     }
 
     if (attr.type === "boolean" || attr.type === "Boolean") {
-      return (0, _sharedstyles48eb.h)`
+      return (0, _sharedstyles656ad3ab.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18050,7 +18050,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
   }
 
   _renderPropTab() {
-    return (0, _sharedstyles48eb.h)`
+    return (0, _sharedstyles656ad3ab.h)`
       <table class="props">
         <thead>
           <tr>
@@ -18069,7 +18069,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
   }
 
   _renderSrcTab() {
-    return (0, _sharedstyles48eb.h)`
+    return (0, _sharedstyles656ad3ab.h)`
       <div class="src">
         <h2>
           <pre><code><div class="hljs">${unsafeHTML(this.srcHTML)}</div></code></pre>
@@ -18079,10 +18079,10 @@ class BaseKnobs extends _sharedstyles48eb.L {
   }
 
   render() {
-    return (0, _sharedstyles48eb.h)`
+    return (0, _sharedstyles656ad3ab.h)`
       <slot></slot>
-      ${this.hideTabs ? null : (0, _sharedstyles48eb.h)` <nav>
-            ${this.hideSrc ? null : (0, _sharedstyles48eb.h)`
+      ${this.hideTabs ? null : (0, _sharedstyles656ad3ab.h)` <nav>
+            ${this.hideSrc ? null : (0, _sharedstyles656ad3ab.h)`
                   <button
                     ?active=${this.tab === "src"}
                     value="src"
@@ -18091,7 +18091,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
                     Src
                   </button>
                 `}
-            ${this.hideProps ? null : (0, _sharedstyles48eb.h)`
+            ${this.hideProps ? null : (0, _sharedstyles656ad3ab.h)`
                   <button
                     ?active=${this.tab === "props"}
                     value="props"
@@ -18100,7 +18100,7 @@ class BaseKnobs extends _sharedstyles48eb.L {
                     Props
                   </button>
                 `}
-            ${this.hideEvents ? null : (0, _sharedstyles48eb.h)`
+            ${this.hideEvents ? null : (0, _sharedstyles656ad3ab.h)`
                   <button
                     ?active=${this.tab === "events"}
                     value="events"
@@ -18125,7 +18125,7 @@ if (!customElements.get("base-knobs")) {
 
 var _default = BaseKnobs;
 exports.default = _default;
-},{"./sharedstyles-48eb6882.js":"../lib/dist/components/sharedstyles-48eb6882.js"}],"../lib/dist/main.js":[function(require,module,exports) {
+},{"./sharedstyles-656ad3ab.js":"../lib/dist/components/sharedstyles-656ad3ab.js"}],"../lib/dist/main.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -20924,7 +20924,7 @@ var global = arguments[3];
 
   LitElement.render = render$1;
   var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;vertical-align:top;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;max-width:100%;font-size:var(--base-select-font-size);height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([multiple]){min-height:var(--base-select-min-height);height:auto}:host([full]){display:-webkit-box;display:flex}[hidden]{display:none !important}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:var(--base-color-ui)}:host([focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
-  var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}*,:after,:before{box-sizing:inherit}`;
+  var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}:host([hidden]){display:none}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
     constructor() {
@@ -22224,7 +22224,7 @@ var global = arguments[3];
     return new StringMask(pattern, options).validate(value);
   };
 
-  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-color:var(--base-color-ui-light);--base-input-border-radius:none;--base-input-box-shadow:none;--base-input-placeholder-color:var(--base-color-ui);--base-input-font-size:var(--base-font-size-sm);vertical-align:top;min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:2px solid var(--base-input-border-color)}:host [part=input]:hover{--base-input-border-color:var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);--base-input-border-color:var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-border-color:var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-border-color:var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){margin-left:var(--base-space-sm)}::slotted([slot=append]){margin-right:var(--base-space-sm)}`;
+  var styles$5 = css`:host{--base-input-height:var(--base-size-md);--base-input-border-color:var(--base-color-ui-light);--base-input-border-radius:none;--base-input-box-shadow:none;--base-input-placeholder-color:var(--base-color-ui);--base-input-font-size:var(--base-font-size-sm);vertical-align:top;min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:2px solid var(--base-input-border-color)}:host([type=number]) [part=input-field]::-webkit-inner-spin-button,:host([type=number]) [part=input-field]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}:host [part=input]:hover{--base-input-border-color:var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);--base-input-border-color:var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-border-color:var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-border-color:var(--base-color-danger)}:host [part=input-field]{width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){margin-left:var(--base-space-sm)}::slotted([slot=append]){margin-right:var(--base-space-sm)}`;
 
   class BaseInput extends LitElement {
     constructor() {
@@ -23339,6 +23339,45 @@ var global = arguments[3];
     customElements.define("base-toggle", BaseToggle);
   }
 
+  var styles$f = css`:host{display:inline-block}:host([full]),:host([full]) textarea{display:block;width:100%}:host textarea{box-sizing:border-box;display:inline-block;outline:0;font-size:var(--base-font-size-sm);font-family:var(--base-font-family);color:var(--base-color-black);background-color:var(--base-color-white);padding:var(--base-space-md);border:2px solid var(--base-color-ui-lighter)}:host textarea:hover{border-color:var(--base-color-ui-light);background-color:var(--base-color-ui-lighter)}:host textarea:focus{border-color:var(--base-color-focus);background-color:var(--base-color-white)}`;
+
+  class BaseTextArea extends LitElement {
+    constructor() {
+      super();
+    }
+
+    static get properties() {
+      return {
+        full: {
+          type: Boolean
+        },
+        cols: {
+          type: String
+        },
+        rows: {
+          type: String
+        }
+      };
+    }
+
+    static get styles() {
+      return [styles$f, sharedStyles];
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+    }
+
+    render() {
+      return html`<textarea part="input-field"></textarea>`;
+    }
+
+  }
+
+  if (!customElements.get("base-textarea")) {
+    customElements.define("base-textarea", BaseTextArea);
+  }
+
   exports.BaseBox = BaseBox;
   exports.BaseButton = BaseButton;
   exports.BaseCheckbox = BaseCheckbox;
@@ -23354,6 +23393,7 @@ var global = arguments[3];
   exports.BaseRadio = BaseRadio;
   exports.BaseSelect = BaseSelect;
   exports.BaseText = BaseText;
+  exports.BaseTextArea = BaseTextArea;
   exports.BaseToggle = BaseToggle;
   Object.defineProperty(exports, '__esModule', {
     value: true
@@ -35243,12 +35283,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var _default = {
   components: {
     Header: _Header.default
@@ -35759,17 +35793,17 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Hey there</base-checkbox>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-flex/base-flex.md",
-    "name": "Flex",
-    "desc": "Utility element to flex children",
-    "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-container/base-container.md",
     "name": "Container",
     "desc": "An element to limit the width of your content",
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "Input",
+    "desc": "A input element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
@@ -35777,11 +35811,11 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "Input",
-    "desc": "A input element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-flex/base-flex.md",
+    "name": "Flex",
+    "desc": "Utility element to flex children",
+    "category": "Layout",
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
@@ -35801,17 +35835,23 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-select/base-select.md",
-    "name": "Select",
-    "desc": "Element with option for multiselect, search and more",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",
     "desc": "A general purpose text element",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-textarea/base-textarea.md",
+    "name": "Text Area",
+    "desc": "A general purpose text element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-textarea\">\n<base-textarea></base-textarea>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-select/base-select.md",
+    "name": "Select",
+    "desc": "Element with option for multiselect, search and more",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-toggle/base-toggle.md",
     "name": "Toggle",
@@ -37763,6 +37803,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -37771,14 +37817,35 @@ var _default = {
     SidebarLayout: _SidebarLayout.default
   },
 
+  mounted() {
+    this.setSubMenu();
+  },
+
   data() {
     return {
+      subMenu: [],
       components: _db.components
     };
   },
 
+  watch: {
+    $route: function (val) {
+      this.setSubMenu();
+    }
+  },
   methods: {
+    setSubMenu() {
+      setTimeout(() => {
+        const headings = [...document.querySelectorAll("h2")];
+        this.subMenu = headings.map(h => ({
+          id: h.id,
+          title: h.innerText
+        }));
+      }, 0);
+    },
+
     goTo(route) {
+      this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
     }
@@ -37841,7 +37908,7 @@ exports.default = _default;
                 }
               }
             },
-            [_vm._v("\n        Overview\n      ")]
+            [_vm._v("Overview")]
           ),
           _vm._v(" "),
           _vm._l(_vm.groupedComponents, function(menuGroup, name) {
@@ -37863,7 +37930,28 @@ exports.default = _default;
                         }
                       }
                     },
-                    [_vm._v(_vm._s(page.name))]
+                    [
+                      _vm._v(
+                        "\n          " + _vm._s(page.name) + "\n          "
+                      ),
+                      _vm.subMenu.length &&
+                      _vm.$router.currentRoute.params.element === page.name
+                        ? _c(
+                            "div",
+                            _vm._l(_vm.subMenu, function(menu) {
+                              return _c(
+                                "router-link",
+                                {
+                                  key: menu.id,
+                                  attrs: { to: { hash: menu.id } }
+                                },
+                                [_vm._v(_vm._s(menu.title))]
+                              )
+                            }),
+                            1
+                          )
+                        : _vm._e()
+                    ]
                   )
                 })
               ],
@@ -61739,7 +61827,19 @@ const router = new _vueRouter.default({
       showInHeader: true,
       hasSidebar: false
     }
-  }]
+  }],
+  scrollBehavior: function (to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        selector: to.hash
+      };
+    } else {
+      return {
+        x: 0,
+        y: 0
+      };
+    }
+  }
 });
 new _vue.default({
   router,
@@ -61775,7 +61875,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63963" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50054" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1659,6 +1659,32 @@
       ]
     },
     {
+      "name": "base-textarea",
+      "path": "./../../lib/src/components/base-textarea/base-textarea.js",
+      "attributes": [
+        {
+          "name": "cols",
+          "type": "string"
+        },
+        {
+          "name": "rows",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cols",
+          "attribute": "cols",
+          "type": "string"
+        },
+        {
+          "name": "rows",
+          "attribute": "rows",
+          "type": "string"
+        }
+      ]
+    },
+    {
       "name": "base-toggle",
       "path": "./../../lib/src/components/base-toggle/base-toggle.js",
       "attributes": [

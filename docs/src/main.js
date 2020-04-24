@@ -50,6 +50,13 @@ const router = new Router({
       meta: { title: "Getting Started", showInHeader: true, hasSidebar: false },
     },
   ],
+  scrollBehavior: function(to, from, savedPosition) {
+    if (to.hash) {
+      return { selector: to.hash };
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
 });
 
 new Vue({

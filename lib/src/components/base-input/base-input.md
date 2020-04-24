@@ -69,3 +69,12 @@ Use a error slot to provide your own error text.
   <ion-icon slot="append" class="error" name="alert-circle-outline"></ion-icon>
 </base-input>
 </base-knobs>
+
+## Number with step buttons
+
+<base-knobs hideTabs src="./components.json" name="base-input">
+<base-button>-</base-button>
+<base-input type="number" placeholder="Search...">
+</base-input>
+<base-button>+</base-button>
+</base-knobs>

@@ -2,9 +2,7 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <a @click.prevent="() => goTo('/components')">
-          Overview
-        </a>
+        <a @click.prevent="() => goTo('/components')">Overview</a>
         <div v-for="(menuGroup, name) in groupedComponents" :key="name">
           <label>{{ name }}</label>
           <router-link
@@ -12,8 +10,16 @@
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-            >{{ page.name }}</router-link
           >
+            {{ page.name }}
+            <div v-if="subMenu.length && $router.currentRoute.params.element === page.name">
+              <router-link
+                :to="{ hash: menu.id }"
+                v-for="menu in subMenu"
+                :key="menu.id"
+              >{{ menu.title }}</router-link>
+            </div>
+          </router-link>
         </div>
       </nav>
     </div>
@@ -33,20 +39,36 @@ import SidebarLayout from "../layouts/SidebarLayout";
 export default {
   props: { showSidebar: Boolean },
   components: { SidebarLayout },
+  mounted() {
+    this.setSubMenu();
+  },
   data() {
     return {
-      components,
+      subMenu: [],
+      components
     };
   },
+  watch: {
+    $route: function(val) {
+      this.setSubMenu();
+    }
+  },
   methods: {
+    setSubMenu() {
+      setTimeout(() => {
+        const headings = [...document.querySelectorAll("h2")];
+        this.subMenu = headings.map(h => ({ id: h.id, title: h.innerText }));
+      }, 0);
+    },
     goTo(route) {
+      this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
-    },
+    }
   },
   computed: {
     component() {
-      return components.find((c) => c.name === this.$route.params.element);
+      return components.find(c => c.name === this.$route.params.element);
     },
     html() {
       return marked(this.component.content);
@@ -60,17 +82,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevComps, { ...comp }]
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: [],
+          Form: []
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -114,6 +136,15 @@ nav[toc] a:hover {
 
 nav[toc] a:last-of-type {
   margin-bottom: 50px;
+}
+
+nav[toc] a div {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+nav[toc] a a {
+  font-size: 1rem;
 }
 
 @media (min-width: 800px) {

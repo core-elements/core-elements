@@ -28,6 +28,12 @@
   border: 2px solid var(--base-input-border-color);
 }
 
+:host([type="number"]) [part="input-field"]::-webkit-inner-spin-button,
+:host([type="number"]) [part="input-field"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 :host [part="input"]:hover {
   --base-input-border-color: var(--base-color-ui);
 }

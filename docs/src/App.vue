@@ -1,13 +1,7 @@
 <template>
   <div>
-    <Header
-      :showSidebar="showSidebar"
-      @toggle-sidebar="showSidebar = !showSidebar"
-    ></Header>
-    <router-view
-      :showSidebar="showSidebar"
-      @toggle-sidebar="showSidebar = !showSidebar"
-    ></router-view>
+    <Header :showSidebar="showSidebar" @toggle-sidebar="showSidebar = !showSidebar"></Header>
+    <router-view :showSidebar="showSidebar" @toggle-sidebar="showSidebar = !showSidebar"></router-view>
   </div>
 </template>
 
@@ -18,9 +12,9 @@ export default {
   components: { Header },
   data() {
     return {
-      showSidebar: false,
+      showSidebar: false
     };
-  },
+  }
 };
 </script>
 
@@ -41,6 +35,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {
