@@ -20923,7 +20923,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;vertical-align:top;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;max-width:100%;font-size:var(--base-select-font-size);height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([multiple]){min-height:var(--base-select-min-height);height:auto}:host([full]){display:-webkit-box;display:flex}[hidden]{display:none !important}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:var(--base-color-ui)}:host([focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([menu-is-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
+  var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-ui);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;vertical-align:top;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;max-width:100%;font-size:var(--base-select-font-size);height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([multiple]){min-height:var(--base-select-min-height);height:auto}:host([full]){display:-webkit-box;display:flex}[hidden]{display:none !important}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:var(--base-color-ui)}:host([focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) input[part=input-field]{cursor:text}:host input[part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host input[part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) input[part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:#333;opacity:1}:host(:not([multiple])) input[part=input-field][has-value]::placeholder{--base-select-placeholder-color:#333;opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}input[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([list-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}:host([hidden]){display:none}*,:after,:before{box-sizing:inherit}`;
 
   class BaseSelect extends LitElement {
@@ -20954,9 +20954,9 @@ var global = arguments[3];
 
       this.searchable = false; // keep menu open on select
 
-      this.menuOpenOnSelect = false; // show suggestions
+      this.listOpenOnSelect = false; // show suggestions
 
-      this._showSuggestions = false; // input value
+      this._listOpen = false; // input value
 
       this._inputValue = "";
       /**
@@ -21009,9 +21009,9 @@ var global = arguments[3];
         disabled: {
           type: Boolean
         },
-        showSuggestions: {
+        listOpen: {
           type: Boolean,
-          attribute: "show-suggestions"
+          attribute: "list-open"
         },
         value: {
           type: String
@@ -21043,9 +21043,9 @@ var global = arguments[3];
           type: String,
           attribute: "input-value"
         },
-        menuOpenOnSelect: {
+        listOpenOnSelect: {
           type: Boolean,
-          attribute: "menu-open-on-select"
+          attribute: "list-open-on-select"
         },
         disableFilter: {
           type: Boolean,
@@ -21145,27 +21145,21 @@ var global = arguments[3];
       this.requestUpdate();
     }
 
-    get showSuggestions() {
-      return this._showSuggestions;
+    get listOpen() {
+      return this._listOpen;
     }
 
-    set showSuggestions(show) {
-      if (!this.suggestions.length) {
-        this.removeAttribute("menu-is-open");
-        return;
-      }
-
-      if (this._showSuggestions === show) return;
-      this._showSuggestions = show; // if suggestion list is shown, make either first or the selected value active
+    set listOpen(show) {
+      if (this._listOpen === show) return;
+      if (show) this.setAttribute("list-open", "");else this.removeAttribute("list-open");
+      this._listOpen = show; // if suggestion list is shown, make either first or the selected value active
 
       if (show) {
-        this.setAttribute("menu-is-open", "");
         const firstActive = this.activeSuggestion || this._selectedEl || this.suggestions[0];
         firstActive.setAttribute("active", "");
 
         this._scrollToActive();
       } else {
-        this.removeAttribute("menu-is-open");
         this.activeSuggestion && this.activeSuggestion.removeAttribute("active");
       }
 
@@ -21207,7 +21201,7 @@ var global = arguments[3];
 
     _selectOption(optionEl) {
       // don't select anything if we can't see the suggestion list
-      if (!this.showSuggestions) return;
+      if (!this.listOpen) return;
       if (optionEl.disabled) return; // single select or multiple select
 
       const select = this.multiple ? this._addOption : this._chooseOption;
@@ -21225,7 +21219,7 @@ var global = arguments[3];
       }
 
       this.focus();
-      this.showSuggestions = this.menuOpenOnSelect ? true : false;
+      this.listOpen = this.listOpenOnSelect ? true : false;
     } // add option for multiple select
 
 
@@ -21240,7 +21234,7 @@ var global = arguments[3];
       }
 
       this.focus();
-      this.showSuggestions = this.menuOpenOnSelect ? true : false;
+      this.listOpen = this.listOpenOnSelect ? true : false;
       this.requestUpdate();
     } // remove option for multiple select
 
@@ -21263,7 +21257,7 @@ var global = arguments[3];
 
     _handleFocusEvent() {
       this.focused = true;
-      this.showSuggestions = true;
+      this.listOpen = true;
     }
 
     _handleBlurEvent(e) {
@@ -21276,7 +21270,7 @@ var global = arguments[3];
 
         this.focused = false;
         this.inputValue = "";
-        this.showSuggestions = false;
+        this.listOpen = false;
       }, 100);
     }
 
@@ -21306,7 +21300,7 @@ var global = arguments[3];
       this.inputValue = e.target.value; // Then when we dispatch the event, the event.target.value will be correct
 
       this.dispatchEvent(new CustomEvent("input", e));
-      this.showSuggestions = true;
+      this.listOpen = true;
     }
 
     _handleKeyEvent(e) {
@@ -21320,12 +21314,12 @@ var global = arguments[3];
       // Dont hide suggestions if search enabled
 
       if (keyCode === 32 && !this.searchable) {
-        this.showSuggestions = !this.showSuggestions;
+        this.listOpen = !this.listOpen;
       } // Escape
 
 
       if (keyCode === 27) {
-        this.showSuggestions = false;
+        this.listOpen = false;
       } // Enter
 
 
@@ -21335,8 +21329,8 @@ var global = arguments[3];
 
 
       if (keyCode === 8) {
-        if (this.showSuggestions === false) {
-          this.showSuggestions = true;
+        if (this.listOpen === false) {
+          this.listOpen = true;
         }
 
         if (this.multiple) {
@@ -21360,9 +21354,9 @@ var global = arguments[3];
         e.preventDefault();
         if (!this.suggestions.length) return;
 
-        if (!this.showSuggestions) {
+        if (!this.listOpen) {
           // always show sugggestions when navigation with arrows
-          this.showSuggestions = true;
+          this.listOpen = true;
           return;
         }
 
@@ -21396,9 +21390,9 @@ var global = arguments[3];
         e.preventDefault();
         if (!this.suggestions.length) return;
 
-        if (!this.showSuggestions) {
+        if (!this.listOpen) {
           // always show sugggestions when navigation with arrows
-          this.showSuggestions = true;
+          this.listOpen = true;
           return;
         }
 
@@ -21450,7 +21444,7 @@ var global = arguments[3];
     }
 
     _handleArrowButtonClick(e) {
-      this.showSuggestions = !this.showSuggestions;
+      this.listOpen = !this.listOpen;
     }
 
     render() {
@@ -21467,7 +21461,7 @@ var global = arguments[3];
         hideArrow,
         _selectedEl,
         _removeOption,
-        showSuggestions,
+        listOpen,
         _selectedElements,
         _handleArrowButtonClick,
         _handleInputEvent,
@@ -21500,7 +21494,7 @@ var global = arguments[3];
           @input=${_handleInputEvent}
           @focus=${_handleFocusEvent}
           @blur=${_handleBlurEvent}
-          @click=${() => this.showSuggestions = true}
+          @click=${() => this.listOpen = true}
           ?readonly=${!searchable}
           autocomplete="off"
           autocorrect="off"
@@ -21511,7 +21505,7 @@ var global = arguments[3];
           part="input-field"
           type="text"
           role="textbox"
-          ?aria-expanded=${this.showSuggestions}
+          ?aria-expanded=${this.listOpen}
         />
       </div>
 
@@ -21533,7 +21527,7 @@ var global = arguments[3];
           part="arrow-button"
           @click=${_handleArrowButtonClick}
         >
-          ${showSuggestions ? html`
+          ${listOpen ? html`
                 <slot name="arrow-up">
                   <div class="arrow-up"></div>
                 </slot>
@@ -21566,7 +21560,7 @@ var global = arguments[3];
     customElements.define("base-select", BaseSelect);
   }
 
-  var styles = css`:host{--base-option-padding:0 var(--base-space-sm);--base-option-bg-color:var(--base-color-white);--base-option-border-radius:0;--base-option-active-color:var(--base-color-focus-light);--base-option-selected-color:var(--base-color-focus);--base-option-font-color:var(--base-color-black);--base-option-min-height:var(--base-size-md);box-sizing:border-box;width:100%;max-width:100%;min-height:var(--base-option-min-height);display:-webkit-box;display:flex;color:var(--base-option-font-color);-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-option-bg-color);text-align:left;border-radius:var(--base-option-border-radius);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([hidden]){display:none}:host([active]:not([disabled])){--base-color-font-color:var(--base-color-black);--base-option-bg-color:var(--base-option-active-color)}:host([selected]:not([active]):not([disabled])),:host([selected][active]){--base-option-bg-color:var(--base-option-selected-color);--base-option-font-color:var(--base-color-white)}`;
+  var styles = css`:host{--base-option-padding:0 var(--base-space-sm);--base-option-bg-color:var(--base-color-white);--base-option-border-radius:0;--base-option-active-color:var(--base-color-focus-light);--base-option-selected-color:var(--base-color-focus);--base-option-font-color:var(--base-color-black);--base-option-min-height:var(--base-size-md);box-sizing:border-box;width:100%;max-width:100%;min-height:var(--base-option-min-height);display:-webkit-box;display:flex;color:var(--base-option-font-color);-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-option-bg-color);text-align:left;border-radius:var(--base-option-border-radius);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([active]:not([disabled])){--base-color-font-color:var(--base-color-black);--base-option-bg-color:var(--base-option-active-color)}:host([selected]:not([active]):not([disabled])),:host([selected][active]){--base-option-bg-color:var(--base-option-selected-color);--base-option-font-color:var(--base-color-white)}`;
 
   class BaseOption extends LitElement {
     constructor() {

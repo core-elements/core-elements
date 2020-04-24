@@ -162,7 +162,7 @@ button[part="remove-tag"] {
   margin-left: var(--base-space-xs);
 }
 
-:host([menu-is-open]) div[part="option-list"] {
+:host([list-open]) div[part="option-list"] {
   visibility: visible;
 }
 

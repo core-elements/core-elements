@@ -37,10 +37,6 @@
   cursor: not-allowed;
 }
 
-:host([hidden]) {
-  display: none;
-}
-
 :host([active]:not([disabled])) {
   --base-color-font-color: var(--base-color-black);
   --base-option-bg-color: var(--base-option-active-color);
