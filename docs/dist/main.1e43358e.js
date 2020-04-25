@@ -18081,39 +18081,33 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   render() {
     return (0, _sharedstyles656ad3ab.h)`
       <slot></slot>
-      ${this.hideTabs ? null : (0, _sharedstyles656ad3ab.h)` <nav>
-            ${this.hideSrc ? null : (0, _sharedstyles656ad3ab.h)`
-                  <button
-                    ?active=${this.tab === "src"}
-                    value="src"
-                    @click=${this._handleTabChange}
-                  >
-                    Src
-                  </button>
-                `}
-            ${this.hideProps ? null : (0, _sharedstyles656ad3ab.h)`
-                  <button
-                    ?active=${this.tab === "props"}
-                    value="props"
-                    @click=${this._handleTabChange}
-                  >
-                    Props
-                  </button>
-                `}
-            ${this.hideEvents ? null : (0, _sharedstyles656ad3ab.h)`
-                  <button
-                    ?active=${this.tab === "events"}
-                    value="events"
-                    @click=${this._handleTabChange}
-                  >
-                    Events
-                  </button>
-                `}
-          </nav>`}
-
-      <div class="tabs">
-        ${this._renderTabs()}
-      </div>
+      <base-box padding-y="md">
+        ${this.hideTabs ? null : (0, _sharedstyles656ad3ab.h)`
+              <base-tabs full @change=${this._handleTabChange}>
+                ${this.hideSrc ? null : (0, _sharedstyles656ad3ab.h)`
+                      <base-tab ?selected=${this.tab === "src"} value="src">
+                        Src
+                      </base-tab>
+                    `}
+                ${this.hideProps ? null : (0, _sharedstyles656ad3ab.h)`
+                      <base-tab ?selected=${this.tab === "props"} value="props">
+                        Props
+                      </base-tab>
+                    `}
+                ${this.hideEvents ? null : (0, _sharedstyles656ad3ab.h)`
+                      <base-tab
+                        ?selected=${this.tab === "events"}
+                        value="events"
+                      >
+                        Events
+                      </base-tab>
+                    `}
+              </base-tabs>
+            `}
+        <div class="tabs">
+          ${this._renderTabs()}
+        </div>
+      </base-box>
     `;
   }
 
@@ -20999,7 +20993,6 @@ var global = arguments[3];
   class BaseCheckbox extends LitElement {
     constructor() {
       super();
-      this.checked = false;
       this.full = false;
       this.disabled = false;
       /**
@@ -21010,6 +21003,7 @@ var global = arguments[3];
 
       this.size = "";
       this.value = "";
+      this._checked = false;
       this._handleChange = this._handleChange.bind(this);
     }
 
@@ -21039,11 +21033,30 @@ var global = arguments[3];
       return [styles$1, sharedStyles];
     }
 
+    get inputEl() {
+      return this.shadowRoot.querySelector("input");
+    }
+
+    get checked() {
+      return this._checked;
+    }
+
+    set checked(checked) {
+      if (this._checked === checked) return;
+      if (checked) this.setAttribute("checked", "");else this.removeAttribute("checked");
+      this._checked = checked;
+
+      if (this.inputEl) {
+        this.inputEl.checked = checked;
+      }
+
+      this.dispatchEvent(new CustomEvent("change"));
+      this.requestUpdate();
+    }
+
     _handleChange(e) {
       e.stopPropagation();
       this.checked = e.target.checked;
-      this.dispatchEvent(new CustomEvent("change", e));
-      this.dispatchEvent(new CustomEvent("input", e));
     }
 
     render() {
@@ -21726,7 +21739,7 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
-  var styles$4 = css`:host{--base-radio-height:var(--base-size-md);vertical-align:middle;cursor:pointer;display:inline-block;height:var(--base-radio-height);margin-right:var(--base-space-sm)}:host([full]){display:block;width:100%;margin-right:0}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host label{height:var(--base-radio-height);-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse;font-size:var(--hw-font-size-small);line-height:1.5}:host [part=box],:host label{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;position:relative}:host [part=box]{-webkit-box-pack:center;justify-content:center;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host [part=label]{display:inline-block;margin-left:var(--base-space-xs)}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=input-field]:hover:not([disabled]):not(:checked)~[part=box]{background-color:var(--base-color-ui-lighter)}:host [part=input-field]:checked~[part=box]{border-color:var(--base-color-focus)}:host [part=input-field]:checked~[part=box] [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-color-focus)}:host [part=input-field]:focus~[part=indicator]{border-color:var(--base-color-focus)}:host [part=input-field]:disabled~[part=indicator]{border-color:var(--base-color-ui-lighter);background-color:transparent;cursor:not-allowed}`;
+  var styles$4 = css`:host{--base-radio-height:var(--base-size-md);vertical-align:middle;cursor:pointer;display:inline-block;height:var(--base-radio-height);margin-right:var(--base-space-sm)}:host([full]){display:block;width:100%;margin-right:0}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host label{height:var(--base-radio-height);-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse;font-size:var(--hw-font-size-small);line-height:1.5}:host [part=box],:host label{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;position:relative}:host [part=box]{-webkit-box-pack:center;justify-content:center;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host [part=label]{display:inline-block;margin-left:var(--base-space-xs)}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=input-field]:hover:not([disabled]):not(:checked)~[part=box]{background-color:var(--base-color-ui-lighter)}:host [part=input-field]:checked~[part=box]{border-color:var(--base-color-focus)}:host [part=input-field]:checked~[part=box] [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-color-focus)}`;
 
   class BaseRadio extends LitElement {
     constructor() {
@@ -35190,6 +35203,23 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35367,6 +35397,25 @@ exports.default = _default;
                           {
                             staticClass: "header__nav-item",
                             attrs: { to: "/themes" },
+                            nativeOn: {
+                              click: function($event) {
+                                _vm.showMenu = false
+                              }
+                            }
+                          },
+                          [_vm._v("Themes")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "header__nav-item",
+                            staticStyle: { "font-size": "1.2em" },
+                            attrs: {
+                              to: "/themes",
+                              tag: "ion-icon",
+                              name: "logo-github"
+                            },
                             nativeOn: {
                               click: function($event) {
                                 _vm.showMenu = false
@@ -35690,6 +35739,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   components: {
     Page: _Page.default
@@ -35734,18 +35791,20 @@ exports.default = _default;
                   _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
                     _c("b", [_vm._v("Base Elements")]),
                     _vm._v(
-                      " is a free collection of essential UI components\n          for any web application\n        "
+                      " is a free collection of essential UI components\n            for any web application\n          "
                     )
                   ]),
                   _vm._v(" "),
                   _c("base-text", { attrs: { tag: "p", look: "lead" } }, [
-                    _vm._v("\n          Components that work in\n          "),
+                    _vm._v(
+                      "\n            Components that work in\n            "
+                    ),
                     _c("b", [_vm._v("React")]),
-                    _vm._v(",\n          "),
+                    _vm._v(", "),
                     _c("b", [_vm._v("Vue")]),
-                    _vm._v(",\n          "),
+                    _vm._v(", "),
                     _c("b", [_vm._v("Angular")]),
-                    _vm._v(", or any other framwork.\n        ")
+                    _vm._v(", or any other framwork.\n          ")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -35775,57 +35834,6 @@ exports.default = _default;
                         },
                         [_vm._v("Components")]
                       )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "base-box",
-                    { attrs: { "margin-y": "md" } },
-                    [
-                      _c(
-                        "base-tabs",
-                        {
-                          attrs: { value: _vm.installMethod },
-                          on: {
-                            change: function(e) {
-                              return (_vm.installMethod = e.target.value)
-                            }
-                          }
-                        },
-                        [
-                          _c("base-tab", [_vm._v("NPM")]),
-                          _vm._v(" "),
-                          _c("base-tab", [_vm._v("CDN")])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _vm.installMethod === "NPM"
-                        ? _c("pre", [
-                            _c(
-                              "code",
-                              {
-                                staticClass: "hljs",
-                                attrs: { align: "center" }
-                              },
-                              [_vm._v("npm install --save base-elements")]
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.installMethod === "CDN"
-                        ? _c("pre", [
-                            _c(
-                              "code",
-                              {
-                                staticClass: "hljs",
-                                attrs: { align: "center" }
-                              },
-                              [_vm._v("https://unpkg.com/base-elements")]
-                            )
-                          ])
-                        : _vm._e()
                     ],
                     1
                   )
@@ -35893,10 +35901,7 @@ exports.default = _default;
                             { attrs: { sm: "2", md: "1" } },
                             [
                               _c("base-input", {
-                                attrs: {
-                                  full: "",
-                                  placeholder: "Regular input"
-                                }
+                                attrs: { placeholder: "Regular input" }
                               })
                             ],
                             1
@@ -36022,24 +36027,76 @@ exports.default = _default;
           ),
           _vm._v(" "),
           _c(
-            "base-box",
-            { attrs: { bg: "ui-lightest", full: "", "margin-y": "lg" } },
+            "base-container",
+            { attrs: { size: "xs" } },
             [
               _c(
-                "base-container",
-                { attrs: { size: "lg", center: "" } },
+                "base-box",
+                { attrs: { "margin-y": "md" } },
                 [
                   _c(
-                    "base-container",
+                    "base-tabs",
+                    {
+                      attrs: { value: _vm.installMethod },
+                      on: {
+                        change: function(e) {
+                          return (_vm.installMethod = e.target.value)
+                        }
+                      }
+                    },
                     [
-                      _c("base-text", { attrs: { tag: "h2" } }, [
-                        _vm._v("Why Base Elements?")
-                      ]),
+                      _c("base-tab", [_vm._v("NPM")]),
                       _vm._v(" "),
-                      _c("base-text", [_vm._v("Because")])
+                      _c("base-tab", [_vm._v("CDN")])
                     ],
                     1
-                  )
+                  ),
+                  _vm._v(" "),
+                  _vm.installMethod === "NPM"
+                    ? _c("pre", [
+                        _c(
+                          "code",
+                          { staticClass: "hljs", attrs: { align: "center" } },
+                          [_vm._v("npm install --save base-elements")]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.installMethod === "CDN"
+                    ? _c("pre", [
+                        _vm._v("              "),
+                        _c(
+                          "code",
+                          { staticClass: "hljs", attrs: { align: "center" } },
+                          [
+                            _c("span", { staticClass: "hljs-tag" }, [
+                              _vm._v("<"),
+                              _c("span", { staticClass: "hljs-name" }, [
+                                _vm._v("script")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "hljs-attr" }, [
+                                _vm._v("src")
+                              ]),
+                              _vm._v("="),
+                              _c("span", { staticClass: "hljs-string" }, [
+                                _vm._v('"https://unpkg.com/base-elements"')
+                              ]),
+                              _vm._v(">")
+                            ]),
+                            _c("span", { staticClass: "hljs-tag" }, [
+                              _vm._v("</"),
+                              _c("span", { staticClass: "hljs-name" }, [
+                                _vm._v("script")
+                              ]),
+                              _vm._v(">")
+                            ]),
+                            _vm._v("\n")
+                          ]
+                        ),
+                        _vm._v("\n    ")
+                      ])
+                    : _vm._e()
                 ],
                 1
               )
@@ -36099,7 +36156,7 @@ module.exports = {
     "name": "Checkbox",
     "desc": "A checkbox element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n  <base-checkbox class=\"check-animation\">\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Animate custom indicator\n  </base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
@@ -36141,7 +36198,7 @@ module.exports = {
     "name": "Radio",
     "desc": "Radio button",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n .radio-icon [slot=\"indicator\"] {\n   opacity: 0;\n }\n .radio-icon:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n .radio-icon[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .radio-animation [slot=\"indicator\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .radio-animation[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",
@@ -36177,7 +36234,7 @@ module.exports = {
     "name": "Toggle",
     "desc": "A general toggle element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n\n## Animate icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<base-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -36194,6 +36251,9 @@ var _db = require("../db.json");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
 //
 //
 //
@@ -36300,11 +36360,11 @@ exports.default = _default;
               _vm._v("\n        The library consists of only a few\n        "),
               _c("b", [_vm._v("essential UI components")]),
               _vm._v(
-                " that work across all frameworks. They are\n        flexible enough that you will be able to style them to your needs, but\n        also good enough looking that you could use them out of the box.\n        "
+                " that work across all frameworks. They\n        are flexible enough that you will be able to style them to your needs,\n        but also good enough looking that you could use them out of the box.\n        "
               ),
               _c("p", [
                 _vm._v(
-                  "\n          If you're in a rush, and don't have time to style the components\n          youself, have a look at the available themes, or try our theme editor\n          to get the look you're after.\n        "
+                  "\n          If you're in a rush, and don't have time to style the components\n          youself, have a look at the available themes, or try our theme\n          editor to get the look you're after.\n        "
                 )
               ])
             ])
@@ -36318,11 +36378,11 @@ exports.default = _default;
           [
             _c(
               "base-grid",
-              { attrs: { gap: "lg", columns: "1" } },
+              { attrs: { gap: "xl", columns: "12" } },
               _vm._l(_vm.groupedComponents, function(menuGroup, name) {
                 return _c(
                   "base-grid-item",
-                  { key: name, attrs: { sm: "1" } },
+                  { key: name, attrs: { sm: "12", md: "3" } },
                   [
                     _c("base-text", { attrs: { tag: "h2" } }, [
                       _vm._v(_vm._s(name))
@@ -36334,11 +36394,11 @@ exports.default = _default;
                       [
                         _c(
                           "base-grid",
-                          { attrs: { columns: "4", gap: "lg" } },
+                          { attrs: { columns: "1", gap: "lg" } },
                           _vm._l(menuGroup, function(page, i) {
                             return _c(
                               "base-grid-item",
-                              { key: i, attrs: { sm: "2", md: "1", lg: "1" } },
+                              { key: i, attrs: { sm: "1" } },
                               [
                                 _c(
                                   "router-link",
@@ -36346,8 +36406,6 @@ exports.default = _default;
                                     staticStyle: { height: "100%" },
                                     attrs: {
                                       tag: "base-box",
-                                      depth: "sm",
-                                      padding: "md",
                                       radius: "md",
                                       clickable: "",
                                       full: "",

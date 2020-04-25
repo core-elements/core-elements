@@ -129,6 +129,11 @@
     display: block;
   }
 
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+
   .header__nav-wrapper {
     width: auto;
     display: flex;
@@ -145,7 +150,7 @@
     font-size: 1rem;
     margin-bottom: 0;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 

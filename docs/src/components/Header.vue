@@ -11,14 +11,18 @@
             {{ $route.meta.title }}
             <ion-icon
               v-if="$route.meta.hasSidebar"
-              :name="showSidebar ? 'chevron-up-outline' : 'chevron-down-outline'"
+              :name="
+                showSidebar ? 'chevron-up-outline' : 'chevron-down-outline'
+              "
             ></ion-icon>
           </button>
         </div>
 
         <div class="header__right">
           <button @click="showMenu = !showMenu" class="header__menu-button">
-            <ion-icon :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"></ion-icon>
+            <ion-icon
+              :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"
+            ></ion-icon>
           </button>
 
           <div class="header__nav-wrapper" :class="{ show: showMenu }">
@@ -27,22 +31,35 @@
                 v-on:click.native="showMenu = false"
                 to="/"
                 class="header__nav-item home"
-              >Home</router-link>
+                >Home</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/getting-started"
                 class="header__nav-item"
-              >Getting started</router-link>
+                >Getting started</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/components"
                 class="header__nav-item"
-              >Components</router-link>
+                >Components</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/themes"
                 class="header__nav-item"
-              >Themes</router-link>
+                >Themes</router-link
+              >
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/themes"
+                style="font-size: 1.2em"
+                tag="ion-icon"
+                name="logo-github"
+                class="header__nav-item"
+                >Themes</router-link
+              >
             </nav>
           </div>
         </div>
@@ -56,22 +73,22 @@ export default {
   props: { showSidebar: Boolean },
   data() {
     return {
-      showMenu: false
+      showMenu: false,
     };
   },
   watch: {
-    showSidebar: val => {
+    showSidebar: (val) => {
       if (val) document.body.classList.add("no-scroll-mobile");
       else document.body.classList.remove("no-scroll-mobile");
-    }
+    },
   },
   methods: {
     handleToggleButton() {
       if (this.$route.meta.hasSidebar) {
         this.$emit("toggle-sidebar");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -207,6 +224,11 @@ export default {
     display: block;
   }
 
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+
   .header__nav-wrapper {
     width: auto;
     display: flex;
@@ -223,7 +245,7 @@ export default {
     font-size: 1rem;
     margin-bottom: 0;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 

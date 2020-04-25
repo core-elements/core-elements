@@ -78,13 +78,3 @@
   height: 60%;
   background: var(--base-color-focus);
 }
-
-:host [part="input-field"]:focus ~ [part="indicator"] {
-  border-color: var(--base-color-focus);
-}
-
-:host [part="input-field"]:disabled ~ [part="indicator"] {
-  border-color: var(--base-color-ui-lighter);
-  background-color: transparent;
-  cursor: not-allowed;
-}

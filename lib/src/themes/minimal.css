@@ -38,9 +38,10 @@
   --base-color-ui-darkest: #333;
 
   --base-container: 800px;
-  --base-container-sm: 650px;
-  --base-container-md: 800px;
-  --base-container-lg: 1150px;
+  --base-container-xs: 600px;
+  --base-container-sm: 800px;
+  --base-container-md: 1000px;
+  --base-container-lg: 1200px;
   --base-container-xl: 1400px;
 
   --base-space-xs: 4px;
