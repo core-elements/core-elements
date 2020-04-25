@@ -36,12 +36,12 @@ category: Elements
 ## Outline
 
 <base-knobs hideTabs src="./components.json" name="base-button">
-<base-button style="outline">Default</base-button>
-<base-button style="outline" type="primary">Primary</base-button>
-<base-button style="outline" type="secondary">Secondary</base-button>
-<base-button style="outline" type="success">Success</base-button>
-<base-button style="outline" type="danger">Danger</base-button>
-<base-button style="outline" type="transparent">Transparent</base-button>
+<base-button outline>Default</base-button>
+<base-button outline type="primary">Primary</base-button>
+<base-button outline type="secondary">Secondary</base-button>
+<base-button outline type="success">Success</base-button>
+<base-button outline type="danger">Danger</base-button>
+<base-button outline type="transparent">Transparent</base-button>
 </base-knobs>
 
 ## Group
