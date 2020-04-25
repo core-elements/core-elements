@@ -9,11 +9,11 @@
 <style>
 .page {
   width: 100%;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .page__inner {
-  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;

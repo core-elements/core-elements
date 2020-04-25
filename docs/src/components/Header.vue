@@ -17,9 +17,7 @@
 
       <div class="header__right">
         <button @click="showMenu = !showMenu" class="header__menu-button">
-          <ion-icon
-            :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"
-          ></ion-icon>
+          <ion-icon :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"></ion-icon>
         </button>
 
         <div class="header__nav-wrapper" :class="{ show: showMenu }">
@@ -28,32 +26,27 @@
               v-on:click.native="showMenu = false"
               to="/"
               class="header__nav-item home"
-              >Home</router-link
-            >
+            >Home</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/installation"
               class="header__nav-item"
-              >Installation</router-link
-            >
+            >Installation</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/getting-started"
               class="header__nav-item"
-              >Getting started</router-link
-            >
+            >Getting started</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/components"
               class="header__nav-item"
-              >Components</router-link
-            >
+            >Components</router-link>
             <router-link
               v-on:click.native="showMenu = false"
               to="/themes"
               class="header__nav-item"
-              >Themes</router-link
-            >
+            >Themes</router-link>
           </nav>
         </div>
       </div>
@@ -66,19 +59,20 @@ export default {
   props: { showSidebar: Boolean },
   data() {
     return {
-      showMenu: false,
+      showMenu: false
     };
   },
   methods: {
     handleToggleButton() {
       this.$emit("toggle-sidebar");
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style>
 .header {
+  display: sticky;
   position: realtive;
   width: 100%;
   padding-left: 30px;

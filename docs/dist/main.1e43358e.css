@@ -1,4 +1,5 @@
 .header {
+  display: sticky;
   position: realtive;
   width: 100%;
   padding-left: 30px;
@@ -1157,11 +1158,11 @@ a {
 }
 .page {
   width: 100%;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .page__inner {
-  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   max-width: 1100px;
@@ -1171,7 +1172,15 @@ a {
 b {
   color: #333;
 }
+
+.landing {
+  padding-top: 60px;
+}
+.components {
+  padding-top: 60px;
+}
 .sidebar {
+  padding-top: 60px;
   top: 60px;
   left: 0;
   padding-left: 30px;
@@ -1192,6 +1201,7 @@ b {
 
 .main {
   width: 100%;
+  padding-top: 60px;
 }
 
 @media (min-width: 800px) {
@@ -1204,10 +1214,11 @@ b {
     background: transparent;
     display: block;
     width: 22%;
-    height: max-content;
+    height: calc(100vh - 60px);
     position: sticky;
     top: 0;
     font-size: 1.2em;
+    overflow-y: scroll;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1254,7 +1265,7 @@ nav[toc] a:hover {
 }
 
 nav[toc] a:last-of-type {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 nav[toc] a div {

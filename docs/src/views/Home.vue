@@ -92,4 +92,8 @@ export default {
 b {
   color: #333;
 }
+
+.landing {
+  padding-top: 60px;
+}
 </style>

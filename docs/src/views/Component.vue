@@ -23,11 +23,12 @@
         </div>
       </nav>
     </div>
-    <main class="main">
+
+    <div>
       <base-text tag="h1">{{ component.name }}</base-text>
       <base-text tag="p" look="lead">{{ component.desc }}</base-text>
       <base-box class="markdown-body" margin-y="xl" v-html="html"></base-box>
-    </main>
+    </div>
   </SidebarLayout>
 </template>
 
@@ -135,7 +136,7 @@ nav[toc] a:hover {
 }
 
 nav[toc] a:last-of-type {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 nav[toc] a div {

@@ -15,13 +15,14 @@ import Page from "./Page";
 export default {
   components: { Page },
   props: {
-    showSidebar: Boolean,
-  },
+    showSidebar: Boolean
+  }
 };
 </script>
 
 <style>
 .sidebar {
+  padding-top: 60px;
   top: 60px;
   left: 0;
   padding-left: 30px;
@@ -42,6 +43,7 @@ export default {
 
 .main {
   width: 100%;
+  padding-top: 60px;
 }
 
 @media (min-width: 800px) {
@@ -54,10 +56,11 @@ export default {
     background: transparent;
     display: block;
     width: 22%;
-    height: max-content;
+    height: calc(100vh - 60px);
     position: sticky;
     top: 0;
     font-size: 1.2em;
+    overflow-y: scroll;
     padding-left: 0;
     padding-right: 0;
   }
