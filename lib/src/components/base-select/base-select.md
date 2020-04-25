@@ -28,7 +28,7 @@ category: Form
 <base-knobs hideTabs src="./components.json" name="base-select">
   <base-select searchable placeholder="Search with no results">
     <base-option value="Option 1"></base-option>
-    <div slot="no-options">No options</div>
+    <div slot="no-options">No results found</div>
   </base-select>
 </base-knobs>
 

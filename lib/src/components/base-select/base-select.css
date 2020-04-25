@@ -191,6 +191,7 @@ div[part="option-list"] {
 ::slotted([slot="no-options"]) {
   display: flex;
   align-items: center;
+  color: var(--base-color-font-ligth);
   height: var(--base-size-md);
   padding: 0 var(--base-space-sm);
   background: white;
