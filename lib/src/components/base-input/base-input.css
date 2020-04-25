@@ -1,9 +1,10 @@
 :host {
+  --base-input-bg-color: var(--base-color-white);
   --base-input-height: var(--base-size-md);
   --base-input-border-color: var(--base-color-ui-light);
   --base-input-border-radius: none;
   --base-input-box-shadow: none;
-  --base-input-placeholder-color: var(--base-color-ui);
+  --base-input-placeholder-color: var(--base-color-font-light);
   --base-input-font-size: var(--base-font-size-sm);
 }
 
@@ -52,6 +53,8 @@
 }
 
 :host [part="input-field"] {
+  color: var(--base-color-font);
+  background-color: var(--base-input-bg-color);
   width: 100%;
   font-size: var(--base-font-size-sm);
   border-radius: var(--base-input-border-radius);

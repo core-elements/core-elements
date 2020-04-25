@@ -81,16 +81,16 @@
 }
 
 :host([type="primary"]) button:hover {
-  --base-button-bg-color: var(--base-color-primary-hover);
+  --base-button-bg-color: var(--base-color-primary-dark);
 }
 
 :host([type="secondary"]) button {
   --base-button-bg-color: var(--base-color-secondary);
-  color: var(--base-color-primary);
+  --base-button-text-color: var(--base-color-primary);
 }
 
 :host([type="secondary"]) button:hover {
-  --base-button-bg-color: var(--base-color-secondary-hover);
+  --base-button-bg-color: var(--base-color-secondary-dark);
 }
 
 :host([type="transparent"]) button {
@@ -108,7 +108,7 @@
 }
 
 :host([type="success"]) button:hover {
-  --base-button-bg-color: var(--base-color-success-hover);
+  --base-button-bg-color: var(--base-color-success-dark);
 }
 
 :host([type="danger"]) button {
@@ -117,7 +117,7 @@
 }
 
 :host([type="danger"]) button:hover {
-  --base-button-bg-color: var(--base-color-danger-hover);
+  --base-button-bg-color: var(--base-color-danger-dark);
 }
 
 /* Styles */

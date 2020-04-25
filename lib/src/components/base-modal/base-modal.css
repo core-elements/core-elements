@@ -61,7 +61,7 @@
   min-width: 200px;
   min-height: 200px;
   height: auto;
-  background: #fff;
+  background: var(--base-color-white);
   z-index: 1000;
   overflow-y: scroll;
   overflow-x: hidden;

@@ -5,7 +5,7 @@
   --base-select-min-height: var(--base-size-md);
   --base-select-background: none;
   --base-select-padding: 0px;
-  --base-select-placeholder-color: var(--base-color-ui);
+  --base-select-placeholder-color: var(--base-color-font-light);
   --base-select-border-width: 2px;
   --base-select-border-style: solid;
   --base-select-border-color: var(--base-color-ui-light);
@@ -65,17 +65,17 @@
   --base-select-background: #eee;
 }
 
-:host([searchable]) input[part="input-field"] {
+:host([searchable]) [part="input-field"] {
   cursor: text;
 }
 
-:host input[part="input-field"]::placeholder {
+:host [part="input-field"]::placeholder {
   font-size: var(--base-select-font-size);
   color: var(--base-select-placeholder-color);
 }
 
-:host(:not([multiple])) input[part="input-field"][has-value]::placeholder {
-  --base-select-placeholder-color: #333;
+:host(:not([multiple])) [part="input-field"][has-value]::placeholder {
+  --base-select-placeholder-color: var(--base-color-font);
   opacity: 1;
 }
 
@@ -86,12 +86,13 @@
   min-height: var(--base-select-min-height);
 }
 
-input[part="input-field"] {
+[part="input-field"] {
   flex: 1;
   width: 100%;
   cursor: pointer;
   padding-left: 8px;
   background: transparent;
+  color: var(--base-color-font);
   height: var(--base-select-min-height);
   font-size: 16px;
   border: 0;
@@ -131,7 +132,7 @@ button[part="arrow-button"] .arrow-up {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid currentColor;
+  border-bottom: 5px solid var(--base-color-black);
 }
 
 button[part="arrow-button"] .arrow-down {
@@ -139,7 +140,7 @@ button[part="arrow-button"] .arrow-down {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid currentColor;
+  border-top: 5px solid var(--base-color-black);
 }
 
 div[part="tag"] {

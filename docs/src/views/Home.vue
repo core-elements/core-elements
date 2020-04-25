@@ -49,24 +49,28 @@
                 </base-select>
               </base-grid-item>
               <base-grid-item sm="2" md="1">
-                <base-modal
-                  @toggle="(e) => (modalOpen = e.open)"
-                  :open="modalOpen"
-                >
-                  <header slot="header">Title</header>
-                  <div>Content</div>
-                </base-modal>
-                <base-button type="primary" @click="modalOpen = true"
-                  >Show modal</base-button
-                >
-                <base-toggle>Toggle</base-toggle>
+                <base-toggle :checked="darkMode" @change="e => darkMode = e.target.checked">Dark mode</base-toggle>
               </base-grid-item>
               <base-grid-item sm="2" md="1">
                 <base-tabs>
                   <base-tab selected>Tab 1</base-tab>
                   <base-tab>Tab 2</base-tab>
+                  <base-tab>Tab 3</base-tab>
                 </base-tabs>
               </base-grid-item>
+              <base-grid-item sm="2" md="1">
+                <base-modal
+                    @toggle="(e) => (modalOpen = e.open)"
+                    :open="modalOpen"
+                  >
+                    <header slot="header">Title</header>
+                    <div>Content</div>
+                  </base-modal>
+
+                  <base-button type="primary" @click="modalOpen = true"
+                    >Show modal</base-button
+                  >
+               </base-grid-item>
             </base-grid>
           </base-box>
         </base-grid-item>
@@ -99,17 +103,21 @@ export default {
   components: { Page },
   data() {
     return {
+      darkMode: false,
       installMethod: "NPM",
       modalOpen: false,
     };
+  },
+  watch: {
+    darkMode: val => {
+      if (val) document.body.setAttribute('mode', 'dark');
+      else document.body.removeAttribute('mode')
+    }
   },
 };
 </script>
 
 <style>
-b {
-  color: #333;
-}
 
 .landing {
   padding-top: 60px;

@@ -4,7 +4,42 @@
       <base-flex class="header__inner" justify="between" align="center">
         <div class="header__left">
           <router-link to="/" class="header__logo">
-            <ion-icon name="shapes-outline"></ion-icon>
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 112 120"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7 16H88V97H7V16Z" fill="var(--base-color-white)" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M80 24H15V89H80V24ZM7 16V97H88V16H7Z"
+                fill="currentColor"
+              />
+              <path
+                d="M112 75.5C112 100.077 92.0767 120 67.5 120C42.9233 120 23 100.077 23 75.5C23 50.9233 42.9233 31 67.5 31C92.0767 31 112 50.9233 112 75.5Z"
+                fill="var(--base-color-white)"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M67.5 112C87.6584 112 104 95.6584 104 75.5C104 55.3416 87.6584 39 67.5 39C47.3416 39 31 55.3416 31 75.5C31 95.6584 47.3416 112 67.5 112ZM67.5 120C92.0767 120 112 100.077 112 75.5C112 50.9233 92.0767 31 67.5 31C42.9233 31 23 50.9233 23 75.5C23 100.077 42.9233 120 67.5 120Z"
+                fill="currentColor"
+              />
+              <path
+                d="M44 0L87.3013 75H0.69873L44 0Z"
+                fill="var(--base-color-white)"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M44 0L0.69873 75H87.3013L44 0ZM44 16L14.5551 67H73.4449L44 16Z"
+                fill="currentColor"
+              />
+            </svg>
+
             <span>Base Elements</span>
           </router-link>
           <button @click="handleToggleButton" class="header__route-menu-button">
@@ -136,13 +171,15 @@ export default {
   align-items: center;
 }
 
-.header__logo ion-icon {
+.header__logo:hover {
+  color: var(--base-color-font-dark);
+}
+
+.header__logo svg {
   margin-right: 10px;
-  font-size: 1.4em;
 }
 
 .header__nav-wrapper {
-  background: white;
   z-index: 999;
   width: 100%;
   animation: fade-in 0.3s ease;
@@ -169,7 +206,7 @@ export default {
 }
 
 .header__nav-item {
-  color: #718096;
+  color: var(--base-color-font-light);
   margin-bottom: 30px;
   display: block;
   font-size: 2rem;
@@ -177,11 +214,11 @@ export default {
 }
 
 .header__nav-item:hover {
-  color: #1a202c;
+  color: var(--base-color-font-dark);
 }
 
 .header__nav-item.router-link-active {
-  color: #1a202c;
+  color: var(--base-color-font-dark);
 }
 
 .header__menu-button {
@@ -200,10 +237,6 @@ export default {
 }
 
 @media (min-width: 800px) {
-  .header {
-    background: white;
-  }
-
   .header__nav-item.home {
     display: none;
   }

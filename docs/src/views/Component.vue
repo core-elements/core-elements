@@ -12,12 +12,18 @@
             :key="i"
           >
             {{ page.name }}
-            <div v-if="subMenu.length && $router.currentRoute.params.element === page.name">
+            <div
+              v-if="
+                subMenu.length &&
+                  $router.currentRoute.params.element === page.name
+              "
+            >
               <router-link
                 :to="{ hash: menu.id }"
                 v-for="menu in subMenu"
                 :key="menu.id"
-              >{{ menu.title }}</router-link>
+                >{{ menu.title }}</router-link
+              >
             </div>
           </router-link>
         </div>
@@ -46,30 +52,30 @@ export default {
   data() {
     return {
       subMenu: [],
-      components
+      components,
     };
   },
   watch: {
     $route: function(val) {
       this.setSubMenu();
-    }
+    },
   },
   methods: {
     setSubMenu() {
       setTimeout(() => {
         const headings = [...document.querySelectorAll("h2")];
-        this.subMenu = headings.map(h => ({ id: h.id, title: h.innerText }));
+        this.subMenu = headings.map((h) => ({ id: h.id, title: h.innerText }));
       }, 0);
     },
     goTo(route) {
       this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
-    }
+    },
   },
   computed: {
     component() {
-      return components.find(c => c.name === this.$route.params.element);
+      return components.find((c) => c.name === this.$route.params.element);
     },
     html() {
       return marked(this.component.content);
@@ -83,17 +89,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }]
+            [`${catName}`]: [...prevComps, { ...comp }],
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: []
+          Form: [],
         }
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -111,7 +117,7 @@ nav[toc] {
 }
 
 nav[toc] label {
-  color: #a0aec0;
+  color: var(--base-color-font-light);
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
@@ -119,7 +125,7 @@ nav[toc] label {
 }
 
 nav[toc] a {
-  color: #718096;
+  color: var(--base-color-font);
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
@@ -127,12 +133,12 @@ nav[toc] a {
 }
 
 nav[toc] a.router-link-exact-active {
-  color: #1a202c;
+  color: var(--base-color-font-dark);
   transition: all 0.5s ease;
 }
 
 nav[toc] a:hover {
-  color: #1a202c;
+  color: var(--base-color-font-dark);
 }
 
 nav[toc] a:last-of-type {

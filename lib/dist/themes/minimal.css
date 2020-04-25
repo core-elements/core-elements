@@ -3,39 +3,42 @@
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   --base-color-primary-hue: 250;
+  --base-color-primary-light: hsl(var(--base-color-primary-hue), 100%, 90%);
   --base-color-primary: hsl(var(--base-color-primary-hue), 100%, 60%);
-  --base-color-primary-hover: hsl(var(--base-color-primary-hue), 100%, 50%);
+  --base-color-primary-dark: hsl(var(--base-color-primary-hue), 100%, 50%);
 
   --base-color-secondary-hue: 250;
+  --base-color-secondary-light: hsl(var(--base-color-secondary-hue), 100%, 95%);
   --base-color-secondary: hsl(var(--base-color-secondary-hue), 100%, 95%);
-  --base-color-secondary-hover: hsl(var(--base-color-secondary-hue), 100%, 90%);
+  --base-color-secondary-dark: hsl(var(--base-color-secondary-hue), 100%, 90%);
+
+  --base-color-focus-light: var(--base-color-primary-light);
+  --base-color-focus: var(--base-color-primary);
+  --base-color-focus-dark: var(--base-color-primary-dark);
 
   --base-color-success-hue: 140;
   --base-color-success: hsl(var(--base-color-success-hue), 100%, 40%);
-  --base-color-success-hover: hsl(var(--base-color-success-hue), 100%, 30%);
+  --base-color-success-dark: hsl(var(--base-color-success-hue), 100%, 30%);
 
   --base-color-danger-hue: 0;
   --base-color-danger: hsl(var(--base-color-danger-hue), 100%, 40%);
-  --base-color-danger-hover: hsl(var(--base-color-danger-hue), 100%, 30%);
-
-  --base-color-font: #666;
-  --base-color-font-light: #888;
-  --base-color-font-dark: #333;
-
-  --base-color-focus: #1f00ff;
-  --base-color-focus-light: #d2daff;
-  --base-color-focus-dark: darkblue;
+  --base-color-danger-dark: hsl(var(--base-color-danger-hue), 100%, 30%);
 
   --base-color-white: white;
   --base-color-black: black;
 
-  --base-color-ui-lightest: #f5f5f5;
-  --base-color-ui-lighter: #eee;
-  --base-color-ui-light: #cbcbcb;
-  --base-color-ui: #9a9a9a;
-  --base-color-ui-dark: #5e5e5e;
-  --base-color-ui-darker: #565656;
-  --base-color-ui-darkest: #333;
+  --base-color-ui-hue: 0;
+  --base-color-ui-lightest: hsl(var(--base-color-ui-hue), 0%, 95%);
+  --base-color-ui-lighter: hsl(var(--base-color-ui-hue), 0%, 90%);
+  --base-color-ui-light: hsl(var(--base-color-ui-hue), 0%, 80%);
+  --base-color-ui: hsl(var(--base-color-ui-hue), 0%, 70%);
+  --base-color-ui-dark: hsl(var(--base-color-ui-hue), 0%, 30%);
+  --base-color-ui-darker: hsl(var(--base-color-ui-hue), 0%, 20%);
+  --base-color-ui-darkest: hsl(var(--base-color-ui-hue), 0%, 10%);
+
+  --base-color-font-light: hsl(var(--base-color-ui-hue), 0%, 15%);
+  --base-color-font: hsl(var(--base-color-ui-hue), 0%, 10%);
+  --base-color-font-dark: hsl(var(--base-color-ui-hue), 0%, 5%);
 
   --base-container: 800px;
   --base-container-xs: 600px;
@@ -83,5 +86,57 @@
 }
 
 [theme="minimal"] {
+  transition: background 0.2s ease;
+  color: var(--base-color-font);
   font-family: var(--base-font-family);
+  background-color: var(--base-color-white);
+}
+
+[mode="dark"] {
+  --base-color-primary-hue: 400;
+  --base-color-primary: hsl(var(--base-color-primary-hue), 100%, 50%);
+  --base-color-primary-light: hsl(var(--base-color-primary-hue), 100%, 70%);
+  --base-color-primary-dark: hsl(var(--base-color-primary-hue), 100%, 60%);
+
+  --base-color-focus-light: var(--base-color-primary-light);
+  --base-color-focus: var(--base-color-primary);
+  --base-color-focus-dark: var(--base-color-primary-dark);
+
+  --base-color-secondary-hue: 400;
+  --base-color-secondary: hsl(var(--base-color-secondary-hue), 100%, 95%);
+  --base-color-secondary-dark: hsl(var(--base-color-secondary-hue), 100%, 90%);
+
+  --base-color-success-hue: 140;
+  --base-color-success: hsl(var(--base-color-success-hue), 100%, 40%);
+  --base-color-success-dark: hsl(var(--base-color-success-hue), 100%, 30%);
+
+  --base-color-danger-hue: 0;
+  --base-color-danger: hsl(var(--base-color-danger-hue), 100%, 40%);
+  --base-color-danger-dark: hsl(var(--base-color-danger-hue), 100%, 30%);
+
+  --base-color-white: black;
+  --base-color-black: white;
+
+  --base-color-ui-hue: 0;
+  --base-color-ui-lightest: hsl(var(--base-color-ui-hue), 0%, 20%);
+  --base-color-ui-lighter: hsl(var(--base-color-ui-hue), 0%, 30%);
+  --base-color-ui-light: hsl(var(--base-color-ui-hue), 0%, 45%);
+  --base-color-ui: hsl(var(--base-color-ui-hue), 0%, 60%);
+  --base-color-ui-dark: hsl(var(--base-color-ui-hue), 0%, 80%);
+  --base-color-ui-darker: hsl(var(--base-color-ui-hue), 0%, 90%);
+  --base-color-ui-darkest: hsl(var(--base-color-ui-hue), 0%, 95%);
+
+  --base-color-font-light: hsl(var(--base-color-ui-hue), 0%, 70%);
+  --base-color-font: hsl(var(--base-color-ui-hue), 0%, 80%);
+  --base-color-font-dark: hsl(var(--base-color-ui-hue), 0%, 100%);
+}
+
+[mode="dark"] base-button[type="secondary"]::part(button) {
+  --base-button-bg-color: var(--base-color-black);
+  --base-button-text-color: var(--base-color-white);
+}
+
+[mode="dark"] base-button[type="secondary"]::part(button):hover {
+  --base-button-bg-color: var(--base-color-black);
+  --base-button-text-color: var(--base-color-white);
 }
