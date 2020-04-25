@@ -35179,7 +35179,7 @@ var _default = {
 
   watch: {
     showSidebar: val => {
-      if (val) document.body.style.overflow = "hidden";else document.body.style.overflow = "";
+      if (val) document.body.classList.add("no-scroll-mobile");else document.body.classList.remove("no-scroll-mobile");
     }
   },
   methods: {

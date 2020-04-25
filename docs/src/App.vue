@@ -38,6 +38,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body.no-scroll-mobile {
+  overflow: hidden;
+}
+
 a {
   color: currentColor;
 }
