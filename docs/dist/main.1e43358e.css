@@ -1176,6 +1176,7 @@ b {
   padding-top: 60px;
 }
 .components {
+  max-width: 100%;
   padding-top: 60px;
 }
 .sidebar {

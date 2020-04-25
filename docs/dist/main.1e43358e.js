@@ -36378,7 +36378,7 @@ exports.default = _default;
           [
             _c(
               "base-grid",
-              { attrs: { gap: "xl", columns: "12" } },
+              { attrs: { gap: "xl", "gap-sm": "md", columns: "12" } },
               _vm._l(_vm.groupedComponents, function(menuGroup, name) {
                 return _c(
                   "base-grid-item",

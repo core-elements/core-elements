@@ -16,7 +16,7 @@
         </base-text>
       </base-container>
       <base-box margin-y="xl">
-        <base-grid gap="xl" columns="12">
+        <base-grid gap="xl" gap-sm="md" columns="12">
           <base-grid-item
             sm="12"
             md="3"
@@ -85,6 +85,7 @@ export default {
 
 <style>
 .components {
+  max-width: 100%;
   padding-top: 60px;
 }
 </style>
