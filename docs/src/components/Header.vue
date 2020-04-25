@@ -148,6 +148,10 @@ export default {
   display: flex;
 }
 
+.header__nav {
+  text-align: left;
+}
+
 .header__nav ion-icon {
   margin-right: 0.5em;
 }
