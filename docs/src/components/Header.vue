@@ -1,57 +1,59 @@
 <template>
-  <header class="header">
-    <div class="header__inner">
-      <div class="header__left">
-        <router-link to="/" class="header__logo">
-          <ion-icon name="shapes-outline"></ion-icon>
-          <span>Base Elements</span>
-        </router-link>
-        <button @click="handleToggleButton" class="header__route-menu-button">
-          {{ $route.meta.title }}
-          <ion-icon
-            v-if="$route.meta.hasSidebar"
-            :name="showSidebar ? 'chevron-up-outline' : 'chevron-down-outline'"
-          ></ion-icon>
-        </button>
-      </div>
-
-      <div class="header__right">
-        <button @click="showMenu = !showMenu" class="header__menu-button">
-          <ion-icon :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"></ion-icon>
-        </button>
-
-        <div class="header__nav-wrapper" :class="{ show: showMenu }">
-          <nav class="header__nav">
-            <router-link
-              v-on:click.native="showMenu = false"
-              to="/"
-              class="header__nav-item home"
-            >Home</router-link>
-            <router-link
-              v-on:click.native="showMenu = false"
-              to="/installation"
-              class="header__nav-item"
-            >Installation</router-link>
-            <router-link
-              v-on:click.native="showMenu = false"
-              to="/getting-started"
-              class="header__nav-item"
-            >Getting started</router-link>
-            <router-link
-              v-on:click.native="showMenu = false"
-              to="/components"
-              class="header__nav-item"
-            >Components</router-link>
-            <router-link
-              v-on:click.native="showMenu = false"
-              to="/themes"
-              class="header__nav-item"
-            >Themes</router-link>
-          </nav>
+  <base-box class="header" padding-x="md" bg="white">
+    <base-container center size="lg">
+      <base-flex class="header__inner" justify="between" align="center">
+        <div class="header__left">
+          <router-link to="/" class="header__logo">
+            <ion-icon name="shapes-outline"></ion-icon>
+            <span>Base Elements</span>
+          </router-link>
+          <button @click="handleToggleButton" class="header__route-menu-button">
+            {{ $route.meta.title }}
+            <ion-icon
+              v-if="$route.meta.hasSidebar"
+              :name="showSidebar ? 'chevron-up-outline' : 'chevron-down-outline'"
+            ></ion-icon>
+          </button>
         </div>
-      </div>
-    </div>
-  </header>
+
+        <div class="header__right">
+          <button @click="showMenu = !showMenu" class="header__menu-button">
+            <ion-icon :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"></ion-icon>
+          </button>
+
+          <div class="header__nav-wrapper" :class="{ show: showMenu }">
+            <nav class="header__nav">
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/"
+                class="header__nav-item home"
+              >Home</router-link>
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/installation"
+                class="header__nav-item"
+              >Installation</router-link>
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/getting-started"
+                class="header__nav-item"
+              >Getting started</router-link>
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/components"
+                class="header__nav-item"
+              >Components</router-link>
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/themes"
+                class="header__nav-item"
+              >Themes</router-link>
+            </nav>
+          </div>
+        </div>
+      </base-flex>
+    </base-container>
+  </base-box>
 </template>
 
 <script>
@@ -62,9 +64,17 @@ export default {
       showMenu: false
     };
   },
+  watch: {
+    showSidebar: val => {
+      if (val) document.body.style.overflow = "hidden";
+      else document.body.style.overflow = "";
+    }
+  },
   methods: {
     handleToggleButton() {
-      this.$emit("toggle-sidebar");
+      if (this.$route.meta.hasSidebar) {
+        this.$emit("toggle-sidebar");
+      }
     }
   }
 };
@@ -72,21 +82,13 @@ export default {
 
 <style>
 .header {
-  display: sticky;
-  position: realtive;
-  width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header__inner {
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .header__left {
@@ -182,6 +184,10 @@ export default {
 }
 
 @media (min-width: 800px) {
+  .header {
+    background: white;
+  }
+
   .header__nav-item.home {
     display: none;
   }

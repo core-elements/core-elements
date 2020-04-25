@@ -5,7 +5,7 @@
       "name": "Box",
       "desc": "A general purpose box with padding, border, depth and more",
       "category": "Layout",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-button/base-button.md",

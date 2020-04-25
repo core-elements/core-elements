@@ -1,5 +1,4 @@
 :host {
-  overflow: hidden;
   vertical-align: top;
   display: block;
   width: 100%;
@@ -24,7 +23,7 @@
 }
 
 @each $i in primary, secondary, success, danger, ui-light, ui-lighter,
-  ui-lightest, ui-dark
+  ui-lightest, ui-dark, white, black
 {
   :host([bg="$(i)"]) {
     background-color: var(--base-color-$(i));
@@ -32,7 +31,7 @@
 }
 
 @each $i in primary, secondary, success, danger, ui-light, ui-lighter,
-  ui-lightest, ui-dark
+  ui-lightest, ui-dark, white, black
 {
   :host([border="$(i)"]) {
     border: 1px solid var(--base-color-$(i));

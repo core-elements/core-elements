@@ -23,14 +23,15 @@ export default {
 <style>
 .sidebar {
   padding-top: 60px;
+  padding-bottom: 60px;
   top: 60px;
   left: 0;
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
   position: fixed;
+  z-index: 500;
   display: none;
-  z-index: 999;
   background: white;
   font-size: 1.5em;
   height: calc(100vh - 60px);

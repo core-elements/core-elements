@@ -11,7 +11,7 @@ category: Layout
 ## Card
 
 <base-knobs hideTabs src="./components.json" name="base-box">
-  <base-box inline depth="sm" radius="md" border="ui-light">
+  <base-box bg="white" inline depth="sm" radius="md" border="ui-light">
     <img width="400" height="250" src="https://placeimg.com/400/250/tech">
     <base-box padding="md">
       <base-text tag="h2">Card Title</base-text>

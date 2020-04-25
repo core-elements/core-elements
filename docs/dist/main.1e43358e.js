@@ -21907,7 +21907,7 @@ var global = arguments[3];
     customElements.define("base-label", BaseLabel);
   }
 
-  var styles$6 = css`:host{overflow:hidden;vertical-align:top;display:block;width:100%}:host([inline]){display:inline-block;width:auto}:host([clickable]){cursor:pointer;-webkit-transition:all .2s ease;transition:all .2s ease}:host([clickable]:hover){-webkit-transform:translateY(-2px);transform:translateY(-2px)}:host([clickable]:active){-webkit-transform:translateY(0);transform:translateY(0)}:host([bg=primary]){background-color:var(--base-color-primary)}:host([bg=secondary]){background-color:var(--base-color-secondary)}:host([bg=success]){background-color:var(--base-color-success)}:host([bg=danger]){background-color:var(--base-color-danger)}:host([bg=ui-light]){background-color:var(--base-color-ui-light)}:host([bg=ui-lighter]){background-color:var(--base-color-ui-lighter)}:host([bg=ui-lightest]){background-color:var(--base-color-ui-lightest)}:host([bg=ui-dark]){background-color:var(--base-color-ui-dark)}:host([border=primary]){border:1px solid var(--base-color-primary)}:host([border=secondary]){border:1px solid var(--base-color-secondary)}:host([border=success]){border:1px solid var(--base-color-success)}:host([border=danger]){border:1px solid var(--base-color-danger)}:host([border=ui-light]){border:1px solid var(--base-color-ui-light)}:host([border=ui-lighter]){border:1px solid var(--base-color-ui-lighter)}:host([border=ui-lightest]){border:1px solid var(--base-color-ui-lightest)}:host([border=ui-dark]){border:1px solid var(--base-color-ui-dark)}:host([depth=none]){box-shadow:var(--base-depth-none)}:host([depth=xs]){box-shadow:var(--base-depth-xs)}:host([depth=sm]){box-shadow:var(--base-depth-sm)}:host([depth=md]){box-shadow:var(--base-depth-md)}:host([depth=lg]){box-shadow:var(--base-depth-lg)}:host([depth=xl]){box-shadow:var(--base-depth-xl)}:host([padding=none]){padding:var(--base-space-none)}:host([padding=xs]){padding:var(--base-space-xs)}:host([padding=sm]){padding:var(--base-space-sm)}:host([padding=md]){padding:var(--base-space-md)}:host([padding=lg]){padding:var(--base-space-lg)}:host([padding=xl]){padding:var(--base-space-xl)}:host([padding-x=none]){padding-left:var(--base-space-none);padding-right:var(--base-space-none)}:host([padding-x=xs]){padding-left:var(--base-space-xs);padding-right:var(--base-space-xs)}:host([padding-x=sm]){padding-left:var(--base-space-sm);padding-right:var(--base-space-sm)}:host([padding-x=md]){padding-left:var(--base-space-md);padding-right:var(--base-space-md)}:host([padding-x=lg]){padding-left:var(--base-space-lg);padding-right:var(--base-space-lg)}:host([padding-x=xl]){padding-left:var(--base-space-xl);padding-right:var(--base-space-xl)}:host([padding-y=none]){padding-top:var(--base-space-none);padding-bottom:var(--base-space-none)}:host([padding-y=xs]){padding-top:var(--base-space-xs);padding-bottom:var(--base-space-xs)}:host([padding-y=sm]){padding-top:var(--base-space-sm);padding-bottom:var(--base-space-sm)}:host([padding-y=md]){padding-top:var(--base-space-md);padding-bottom:var(--base-space-md)}:host([padding-y=lg]){padding-top:var(--base-space-lg);padding-bottom:var(--base-space-lg)}:host([padding-y=xl]){padding-top:var(--base-space-xl);padding-bottom:var(--base-space-xl)}:host([margin=none]){margin:var(--base-space-none)}:host([margin=xs]){margin:var(--base-space-xs)}:host([margin=sm]){margin:var(--base-space-sm)}:host([margin=md]){margin:var(--base-space-md)}:host([margin=lg]){margin:var(--base-space-lg)}:host([margin=xl]){margin:var(--base-space-xl)}:host([margin-x=none]){margin-left:var(--base-space-none);margin-right:var(--base-space-none)}:host([margin-x=xs]){margin-left:var(--base-space-xs);margin-right:var(--base-space-xs)}:host([margin-x=sm]){margin-left:var(--base-space-sm);margin-right:var(--base-space-sm)}:host([margin-x=md]){margin-left:var(--base-space-md);margin-right:var(--base-space-md)}:host([margin-x=lg]){margin-left:var(--base-space-lg);margin-right:var(--base-space-lg)}:host([margin-x=xl]){margin-left:var(--base-space-xl);margin-right:var(--base-space-xl)}:host([margin-y=none]){margin-top:var(--base-space-none);margin-bottom:var(--base-space-none)}:host([margin-y=xs]){margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs)}:host([margin-y=sm]){margin-top:var(--base-space-sm);margin-bottom:var(--base-space-sm)}:host([margin-y=md]){margin-top:var(--base-space-md);margin-bottom:var(--base-space-md)}:host([margin-y=lg]){margin-top:var(--base-space-lg);margin-bottom:var(--base-space-lg)}:host([margin-y=xl]){margin-top:var(--base-space-xl);margin-bottom:var(--base-space-xl)}:host([radius=none]){border-radius:var(--base-border-radius-none)}:host([radius=xs]){border-radius:var(--base-border-radius-xs)}:host([radius=sm]){border-radius:var(--base-border-radius-sm)}:host([radius=md]){border-radius:var(--base-border-radius-md)}:host([radius=lg]){border-radius:var(--base-border-radius-lg)}:host([radius=xl]){border-radius:var(--base-border-radius-xl)}`;
+  var styles$6 = css`:host{vertical-align:top;display:block;width:100%}:host([inline]){display:inline-block;width:auto}:host([clickable]){cursor:pointer;-webkit-transition:all .2s ease;transition:all .2s ease}:host([clickable]:hover){-webkit-transform:translateY(-2px);transform:translateY(-2px)}:host([clickable]:active){-webkit-transform:translateY(0);transform:translateY(0)}:host([bg=primary]){background-color:var(--base-color-primary)}:host([bg=secondary]){background-color:var(--base-color-secondary)}:host([bg=success]){background-color:var(--base-color-success)}:host([bg=danger]){background-color:var(--base-color-danger)}:host([bg=ui-light]){background-color:var(--base-color-ui-light)}:host([bg=ui-lighter]){background-color:var(--base-color-ui-lighter)}:host([bg=ui-lightest]){background-color:var(--base-color-ui-lightest)}:host([bg=ui-dark]){background-color:var(--base-color-ui-dark)}:host([bg=white]){background-color:var(--base-color-white)}:host([bg=black]){background-color:var(--base-color-black)}:host([border=primary]){border:1px solid var(--base-color-primary)}:host([border=secondary]){border:1px solid var(--base-color-secondary)}:host([border=success]){border:1px solid var(--base-color-success)}:host([border=danger]){border:1px solid var(--base-color-danger)}:host([border=ui-light]){border:1px solid var(--base-color-ui-light)}:host([border=ui-lighter]){border:1px solid var(--base-color-ui-lighter)}:host([border=ui-lightest]){border:1px solid var(--base-color-ui-lightest)}:host([border=ui-dark]){border:1px solid var(--base-color-ui-dark)}:host([border=white]){border:1px solid var(--base-color-white)}:host([border=black]){border:1px solid var(--base-color-black)}:host([depth=none]){box-shadow:var(--base-depth-none)}:host([depth=xs]){box-shadow:var(--base-depth-xs)}:host([depth=sm]){box-shadow:var(--base-depth-sm)}:host([depth=md]){box-shadow:var(--base-depth-md)}:host([depth=lg]){box-shadow:var(--base-depth-lg)}:host([depth=xl]){box-shadow:var(--base-depth-xl)}:host([padding=none]){padding:var(--base-space-none)}:host([padding=xs]){padding:var(--base-space-xs)}:host([padding=sm]){padding:var(--base-space-sm)}:host([padding=md]){padding:var(--base-space-md)}:host([padding=lg]){padding:var(--base-space-lg)}:host([padding=xl]){padding:var(--base-space-xl)}:host([padding-x=none]){padding-left:var(--base-space-none);padding-right:var(--base-space-none)}:host([padding-x=xs]){padding-left:var(--base-space-xs);padding-right:var(--base-space-xs)}:host([padding-x=sm]){padding-left:var(--base-space-sm);padding-right:var(--base-space-sm)}:host([padding-x=md]){padding-left:var(--base-space-md);padding-right:var(--base-space-md)}:host([padding-x=lg]){padding-left:var(--base-space-lg);padding-right:var(--base-space-lg)}:host([padding-x=xl]){padding-left:var(--base-space-xl);padding-right:var(--base-space-xl)}:host([padding-y=none]){padding-top:var(--base-space-none);padding-bottom:var(--base-space-none)}:host([padding-y=xs]){padding-top:var(--base-space-xs);padding-bottom:var(--base-space-xs)}:host([padding-y=sm]){padding-top:var(--base-space-sm);padding-bottom:var(--base-space-sm)}:host([padding-y=md]){padding-top:var(--base-space-md);padding-bottom:var(--base-space-md)}:host([padding-y=lg]){padding-top:var(--base-space-lg);padding-bottom:var(--base-space-lg)}:host([padding-y=xl]){padding-top:var(--base-space-xl);padding-bottom:var(--base-space-xl)}:host([margin=none]){margin:var(--base-space-none)}:host([margin=xs]){margin:var(--base-space-xs)}:host([margin=sm]){margin:var(--base-space-sm)}:host([margin=md]){margin:var(--base-space-md)}:host([margin=lg]){margin:var(--base-space-lg)}:host([margin=xl]){margin:var(--base-space-xl)}:host([margin-x=none]){margin-left:var(--base-space-none);margin-right:var(--base-space-none)}:host([margin-x=xs]){margin-left:var(--base-space-xs);margin-right:var(--base-space-xs)}:host([margin-x=sm]){margin-left:var(--base-space-sm);margin-right:var(--base-space-sm)}:host([margin-x=md]){margin-left:var(--base-space-md);margin-right:var(--base-space-md)}:host([margin-x=lg]){margin-left:var(--base-space-lg);margin-right:var(--base-space-lg)}:host([margin-x=xl]){margin-left:var(--base-space-xl);margin-right:var(--base-space-xl)}:host([margin-y=none]){margin-top:var(--base-space-none);margin-bottom:var(--base-space-none)}:host([margin-y=xs]){margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs)}:host([margin-y=sm]){margin-top:var(--base-space-sm);margin-bottom:var(--base-space-sm)}:host([margin-y=md]){margin-top:var(--base-space-md);margin-bottom:var(--base-space-md)}:host([margin-y=lg]){margin-top:var(--base-space-lg);margin-bottom:var(--base-space-lg)}:host([margin-y=xl]){margin-top:var(--base-space-xl);margin-bottom:var(--base-space-xl)}:host([radius=none]){border-radius:var(--base-border-radius-none)}:host([radius=xs]){border-radius:var(--base-border-radius-xs)}:host([radius=sm]){border-radius:var(--base-border-radius-sm)}:host([radius=md]){border-radius:var(--base-border-radius-md)}:host([radius=lg]){border-radius:var(--base-border-radius-lg)}:host([radius=xl]){border-radius:var(--base-border-radius-xl)}`;
 
   class BaseBox extends LitElement {
     constructor() {
@@ -35164,6 +35164,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35175,9 +35177,16 @@ var _default = {
     };
   },
 
+  watch: {
+    showSidebar: val => {
+      if (val) document.body.style.overflow = "hidden";else document.body.style.overflow = "";
+    }
+  },
   methods: {
     handleToggleButton() {
-      this.$emit("toggle-sidebar");
+      if (this.$route.meta.hasSidebar) {
+        this.$emit("toggle-sidebar");
+      }
     }
 
   }
@@ -35195,157 +35204,181 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("header", { staticClass: "header" }, [
-    _c("div", { staticClass: "header__inner" }, [
+  return _c(
+    "base-box",
+    { staticClass: "header", attrs: { "padding-x": "md", bg: "white" } },
+    [
       _c(
-        "div",
-        { staticClass: "header__left" },
+        "base-container",
+        { attrs: { center: "", size: "lg" } },
         [
           _c(
-            "router-link",
-            { staticClass: "header__logo", attrs: { to: "/" } },
-            [
-              _c("ion-icon", { attrs: { name: "shapes-outline" } }),
-              _vm._v(" "),
-              _c("span", [_vm._v("Base Elements")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
+            "base-flex",
             {
-              staticClass: "header__route-menu-button",
-              on: { click: _vm.handleToggleButton }
+              staticClass: "header__inner",
+              attrs: { justify: "between", align: "center" }
             },
             [
-              _vm._v(
-                "\n        " + _vm._s(_vm.$route.meta.title) + "\n        "
+              _c(
+                "div",
+                { staticClass: "header__left" },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "header__logo", attrs: { to: "/" } },
+                    [
+                      _c("ion-icon", { attrs: { name: "shapes-outline" } }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Base Elements")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "header__route-menu-button",
+                      on: { click: _vm.handleToggleButton }
+                    },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(_vm.$route.meta.title) +
+                          "\n          "
+                      ),
+                      _vm.$route.meta.hasSidebar
+                        ? _c("ion-icon", {
+                            attrs: {
+                              name: _vm.showSidebar
+                                ? "chevron-up-outline"
+                                : "chevron-down-outline"
+                            }
+                          })
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ],
+                1
               ),
-              _vm.$route.meta.hasSidebar
-                ? _c("ion-icon", {
-                    attrs: {
-                      name: _vm.showSidebar
-                        ? "chevron-up-outline"
-                        : "chevron-down-outline"
+              _vm._v(" "),
+              _c("div", { staticClass: "header__right" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "header__menu-button",
+                    on: {
+                      click: function($event) {
+                        _vm.showMenu = !_vm.showMenu
+                      }
                     }
-                  })
-                : _vm._e()
-            ],
-            1
+                  },
+                  [
+                    _c("ion-icon", {
+                      attrs: {
+                        name: _vm.showMenu
+                          ? "close-outline"
+                          : "ellipsis-vertical-outline"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "header__nav-wrapper",
+                    class: { show: _vm.showMenu }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "header__nav" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "header__nav-item home",
+                            attrs: { to: "/" },
+                            nativeOn: {
+                              click: function($event) {
+                                _vm.showMenu = false
+                              }
+                            }
+                          },
+                          [_vm._v("Home")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "header__nav-item",
+                            attrs: { to: "/installation" },
+                            nativeOn: {
+                              click: function($event) {
+                                _vm.showMenu = false
+                              }
+                            }
+                          },
+                          [_vm._v("Installation")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "header__nav-item",
+                            attrs: { to: "/getting-started" },
+                            nativeOn: {
+                              click: function($event) {
+                                _vm.showMenu = false
+                              }
+                            }
+                          },
+                          [_vm._v("Getting started")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "header__nav-item",
+                            attrs: { to: "/components" },
+                            nativeOn: {
+                              click: function($event) {
+                                _vm.showMenu = false
+                              }
+                            }
+                          },
+                          [_vm._v("Components")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "header__nav-item",
+                            attrs: { to: "/themes" },
+                            nativeOn: {
+                              click: function($event) {
+                                _vm.showMenu = false
+                              }
+                            }
+                          },
+                          [_vm._v("Themes")]
+                        )
+                      ],
+                      1
+                    )
+                  ]
+                )
+              ])
+            ]
           )
         ],
         1
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "header__right" }, [
-        _c(
-          "button",
-          {
-            staticClass: "header__menu-button",
-            on: {
-              click: function($event) {
-                _vm.showMenu = !_vm.showMenu
-              }
-            }
-          },
-          [
-            _c("ion-icon", {
-              attrs: {
-                name: _vm.showMenu
-                  ? "close-outline"
-                  : "ellipsis-vertical-outline"
-              }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "header__nav-wrapper", class: { show: _vm.showMenu } },
-          [
-            _c(
-              "nav",
-              { staticClass: "header__nav" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "header__nav-item home",
-                    attrs: { to: "/" },
-                    nativeOn: {
-                      click: function($event) {
-                        _vm.showMenu = false
-                      }
-                    }
-                  },
-                  [_vm._v("Home")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "header__nav-item",
-                    attrs: { to: "/installation" },
-                    nativeOn: {
-                      click: function($event) {
-                        _vm.showMenu = false
-                      }
-                    }
-                  },
-                  [_vm._v("Installation")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "header__nav-item",
-                    attrs: { to: "/getting-started" },
-                    nativeOn: {
-                      click: function($event) {
-                        _vm.showMenu = false
-                      }
-                    }
-                  },
-                  [_vm._v("Getting started")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "header__nav-item",
-                    attrs: { to: "/components" },
-                    nativeOn: {
-                      click: function($event) {
-                        _vm.showMenu = false
-                      }
-                    }
-                  },
-                  [_vm._v("Components")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "header__nav-item",
-                    attrs: { to: "/themes" },
-                    nativeOn: {
-                      click: function($event) {
-                        _vm.showMenu = false
-                      }
-                    }
-                  },
-                  [_vm._v("Themes")]
-                )
-              ],
-              1
-            )
-          ]
-        )
-      ])
-    ])
-  ])
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35505,9 +35538,19 @@ render._withStripped = true
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "page" }, [
-    _c("div", { staticClass: "page__inner" }, [_vm._t("default")], 2)
-  ])
+  return _c(
+    "base-box",
+    { attrs: { "margin-x": "sm" } },
+    [
+      _c(
+        "base-container",
+        { attrs: { center: "", size: "lg" } },
+        [_c("base-flex", { attrs: { wrap: "wrap" } }, [_vm._t("default")], 2)],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35536,13 +35579,9 @@ render._withStripped = true
         }
 
         
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
       }
     })();
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Home.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/Home.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35554,6 +35593,16 @@ var _Page = _interopRequireDefault(require("../layouts/Page"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -35657,106 +35706,303 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "Page",
-    { staticClass: "landing" },
+    "div",
     [
       _c(
-        "base-grid",
-        { attrs: { columns: "8", gap: "xl", "gap-sm": "md" } },
+        "Page",
+        { staticClass: "landing" },
         [
           _c(
-            "base-grid-item",
-            { attrs: { sm: "8", md: "3" } },
+            "base-grid",
+            { attrs: { columns: "8", gap: "xl", "gap-sm": "md" } },
             [
-              _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
-                _c("b", [_vm._v("Base Elements")]),
-                _vm._v(
-                  " is a free collection of essential UI components\n        for any web application\n      "
-                )
-              ]),
-              _vm._v(" "),
-              _c("base-text", { attrs: { tag: "p", look: "lead" } }, [
-                _vm._v("\n        Components that work in\n        "),
-                _c("b", [_vm._v("React")]),
-                _vm._v(",\n        "),
-                _c("b", [_vm._v("Vue")]),
-                _vm._v(",\n        "),
-                _c("b", [_vm._v("Angular")]),
-                _vm._v(", or any other framwork.\n      ")
-              ]),
-              _vm._v(" "),
               _c(
-                "base-box",
-                { attrs: { "margin-y": "md" } },
+                "base-grid-item",
+                { attrs: { sm: "8", md: "3" } },
                 [
+                  _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
+                    _c("b", [_vm._v("Base Elements")]),
+                    _vm._v(
+                      " is a free collection of essential UI components\n          for any web application\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("base-text", { attrs: { tag: "p", look: "lead" } }, [
+                    _vm._v("\n          Components that work in\n          "),
+                    _c("b", [_vm._v("React")]),
+                    _vm._v(",\n          "),
+                    _c("b", [_vm._v("Vue")]),
+                    _vm._v(",\n          "),
+                    _c("b", [_vm._v("Angular")]),
+                    _vm._v(", or any other framwork.\n        ")
+                  ]),
+                  _vm._v(" "),
                   _c(
-                    "router-link",
-                    {
-                      attrs: {
-                        tag: "base-button",
-                        to: "/installation",
-                        type: "primary"
-                      }
-                    },
-                    [_vm._v("Get Started")]
+                    "base-box",
+                    { attrs: { "margin-y": "md" } },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            tag: "base-button",
+                            to: "/installation",
+                            type: "primary"
+                          }
+                        },
+                        [_vm._v("Get Started")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            tag: "base-button",
+                            to: "/components",
+                            type: "secondary"
+                          }
+                        },
+                        [_vm._v("Components")]
+                      )
+                    ],
+                    1
                   ),
                   _vm._v(" "),
                   _c(
-                    "router-link",
-                    {
-                      attrs: {
-                        tag: "base-button",
-                        to: "/components",
-                        type: "secondary"
-                      }
-                    },
-                    [_vm._v("Components")]
+                    "base-box",
+                    { attrs: { "margin-y": "md" } },
+                    [
+                      _c(
+                        "base-tabs",
+                        {
+                          attrs: { value: _vm.installMethod },
+                          on: {
+                            change: function(e) {
+                              return (_vm.installMethod = e.target.value)
+                            }
+                          }
+                        },
+                        [
+                          _c("base-tab", [_vm._v("NPM")]),
+                          _vm._v(" "),
+                          _c("base-tab", [_vm._v("CDN")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm.installMethod === "NPM"
+                        ? _c("pre", [
+                            _c(
+                              "code",
+                              {
+                                staticClass: "hljs",
+                                attrs: { align: "center" }
+                              },
+                              [_vm._v("npm install --save base-elements")]
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.installMethod === "CDN"
+                        ? _c("pre", [
+                            _c(
+                              "code",
+                              {
+                                staticClass: "hljs",
+                                attrs: { align: "center" }
+                              },
+                              [_vm._v("https://unpkg.com/base-elements")]
+                            )
+                          ])
+                        : _vm._e()
+                    ],
+                    1
                   )
                 ],
                 1
               ),
               _vm._v(" "),
               _c(
-                "base-box",
-                { attrs: { "margin-y": "md" } },
+                "base-grid-item",
+                { attrs: { sm: "8", md: "5" } },
                 [
                   _c(
-                    "base-tabs",
+                    "base-box",
                     {
-                      attrs: { value: _vm.installMethod },
-                      on: {
-                        change: function(e) {
-                          return (_vm.installMethod = e.target.value)
-                        }
+                      attrs: {
+                        depth: "md",
+                        "padding-y": "lg",
+                        "padding-x": "lg"
                       }
                     },
                     [
-                      _c("base-tab", [_vm._v("NPM")]),
+                      _c("base-text", { attrs: { tag: "h2" } }, [
+                        _vm._v("Examples")
+                      ]),
                       _vm._v(" "),
-                      _c("base-tab", [_vm._v("CDN")])
+                      _c(
+                        "base-grid",
+                        { attrs: { columns: "2" } },
+                        [
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c(
+                                "base-select",
+                                { attrs: { placeholder: "Select an option" } },
+                                [
+                                  _c("base-option", {
+                                    attrs: { label: "Option 1" }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("base-option", {
+                                    attrs: { label: "Option 2" }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c("base-checkbox", [_vm._v("Option 1")]),
+                              _vm._v(" "),
+                              _c("base-checkbox", [_vm._v("Option 2")])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c("base-input", {
+                                attrs: {
+                                  full: "",
+                                  placeholder: "Regular input"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c("base-radio", { attrs: { name: "radio" } }, [
+                                _vm._v("Option 1")
+                              ]),
+                              _vm._v(" "),
+                              _c("base-radio", { attrs: { name: "radio" } }, [
+                                _vm._v("Option 2")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c(
+                                "base-select",
+                                {
+                                  attrs: {
+                                    multiple: "",
+                                    placeholder: "Multiple select"
+                                  }
+                                },
+                                [
+                                  _c("base-option", {
+                                    attrs: { selected: "", label: "Option 1" }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("base-option", {
+                                    attrs: { label: "Option 2" }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c(
+                                "base-modal",
+                                {
+                                  attrs: { open: _vm.modalOpen },
+                                  on: {
+                                    toggle: function(e) {
+                                      return (_vm.modalOpen = e.open)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "header",
+                                    {
+                                      attrs: { slot: "header" },
+                                      slot: "header"
+                                    },
+                                    [_vm._v("Title")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", [_vm._v("Content")])
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "base-button",
+                                {
+                                  attrs: { type: "primary" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.modalOpen = true
+                                    }
+                                  }
+                                },
+                                [_vm._v("Show modal")]
+                              ),
+                              _vm._v(" "),
+                              _c("base-toggle", [_vm._v("Toggle")])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "base-grid-item",
+                            { attrs: { sm: "2", md: "1" } },
+                            [
+                              _c(
+                                "base-tabs",
+                                [
+                                  _c("base-tab", { attrs: { selected: "" } }, [
+                                    _vm._v("Tab 1")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("base-tab", [_vm._v("Tab 2")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
-                  ),
-                  _vm._v(" "),
-                  _vm.installMethod === "NPM"
-                    ? _c("pre", [
-                        _c(
-                          "code",
-                          { staticClass: "hljs", attrs: { align: "center" } },
-                          [_vm._v("npm install --save base-elements")]
-                        )
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.installMethod === "CDN"
-                    ? _c("pre", [
-                        _c(
-                          "code",
-                          { staticClass: "hljs", attrs: { align: "center" } },
-                          [_vm._v("https://unpkg.com/base-elements")]
-                        )
-                      ])
-                    : _vm._e()
+                  )
                 ],
                 1
               )
@@ -35765,170 +36011,21 @@ exports.default = _default;
           ),
           _vm._v(" "),
           _c(
-            "base-grid-item",
-            { attrs: { sm: "8", md: "5" } },
+            "base-box",
+            { attrs: { bg: "ui-lightest", full: "", "margin-y": "lg" } },
             [
               _c(
-                "base-box",
-                {
-                  attrs: { depth: "md", "padding-y": "lg", "padding-x": "lg" }
-                },
+                "base-container",
+                { attrs: { size: "lg", center: "" } },
                 [
-                  _c("base-text", { attrs: { tag: "h2" } }, [
-                    _vm._v("Examples")
-                  ]),
-                  _vm._v(" "),
                   _c(
-                    "base-grid",
-                    { attrs: { columns: "2" } },
+                    "base-container",
                     [
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c(
-                            "base-select",
-                            { attrs: { placeholder: "Select an option" } },
-                            [
-                              _c("base-option", {
-                                attrs: { label: "Option 1" }
-                              }),
-                              _vm._v(" "),
-                              _c("base-option", {
-                                attrs: { label: "Option 2" }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
+                      _c("base-text", { attrs: { tag: "h2" } }, [
+                        _vm._v("Why Base Elements?")
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c("base-checkbox", [_vm._v("Option 1")]),
-                          _vm._v(" "),
-                          _c("base-checkbox", [_vm._v("Option 2")])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c("base-input", {
-                            attrs: { full: "", placeholder: "Regular input" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c("base-radio", { attrs: { name: "radio" } }, [
-                            _vm._v("Option 1")
-                          ]),
-                          _vm._v(" "),
-                          _c("base-radio", { attrs: { name: "radio" } }, [
-                            _vm._v("Option 2")
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c(
-                            "base-select",
-                            {
-                              attrs: {
-                                multiple: "",
-                                placeholder: "Multiple select"
-                              }
-                            },
-                            [
-                              _c("base-option", {
-                                attrs: { selected: "", label: "Option 1" }
-                              }),
-                              _vm._v(" "),
-                              _c("base-option", {
-                                attrs: { label: "Option 2" }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c(
-                            "base-modal",
-                            {
-                              attrs: { open: _vm.modalOpen },
-                              on: {
-                                toggle: function(e) {
-                                  return (_vm.modalOpen = e.open)
-                                }
-                              }
-                            },
-                            [
-                              _c(
-                                "header",
-                                { attrs: { slot: "header" }, slot: "header" },
-                                [_vm._v("Title")]
-                              ),
-                              _vm._v(" "),
-                              _c("div", [_vm._v("Content")])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "base-button",
-                            {
-                              attrs: { type: "primary" },
-                              on: {
-                                click: function($event) {
-                                  _vm.modalOpen = true
-                                }
-                              }
-                            },
-                            [_vm._v("Show modal")]
-                          ),
-                          _vm._v(" "),
-                          _c("base-toggle", [_vm._v("Toggle")])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "base-grid-item",
-                        { attrs: { sm: "2", md: "1" } },
-                        [
-                          _c(
-                            "base-tabs",
-                            [
-                              _c("base-tab", { attrs: { selected: "" } }, [
-                                _vm._v("Tab 1")
-                              ]),
-                              _vm._v(" "),
-                              _c("base-tab", [_vm._v("Tab 2")])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
+                      _c("base-text", [_vm._v("Because")])
                     ],
                     1
                   )
@@ -35985,7 +36082,7 @@ module.exports = {
     "name": "Box",
     "desc": "A general purpose box with padding, border, depth and more",
     "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
