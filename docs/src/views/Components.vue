@@ -2,7 +2,7 @@
   <Page>
     <div class="components">
       <base-container size="sm">
-        <base-text tag="h1" weight="700" full>Components</base-text>
+        <base-text tag="h1" weight="700">Components</base-text>
         <base-text type="lead">
           The library consists of only a few
           <b>essential UI components</b> that work across all frameworks. They are
