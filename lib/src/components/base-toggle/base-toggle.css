@@ -6,7 +6,7 @@
     var(--base-toggle-box-size) - (var(--base-toggle-indicator-margin) * 2)
   );
   --base-toggle-icon-size: calc(var(--base-toggle-indicator-size) * 0.8);
-  vertical-align: top;
+  vertical-align: middle;
   cursor: pointer;
   display: inline-flex;
   align-items: center;

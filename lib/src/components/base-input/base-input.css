@@ -8,7 +8,7 @@
 }
 
 :host {
-  vertical-align: top;
+  vertical-align: middle;
   min-width: 200px;
   display: inline-block;
 }
