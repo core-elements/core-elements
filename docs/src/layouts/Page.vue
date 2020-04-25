@@ -1,5 +1,5 @@
 <template>
-  <base-box padding-x="sm">
+  <base-box padding-x="md">
     <base-container center size="lg">
       <base-flex wrap="wrap">
         <slot></slot>
