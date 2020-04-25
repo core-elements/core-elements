@@ -131,3 +131,13 @@
 :host([outline]):not([type]) {
   color: var(--base-color-black);
 }
+
+::slotted([slot="prepend"]) {
+  vertical-align: text-bottom;
+  margin-right: var(--base-space-sm);
+}
+
+::slotted([slot="append"]) {
+  vertical-align: text-bottom;
+  margin-left: var(--base-space-sm);
+}

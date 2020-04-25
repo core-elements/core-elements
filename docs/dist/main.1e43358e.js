@@ -20923,7 +20923,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var styles = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);vertical-align:middle;margin-bottom:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary-hover)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary);color:var(--base-color-primary)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary-hover)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success-hover)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger-hover)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}`;
+  var styles = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);vertical-align:middle;margin-bottom:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary-hover)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary);color:var(--base-color-primary)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary-hover)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success-hover)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger-hover)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}::slotted([slot=prepend]){vertical-align:text-bottom;margin-right:var(--base-space-sm)}::slotted([slot=append]){vertical-align:text-bottom;margin-left:var(--base-space-sm)}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}:host([hidden]){display:none}*,:after,:before{box-sizing:inherit}`;
 
   class BaseButton extends LitElement {
@@ -20979,7 +20979,13 @@ var global = arguments[3];
     }
 
     render() {
-      return html` <button><slot></slot></button> `;
+      return html`
+      <button part="button">
+        <slot name="prepend" part="prepend"></slot>
+        <slot></slot>
+        <slot name="append" part="append"></slot>
+      </button>
+    `;
     }
 
   }
@@ -22493,7 +22499,11 @@ var global = arguments[3];
     customElements.define("base-textarea", BaseTextArea);
   }
 
-  var styles$c = css`:host{--base-tab-box-shadow:0 0;display:inline-block}:host([full]){display:block;width:100%}button{border:0;color:var(--base-color-font-light);font-size:var(--base-font-size-sm);background:0;box-shadow:var(--base-tab-box-shadow);outline:0;padding:0 var(--base-space-sm);margin-right:var(--base-space-sm);height:var(--base-size-md);border-bottom:2px solid transparent}button:focus,button:hover{border-bottom:2px solid var(--base-color-ui-light)}:host([selected]) button,button:focus{color:var(--base-color-font-dark)}:host([selected]) button{border-bottom:2px solid var(--base-color-focus)}`;
+  var styles$c = css`:host{--base-tab-box-shadow:0 0;display:-webkit-inline-box;display:inline-flex}:host([full]){display:-webkit-box;display:flex;width:100%}button{border:0;color:var(--base-color-font-light);font-size:var(--base-font-size-sm);background:0;box-shadow:var(--base-tab-box-shadow);outline:0;padding:0 var(--base-space-sm);margin-right:var(--base-space-sm);height:var(--base-size-md);border-bottom:2px solid transparent}button:focus,button:hover{border-bottom:2px solid var(--base-color-ui-light)}:host([selected]) button,button:focus{color:var(--base-color-font-dark)}:host([selected]) button{border-bottom:2px solid var(--base-color-focus)}`;
+
+  function getTabValue(tab) {
+    return tab.value || tab.getAttribute("value") || tab.innerText;
+  }
 
   class BaseTabs extends LitElement {
     constructor() {
@@ -22516,13 +22526,11 @@ var global = arguments[3];
     }
 
     _handleClick(e) {
-      if (e.target.tagName === "BASE-TAB") {
-        this.value = e.target.value;
-      }
+      this.value = getTabValue(e.target);
     }
 
     get tabElements() {
-      return [...this.querySelectorAll("base-tab")];
+      return [...this.children];
     }
 
     get selectedTab() {
@@ -22537,13 +22545,13 @@ var global = arguments[3];
       this._value = val;
 
       if (this.selectedTab) {
-        this.selectedTab.selected = false;
+        this.selectedTab.removeAttribute("selected");
       }
 
-      const newSelectedTab = this.tabElements.find(tab => tab.value === val);
+      const newSelectedTab = this.tabElements.find(tab => getTabValue(tab) === val);
 
       if (newSelectedTab) {
-        newSelectedTab.selected = true;
+        newSelectedTab.setAttribute("selected", "");
       }
 
       this.dispatchEvent(new CustomEvent("change"));
@@ -36088,7 +36096,7 @@ module.exports = {
     "name": "Button",
     "desc": "A general button element",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
@@ -36126,17 +36134,17 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "desc": "Radio button",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "desc": "Radio button",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
@@ -36144,29 +36152,29 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No options</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-tabs/base-tabs.md",
-    "name": "Tabs",
-    "desc": "Tabs for things",
-    "category": "Navigation",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab value=\"1\" selected>Tab 1</base-tab>\n  <base-tab value=\"2\">Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",
     "desc": "A general purpose text element",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-toggle/base-toggle.md",
-    "name": "Toggle",
-    "desc": "A general toggle element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-tabs/base-tabs.md",
+    "name": "Tabs",
+    "desc": "Tabs for things",
+    "category": "Navigation",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With buttons\n\nAny child you put inside `base-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `base-tab` as children, and style them accordingly.\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<style>\nbase-tabs base-button[selected]::part(button),\nbase-tabs base-button[selected]::part(button):hover {\n  --base-button-bg-color: var(--base-color-primary);\n  --base-button-text-color: var(--base-color-white);\n}\n</style>\n<base-tabs>\n  <base-button selected>Tab 1</base-button>\n  <base-button>Tab 2</base-button>\n  <base-button>Tab 3</base-button>\n</base-tabs>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-textarea/base-textarea.md",
     "name": "Text Area",
     "desc": "A general purpose text element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-textarea\">\n<base-textarea></base-textarea>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-toggle/base-toggle.md",
+    "name": "Toggle",
+    "desc": "A general toggle element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -62196,7 +62204,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61208" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58441" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -12,7 +12,7 @@
       "name": "Button",
       "desc": "A general button element",
       "category": "Elements",
-      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-checkbox/base-checkbox.md",
@@ -57,18 +57,18 @@
       "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-radio/base-radio.md",
-      "name": "Radio",
-      "desc": "Radio button",
-      "category": "Form",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-modal/base-modal.md",
       "name": "Modal",
       "desc": "A modal",
       "category": "Elements",
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-radio/base-radio.md",
+      "name": "Radio",
+      "desc": "Radio button",
+      "category": "Form",
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-select/base-select.md",
@@ -78,13 +78,6 @@
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No options</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-tabs/base-tabs.md",
-      "name": "Tabs",
-      "desc": "Tabs for things",
-      "category": "Navigation",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab value=\"1\" selected>Tab 1</base-tab>\n  <base-tab value=\"2\">Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/base-text/base-text.md",
       "name": "Text",
       "desc": "A general purpose text element",
@@ -92,11 +85,11 @@
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
     },
     {
-      "path": "../lib/src/components/base-toggle/base-toggle.md",
-      "name": "Toggle",
-      "desc": "A general toggle element",
-      "category": "Form",
-      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
+      "path": "../lib/src/components/base-tabs/base-tabs.md",
+      "name": "Tabs",
+      "desc": "Tabs for things",
+      "category": "Navigation",
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With buttons\n\nAny child you put inside `base-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `base-tab` as children, and style them accordingly.\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<style>\nbase-tabs base-button[selected]::part(button),\nbase-tabs base-button[selected]::part(button):hover {\n  --base-button-bg-color: var(--base-color-primary);\n  --base-button-text-color: var(--base-color-white);\n}\n</style>\n<base-tabs>\n  <base-button selected>Tab 1</base-button>\n  <base-button>Tab 2</base-button>\n  <base-button>Tab 3</base-button>\n</base-tabs>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-textarea/base-textarea.md",
@@ -104,6 +97,13 @@
       "desc": "A general purpose text element",
       "category": "Form",
       "content": "\n<base-knobs src=\"./components.json\" name=\"base-textarea\">\n<base-textarea></base-textarea>\n</base-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/base-toggle/base-toggle.md",
+      "name": "Toggle",
+      "desc": "A general toggle element",
+      "category": "Form",
+      "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
     }
   ]
 }

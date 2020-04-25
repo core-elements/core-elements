@@ -33,6 +33,23 @@ category: Elements
 <base-button full>Full</base-button>
 </base-knobs>
 
+## With icons
+
+<base-knobs hideTabs src="./components.json" name="base-button">
+<base-button>
+  <ion-icon slot="prepend" name="person-outline"></ion-icon>
+  Full
+</base-button>
+<base-button>
+  <ion-icon slot="append" name="people-outline"></ion-icon>
+  Full
+</base-button>
+<base-button>
+  <ion-icon slot="append" name="people-outline"></ion-icon>
+  Full
+</base-button>
+</base-knobs>
+
 ## Outline
 
 <base-knobs hideTabs src="./components.json" name="base-button">

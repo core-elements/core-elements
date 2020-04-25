@@ -3,11 +3,11 @@
 }
 
 :host {
-  display: inline-block;
+  display: inline-flex;
 }
 
 :host([full]) {
-  display: block;
+  display: flex;
   width: 100%;
 }
 

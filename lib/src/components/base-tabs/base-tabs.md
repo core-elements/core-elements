@@ -6,7 +6,27 @@ category: Navigation
 
 <base-knobs src="./components.json" name="base-tabs">
 <base-tabs>
-  <base-tab value="1" selected>Tab 1</base-tab>
-  <base-tab value="2">Tab 2</base-tab>
+  <base-tab selected>Tab 1</base-tab>
+  <base-tab>Tab 2</base-tab>
+</base-tabs>
+</base-knobs>
+
+## With buttons
+
+Any child you put inside `base-tabs` will get the `selected` attribute when you click on it.
+This means you can also use other elements than the `base-tab` as children, and style them accordingly.
+
+<base-knobs src="./components.json" name="base-tabs">
+<style>
+base-tabs base-button[selected]::part(button),
+base-tabs base-button[selected]::part(button):hover {
+  --base-button-bg-color: var(--base-color-primary);
+  --base-button-text-color: var(--base-color-white);
+}
+</style>
+<base-tabs>
+  <base-button selected>Tab 1</base-button>
+  <base-button>Tab 2</base-button>
+  <base-button>Tab 3</base-button>
 </base-tabs>
 </base-knobs>
