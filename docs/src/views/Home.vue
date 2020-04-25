@@ -14,7 +14,7 @@
             <b>Angular</b>, or any other framwork.
           </base-text>
           <base-box margin-y="md">
-            <router-link tag="base-button" to="/installation" type="primary">Get Started</router-link>
+            <router-link tag="base-button" to="/getting-started" type="primary">Get Started</router-link>
             <router-link tag="base-button" to="/components" type="secondary">Components</router-link>
           </base-box>
           <base-box margin-y="md">

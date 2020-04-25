@@ -10,7 +10,6 @@ import App from "./App.vue";
 import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
-import Installation from "./views/Installation";
 import GettingStarted from "./views/GettingStarted";
 
 Vue.config.ignoredElements = [/base-\w*/];
@@ -38,11 +37,6 @@ const router = new Router({
       path: "/components/:element",
       component: Component,
       meta: { title: "Select component", hasSidebar: true },
-    },
-    {
-      path: "/installation",
-      component: Installation,
-      meta: { title: "Installation", showInHeader: true, hasSidebar: false },
     },
     {
       path: "/getting-started",

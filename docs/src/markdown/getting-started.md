@@ -1,53 +1,53 @@
 # Getting Started
 
-## Why?
+## Introduction
 
-Normal CSS frameworks will often come with quite a lot of boilerplate. Let's take an input example from Bootstrap:
+Standard HTML elements like `checkbox` and `select` are notoriously difficult to style and does not provide enough customizablility to be sufficient for more than basic web pages.
 
-<base-knobs hideTabs>
-<label for="validation">Username</label>
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="prepend-username">@</span>
-  </div>
-  <input
-    type="text"
-    class="form-control"
-    id="validation"
-    aria-describedby="prepend-username"
-    required
-  />
-  <div class="invalid-feedback">Please choose a username.</div>
+Base Elements is a collection of common, general-purpose UI elements such as lists, menus, modals, multi-select, and so on. The elements are easy to style and customize for your needs.
+
+## Installation
+
+<base-tabs>
+  <base-tab value="cdntab" selected>CDN</base-tab>
+  <base-tab value="npmtab">NPM</base-tab>
+</base-tabs>
+
+<div id="cdntab">
+
+### CDN
+
+Create an `index.html` file and load the components with the CDN at the end of `<body>`:
+
+```html
+<script src="https://unpkg.com/base-elements"></script>
+```
+
+That's it. Now you're ready to use the elements.
+
 </div>
 
-<script>
+<div id="npmtab">
 
-  const input = document.querySelector("#validation");
+### NPM
 
-  input.addEventListener('input', (e) => {
-    const isValid = e.target.checkValidity();
-    if (isValid) {
-      input.classList.remove('is-invalid');
-    } else {
-      input.classList.add('is-invalid');
-    }
-  });
-</script>
+Run this command in the root of your project:
 
-</base-knobs>
+```js
+npm install --save base-elements
 
-Compare this to a **BaseElement** where we can provide the attribute `autovalidate` and make the input element validate itself based on the normal validation rules of an input element (using `pattern` for example).
+```
 
-If you want you can still toggle the `valid` or `invalid` attribute on the input field to control the validation yourself.
+Then import all the components:
 
-<base-knobs hideTabs>
-<base-label for="validation-2">Username</base-label>
-<base-input id="validation-2" aria-describedby="prepend-username" required autovalidate>
-  <span slot="prepend" id="prepend-username">@</span>
-  <div slot="error">Please choose a username.</div>
-</base-input>
-</base-knobs>
+```js
+import * from "base-elements";
+```
 
-## How it Works
+or individual component:
 
-Let's take the grid-wrapper as an example:
+```js
+import { BaseButton } from "base-elements";
+```
+
+</div>

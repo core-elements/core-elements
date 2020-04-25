@@ -1,38 +1,29 @@
 <h1 id="getting-started">Getting Started</h1>
-<h2 id="why">Why?</h2>
-<p>Normal CSS frameworks will often come with quite a lot of boilerplate. Let&#39;s take an input example from Bootstrap:</p>
-<base-knobs hideTabs="">
-<label for="validation">Username</label>
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="prepend-username">@</span>
-  </div>
-  <input type="text" class="form-control" id="validation" aria-describedby="prepend-username" required="">
-  <div class="invalid-feedback">Please choose a username.</div>
+<h2 id="introduction">Introduction</h2>
+<p>Standard HTML elements like <code>checkbox</code> and <code>select</code> are notoriously difficult to style and does not provide enough customizablility to be sufficient for more than basic web pages.</p>
+<p>Base Elements is a collection of common, general-purpose UI elements such as lists, menus, modals, multi-select, and so on. The elements are easy to style and customize for your needs.</p>
+<h2 id="installation">Installation</h2>
+<base-tabs>
+  <base-tab value="cdntab" selected="">CDN</base-tab>
+  <base-tab value="npmtab">NPM</base-tab>
+</base-tabs>
+
+<div id="cdntab">
+
+<h3 id="cdn">CDN</h3>
+<p>Create an <code>index.html</code> file and load the components with the CDN at the end of <code>&lt;body&gt;</code>:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/base-elements&quot;&gt;&lt;/script&gt;</code></pre>
+<p>That&#39;s it. Now you&#39;re ready to use the elements.</p>
 </div>
 
-<script>const input = document.querySelector("#validation");
-input.addEventListener('input', e => {
-  const isValid = e.target.checkValidity();
+<div id="npmtab">
 
-  if (isValid) {
-    input.classList.remove('is-invalid');
-  } else {
-    input.classList.add('is-invalid');
-  }
-});</script>
-
-</base-knobs>
-
-<p>Compare this to a <strong>BaseElement</strong> where we can provide the attribute <code>autovalidate</code> and make the input element validate itself based on the normal validation rules of an input element (using <code>pattern</code> for example).</p>
-<p>If you want you can still toggle the <code>valid</code> or <code>invalid</code> attribute on the input field to control the validation yourself.</p>
-<base-knobs hideTabs="">
-<base-label for="validation-2">Username</base-label>
-<base-input id="validation-2" aria-describedby="prepend-username" required="" autovalidate="">
-  <span slot="prepend" id="prepend-username">@</span>
-  <div slot="error">Please choose a username.</div>
-</base-input>
-</base-knobs>
-
-<h2 id="how-it-works">How it Works</h2>
-<p>Let&#39;s take the grid-wrapper as an example:</p>
+<h3 id="npm">NPM</h3>
+<p>Run this command in the root of your project:</p>
+<pre><code class="language-js">npm install --save base-elements
+</code></pre>
+<p>Then import all the components:</p>
+<pre><code class="language-js">import * from &quot;base-elements&quot;;</code></pre>
+<p>or individual component:</p>
+<pre><code class="language-js">import { BaseButton } from &quot;base-elements&quot;;</code></pre>
+</div>

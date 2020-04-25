@@ -22061,7 +22061,7 @@ var global = arguments[3];
     customElements.define("base-box", BaseBox);
   }
 
-  var styles$7 = css`:host{display:-webkit-box;display:flex}:host([wrap]){flex-wrap:wrap}:host([justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([justify=around]){justify-content:space-around}:host([justify=center]){-webkit-box-pack:center;justify-content:center}:host([justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([align=center]){-webkit-box-align:center;align-items:center}:host([align=start]){-webkit-box-align:start;align-items:flex-start}:host([align=end]){-webkit-box-align:end;align-items:flex-end}:host([direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}@media(min-width:600px){:host([sm-wrap]){flex-wrap:wrap}:host([sm-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([sm-justify=around]){justify-content:space-around}:host([sm-justify=center]){-webkit-box-pack:center;justify-content:center}:host([sm-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([sm-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([sm-align=center]){-webkit-box-align:center;align-items:center}:host([sm-align=start]){-webkit-box-align:start;align-items:flex-start}:host([sm-align=end]){-webkit-box-align:end;align-items:flex-end}:host([sm-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([sm-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([sm-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([sm-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1280px){:host([md-wrap]){flex-wrap:wrap}:host([md-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([md-justify=around]){justify-content:space-around}:host([md-justify=center]){-webkit-box-pack:center;justify-content:center}:host([md-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([md-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([md-align=center]){-webkit-box-align:center;align-items:center}:host([md-align=start]){-webkit-box-align:start;align-items:flex-start}:host([md-align=end]){-webkit-box-align:end;align-items:flex-end}:host([md-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([md-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([md-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([md-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1400px){:host([lg-wrap]){flex-wrap:wrap}:host([lg-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([lg-justify=around]){justify-content:space-around}:host([lg-justify=center]){-webkit-box-pack:center;justify-content:center}:host([lg-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([lg-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([lg-align=center]){-webkit-box-align:center;align-items:center}:host([lg-align=start]){-webkit-box-align:start;align-items:flex-start}:host([lg-align=end]){-webkit-box-align:end;align-items:flex-end}:host([lg-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([lg-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([lg-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([lg-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}`;
+  var styles$7 = css`:host{width:100%;display:-webkit-box;display:flex}:host([wrap]){flex-wrap:wrap}:host([justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([justify=around]){justify-content:space-around}:host([justify=center]){-webkit-box-pack:center;justify-content:center}:host([justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([align=center]){-webkit-box-align:center;align-items:center}:host([align=start]){-webkit-box-align:start;align-items:flex-start}:host([align=end]){-webkit-box-align:end;align-items:flex-end}:host([direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}@media(min-width:600px){:host([sm-wrap]){flex-wrap:wrap}:host([sm-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([sm-justify=around]){justify-content:space-around}:host([sm-justify=center]){-webkit-box-pack:center;justify-content:center}:host([sm-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([sm-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([sm-align=center]){-webkit-box-align:center;align-items:center}:host([sm-align=start]){-webkit-box-align:start;align-items:flex-start}:host([sm-align=end]){-webkit-box-align:end;align-items:flex-end}:host([sm-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([sm-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([sm-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([sm-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1280px){:host([md-wrap]){flex-wrap:wrap}:host([md-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([md-justify=around]){justify-content:space-around}:host([md-justify=center]){-webkit-box-pack:center;justify-content:center}:host([md-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([md-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([md-align=center]){-webkit-box-align:center;align-items:center}:host([md-align=start]){-webkit-box-align:start;align-items:flex-start}:host([md-align=end]){-webkit-box-align:end;align-items:flex-end}:host([md-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([md-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([md-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([md-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1400px){:host([lg-wrap]){flex-wrap:wrap}:host([lg-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([lg-justify=around]){justify-content:space-around}:host([lg-justify=center]){-webkit-box-pack:center;justify-content:center}:host([lg-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([lg-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([lg-align=center]){-webkit-box-align:center;align-items:center}:host([lg-align=start]){-webkit-box-align:start;align-items:flex-start}:host([lg-align=end]){-webkit-box-align:end;align-items:flex-end}:host([lg-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([lg-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([lg-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([lg-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}`;
 
   class BaseFlex extends LitElement {
     constructor() {
@@ -22391,7 +22391,6 @@ var global = arguments[3];
     constructor() {
       super();
       this.checked = false;
-      this.loading = false;
       this.full = false;
       /**
        * Toggle size
@@ -22401,16 +22400,15 @@ var global = arguments[3];
 
       this.size = "";
       this.value = "";
+      this._checked = false;
       this._handleChange = this._handleChange.bind(this);
     }
 
     static get properties() {
       return {
         checked: {
-          type: Boolean
-        },
-        loading: {
-          type: Boolean
+          type: Boolean,
+          reflect: true
         },
         value: {
           type: String
@@ -22424,6 +22422,27 @@ var global = arguments[3];
       };
     }
 
+    get inputEl() {
+      return this.shadowRoot.querySelector("input");
+    }
+
+    get checked() {
+      return this._checked;
+    }
+
+    set checked(checked) {
+      if (this._checked === checked) return;
+      if (checked) this.setAttribute("checked", "");else this.removeAttribute("checked");
+      this._checked = checked;
+
+      if (this.inputEl) {
+        this.inputEl.checked = checked;
+      }
+
+      this.dispatchEvent(new CustomEvent("change"));
+      this.requestUpdate();
+    }
+
     static get styles() {
       return [styles$a, sharedStyles];
     }
@@ -22431,7 +22450,6 @@ var global = arguments[3];
     _handleChange(e) {
       e.stopPropagation();
       this.checked = e.target.checked;
-      this.dispatchEvent(new CustomEvent("change", e));
     }
 
     render() {
@@ -22515,7 +22533,8 @@ var global = arguments[3];
     static get properties() {
       return {
         value: {
-          type: String
+          type: String,
+          reflect: "true"
         }
       };
     }
@@ -22542,7 +22561,9 @@ var global = arguments[3];
     }
 
     set value(val) {
+      if (this._value === val) return;
       this._value = val;
+      this.setAttribute("value", val);
 
       if (this.selectedTab) {
         this.selectedTab.removeAttribute("selected");
@@ -35169,11 +35190,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35322,20 +35338,6 @@ exports.default = _default;
                           "router-link",
                           {
                             staticClass: "header__nav-item",
-                            attrs: { to: "/installation" },
-                            nativeOn: {
-                              click: function($event) {
-                                _vm.showMenu = false
-                              }
-                            }
-                          },
-                          [_vm._v("Installation")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "header__nav-item",
                             attrs: { to: "/getting-started" },
                             nativeOn: {
                               click: function($event) {
@@ -35457,6 +35459,7 @@ var _default = {
 
   data() {
     return {
+      checked: false,
       showSidebar: false
     };
   }
@@ -35754,7 +35757,7 @@ exports.default = _default;
                         {
                           attrs: {
                             tag: "base-button",
-                            to: "/installation",
+                            to: "/getting-started",
                             type: "primary"
                           }
                         },
@@ -36092,17 +36095,17 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-button/base-button.md",
-    "name": "Button",
-    "desc": "A general button element",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
     "desc": "A checkbox element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-button/base-button.md",
+    "name": "Button",
+    "desc": "A general button element",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
@@ -36110,23 +36113,17 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "Input",
-    "desc": "A input element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
     "desc": "Grid system elements",
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "desc": "An element to limit the width of your content",
-    "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "Input",
+    "desc": "A input element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
@@ -36146,17 +36143,23 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n base-radio [slot=\"indicator\"] {\n   opacity: 0;\n }\n base-radio:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n base-radio[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-text/base-text.md",
+    "name": "Text",
+    "desc": "A general purpose text element",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
     "desc": "Element with option for multiselect, search and more",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No options</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select multiple>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-text/base-text.md",
-    "name": "Text",
-    "desc": "A general purpose text element",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "desc": "An element to limit the width of your content",
+    "category": "Layout",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-tabs/base-tabs.md",
     "name": "Tabs",
@@ -36420,373 +36423,1291 @@ render._withStripped = true
       
       }
     })();
-},{"../layouts/Page":"src/layouts/Page.vue","../db.json":"src/db.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/marked/lib/marked.js":[function(require,module,exports) {
-var define;
-var global = arguments[3];
-/**
- * marked - a markdown parser
- * Copyright (c) 2011-2018, Christopher Jeffrey. (MIT Licensed)
- * https://github.com/markedjs/marked
- */
-;
-
-(function (root) {
-  'use strict';
-  /**
-   * Block-Level Grammar
-   */
-
-  var block = {
-    newline: /^\n+/,
-    code: /^( {4}[^\n]+\n*)+/,
-    fences: noop,
-    hr: /^ {0,3}((?:- *){3,}|(?:_ *){3,}|(?:\* *){3,})(?:\n+|$)/,
-    heading: /^ *(#{1,6}) *([^\n]+?) *(?:#+ *)?(?:\n+|$)/,
-    nptable: noop,
-    blockquote: /^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,
-    list: /^( {0,3})(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,
-    html: '^ {0,3}(?:' // optional indentation
-    + '<(script|pre|style)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)' // (1)
-    + '|comment[^\\n]*(\\n+|$)' // (2)
-    + '|<\\?[\\s\\S]*?\\?>\\n*' // (3)
-    + '|<![A-Z][\\s\\S]*?>\\n*' // (4)
-    + '|<!\\[CDATA\\[[\\s\\S]*?\\]\\]>\\n*' // (5)
-    + '|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:\\n{2,}|$)' // (6)
-    + '|<(?!script|pre|style)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) open tag
-    + '|</(?!script|pre|style)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) closing tag
-    + ')',
-    def: /^ {0,3}\[(label)\]: *\n? *<?([^\s>]+)>?(?:(?: +\n? *| *\n *)(title))? *(?:\n+|$)/,
-    table: noop,
-    lheading: /^([^\n]+)\n {0,3}(=|-){2,} *(?:\n+|$)/,
-    paragraph: /^([^\n]+(?:\n(?!hr|heading|lheading| {0,3}>|<\/?(?:tag)(?: +|\n|\/?>)|<(?:script|pre|style|!--))[^\n]+)*)/,
-    text: /^[^\n]+/
+},{"../layouts/Page":"src/layouts/Page.vue","../db.json":"src/db.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/marked/src/defaults.js":[function(require,module,exports) {
+function getDefaults() {
+  return {
+    baseUrl: null,
+    breaks: false,
+    gfm: true,
+    headerIds: true,
+    headerPrefix: '',
+    highlight: null,
+    langPrefix: 'language-',
+    mangle: true,
+    pedantic: false,
+    renderer: null,
+    sanitize: false,
+    sanitizer: null,
+    silent: false,
+    smartLists: false,
+    smartypants: false,
+    tokenizer: null,
+    xhtml: false
   };
-  block._label = /(?!\s*\])(?:\\[\[\]]|[^\[\]])+/;
-  block._title = /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/;
-  block.def = edit(block.def).replace('label', block._label).replace('title', block._title).getRegex();
-  block.bullet = /(?:[*+-]|\d{1,9}\.)/;
-  block.item = /^( *)(bull) ?[^\n]*(?:\n(?!\1bull ?)[^\n]*)*/;
-  block.item = edit(block.item, 'gm').replace(/bull/g, block.bullet).getRegex();
-  block.list = edit(block.list).replace(/bull/g, block.bullet).replace('hr', '\\n+(?=\\1?(?:(?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$))').replace('def', '\\n+(?=' + block.def.source + ')').getRegex();
-  block._tag = 'address|article|aside|base|basefont|blockquote|body|caption' + '|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption' + '|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe' + '|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option' + '|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr' + '|track|ul';
-  block._comment = /<!--(?!-?>)[\s\S]*?-->/;
-  block.html = edit(block.html, 'i').replace('comment', block._comment).replace('tag', block._tag).replace('attribute', / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex();
-  block.paragraph = edit(block.paragraph).replace('hr', block.hr).replace('heading', block.heading).replace('lheading', block.lheading).replace('tag', block._tag) // pars can be interrupted by type (6) html blocks
-  .getRegex();
-  block.blockquote = edit(block.blockquote).replace('paragraph', block.paragraph).getRegex();
-  /**
-   * Normal Block Grammar
-   */
+}
 
-  block.normal = merge({}, block);
-  /**
-   * GFM Block Grammar
-   */
+function changeDefaults(newDefaults) {
+  module.exports.defaults = newDefaults;
+}
 
-  block.gfm = merge({}, block.normal, {
-    fences: /^ {0,3}(`{3,}|~{3,})([^`\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[~`]* *(?:\n+|$)|$)/,
-    paragraph: /^/,
-    heading: /^ *(#{1,6}) +([^\n]+?) *#* *(?:\n+|$)/
+module.exports = {
+  defaults: getDefaults(),
+  getDefaults,
+  changeDefaults
+};
+},{}],"node_modules/marked/src/helpers.js":[function(require,module,exports) {
+/**
+ * Helpers
+ */
+const escapeTest = /[&<>"']/;
+const escapeReplace = /[&<>"']/g;
+const escapeTestNoEncode = /[<>"']|&(?!#?\w+;)/;
+const escapeReplaceNoEncode = /[<>"']|&(?!#?\w+;)/g;
+const escapeReplacements = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;'
+};
+
+const getEscapeReplacement = ch => escapeReplacements[ch];
+
+function escape(html, encode) {
+  if (encode) {
+    if (escapeTest.test(html)) {
+      return html.replace(escapeReplace, getEscapeReplacement);
+    }
+  } else {
+    if (escapeTestNoEncode.test(html)) {
+      return html.replace(escapeReplaceNoEncode, getEscapeReplacement);
+    }
+  }
+
+  return html;
+}
+
+const unescapeTest = /&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig;
+
+function unescape(html) {
+  // explicitly match decimal, hex, and named HTML entities
+  return html.replace(unescapeTest, (_, n) => {
+    n = n.toLowerCase();
+    if (n === 'colon') return ':';
+
+    if (n.charAt(0) === '#') {
+      return n.charAt(1) === 'x' ? String.fromCharCode(parseInt(n.substring(2), 16)) : String.fromCharCode(+n.substring(1));
+    }
+
+    return '';
   });
-  block.gfm.paragraph = edit(block.paragraph).replace('(?!', '(?!' + block.gfm.fences.source.replace('\\1', '\\2') + '|' + block.list.source.replace('\\1', '\\3') + '|').getRegex();
-  /**
-   * GFM + Tables Block Grammar
-   */
+}
 
-  block.tables = merge({}, block.gfm, {
-    nptable: /^ *([^|\n ].*\|.*)\n *([-:]+ *\|[-| :]*)(?:\n((?:.*[^>\n ].*(?:\n|$))*)\n*|$)/,
-    table: /^ *\|(.+)\n *\|?( *[-:]+[-| :]*)(?:\n((?: *[^>\n ].*(?:\n|$))*)\n*|$)/
-  });
-  /**
-   * Pedantic grammar
-   */
+const caret = /(^|[^\[])\^/g;
 
-  block.pedantic = merge({}, block.normal, {
-    html: edit('^ *(?:comment *(?:\\n|\\s*$)' + '|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)' // closed tag
-    + '|<tag(?:"[^"]*"|\'[^\']*\'|\\s[^\'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))').replace('comment', block._comment).replace(/tag/g, '(?!(?:' + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub' + '|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)' + '\\b)\\w+(?!:|[^\\w\\s@]*@)\\b').getRegex(),
-    def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/
-  });
-  /**
-   * Block Lexer
-   */
+function edit(regex, opt) {
+  regex = regex.source || regex;
+  opt = opt || '';
+  const obj = {
+    replace: (name, val) => {
+      val = val.source || val;
+      val = val.replace(caret, '$1');
+      regex = regex.replace(name, val);
+      return obj;
+    },
+    getRegex: () => {
+      return new RegExp(regex, opt);
+    }
+  };
+  return obj;
+}
 
-  function Lexer(options) {
-    this.tokens = [];
-    this.tokens.links = Object.create(null);
-    this.options = options || marked.defaults;
-    this.rules = block.normal;
+const nonWordAndColonTest = /[^\w:]/g;
+const originIndependentUrl = /^$|^[a-z][a-z0-9+.-]*:|^[?#]/i;
 
-    if (this.options.pedantic) {
-      this.rules = block.pedantic;
-    } else if (this.options.gfm) {
-      if (this.options.tables) {
-        this.rules = block.tables;
-      } else {
-        this.rules = block.gfm;
+function cleanUrl(sanitize, base, href) {
+  if (sanitize) {
+    let prot;
+
+    try {
+      prot = decodeURIComponent(unescape(href)).replace(nonWordAndColonTest, '').toLowerCase();
+    } catch (e) {
+      return null;
+    }
+
+    if (prot.indexOf('javascript:') === 0 || prot.indexOf('vbscript:') === 0 || prot.indexOf('data:') === 0) {
+      return null;
+    }
+  }
+
+  if (base && !originIndependentUrl.test(href)) {
+    href = resolveUrl(base, href);
+  }
+
+  try {
+    href = encodeURI(href).replace(/%25/g, '%');
+  } catch (e) {
+    return null;
+  }
+
+  return href;
+}
+
+const baseUrls = {};
+const justDomain = /^[^:]+:\/*[^/]*$/;
+const protocol = /^([^:]+:)[\s\S]*$/;
+const domain = /^([^:]+:\/*[^/]*)[\s\S]*$/;
+
+function resolveUrl(base, href) {
+  if (!baseUrls[' ' + base]) {
+    // we can ignore everything in base after the last slash of its path component,
+    // but we might need to add _that_
+    // https://tools.ietf.org/html/rfc3986#section-3
+    if (justDomain.test(base)) {
+      baseUrls[' ' + base] = base + '/';
+    } else {
+      baseUrls[' ' + base] = rtrim(base, '/', true);
+    }
+  }
+
+  base = baseUrls[' ' + base];
+  const relativeBase = base.indexOf(':') === -1;
+
+  if (href.substring(0, 2) === '//') {
+    if (relativeBase) {
+      return href;
+    }
+
+    return base.replace(protocol, '$1') + href;
+  } else if (href.charAt(0) === '/') {
+    if (relativeBase) {
+      return href;
+    }
+
+    return base.replace(domain, '$1') + href;
+  } else {
+    return base + href;
+  }
+}
+
+const noopTest = {
+  exec: function noopTest() {}
+};
+
+function merge(obj) {
+  let i = 1,
+      target,
+      key;
+
+  for (; i < arguments.length; i++) {
+    target = arguments[i];
+
+    for (key in target) {
+      if (Object.prototype.hasOwnProperty.call(target, key)) {
+        obj[key] = target[key];
       }
     }
   }
+
+  return obj;
+}
+
+function splitCells(tableRow, count) {
+  // ensure that every cell-delimiting pipe has a space
+  // before it to distinguish it from an escaped pipe
+  const row = tableRow.replace(/\|/g, (match, offset, str) => {
+    let escaped = false,
+        curr = offset;
+
+    while (--curr >= 0 && str[curr] === '\\') escaped = !escaped;
+
+    if (escaped) {
+      // odd number of slashes means | is escaped
+      // so we leave it alone
+      return '|';
+    } else {
+      // add space before unescaped |
+      return ' |';
+    }
+  }),
+        cells = row.split(/ \|/);
+  let i = 0;
+
+  if (cells.length > count) {
+    cells.splice(count);
+  } else {
+    while (cells.length < count) cells.push('');
+  }
+
+  for (; i < cells.length; i++) {
+    // leading or trailing whitespace is ignored per the gfm spec
+    cells[i] = cells[i].trim().replace(/\\\|/g, '|');
+  }
+
+  return cells;
+} // Remove trailing 'c's. Equivalent to str.replace(/c*$/, '').
+// /c*$/ is vulnerable to REDOS.
+// invert: Remove suffix of non-c chars instead. Default falsey.
+
+
+function rtrim(str, c, invert) {
+  const l = str.length;
+
+  if (l === 0) {
+    return '';
+  } // Length of suffix matching the invert condition.
+
+
+  let suffLen = 0; // Step left until we fail to match the invert condition.
+
+  while (suffLen < l) {
+    const currChar = str.charAt(l - suffLen - 1);
+
+    if (currChar === c && !invert) {
+      suffLen++;
+    } else if (currChar !== c && invert) {
+      suffLen++;
+    } else {
+      break;
+    }
+  }
+
+  return str.substr(0, l - suffLen);
+}
+
+function findClosingBracket(str, b) {
+  if (str.indexOf(b[1]) === -1) {
+    return -1;
+  }
+
+  const l = str.length;
+  let level = 0,
+      i = 0;
+
+  for (; i < l; i++) {
+    if (str[i] === '\\') {
+      i++;
+    } else if (str[i] === b[0]) {
+      level++;
+    } else if (str[i] === b[1]) {
+      level--;
+
+      if (level < 0) {
+        return i;
+      }
+    }
+  }
+
+  return -1;
+}
+
+function checkSanitizeDeprecation(opt) {
+  if (opt && opt.sanitize && !opt.silent) {
+    console.warn('marked(): sanitize and sanitizer parameters are deprecated since version 0.7.0, should not be used and will be removed in the future. Read more here: https://marked.js.org/#/USING_ADVANCED.md#options');
+  }
+}
+
+module.exports = {
+  escape,
+  unescape,
+  edit,
+  cleanUrl,
+  resolveUrl,
+  noopTest,
+  merge,
+  splitCells,
+  rtrim,
+  findClosingBracket,
+  checkSanitizeDeprecation
+};
+},{}],"node_modules/marked/src/Tokenizer.js":[function(require,module,exports) {
+const {
+  defaults
+} = require('./defaults.js');
+
+const {
+  rtrim,
+  splitCells,
+  escape,
+  findClosingBracket
+} = require('./helpers.js');
+
+function outputLink(cap, link, raw) {
+  const href = link.href;
+  const title = link.title ? escape(link.title) : null;
+
+  if (cap[0].charAt(0) !== '!') {
+    return {
+      type: 'link',
+      raw,
+      href,
+      title,
+      text: cap[1]
+    };
+  } else {
+    return {
+      type: 'image',
+      raw,
+      text: escape(cap[1]),
+      href,
+      title
+    };
+  }
+}
+/**
+ * Tokenizer
+ */
+
+
+module.exports = class Tokenizer {
+  constructor(options) {
+    this.options = options || defaults;
+  }
+
+  space(src) {
+    const cap = this.rules.block.newline.exec(src);
+
+    if (cap) {
+      if (cap[0].length > 1) {
+        return {
+          type: 'space',
+          raw: cap[0]
+        };
+      }
+
+      return {
+        raw: '\n'
+      };
+    }
+  }
+
+  code(src, tokens) {
+    const cap = this.rules.block.code.exec(src);
+
+    if (cap) {
+      const lastToken = tokens[tokens.length - 1]; // An indented code block cannot interrupt a paragraph.
+
+      if (lastToken && lastToken.type === 'paragraph') {
+        tokens.pop();
+        lastToken.text += '\n' + cap[0].trimRight();
+        lastToken.raw += '\n' + cap[0];
+        return lastToken;
+      } else {
+        const text = cap[0].replace(/^ {4}/gm, '');
+        return {
+          type: 'code',
+          raw: cap[0],
+          codeBlockStyle: 'indented',
+          text: !this.options.pedantic ? rtrim(text, '\n') : text
+        };
+      }
+    }
+  }
+
+  fences(src) {
+    const cap = this.rules.block.fences.exec(src);
+
+    if (cap) {
+      return {
+        type: 'code',
+        raw: cap[0],
+        lang: cap[2] ? cap[2].trim() : cap[2],
+        text: cap[3] || ''
+      };
+    }
+  }
+
+  heading(src) {
+    const cap = this.rules.block.heading.exec(src);
+
+    if (cap) {
+      return {
+        type: 'heading',
+        raw: cap[0],
+        depth: cap[1].length,
+        text: cap[2]
+      };
+    }
+  }
+
+  nptable(src) {
+    const cap = this.rules.block.nptable.exec(src);
+
+    if (cap) {
+      const item = {
+        type: 'table',
+        header: splitCells(cap[1].replace(/^ *| *\| *$/g, '')),
+        align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
+        cells: cap[3] ? cap[3].replace(/\n$/, '').split('\n') : [],
+        raw: cap[0]
+      };
+
+      if (item.header.length === item.align.length) {
+        let l = item.align.length;
+        let i;
+
+        for (i = 0; i < l; i++) {
+          if (/^ *-+: *$/.test(item.align[i])) {
+            item.align[i] = 'right';
+          } else if (/^ *:-+: *$/.test(item.align[i])) {
+            item.align[i] = 'center';
+          } else if (/^ *:-+ *$/.test(item.align[i])) {
+            item.align[i] = 'left';
+          } else {
+            item.align[i] = null;
+          }
+        }
+
+        l = item.cells.length;
+
+        for (i = 0; i < l; i++) {
+          item.cells[i] = splitCells(item.cells[i], item.header.length);
+        }
+
+        return item;
+      }
+    }
+  }
+
+  hr(src) {
+    const cap = this.rules.block.hr.exec(src);
+
+    if (cap) {
+      return {
+        type: 'hr',
+        raw: cap[0]
+      };
+    }
+  }
+
+  blockquote(src) {
+    const cap = this.rules.block.blockquote.exec(src);
+
+    if (cap) {
+      const text = cap[0].replace(/^ *> ?/gm, '');
+      return {
+        type: 'blockquote',
+        raw: cap[0],
+        text
+      };
+    }
+  }
+
+  list(src) {
+    const cap = this.rules.block.list.exec(src);
+
+    if (cap) {
+      let raw = cap[0];
+      const bull = cap[2];
+      const isordered = bull.length > 1;
+      const list = {
+        type: 'list',
+        raw,
+        ordered: isordered,
+        start: isordered ? +bull : '',
+        loose: false,
+        items: []
+      }; // Get each top-level item.
+
+      const itemMatch = cap[0].match(this.rules.block.item);
+      let next = false,
+          item,
+          space,
+          b,
+          addBack,
+          loose,
+          istask,
+          ischecked;
+      const l = itemMatch.length;
+
+      for (let i = 0; i < l; i++) {
+        item = itemMatch[i];
+        raw = item; // Remove the list item's bullet
+        // so it is seen as the next token.
+
+        space = item.length;
+        item = item.replace(/^ *([*+-]|\d+\.) */, ''); // Outdent whatever the
+        // list item contains. Hacky.
+
+        if (~item.indexOf('\n ')) {
+          space -= item.length;
+          item = !this.options.pedantic ? item.replace(new RegExp('^ {1,' + space + '}', 'gm'), '') : item.replace(/^ {1,4}/gm, '');
+        } // Determine whether the next list item belongs here.
+        // Backpedal if it does not belong in this list.
+
+
+        if (i !== l - 1) {
+          b = this.rules.block.bullet.exec(itemMatch[i + 1])[0];
+
+          if (bull.length > 1 ? b.length === 1 : b.length > 1 || this.options.smartLists && b !== bull) {
+            addBack = itemMatch.slice(i + 1).join('\n');
+            list.raw = list.raw.substring(0, list.raw.length - addBack.length);
+            i = l - 1;
+          }
+        } // Determine whether item is loose or not.
+        // Use: /(^|\n)(?! )[^\n]+\n\n(?!\s*$)/
+        // for discount behavior.
+
+
+        loose = next || /\n\n(?!\s*$)/.test(item);
+
+        if (i !== l - 1) {
+          next = item.charAt(item.length - 1) === '\n';
+          if (!loose) loose = next;
+        }
+
+        if (loose) {
+          list.loose = true;
+        } // Check for task list items
+
+
+        istask = /^\[[ xX]\] /.test(item);
+        ischecked = undefined;
+
+        if (istask) {
+          ischecked = item[1] !== ' ';
+          item = item.replace(/^\[[ xX]\] +/, '');
+        }
+
+        list.items.push({
+          raw,
+          task: istask,
+          checked: ischecked,
+          loose: loose,
+          text: item
+        });
+      }
+
+      return list;
+    }
+  }
+
+  html(src) {
+    const cap = this.rules.block.html.exec(src);
+
+    if (cap) {
+      return {
+        type: this.options.sanitize ? 'paragraph' : 'html',
+        raw: cap[0],
+        pre: !this.options.sanitizer && (cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'style'),
+        text: this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(cap[0]) : escape(cap[0]) : cap[0]
+      };
+    }
+  }
+
+  def(src) {
+    const cap = this.rules.block.def.exec(src);
+
+    if (cap) {
+      if (cap[3]) cap[3] = cap[3].substring(1, cap[3].length - 1);
+      const tag = cap[1].toLowerCase().replace(/\s+/g, ' ');
+      return {
+        tag,
+        raw: cap[0],
+        href: cap[2],
+        title: cap[3]
+      };
+    }
+  }
+
+  table(src) {
+    const cap = this.rules.block.table.exec(src);
+
+    if (cap) {
+      const item = {
+        type: 'table',
+        header: splitCells(cap[1].replace(/^ *| *\| *$/g, '')),
+        align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
+        cells: cap[3] ? cap[3].replace(/\n$/, '').split('\n') : []
+      };
+
+      if (item.header.length === item.align.length) {
+        item.raw = cap[0];
+        let l = item.align.length;
+        let i;
+
+        for (i = 0; i < l; i++) {
+          if (/^ *-+: *$/.test(item.align[i])) {
+            item.align[i] = 'right';
+          } else if (/^ *:-+: *$/.test(item.align[i])) {
+            item.align[i] = 'center';
+          } else if (/^ *:-+ *$/.test(item.align[i])) {
+            item.align[i] = 'left';
+          } else {
+            item.align[i] = null;
+          }
+        }
+
+        l = item.cells.length;
+
+        for (i = 0; i < l; i++) {
+          item.cells[i] = splitCells(item.cells[i].replace(/^ *\| *| *\| *$/g, ''), item.header.length);
+        }
+
+        return item;
+      }
+    }
+  }
+
+  lheading(src) {
+    const cap = this.rules.block.lheading.exec(src);
+
+    if (cap) {
+      return {
+        type: 'heading',
+        raw: cap[0],
+        depth: cap[2].charAt(0) === '=' ? 1 : 2,
+        text: cap[1]
+      };
+    }
+  }
+
+  paragraph(src) {
+    const cap = this.rules.block.paragraph.exec(src);
+
+    if (cap) {
+      return {
+        type: 'paragraph',
+        raw: cap[0],
+        text: cap[1].charAt(cap[1].length - 1) === '\n' ? cap[1].slice(0, -1) : cap[1]
+      };
+    }
+  }
+
+  text(src) {
+    const cap = this.rules.block.text.exec(src);
+
+    if (cap) {
+      return {
+        type: 'text',
+        raw: cap[0],
+        text: cap[0]
+      };
+    }
+  }
+
+  escape(src) {
+    const cap = this.rules.inline.escape.exec(src);
+
+    if (cap) {
+      return {
+        type: 'escape',
+        raw: cap[0],
+        text: escape(cap[1])
+      };
+    }
+  }
+
+  tag(src, inLink, inRawBlock) {
+    const cap = this.rules.inline.tag.exec(src);
+
+    if (cap) {
+      if (!inLink && /^<a /i.test(cap[0])) {
+        inLink = true;
+      } else if (inLink && /^<\/a>/i.test(cap[0])) {
+        inLink = false;
+      }
+
+      if (!inRawBlock && /^<(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
+        inRawBlock = true;
+      } else if (inRawBlock && /^<\/(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
+        inRawBlock = false;
+      }
+
+      return {
+        type: this.options.sanitize ? 'text' : 'html',
+        raw: cap[0],
+        inLink,
+        inRawBlock,
+        text: this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(cap[0]) : escape(cap[0]) : cap[0]
+      };
+    }
+  }
+
+  link(src) {
+    const cap = this.rules.inline.link.exec(src);
+
+    if (cap) {
+      const lastParenIndex = findClosingBracket(cap[2], '()');
+
+      if (lastParenIndex > -1) {
+        const start = cap[0].indexOf('!') === 0 ? 5 : 4;
+        const linkLen = start + cap[1].length + lastParenIndex;
+        cap[2] = cap[2].substring(0, lastParenIndex);
+        cap[0] = cap[0].substring(0, linkLen).trim();
+        cap[3] = '';
+      }
+
+      let href = cap[2];
+      let title = '';
+
+      if (this.options.pedantic) {
+        const link = /^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(href);
+
+        if (link) {
+          href = link[1];
+          title = link[3];
+        } else {
+          title = '';
+        }
+      } else {
+        title = cap[3] ? cap[3].slice(1, -1) : '';
+      }
+
+      href = href.trim().replace(/^<([\s\S]*)>$/, '$1');
+      const token = outputLink(cap, {
+        href: href ? href.replace(this.rules.inline._escapes, '$1') : href,
+        title: title ? title.replace(this.rules.inline._escapes, '$1') : title
+      }, cap[0]);
+      return token;
+    }
+  }
+
+  reflink(src, links) {
+    let cap;
+
+    if ((cap = this.rules.inline.reflink.exec(src)) || (cap = this.rules.inline.nolink.exec(src))) {
+      let link = (cap[2] || cap[1]).replace(/\s+/g, ' ');
+      link = links[link.toLowerCase()];
+
+      if (!link || !link.href) {
+        const text = cap[0].charAt(0);
+        return {
+          type: 'text',
+          raw: text,
+          text
+        };
+      }
+
+      const token = outputLink(cap, link, cap[0]);
+      return token;
+    }
+  }
+
+  strong(src) {
+    const cap = this.rules.inline.strong.exec(src);
+
+    if (cap) {
+      return {
+        type: 'strong',
+        raw: cap[0],
+        text: cap[4] || cap[3] || cap[2] || cap[1]
+      };
+    }
+  }
+
+  em(src) {
+    const cap = this.rules.inline.em.exec(src);
+
+    if (cap) {
+      return {
+        type: 'em',
+        raw: cap[0],
+        text: cap[6] || cap[5] || cap[4] || cap[3] || cap[2] || cap[1]
+      };
+    }
+  }
+
+  codespan(src) {
+    const cap = this.rules.inline.code.exec(src);
+
+    if (cap) {
+      return {
+        type: 'codespan',
+        raw: cap[0],
+        text: escape(cap[2].trim(), true)
+      };
+    }
+  }
+
+  br(src) {
+    const cap = this.rules.inline.br.exec(src);
+
+    if (cap) {
+      return {
+        type: 'br',
+        raw: cap[0]
+      };
+    }
+  }
+
+  del(src) {
+    const cap = this.rules.inline.del.exec(src);
+
+    if (cap) {
+      return {
+        type: 'del',
+        raw: cap[0],
+        text: cap[1]
+      };
+    }
+  }
+
+  autolink(src, mangle) {
+    const cap = this.rules.inline.autolink.exec(src);
+
+    if (cap) {
+      let text, href;
+
+      if (cap[2] === '@') {
+        text = escape(this.options.mangle ? mangle(cap[1]) : cap[1]);
+        href = 'mailto:' + text;
+      } else {
+        text = escape(cap[1]);
+        href = text;
+      }
+
+      return {
+        type: 'link',
+        raw: cap[0],
+        text,
+        href,
+        tokens: [{
+          type: 'text',
+          raw: text,
+          text
+        }]
+      };
+    }
+  }
+
+  url(src, mangle) {
+    let cap;
+
+    if (cap = this.rules.inline.url.exec(src)) {
+      let text, href;
+
+      if (cap[2] === '@') {
+        text = escape(this.options.mangle ? mangle(cap[0]) : cap[0]);
+        href = 'mailto:' + text;
+      } else {
+        // do extended autolink path validation
+        let prevCapZero;
+
+        do {
+          prevCapZero = cap[0];
+          cap[0] = this.rules.inline._backpedal.exec(cap[0])[0];
+        } while (prevCapZero !== cap[0]);
+
+        text = escape(cap[0]);
+
+        if (cap[1] === 'www.') {
+          href = 'http://' + text;
+        } else {
+          href = text;
+        }
+      }
+
+      return {
+        type: 'link',
+        raw: cap[0],
+        text,
+        href,
+        tokens: [{
+          type: 'text',
+          raw: text,
+          text
+        }]
+      };
+    }
+  }
+
+  inlineText(src, inRawBlock, smartypants) {
+    const cap = this.rules.inline.text.exec(src);
+
+    if (cap) {
+      let text;
+
+      if (inRawBlock) {
+        text = this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(cap[0]) : escape(cap[0]) : cap[0];
+      } else {
+        text = escape(this.options.smartypants ? smartypants(cap[0]) : cap[0]);
+      }
+
+      return {
+        type: 'text',
+        raw: cap[0],
+        text
+      };
+    }
+  }
+
+};
+},{"./defaults.js":"node_modules/marked/src/defaults.js","./helpers.js":"node_modules/marked/src/helpers.js"}],"node_modules/marked/src/rules.js":[function(require,module,exports) {
+const {
+  noopTest,
+  edit,
+  merge
+} = require('./helpers.js');
+/**
+ * Block-Level Grammar
+ */
+
+
+const block = {
+  newline: /^\n+/,
+  code: /^( {4}[^\n]+\n*)+/,
+  fences: /^ {0,3}(`{3,}(?=[^`\n]*\n)|~{3,})([^\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[~`]* *(?:\n+|$)|$)/,
+  hr: /^ {0,3}((?:- *){3,}|(?:_ *){3,}|(?:\* *){3,})(?:\n+|$)/,
+  heading: /^ {0,3}(#{1,6}) +([^\n]*?)(?: +#+)? *(?:\n+|$)/,
+  blockquote: /^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,
+  list: /^( {0,3})(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,
+  html: '^ {0,3}(?:' // optional indentation
+  + '<(script|pre|style)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)' // (1)
+  + '|comment[^\\n]*(\\n+|$)' // (2)
+  + '|<\\?[\\s\\S]*?\\?>\\n*' // (3)
+  + '|<![A-Z][\\s\\S]*?>\\n*' // (4)
+  + '|<!\\[CDATA\\[[\\s\\S]*?\\]\\]>\\n*' // (5)
+  + '|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:\\n{2,}|$)' // (6)
+  + '|<(?!script|pre|style)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) open tag
+  + '|</(?!script|pre|style)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) closing tag
+  + ')',
+  def: /^ {0,3}\[(label)\]: *\n? *<?([^\s>]+)>?(?:(?: +\n? *| *\n *)(title))? *(?:\n+|$)/,
+  nptable: noopTest,
+  table: noopTest,
+  lheading: /^([^\n]+)\n {0,3}(=+|-+) *(?:\n+|$)/,
+  // regex template, placeholders will be replaced according to different paragraph
+  // interruption rules of commonmark and the original markdown spec:
+  _paragraph: /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html)[^\n]+)*)/,
+  text: /^[^\n]+/
+};
+block._label = /(?!\s*\])(?:\\[\[\]]|[^\[\]])+/;
+block._title = /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/;
+block.def = edit(block.def).replace('label', block._label).replace('title', block._title).getRegex();
+block.bullet = /(?:[*+-]|\d{1,9}\.)/;
+block.item = /^( *)(bull) ?[^\n]*(?:\n(?!\1bull ?)[^\n]*)*/;
+block.item = edit(block.item, 'gm').replace(/bull/g, block.bullet).getRegex();
+block.list = edit(block.list).replace(/bull/g, block.bullet).replace('hr', '\\n+(?=\\1?(?:(?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$))').replace('def', '\\n+(?=' + block.def.source + ')').getRegex();
+block._tag = 'address|article|aside|base|basefont|blockquote|body|caption' + '|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption' + '|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe' + '|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option' + '|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr' + '|track|ul';
+block._comment = /<!--(?!-?>)[\s\S]*?-->/;
+block.html = edit(block.html, 'i').replace('comment', block._comment).replace('tag', block._tag).replace('attribute', / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex();
+block.paragraph = edit(block._paragraph).replace('hr', block.hr).replace('heading', ' {0,3}#{1,6} ').replace('|lheading', '') // setex headings don't interrupt commonmark paragraphs
+.replace('blockquote', ' {0,3}>').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
+.replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // pars can be interrupted by type (6) html blocks
+.getRegex();
+block.blockquote = edit(block.blockquote).replace('paragraph', block.paragraph).getRegex();
+/**
+ * Normal Block Grammar
+ */
+
+block.normal = merge({}, block);
+/**
+ * GFM Block Grammar
+ */
+
+block.gfm = merge({}, block.normal, {
+  nptable: '^ *([^|\\n ].*\\|.*)\\n' // Header
+  + ' *([-:]+ *\\|[-| :]*)' // Align
+  + '(?:\\n((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)',
+  // Cells
+  table: '^ *\\|(.+)\\n' // Header
+  + ' *\\|?( *[-:]+[-| :]*)' // Align
+  + '(?:\\n *((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)' // Cells
+
+});
+block.gfm.nptable = edit(block.gfm.nptable).replace('hr', block.hr).replace('heading', ' {0,3}#{1,6} ').replace('blockquote', ' {0,3}>').replace('code', ' {4}[^\\n]').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
+.replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // tables can be interrupted by type (6) html blocks
+.getRegex();
+block.gfm.table = edit(block.gfm.table).replace('hr', block.hr).replace('heading', ' {0,3}#{1,6} ').replace('blockquote', ' {0,3}>').replace('code', ' {4}[^\\n]').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
+.replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // tables can be interrupted by type (6) html blocks
+.getRegex();
+/**
+ * Pedantic grammar (original John Gruber's loose markdown specification)
+ */
+
+block.pedantic = merge({}, block.normal, {
+  html: edit('^ *(?:comment *(?:\\n|\\s*$)' + '|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)' // closed tag
+  + '|<tag(?:"[^"]*"|\'[^\']*\'|\\s[^\'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))').replace('comment', block._comment).replace(/tag/g, '(?!(?:' + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub' + '|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)' + '\\b)\\w+(?!:|[^\\w\\s@]*@)\\b').getRegex(),
+  def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,
+  heading: /^ *(#{1,6}) *([^\n]+?) *(?:#+ *)?(?:\n+|$)/,
+  fences: noopTest,
+  // fences not supported
+  paragraph: edit(block.normal._paragraph).replace('hr', block.hr).replace('heading', ' *#{1,6} *[^\n]').replace('lheading', block.lheading).replace('blockquote', ' {0,3}>').replace('|fences', '').replace('|list', '').replace('|html', '').getRegex()
+});
+/**
+ * Inline-Level Grammar
+ */
+
+const inline = {
+  escape: /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,
+  autolink: /^<(scheme:[^\s\x00-\x1f<>]*|email)>/,
+  url: noopTest,
+  tag: '^comment' + '|^</[a-zA-Z][\\w:-]*\\s*>' // self-closing tag
+  + '|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>' // open tag
+  + '|^<\\?[\\s\\S]*?\\?>' // processing instruction, e.g. <?php ?>
+  + '|^<![a-zA-Z]+\\s[\\s\\S]*?>' // declaration, e.g. <!DOCTYPE html>
+  + '|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>',
+  // CDATA section
+  link: /^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/,
+  reflink: /^!?\[(label)\]\[(?!\s*\])((?:\\[\[\]]?|[^\[\]\\])+)\]/,
+  nolink: /^!?\[(?!\s*\])((?:\[[^\[\]]*\]|\\[\[\]]|[^\[\]])*)\](?:\[\])?/,
+  strong: /^__([^\s_])__(?!_)|^\*\*([^\s*])\*\*(?!\*)|^__([^\s][\s\S]*?[^\s])__(?!_)|^\*\*([^\s][\s\S]*?[^\s])\*\*(?!\*)/,
+  em: /^_([^\s_])_(?!_)|^_([^\s_<][\s\S]*?[^\s_])_(?!_|[^\spunctuation])|^_([^\s_<][\s\S]*?[^\s])_(?!_|[^\spunctuation])|^\*([^\s*<\[])\*(?!\*)|^\*([^\s<"][\s\S]*?[^\s\[\*])\*(?![\]`punctuation])|^\*([^\s*"<\[][\s\S]*[^\s])\*(?!\*)/,
+  code: /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,
+  br: /^( {2,}|\\)\n(?!\s*$)/,
+  del: noopTest,
+  text: /^(`+|[^`])(?:[\s\S]*?(?:(?=[\\<!\[`*]|\b_|$)|[^ ](?= {2,}\n))|(?= {2,}\n))/
+}; // list of punctuation marks from common mark spec
+// without ` and ] to workaround Rule 17 (inline code blocks/links)
+
+inline._punctuation = '!"#$%&\'()*+\\-./:;<=>?@\\[^_{|}~';
+inline.em = edit(inline.em).replace(/punctuation/g, inline._punctuation).getRegex();
+inline._escapes = /\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/g;
+inline._scheme = /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/;
+inline._email = /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/;
+inline.autolink = edit(inline.autolink).replace('scheme', inline._scheme).replace('email', inline._email).getRegex();
+inline._attribute = /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/;
+inline.tag = edit(inline.tag).replace('comment', block._comment).replace('attribute', inline._attribute).getRegex();
+inline._label = /(?:\[[^\[\]]*\]|\\.|`[^`]*`|[^\[\]\\`])*?/;
+inline._href = /<(?:\\[<>]?|[^\s<>\\])*>|[^\s\x00-\x1f]*/;
+inline._title = /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/;
+inline.link = edit(inline.link).replace('label', inline._label).replace('href', inline._href).replace('title', inline._title).getRegex();
+inline.reflink = edit(inline.reflink).replace('label', inline._label).getRegex();
+/**
+ * Normal Inline Grammar
+ */
+
+inline.normal = merge({}, inline);
+/**
+ * Pedantic Inline Grammar
+ */
+
+inline.pedantic = merge({}, inline.normal, {
+  strong: /^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,
+  em: /^_(?=\S)([\s\S]*?\S)_(?!_)|^\*(?=\S)([\s\S]*?\S)\*(?!\*)/,
+  link: edit(/^!?\[(label)\]\((.*?)\)/).replace('label', inline._label).getRegex(),
+  reflink: edit(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace('label', inline._label).getRegex()
+});
+/**
+ * GFM Inline Grammar
+ */
+
+inline.gfm = merge({}, inline.normal, {
+  escape: edit(inline.escape).replace('])', '~|])').getRegex(),
+  _extended_email: /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/,
+  url: /^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,
+  _backpedal: /(?:[^?!.,:;*_~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_~)]+(?!$))+/,
+  del: /^~+(?=\S)([\s\S]*?\S)~+/,
+  text: /^(`+|[^`])(?:[\s\S]*?(?:(?=[\\<!\[`*~]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))|(?= {2,}\n|[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))/
+});
+inline.gfm.url = edit(inline.gfm.url, 'i').replace('email', inline.gfm._extended_email).getRegex();
+/**
+ * GFM + Line Breaks Inline Grammar
+ */
+
+inline.breaks = merge({}, inline.gfm, {
+  br: edit(inline.br).replace('{2,}', '*').getRegex(),
+  text: edit(inline.gfm.text).replace('\\b_', '\\b_| {2,}\\n').replace(/\{2,\}/g, '*').getRegex()
+});
+module.exports = {
+  block,
+  inline
+};
+},{"./helpers.js":"node_modules/marked/src/helpers.js"}],"node_modules/marked/src/Lexer.js":[function(require,module,exports) {
+const Tokenizer = require('./Tokenizer.js');
+
+const {
+  defaults
+} = require('./defaults.js');
+
+const {
+  block,
+  inline
+} = require('./rules.js');
+/**
+ * smartypants text replacement
+ */
+
+
+function smartypants(text) {
+  return text // em-dashes
+  .replace(/---/g, '\u2014') // en-dashes
+  .replace(/--/g, '\u2013') // opening singles
+  .replace(/(^|[-\u2014/(\[{"\s])'/g, '$1\u2018') // closing singles & apostrophes
+  .replace(/'/g, '\u2019') // opening doubles
+  .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u201c') // closing doubles
+  .replace(/"/g, '\u201d') // ellipses
+  .replace(/\.{3}/g, '\u2026');
+}
+/**
+ * mangle email addresses
+ */
+
+
+function mangle(text) {
+  let out = '',
+      i,
+      ch;
+  const l = text.length;
+
+  for (i = 0; i < l; i++) {
+    ch = text.charCodeAt(i);
+
+    if (Math.random() > 0.5) {
+      ch = 'x' + ch.toString(16);
+    }
+
+    out += '&#' + ch + ';';
+  }
+
+  return out;
+}
+/**
+ * Block Lexer
+ */
+
+
+module.exports = class Lexer {
+  constructor(options) {
+    this.tokens = [];
+    this.tokens.links = Object.create(null);
+    this.options = options || defaults;
+    this.options.tokenizer = this.options.tokenizer || new Tokenizer();
+    this.tokenizer = this.options.tokenizer;
+    this.tokenizer.options = this.options;
+    const rules = {
+      block: block.normal,
+      inline: inline.normal
+    };
+
+    if (this.options.pedantic) {
+      rules.block = block.pedantic;
+      rules.inline = inline.pedantic;
+    } else if (this.options.gfm) {
+      rules.block = block.gfm;
+
+      if (this.options.breaks) {
+        rules.inline = inline.breaks;
+      } else {
+        rules.inline = inline.gfm;
+      }
+    }
+
+    this.tokenizer.rules = rules;
+  }
   /**
-   * Expose Block Rules
+   * Expose Rules
    */
 
 
-  Lexer.rules = block;
+  static get rules() {
+    return {
+      block,
+      inline
+    };
+  }
   /**
    * Static Lex Method
    */
 
-  Lexer.lex = function (src, options) {
-    var lexer = new Lexer(options);
+
+  static lex(src, options) {
+    const lexer = new Lexer(options);
     return lexer.lex(src);
-  };
+  }
   /**
    * Preprocessing
    */
 
 
-  Lexer.prototype.lex = function (src) {
-    src = src.replace(/\r\n|\r/g, '\n').replace(/\t/g, '    ').replace(/\u00a0/g, ' ').replace(/\u2424/g, '\n');
-    return this.token(src, true);
-  };
+  lex(src) {
+    src = src.replace(/\r\n|\r/g, '\n').replace(/\t/g, '    ');
+    this.blockTokens(src, this.tokens, true);
+    this.inline(this.tokens);
+    return this.tokens;
+  }
   /**
    * Lexing
    */
 
 
-  Lexer.prototype.token = function (src, top) {
+  blockTokens(src, tokens = [], top = true) {
     src = src.replace(/^ +$/gm, '');
-    var next, loose, cap, bull, b, item, listStart, listItems, t, space, i, tag, l, isordered, istask, ischecked;
+    let token, i, l;
 
     while (src) {
       // newline
-      if (cap = this.rules.newline.exec(src)) {
-        src = src.substring(cap[0].length);
+      if (token = this.tokenizer.space(src)) {
+        src = src.substring(token.raw.length);
 
-        if (cap[0].length > 1) {
-          this.tokens.push({
-            type: 'space'
-          });
-        }
-      } // code
-
-
-      if (cap = this.rules.code.exec(src)) {
-        var lastToken = this.tokens[this.tokens.length - 1];
-        src = src.substring(cap[0].length); // An indented code block cannot interrupt a paragraph.
-
-        if (lastToken && lastToken.type === 'paragraph') {
-          lastToken.text += '\n' + cap[0].trimRight();
-        } else {
-          cap = cap[0].replace(/^ {4}/gm, '');
-          this.tokens.push({
-            type: 'code',
-            codeBlockStyle: 'indented',
-            text: !this.options.pedantic ? rtrim(cap, '\n') : cap
-          });
+        if (token.type) {
+          tokens.push(token);
         }
 
         continue;
-      } // fences (gfm)
+      } // code
 
 
-      if (cap = this.rules.fences.exec(src)) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'code',
-          lang: cap[2] ? cap[2].trim() : cap[2],
-          text: cap[3] || ''
-        });
+      if (token = this.tokenizer.code(src, tokens)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      } // fences
+
+
+      if (token = this.tokenizer.fences(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // heading
 
 
-      if (cap = this.rules.heading.exec(src)) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'heading',
-          depth: cap[1].length,
-          text: cap[2]
-        });
+      if (token = this.tokenizer.heading(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // table no leading pipe (gfm)
 
 
-      if (cap = this.rules.nptable.exec(src)) {
-        item = {
-          type: 'table',
-          header: splitCells(cap[1].replace(/^ *| *\| *$/g, '')),
-          align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
-          cells: cap[3] ? cap[3].replace(/\n$/, '').split('\n') : []
-        };
-
-        if (item.header.length === item.align.length) {
-          src = src.substring(cap[0].length);
-
-          for (i = 0; i < item.align.length; i++) {
-            if (/^ *-+: *$/.test(item.align[i])) {
-              item.align[i] = 'right';
-            } else if (/^ *:-+: *$/.test(item.align[i])) {
-              item.align[i] = 'center';
-            } else if (/^ *:-+ *$/.test(item.align[i])) {
-              item.align[i] = 'left';
-            } else {
-              item.align[i] = null;
-            }
-          }
-
-          for (i = 0; i < item.cells.length; i++) {
-            item.cells[i] = splitCells(item.cells[i], item.header.length);
-          }
-
-          this.tokens.push(item);
-          continue;
-        }
+      if (token = this.tokenizer.nptable(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
       } // hr
 
 
-      if (cap = this.rules.hr.exec(src)) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'hr'
-        });
+      if (token = this.tokenizer.hr(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // blockquote
 
 
-      if (cap = this.rules.blockquote.exec(src)) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'blockquote_start'
-        });
-        cap = cap[0].replace(/^ *> ?/gm, ''); // Pass `top` to keep the current
-        // "toplevel" state. This is exactly
-        // how markdown.pl works.
-
-        this.token(cap, top);
-        this.tokens.push({
-          type: 'blockquote_end'
-        });
+      if (token = this.tokenizer.blockquote(src)) {
+        src = src.substring(token.raw.length);
+        token.tokens = this.blockTokens(token.text, [], top);
+        tokens.push(token);
         continue;
       } // list
 
 
-      if (cap = this.rules.list.exec(src)) {
-        src = src.substring(cap[0].length);
-        bull = cap[2];
-        isordered = bull.length > 1;
-        listStart = {
-          type: 'list_start',
-          ordered: isordered,
-          start: isordered ? +bull : '',
-          loose: false
-        };
-        this.tokens.push(listStart); // Get each top-level item.
+      if (token = this.tokenizer.list(src)) {
+        src = src.substring(token.raw.length);
+        l = token.items.length;
 
-        cap = cap[0].match(this.rules.item);
-        listItems = [];
-        next = false;
-        l = cap.length;
-        i = 0;
-
-        for (; i < l; i++) {
-          item = cap[i]; // Remove the list item's bullet
-          // so it is seen as the next token.
-
-          space = item.length;
-          item = item.replace(/^ *([*+-]|\d+\.) */, ''); // Outdent whatever the
-          // list item contains. Hacky.
-
-          if (~item.indexOf('\n ')) {
-            space -= item.length;
-            item = !this.options.pedantic ? item.replace(new RegExp('^ {1,' + space + '}', 'gm'), '') : item.replace(/^ {1,4}/gm, '');
-          } // Determine whether the next list item belongs here.
-          // Backpedal if it does not belong in this list.
-
-
-          if (i !== l - 1) {
-            b = block.bullet.exec(cap[i + 1])[0];
-
-            if (bull.length > 1 ? b.length === 1 : b.length > 1 || this.options.smartLists && b !== bull) {
-              src = cap.slice(i + 1).join('\n') + src;
-              i = l - 1;
-            }
-          } // Determine whether item is loose or not.
-          // Use: /(^|\n)(?! )[^\n]+\n\n(?!\s*$)/
-          // for discount behavior.
-
-
-          loose = next || /\n\n(?!\s*$)/.test(item);
-
-          if (i !== l - 1) {
-            next = item.charAt(item.length - 1) === '\n';
-            if (!loose) loose = next;
-          }
-
-          if (loose) {
-            listStart.loose = true;
-          } // Check for task list items
-
-
-          istask = /^\[[ xX]\] /.test(item);
-          ischecked = undefined;
-
-          if (istask) {
-            ischecked = item[1] !== ' ';
-            item = item.replace(/^\[[ xX]\] +/, '');
-          }
-
-          t = {
-            type: 'list_item_start',
-            task: istask,
-            checked: ischecked,
-            loose: loose
-          };
-          listItems.push(t);
-          this.tokens.push(t); // Recurse.
-
-          this.token(item, false);
-          this.tokens.push({
-            type: 'list_item_end'
-          });
+        for (i = 0; i < l; i++) {
+          token.items[i].tokens = this.blockTokens(token.items[i].text, [], false);
         }
 
-        if (listStart.loose) {
-          l = listItems.length;
-          i = 0;
-
-          for (; i < l; i++) {
-            listItems[i].loose = true;
-          }
-        }
-
-        this.tokens.push({
-          type: 'list_end'
-        });
+        tokens.push(token);
         continue;
       } // html
 
 
-      if (cap = this.rules.html.exec(src)) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: this.options.sanitize ? 'paragraph' : 'html',
-          pre: !this.options.sanitizer && (cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'style'),
-          text: cap[0]
-        });
+      if (token = this.tokenizer.html(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // def
 
 
-      if (top && (cap = this.rules.def.exec(src))) {
-        src = src.substring(cap[0].length);
-        if (cap[3]) cap[3] = cap[3].substring(1, cap[3].length - 1);
-        tag = cap[1].toLowerCase().replace(/\s+/g, ' ');
+      if (top && (token = this.tokenizer.def(src))) {
+        src = src.substring(token.raw.length);
 
-        if (!this.tokens.links[tag]) {
-          this.tokens.links[tag] = {
-            href: cap[2],
-            title: cap[3]
+        if (!this.tokens.links[token.tag]) {
+          this.tokens.links[token.tag] = {
+            href: token.href,
+            title: token.title
           };
         }
 
@@ -36794,453 +37715,268 @@ var global = arguments[3];
       } // table (gfm)
 
 
-      if (cap = this.rules.table.exec(src)) {
-        item = {
-          type: 'table',
-          header: splitCells(cap[1].replace(/^ *| *\| *$/g, '')),
-          align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
-          cells: cap[3] ? cap[3].replace(/\n$/, '').split('\n') : []
-        };
-
-        if (item.header.length === item.align.length) {
-          src = src.substring(cap[0].length);
-
-          for (i = 0; i < item.align.length; i++) {
-            if (/^ *-+: *$/.test(item.align[i])) {
-              item.align[i] = 'right';
-            } else if (/^ *:-+: *$/.test(item.align[i])) {
-              item.align[i] = 'center';
-            } else if (/^ *:-+ *$/.test(item.align[i])) {
-              item.align[i] = 'left';
-            } else {
-              item.align[i] = null;
-            }
-          }
-
-          for (i = 0; i < item.cells.length; i++) {
-            item.cells[i] = splitCells(item.cells[i].replace(/^ *\| *| *\| *$/g, ''), item.header.length);
-          }
-
-          this.tokens.push(item);
-          continue;
-        }
+      if (token = this.tokenizer.table(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
       } // lheading
 
 
-      if (cap = this.rules.lheading.exec(src)) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'heading',
-          depth: cap[2] === '=' ? 1 : 2,
-          text: cap[1]
-        });
+      if (token = this.tokenizer.lheading(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // top-level paragraph
 
 
-      if (top && (cap = this.rules.paragraph.exec(src))) {
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'paragraph',
-          text: cap[1].charAt(cap[1].length - 1) === '\n' ? cap[1].slice(0, -1) : cap[1]
-        });
+      if (top && (token = this.tokenizer.paragraph(src))) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // text
 
 
-      if (cap = this.rules.text.exec(src)) {
-        // Top-level should never reach here.
-        src = src.substring(cap[0].length);
-        this.tokens.push({
-          type: 'text',
-          text: cap[0]
-        });
+      if (token = this.tokenizer.text(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       }
 
       if (src) {
-        throw new Error('Infinite loop on byte: ' + src.charCodeAt(0));
+        const errMsg = 'Infinite loop on byte: ' + src.charCodeAt(0);
+
+        if (this.options.silent) {
+          console.error(errMsg);
+          break;
+        } else {
+          throw new Error(errMsg);
+        }
       }
     }
 
-    return this.tokens;
-  };
-  /**
-   * Inline-Level Grammar
-   */
-
-
-  var inline = {
-    escape: /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,
-    autolink: /^<(scheme:[^\s\x00-\x1f<>]*|email)>/,
-    url: noop,
-    tag: '^comment' + '|^</[a-zA-Z][\\w:-]*\\s*>' // self-closing tag
-    + '|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>' // open tag
-    + '|^<\\?[\\s\\S]*?\\?>' // processing instruction, e.g. <?php ?>
-    + '|^<![a-zA-Z]+\\s[\\s\\S]*?>' // declaration, e.g. <!DOCTYPE html>
-    + '|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>',
-    // CDATA section
-    link: /^!?\[(label)\]\(href(?:\s+(title))?\s*\)/,
-    reflink: /^!?\[(label)\]\[(?!\s*\])((?:\\[\[\]]?|[^\[\]\\])+)\]/,
-    nolink: /^!?\[(?!\s*\])((?:\[[^\[\]]*\]|\\[\[\]]|[^\[\]])*)\](?:\[\])?/,
-    strong: /^__([^\s_])__(?!_)|^\*\*([^\s*])\*\*(?!\*)|^__([^\s][\s\S]*?[^\s])__(?!_)|^\*\*([^\s][\s\S]*?[^\s])\*\*(?!\*)/,
-    em: /^_([^\s_])_(?!_)|^\*([^\s*<\[])\*(?!\*)|^_([^\s<][\s\S]*?[^\s_])_(?!_|[^\spunctuation])|^_([^\s_<][\s\S]*?[^\s])_(?!_|[^\spunctuation])|^\*([^\s<"][\s\S]*?[^\s\*])\*(?!\*|[^\spunctuation])|^\*([^\s*"<\[][\s\S]*?[^\s])\*(?!\*)/,
-    code: /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,
-    br: /^( {2,}|\\)\n(?!\s*$)/,
-    del: noop,
-    text: /^(`+|[^`])(?:[\s\S]*?(?:(?=[\\<!\[`*]|\b_|$)|[^ ](?= {2,}\n))|(?= {2,}\n))/
-  }; // list of punctuation marks from common mark spec
-  // without ` and ] to workaround Rule 17 (inline code blocks/links)
-
-  inline._punctuation = '!"#$%&\'()*+,\\-./:;<=>?@\\[^_{|}~';
-  inline.em = edit(inline.em).replace(/punctuation/g, inline._punctuation).getRegex();
-  inline._escapes = /\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/g;
-  inline._scheme = /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/;
-  inline._email = /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/;
-  inline.autolink = edit(inline.autolink).replace('scheme', inline._scheme).replace('email', inline._email).getRegex();
-  inline._attribute = /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/;
-  inline.tag = edit(inline.tag).replace('comment', block._comment).replace('attribute', inline._attribute).getRegex();
-  inline._label = /(?:\[[^\[\]]*\]|\\[\[\]]?|`[^`]*`|`(?!`)|[^\[\]\\`])*?/;
-  inline._href = /\s*(<(?:\\[<>]?|[^\s<>\\])*>|[^\s\x00-\x1f]*)/;
-  inline._title = /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/;
-  inline.link = edit(inline.link).replace('label', inline._label).replace('href', inline._href).replace('title', inline._title).getRegex();
-  inline.reflink = edit(inline.reflink).replace('label', inline._label).getRegex();
-  /**
-   * Normal Inline Grammar
-   */
-
-  inline.normal = merge({}, inline);
-  /**
-   * Pedantic Inline Grammar
-   */
-
-  inline.pedantic = merge({}, inline.normal, {
-    strong: /^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,
-    em: /^_(?=\S)([\s\S]*?\S)_(?!_)|^\*(?=\S)([\s\S]*?\S)\*(?!\*)/,
-    link: edit(/^!?\[(label)\]\((.*?)\)/).replace('label', inline._label).getRegex(),
-    reflink: edit(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace('label', inline._label).getRegex()
-  });
-  /**
-   * GFM Inline Grammar
-   */
-
-  inline.gfm = merge({}, inline.normal, {
-    escape: edit(inline.escape).replace('])', '~|])').getRegex(),
-    _extended_email: /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/,
-    url: /^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,
-    _backpedal: /(?:[^?!.,:;*_~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_~)]+(?!$))+/,
-    del: /^~+(?=\S)([\s\S]*?\S)~+/,
-    text: /^(`+|[^`])(?:[\s\S]*?(?:(?=[\\<!\[`*~]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))|(?= {2,}\n|[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))/
-  });
-  inline.gfm.url = edit(inline.gfm.url, 'i').replace('email', inline.gfm._extended_email).getRegex();
-  /**
-   * GFM + Line Breaks Inline Grammar
-   */
-
-  inline.breaks = merge({}, inline.gfm, {
-    br: edit(inline.br).replace('{2,}', '*').getRegex(),
-    text: edit(inline.gfm.text).replace('\\b_', '\\b_| {2,}\\n').replace(/\{2,\}/g, '*').getRegex()
-  });
-  /**
-   * Inline Lexer & Compiler
-   */
-
-  function InlineLexer(links, options) {
-    this.options = options || marked.defaults;
-    this.links = links;
-    this.rules = inline.normal;
-    this.renderer = this.options.renderer || new Renderer();
-    this.renderer.options = this.options;
-
-    if (!this.links) {
-      throw new Error('Tokens array requires a `links` property.');
-    }
-
-    if (this.options.pedantic) {
-      this.rules = inline.pedantic;
-    } else if (this.options.gfm) {
-      if (this.options.breaks) {
-        this.rules = inline.breaks;
-      } else {
-        this.rules = inline.gfm;
-      }
-    }
+    return tokens;
   }
-  /**
-   * Expose Inline Rules
-   */
+
+  inline(tokens) {
+    let i, j, k, l2, row, token;
+    const l = tokens.length;
+
+    for (i = 0; i < l; i++) {
+      token = tokens[i];
+
+      switch (token.type) {
+        case 'paragraph':
+        case 'text':
+        case 'heading':
+          {
+            token.tokens = [];
+            this.inlineTokens(token.text, token.tokens);
+            break;
+          }
+
+        case 'table':
+          {
+            token.tokens = {
+              header: [],
+              cells: []
+            }; // header
+
+            l2 = token.header.length;
+
+            for (j = 0; j < l2; j++) {
+              token.tokens.header[j] = [];
+              this.inlineTokens(token.header[j], token.tokens.header[j]);
+            } // cells
 
 
-  InlineLexer.rules = inline;
-  /**
-   * Static Lexing/Compiling Method
-   */
+            l2 = token.cells.length;
 
-  InlineLexer.output = function (src, links, options) {
-    var inline = new InlineLexer(links, options);
-    return inline.output(src);
-  };
+            for (j = 0; j < l2; j++) {
+              row = token.cells[j];
+              token.tokens.cells[j] = [];
+
+              for (k = 0; k < row.length; k++) {
+                token.tokens.cells[j][k] = [];
+                this.inlineTokens(row[k], token.tokens.cells[j][k]);
+              }
+            }
+
+            break;
+          }
+
+        case 'blockquote':
+          {
+            this.inline(token.tokens);
+            break;
+          }
+
+        case 'list':
+          {
+            l2 = token.items.length;
+
+            for (j = 0; j < l2; j++) {
+              this.inline(token.items[j].tokens);
+            }
+
+            break;
+          }
+
+        default:
+          {// do nothing
+          }
+      }
+    }
+
+    return tokens;
+  }
   /**
    * Lexing/Compiling
    */
 
 
-  InlineLexer.prototype.output = function (src) {
-    var out = '',
-        link,
-        text,
-        href,
-        title,
-        cap,
-        prevCapZero;
+  inlineTokens(src, tokens = [], inLink = false, inRawBlock = false) {
+    let token;
 
     while (src) {
       // escape
-      if (cap = this.rules.escape.exec(src)) {
-        src = src.substring(cap[0].length);
-        out += escape(cap[1]);
+      if (token = this.tokenizer.escape(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // tag
 
 
-      if (cap = this.rules.tag.exec(src)) {
-        if (!this.inLink && /^<a /i.test(cap[0])) {
-          this.inLink = true;
-        } else if (this.inLink && /^<\/a>/i.test(cap[0])) {
-          this.inLink = false;
-        }
-
-        if (!this.inRawBlock && /^<(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
-          this.inRawBlock = true;
-        } else if (this.inRawBlock && /^<\/(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
-          this.inRawBlock = false;
-        }
-
-        src = src.substring(cap[0].length);
-        out += this.options.sanitize ? this.options.sanitizer ? this.options.sanitizer(cap[0]) : escape(cap[0]) : cap[0];
+      if (token = this.tokenizer.tag(src, inLink, inRawBlock)) {
+        src = src.substring(token.raw.length);
+        inLink = token.inLink;
+        inRawBlock = token.inRawBlock;
+        tokens.push(token);
         continue;
       } // link
 
 
-      if (cap = this.rules.link.exec(src)) {
-        var lastParenIndex = findClosingBracket(cap[2], '()');
+      if (token = this.tokenizer.link(src)) {
+        src = src.substring(token.raw.length);
 
-        if (lastParenIndex > -1) {
-          var linkLen = cap[0].length - (cap[2].length - lastParenIndex) - (cap[3] || '').length;
-          cap[2] = cap[2].substring(0, lastParenIndex);
-          cap[0] = cap[0].substring(0, linkLen).trim();
-          cap[3] = '';
+        if (token.type === 'link') {
+          token.tokens = this.inlineTokens(token.text, [], true, inRawBlock);
         }
 
-        src = src.substring(cap[0].length);
-        this.inLink = true;
-        href = cap[2];
-
-        if (this.options.pedantic) {
-          link = /^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(href);
-
-          if (link) {
-            href = link[1];
-            title = link[3];
-          } else {
-            title = '';
-          }
-        } else {
-          title = cap[3] ? cap[3].slice(1, -1) : '';
-        }
-
-        href = href.trim().replace(/^<([\s\S]*)>$/, '$1');
-        out += this.outputLink(cap, {
-          href: InlineLexer.escapes(href),
-          title: InlineLexer.escapes(title)
-        });
-        this.inLink = false;
+        tokens.push(token);
         continue;
       } // reflink, nolink
 
 
-      if ((cap = this.rules.reflink.exec(src)) || (cap = this.rules.nolink.exec(src))) {
-        src = src.substring(cap[0].length);
-        link = (cap[2] || cap[1]).replace(/\s+/g, ' ');
-        link = this.links[link.toLowerCase()];
+      if (token = this.tokenizer.reflink(src, this.tokens.links)) {
+        src = src.substring(token.raw.length);
 
-        if (!link || !link.href) {
-          out += cap[0].charAt(0);
-          src = cap[0].substring(1) + src;
-          continue;
+        if (token.type === 'link') {
+          token.tokens = this.inlineTokens(token.text, [], true, inRawBlock);
         }
 
-        this.inLink = true;
-        out += this.outputLink(cap, link);
-        this.inLink = false;
+        tokens.push(token);
         continue;
       } // strong
 
 
-      if (cap = this.rules.strong.exec(src)) {
-        src = src.substring(cap[0].length);
-        out += this.renderer.strong(this.output(cap[4] || cap[3] || cap[2] || cap[1]));
+      if (token = this.tokenizer.strong(src)) {
+        src = src.substring(token.raw.length);
+        token.tokens = this.inlineTokens(token.text, [], inLink, inRawBlock);
+        tokens.push(token);
         continue;
       } // em
 
 
-      if (cap = this.rules.em.exec(src)) {
-        src = src.substring(cap[0].length);
-        out += this.renderer.em(this.output(cap[6] || cap[5] || cap[4] || cap[3] || cap[2] || cap[1]));
+      if (token = this.tokenizer.em(src)) {
+        src = src.substring(token.raw.length);
+        token.tokens = this.inlineTokens(token.text, [], inLink, inRawBlock);
+        tokens.push(token);
         continue;
       } // code
 
 
-      if (cap = this.rules.code.exec(src)) {
-        src = src.substring(cap[0].length);
-        out += this.renderer.codespan(escape(cap[2].trim(), true));
+      if (token = this.tokenizer.codespan(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // br
 
 
-      if (cap = this.rules.br.exec(src)) {
-        src = src.substring(cap[0].length);
-        out += this.renderer.br();
+      if (token = this.tokenizer.br(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // del (gfm)
 
 
-      if (cap = this.rules.del.exec(src)) {
-        src = src.substring(cap[0].length);
-        out += this.renderer.del(this.output(cap[1]));
+      if (token = this.tokenizer.del(src)) {
+        src = src.substring(token.raw.length);
+        token.tokens = this.inlineTokens(token.text, [], inLink, inRawBlock);
+        tokens.push(token);
         continue;
       } // autolink
 
 
-      if (cap = this.rules.autolink.exec(src)) {
-        src = src.substring(cap[0].length);
-
-        if (cap[2] === '@') {
-          text = escape(this.mangle(cap[1]));
-          href = 'mailto:' + text;
-        } else {
-          text = escape(cap[1]);
-          href = text;
-        }
-
-        out += this.renderer.link(href, null, text);
+      if (token = this.tokenizer.autolink(src, mangle)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // url (gfm)
 
 
-      if (!this.inLink && (cap = this.rules.url.exec(src))) {
-        if (cap[2] === '@') {
-          text = escape(cap[0]);
-          href = 'mailto:' + text;
-        } else {
-          // do extended autolink path validation
-          do {
-            prevCapZero = cap[0];
-            cap[0] = this.rules._backpedal.exec(cap[0])[0];
-          } while (prevCapZero !== cap[0]);
-
-          text = escape(cap[0]);
-
-          if (cap[1] === 'www.') {
-            href = 'http://' + text;
-          } else {
-            href = text;
-          }
-        }
-
-        src = src.substring(cap[0].length);
-        out += this.renderer.link(href, null, text);
+      if (!inLink && (token = this.tokenizer.url(src, mangle))) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       } // text
 
 
-      if (cap = this.rules.text.exec(src)) {
-        src = src.substring(cap[0].length);
-
-        if (this.inRawBlock) {
-          out += this.renderer.text(cap[0]);
-        } else {
-          out += this.renderer.text(escape(this.smartypants(cap[0])));
-        }
-
+      if (token = this.tokenizer.inlineText(src, inRawBlock, smartypants)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
         continue;
       }
 
       if (src) {
-        throw new Error('Infinite loop on byte: ' + src.charCodeAt(0));
+        const errMsg = 'Infinite loop on byte: ' + src.charCodeAt(0);
+
+        if (this.options.silent) {
+          console.error(errMsg);
+          break;
+        } else {
+          throw new Error(errMsg);
+        }
       }
     }
 
-    return out;
-  };
-
-  InlineLexer.escapes = function (text) {
-    return text ? text.replace(InlineLexer.rules._escapes, '$1') : text;
-  };
-  /**
-   * Compile Link
-   */
-
-
-  InlineLexer.prototype.outputLink = function (cap, link) {
-    var href = link.href,
-        title = link.title ? escape(link.title) : null;
-    return cap[0].charAt(0) !== '!' ? this.renderer.link(href, title, this.output(cap[1])) : this.renderer.image(href, title, escape(cap[1]));
-  };
-  /**
-   * Smartypants Transformations
-   */
-
-
-  InlineLexer.prototype.smartypants = function (text) {
-    if (!this.options.smartypants) return text;
-    return text // em-dashes
-    .replace(/---/g, '\u2014') // en-dashes
-    .replace(/--/g, '\u2013') // opening singles
-    .replace(/(^|[-\u2014/(\[{"\s])'/g, '$1\u2018') // closing singles & apostrophes
-    .replace(/'/g, '\u2019') // opening doubles
-    .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u201c') // closing doubles
-    .replace(/"/g, '\u201d') // ellipses
-    .replace(/\.{3}/g, '\u2026');
-  };
-  /**
-   * Mangle Links
-   */
-
-
-  InlineLexer.prototype.mangle = function (text) {
-    if (!this.options.mangle) return text;
-    var out = '',
-        l = text.length,
-        i = 0,
-        ch;
-
-    for (; i < l; i++) {
-      ch = text.charCodeAt(i);
-
-      if (Math.random() > 0.5) {
-        ch = 'x' + ch.toString(16);
-      }
-
-      out += '&#' + ch + ';';
-    }
-
-    return out;
-  };
-  /**
-   * Renderer
-   */
-
-
-  function Renderer(options) {
-    this.options = options || marked.defaults;
+    return tokens;
   }
 
-  Renderer.prototype.code = function (code, infostring, escaped) {
-    var lang = (infostring || '').match(/\S*/)[0];
+};
+},{"./Tokenizer.js":"node_modules/marked/src/Tokenizer.js","./defaults.js":"node_modules/marked/src/defaults.js","./rules.js":"node_modules/marked/src/rules.js"}],"node_modules/marked/src/Renderer.js":[function(require,module,exports) {
+const {
+  defaults
+} = require('./defaults.js');
+
+const {
+  cleanUrl,
+  escape
+} = require('./helpers.js');
+/**
+ * Renderer
+ */
+
+
+module.exports = class Renderer {
+  constructor(options) {
+    this.options = options || defaults;
+  }
+
+  code(code, infostring, escaped) {
+    const lang = (infostring || '').match(/\S*/)[0];
 
     if (this.options.highlight) {
-      var out = this.options.highlight(code, lang);
+      const out = this.options.highlight(code, lang);
 
       if (out != null && out !== code) {
         escaped = true;
@@ -37253,91 +37989,91 @@ var global = arguments[3];
     }
 
     return '<pre><code class="' + this.options.langPrefix + escape(lang, true) + '">' + (escaped ? code : escape(code, true)) + '</code></pre>\n';
-  };
+  }
 
-  Renderer.prototype.blockquote = function (quote) {
+  blockquote(quote) {
     return '<blockquote>\n' + quote + '</blockquote>\n';
-  };
+  }
 
-  Renderer.prototype.html = function (html) {
+  html(html) {
     return html;
-  };
+  }
 
-  Renderer.prototype.heading = function (text, level, raw, slugger) {
+  heading(text, level, raw, slugger) {
     if (this.options.headerIds) {
       return '<h' + level + ' id="' + this.options.headerPrefix + slugger.slug(raw) + '">' + text + '</h' + level + '>\n';
     } // ignore IDs
 
 
     return '<h' + level + '>' + text + '</h' + level + '>\n';
-  };
+  }
 
-  Renderer.prototype.hr = function () {
+  hr() {
     return this.options.xhtml ? '<hr/>\n' : '<hr>\n';
-  };
+  }
 
-  Renderer.prototype.list = function (body, ordered, start) {
-    var type = ordered ? 'ol' : 'ul',
-        startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
+  list(body, ordered, start) {
+    const type = ordered ? 'ol' : 'ul',
+          startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
     return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
-  };
+  }
 
-  Renderer.prototype.listitem = function (text) {
+  listitem(text) {
     return '<li>' + text + '</li>\n';
-  };
+  }
 
-  Renderer.prototype.checkbox = function (checked) {
+  checkbox(checked) {
     return '<input ' + (checked ? 'checked="" ' : '') + 'disabled="" type="checkbox"' + (this.options.xhtml ? ' /' : '') + '> ';
-  };
+  }
 
-  Renderer.prototype.paragraph = function (text) {
+  paragraph(text) {
     return '<p>' + text + '</p>\n';
-  };
+  }
 
-  Renderer.prototype.table = function (header, body) {
+  table(header, body) {
     if (body) body = '<tbody>' + body + '</tbody>';
     return '<table>\n' + '<thead>\n' + header + '</thead>\n' + body + '</table>\n';
-  };
+  }
 
-  Renderer.prototype.tablerow = function (content) {
+  tablerow(content) {
     return '<tr>\n' + content + '</tr>\n';
-  };
+  }
 
-  Renderer.prototype.tablecell = function (content, flags) {
-    var type = flags.header ? 'th' : 'td';
-    var tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
+  tablecell(content, flags) {
+    const type = flags.header ? 'th' : 'td';
+    const tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
     return tag + content + '</' + type + '>\n';
-  }; // span level renderer
+  } // span level renderer
 
 
-  Renderer.prototype.strong = function (text) {
+  strong(text) {
     return '<strong>' + text + '</strong>';
-  };
+  }
 
-  Renderer.prototype.em = function (text) {
+  em(text) {
     return '<em>' + text + '</em>';
-  };
+  }
 
-  Renderer.prototype.codespan = function (text) {
+  codespan(text) {
     return '<code>' + text + '</code>';
-  };
+  }
 
-  Renderer.prototype.br = function () {
+  br() {
     return this.options.xhtml ? '<br/>' : '<br>';
-  };
+  }
 
-  Renderer.prototype.del = function (text) {
+  del(text) {
     return '<del>' + text + '</del>';
-  };
+  }
 
-  Renderer.prototype.link = function (href, title, text) {
+  link(href, title, text) {
     href = cleanUrl(this.options.sanitize, this.options.baseUrl, href);
 
     if (href === null) {
       return text;
     }
 
-    var out = '<a href="' + escape(href) + '"';
+    let out = '<a href="' + escape(href) + '"';
 
     if (title) {
       out += ' title="' + title + '"';
@@ -37345,16 +38081,16 @@ var global = arguments[3];
 
     out += '>' + text + '</a>';
     return out;
-  };
+  }
 
-  Renderer.prototype.image = function (href, title, text) {
+  image(href, title, text) {
     href = cleanUrl(this.options.sanitize, this.options.baseUrl, href);
 
     if (href === null) {
       return text;
     }
 
-    var out = '<img src="' + href + '" alt="' + text + '"';
+    let out = '<img src="' + href + '" alt="' + text + '"';
 
     if (title) {
       out += ' title="' + title + '"';
@@ -37362,245 +38098,63 @@ var global = arguments[3];
 
     out += this.options.xhtml ? '/>' : '>';
     return out;
-  };
-
-  Renderer.prototype.text = function (text) {
-    return text;
-  };
-  /**
-   * TextRenderer
-   * returns only the textual part of the token
-   */
-
-
-  function TextRenderer() {} // no need for block level renderers
-
-
-  TextRenderer.prototype.strong = TextRenderer.prototype.em = TextRenderer.prototype.codespan = TextRenderer.prototype.del = TextRenderer.prototype.text = function (text) {
-    return text;
-  };
-
-  TextRenderer.prototype.link = TextRenderer.prototype.image = function (href, title, text) {
-    return '' + text;
-  };
-
-  TextRenderer.prototype.br = function () {
-    return '';
-  };
-  /**
-   * Parsing & Compiling
-   */
-
-
-  function Parser(options) {
-    this.tokens = [];
-    this.token = null;
-    this.options = options || marked.defaults;
-    this.options.renderer = this.options.renderer || new Renderer();
-    this.renderer = this.options.renderer;
-    this.renderer.options = this.options;
-    this.slugger = new Slugger();
   }
-  /**
-   * Static Parse Method
-   */
 
+  text(text) {
+    return text;
+  }
 
-  Parser.parse = function (src, options) {
-    var parser = new Parser(options);
-    return parser.parse(src);
-  };
-  /**
-   * Parse Loop
-   */
+};
+},{"./defaults.js":"node_modules/marked/src/defaults.js","./helpers.js":"node_modules/marked/src/helpers.js"}],"node_modules/marked/src/TextRenderer.js":[function(require,module,exports) {
+/**
+ * TextRenderer
+ * returns only the textual part of the token
+ */
+module.exports = class TextRenderer {
+  // no need for block level renderers
+  strong(text) {
+    return text;
+  }
 
+  em(text) {
+    return text;
+  }
 
-  Parser.prototype.parse = function (src) {
-    this.inline = new InlineLexer(src.links, this.options); // use an InlineLexer with a TextRenderer to extract pure text
+  codespan(text) {
+    return text;
+  }
 
-    this.inlineText = new InlineLexer(src.links, merge({}, this.options, {
-      renderer: new TextRenderer()
-    }));
-    this.tokens = src.reverse();
-    var out = '';
+  del(text) {
+    return text;
+  }
 
-    while (this.next()) {
-      out += this.tok();
-    }
+  html(text) {
+    return text;
+  }
 
-    return out;
-  };
-  /**
-   * Next Token
-   */
+  text(text) {
+    return text;
+  }
 
+  link(href, title, text) {
+    return '' + text;
+  }
 
-  Parser.prototype.next = function () {
-    this.token = this.tokens.pop();
-    return this.token;
-  };
-  /**
-   * Preview Next Token
-   */
+  image(href, title, text) {
+    return '' + text;
+  }
 
+  br() {
+    return '';
+  }
 
-  Parser.prototype.peek = function () {
-    return this.tokens[this.tokens.length - 1] || 0;
-  };
-  /**
-   * Parse Text Tokens
-   */
-
-
-  Parser.prototype.parseText = function () {
-    var body = this.token.text;
-
-    while (this.peek().type === 'text') {
-      body += '\n' + this.next().text;
-    }
-
-    return this.inline.output(body);
-  };
-  /**
-   * Parse Current Token
-   */
-
-
-  Parser.prototype.tok = function () {
-    switch (this.token.type) {
-      case 'space':
-        {
-          return '';
-        }
-
-      case 'hr':
-        {
-          return this.renderer.hr();
-        }
-
-      case 'heading':
-        {
-          return this.renderer.heading(this.inline.output(this.token.text), this.token.depth, unescape(this.inlineText.output(this.token.text)), this.slugger);
-        }
-
-      case 'code':
-        {
-          return this.renderer.code(this.token.text, this.token.lang, this.token.escaped);
-        }
-
-      case 'table':
-        {
-          var header = '',
-              body = '',
-              i,
-              row,
-              cell,
-              j; // header
-
-          cell = '';
-
-          for (i = 0; i < this.token.header.length; i++) {
-            cell += this.renderer.tablecell(this.inline.output(this.token.header[i]), {
-              header: true,
-              align: this.token.align[i]
-            });
-          }
-
-          header += this.renderer.tablerow(cell);
-
-          for (i = 0; i < this.token.cells.length; i++) {
-            row = this.token.cells[i];
-            cell = '';
-
-            for (j = 0; j < row.length; j++) {
-              cell += this.renderer.tablecell(this.inline.output(row[j]), {
-                header: false,
-                align: this.token.align[j]
-              });
-            }
-
-            body += this.renderer.tablerow(cell);
-          }
-
-          return this.renderer.table(header, body);
-        }
-
-      case 'blockquote_start':
-        {
-          body = '';
-
-          while (this.next().type !== 'blockquote_end') {
-            body += this.tok();
-          }
-
-          return this.renderer.blockquote(body);
-        }
-
-      case 'list_start':
-        {
-          body = '';
-          var ordered = this.token.ordered,
-              start = this.token.start;
-
-          while (this.next().type !== 'list_end') {
-            body += this.tok();
-          }
-
-          return this.renderer.list(body, ordered, start);
-        }
-
-      case 'list_item_start':
-        {
-          body = '';
-          var loose = this.token.loose;
-          var checked = this.token.checked;
-          var task = this.token.task;
-
-          if (this.token.task) {
-            body += this.renderer.checkbox(checked);
-          }
-
-          while (this.next().type !== 'list_item_end') {
-            body += !loose && this.token.type === 'text' ? this.parseText() : this.tok();
-          }
-
-          return this.renderer.listitem(body, task, checked);
-        }
-
-      case 'html':
-        {
-          // TODO parse inline content if parameter markdown=1
-          return this.renderer.html(this.token.text);
-        }
-
-      case 'paragraph':
-        {
-          return this.renderer.paragraph(this.inline.output(this.token.text));
-        }
-
-      case 'text':
-        {
-          return this.renderer.paragraph(this.parseText());
-        }
-
-      default:
-        {
-          var errMsg = 'Token with "' + this.token.type + '" type was not found.';
-
-          if (this.options.silent) {
-            console.log(errMsg);
-          } else {
-            throw new Error(errMsg);
-          }
-        }
-    }
-  };
-  /**
-   * Slugger generates header id
-   */
-
-
-  function Slugger() {
+};
+},{}],"node_modules/marked/src/Slugger.js":[function(require,module,exports) {
+/**
+ * Slugger generates header id
+ */
+module.exports = class Slugger {
+  constructor() {
     this.seen = {};
   }
   /**
@@ -37608,11 +38162,13 @@ var global = arguments[3];
    */
 
 
-  Slugger.prototype.slug = function (value) {
-    var slug = value.toLowerCase().trim().replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '').replace(/\s/g, '-');
+  slug(value) {
+    let slug = value.toLowerCase().trim() // remove html tags
+    .replace(/<[!\/a-z].*?>/ig, '') // remove unwanted chars
+    .replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '').replace(/\s/g, '-');
 
     if (this.seen.hasOwnProperty(slug)) {
-      var originalSlug = slug;
+      const originalSlug = slug;
 
       do {
         this.seen[originalSlug]++;
@@ -37622,385 +38178,523 @@ var global = arguments[3];
 
     this.seen[slug] = 0;
     return slug;
-  };
+  }
+
+};
+},{}],"node_modules/marked/src/Parser.js":[function(require,module,exports) {
+const Renderer = require('./Renderer.js');
+
+const TextRenderer = require('./TextRenderer.js');
+
+const Slugger = require('./Slugger.js');
+
+const {
+  defaults
+} = require('./defaults.js');
+
+const {
+  unescape
+} = require('./helpers.js');
+/**
+ * Parsing & Compiling
+ */
+
+
+module.exports = class Parser {
+  constructor(options) {
+    this.options = options || defaults;
+    this.options.renderer = this.options.renderer || new Renderer();
+    this.renderer = this.options.renderer;
+    this.renderer.options = this.options;
+    this.textRenderer = new TextRenderer();
+    this.slugger = new Slugger();
+  }
   /**
-   * Helpers
+   * Static Parse Method
    */
 
 
-  function escape(html, encode) {
-    if (encode) {
-      if (escape.escapeTest.test(html)) {
-        return html.replace(escape.escapeReplace, function (ch) {
-          return escape.replacements[ch];
-        });
-      }
-    } else {
-      if (escape.escapeTestNoEncode.test(html)) {
-        return html.replace(escape.escapeReplaceNoEncode, function (ch) {
-          return escape.replacements[ch];
-        });
+  static parse(tokens, options) {
+    const parser = new Parser(options);
+    return parser.parse(tokens);
+  }
+  /**
+   * Parse Loop
+   */
+
+
+  parse(tokens, top = true) {
+    let out = '',
+        i,
+        j,
+        k,
+        l2,
+        l3,
+        row,
+        cell,
+        header,
+        body,
+        token,
+        ordered,
+        start,
+        loose,
+        itemBody,
+        item,
+        checked,
+        task,
+        checkbox;
+    const l = tokens.length;
+
+    for (i = 0; i < l; i++) {
+      token = tokens[i];
+
+      switch (token.type) {
+        case 'space':
+          {
+            continue;
+          }
+
+        case 'hr':
+          {
+            out += this.renderer.hr();
+            continue;
+          }
+
+        case 'heading':
+          {
+            out += this.renderer.heading(this.parseInline(token.tokens), token.depth, unescape(this.parseInline(token.tokens, this.textRenderer)), this.slugger);
+            continue;
+          }
+
+        case 'code':
+          {
+            out += this.renderer.code(token.text, token.lang, token.escaped);
+            continue;
+          }
+
+        case 'table':
+          {
+            header = ''; // header
+
+            cell = '';
+            l2 = token.header.length;
+
+            for (j = 0; j < l2; j++) {
+              cell += this.renderer.tablecell(this.parseInline(token.tokens.header[j]), {
+                header: true,
+                align: token.align[j]
+              });
+            }
+
+            header += this.renderer.tablerow(cell);
+            body = '';
+            l2 = token.cells.length;
+
+            for (j = 0; j < l2; j++) {
+              row = token.tokens.cells[j];
+              cell = '';
+              l3 = row.length;
+
+              for (k = 0; k < l3; k++) {
+                cell += this.renderer.tablecell(this.parseInline(row[k]), {
+                  header: false,
+                  align: token.align[k]
+                });
+              }
+
+              body += this.renderer.tablerow(cell);
+            }
+
+            out += this.renderer.table(header, body);
+            continue;
+          }
+
+        case 'blockquote':
+          {
+            body = this.parse(token.tokens);
+            out += this.renderer.blockquote(body);
+            continue;
+          }
+
+        case 'list':
+          {
+            ordered = token.ordered;
+            start = token.start;
+            loose = token.loose;
+            l2 = token.items.length;
+            body = '';
+
+            for (j = 0; j < l2; j++) {
+              item = token.items[j];
+              checked = item.checked;
+              task = item.task;
+              itemBody = '';
+
+              if (item.task) {
+                checkbox = this.renderer.checkbox(checked);
+
+                if (loose) {
+                  if (item.tokens[0].type === 'text') {
+                    item.tokens[0].text = checkbox + ' ' + item.tokens[0].text;
+
+                    if (item.tokens[0].tokens && item.tokens[0].tokens.length > 0 && item.tokens[0].tokens[0].type === 'text') {
+                      item.tokens[0].tokens[0].text = checkbox + ' ' + item.tokens[0].tokens[0].text;
+                    }
+                  } else {
+                    item.tokens.unshift({
+                      type: 'text',
+                      text: checkbox
+                    });
+                  }
+                } else {
+                  itemBody += checkbox;
+                }
+              }
+
+              itemBody += this.parse(item.tokens, loose);
+              body += this.renderer.listitem(itemBody, task, checked);
+            }
+
+            out += this.renderer.list(body, ordered, start);
+            continue;
+          }
+
+        case 'html':
+          {
+            // TODO parse inline content if parameter markdown=1
+            out += this.renderer.html(token.text);
+            continue;
+          }
+
+        case 'paragraph':
+          {
+            out += this.renderer.paragraph(this.parseInline(token.tokens));
+            continue;
+          }
+
+        case 'text':
+          {
+            body = token.tokens ? this.parseInline(token.tokens) : token.text;
+
+            while (i + 1 < l && tokens[i + 1].type === 'text') {
+              token = tokens[++i];
+              body += '\n' + (token.tokens ? this.parseInline(token.tokens) : token.text);
+            }
+
+            out += top ? this.renderer.paragraph(body) : body;
+            continue;
+          }
+
+        default:
+          {
+            const errMsg = 'Token with "' + token.type + '" type was not found.';
+
+            if (this.options.silent) {
+              console.error(errMsg);
+              return;
+            } else {
+              throw new Error(errMsg);
+            }
+          }
       }
     }
 
-    return html;
+    return out;
+  }
+  /**
+   * Parse Inline Tokens
+   */
+
+
+  parseInline(tokens, renderer) {
+    renderer = renderer || this.renderer;
+    let out = '',
+        i,
+        token;
+    const l = tokens.length;
+
+    for (i = 0; i < l; i++) {
+      token = tokens[i];
+
+      switch (token.type) {
+        case 'escape':
+          {
+            out += renderer.text(token.text);
+            break;
+          }
+
+        case 'html':
+          {
+            out += renderer.html(token.text);
+            break;
+          }
+
+        case 'link':
+          {
+            out += renderer.link(token.href, token.title, this.parseInline(token.tokens, renderer));
+            break;
+          }
+
+        case 'image':
+          {
+            out += renderer.image(token.href, token.title, token.text);
+            break;
+          }
+
+        case 'strong':
+          {
+            out += renderer.strong(this.parseInline(token.tokens, renderer));
+            break;
+          }
+
+        case 'em':
+          {
+            out += renderer.em(this.parseInline(token.tokens, renderer));
+            break;
+          }
+
+        case 'codespan':
+          {
+            out += renderer.codespan(token.text);
+            break;
+          }
+
+        case 'br':
+          {
+            out += renderer.br();
+            break;
+          }
+
+        case 'del':
+          {
+            out += renderer.del(this.parseInline(token.tokens, renderer));
+            break;
+          }
+
+        case 'text':
+          {
+            out += renderer.text(token.text);
+            break;
+          }
+
+        default:
+          {
+            const errMsg = 'Token with "' + token.type + '" type was not found.';
+
+            if (this.options.silent) {
+              console.error(errMsg);
+              return;
+            } else {
+              throw new Error(errMsg);
+            }
+          }
+      }
+    }
+
+    return out;
   }
 
-  escape.escapeTest = /[&<>"']/;
-  escape.escapeReplace = /[&<>"']/g;
-  escape.replacements = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;'
-  };
-  escape.escapeTestNoEncode = /[<>"']|&(?!#?\w+;)/;
-  escape.escapeReplaceNoEncode = /[<>"']|&(?!#?\w+;)/g;
+};
+},{"./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./defaults.js":"node_modules/marked/src/defaults.js","./helpers.js":"node_modules/marked/src/helpers.js"}],"node_modules/marked/src/marked.js":[function(require,module,exports) {
+const Lexer = require('./Lexer.js');
 
-  function unescape(html) {
-    // explicitly match decimal, hex, and named HTML entities
-    return html.replace(/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig, function (_, n) {
-      n = n.toLowerCase();
-      if (n === 'colon') return ':';
+const Parser = require('./Parser.js');
 
-      if (n.charAt(0) === '#') {
-        return n.charAt(1) === 'x' ? String.fromCharCode(parseInt(n.substring(2), 16)) : String.fromCharCode(+n.substring(1));
-      }
+const Tokenizer = require('./Tokenizer.js');
 
-      return '';
-    });
+const Renderer = require('./Renderer.js');
+
+const TextRenderer = require('./TextRenderer.js');
+
+const Slugger = require('./Slugger.js');
+
+const {
+  merge,
+  checkSanitizeDeprecation,
+  escape
+} = require('./helpers.js');
+
+const {
+  getDefaults,
+  changeDefaults,
+  defaults
+} = require('./defaults.js');
+/**
+ * Marked
+ */
+
+
+function marked(src, opt, callback) {
+  // throw error in case of non string input
+  if (typeof src === 'undefined' || src === null) {
+    throw new Error('marked(): input parameter is undefined or null');
   }
 
-  function edit(regex, opt) {
-    regex = regex.source || regex;
-    opt = opt || '';
-    return {
-      replace: function (name, val) {
-        val = val.source || val;
-        val = val.replace(/(^|[^\[])\^/g, '$1');
-        regex = regex.replace(name, val);
-        return this;
-      },
-      getRegex: function () {
-        return new RegExp(regex, opt);
-      }
-    };
+  if (typeof src !== 'string') {
+    throw new Error('marked(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected');
   }
 
-  function cleanUrl(sanitize, base, href) {
-    if (sanitize) {
-      try {
-        var prot = decodeURIComponent(unescape(href)).replace(/[^\w:]/g, '').toLowerCase();
-      } catch (e) {
-        return null;
-      }
-
-      if (prot.indexOf('javascript:') === 0 || prot.indexOf('vbscript:') === 0 || prot.indexOf('data:') === 0) {
-        return null;
-      }
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
     }
 
-    if (base && !originIndependentUrl.test(href)) {
-      href = resolveUrl(base, href);
-    }
-
-    try {
-      href = encodeURI(href).replace(/%25/g, '%');
-    } catch (e) {
-      return null;
-    }
-
-    return href;
-  }
-
-  function resolveUrl(base, href) {
-    if (!baseUrls[' ' + base]) {
-      // we can ignore everything in base after the last slash of its path component,
-      // but we might need to add _that_
-      // https://tools.ietf.org/html/rfc3986#section-3
-      if (/^[^:]+:\/*[^/]*$/.test(base)) {
-        baseUrls[' ' + base] = base + '/';
-      } else {
-        baseUrls[' ' + base] = rtrim(base, '/', true);
-      }
-    }
-
-    base = baseUrls[' ' + base];
-
-    if (href.slice(0, 2) === '//') {
-      return base.replace(/:[\s\S]*/, ':') + href;
-    } else if (href.charAt(0) === '/') {
-      return base.replace(/(:\/*[^/]*)[\s\S]*/, '$1') + href;
-    } else {
-      return base + href;
-    }
-  }
-
-  var baseUrls = {};
-  var originIndependentUrl = /^$|^[a-z][a-z0-9+.-]*:|^[?#]/i;
-
-  function noop() {}
-
-  noop.exec = noop;
-
-  function merge(obj) {
-    var i = 1,
-        target,
-        key;
-
-    for (; i < arguments.length; i++) {
-      target = arguments[i];
-
-      for (key in target) {
-        if (Object.prototype.hasOwnProperty.call(target, key)) {
-          obj[key] = target[key];
-        }
-      }
-    }
-
-    return obj;
-  }
-
-  function splitCells(tableRow, count) {
-    // ensure that every cell-delimiting pipe has a space
-    // before it to distinguish it from an escaped pipe
-    var row = tableRow.replace(/\|/g, function (match, offset, str) {
-      var escaped = false,
-          curr = offset;
-
-      while (--curr >= 0 && str[curr] === '\\') escaped = !escaped;
-
-      if (escaped) {
-        // odd number of slashes means | is escaped
-        // so we leave it alone
-        return '|';
-      } else {
-        // add space before unescaped |
-        return ' |';
-      }
-    }),
-        cells = row.split(/ \|/),
+    opt = merge({}, marked.defaults, opt || {});
+    checkSanitizeDeprecation(opt);
+    const highlight = opt.highlight;
+    let tokens,
+        pending,
         i = 0;
 
-    if (cells.length > count) {
-      cells.splice(count);
-    } else {
-      while (cells.length < count) cells.push('');
+    try {
+      tokens = Lexer.lex(src, opt);
+    } catch (e) {
+      return callback(e);
     }
 
-    for (; i < cells.length; i++) {
-      // leading or trailing whitespace is ignored per the gfm spec
-      cells[i] = cells[i].trim().replace(/\\\|/g, '|');
-    }
+    pending = tokens.length;
 
-    return cells;
-  } // Remove trailing 'c's. Equivalent to str.replace(/c*$/, '').
-  // /c*$/ is vulnerable to REDOS.
-  // invert: Remove suffix of non-c chars instead. Default falsey.
-
-
-  function rtrim(str, c, invert) {
-    if (str.length === 0) {
-      return '';
-    } // Length of suffix matching the invert condition.
-
-
-    var suffLen = 0; // Step left until we fail to match the invert condition.
-
-    while (suffLen < str.length) {
-      var currChar = str.charAt(str.length - suffLen - 1);
-
-      if (currChar === c && !invert) {
-        suffLen++;
-      } else if (currChar !== c && invert) {
-        suffLen++;
-      } else {
-        break;
-      }
-    }
-
-    return str.substr(0, str.length - suffLen);
-  }
-
-  function findClosingBracket(str, b) {
-    if (str.indexOf(b[1]) === -1) {
-      return -1;
-    }
-
-    var level = 0;
-
-    for (var i = 0; i < str.length; i++) {
-      if (str[i] === '\\') {
-        i++;
-      } else if (str[i] === b[0]) {
-        level++;
-      } else if (str[i] === b[1]) {
-        level--;
-
-        if (level < 0) {
-          return i;
-        }
-      }
-    }
-
-    return -1;
-  }
-  /**
-   * Marked
-   */
-
-
-  function marked(src, opt, callback) {
-    // throw error in case of non string input
-    if (typeof src === 'undefined' || src === null) {
-      throw new Error('marked(): input parameter is undefined or null');
-    }
-
-    if (typeof src !== 'string') {
-      throw new Error('marked(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected');
-    }
-
-    if (callback || typeof opt === 'function') {
-      if (!callback) {
-        callback = opt;
-        opt = null;
+    const done = function (err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
       }
 
-      opt = merge({}, marked.defaults, opt || {});
-      var highlight = opt.highlight,
-          tokens,
-          pending,
-          i = 0;
+      let out;
 
       try {
-        tokens = Lexer.lex(src, opt);
+        out = Parser.parse(tokens, opt);
       } catch (e) {
-        return callback(e);
+        err = e;
       }
 
-      pending = tokens.length;
+      opt.highlight = highlight;
+      return err ? callback(err) : callback(null, out);
+    };
 
-      var done = function (err) {
-        if (err) {
-          opt.highlight = highlight;
-          return callback(err);
+    if (!highlight || highlight.length < 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+    if (!pending) return done();
+
+    for (; i < tokens.length; i++) {
+      (function (token) {
+        if (token.type !== 'code') {
+          return --pending || done();
         }
 
-        var out;
+        return highlight(token.text, token.lang, function (err, code) {
+          if (err) return done(err);
 
-        try {
-          out = Parser.parse(tokens, opt);
-        } catch (e) {
-          err = e;
-        }
-
-        opt.highlight = highlight;
-        return err ? callback(err) : callback(null, out);
-      };
-
-      if (!highlight || highlight.length < 3) {
-        return done();
-      }
-
-      delete opt.highlight;
-      if (!pending) return done();
-
-      for (; i < tokens.length; i++) {
-        (function (token) {
-          if (token.type !== 'code') {
+          if (code == null || code === token.text) {
             return --pending || done();
           }
 
-          return highlight(token.text, token.lang, function (err, code) {
-            if (err) return done(err);
-
-            if (code == null || code === token.text) {
-              return --pending || done();
-            }
-
-            token.text = code;
-            token.escaped = true;
-            --pending || done();
-          });
-        })(tokens[i]);
-      }
-
-      return;
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
     }
 
-    try {
-      if (opt) opt = merge({}, marked.defaults, opt);
-      return Parser.parse(Lexer.lex(src, opt), opt);
-    } catch (e) {
-      e.message += '\nPlease report this to https://github.com/markedjs/marked.';
+    return;
+  }
 
-      if ((opt || marked.defaults).silent) {
-        return '<p>An error occurred:</p><pre>' + escape(e.message + '', true) + '</pre>';
-      }
+  try {
+    opt = merge({}, marked.defaults, opt || {});
+    checkSanitizeDeprecation(opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/markedjs/marked.';
 
-      throw e;
+    if ((opt || marked.defaults).silent) {
+      return '<p>An error occurred:</p><pre>' + escape(e.message + '', true) + '</pre>';
     }
+
+    throw e;
   }
-  /**
-   * Options
-   */
+}
+/**
+ * Options
+ */
 
 
-  marked.options = marked.setOptions = function (opt) {
-    merge(marked.defaults, opt);
-    return marked;
-  };
+marked.options = marked.setOptions = function (opt) {
+  merge(marked.defaults, opt);
+  changeDefaults(marked.defaults);
+  return marked;
+};
 
-  marked.getDefaults = function () {
-    return {
-      baseUrl: null,
-      breaks: false,
-      gfm: true,
-      headerIds: true,
-      headerPrefix: '',
-      highlight: null,
-      langPrefix: 'language-',
-      mangle: true,
-      pedantic: false,
-      renderer: new Renderer(),
-      sanitize: false,
-      sanitizer: null,
-      silent: false,
-      smartLists: false,
-      smartypants: false,
-      tables: true,
-      xhtml: false
-    };
-  };
+marked.getDefaults = getDefaults;
+marked.defaults = defaults;
+/**
+ * Use Extension
+ */
 
-  marked.defaults = marked.getDefaults();
-  /**
-   * Expose
-   */
+marked.use = function (extension) {
+  const opts = merge({}, extension);
 
-  marked.Parser = Parser;
-  marked.parser = Parser.parse;
-  marked.Renderer = Renderer;
-  marked.TextRenderer = TextRenderer;
-  marked.Lexer = Lexer;
-  marked.lexer = Lexer.lex;
-  marked.InlineLexer = InlineLexer;
-  marked.inlineLexer = InlineLexer.output;
-  marked.Slugger = Slugger;
-  marked.parse = marked;
+  if (extension.renderer) {
+    const renderer = marked.defaults.renderer || new Renderer();
 
-  if (typeof module !== 'undefined' && typeof exports === 'object') {
-    module.exports = marked;
-  } else if (typeof define === 'function' && define.amd) {
-    define(function () {
-      return marked;
-    });
-  } else {
-    root.marked = marked;
+    for (const prop in extension.renderer) {
+      const prevRenderer = renderer[prop];
+
+      renderer[prop] = (...args) => {
+        let ret = extension.renderer[prop].apply(renderer, args);
+
+        if (ret === false) {
+          ret = prevRenderer.apply(renderer, args);
+        }
+
+        return ret;
+      };
+    }
+
+    opts.renderer = renderer;
   }
-})(this || (typeof window !== 'undefined' ? window : global));
-},{}],"src/layouts/SidebarLayout.vue":[function(require,module,exports) {
+
+  if (extension.tokenizer) {
+    const tokenizer = marked.defaults.tokenizer || new Tokenizer();
+
+    for (const prop in extension.tokenizer) {
+      const prevTokenizer = tokenizer[prop];
+
+      tokenizer[prop] = (...args) => {
+        let ret = extension.tokenizer[prop].apply(tokenizer, args);
+
+        if (ret === false) {
+          ret = prevTokenizer.apply(tokenizer, args);
+        }
+
+        return ret;
+      };
+    }
+
+    opts.tokenizer = tokenizer;
+  }
+
+  marked.setOptions(opts);
+};
+/**
+ * Expose
+ */
+
+
+marked.Parser = Parser;
+marked.parser = Parser.parse;
+marked.Renderer = Renderer;
+marked.TextRenderer = TextRenderer;
+marked.Lexer = Lexer;
+marked.lexer = Lexer.lex;
+marked.Tokenizer = Tokenizer;
+marked.Slugger = Slugger;
+marked.parse = marked;
+module.exports = marked;
+},{"./Lexer.js":"node_modules/marked/src/Lexer.js","./Parser.js":"node_modules/marked/src/Parser.js","./Tokenizer.js":"node_modules/marked/src/Tokenizer.js","./Renderer.js":"node_modules/marked/src/Renderer.js","./TextRenderer.js":"node_modules/marked/src/TextRenderer.js","./Slugger.js":"node_modules/marked/src/Slugger.js","./helpers.js":"node_modules/marked/src/helpers.js","./defaults.js":"node_modules/marked/src/defaults.js"}],"src/layouts/SidebarLayout.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38346,7 +39040,7 @@ render._withStripped = true
       
       }
     })();
-},{"marked":"node_modules/marked/lib/marked.js","../db.json":"src/db.json","../layouts/SidebarLayout":"src/layouts/SidebarLayout.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/highlight.js/lib/highlight.js":[function(require,module,exports) {
+},{"marked":"node_modules/marked/src/marked.js","../db.json":"src/db.json","../layouts/SidebarLayout":"src/layouts/SidebarLayout.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/highlight.js/lib/highlight.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /*
@@ -61890,102 +62584,7 @@ hljs.registerLanguage('xquery', require('./languages/xquery'));
 hljs.registerLanguage('zephir', require('./languages/zephir'));
 
 module.exports = hljs;
-},{"./highlight":"node_modules/highlight.js/lib/highlight.js","./languages/1c":"node_modules/highlight.js/lib/languages/1c.js","./languages/abnf":"node_modules/highlight.js/lib/languages/abnf.js","./languages/accesslog":"node_modules/highlight.js/lib/languages/accesslog.js","./languages/actionscript":"node_modules/highlight.js/lib/languages/actionscript.js","./languages/ada":"node_modules/highlight.js/lib/languages/ada.js","./languages/angelscript":"node_modules/highlight.js/lib/languages/angelscript.js","./languages/apache":"node_modules/highlight.js/lib/languages/apache.js","./languages/applescript":"node_modules/highlight.js/lib/languages/applescript.js","./languages/arcade":"node_modules/highlight.js/lib/languages/arcade.js","./languages/cpp":"node_modules/highlight.js/lib/languages/cpp.js","./languages/arduino":"node_modules/highlight.js/lib/languages/arduino.js","./languages/armasm":"node_modules/highlight.js/lib/languages/armasm.js","./languages/xml":"node_modules/highlight.js/lib/languages/xml.js","./languages/asciidoc":"node_modules/highlight.js/lib/languages/asciidoc.js","./languages/aspectj":"node_modules/highlight.js/lib/languages/aspectj.js","./languages/autohotkey":"node_modules/highlight.js/lib/languages/autohotkey.js","./languages/autoit":"node_modules/highlight.js/lib/languages/autoit.js","./languages/avrasm":"node_modules/highlight.js/lib/languages/avrasm.js","./languages/awk":"node_modules/highlight.js/lib/languages/awk.js","./languages/axapta":"node_modules/highlight.js/lib/languages/axapta.js","./languages/bash":"node_modules/highlight.js/lib/languages/bash.js","./languages/basic":"node_modules/highlight.js/lib/languages/basic.js","./languages/bnf":"node_modules/highlight.js/lib/languages/bnf.js","./languages/brainfuck":"node_modules/highlight.js/lib/languages/brainfuck.js","./languages/cal":"node_modules/highlight.js/lib/languages/cal.js","./languages/capnproto":"node_modules/highlight.js/lib/languages/capnproto.js","./languages/ceylon":"node_modules/highlight.js/lib/languages/ceylon.js","./languages/clean":"node_modules/highlight.js/lib/languages/clean.js","./languages/clojure":"node_modules/highlight.js/lib/languages/clojure.js","./languages/clojure-repl":"node_modules/highlight.js/lib/languages/clojure-repl.js","./languages/cmake":"node_modules/highlight.js/lib/languages/cmake.js","./languages/coffeescript":"node_modules/highlight.js/lib/languages/coffeescript.js","./languages/coq":"node_modules/highlight.js/lib/languages/coq.js","./languages/cos":"node_modules/highlight.js/lib/languages/cos.js","./languages/crmsh":"node_modules/highlight.js/lib/languages/crmsh.js","./languages/crystal":"node_modules/highlight.js/lib/languages/crystal.js","./languages/cs":"node_modules/highlight.js/lib/languages/cs.js","./languages/csp":"node_modules/highlight.js/lib/languages/csp.js","./languages/css":"node_modules/highlight.js/lib/languages/css.js","./languages/d":"node_modules/highlight.js/lib/languages/d.js","./languages/markdown":"node_modules/highlight.js/lib/languages/markdown.js","./languages/dart":"node_modules/highlight.js/lib/languages/dart.js","./languages/delphi":"node_modules/highlight.js/lib/languages/delphi.js","./languages/diff":"node_modules/highlight.js/lib/languages/diff.js","./languages/django":"node_modules/highlight.js/lib/languages/django.js","./languages/dns":"node_modules/highlight.js/lib/languages/dns.js","./languages/dockerfile":"node_modules/highlight.js/lib/languages/dockerfile.js","./languages/dos":"node_modules/highlight.js/lib/languages/dos.js","./languages/dsconfig":"node_modules/highlight.js/lib/languages/dsconfig.js","./languages/dts":"node_modules/highlight.js/lib/languages/dts.js","./languages/dust":"node_modules/highlight.js/lib/languages/dust.js","./languages/ebnf":"node_modules/highlight.js/lib/languages/ebnf.js","./languages/elixir":"node_modules/highlight.js/lib/languages/elixir.js","./languages/elm":"node_modules/highlight.js/lib/languages/elm.js","./languages/ruby":"node_modules/highlight.js/lib/languages/ruby.js","./languages/erb":"node_modules/highlight.js/lib/languages/erb.js","./languages/erlang-repl":"node_modules/highlight.js/lib/languages/erlang-repl.js","./languages/erlang":"node_modules/highlight.js/lib/languages/erlang.js","./languages/excel":"node_modules/highlight.js/lib/languages/excel.js","./languages/fix":"node_modules/highlight.js/lib/languages/fix.js","./languages/flix":"node_modules/highlight.js/lib/languages/flix.js","./languages/fortran":"node_modules/highlight.js/lib/languages/fortran.js","./languages/fsharp":"node_modules/highlight.js/lib/languages/fsharp.js","./languages/gams":"node_modules/highlight.js/lib/languages/gams.js","./languages/gauss":"node_modules/highlight.js/lib/languages/gauss.js","./languages/gcode":"node_modules/highlight.js/lib/languages/gcode.js","./languages/gherkin":"node_modules/highlight.js/lib/languages/gherkin.js","./languages/glsl":"node_modules/highlight.js/lib/languages/glsl.js","./languages/gml":"node_modules/highlight.js/lib/languages/gml.js","./languages/go":"node_modules/highlight.js/lib/languages/go.js","./languages/golo":"node_modules/highlight.js/lib/languages/golo.js","./languages/gradle":"node_modules/highlight.js/lib/languages/gradle.js","./languages/groovy":"node_modules/highlight.js/lib/languages/groovy.js","./languages/haml":"node_modules/highlight.js/lib/languages/haml.js","./languages/handlebars":"node_modules/highlight.js/lib/languages/handlebars.js","./languages/haskell":"node_modules/highlight.js/lib/languages/haskell.js","./languages/haxe":"node_modules/highlight.js/lib/languages/haxe.js","./languages/hsp":"node_modules/highlight.js/lib/languages/hsp.js","./languages/htmlbars":"node_modules/highlight.js/lib/languages/htmlbars.js","./languages/http":"node_modules/highlight.js/lib/languages/http.js","./languages/hy":"node_modules/highlight.js/lib/languages/hy.js","./languages/inform7":"node_modules/highlight.js/lib/languages/inform7.js","./languages/ini":"node_modules/highlight.js/lib/languages/ini.js","./languages/irpf90":"node_modules/highlight.js/lib/languages/irpf90.js","./languages/isbl":"node_modules/highlight.js/lib/languages/isbl.js","./languages/java":"node_modules/highlight.js/lib/languages/java.js","./languages/javascript":"node_modules/highlight.js/lib/languages/javascript.js","./languages/jboss-cli":"node_modules/highlight.js/lib/languages/jboss-cli.js","./languages/json":"node_modules/highlight.js/lib/languages/json.js","./languages/julia":"node_modules/highlight.js/lib/languages/julia.js","./languages/julia-repl":"node_modules/highlight.js/lib/languages/julia-repl.js","./languages/kotlin":"node_modules/highlight.js/lib/languages/kotlin.js","./languages/lasso":"node_modules/highlight.js/lib/languages/lasso.js","./languages/ldif":"node_modules/highlight.js/lib/languages/ldif.js","./languages/leaf":"node_modules/highlight.js/lib/languages/leaf.js","./languages/less":"node_modules/highlight.js/lib/languages/less.js","./languages/lisp":"node_modules/highlight.js/lib/languages/lisp.js","./languages/livecodeserver":"node_modules/highlight.js/lib/languages/livecodeserver.js","./languages/livescript":"node_modules/highlight.js/lib/languages/livescript.js","./languages/llvm":"node_modules/highlight.js/lib/languages/llvm.js","./languages/lsl":"node_modules/highlight.js/lib/languages/lsl.js","./languages/lua":"node_modules/highlight.js/lib/languages/lua.js","./languages/makefile":"node_modules/highlight.js/lib/languages/makefile.js","./languages/mathematica":"node_modules/highlight.js/lib/languages/mathematica.js","./languages/matlab":"node_modules/highlight.js/lib/languages/matlab.js","./languages/maxima":"node_modules/highlight.js/lib/languages/maxima.js","./languages/mel":"node_modules/highlight.js/lib/languages/mel.js","./languages/mercury":"node_modules/highlight.js/lib/languages/mercury.js","./languages/mipsasm":"node_modules/highlight.js/lib/languages/mipsasm.js","./languages/mizar":"node_modules/highlight.js/lib/languages/mizar.js","./languages/perl":"node_modules/highlight.js/lib/languages/perl.js","./languages/mojolicious":"node_modules/highlight.js/lib/languages/mojolicious.js","./languages/monkey":"node_modules/highlight.js/lib/languages/monkey.js","./languages/moonscript":"node_modules/highlight.js/lib/languages/moonscript.js","./languages/n1ql":"node_modules/highlight.js/lib/languages/n1ql.js","./languages/nginx":"node_modules/highlight.js/lib/languages/nginx.js","./languages/nimrod":"node_modules/highlight.js/lib/languages/nimrod.js","./languages/nix":"node_modules/highlight.js/lib/languages/nix.js","./languages/nsis":"node_modules/highlight.js/lib/languages/nsis.js","./languages/objectivec":"node_modules/highlight.js/lib/languages/objectivec.js","./languages/ocaml":"node_modules/highlight.js/lib/languages/ocaml.js","./languages/openscad":"node_modules/highlight.js/lib/languages/openscad.js","./languages/oxygene":"node_modules/highlight.js/lib/languages/oxygene.js","./languages/parser3":"node_modules/highlight.js/lib/languages/parser3.js","./languages/pf":"node_modules/highlight.js/lib/languages/pf.js","./languages/pgsql":"node_modules/highlight.js/lib/languages/pgsql.js","./languages/php":"node_modules/highlight.js/lib/languages/php.js","./languages/plaintext":"node_modules/highlight.js/lib/languages/plaintext.js","./languages/pony":"node_modules/highlight.js/lib/languages/pony.js","./languages/powershell":"node_modules/highlight.js/lib/languages/powershell.js","./languages/processing":"node_modules/highlight.js/lib/languages/processing.js","./languages/profile":"node_modules/highlight.js/lib/languages/profile.js","./languages/prolog":"node_modules/highlight.js/lib/languages/prolog.js","./languages/properties":"node_modules/highlight.js/lib/languages/properties.js","./languages/protobuf":"node_modules/highlight.js/lib/languages/protobuf.js","./languages/puppet":"node_modules/highlight.js/lib/languages/puppet.js","./languages/purebasic":"node_modules/highlight.js/lib/languages/purebasic.js","./languages/python":"node_modules/highlight.js/lib/languages/python.js","./languages/q":"node_modules/highlight.js/lib/languages/q.js","./languages/qml":"node_modules/highlight.js/lib/languages/qml.js","./languages/r":"node_modules/highlight.js/lib/languages/r.js","./languages/reasonml":"node_modules/highlight.js/lib/languages/reasonml.js","./languages/rib":"node_modules/highlight.js/lib/languages/rib.js","./languages/roboconf":"node_modules/highlight.js/lib/languages/roboconf.js","./languages/routeros":"node_modules/highlight.js/lib/languages/routeros.js","./languages/rsl":"node_modules/highlight.js/lib/languages/rsl.js","./languages/ruleslanguage":"node_modules/highlight.js/lib/languages/ruleslanguage.js","./languages/rust":"node_modules/highlight.js/lib/languages/rust.js","./languages/sas":"node_modules/highlight.js/lib/languages/sas.js","./languages/scala":"node_modules/highlight.js/lib/languages/scala.js","./languages/scheme":"node_modules/highlight.js/lib/languages/scheme.js","./languages/scilab":"node_modules/highlight.js/lib/languages/scilab.js","./languages/scss":"node_modules/highlight.js/lib/languages/scss.js","./languages/shell":"node_modules/highlight.js/lib/languages/shell.js","./languages/smali":"node_modules/highlight.js/lib/languages/smali.js","./languages/smalltalk":"node_modules/highlight.js/lib/languages/smalltalk.js","./languages/sml":"node_modules/highlight.js/lib/languages/sml.js","./languages/sqf":"node_modules/highlight.js/lib/languages/sqf.js","./languages/sql":"node_modules/highlight.js/lib/languages/sql.js","./languages/stan":"node_modules/highlight.js/lib/languages/stan.js","./languages/stata":"node_modules/highlight.js/lib/languages/stata.js","./languages/step21":"node_modules/highlight.js/lib/languages/step21.js","./languages/stylus":"node_modules/highlight.js/lib/languages/stylus.js","./languages/subunit":"node_modules/highlight.js/lib/languages/subunit.js","./languages/swift":"node_modules/highlight.js/lib/languages/swift.js","./languages/taggerscript":"node_modules/highlight.js/lib/languages/taggerscript.js","./languages/yaml":"node_modules/highlight.js/lib/languages/yaml.js","./languages/tap":"node_modules/highlight.js/lib/languages/tap.js","./languages/tcl":"node_modules/highlight.js/lib/languages/tcl.js","./languages/tex":"node_modules/highlight.js/lib/languages/tex.js","./languages/thrift":"node_modules/highlight.js/lib/languages/thrift.js","./languages/tp":"node_modules/highlight.js/lib/languages/tp.js","./languages/twig":"node_modules/highlight.js/lib/languages/twig.js","./languages/typescript":"node_modules/highlight.js/lib/languages/typescript.js","./languages/vala":"node_modules/highlight.js/lib/languages/vala.js","./languages/vbnet":"node_modules/highlight.js/lib/languages/vbnet.js","./languages/vbscript":"node_modules/highlight.js/lib/languages/vbscript.js","./languages/vbscript-html":"node_modules/highlight.js/lib/languages/vbscript-html.js","./languages/verilog":"node_modules/highlight.js/lib/languages/verilog.js","./languages/vhdl":"node_modules/highlight.js/lib/languages/vhdl.js","./languages/vim":"node_modules/highlight.js/lib/languages/vim.js","./languages/x86asm":"node_modules/highlight.js/lib/languages/x86asm.js","./languages/xl":"node_modules/highlight.js/lib/languages/xl.js","./languages/xquery":"node_modules/highlight.js/lib/languages/xquery.js","./languages/zephir":"node_modules/highlight.js/lib/languages/zephir.js"}],"src/views/Installation.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _highlight = _interopRequireDefault(require("highlight.js"));
-
-var _marked = _interopRequireDefault(require("marked"));
-
-var _installation = _interopRequireDefault(require("../markdown/installation.md"));
-
-var _Page = _interopRequireDefault(require("../layouts/Page"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-function removeWhiteSpace(string) {
-  return string.replace(/\n/g, "").replace(/[\t ]+\</g, "<").replace(/\>[\t ]+\</g, "><").replace(/\>[\t ]+$/g, ">");
-}
-
-_marked.default.setOptions({
-  highlight: function (code, lang) {
-    console.log("highlighting");
-    return `<div class="halla">${_highlight.default.highlight(lang, code).value}</div>`;
-  }
-});
-
-var _default = {
-  components: {
-    Page: _Page.default
-  },
-  methods: {
-    installation() {
-      return (0, _marked.default)(_installation.default);
-    }
-
-  }
-};
-exports.default = _default;
-        var $c50b63 = exports.default || module.exports;
-      
-      if (typeof $c50b63 === 'function') {
-        $c50b63 = $c50b63.options;
-      }
-    
-        /* template */
-        Object.assign($c50b63, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("Page", [
-    _c("div", {
-      staticClass: "markdown-body",
-      domProps: { innerHTML: _vm._s(_vm.installation()) }
-    })
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$c50b63', $c50b63);
-          } else {
-            api.reload('$c50b63', $c50b63);
-          }
-        }
-
-        
-      }
-    })();
-},{"highlight.js":"node_modules/highlight.js/lib/index.js","marked":"node_modules/marked/lib/marked.js","../markdown/installation.md":"src/markdown/installation.md","../layouts/Page":"src/layouts/Page.vue","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/views/GettingStarted.vue":[function(require,module,exports) {
+},{"./highlight":"node_modules/highlight.js/lib/highlight.js","./languages/1c":"node_modules/highlight.js/lib/languages/1c.js","./languages/abnf":"node_modules/highlight.js/lib/languages/abnf.js","./languages/accesslog":"node_modules/highlight.js/lib/languages/accesslog.js","./languages/actionscript":"node_modules/highlight.js/lib/languages/actionscript.js","./languages/ada":"node_modules/highlight.js/lib/languages/ada.js","./languages/angelscript":"node_modules/highlight.js/lib/languages/angelscript.js","./languages/apache":"node_modules/highlight.js/lib/languages/apache.js","./languages/applescript":"node_modules/highlight.js/lib/languages/applescript.js","./languages/arcade":"node_modules/highlight.js/lib/languages/arcade.js","./languages/cpp":"node_modules/highlight.js/lib/languages/cpp.js","./languages/arduino":"node_modules/highlight.js/lib/languages/arduino.js","./languages/armasm":"node_modules/highlight.js/lib/languages/armasm.js","./languages/xml":"node_modules/highlight.js/lib/languages/xml.js","./languages/asciidoc":"node_modules/highlight.js/lib/languages/asciidoc.js","./languages/aspectj":"node_modules/highlight.js/lib/languages/aspectj.js","./languages/autohotkey":"node_modules/highlight.js/lib/languages/autohotkey.js","./languages/autoit":"node_modules/highlight.js/lib/languages/autoit.js","./languages/avrasm":"node_modules/highlight.js/lib/languages/avrasm.js","./languages/awk":"node_modules/highlight.js/lib/languages/awk.js","./languages/axapta":"node_modules/highlight.js/lib/languages/axapta.js","./languages/bash":"node_modules/highlight.js/lib/languages/bash.js","./languages/basic":"node_modules/highlight.js/lib/languages/basic.js","./languages/bnf":"node_modules/highlight.js/lib/languages/bnf.js","./languages/brainfuck":"node_modules/highlight.js/lib/languages/brainfuck.js","./languages/cal":"node_modules/highlight.js/lib/languages/cal.js","./languages/capnproto":"node_modules/highlight.js/lib/languages/capnproto.js","./languages/ceylon":"node_modules/highlight.js/lib/languages/ceylon.js","./languages/clean":"node_modules/highlight.js/lib/languages/clean.js","./languages/clojure":"node_modules/highlight.js/lib/languages/clojure.js","./languages/clojure-repl":"node_modules/highlight.js/lib/languages/clojure-repl.js","./languages/cmake":"node_modules/highlight.js/lib/languages/cmake.js","./languages/coffeescript":"node_modules/highlight.js/lib/languages/coffeescript.js","./languages/coq":"node_modules/highlight.js/lib/languages/coq.js","./languages/cos":"node_modules/highlight.js/lib/languages/cos.js","./languages/crmsh":"node_modules/highlight.js/lib/languages/crmsh.js","./languages/crystal":"node_modules/highlight.js/lib/languages/crystal.js","./languages/cs":"node_modules/highlight.js/lib/languages/cs.js","./languages/csp":"node_modules/highlight.js/lib/languages/csp.js","./languages/css":"node_modules/highlight.js/lib/languages/css.js","./languages/d":"node_modules/highlight.js/lib/languages/d.js","./languages/markdown":"node_modules/highlight.js/lib/languages/markdown.js","./languages/dart":"node_modules/highlight.js/lib/languages/dart.js","./languages/delphi":"node_modules/highlight.js/lib/languages/delphi.js","./languages/diff":"node_modules/highlight.js/lib/languages/diff.js","./languages/django":"node_modules/highlight.js/lib/languages/django.js","./languages/dns":"node_modules/highlight.js/lib/languages/dns.js","./languages/dockerfile":"node_modules/highlight.js/lib/languages/dockerfile.js","./languages/dos":"node_modules/highlight.js/lib/languages/dos.js","./languages/dsconfig":"node_modules/highlight.js/lib/languages/dsconfig.js","./languages/dts":"node_modules/highlight.js/lib/languages/dts.js","./languages/dust":"node_modules/highlight.js/lib/languages/dust.js","./languages/ebnf":"node_modules/highlight.js/lib/languages/ebnf.js","./languages/elixir":"node_modules/highlight.js/lib/languages/elixir.js","./languages/elm":"node_modules/highlight.js/lib/languages/elm.js","./languages/ruby":"node_modules/highlight.js/lib/languages/ruby.js","./languages/erb":"node_modules/highlight.js/lib/languages/erb.js","./languages/erlang-repl":"node_modules/highlight.js/lib/languages/erlang-repl.js","./languages/erlang":"node_modules/highlight.js/lib/languages/erlang.js","./languages/excel":"node_modules/highlight.js/lib/languages/excel.js","./languages/fix":"node_modules/highlight.js/lib/languages/fix.js","./languages/flix":"node_modules/highlight.js/lib/languages/flix.js","./languages/fortran":"node_modules/highlight.js/lib/languages/fortran.js","./languages/fsharp":"node_modules/highlight.js/lib/languages/fsharp.js","./languages/gams":"node_modules/highlight.js/lib/languages/gams.js","./languages/gauss":"node_modules/highlight.js/lib/languages/gauss.js","./languages/gcode":"node_modules/highlight.js/lib/languages/gcode.js","./languages/gherkin":"node_modules/highlight.js/lib/languages/gherkin.js","./languages/glsl":"node_modules/highlight.js/lib/languages/glsl.js","./languages/gml":"node_modules/highlight.js/lib/languages/gml.js","./languages/go":"node_modules/highlight.js/lib/languages/go.js","./languages/golo":"node_modules/highlight.js/lib/languages/golo.js","./languages/gradle":"node_modules/highlight.js/lib/languages/gradle.js","./languages/groovy":"node_modules/highlight.js/lib/languages/groovy.js","./languages/haml":"node_modules/highlight.js/lib/languages/haml.js","./languages/handlebars":"node_modules/highlight.js/lib/languages/handlebars.js","./languages/haskell":"node_modules/highlight.js/lib/languages/haskell.js","./languages/haxe":"node_modules/highlight.js/lib/languages/haxe.js","./languages/hsp":"node_modules/highlight.js/lib/languages/hsp.js","./languages/htmlbars":"node_modules/highlight.js/lib/languages/htmlbars.js","./languages/http":"node_modules/highlight.js/lib/languages/http.js","./languages/hy":"node_modules/highlight.js/lib/languages/hy.js","./languages/inform7":"node_modules/highlight.js/lib/languages/inform7.js","./languages/ini":"node_modules/highlight.js/lib/languages/ini.js","./languages/irpf90":"node_modules/highlight.js/lib/languages/irpf90.js","./languages/isbl":"node_modules/highlight.js/lib/languages/isbl.js","./languages/java":"node_modules/highlight.js/lib/languages/java.js","./languages/javascript":"node_modules/highlight.js/lib/languages/javascript.js","./languages/jboss-cli":"node_modules/highlight.js/lib/languages/jboss-cli.js","./languages/json":"node_modules/highlight.js/lib/languages/json.js","./languages/julia":"node_modules/highlight.js/lib/languages/julia.js","./languages/julia-repl":"node_modules/highlight.js/lib/languages/julia-repl.js","./languages/kotlin":"node_modules/highlight.js/lib/languages/kotlin.js","./languages/lasso":"node_modules/highlight.js/lib/languages/lasso.js","./languages/ldif":"node_modules/highlight.js/lib/languages/ldif.js","./languages/leaf":"node_modules/highlight.js/lib/languages/leaf.js","./languages/less":"node_modules/highlight.js/lib/languages/less.js","./languages/lisp":"node_modules/highlight.js/lib/languages/lisp.js","./languages/livecodeserver":"node_modules/highlight.js/lib/languages/livecodeserver.js","./languages/livescript":"node_modules/highlight.js/lib/languages/livescript.js","./languages/llvm":"node_modules/highlight.js/lib/languages/llvm.js","./languages/lsl":"node_modules/highlight.js/lib/languages/lsl.js","./languages/lua":"node_modules/highlight.js/lib/languages/lua.js","./languages/makefile":"node_modules/highlight.js/lib/languages/makefile.js","./languages/mathematica":"node_modules/highlight.js/lib/languages/mathematica.js","./languages/matlab":"node_modules/highlight.js/lib/languages/matlab.js","./languages/maxima":"node_modules/highlight.js/lib/languages/maxima.js","./languages/mel":"node_modules/highlight.js/lib/languages/mel.js","./languages/mercury":"node_modules/highlight.js/lib/languages/mercury.js","./languages/mipsasm":"node_modules/highlight.js/lib/languages/mipsasm.js","./languages/mizar":"node_modules/highlight.js/lib/languages/mizar.js","./languages/perl":"node_modules/highlight.js/lib/languages/perl.js","./languages/mojolicious":"node_modules/highlight.js/lib/languages/mojolicious.js","./languages/monkey":"node_modules/highlight.js/lib/languages/monkey.js","./languages/moonscript":"node_modules/highlight.js/lib/languages/moonscript.js","./languages/n1ql":"node_modules/highlight.js/lib/languages/n1ql.js","./languages/nginx":"node_modules/highlight.js/lib/languages/nginx.js","./languages/nimrod":"node_modules/highlight.js/lib/languages/nimrod.js","./languages/nix":"node_modules/highlight.js/lib/languages/nix.js","./languages/nsis":"node_modules/highlight.js/lib/languages/nsis.js","./languages/objectivec":"node_modules/highlight.js/lib/languages/objectivec.js","./languages/ocaml":"node_modules/highlight.js/lib/languages/ocaml.js","./languages/openscad":"node_modules/highlight.js/lib/languages/openscad.js","./languages/oxygene":"node_modules/highlight.js/lib/languages/oxygene.js","./languages/parser3":"node_modules/highlight.js/lib/languages/parser3.js","./languages/pf":"node_modules/highlight.js/lib/languages/pf.js","./languages/pgsql":"node_modules/highlight.js/lib/languages/pgsql.js","./languages/php":"node_modules/highlight.js/lib/languages/php.js","./languages/plaintext":"node_modules/highlight.js/lib/languages/plaintext.js","./languages/pony":"node_modules/highlight.js/lib/languages/pony.js","./languages/powershell":"node_modules/highlight.js/lib/languages/powershell.js","./languages/processing":"node_modules/highlight.js/lib/languages/processing.js","./languages/profile":"node_modules/highlight.js/lib/languages/profile.js","./languages/prolog":"node_modules/highlight.js/lib/languages/prolog.js","./languages/properties":"node_modules/highlight.js/lib/languages/properties.js","./languages/protobuf":"node_modules/highlight.js/lib/languages/protobuf.js","./languages/puppet":"node_modules/highlight.js/lib/languages/puppet.js","./languages/purebasic":"node_modules/highlight.js/lib/languages/purebasic.js","./languages/python":"node_modules/highlight.js/lib/languages/python.js","./languages/q":"node_modules/highlight.js/lib/languages/q.js","./languages/qml":"node_modules/highlight.js/lib/languages/qml.js","./languages/r":"node_modules/highlight.js/lib/languages/r.js","./languages/reasonml":"node_modules/highlight.js/lib/languages/reasonml.js","./languages/rib":"node_modules/highlight.js/lib/languages/rib.js","./languages/roboconf":"node_modules/highlight.js/lib/languages/roboconf.js","./languages/routeros":"node_modules/highlight.js/lib/languages/routeros.js","./languages/rsl":"node_modules/highlight.js/lib/languages/rsl.js","./languages/ruleslanguage":"node_modules/highlight.js/lib/languages/ruleslanguage.js","./languages/rust":"node_modules/highlight.js/lib/languages/rust.js","./languages/sas":"node_modules/highlight.js/lib/languages/sas.js","./languages/scala":"node_modules/highlight.js/lib/languages/scala.js","./languages/scheme":"node_modules/highlight.js/lib/languages/scheme.js","./languages/scilab":"node_modules/highlight.js/lib/languages/scilab.js","./languages/scss":"node_modules/highlight.js/lib/languages/scss.js","./languages/shell":"node_modules/highlight.js/lib/languages/shell.js","./languages/smali":"node_modules/highlight.js/lib/languages/smali.js","./languages/smalltalk":"node_modules/highlight.js/lib/languages/smalltalk.js","./languages/sml":"node_modules/highlight.js/lib/languages/sml.js","./languages/sqf":"node_modules/highlight.js/lib/languages/sqf.js","./languages/sql":"node_modules/highlight.js/lib/languages/sql.js","./languages/stan":"node_modules/highlight.js/lib/languages/stan.js","./languages/stata":"node_modules/highlight.js/lib/languages/stata.js","./languages/step21":"node_modules/highlight.js/lib/languages/step21.js","./languages/stylus":"node_modules/highlight.js/lib/languages/stylus.js","./languages/subunit":"node_modules/highlight.js/lib/languages/subunit.js","./languages/swift":"node_modules/highlight.js/lib/languages/swift.js","./languages/taggerscript":"node_modules/highlight.js/lib/languages/taggerscript.js","./languages/yaml":"node_modules/highlight.js/lib/languages/yaml.js","./languages/tap":"node_modules/highlight.js/lib/languages/tap.js","./languages/tcl":"node_modules/highlight.js/lib/languages/tcl.js","./languages/tex":"node_modules/highlight.js/lib/languages/tex.js","./languages/thrift":"node_modules/highlight.js/lib/languages/thrift.js","./languages/tp":"node_modules/highlight.js/lib/languages/tp.js","./languages/twig":"node_modules/highlight.js/lib/languages/twig.js","./languages/typescript":"node_modules/highlight.js/lib/languages/typescript.js","./languages/vala":"node_modules/highlight.js/lib/languages/vala.js","./languages/vbnet":"node_modules/highlight.js/lib/languages/vbnet.js","./languages/vbscript":"node_modules/highlight.js/lib/languages/vbscript.js","./languages/vbscript-html":"node_modules/highlight.js/lib/languages/vbscript-html.js","./languages/verilog":"node_modules/highlight.js/lib/languages/verilog.js","./languages/vhdl":"node_modules/highlight.js/lib/languages/vhdl.js","./languages/vim":"node_modules/highlight.js/lib/languages/vim.js","./languages/x86asm":"node_modules/highlight.js/lib/languages/x86asm.js","./languages/xl":"node_modules/highlight.js/lib/languages/xl.js","./languages/xquery":"node_modules/highlight.js/lib/languages/xquery.js","./languages/zephir":"node_modules/highlight.js/lib/languages/zephir.js"}],"src/views/GettingStarted.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -62009,16 +62608,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-function removeWhiteSpace(string) {
-  return string.replace(/\n/g, "").replace(/[\t ]+\</g, "<").replace(/\>[\t ]+\</g, "><").replace(/\>[\t ]+$/g, ">");
-}
-
-_marked.default.setOptions({
+//
+//
+//
+//
+//
+//
+//
+//
+const options = {
   highlight: function (code, lang) {
     console.log("highlighting");
     return `<div class="halla">${_highlight.default.highlight(lang, code).value}</div>`;
   }
-});
+}; //marked.setOptions(options);
 
 var _default = {
   components: {
@@ -62026,7 +62629,9 @@ var _default = {
   },
   methods: {
     gettingstarted() {
-      return (0, _marked.default)(_gettingStarted.default);
+      const mark = _marked.default.setOptions(options);
+
+      return mark(_gettingStarted.default);
     }
 
   }
@@ -62044,12 +62649,49 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Page", [
-    _c("div", {
-      staticClass: "markdown-body",
-      domProps: { innerHTML: _vm._s(_vm.gettingstarted()) }
-    })
-  ])
+  return _c(
+    "Page",
+    [
+      _c(
+        "base-container",
+        [
+          _c("div", {
+            staticClass: "markdown-body",
+            domProps: { innerHTML: _vm._s(_vm.gettingstarted()) }
+          }),
+          _vm._v(" "),
+          _c(
+            "base-box",
+            { attrs: { "padding-y": "lg" } },
+            [
+              _c(
+                "base-button",
+                {
+                  attrs: { type: "secondary" },
+                  on: {
+                    click: function($event) {
+                      return _vm.$router.push("/components")
+                    }
+                  }
+                },
+                [
+                  _vm._v("\n        See the components\n        "),
+                  _c("ion-icon", {
+                    attrs: { slot: "append", name: "arrow-forward-outline" },
+                    slot: "append"
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -62084,7 +62726,7 @@ render._withStripped = true
       
       }
     })();
-},{"highlight.js":"node_modules/highlight.js/lib/index.js","marked":"node_modules/marked/lib/marked.js","../markdown/getting-started.md":"src/markdown/getting-started.md","../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
+},{"highlight.js":"node_modules/highlight.js/lib/index.js","marked":"node_modules/marked/src/marked.js","../markdown/getting-started.md":"src/markdown/getting-started.md","../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
@@ -62104,8 +62746,6 @@ var _Home = _interopRequireDefault(require("./views/Home"));
 var _Components = _interopRequireDefault(require("./views/Components"));
 
 var _Component = _interopRequireDefault(require("./views/Component"));
-
-var _Installation = _interopRequireDefault(require("./views/Installation"));
 
 var _GettingStarted = _interopRequireDefault(require("./views/GettingStarted"));
 
@@ -62141,14 +62781,6 @@ const router = new _vueRouter.default({
       hasSidebar: true
     }
   }, {
-    path: "/installation",
-    component: _Installation.default,
-    meta: {
-      title: "Installation",
-      showInHeader: true,
-      hasSidebar: false
-    }
-  }, {
     path: "/getting-started",
     component: _GettingStarted.default,
     meta: {
@@ -62176,7 +62808,7 @@ new _vue.default({
     return h(_App.default);
   }
 }).$mount("#app");
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/Installation":"src/views/Installation.vue","./views/GettingStarted":"src/views/GettingStarted.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/GettingStarted":"src/views/GettingStarted.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -62204,7 +62836,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58441" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52744" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -62470,6 +63102,6 @@ module.exports = function loadHTMLBundle(bundle) {
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require("node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("html",require("node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js"));b.load([["installation.09c2fe22.html","src/markdown/installation.md"],["getting-started.0e7cd387.html","src/markdown/getting-started.md"]]).then(function(){require("src/main.js");});
+var b=require("node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("html",require("node_modules/parcel-bundler/src/builtins/loaders/browser/html-loader.js"));b.load([["getting-started.0e7cd387.html","src/markdown/getting-started.md"]]).then(function(){require("src/main.js");});
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/main.1e43358e.js.map

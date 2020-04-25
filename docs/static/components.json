@@ -1783,11 +1783,6 @@
           "default": "false"
         },
         {
-          "name": "loading",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "full",
           "type": "boolean",
           "default": "false"
@@ -1806,14 +1801,12 @@
       ],
       "properties": [
         {
-          "name": "checked",
-          "attribute": "checked",
-          "type": "boolean",
-          "default": "false"
+          "name": "inputEl",
+          "type": "HTMLInputElement | null"
         },
         {
-          "name": "loading",
-          "attribute": "loading",
+          "name": "checked",
+          "attribute": "checked",
           "type": "boolean",
           "default": "false"
         },

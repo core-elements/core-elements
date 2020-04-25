@@ -12,6 +12,7 @@ export default {
   components: { Header },
   data() {
     return {
+      checked: false,
       showSidebar: false
     };
   }
@@ -38,8 +39,10 @@ body {
   scroll-behavior: smooth;
 }
 
-body.no-scroll-mobile {
-  overflow: hidden;
+@media (max-width: 800px) {
+  body.no-scroll-mobile {
+    overflow: hidden;
+  }
 }
 
 a {

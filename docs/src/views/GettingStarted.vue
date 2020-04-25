@@ -1,6 +1,14 @@
 <template>
   <Page>
-    <div class="markdown-body" v-html="gettingstarted()"></div>
+    <base-container>
+      <div class="markdown-body" v-html="gettingstarted()"></div>
+      <base-box padding-y="lg">
+        <base-button type="secondary" @click="$router.push('/components')">
+          See the components
+          <ion-icon slot="append" name="arrow-forward-outline"></ion-icon>
+        </base-button>
+      </base-box>
+    </base-container>
   </Page>
 </template>
 
@@ -10,26 +18,21 @@ import marked from "marked";
 import gettingstarted from "../markdown/getting-started.md";
 import Page from "../layouts/Page";
 
-function removeWhiteSpace(string) {
-  return string
-    .replace(/\n/g, "")
-    .replace(/[\t ]+\</g, "<")
-    .replace(/\>[\t ]+\</g, "><")
-    .replace(/\>[\t ]+$/g, ">");
-}
-
-marked.setOptions({
+const options = {
   highlight: function(code, lang) {
     console.log("highlighting");
     return `<div class="halla">${hljs.highlight(lang, code).value}</div>`;
   },
-});
+};
+
+//marked.setOptions(options);
 
 export default {
   components: { Page },
   methods: {
     gettingstarted() {
-      return marked(gettingstarted);
+      const mark = marked.setOptions(options);
+      return mark(gettingstarted);
     },
   },
 };
