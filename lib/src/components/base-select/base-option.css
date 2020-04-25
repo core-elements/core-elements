@@ -2,8 +2,8 @@
   --base-option-padding: 0 var(--base-space-sm);
   --base-option-bg-color: var(--base-color-white);
   --base-option-border-radius: 0;
-  --base-option-active-color: var(--base-color-focus-light);
-  --base-option-selected-color: var(--base-color-focus);
+  --base-option-active-color: var(--base-color-focus);
+  --base-option-selected-color: var(--base-color-focus-light);
   --base-option-font-color: var(--base-color-black);
   --base-option-min-height: var(--base-size-md);
 }
@@ -38,16 +38,16 @@
 }
 
 :host([active]:not([disabled])) {
-  --base-color-font-color: var(--base-color-black);
   --base-option-bg-color: var(--base-option-active-color);
+  --base-option-font-color: var(--base-color-white);
 }
 
 :host([selected]:not([active]):not([disabled])) {
   --base-option-bg-color: var(--base-option-selected-color);
-  --base-option-font-color: var(--base-color-white);
+  --base-option-font-color: var(--base-color-black);
 }
 
 :host([selected][active]) {
-  --base-option-bg-color: var(--base-option-selected-color);
+  --base-option-bg-color: var(--base-option-active-color);
   --base-option-font-color: var(--base-color-white);
 }

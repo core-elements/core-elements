@@ -35,10 +35,13 @@ category: Form
 ## Multiple
 
 <base-knobs hideTabs src="./components.json" name="base-select">
-  <base-select multiple>
+  <base-select full multiple list-open-on-select>
     <base-option value="Option 1" selected></base-option>
     <base-option value="Option 2"></base-option>
-    <base-option value="Option 3"></base-option>
+    <base-option value="Option 3" selected></base-option>
+    <base-option value="Option 4"></base-option>
+    <base-option value="Option 5" selected></base-option>
+    <base-option value="Option 6" selected></base-option>
   </base-select>
 </base-knobs>
 
