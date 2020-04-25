@@ -35540,7 +35540,7 @@ render._withStripped = true
   var _c = _vm._self._c || _h
   return _c(
     "base-box",
-    { attrs: { "margin-x": "sm" } },
+    { attrs: { "padding-x": "sm" } },
     [
       _c(
         "base-container",
