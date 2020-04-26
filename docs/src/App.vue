@@ -1,13 +1,7 @@
 <template>
   <div>
-    <Header
-      :showSidebar="showSidebar"
-      @toggle-sidebar="showSidebar = !showSidebar"
-    ></Header>
-    <router-view
-      :showSidebar="showSidebar"
-      @toggle-sidebar="showSidebar = !showSidebar"
-    ></router-view>
+    <Header :showSidebar="showSidebar" @toggle-sidebar="showSidebar = !showSidebar"></Header>
+    <router-view :showSidebar="showSidebar" @toggle-sidebar="showSidebar = !showSidebar"></router-view>
   </div>
 </template>
 
@@ -19,9 +13,9 @@ export default {
   data() {
     return {
       checked: false,
-      showSidebar: false,
+      showSidebar: false
     };
-  },
+  }
 };
 </script>
 

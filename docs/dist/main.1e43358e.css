@@ -18,6 +18,7 @@
 }
 
 .header__route-menu-button {
+  color: var(--base-color-font);
   border: 0;
   font-size: 1rem;
   display: flex;
@@ -93,8 +94,9 @@
 }
 
 .header__menu-button {
+  color: var(--base-color-font-dark);
   border: 0;
-  padding: 0;
+  padding: 0 var(--base-space-sm);
   display: flex;
   align-items: center;
   justify-self: center;
@@ -113,10 +115,6 @@
   }
 
   .header__route-menu-button {
-    display: none;
-  }
-
-  .header__route-menu-button ion-icon {
     display: none;
   }
 
@@ -1190,7 +1188,7 @@ b {
   position: fixed;
   z-index: 500;
   display: none;
-  background: white;
+  background: var(--base-color-white);
   font-size: 1.5em;
   height: calc(100vh - 60px);
   overflow-y: scroll;

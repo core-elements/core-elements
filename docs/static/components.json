@@ -368,8 +368,7 @@
       "attributes": [
         {
           "name": "checked",
-          "type": "boolean",
-          "default": "false"
+          "type": "boolean"
         },
         {
           "name": "full",
@@ -395,10 +394,13 @@
       ],
       "properties": [
         {
+          "name": "inputEl",
+          "type": "HTMLInputElement | null"
+        },
+        {
           "name": "checked",
           "attribute": "checked",
-          "type": "boolean",
-          "default": "false"
+          "type": "boolean"
         },
         {
           "name": "full",
@@ -429,9 +431,6 @@
       "events": [
         {
           "name": "change"
-        },
-        {
-          "name": "input"
         }
       ]
     },
@@ -466,13 +465,13 @@
       "path": "./../../lib/src/components/base-flex/base-flex.js",
       "attributes": [
         {
-          "name": "justify",
+          "name": "justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
-          "name": "align",
+          "name": "align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -489,13 +488,13 @@
           "default": "false"
         },
         {
-          "name": "sm-justify",
+          "name": "sm-justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
-          "name": "sm-align",
+          "name": "sm-align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -512,13 +511,13 @@
           "default": "false"
         },
         {
-          "name": "md-justify",
+          "name": "md-justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
-          "name": "md-align",
+          "name": "md-align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -535,13 +534,13 @@
           "default": "false"
         },
         {
-          "name": "lg-justify",
+          "name": "lg-justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
-          "name": "lg-align",
+          "name": "lg-align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -561,14 +560,14 @@
       "properties": [
         {
           "name": "j",
-          "attribute": "justify",
+          "attribute": "justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
           "name": "a",
-          "attribute": "align",
+          "attribute": "align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -588,14 +587,14 @@
         },
         {
           "name": "sJ",
-          "attribute": "sm-justify",
+          "attribute": "sm-justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
           "name": "sA",
-          "attribute": "sm-align",
+          "attribute": "sm-align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -615,14 +614,14 @@
         },
         {
           "name": "mJ",
-          "attribute": "md-justify",
+          "attribute": "md-justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
           "name": "mA",
-          "attribute": "md-align",
+          "attribute": "md-align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""
@@ -642,14 +641,14 @@
         },
         {
           "name": "lJ",
-          "attribute": "lg-justify",
+          "attribute": "lg-justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
           "default": "\"\""
         },
         {
           "name": "lA",
-          "attribute": "lg-align",
+          "attribute": "lg-align-items",
           "description": "Align items",
           "type": "\"start\"|\"center\"|\"end\"",
           "default": "\"\""

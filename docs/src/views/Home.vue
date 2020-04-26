@@ -1,27 +1,40 @@
 <template>
   <div>
     <Page class="landing">
-      <base-grid columns="8" gap="xl" gap-sm="md">
-        <base-grid-item sm="8" md="3">
+      <base-grid columns="12" gap-xl="xl" gap-sm="md">
+        <base-grid-item sm="12" md="9" lg="6">
           <base-text tag="h1" weight="400">
             <b>Base Elements</b> is a free collection of essential UI components
             for any web application
           </base-text>
           <base-text tag="p" look="lead">
             Components that work in
-            <b>React</b>, <b>Vue</b>, <b>Angular</b>, or any other framwork.
+            <b>React</b>,
+            <b>Vue</b>,
+            <b>Angular</b>, or any other framwork.
           </base-text>
           <base-box margin-y="md">
-            <router-link tag="base-button" to="/getting-started" type="primary"
-              >Get Started</router-link
-            >
-            <router-link tag="base-button" to="/components" type="secondary"
-              >Components</router-link
-            >
+            <router-link tag="base-button" to="/getting-started" type="primary">Get Started</router-link>
+            <router-link tag="base-button" to="/components" type="secondary">Components</router-link>
           </base-box>
+          <base-box margin-y="md">
+            <base-tabs
+              @change="(e) => (installMethod = e.target.value)"
+              :value="installMethod"
+            >
+              <base-tab>NPM</base-tab>
+              <base-tab>CDN</base-tab>
+            </base-tabs>
+            <pre
+              v-if="installMethod === 'NPM'"
+            ><code align="center" class="hljs">npm install --save base-elements</code></pre>
+            <pre v-if="installMethod === 'CDN'">
+              <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/base-elements"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<!----></code>
+    </base-box>
         </base-grid-item>
 
-        <base-grid-item sm="8" md="5">
+        <base-grid-item sm="12" md="12" lg="6">
           <base-box depth="md" padding-y="lg" padding-x="lg">
             <base-text tag="h2">Examples</base-text>
             <base-grid columns="2">
@@ -49,7 +62,10 @@
                 </base-select>
               </base-grid-item>
               <base-grid-item sm="2" md="1">
-                <base-toggle :checked="darkMode" @change="e => darkMode = e.target.checked">Dark mode</base-toggle>
+                <base-toggle
+                  :checked="darkMode"
+                  @change="e => darkMode = e.target.checked"
+                >Dark mode</base-toggle>
               </base-grid-item>
               <base-grid-item sm="2" md="1">
                 <base-tabs>
@@ -59,40 +75,18 @@
                 </base-tabs>
               </base-grid-item>
               <base-grid-item sm="2" md="1">
-                <base-modal
-                    @toggle="(e) => (modalOpen = e.open)"
-                    :open="modalOpen"
-                  >
-                    <header slot="header">Title</header>
-                    <div>Content</div>
-                  </base-modal>
+                <base-modal @toggle="(e) => (modalOpen = e.open)" :open="modalOpen">
+                  <header slot="header">Title</header>
+                  <div>Content</div>
+                </base-modal>
 
-                  <base-button type="primary" @click="modalOpen = true"
-                    >Show modal</base-button
-                  >
-               </base-grid-item>
+                <base-button type="primary" @click="modalOpen = true">Show modal</base-button>
+              </base-grid-item>
             </base-grid>
           </base-box>
         </base-grid-item>
       </base-grid>
-      <base-container size="xs">
-      <base-box margin-y="md">
-            <base-tabs
-              @change="(e) => (installMethod = e.target.value)"
-              :value="installMethod"
-            >
-              <base-tab>NPM</base-tab>
-              <base-tab>CDN</base-tab>
-            </base-tabs>
-            <pre
-              v-if="installMethod === 'NPM'"
-            ><code align="center" class="hljs">npm install --save base-elements</code></pre>
-            <pre v-if="installMethod === 'CDN'">
-              <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/base-elements"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<!----></code>
-    </base-box>
-    </base-container>
-    </Page>
+
   </div>
 </template>
 
@@ -102,26 +96,25 @@ import Page from "../layouts/Page";
 export default {
   components: { Page },
   mounted() {
-    this.darkMode = document.body.hasAttribute('mode')
+    this.darkMode = document.body.hasAttribute("mode");
   },
   data() {
     return {
       darkMode: false,
       installMethod: "NPM",
-      modalOpen: false,
+      modalOpen: false
     };
   },
   watch: {
     darkMode: val => {
-      if (val) document.body.setAttribute('mode', 'dark');
-      else document.body.removeAttribute('mode')
+      if (val) document.body.setAttribute("mode", "dark");
+      else document.body.removeAttribute("mode");
     }
-  },
+  }
 };
 </script>
 
 <style>
-
 .landing {
   padding-top: 60px;
 }

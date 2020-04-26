@@ -1,0 +1,21 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+}
+
+:host([full]) {
+  display: flex;
+  width: 100%;
+}
+
+:host([position="left"]) {
+  justify-content: flex-start;
+}
+
+:host([position="center"]) {
+  justify-content: center;
+}
+
+:host([position="right"]) {
+  justify-content: flex-end;
+}

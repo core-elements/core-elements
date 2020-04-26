@@ -5,7 +5,7 @@
       <base-box padding-y="lg">
         <base-button type="secondary" @click="$router.push('/components')">
           See the components
-          <ion-icon slot="append" name="arrow-forward-outline"></ion-icon>
+          <i slot="append" class="gg-arrow-right"></i>
         </base-button>
       </base-box>
     </base-container>
@@ -22,7 +22,7 @@ const options = {
   highlight: function(code, lang) {
     console.log("highlighting");
     return `<div class="halla">${hljs.highlight(lang, code).value}</div>`;
-  },
+  }
 };
 
 //marked.setOptions(options);
@@ -33,8 +33,8 @@ export default {
     gettingstarted() {
       const mark = marked.setOptions(options);
       return mark(gettingstarted);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -11,7 +11,11 @@
   width: 100%;
 }
 
-button {
+:host([disabled]) {
+  opacity: 0.5;
+}
+
+:host {
   border: 0;
   color: var(--base-color-font-light);
   font-size: var(--base-font-size-sm);
@@ -24,16 +28,16 @@ button {
   border-bottom: 2px solid transparent;
 }
 
-button:hover {
+:host(:hover) {
   border-bottom: 2px solid var(--base-color-ui-light);
 }
 
-button:focus {
+:host(:focus) {
   border-bottom: 2px solid var(--base-color-ui-light);
   color: var(--base-color-font-dark);
 }
 
-:host([selected]) button {
+:host([selected]) {
   color: var(--base-color-font-dark);
   border-bottom: 2px solid var(--base-color-focus);
 }

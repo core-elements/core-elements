@@ -110,7 +110,7 @@
   --base-color-focus-dark: var(--base-color-primary-dark);
 
   --base-color-secondary-hue: 400;
-  --base-color-secondary: hsl(var(--base-color-secondary-hue), 100%, 95%);
+  --base-color-secondary: hsl(var(--base-color-secondary-hue), 100%, 100%);
   --base-color-secondary-dark: hsl(var(--base-color-secondary-hue), 100%, 90%);
 
   --base-color-success-hue: 140;
@@ -138,12 +138,12 @@
   --base-color-font-dark: hsl(var(--base-color-ui-hue), 0%, 100%);
 }
 
-[mode="dark"] base-button[type="secondary"]::part(button) {
+[mode="dark"] base-button[type="secondary"] {
   --base-button-bg-color: var(--base-color-black);
   --base-button-text-color: var(--base-color-white);
 }
 
-[mode="dark"] base-button[type="secondary"]::part(button):hover {
+[mode="dark"] base-button[type="secondary"]:hover {
   --base-button-bg-color: var(--base-color-black);
   --base-button-text-color: var(--base-color-white);
 }

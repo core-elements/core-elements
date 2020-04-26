@@ -9,23 +9,20 @@
   --base-button-transform: scale(1);
   --base-button-transition: all 0.2s ease;
   --base-button-cursor: pointer;
-  --base-button-display: inline-block;
+  --base-button-display: inline-flex;
   --base-button-height: var(--base-size-md);
 }
 
 :host {
+  display: var(--base-button-display);
   vertical-align: middle;
   margin-bottom: var(--base-space-xs);
+  align-items: center;
+  justify-content: center;
 }
 
-:host,
-:host button {
-  display: inline-block;
-}
-
-:host([full]),
-:host button {
-  display: block;
+:host([full]) {
+  --base-button-display: flex;
   width: 100%;
 }
 
@@ -44,7 +41,7 @@
   --base-button-padding: 0 var(--base-space-lg);
 }
 
-:host button {
+:host {
   height: var(--base-button-height);
   outline: 0;
   color: var(--base-button-text-color);
@@ -60,69 +57,69 @@
   transition: var(--base-button-transition);
 }
 
-:host button:hover {
+:host(:hover) {
   --base-button-bg-color: var(--base-color-ui-light);
 }
 
-:host button:focus {
+:host(:focus) {
   --base-button-box-shadow: 0 0 0 2px var(--base-color-focus);
+}
+
+:host([disabled]) {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Types */
 
-:host[full] button {
-  width: 100%;
-  display: block;
-}
-
-:host([type="primary"]) button {
+:host([type="primary"]) {
   --base-button-bg-color: var(--base-color-primary);
   --base-button-text-color: var(--base-color-white);
 }
 
-:host([type="primary"]) button:hover {
+:host([type="primary"]:hover) {
   --base-button-bg-color: var(--base-color-primary-dark);
 }
 
-:host([type="secondary"]) button {
+:host([type="secondary"]) {
   --base-button-bg-color: var(--base-color-secondary);
   --base-button-text-color: var(--base-color-primary);
 }
 
-:host([type="secondary"]) button:hover {
+:host([type="secondary"]:hover) {
   --base-button-bg-color: var(--base-color-secondary-dark);
 }
 
-:host([type="transparent"]) button {
+:host([type="transparent"]) {
   --base-button-bg-color: transparent;
   --base-button-text-color: var(--base-color-black);
 }
 
-:host([type="transparent"]) button:hover {
+:host([type="transparent"]:hover) {
   --base-button-bg-color: var(--base-color-ui-lighter);
 }
 
-:host([type="success"]) button {
+:host([type="success"]) {
   --base-button-bg-color: var(--base-color-success);
   --base-button-text-color: var(--base-color-white);
 }
 
-:host([type="success"]) button:hover {
+:host([type="success"]:hover) {
   --base-button-bg-color: var(--base-color-success-dark);
 }
 
-:host([type="danger"]) button {
+:host([type="danger"]) {
   --base-button-bg-color: var(--base-color-danger);
   --base-button-text-color: var(--base-color-white);
 }
 
-:host([type="danger"]) button:hover {
+:host([type="danger"]:hover) {
   --base-button-bg-color: var(--base-color-danger-dark);
 }
 
 /* Styles */
 
-:host([outline]) button {
+:host([outline]) {
   --base-button-border: 2px solid var(--base-button-bg-color);
   color: var(--base-button-bg-color);
   background: none !important;

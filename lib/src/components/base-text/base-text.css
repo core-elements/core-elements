@@ -1,6 +1,14 @@
 :host {
+  --base-font-size: var(--base-font-size-sm);
+  --base-font-weight: 400;
+}
+
+:host,
+:host > *:first-child {
   display: inline-block;
   text-align: left;
+  font-weight: var(--base-font-weight);
+  font-size: var(--base-font-size);
 }
 
 :host([inline]),
@@ -16,34 +24,43 @@
 
 :host([tag="h1"]) > *:first-child,
 :host([look="h1"]) > *:first-child {
-  font-size: var(--base-font-size-xl);
+  --base-font-size: var(--base-font-size-xl);
+  --base-font-weight: 700;
 }
 
 :host([tag="h2"]) > *:first-child,
 :host([look="h2"]) > *:first-child {
-  font-size: var(--base-font-size-lg);
+  --base-font-size: var(--base-font-size-lg);
+  --base-font-weight: 700;
 }
 
 :host([tag="h3"]) > *:first-child,
 :host([look="h3"]) > *:first-child {
-  font-size: var(--base-font-size-md);
+  --base-font-size: var(--base-font-size-md);
+  --base-font-weight: 700;
 }
 
 :host([tag="h4"]) > *:first-child,
 :host([look="h4"]) > *:first-child {
-  font-size: var(--base-font-size-sm);
+  --base-font-size: var(--base-font-size-sm);
+  --base-font-weight: 600;
 }
 
 :host([tag="h5"]) > *:first-child,
 :host([look="h5"]) > *:first-child {
-  font-size: var(--base-font-size-xs);
+  --base-font-size: var(--base-font-size-xs);
+  --base-font-weight: 600;
 }
 
 :host([tag="h6"]) > *:first-child,
-:host([look="h6"]) > *:first-child,
+:host([look="h6"]) > *:first-child {
+  --base-font-size: var(--base-font-size-xs);
+  --base-font-weight: 500;
+}
+
 :host([tag="small"]) > *:first-child,
 :host([look="small"]) > *:first-child {
-  font-size: var(--base-font-size-xs);
+  --base-font-size: var(--base-font-size-xs);
 }
 
 :host([look="h1"]) > *:first-child,
@@ -98,8 +115,8 @@
 }
 
 @each $i in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
-  :host([weight="$(i)"]) {
-    font-weight: $(i);
+  :host([weight="$(i)"]) > *:first-child {
+    --base-font-weight: $(i);
   }
 }
 
@@ -133,7 +150,7 @@
 }
 
 :host([look="lead"]) > *:first-child {
-  font-size: 1.4rem;
+  --base-font-size: 1.4rem;
   line-height: 32px;
   font-weight: 300;
   color: var(--base-color-font-light);

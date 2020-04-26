@@ -20917,7 +20917,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var styles = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-block;--base-button-height:var(--base-size-md);vertical-align:middle;margin-bottom:var(--base-space-xs)}:host,:host button{display:inline-block}:host([full]),:host button{display:block;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host button{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host button:hover{--base-button-bg-color:var(--base-color-ui-light)}:host button:focus{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host[full] button{width:100%;display:block}:host([type=primary]) button{--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]) button:hover{--base-button-bg-color:var(--base-color-primary-dark)}:host([type=secondary]) button{--base-button-bg-color:var(--base-color-secondary);--base-button-text-color:var(--base-color-primary)}:host([type=secondary]) button:hover{--base-button-bg-color:var(--base-color-secondary-dark)}:host([type=transparent]) button{--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]) button:hover{--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]) button{--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]) button:hover{--base-button-bg-color:var(--base-color-success-dark)}:host([type=danger]) button{--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]) button:hover{--base-button-bg-color:var(--base-color-danger-dark)}:host([outline]) button{--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}::slotted([slot=prepend]){vertical-align:text-bottom;margin-right:var(--base-space-sm)}::slotted([slot=append]){vertical-align:text-bottom;margin-left:var(--base-space-sm)}`;
+  var styles = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-flex;--base-button-height:var(--base-size-md);vertical-align:middle;margin-bottom:var(--base-space-xs);-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}:host([full]){--base-button-display:flex;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host(:hover){--base-button-bg-color:var(--base-color-ui-light)}:host(:focus){--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host([disabled]){opacity:.5;cursor:not-allowed}:host([type=primary]){--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]:hover){--base-button-bg-color:var(--base-color-primary-dark)}:host([type=secondary]){--base-button-bg-color:var(--base-color-secondary);--base-button-text-color:var(--base-color-primary)}:host([type=secondary]:hover){--base-button-bg-color:var(--base-color-secondary-dark)}:host([type=transparent]){--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]:hover){--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]){--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]:hover){--base-button-bg-color:var(--base-color-success-dark)}:host([type=danger]){--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]:hover){--base-button-bg-color:var(--base-color-danger-dark)}:host([outline]){--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}::slotted([slot=prepend]){vertical-align:text-bottom;margin-right:var(--base-space-sm)}::slotted([slot=append]){vertical-align:text-bottom;margin-left:var(--base-space-sm)}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}:host([hidden]){display:none}*,:after,:before{box-sizing:inherit}`;
 
   class BaseButton extends LitElement {
@@ -20945,10 +20945,16 @@ var global = arguments[3];
        */
 
       this.size = "";
+      this._disabled = false;
+      this._handleKeydown = this._handleKeydown.bind(this);
     }
 
     static get properties() {
       return {
+        disabled: {
+          type: Boolean,
+          relfect: true
+        },
         type: {
           type: String
         },
@@ -20969,16 +20975,33 @@ var global = arguments[3];
     }
 
     connectedCallback() {
-      super.connectedCallback();
+      super.connectedCallback(); //  trigger first attribute change
+
+      this.disabled = this.disabled;
+      this.addEventListener("keydown", this._handleKeydown);
+    }
+
+    get disabled() {
+      return this._disabled;
+    }
+
+    set disabled(disabled) {
+      if (disabled) this.removeAttribute("tabindex");else this.setAttribute("tabindex", "0");
+      this._disabled = disabled;
+    }
+
+    _handleKeydown(e) {
+      // Enter
+      if (e.keyCode === 13) {
+        this.dispatchEvent(new CustomEvent("click"));
+      }
     }
 
     render() {
       return html`
-      <button part="button">
-        <slot name="prepend" part="prepend"></slot>
-        <slot></slot>
-        <slot name="append" part="append"></slot>
-      </button>
+      <slot name="prepend" part="prepend"></slot>
+      <slot></slot>
+      <slot name="append" part="append"></slot>
     `;
     }
 
@@ -21739,7 +21762,7 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
-  var styles$4 = css`:host{--base-radio-height:var(--base-size-md);outline:0;height:var(--base-radio-height);cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host [part=box]{display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host(:focus) [part=box]{box-shadow:0 0 3px 0 var(--base-color-focus)}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-xs)}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host(:hover:not([disabled]):not([checked])) [part=box]{background-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{border-color:var(--base-color-focus)}:host([checked]) [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-color-focus)}`;
+  var styles$4 = css`:host{--base-radio-focus-color:var(--base-color-focus);--base-radio-height:var(--base-size-md);--base-radio-box-bg-color:var(--base-color-white);vertical-align:middle;outline:0;height:var(--base-radio-height);cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-xs)}:host [part=box]{display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--base-radio-box-bg-color);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host(:focus) [part=box]{box-shadow:0 0 0 2px var(--base-radio-focus-color)}:host(:hover:not([disabled]):not([checked])) [part=box]{--base-radio-box-bg-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{border-color:var(--base-radio-focus-color)}:host [part=indicator]{color:var(--base-radio-focus-color);fill:currentColor}:host([checked]) [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-radio-focus-color)}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}`;
 
   class BaseRadio extends LitElement {
     constructor() {
@@ -21791,7 +21814,7 @@ var global = arguments[3];
 
     connectedCallback() {
       super.connectedCallback();
-      this.setAttribute("tabindex", "1");
+      if (!this.disabled) this.setAttribute("tabindex", "1");
       this.addEventListener("click", this._handleClick);
       this.addEventListener("keydown", this._handleKeyDown);
     }
@@ -21864,7 +21887,13 @@ var global = arguments[3];
     }
 
     _handleKeyDown(e) {
-      console.log(e); // Left
+      console.log(e); // Space
+
+      if (e.keyCode === 32) {
+        e.preventDefault();
+        this.checked = true;
+      } // Left
+
 
       if (e.keyCode === 37) {
         this.selectPrevious();
@@ -21879,6 +21908,7 @@ var global = arguments[3];
     render() {
       return html`
       <input
+        tabindex="-1"
         id="radio-input"
         part="input-field"
         name=${this.name}
@@ -22261,7 +22291,7 @@ var global = arguments[3];
     customElements.define("base-flex", BaseFlex);
   }
 
-  var styles$8 = css`:host{text-align:left}:host,:host([inline]),:host([inline])>:first-child{display:inline-block}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{font-size:var(--base-font-size-xl)}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{font-size:var(--base-font-size-lg)}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{font-size:var(--base-font-size-md)}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{font-size:var(--base-font-size-sm)}:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([look=small])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child,:host([tag=small])>:first-child{font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
+  var styles$8 = css`:host{--base-font-size:var(--base-font-size-sm);--base-font-weight:400}:host,:host>:first-child{display:inline-block;text-align:left;font-weight:var(--base-font-weight);font-size:var(--base-font-size)}:host([inline]),:host([inline])>:first-child{display:inline-block}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{--base-font-size:var(--base-font-size-xl);--base-font-weight:700}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{--base-font-size:var(--base-font-size-lg);--base-font-weight:700}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{--base-font-size:var(--base-font-size-md);--base-font-weight:700}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{--base-font-size:var(--base-font-size-sm);--base-font-weight:600}:host([look=h5])>:first-child,:host([tag=h5])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:600}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:500}:host([look=small])>:first-child,:host([tag=small])>:first-child{--base-font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"])>:first-child{--base-font-weight:100}:host([weight="200"])>:first-child{--base-font-weight:200}:host([weight="300"])>:first-child{--base-font-weight:300}:host([weight="400"])>:first-child{--base-font-weight:400}:host([weight="500"])>:first-child{--base-font-weight:500}:host([weight="600"])>:first-child{--base-font-weight:600}:host([weight="700"])>:first-child{--base-font-weight:700}:host([weight="800"])>:first-child{--base-font-weight:800}:host([weight="900"])>:first-child{--base-font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{--base-font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
 
   class BaseText extends LitElement {
     constructor() {
@@ -22540,7 +22570,7 @@ var global = arguments[3];
     customElements.define("base-textarea", BaseTextArea);
   }
 
-  var styles$c = css`:host{--base-tab-box-shadow:0 0;display:-webkit-inline-box;display:inline-flex}:host([full]){display:-webkit-box;display:flex;width:100%}button{border:0;color:var(--base-color-font-light);font-size:var(--base-font-size-sm);background:0;box-shadow:var(--base-tab-box-shadow);outline:0;padding:0 var(--base-space-sm);margin-right:var(--base-space-sm);height:var(--base-size-md);border-bottom:2px solid transparent}button:focus,button:hover{border-bottom:2px solid var(--base-color-ui-light)}:host([selected]) button,button:focus{color:var(--base-color-font-dark)}:host([selected]) button{border-bottom:2px solid var(--base-color-focus)}`;
+  var styles$c = css`:host{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center}:host([full]){display:-webkit-box;display:flex;width:100%}:host([position=left]){-webkit-box-pack:start;justify-content:flex-start}:host([position=center]){-webkit-box-pack:center;justify-content:center}:host([position=right]){-webkit-box-pack:end;justify-content:flex-end}`;
 
   function getTabValue(tab) {
     return tab.value || tab.getAttribute("value") || tab.innerText;
@@ -22549,8 +22579,10 @@ var global = arguments[3];
   class BaseTabs extends LitElement {
     constructor() {
       super();
+      this.position = "";
       this._value = "";
       this._handleClick = this._handleClick.bind(this);
+      this._initTabDisplays = this._initTabDisplays.bind(this);
     }
 
     static get properties() {
@@ -22558,13 +22590,36 @@ var global = arguments[3];
         value: {
           type: String,
           reflect: "true"
+        },
+        position: {
+          type: String
         }
       };
     }
 
     connectedCallback() {
       super.connectedCallback();
+
+      this._initTabDisplays();
+
       this.addEventListener("click", this._handleClick);
+      this.addEventListener("keydown", e => {
+        if (e.keyCode === 13) {
+          this._handleClick(e);
+        }
+      });
+    }
+
+    _initTabDisplays() {
+      this.tabElements.forEach(tab => {
+        const isSelected = tab.hasAttribute("selected");
+        const targetVal = tab.getAttribute("target");
+
+        if (targetVal && !isSelected) {
+          const node = document.getElementById(targetVal);
+          if (node) node.style.display = "none";
+        }
+      });
     }
 
     _handleClick(e) {
@@ -22585,20 +22640,33 @@ var global = arguments[3];
 
     set value(val) {
       if (this._value === val) return;
-      this._value = val;
-      this.setAttribute("value", val);
-
-      if (this.selectedTab) {
-        this.selectedTab.removeAttribute("selected");
-      }
-
+      const oldSelectedTab = this.selectedTab;
       const newSelectedTab = this.tabElements.find(tab => getTabValue(tab) === val);
 
-      if (newSelectedTab) {
-        newSelectedTab.setAttribute("selected", "");
-      }
+      if (newSelectedTab && !newSelectedTab.hasAttribute("disabled")) {
+        if (oldSelectedTab) {
+          const oldTarget = oldSelectedTab.getAttribute("target");
 
-      this.dispatchEvent(new CustomEvent("change"));
+          if (oldTarget) {
+            const oldTargetEl = document.getElementById(oldTarget);
+            if (oldTargetEl) oldTargetEl.style.display = "none";
+          }
+
+          oldSelectedTab.removeAttribute("selected");
+        }
+
+        newSelectedTab.setAttribute("selected", "");
+        this.setAttribute("value", val);
+        this._value = val;
+        const newTarget = newSelectedTab.getAttribute("target");
+
+        if (newTarget) {
+          const newTargetEl = document.getElementById(newTarget);
+          if (newTargetEl) newTargetEl.style.display = "";
+        }
+
+        this.dispatchEvent(new CustomEvent("change"));
+      }
     }
 
     static get styles() {
@@ -22615,16 +22683,22 @@ var global = arguments[3];
     customElements.define("base-tabs", BaseTabs);
   }
 
+  var styles$d = css`:host{--base-tab-box-shadow:0 0;display:-webkit-inline-box;display:inline-flex}:host([full]){display:-webkit-box;display:flex;width:100%}:host([disabled]){opacity:.5}:host{border:0;color:var(--base-color-font-light);font-size:var(--base-font-size-sm);background:0;box-shadow:var(--base-tab-box-shadow);outline:0;padding:0 var(--base-space-sm);margin-right:var(--base-space-sm);height:var(--base-size-md);border-bottom:2px solid transparent}:host(:focus),:host(:hover){border-bottom:2px solid var(--base-color-ui-light)}:host(:focus),:host([selected]){color:var(--base-color-font-dark)}:host([selected]){border-bottom:2px solid var(--base-color-focus)}`;
+
   class BaseTab extends LitElement {
     constructor() {
       super();
       this.selected = false;
+      this.target = "";
       this.disabled = false;
       this._value = "";
     }
 
     static get properties() {
       return {
+        target: {
+          type: String
+        },
         selected: {
           type: Boolean,
           reflect: true
@@ -22652,11 +22726,11 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$c, sharedStyles];
+      return [styles$d, sharedStyles];
     }
 
     render() {
-      return html` <button><slot></slot></button>`;
+      return html` <slot></slot>`;
     }
 
   }
@@ -22665,7 +22739,7 @@ var global = arguments[3];
     customElements.define("base-tab", BaseTab);
   }
 
-  var styles$d = css`:host{--base-grid-columns:12;--base-grid-gap:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(var(--base-grid-columns),1fr);grid-row-gap:var(--base-grid-gap);grid-column-gap:var(--base-grid-gap);margin:0;width:100%;max-width:100%}:host([gap=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap=md]){--base-grid-gap:var(--base-space-md)}:host([gap=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap=xl]){--base-grid-gap:var(--base-space-xl)}:host([gap-sm=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-sm=md]){--base-grid-gap:var(--base-space-md)}:host([gap-sm=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-sm=xl]){--base-grid-gap:var(--base-space-xl)}@media(min-width:800px){:host([gap-md=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-md=md]){--base-grid-gap:var(--base-space-md)}:host([gap-md=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-md=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1200px){:host([gap-lg=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-lg=md]){--base-grid-gap:var(--base-space-md)}:host([gap-lg=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-lg=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1400px){:host([gap-xl=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-xl=md]){--base-grid-gap:var(--base-space-md)}:host([gap-xl=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-xl=xl]){--base-grid-gap:var(--base-space-xl)}}:host([columns="1"]){--base-grid-columns:1}:host([columns="2"]){--base-grid-columns:2}:host([columns="3"]){--base-grid-columns:3}:host([columns="4"]){--base-grid-columns:4}:host([columns="5"]){--base-grid-columns:5}:host([columns="6"]){--base-grid-columns:6}:host([columns="7"]){--base-grid-columns:7}:host([columns="8"]){--base-grid-columns:8}:host([columns="9"]){--base-grid-columns:9}:host([columns="10"]){--base-grid-columns:10}:host([columns="11"]){--base-grid-columns:11}:host([columns="12"]){--base-grid-columns:12}`;
+  var styles$e = css`:host{--base-grid-columns:12;--base-grid-gap:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(var(--base-grid-columns),1fr);grid-row-gap:var(--base-grid-gap);grid-column-gap:var(--base-grid-gap);margin:0;width:100%;max-width:100%}:host([gap=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap=md]){--base-grid-gap:var(--base-space-md)}:host([gap=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap=xl]){--base-grid-gap:var(--base-space-xl)}:host([gap-sm=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-sm=md]){--base-grid-gap:var(--base-space-md)}:host([gap-sm=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-sm=xl]){--base-grid-gap:var(--base-space-xl)}@media(min-width:800px){:host([gap-md=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-md=md]){--base-grid-gap:var(--base-space-md)}:host([gap-md=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-md=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1200px){:host([gap-lg=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-lg=md]){--base-grid-gap:var(--base-space-md)}:host([gap-lg=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-lg=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1400px){:host([gap-xl=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-xl=md]){--base-grid-gap:var(--base-space-md)}:host([gap-xl=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-xl=xl]){--base-grid-gap:var(--base-space-xl)}}:host([columns="1"]){--base-grid-columns:1}:host([columns="2"]){--base-grid-columns:2}:host([columns="3"]){--base-grid-columns:3}:host([columns="4"]){--base-grid-columns:4}:host([columns="5"]){--base-grid-columns:5}:host([columns="6"]){--base-grid-columns:6}:host([columns="7"]){--base-grid-columns:7}:host([columns="8"]){--base-grid-columns:8}:host([columns="9"]){--base-grid-columns:9}:host([columns="10"]){--base-grid-columns:10}:host([columns="11"]){--base-grid-columns:11}:host([columns="12"]){--base-grid-columns:12}`;
 
   class BaseGrid extends LitElement {
     constructor() {
@@ -22732,7 +22806,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$d, sharedStyles];
+      return [styles$e, sharedStyles];
     }
 
     render() {
@@ -22745,7 +22819,7 @@ var global = arguments[3];
     customElements.define("base-grid", BaseGrid);
   }
 
-  var styles$e = css`:host{display:block;width:100%;max-width:100%;grid-column-end:span var(--base-grid-ce,1);grid-row-end:span var(--base-grid-re,1);-webkit-appearance:none;-moz-appearance:none;appearance:none;margin-bottom:0;box-sizing:border-box;padding:0}:host:first-of-type{margin-top:unset}:host([sm="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([sm="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([sm="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([sm="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([sm="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([sm="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([sm="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([sm="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([sm="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([sm="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([sm="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([sm="12"]){display:block;max-width:100%;--base-grid-ce:12}@media(min-width:800px){:host([md="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([md="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([md="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([md="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([md="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([md="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([md="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([md="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([md="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([md="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([md="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([md="12"]){display:block;max-width:100%;--base-grid-ce:12}}@media(min-width:1200px){:host([lg="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([lg="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([lg="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([lg="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([lg="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([lg="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([lg="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([lg="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([lg="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([lg="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([lg="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([lg="12"]){display:block;max-width:100%;--base-grid-ce:12}}@media(min-width:1400px){:host([xl="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([xl="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([xl="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([xl="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([xl="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([xl="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([xl="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([xl="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([xl="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([xl="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([xl="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([xl="12"]){display:block;max-width:100%;--base-grid-ce:12}}`;
+  var styles$f = css`:host{display:block;width:100%;max-width:100%;grid-column-end:span var(--base-grid-ce,1);grid-row-end:span var(--base-grid-re,1);-webkit-appearance:none;-moz-appearance:none;appearance:none;margin-bottom:0;box-sizing:border-box;padding:0}:host:first-of-type{margin-top:unset}:host([sm="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([sm="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([sm="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([sm="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([sm="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([sm="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([sm="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([sm="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([sm="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([sm="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([sm="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([sm="12"]){display:block;max-width:100%;--base-grid-ce:12}@media(min-width:800px){:host([md="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([md="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([md="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([md="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([md="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([md="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([md="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([md="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([md="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([md="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([md="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([md="12"]){display:block;max-width:100%;--base-grid-ce:12}}@media(min-width:1200px){:host([lg="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([lg="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([lg="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([lg="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([lg="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([lg="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([lg="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([lg="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([lg="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([lg="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([lg="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([lg="12"]){display:block;max-width:100%;--base-grid-ce:12}}@media(min-width:1400px){:host([xl="1"]){display:block;max-width:100%;--base-grid-ce:1}:host([xl="2"]){display:block;max-width:100%;--base-grid-ce:2}:host([xl="3"]){display:block;max-width:100%;--base-grid-ce:3}:host([xl="4"]){display:block;max-width:100%;--base-grid-ce:4}:host([xl="5"]){display:block;max-width:100%;--base-grid-ce:5}:host([xl="6"]){display:block;max-width:100%;--base-grid-ce:6}:host([xl="7"]){display:block;max-width:100%;--base-grid-ce:7}:host([xl="8"]){display:block;max-width:100%;--base-grid-ce:8}:host([xl="9"]){display:block;max-width:100%;--base-grid-ce:9}:host([xl="10"]){display:block;max-width:100%;--base-grid-ce:10}:host([xl="11"]){display:block;max-width:100%;--base-grid-ce:11}:host([xl="12"]){display:block;max-width:100%;--base-grid-ce:12}}`;
 
   class BaseGridItem extends LitElement {
     constructor() {
@@ -22774,7 +22848,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$e, sharedStyles];
+      return [styles$f, sharedStyles];
     }
 
     render() {
@@ -23435,7 +23509,7 @@ var global = arguments[3];
     customElements.define("base-select", BaseSelect);
   }
 
-  var styles$f = css`:host{--base-option-padding:0 var(--base-space-sm);--base-option-bg-color:var(--base-color-white);--base-option-border-radius:0;--base-option-active-color:var(--base-color-ui-lighter);--base-option-selected-color:var(--base-color-focus);--base-option-selected-active-color:var(--base-color-focus-dark);--base-option-font-color:var(--base-color-black);--base-option-min-height:var(--base-size-md);box-sizing:border-box;width:100%;max-width:100%;min-height:var(--base-option-min-height);display:-webkit-box;display:flex;color:var(--base-option-font-color);-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-option-bg-color);text-align:left;border-radius:var(--base-option-border-radius);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([active]:not([disabled])){--base-option-bg-color:var(--base-option-active-color);--base-option-font-color:var(--base-color-font)}:host([selected]:not([active]):not([disabled])){--base-option-bg-color:var(--base-option-selected-color);--base-option-font-color:var(--base-color-white)}:host([selected][active]){--base-option-bg-color:var(--base-option-selected-active-color);--base-option-font-color:var(--base-color-white)}`;
+  var styles$g = css`:host{--base-option-padding:0 var(--base-space-sm);--base-option-bg-color:var(--base-color-white);--base-option-border-radius:0;--base-option-active-color:var(--base-color-ui-lighter);--base-option-selected-color:var(--base-color-focus);--base-option-selected-active-color:var(--base-color-focus-dark);--base-option-font-color:var(--base-color-black);--base-option-min-height:var(--base-size-md);box-sizing:border-box;width:100%;max-width:100%;min-height:var(--base-option-min-height);display:-webkit-box;display:flex;color:var(--base-option-font-color);-webkit-box-align:center;align-items:center;cursor:pointer;background:var(--base-option-bg-color);text-align:left;border-radius:var(--base-option-border-radius);padding:var(--base-option-padding);margin-top:var(--base-spacing-100);border:2px solid transparent}:host(:first-child){margin-top:0}:host([disabled]){opacity:.5;cursor:not-allowed}:host([active]:not([disabled])){--base-option-bg-color:var(--base-option-active-color);--base-option-font-color:var(--base-color-font)}:host([selected]:not([active]):not([disabled])){--base-option-bg-color:var(--base-option-selected-color);--base-option-font-color:var(--base-color-white)}:host([selected][active]){--base-option-bg-color:var(--base-option-selected-active-color);--base-option-font-color:var(--base-color-white)}`;
 
   class BaseOption extends LitElement {
     constructor() {
@@ -23482,7 +23556,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$f, sharedStyles];
+      return [styles$g, sharedStyles];
     }
 
     connectedCallback() {
@@ -23519,7 +23593,7 @@ var global = arguments[3];
     customElements.define("base-option", BaseOption);
   }
 
-  var styles$g = css`:host{--base-optgroup-padding:0 var(--base-space-sm);display:block}:host [part=label]{display:-webkit-box;display:flex;padding:var(--base-optgroup-padding);height:var(--base-size-sm);-webkit-box-align:center;align-items:center;font-weight:400;color:var(--base-color-font);text-transform:uppercase;font-size:var(--base-font-size-xs)}:host [part=list]{list-style:none;padding:0;margin:0}::slotted([slot=prepend]){margin-right:var(--base-space-sm)}`;
+  var styles$h = css`:host{--base-optgroup-padding:0 var(--base-space-sm);display:block}:host [part=label]{display:-webkit-box;display:flex;padding:var(--base-optgroup-padding);height:var(--base-size-sm);-webkit-box-align:center;align-items:center;font-weight:400;color:var(--base-color-font);text-transform:uppercase;font-size:var(--base-font-size-xs)}:host [part=list]{list-style:none;padding:0;margin:0}::slotted([slot=prepend]){margin-right:var(--base-space-sm)}`;
 
   class BaseOptGroup extends LitElement {
     constructor() {
@@ -23540,7 +23614,7 @@ var global = arguments[3];
     }
 
     static get styles() {
-      return [styles$g, sharedStyles];
+      return [styles$h, sharedStyles];
     }
 
     render() {
@@ -35255,18 +35329,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35601,12 +35663,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var _default = {
   components: {
     Header: _Header.default
@@ -35851,19 +35907,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var _default = {
   components: {
     Page: _Page.default
   },
 
   mounted() {
-    this.darkMode = document.body.hasAttribute('mode');
+    this.darkMode = document.body.hasAttribute("mode");
   },
 
   data() {
@@ -35876,7 +35926,7 @@ var _default = {
 
   watch: {
     darkMode: val => {
-      if (val) document.body.setAttribute('mode', 'dark');else document.body.removeAttribute('mode');
+      if (val) document.body.setAttribute("mode", "dark");else document.body.removeAttribute("mode");
     }
   }
 };
@@ -35902,11 +35952,11 @@ exports.default = _default;
         [
           _c(
             "base-grid",
-            { attrs: { columns: "8", gap: "xl", "gap-sm": "md" } },
+            { attrs: { columns: "12", "gap-xl": "xl", "gap-sm": "md" } },
             [
               _c(
                 "base-grid-item",
-                { attrs: { sm: "8", md: "3" } },
+                { attrs: { sm: "12", md: "9", lg: "6" } },
                 [
                   _c("base-text", { attrs: { tag: "h1", weight: "400" } }, [
                     _c("b", [_vm._v("Base Elements")]),
@@ -35920,9 +35970,9 @@ exports.default = _default;
                       "\n            Components that work in\n            "
                     ),
                     _c("b", [_vm._v("React")]),
-                    _vm._v(", "),
+                    _vm._v(",\n            "),
                     _c("b", [_vm._v("Vue")]),
-                    _vm._v(", "),
+                    _vm._v(",\n            "),
                     _c("b", [_vm._v("Angular")]),
                     _vm._v(", or any other framwork.\n          ")
                   ]),
@@ -35956,6 +36006,83 @@ exports.default = _default;
                       )
                     ],
                     1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "base-box",
+                    { attrs: { "margin-y": "md" } },
+                    [
+                      _c(
+                        "base-tabs",
+                        {
+                          attrs: { value: _vm.installMethod },
+                          on: {
+                            change: function(e) {
+                              return (_vm.installMethod = e.target.value)
+                            }
+                          }
+                        },
+                        [
+                          _c("base-tab", [_vm._v("NPM")]),
+                          _vm._v(" "),
+                          _c("base-tab", [_vm._v("CDN")])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm.installMethod === "NPM"
+                        ? _c("pre", [
+                            _c(
+                              "code",
+                              {
+                                staticClass: "hljs",
+                                attrs: { align: "center" }
+                              },
+                              [_vm._v("npm install --save base-elements")]
+                            )
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.installMethod === "CDN"
+                        ? _c("pre", [
+                            _vm._v("              "),
+                            _c(
+                              "code",
+                              {
+                                staticClass: "hljs",
+                                attrs: { align: "center" }
+                              },
+                              [
+                                _c("span", { staticClass: "hljs-tag" }, [
+                                  _vm._v("<"),
+                                  _c("span", { staticClass: "hljs-name" }, [
+                                    _vm._v("script")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "hljs-attr" }, [
+                                    _vm._v("src")
+                                  ]),
+                                  _vm._v("="),
+                                  _c("span", { staticClass: "hljs-string" }, [
+                                    _vm._v('"https://unpkg.com/base-elements"')
+                                  ]),
+                                  _vm._v(">")
+                                ]),
+                                _c("span", { staticClass: "hljs-tag" }, [
+                                  _vm._v("</"),
+                                  _c("span", { staticClass: "hljs-name" }, [
+                                    _vm._v("script")
+                                  ]),
+                                  _vm._v(">")
+                                ]),
+                                _vm._v("\n")
+                              ]
+                            ),
+                            _vm._v("\n    ")
+                          ])
+                        : _vm._e()
+                    ],
+                    1
                   )
                 ],
                 1
@@ -35963,7 +36090,7 @@ exports.default = _default;
               _vm._v(" "),
               _c(
                 "base-grid-item",
-                { attrs: { sm: "8", md: "5" } },
+                { attrs: { sm: "12", md: "12", lg: "6" } },
                 [
                   _c(
                     "base-box",
@@ -36164,84 +36291,6 @@ exports.default = _default;
               )
             ],
             1
-          ),
-          _vm._v(" "),
-          _c(
-            "base-container",
-            { attrs: { size: "xs" } },
-            [
-              _c(
-                "base-box",
-                { attrs: { "margin-y": "md" } },
-                [
-                  _c(
-                    "base-tabs",
-                    {
-                      attrs: { value: _vm.installMethod },
-                      on: {
-                        change: function(e) {
-                          return (_vm.installMethod = e.target.value)
-                        }
-                      }
-                    },
-                    [
-                      _c("base-tab", [_vm._v("NPM")]),
-                      _vm._v(" "),
-                      _c("base-tab", [_vm._v("CDN")])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _vm.installMethod === "NPM"
-                    ? _c("pre", [
-                        _c(
-                          "code",
-                          { staticClass: "hljs", attrs: { align: "center" } },
-                          [_vm._v("npm install --save base-elements")]
-                        )
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.installMethod === "CDN"
-                    ? _c("pre", [
-                        _vm._v("              "),
-                        _c(
-                          "code",
-                          { staticClass: "hljs", attrs: { align: "center" } },
-                          [
-                            _c("span", { staticClass: "hljs-tag" }, [
-                              _vm._v("<"),
-                              _c("span", { staticClass: "hljs-name" }, [
-                                _vm._v("script")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "hljs-attr" }, [
-                                _vm._v("src")
-                              ]),
-                              _vm._v("="),
-                              _c("span", { staticClass: "hljs-string" }, [
-                                _vm._v('"https://unpkg.com/base-elements"')
-                              ]),
-                              _vm._v(">")
-                            ]),
-                            _c("span", { staticClass: "hljs-tag" }, [
-                              _vm._v("</"),
-                              _c("span", { staticClass: "hljs-name" }, [
-                                _vm._v("script")
-                              ]),
-                              _vm._v(">")
-                            ]),
-                            _vm._v("\n")
-                          ]
-                        ),
-                        _vm._v("\n    ")
-                      ])
-                    : _vm._e()
-                ],
-                1
-              )
-            ],
-            1
           )
         ],
         1
@@ -36286,6 +36335,12 @@ render._withStripped = true
 },{"../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
+    "path": "../lib/src/components/base-button/base-button.md",
+    "name": "Button",
+    "desc": "A general button element",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-box/base-box.md",
     "name": "Box",
     "desc": "A general purpose box with padding, border, depth and more",
@@ -36296,13 +36351,13 @@ module.exports = {
     "name": "Checkbox",
     "desc": "A checkbox element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked] [slot=\"indicator\"] {\n      opacity: 1;\n      transform: rotate(0deg);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n  <base-checkbox class=\"check-animation\">\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Animate custom indicator\n  </base-checkbox>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-button/base-button.md",
-    "name": "Button",
-    "desc": "A general button element",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n<base-button>\n  <ion-icon slot=\"append\" name=\"people-outline\"></ion-icon>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button  type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "desc": "An element to limit the width of your content",
+    "category": "Layout",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
@@ -36328,17 +36383,17 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "desc": "Radio button",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .radio-animation [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  .radio-animation[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .choice-button {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  .choice-button:hover {\n    border-color: var(--base-color-ui);\n  }\n  .choice-button[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "desc": "Radio button",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n .radio-icon [slot=\"indicator\"] {\n   opacity: 0;\n }\n .radio-icon:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n .radio-icon[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .radio-animation [slot=\"indicator\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .radio-animation[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .choice-button {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  .choice-button:hover {\n    border-color: var(--base-color-ui);\n  }\n  .choice-button[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",
@@ -36352,17 +36407,11 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No results found</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select full multiple list-open-on-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\" selected></base-option>\n    <base-option value=\"Option 4\"></base-option>\n    <base-option value=\"Option 5\" selected></base-option>\n    <base-option value=\"Option 6\" selected></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "desc": "An element to limit the width of your content",
-    "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-tabs/base-tabs.md",
     "name": "Tabs",
     "desc": "Tabs for things",
     "category": "Navigation",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With buttons\n\nAny child you put inside `base-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `base-tab` as children, and style them accordingly.\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<style>\nbase-tabs base-button[selected]::part(button),\nbase-tabs base-button[selected]::part(button):hover {\n  --base-button-bg-color: var(--base-color-primary);\n  --base-button-text-color: var(--base-color-white);\n}\n</style>\n<base-tabs>\n  <base-button selected>Tab 1</base-button>\n  <base-button>Tab 2</base-button>\n  <base-button>Tab 3</base-button>\n</base-tabs>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With targets\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs full position=\"left\">\n  <base-tab selected target=\"targetOne\">Tab 1</base-tab>\n  <base-tab target=\"targetTwo\">Tab 2</base-tab>\n</base-tabs>\n<div id=\"targetOne\">Target 1</div>\n<div id=\"targetTwo\">Target 2</div>\n</base-knobs>\n\n## Position\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs full position=\"left\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n<base-tabs full position=\"right\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n<base-tabs full position=\"center\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With buttons\n\nAny child you put inside `base-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `base-tab` as children, and style them accordingly.\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<style>\nbase-tabs base-button[selected],\nbase-tabs base-button[selected]:hover {\n  --base-button-bg-color: var(--base-color-primary);\n  --base-button-text-color: var(--base-color-white);\n}\n</style>\n<base-tabs>\n  <base-button selected>Tab 1</base-button>\n  <base-button>Tab 2</base-button>\n  <base-button disabled>Tab 3</base-button>\n</base-tabs>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-textarea/base-textarea.md",
     "name": "Text Area",
@@ -62880,12 +62929,12 @@ exports.default = _default;
                 },
                 [
                   _vm._v("\n        See the components\n        "),
-                  _c("ion-icon", {
-                    attrs: { slot: "append", name: "arrow-forward-outline" },
+                  _c("i", {
+                    staticClass: "gg-arrow-right",
+                    attrs: { slot: "append" },
                     slot: "append"
                   })
-                ],
-                1
+                ]
               )
             ],
             1
@@ -63040,7 +63089,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52744" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50086" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

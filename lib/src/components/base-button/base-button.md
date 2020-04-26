@@ -19,6 +19,17 @@ category: Elements
 <base-button type="transparent">Transparent</base-button>
 </base-knobs>
 
+## Disabled
+
+<base-knobs hideTabs src="./components.json" name="base-button">
+<base-button disabled>Default</base-button>
+<base-button disabled type="primary">Primary</base-button>
+<base-button disabled type="secondary">Secondary</base-button>
+<base-button disabled type="success">Success</base-button>
+<base-button disabled type="danger">Danger</base-button>
+<base-button disabled type="transparent">Transparent</base-button>
+</base-knobs>
+
 ## Sizes
 
 <base-knobs hideTabs src="./components.json" name="base-button">
@@ -37,15 +48,15 @@ category: Elements
 
 <base-knobs hideTabs src="./components.json" name="base-button">
 <base-button>
-  <ion-icon slot="prepend" name="person-outline"></ion-icon>
+  <i slot="prepend" class="gg-check"></i>
   Full
 </base-button>
 <base-button>
-  <ion-icon slot="append" name="people-outline"></ion-icon>
+  <i slot="append" class="gg-danger"></i>
   Full
 </base-button>
 <base-button>
-  <ion-icon slot="append" name="people-outline"></ion-icon>
+  <i slot="append" class="gg-chevron-right"></i>
   Full
 </base-button>
 </base-knobs>
@@ -67,7 +78,7 @@ category: Elements
 <base-flex>
   <base-button >Option</base-button>
   <base-button >Option</base-button>
-  <base-button  type="primary">Active</base-button>
+  <base-button type="primary">Active</base-button>
   <base-button>Option</base-button>
 </base-flex>
 </base-knobs>

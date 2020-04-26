@@ -9,11 +9,11 @@ Base Elements is a collection of common, general-purpose UI elements such as lis
 ## Installation
 
 <base-tabs>
-  <base-tab value="cdntab" selected>CDN</base-tab>
-  <base-tab value="npmtab">NPM</base-tab>
+  <base-tab target="cdn-tab" selected>CDN</base-tab>
+  <base-tab target="npm-tab">NPM</base-tab>
 </base-tabs>
 
-<div id="cdntab">
+<div id="cdn-tab">
 
 ### CDN
 
@@ -27,7 +27,7 @@ That's it. Now you're ready to use the elements.
 
 </div>
 
-<div id="npmtab">
+<div id="npm-tab">
 
 ### NPM
 
