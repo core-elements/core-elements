@@ -101,6 +101,9 @@ import Page from "../layouts/Page";
 
 export default {
   components: { Page },
+  mounted() {
+    this.darkMode = document.body.hasAttribute('mode')
+  },
   data() {
     return {
       darkMode: false,

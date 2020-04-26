@@ -1,7 +1,11 @@
 <template>
   <base-box class="header" padding-x="md" bg="white">
     <base-container center size="lg">
-      <base-flex class="header__inner" justify="between" align="center">
+      <base-flex
+        class="header__inner"
+        justify-content="between"
+        align-items="center"
+      >
         <div class="header__left">
           <router-link to="/" class="header__logo">
             <svg

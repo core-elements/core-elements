@@ -21739,7 +21739,7 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
-  var styles$4 = css`:host{--base-radio-height:var(--base-size-md);vertical-align:middle;cursor:pointer;display:inline-block;height:var(--base-radio-height);margin-right:var(--base-space-sm)}:host([full]){display:block;width:100%;margin-right:0}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host label{height:var(--base-radio-height);-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse;font-size:var(--hw-font-size-small);line-height:1.5}:host [part=box],:host label{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;position:relative}:host [part=box]{-webkit-box-pack:center;justify-content:center;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host [part=label]{display:inline-block;margin-left:var(--base-space-xs)}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=input-field]:hover:not([disabled]):not(:checked)~[part=box]{background-color:var(--base-color-ui-lighter)}:host [part=input-field]:checked~[part=box]{border-color:var(--base-color-focus)}:host [part=input-field]:checked~[part=box] [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-color-focus)}`;
+  var styles$4 = css`:host{--base-radio-height:var(--base-size-md);outline:0;height:var(--base-radio-height);cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}:host [part=box]{display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--hw-color-white);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host(:focus) [part=box]{box-shadow:0 0 3px 0 var(--base-color-focus)}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-xs)}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host(:hover:not([disabled]):not([checked])) [part=box]{background-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{border-color:var(--base-color-focus)}:host([checked]) [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-color-focus)}`;
 
   class BaseRadio extends LitElement {
     constructor() {
@@ -21760,7 +21760,8 @@ var global = arguments[3];
       this.selectNext = this.selectNext.bind(this);
       this.selectPrevious = this.selectPrevious.bind(this);
       this._handleChange = this._handleChange.bind(this);
-      this._handleKeyPress = this._handleKeyPress.bind(this);
+      this._handleClick = this._handleClick.bind(this);
+      this._handleKeyDown = this._handleKeyDown.bind(this);
     }
 
     static get properties() {
@@ -21788,6 +21789,13 @@ var global = arguments[3];
       };
     }
 
+    connectedCallback() {
+      super.connectedCallback();
+      this.setAttribute("tabindex", "1");
+      this.addEventListener("click", this._handleClick);
+      this.addEventListener("keydown", this._handleKeyDown);
+    }
+
     static get styles() {
       return [styles$4, sharedStyles];
     }
@@ -21809,7 +21817,8 @@ var global = arguments[3];
     }
 
     set checked(checked) {
-      // TODO: Why do we need to set this manually even after reflect attribute?
+      if (this.disabled) return; // TODO: Why do we need to set this manually even after reflect attribute?
+
       if (checked) this.setAttribute("checked", "");else this.removeAttribute("checked");
       if (checked === this._checked) return;
 
@@ -21822,6 +21831,7 @@ var global = arguments[3];
       }
 
       this._checked = checked;
+      this.dispatchEvent(new CustomEvent("change"));
       this.requestUpdate();
     }
 
@@ -21843,18 +21853,19 @@ var global = arguments[3];
       options[nextIndex].checked = true;
     }
 
-    focus() {
-      this.formElement.focus();
+    _handleClick(e) {
+      e.stopPropagation();
+      this.checked = true;
     }
 
     _handleChange(e) {
       e.stopPropagation();
       this.checked = e.target.checked;
-      this.dispatchEvent(new CustomEvent("change", e));
     }
 
-    _handleKeyPress(e) {
-      // Left
+    _handleKeyDown(e) {
+      console.log(e); // Left
+
       if (e.keyCode === 37) {
         this.selectPrevious();
       } // Right
@@ -21867,22 +21878,21 @@ var global = arguments[3];
 
     render() {
       return html`
-      <label>
-        <span part="label"><slot></slot></span>
-        <input
-          part="input-field"
-          name=${this.name}
-          ?disabled=${this.disabled}
-          @keydown=${this._handleKeyPress}
-          @change=${this._handleChange}
-          ?checked=${this.checked}
-          value=${this.value}
-          type="radio"
-        />
-        <span part="box">
-          <slot name="indicator" part="indicator"><i></i></slot>
-        </span>
-      </label>
+      <input
+        id="radio-input"
+        part="input-field"
+        name=${this.name}
+        ?disabled=${this.disabled}
+        @keydown=${this._handleKeyDown}
+        @change=${this._handleChange}
+        ?checked=${this.checked}
+        value=${this.value}
+        type="radio"
+      />
+      <span part="box">
+        <slot name="indicator" part="indicator"><i></i></slot>
+      </span>
+      <label for="radio-input" part="label"><slot></slot></label>
     `;
     }
 
@@ -22074,7 +22084,7 @@ var global = arguments[3];
     customElements.define("base-box", BaseBox);
   }
 
-  var styles$7 = css`:host{width:100%;display:-webkit-box;display:flex}:host([wrap]){flex-wrap:wrap}:host([justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([justify=around]){justify-content:space-around}:host([justify=center]){-webkit-box-pack:center;justify-content:center}:host([justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([align=center]){-webkit-box-align:center;align-items:center}:host([align=start]){-webkit-box-align:start;align-items:flex-start}:host([align=end]){-webkit-box-align:end;align-items:flex-end}:host([direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}@media(min-width:600px){:host([sm-wrap]){flex-wrap:wrap}:host([sm-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([sm-justify=around]){justify-content:space-around}:host([sm-justify=center]){-webkit-box-pack:center;justify-content:center}:host([sm-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([sm-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([sm-align=center]){-webkit-box-align:center;align-items:center}:host([sm-align=start]){-webkit-box-align:start;align-items:flex-start}:host([sm-align=end]){-webkit-box-align:end;align-items:flex-end}:host([sm-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([sm-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([sm-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([sm-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1280px){:host([md-wrap]){flex-wrap:wrap}:host([md-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([md-justify=around]){justify-content:space-around}:host([md-justify=center]){-webkit-box-pack:center;justify-content:center}:host([md-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([md-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([md-align=center]){-webkit-box-align:center;align-items:center}:host([md-align=start]){-webkit-box-align:start;align-items:flex-start}:host([md-align=end]){-webkit-box-align:end;align-items:flex-end}:host([md-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([md-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([md-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([md-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1400px){:host([lg-wrap]){flex-wrap:wrap}:host([lg-justify=between]){-webkit-box-pack:justify;justify-content:space-between}:host([lg-justify=around]){justify-content:space-around}:host([lg-justify=center]){-webkit-box-pack:center;justify-content:center}:host([lg-justify=start]){-webkit-box-pack:start;justify-content:flex-start}:host([lg-justify=end]){-webkit-box-pack:end;justify-content:flex-end}:host([lg-align=center]){-webkit-box-align:center;align-items:center}:host([lg-align=start]){-webkit-box-align:start;align-items:flex-start}:host([lg-align=end]){-webkit-box-align:end;align-items:flex-end}:host([lg-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([lg-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([lg-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([lg-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}`;
+  var styles$7 = css`:host{width:100%;display:-webkit-box;display:flex}:host([wrap]){flex-wrap:wrap}:host([justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([justify-content=around]){justify-content:space-around}:host([justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([align-items=center]){-webkit-box-align:center;align-items:center}:host([align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}@media(min-width:600px){:host([sm-wrap]){flex-wrap:wrap}:host([sm-justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([sm-justify-content=around]){justify-content:space-around}:host([sm-justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([sm-justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([sm-justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([sm-align-items=center]){-webkit-box-align:center;align-items:center}:host([sm-align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([sm-align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([sm-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([sm-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([sm-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([sm-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1280px){:host([md-wrap]){flex-wrap:wrap}:host([md-justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([md-justify-content=around]){justify-content:space-around}:host([md-justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([md-justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([md-justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([md-align-items=center]){-webkit-box-align:center;align-items:center}:host([md-align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([md-align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([md-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([md-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([md-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([md-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1400px){:host([lg-wrap]){flex-wrap:wrap}:host([lg-justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([lg-justify-content=around]){justify-content:space-around}:host([lg-justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([lg-justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([lg-justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([lg-align-items=center]){-webkit-box-align:center;align-items:center}:host([lg-align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([lg-align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([lg-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([lg-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([lg-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([lg-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}`;
 
   class BaseFlex extends LitElement {
     constructor() {
@@ -22173,11 +22183,11 @@ var global = arguments[3];
       return {
         j: {
           type: String,
-          attribute: "justify"
+          attribute: "justify-content"
         },
         a: {
           type: String,
-          attribute: "align"
+          attribute: "align-items"
         },
         d: {
           type: String,
@@ -22188,11 +22198,11 @@ var global = arguments[3];
         },
         sJ: {
           type: String,
-          attribute: "sm-justify"
+          attribute: "sm-justify-content"
         },
         sA: {
           type: String,
-          attribute: "sm-align"
+          attribute: "sm-align-items"
         },
         sD: {
           type: String,
@@ -22204,11 +22214,11 @@ var global = arguments[3];
         },
         mJ: {
           type: String,
-          attribute: "md-justify"
+          attribute: "md-justify-content"
         },
         mA: {
           type: String,
-          attribute: "md-align"
+          attribute: "md-align-items"
         },
         mD: {
           type: String,
@@ -22220,11 +22230,11 @@ var global = arguments[3];
         },
         lJ: {
           type: String,
-          attribute: "lg-justify"
+          attribute: "lg-justify-content"
         },
         lA: {
           type: String,
-          attribute: "lg-align"
+          attribute: "lg-align-items"
         },
         lD: {
           type: String,
@@ -22251,7 +22261,7 @@ var global = arguments[3];
     customElements.define("base-flex", BaseFlex);
   }
 
-  var styles$8 = css`:host,:host([inline]),:host([inline])>:first-child{display:inline-block}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{font-size:var(--base-font-size-xl)}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{font-size:var(--base-font-size-lg)}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{font-size:var(--base-font-size-md)}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{font-size:var(--base-font-size-sm)}:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([look=small])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child,:host([tag=small])>:first-child{font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
+  var styles$8 = css`:host{text-align:left}:host,:host([inline]),:host([inline])>:first-child{display:inline-block}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{font-size:var(--base-font-size-xl)}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{font-size:var(--base-font-size-lg)}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{font-size:var(--base-font-size-md)}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{font-size:var(--base-font-size-sm)}:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([look=small])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child,:host([tag=small])>:first-child{font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"]){font-weight:100}:host([weight="200"]){font-weight:200}:host([weight="300"]){font-weight:300}:host([weight="400"]){font-weight:400}:host([weight="500"]){font-weight:500}:host([weight="600"]){font-weight:600}:host([weight="700"]){font-weight:700}:host([weight="800"]){font-weight:800}:host([weight="900"]){font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
 
   class BaseText extends LitElement {
     constructor() {
@@ -35253,6 +35263,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35303,7 +35317,7 @@ exports.default = _default;
             "base-flex",
             {
               staticClass: "header__inner",
-              attrs: { justify: "between", align: "center" }
+              attrs: { "justify-content": "between", "align-items": "center" }
             },
             [
               _c(
@@ -35848,6 +35862,10 @@ var _default = {
     Page: _Page.default
   },
 
+  mounted() {
+    this.darkMode = document.body.hasAttribute('mode');
+  },
+
   data() {
     return {
       darkMode: false,
@@ -36320,7 +36338,7 @@ module.exports = {
     "name": "Radio",
     "desc": "Radio button",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n .radio-icon [slot=\"indicator\"] {\n   opacity: 0;\n }\n .radio-icon:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n .radio-icon[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .radio-animation [slot=\"indicator\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .radio-animation[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\">Radio</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n .radio-icon [slot=\"indicator\"] {\n   opacity: 0;\n }\n .radio-icon:hover:not([checked]) [slot=\"indicator\"] {\n   opacity: 0.5;\n }\n .radio-icon[checked] [slot=\"indicator\"] {\n   opacity: 1;\n   color: green;\n   fill: green;\n }\n</style>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-icon\" name=\"example-2\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .radio-animation [slot=\"indicator\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .radio-animation[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <ion-icon slot=\"indicator\" name=\"checkmark-outline\"></ion-icon>\n</base-radio>\n\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .choice-button {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  .choice-button:hover {\n    border-color: var(--base-color-ui);\n  }\n  .choice-button[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",

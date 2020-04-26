@@ -7,35 +7,35 @@
   flex-wrap: wrap;
 }
 
-:host([justify="between"]) {
+:host([justify-content="between"]) {
   justify-content: space-between;
 }
 
-:host([justify="around"]) {
+:host([justify-content="around"]) {
   justify-content: space-around;
 }
 
-:host([justify="center"]) {
+:host([justify-content="center"]) {
   justify-content: center;
 }
 
-:host([justify="start"]) {
+:host([justify-content="start"]) {
   justify-content: flex-start;
 }
 
-:host([justify="end"]) {
+:host([justify-content="end"]) {
   justify-content: flex-end;
 }
 
-:host([align="center"]) {
+:host([align-items="center"]) {
   align-items: center;
 }
 
-:host([align="start"]) {
+:host([align-items="start"]) {
   align-items: flex-start;
 }
 
-:host([align="end"]) {
+:host([align-items="end"]) {
   align-items: flex-end;
 }
 
@@ -60,35 +60,35 @@
     flex-wrap: wrap;
   }
 
-  :host([sm-justify="between"]) {
+  :host([sm-justify-content="between"]) {
     justify-content: space-between;
   }
 
-  :host([sm-justify="around"]) {
+  :host([sm-justify-content="around"]) {
     justify-content: space-around;
   }
 
-  :host([sm-justify="center"]) {
+  :host([sm-justify-content="center"]) {
     justify-content: center;
   }
 
-  :host([sm-justify="start"]) {
+  :host([sm-justify-content="start"]) {
     justify-content: flex-start;
   }
 
-  :host([sm-justify="end"]) {
+  :host([sm-justify-content="end"]) {
     justify-content: flex-end;
   }
 
-  :host([sm-align="center"]) {
+  :host([sm-align-items="center"]) {
     align-items: center;
   }
 
-  :host([sm-align="start"]) {
+  :host([sm-align-items="start"]) {
     align-items: flex-start;
   }
 
-  :host([sm-align="end"]) {
+  :host([sm-align-items="end"]) {
     align-items: flex-end;
   }
 
@@ -114,35 +114,35 @@
     flex-wrap: wrap;
   }
 
-  :host([md-justify="between"]) {
+  :host([md-justify-content="between"]) {
     justify-content: space-between;
   }
 
-  :host([md-justify="around"]) {
+  :host([md-justify-content="around"]) {
     justify-content: space-around;
   }
 
-  :host([md-justify="center"]) {
+  :host([md-justify-content="center"]) {
     justify-content: center;
   }
 
-  :host([md-justify="start"]) {
+  :host([md-justify-content="start"]) {
     justify-content: flex-start;
   }
 
-  :host([md-justify="end"]) {
+  :host([md-justify-content="end"]) {
     justify-content: flex-end;
   }
 
-  :host([md-align="center"]) {
+  :host([md-align-items="center"]) {
     align-items: center;
   }
 
-  :host([md-align="start"]) {
+  :host([md-align-items="start"]) {
     align-items: flex-start;
   }
 
-  :host([md-align="end"]) {
+  :host([md-align-items="end"]) {
     align-items: flex-end;
   }
 
@@ -168,35 +168,35 @@
     flex-wrap: wrap;
   }
 
-  :host([lg-justify="between"]) {
+  :host([lg-justify-content="between"]) {
     justify-content: space-between;
   }
 
-  :host([lg-justify="around"]) {
+  :host([lg-justify-content="around"]) {
     justify-content: space-around;
   }
 
-  :host([lg-justify="center"]) {
+  :host([lg-justify-content="center"]) {
     justify-content: center;
   }
 
-  :host([lg-justify="start"]) {
+  :host([lg-justify-content="start"]) {
     justify-content: flex-start;
   }
 
-  :host([lg-justify="end"]) {
+  :host([lg-justify-content="end"]) {
     justify-content: flex-end;
   }
 
-  :host([lg-align="center"]) {
+  :host([lg-align-items="center"]) {
     align-items: center;
   }
 
-  :host([lg-align="start"]) {
+  :host([lg-align-items="start"]) {
     align-items: flex-start;
   }
 
-  :host([lg-align="end"]) {
+  :host([lg-align-items="end"]) {
     align-items: flex-end;
   }
 

@@ -16,13 +16,19 @@
   --base-color-focus: var(--base-color-primary);
   --base-color-focus-dark: var(--base-color-primary-dark);
 
-  --base-color-success-hue: 140;
-  --base-color-success: hsl(var(--base-color-success-hue), 100%, 40%);
-  --base-color-success-dark: hsl(var(--base-color-success-hue), 100%, 30%);
+  --base-color-success-hue: 94;
+  --base-color-success-light: hsl(var(--base-color-success-hue), 48%, 66%);
+  --base-color-success: hsl(var(--base-color-success-hue), 48%, 40%);
+  --base-color-success-dark: hsl(var(--base-color-success-hue), 48%, 30%);
 
-  --base-color-danger-hue: 0;
-  --base-color-danger: hsl(var(--base-color-danger-hue), 100%, 40%);
-  --base-color-danger-dark: hsl(var(--base-color-danger-hue), 100%, 30%);
+  --base-color-warning-hue: 46;
+  --base-color-warning-light: hsl(var(--base-color-warning-hue), 100%, 46%);
+  --base-color-warning: hsl(var(--base-color-warning-hue), 100%, 61%);
+  --base-color-warning-dark: hsl(var(--base-color-warning-hue), 100%, 51%);
+
+  --base-color-danger-hue: 349;
+  --base-color-danger: hsl(var(--base-color-danger-hue), 75%, 40%);
+  --base-color-danger-dark: hsl(var(--base-color-danger-hue), 75%, 30%);
 
   --base-color-white: white;
   --base-color-black: black;
@@ -70,6 +76,7 @@
   --base-size-md: 48px;
   --base-size-sm: 36px;
   --base-size-lg: 58px;
+  --base-size-xl: 64px;
 
   /* DEPTH */
   --base-depth-none: none;
