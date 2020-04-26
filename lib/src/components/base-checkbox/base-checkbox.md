@@ -26,7 +26,7 @@ category: Form
       transition: all 0.5s ease;
       transform: rotate(-90deg);
     }
-    .check-animation[checked]::part(indicator) {
+    .check-animation[checked] [slot="indicator"] {
       opacity: 1;
       transform: rotate(0deg);
     }
