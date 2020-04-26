@@ -36,8 +36,8 @@
   --base-color-ui-darker: hsl(var(--base-color-ui-hue), 0%, 20%);
   --base-color-ui-darkest: hsl(var(--base-color-ui-hue), 0%, 10%);
 
-  --base-color-font-light: hsl(var(--base-color-ui-hue), 0%, 15%);
-  --base-color-font: hsl(var(--base-color-ui-hue), 0%, 10%);
+  --base-color-font-light: hsl(var(--base-color-ui-hue), 0%, 45%);
+  --base-color-font: hsl(var(--base-color-ui-hue), 0%, 25%);
   --base-color-font-dark: hsl(var(--base-color-ui-hue), 0%, 5%);
 
   --base-container: 800px;

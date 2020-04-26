@@ -35253,8 +35253,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean
@@ -35424,16 +35422,7 @@ exports.default = _default;
                       }
                     }
                   },
-                  [
-                    _c("ion-icon", {
-                      attrs: {
-                        name: _vm.showMenu
-                          ? "close-outline"
-                          : "ellipsis-vertical-outline"
-                      }
-                    })
-                  ],
-                  1
+                  [_c("i", { staticClass: "gg-more-vertical-alt" })]
                 ),
                 _vm._v(" "),
                 _c(

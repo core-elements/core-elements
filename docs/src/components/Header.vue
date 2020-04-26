@@ -55,9 +55,7 @@
 
         <div class="header__right">
           <button @click="showMenu = !showMenu" class="header__menu-button">
-            <ion-icon
-              :name="showMenu ? 'close-outline' : 'ellipsis-vertical-outline'"
-            ></ion-icon>
+            <i class="gg-more-vertical-alt"></i>
           </button>
 
           <div class="header__nav-wrapper" :class="{ show: showMenu }">
@@ -164,7 +162,7 @@ export default {
 
 .header__logo {
   text-decoration: none;
-  color: currentColor;
+  color: var(--base-color-font);
   font-weight: 500;
   font-size: 1.1rem;
   display: flex;
@@ -180,6 +178,7 @@ export default {
 }
 
 .header__nav-wrapper {
+  background: var(--base-color-white);
   z-index: 999;
   width: 100%;
   animation: fade-in 0.3s ease;
@@ -233,7 +232,7 @@ export default {
 }
 
 .header__nav-item.home.router-link-active {
-  color: #718096;
+  color: var(--base-color-font);
 }
 
 @media (min-width: 800px) {

@@ -34,7 +34,7 @@
 
 .header__logo {
   text-decoration: none;
-  color: currentColor;
+  color: var(--base-color-font);
   font-weight: 500;
   font-size: 1.1rem;
   display: flex;
@@ -50,6 +50,7 @@
 }
 
 .header__nav-wrapper {
+  background: var(--base-color-white);
   z-index: 999;
   width: 100%;
   animation: fade-in 0.3s ease;
@@ -103,7 +104,7 @@
 }
 
 .header__nav-item.home.router-link-active {
-  color: #718096;
+  color: var(--base-color-font);
 }
 
 @media (min-width: 800px) {
