@@ -35472,16 +35472,13 @@ exports.default = _default;
                           "\n          "
                       ),
                       _vm.$route.meta.hasSidebar
-                        ? _c("ion-icon", {
-                            attrs: {
-                              name: _vm.showSidebar
-                                ? "chevron-up-outline"
-                                : "chevron-down-outline"
-                            }
+                        ? _c("i", {
+                            class: _vm.showSidebar
+                              ? "gg-chevron-up"
+                              : "gg-chevron-down"
                           })
                         : _vm._e()
-                    ],
-                    1
+                    ]
                   )
                 ],
                 1

@@ -41,12 +41,12 @@
           </router-link>
           <button @click="handleToggleButton" class="header__route-menu-button">
             {{ $route.meta.title }}
-            <ion-icon
+            <i
               v-if="$route.meta.hasSidebar"
-              :name="
-                showSidebar ? 'chevron-up-outline' : 'chevron-down-outline'
+              :class="
+                showSidebar ? 'gg-chevron-up' : 'gg-chevron-down'
               "
-            ></ion-icon>
+            ></i>
           </button>
         </div>
 
