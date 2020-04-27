@@ -14,23 +14,23 @@ category: Form
 
 <base-knobs hideTabs src="./components.json" name="base-radio">
 <style>
-  .radio-animation [slot="indicator"] {
+  base-radio.animate [slot="indicator"] {
     opacity: 0;
     transform: rotate(-45deg);
     transition: transform 0.4s ease;
   }
-  .radio-animation[checked] [slot="indicator"] {
+  base-radio.animate[checked] [slot="indicator"] {
     opacity: 1;
     transform: rotate(0deg);
   }
 </style>
 
-<base-radio class="radio-animation" name="example-3">
+<base-radio class="animate" name="example-3">
   <span>Radio</span>
   <i slot="indicator" class="gg-check"></i>
 </base-radio>
 
-<base-radio class="radio-animation" name="example-3">
+<base-radio class="animate" name="example-3">
   <span>Radio</span>
   <i slot="indicator" class="gg-check"></i>
 </base-radio>
@@ -40,21 +40,21 @@ category: Form
 
 <base-knobs hideTabs src="./components.json" name="base-radio">
 <style>
-  .choice-button {
+  base-radio.choice {
     margin-bottom: var(--base-space-md);
     padding: 0 var(--base-space-md);
     height: var(--base-size-xl);
     border: 2px solid var(--base-color-ui-light);
   }
-  .choice-button:hover {
+  base-radio.choice:hover {
     border-color: var(--base-color-ui);
   }
-  .choice-button[checked] {
+  base-radio.choice[checked] {
     border-color: var(--base-color-focus);
   }
 </style>
 
-<base-radio class="choice-button" name="example-4" full>
+<base-radio class="choice" name="example-4" full>
   <base-flex justify-content="between" align-items="center">
   <div>
     <base-text tag="div" look="h3">Standard delivery</base-text>
@@ -65,7 +65,7 @@ category: Form
   </div>
   </base-flex>
 </base-radio>
-<base-radio class="choice-button" name="example-4" full>
+<base-radio class="choice" name="example-4" full>
   <base-flex justify-content="between" align-items="center">
   <div>
     <base-text tag="div" look="h3">Express delivery</base-text>

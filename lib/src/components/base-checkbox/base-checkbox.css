@@ -8,6 +8,7 @@
 }
 
 :host {
+  outline: 0;
   vertical-align: middle;
   height: var(--base-checkbox-height);
   display: inline-flex;
@@ -40,8 +41,12 @@
   color: var(--base-color-font-light);
 }
 
-:host label {
-  display: inline-block;
+:host [part="label"] {
+  line-height: 1.5;
+  font-size: var(--hw-font-size-small);
+  display: block;
+  flex: 1;
+  margin-left: var(--base-space-sm);
 }
 
 input {
@@ -51,7 +56,7 @@ input {
   vertical-align: middle;
 }
 
-input ~ [part="box"] {
+[part="box"] {
   box-shadow: var(--base-button-box-shadow);
   background-color: var(--base-checkbox-bg-color);
   color: var(--base-color-font);
@@ -59,7 +64,6 @@ input ~ [part="box"] {
   height: calc(var(--base-checkbox-height) - var(--base-space-md));
   border-radius: var(--base-checkbox-border-radius);
   border: var(--base-checkbox-border);
-  margin-right: var(--base-space-sm);
   position: relative;
   vertical-align: middle;
   display: inline-flex;
@@ -67,15 +71,15 @@ input ~ [part="box"] {
   justify-content: center;
 }
 
-input:focus ~ [part="box"] {
+:host(:focus) [part="box"] {
   --base-button-box-shadow: 0 0 0 2px var(--base-color-focus);
 }
 
-input:hover ~ [part="box"] {
+:host(:hover) [part="box"] {
   --base-checkbox-bg-color: var(--base-color-ui-lighter);
 }
 
-input:checked ~ [part="box"] {
+:host([checked]) [part="box"] {
   --base-checkbox-bg-color: var(--base-color-focus);
   --base-checkbox-border: 1px solid var(--base-color-focus);
 }
@@ -88,6 +92,6 @@ input:checked ~ [part="box"] {
   opacity: 0;
 }
 
-input:checked ~ [part="box"] [part="indicator"] {
+:host([checked]) [part="indicator"] {
   opacity: 1;
 }

@@ -21011,7 +21011,7 @@ var global = arguments[3];
     customElements.define("base-button", BaseButton);
   }
 
-  var styles$1 = css`:host{--base-checkbox-bg-color:var(--base-color-white);--base-checkbox-border:2px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;vertical-align:middle;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-indicator-font-size:.8em;--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-indicator-font-size:1em;--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-indicator-font-size:1.4em;--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host label{display:inline-block}input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}input~[part=box]{box-shadow:var(--base-button-box-shadow);background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);margin-right:var(--base-space-sm);position:relative;vertical-align:middle;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}input:focus~[part=box]{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}input:hover~[part=box]{--base-checkbox-bg-color:var(--base-color-ui-lighter)}input:checked~[part=box]{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus)}[part=box] [part=indicator]{font-size:var(--base-checkbox-indicator-font-size);color:var(--base-color-white);fill:currentColor;display:block;opacity:0}input:checked~[part=box] [part=indicator]{opacity:1}`;
+  var styles$1 = css`:host{--base-checkbox-bg-color:var(--base-color-white);--base-checkbox-border:2px solid var(--base-color-ui-light);--base-checkbox-cursor:pointer;--base-checkbox-box-shadow:none;--base-checkbox-height:var(--base-size-md);--base-checkbox-border-radius:none;outline:0;vertical-align:middle;height:var(--base-checkbox-height);display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host([size=sm]){--base-checkbox-indicator-font-size:.8em;--base-checkbox-height:var(--base-size-sm)}:host([size=md]){--base-checkbox-indicator-font-size:1em;--base-checkbox-height:var(--base-size-md)}:host([size=lg]){--base-checkbox-indicator-font-size:1.4em;--base-checkbox-height:var(--base-size-lg)}:host([disabled]){color:var(--base-color-font-light)}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-sm)}input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}[part=box],input{vertical-align:middle}[part=box]{box-shadow:var(--base-button-box-shadow);background-color:var(--base-checkbox-bg-color);color:var(--base-color-font);width:calc(var(--base-checkbox-height) - var(--base-space-md));height:calc(var(--base-checkbox-height) - var(--base-space-md));border-radius:var(--base-checkbox-border-radius);border:var(--base-checkbox-border);position:relative;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}:host(:focus) [part=box]{--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host(:hover) [part=box]{--base-checkbox-bg-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{--base-checkbox-bg-color:var(--base-color-focus);--base-checkbox-border:1px solid var(--base-color-focus)}[part=box] [part=indicator]{font-size:var(--base-checkbox-indicator-font-size);color:var(--base-color-white);fill:currentColor;display:block;opacity:0}:host([checked]) [part=indicator]{opacity:1}`;
 
   class BaseCheckbox extends LitElement {
     constructor() {
@@ -21027,6 +21027,8 @@ var global = arguments[3];
       this.size = "";
       this.value = "";
       this._checked = false;
+      this._handleClick = this._handleClick.bind(this);
+      this._handleKeyDown = this._handleKeyDown.bind(this);
       this._handleChange = this._handleChange.bind(this);
     }
 
@@ -21056,6 +21058,13 @@ var global = arguments[3];
       return [styles$1, sharedStyles];
     }
 
+    connectedCallback() {
+      super.connectedCallback();
+      if (!this.disabled) this.setAttribute("tabindex", "0");
+      this.addEventListener("click", this._handleClick);
+      this.addEventListener("keydown", this._handleKeyDown);
+    }
+
     get inputEl() {
       return this.shadowRoot.querySelector("input");
     }
@@ -21077,6 +21086,18 @@ var global = arguments[3];
       this.requestUpdate();
     }
 
+    _handleKeyDown(e) {
+      // Space
+      if (e.keyCode === 32) {
+        e.preventDefault();
+        this.checked = !this.checked;
+      }
+    }
+
+    _handleClick(e) {
+      this.checked = !this.checked;
+    }
+
     _handleChange(e) {
       e.stopPropagation();
       this.checked = e.target.checked;
@@ -21084,19 +21105,18 @@ var global = arguments[3];
 
     render() {
       return html`
-      <label>
-        <input
-          ?disabled=${this.disabled}
-          @change=${this._handleChange}
-          ?checked=${this.checked}
-          value=${this.value}
-          type="checkbox"
-        />
-        <span part="box">
-          <slot name="indicator" part="indicator">&#10003;</slot>
-        </span>
-        <span part="label"><slot></slot></span>
-      </label>
+      <input
+        id="checkbox-input"
+        ?disabled=${this.disabled}
+        @change=${this._handleChange}
+        ?checked=${this.checked}
+        value=${this.value}
+        type="checkbox"
+      />
+      <span part="box">
+        <slot name="indicator" part="indicator">&#10003;</slot>
+      </span>
+      <div for="checkbox-input" part="label"><slot></slot></div>
     `;
     }
 
@@ -21762,7 +21782,7 @@ var global = arguments[3];
     customElements.define("base-input", BaseInput);
   }
 
-  var styles$4 = css`:host{--base-radio-focus-color:var(--base-color-focus);--base-radio-height:var(--base-size-md);--base-radio-box-bg-color:var(--base-color-white);vertical-align:middle;outline:0;height:var(--base-radio-height);cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-xs)}:host [part=box]{display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;margin-right:var(--base-space-xs);border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--base-radio-box-bg-color);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host(:focus) [part=box]{box-shadow:0 0 0 2px var(--base-radio-focus-color)}:host(:hover:not([disabled]):not([checked])) [part=box]{--base-radio-box-bg-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{border-color:var(--base-radio-focus-color)}:host [part=indicator]{color:var(--base-radio-focus-color);fill:currentColor}:host([checked]) [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-radio-focus-color)}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}`;
+  var styles$4 = css`:host{--base-radio-focus-color:var(--base-color-focus);--base-radio-height:var(--base-size-md);--base-radio-box-bg-color:var(--base-color-white);vertical-align:middle;outline:0;height:var(--base-radio-height);cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-sm)}:host [part=box]{display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--base-radio-box-bg-color);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host(:focus) [part=box]{box-shadow:0 0 0 2px var(--base-radio-focus-color)}:host(:hover:not([disabled]):not([checked])) [part=box]{--base-radio-box-bg-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{border-color:var(--base-radio-focus-color)}:host [part=indicator]{color:var(--base-radio-focus-color);fill:currentColor}:host([checked]) [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-radio-focus-color)}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}`;
 
   class BaseRadio extends LitElement {
     constructor() {
@@ -21814,7 +21834,7 @@ var global = arguments[3];
 
     connectedCallback() {
       super.connectedCallback();
-      if (!this.disabled) this.setAttribute("tabindex", "1");
+      if (!this.disabled) this.setAttribute("tabindex", "0");
       this.addEventListener("click", this._handleClick);
       this.addEventListener("keydown", this._handleKeyDown);
     }
@@ -36348,7 +36368,7 @@ module.exports = {
     "name": "Checkbox",
     "desc": "A checkbox element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    base-checkbox.choice {\n      margin-bottom: var(--base-space-md);\n      padding: 0 var(--base-space-md);\n      height: var(--base-size-xl);\n      border: 2px solid var(--base-color-ui-light);\n    }\n    base-checkbox.choice:hover {\n      border-color: var(--base-color-ui);\n    }\n    base-checkbox.choice[checked] {\n      border-color: var(--base-color-focus);\n    }\n  </style>\n  <base-checkbox class=\"choice\" full>\n    <base-flex justify-content=\"between\" align-items=\"center\">\n      <div>\n        <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n        <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n      </div>\n      <div>\n        <base-text tag=\"h3\">30$</base-text>\n      </div>\n    </base-flex>\n  </base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-container/base-container.md",
     "name": "Container",
@@ -36384,7 +36404,7 @@ module.exports = {
     "name": "Radio",
     "desc": "Radio button",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .radio-animation [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  .radio-animation[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"radio-animation\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  .choice-button {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  .choice-button:hover {\n    border-color: var(--base-color-ui);\n  }\n  .choice-button[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice-button\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",

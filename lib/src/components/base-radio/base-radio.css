@@ -32,7 +32,7 @@
   font-size: var(--hw-font-size-small);
   display: block;
   flex: 1;
-  margin-left: var(--base-space-xs);
+  margin-left: var(--base-space-sm);
 }
 
 :host [part="box"] {
@@ -40,7 +40,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-right: var(--base-space-xs);
   border: 2px solid var(--base-color-ui-light);
   border-radius: 50%;
   background: var(--base-radio-box-bg-color);
