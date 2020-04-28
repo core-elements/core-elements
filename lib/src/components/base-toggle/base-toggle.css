@@ -7,7 +7,7 @@
   );
   --base-toggle-icon-size: calc(var(--base-toggle-indicator-size) * 0.8);
   vertical-align: middle;
-  cursor: pointer;
+  cursor: default;
   display: inline-flex;
   align-items: center;
   height: var(--base-toggle-height);

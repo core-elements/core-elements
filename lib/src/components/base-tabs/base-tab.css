@@ -3,6 +3,7 @@
 }
 
 :host {
+  cursor: default;
   display: inline-flex;
 }
 
@@ -24,7 +25,7 @@
   outline: 0;
   padding: 0 var(--base-space-sm);
   margin-right: var(--base-space-sm);
-  height: var(--base-size-md);
+  height: var(--base-size-sm);
   border-bottom: 2px solid transparent;
 }
 

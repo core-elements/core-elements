@@ -1,0 +1,10 @@
+:host {
+}
+
+:host [part="content"] {
+  display: none;
+}
+
+:host([open]) [part="content"] {
+  display: block;
+}
