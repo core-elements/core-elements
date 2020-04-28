@@ -143,6 +143,28 @@
       ]
     },
     {
+      "name": "base-accordion",
+      "path": "./../../lib/src/components/base-accordion/base-accordion.js",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "toggle"
+        }
+      ]
+    },
+    {
       "name": "base-box",
       "path": "./../../lib/src/components/base-box/base-box.js",
       "attributes": [
@@ -309,6 +331,10 @@
       "path": "./../../lib/src/components/base-button/base-button.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "type",
           "description": "Button state",
           "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
@@ -333,6 +359,11 @@
         }
       ],
       "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
         {
           "name": "type",
           "attribute": "type",
@@ -360,6 +391,11 @@
           "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
         }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
       ]
     },
     {
@@ -367,16 +403,15 @@
       "path": "./../../lib/src/components/base-checkbox/base-checkbox.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "checked",
           "type": "boolean"
         },
         {
           "name": "full",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "disabled",
           "type": "boolean",
           "default": "false"
         },
@@ -394,6 +429,11 @@
       ],
       "properties": [
         {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "inputEl",
           "type": "HTMLInputElement | null"
         },
@@ -405,12 +445,6 @@
         {
           "name": "full",
           "attribute": "full",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "disabled",
-          "attribute": "disabled",
           "type": "boolean",
           "default": "false"
         },
@@ -1626,6 +1660,11 @@
           "default": "false"
         },
         {
+          "name": "target",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "disabled",
           "type": "boolean",
           "default": "false"
@@ -1644,6 +1683,12 @@
           "default": "false"
         },
         {
+          "name": "target",
+          "attribute": "target",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "disabled",
           "attribute": "disabled",
           "type": "boolean",
@@ -1658,6 +1703,11 @@
         {
           "name": "value",
           "type": "string"
+        },
+        {
+          "name": "position",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "properties": [
@@ -1673,6 +1723,12 @@
           "name": "value",
           "attribute": "value",
           "type": "string"
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "events": [

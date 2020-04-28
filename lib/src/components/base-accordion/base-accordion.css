@@ -1,10 +1,51 @@
 :host {
+  --base-accordion-border-color: var(--base-color-ui-light);
+  border-top: 1px solid var(--base-accordion-border-color);
+  border-bottom: 1px solid var(--base-accordion-border-color);
+  display: block;
+  width: 100%;
 }
 
 :host [part="content"] {
   display: none;
+  width: 100%;
 }
 
 :host([open]) [part="content"] {
   display: block;
+}
+
+:host [part="title"] {
+  flex: 1;
+  display: block;
+}
+
+:host [part="trigger"] {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: var(--base-font-size);
+  outline: 0;
+  border: 0;
+  height: var(--base-size-md);
+}
+
+:host [part="trigger"]:hover {
+}
+
+::slotted([name="prepend"]) {
+  margin-right: var(--base-space-sm);
+}
+
+:host [part="append"] svg {
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+:host([open]) [part="append"] svg {
+  transform: rotate(-180deg);
 }

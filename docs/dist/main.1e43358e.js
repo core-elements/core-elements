@@ -23665,12 +23665,13 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$i = css`:host [part=content]{display:none}:host([open]) [part=content]{display:block}`;
+  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);border-bottom:1px solid var(--base-accordion-border-color);display:block;width:100%}:host [part=content]{display:none;width:100%}:host([open]) [part=content]{display:block}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([name=prepend]){margin-right:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
 
   class BaseAccordion extends LitElement {
     constructor() {
       super();
       this._open = false;
+      this._handleClick = this._handleClick.bind(this);
     }
 
     static get properties() {
@@ -23687,12 +23688,16 @@ var global = arguments[3];
     }
 
     connectedCallback() {
-      super.connectedCallback(); //  trigger first attribute change
-
-      this.setAttribute("tabindex", "0");
+      super.connectedCallback();
     }
 
-    get open() {}
+    _handleClick() {
+      this.open = !this.open;
+    }
+
+    get open() {
+      return this._open;
+    }
 
     set open(val) {
       if (this._open === val) return;
@@ -23709,14 +23714,40 @@ var global = arguments[3];
 
     render() {
       return html`
-      ${this.title ? html`<button @click=${this.open = !this.open} part="trigger">
+      ${this.title ? html`<button @click=${this._handleClick} part="trigger">
             <slot name="prepend" part="prepend"></slot>
-            ${this.title}
-            <slot name="append" part="append"></slot>
-          </button>` : html`<button @click=${this.open = !this.open} part="trigger">
+            <div part="title">${this.title}</div>
+            <slot name="append" part="append"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </slot>
+          </button>` : html`<button @click=${this._handleClick} part="trigger">
             <slot name="prepend" part="prepend"></slot>
             <slot name="title" part="title"></slot>
-            <slot name="append" part="append"></slot>
+            <slot name="append" part="append"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </slot>
           </button>`}
       <slot part="content"></slot>
     `;
@@ -36426,11 +36457,11 @@ render._withStripped = true
 },{"../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
-    "path": "../lib/src/components/base-button/base-button.md",
-    "name": "Button",
-    "desc": "A general button element",
+    "path": "../lib/src/components/base-accordion/base-accordion.md",
+    "name": "Accordion",
+    "desc": "Accordions",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-box/base-box.md",
     "name": "Box",
@@ -36438,23 +36469,29 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-button/base-button.md",
+    "name": "Button",
+    "desc": "A general button element",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
     "desc": "A checkbox element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    base-checkbox.choice {\n      margin-bottom: var(--base-space-md);\n      padding: 0 var(--base-space-md);\n      height: var(--base-size-xl);\n      border: 2px solid var(--base-color-ui-light);\n    }\n    base-checkbox.choice:hover {\n      border-color: var(--base-color-ui);\n    }\n    base-checkbox.choice[checked] {\n      border-color: var(--base-color-focus);\n    }\n  </style>\n  <base-checkbox class=\"choice\" full>\n    <base-flex justify-content=\"between\" align-items=\"center\">\n      <div>\n        <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n        <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n      </div>\n      <div>\n        <base-text tag=\"h3\">30$</base-text>\n      </div>\n    </base-flex>\n  </base-checkbox>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "desc": "An element to limit the width of your content",
-    "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
     "desc": "Utility element to flex children",
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "desc": "An element to limit the width of your content",
+    "category": "Layout",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
@@ -36474,29 +36511,29 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "desc": "Radio button",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-text/base-text.md",
-    "name": "Text",
-    "desc": "A general purpose text element",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "desc": "Radio button",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
     "desc": "Element with option for multiselect, search and more",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No results found</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select full multiple list-open-on-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\" selected></base-option>\n    <base-option value=\"Option 4\"></base-option>\n    <base-option value=\"Option 5\" selected></base-option>\n    <base-option value=\"Option 6\" selected></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-text/base-text.md",
+    "name": "Text",
+    "desc": "A general purpose text element",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-tabs/base-tabs.md",
     "name": "Tabs",
@@ -36515,12 +36552,6 @@ module.exports = {
     "desc": "A general toggle element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n\n## Animate icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<base-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-accordion/base-accordion.md",
-    "name": "Accordion",
-    "desc": "Accordions",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">Checkbox</base-accordion>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -63186,7 +63217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50086" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53902" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
