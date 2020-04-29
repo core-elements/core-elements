@@ -23508,7 +23508,7 @@ var global = arguments[3];
 
       <!-- Sugggestion list -->
       <!-- Check is slot for no options is used -->
-      ${this.querySelector('[slot="no-options"') ? html`<div
+      ${this.querySelector('[slot="no-options"]') ? html`<div
             id="listbox"
             part="option-list"
             @mousedown=${this._handleListMouseDown}
@@ -23665,12 +23665,12 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);border-bottom:1px solid var(--base-accordion-border-color);display:block;width:100%}:host [part=content]{display:none;width:100%}:host([open]) [part=content]{display:block}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([name=prepend]){margin-right:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
+  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);outline:1px #000;display:block;width:100%}:host(:hover){--base-accordion-border-color:var(--base-color-ui)}:host(:last-of-type){border-bottom:1px solid var(--base-accordion-border-color)}:host [part=content]{display:block;width:100%;overflow:hidden;max-height:0;-webkit-transition:max-height .5s ease;transition:max-height .5s ease}:host([open]) [part=content]{max-height:500px;-webkit-transition:max-height .3s ease-in;transition:max-height .3s ease-in}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{cursor:pointer;text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([name=prepend]){margin-right:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
 
   class BaseAccordion extends LitElement {
     constructor() {
       super();
-      this._open = false;
+      this._open = true;
       this._handleClick = this._handleClick.bind(this);
     }
 
@@ -23689,6 +23689,10 @@ var global = arguments[3];
 
     connectedCallback() {
       super.connectedCallback();
+      setTimeout(() => {
+        this._originalHeight = this.offsetHeight;
+        this.open = false;
+      });
     }
 
     _handleClick() {
@@ -23703,8 +23707,12 @@ var global = arguments[3];
       if (this._open === val) return;
 
       if (val) {
+        const content = this.shadowRoot.querySelector('slot[part="content"]');
+        content.style.maxHeight = `${this._originalHeight}px`;
         this.setAttribute("open", "");
       } else {
+        const content = this.shadowRoot.querySelector('slot[part="content"]');
+        content.style.maxHeight = "0px";
         this.removeAttribute("open");
       }
 
@@ -36461,7 +36469,13 @@ module.exports = {
     "name": "Accordion",
     "desc": "Accordions",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
+    "name": "Checkbox",
+    "desc": "A checkbox element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    base-checkbox.choice {\n      margin-bottom: var(--base-space-md);\n      padding: 0 var(--base-space-md);\n      height: var(--base-size-xl);\n      border: 2px solid var(--base-color-ui-light);\n    }\n    base-checkbox.choice:hover {\n      border-color: var(--base-color-ui);\n    }\n    base-checkbox.choice[checked] {\n      border-color: var(--base-color-focus);\n    }\n  </style>\n  <base-checkbox class=\"choice\" full>\n    <base-flex justify-content=\"between\" align-items=\"center\">\n      <div>\n        <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n        <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n      </div>\n      <div>\n        <base-text tag=\"h3\">30$</base-text>\n      </div>\n    </base-flex>\n  </base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-box/base-box.md",
     "name": "Box",
@@ -36475,11 +36489,11 @@ module.exports = {
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-    "name": "Checkbox",
-    "desc": "A checkbox element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    base-checkbox.choice {\n      margin-bottom: var(--base-space-md);\n      padding: 0 var(--base-space-md);\n      height: var(--base-size-xl);\n      border: 2px solid var(--base-color-ui-light);\n    }\n    base-checkbox.choice:hover {\n      border-color: var(--base-color-ui);\n    }\n    base-checkbox.choice[checked] {\n      border-color: var(--base-color-focus);\n    }\n  </style>\n  <base-checkbox class=\"choice\" full>\n    <base-flex justify-content=\"between\" align-items=\"center\">\n      <div>\n        <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n        <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n      </div>\n      <div>\n        <base-text tag=\"h3\">30$</base-text>\n      </div>\n    </base-flex>\n  </base-checkbox>\n</base-knobs>\n"
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "desc": "An element to limit the width of your content",
+    "category": "Layout",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
@@ -36487,23 +36501,11 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "desc": "An element to limit the width of your content",
-    "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
     "desc": "Grid system elements",
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "Input",
-    "desc": "A input element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
@@ -36511,17 +36513,17 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "Input",
+    "desc": "A input element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "desc": "Radio button",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
@@ -36534,6 +36536,12 @@ module.exports = {
     "desc": "A general purpose text element",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "desc": "Radio button",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-tabs/base-tabs.md",
     "name": "Tabs",
@@ -63217,7 +63225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53902" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58869" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

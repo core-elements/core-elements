@@ -1,18 +1,30 @@
 :host {
   --base-accordion-border-color: var(--base-color-ui-light);
   border-top: 1px solid var(--base-accordion-border-color);
-  border-bottom: 1px solid var(--base-accordion-border-color);
+  outline: 1px black;
   display: block;
   width: 100%;
+}
+
+:host(:hover) {
+  --base-accordion-border-color: var(--base-color-ui);
+}
+
+:host(:last-of-type) {
+  border-bottom: 1px solid var(--base-accordion-border-color);
 }
 
 :host [part="content"] {
-  display: none;
+  display: block;
   width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
 }
 
 :host([open]) [part="content"] {
-  display: block;
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
 }
 
 :host [part="title"] {
@@ -21,6 +33,7 @@
 }
 
 :host [part="trigger"] {
+  cursor: pointer;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -31,9 +44,6 @@
   outline: 0;
   border: 0;
   height: var(--base-size-md);
-}
-
-:host [part="trigger"]:hover {
 }
 
 ::slotted([name="prepend"]) {
