@@ -23665,12 +23665,12 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);outline:1px #000;display:block;width:100%}:host(:hover){--base-accordion-border-color:var(--base-color-ui)}:host(:last-of-type){border-bottom:1px solid var(--base-accordion-border-color)}:host [part=content]{display:block;width:100%;overflow:hidden;max-height:0;-webkit-transition:max-height .5s ease;transition:max-height .5s ease}:host([open]) [part=content]{max-height:500px;-webkit-transition:max-height .3s ease-in;transition:max-height .3s ease-in}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{cursor:pointer;text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([name=prepend]){margin-right:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
+  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);outline:1px #000;display:block;width:100%}:host(:hover){--base-accordion-border-color:var(--base-color-ui)}:host(:last-of-type){border-bottom:1px solid var(--base-accordion-border-color)}:host [part=content]{display:block;width:100%;overflow:hidden;-webkit-transition:max-height .3s ease;transition:max-height .3s ease}:host(:not([open])) [part=content]{max-height:0}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{cursor:pointer;text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([name=prepend]){margin-right:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
 
   class BaseAccordion extends LitElement {
     constructor() {
       super();
-      this._open = true;
+      this._open = false;
       this._handleClick = this._handleClick.bind(this);
     }
 
@@ -23690,7 +23690,8 @@ var global = arguments[3];
     connectedCallback() {
       super.connectedCallback();
       setTimeout(() => {
-        this._originalHeight = this.offsetHeight;
+        this.open = true;
+        this._originalHeight = this.shadowRoot.querySelector('slot[part="content"]').offsetHeight;
         this.open = false;
       });
     }
@@ -36469,7 +36470,7 @@ module.exports = {
     "name": "Accordion",
     "desc": "Accordions",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n    </base-box>\n  </base-accordion>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",

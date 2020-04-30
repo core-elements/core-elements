@@ -5,7 +5,7 @@
       "name": "Accordion",
       "desc": "Accordions",
       "category": "Elements",
-      "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n</base-knobs>\n"
+      "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n    </base-box>\n  </base-accordion>\n</base-knobs>\n"
     },
     {
       "path": "../lib/src/components/base-checkbox/base-checkbox.md",
