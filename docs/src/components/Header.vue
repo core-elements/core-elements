@@ -1,7 +1,11 @@
 <template>
   <base-box class="header" padding-x="md" bg="white">
     <base-container center size="lg">
-      <base-flex class="header__inner" justify-content="between" align-items="center">
+      <base-flex
+        class="header__inner"
+        justify-content="between"
+        align-items="center"
+      >
         <div class="header__left">
           <router-link to="/" class="header__logo">
             <svg
@@ -28,7 +32,10 @@
                 d="M67.5 112C87.6584 112 104 95.6584 104 75.5C104 55.3416 87.6584 39 67.5 39C47.3416 39 31 55.3416 31 75.5C31 95.6584 47.3416 112 67.5 112ZM67.5 120C92.0767 120 112 100.077 112 75.5C112 50.9233 92.0767 31 67.5 31C42.9233 31 23 50.9233 23 75.5C23 100.077 42.9233 120 67.5 120Z"
                 fill="currentColor"
               />
-              <path d="M44 0L87.3013 75H0.69873L44 0Z" fill="var(--base-color-white)" />
+              <path
+                d="M44 0L87.3013 75H0.69873L44 0Z"
+                fill="var(--base-color-white)"
+              />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -40,12 +47,10 @@
             <span>Base Elements</span>
           </router-link>
           <button @click="handleToggleButton" class="header__route-menu-button">
-            {{ $route.meta.title }}
+            {{ title }}
             <i
-              v-if="$route.meta.hasSidebar"
-              :class="
-                showSidebar ? 'gg-chevron-up' : 'gg-chevron-down'
-              "
+              v-if="hasSidebar"
+              :class="showSidebar ? 'gg-chevron-up' : 'gg-chevron-down'"
             ></i>
           </button>
         </div>
@@ -61,22 +66,26 @@
                 v-on:click.native="showMenu = false"
                 to="/"
                 class="header__nav-item home"
-              >Home</router-link>
+                >Home</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/getting-started"
                 class="header__nav-item"
-              >Getting started</router-link>
+                >Getting started</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/components"
                 class="header__nav-item"
-              >Components</router-link>
+                >Components</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/themes"
                 class="header__nav-item"
-              >Themes</router-link>
+                >Themes</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/themes"
@@ -84,7 +93,8 @@
                 tag="ion-icon"
                 name="logo-github"
                 class="header__nav-item"
-              >Themes</router-link>
+                >Themes</router-link
+              >
             </nav>
           </div>
         </div>
@@ -95,25 +105,30 @@
 
 <script>
 export default {
-  props: { showSidebar: Boolean },
+  props: {
+    showSidebar: Boolean,
+    hasSidebar: Boolean,
+    showInHeader: Boolean,
+    title: String,
+  },
   data() {
     return {
-      showMenu: false
+      showMenu: false,
     };
   },
   watch: {
-    showSidebar: val => {
+    showSidebar: (val) => {
       if (val) document.body.classList.add("no-scroll-mobile");
       else document.body.classList.remove("no-scroll-mobile");
-    }
+    },
   },
   methods: {
     handleToggleButton() {
       if (this.$route.meta.hasSidebar) {
         this.$emit("toggle-sidebar");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

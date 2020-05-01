@@ -1173,9 +1173,19 @@ b {
 .landing {
   padding-top: 60px;
 }
-.components {
+.components[data-v-c5436c] {
   max-width: 100%;
   padding-top: 60px;
+}
+.tabs[data-v-c5436c] {
+  position: sticky;
+  top: 60px;
+  width: calc(100% + 15px);
+  background: var(--base-color-white);
+  margin-left: -15px;
+  padding-left: 15px;
+  z-index: 500;
+  margin-top: 30px;
 }
 .sidebar {
   padding-top: 60px;
@@ -1226,6 +1236,24 @@ b {
     width: 78%;
   }
 }
+.component {
+  scroll-behavior: smooth;
+}
+
+.sticky-tabs {
+  margin-top: 60px;
+  position: sticky;
+  top: 60px;
+  z-index: 500;
+  background: var(--base-color-white);
+}
+
+@media (min-width: 800px) {
+  .sticky-tabs {
+    display: none;
+  }
+}
+
 nav[toc] {
   font-size: 1em;
 }
@@ -1270,6 +1298,7 @@ nav[toc] a:last-of-type {
 nav[toc] a div {
   margin-top: 20px;
   margin-left: 10px;
+  display: none;
 }
 
 nav[toc] a a {
@@ -1278,6 +1307,10 @@ nav[toc] a a {
 
 @media (min-width: 800px) {
   nav[toc] a {
+    display: block;
+  }
+
+  nav[toc] a div {
     display: block;
   }
 }

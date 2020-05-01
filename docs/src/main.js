@@ -11,6 +11,7 @@ import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
 import GettingStarted from "./views/GettingStarted";
+import { components } from "./db.json";
 
 Vue.config.ignoredElements = [/base-\w*/];
 Vue.config.ignoredElements = [/ion-\w*/];
@@ -41,7 +42,11 @@ const router = new Router({
     {
       path: "/getting-started",
       component: GettingStarted,
-      meta: { title: "Getting Started", showInHeader: true, hasSidebar: false },
+      meta: {
+        title: "Getting Started",
+        showInHeader: true,
+        hasSidebar: false,
+      },
     },
   ],
   scrollBehavior: function(to, from, savedPosition) {

@@ -16,6 +16,10 @@
   display: inline-block;
 }
 
+:host(:last-child) > *:first-child {
+  margin-bottom: 0;
+}
+
 :host([full]),
 :host([full]) > *:first-child {
   display: block;

@@ -44,8 +44,12 @@
   height: var(--base-size-md);
 }
 
-::slotted([name="prepend"]) {
+::slotted([slot="prepend"]) {
   margin-right: var(--base-space-sm);
+}
+
+::slotted([slot="append"]) {
+  margin-left: var(--base-space-sm);
 }
 
 :host [part="append"] svg {

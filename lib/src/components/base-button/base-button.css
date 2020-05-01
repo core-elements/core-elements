@@ -16,7 +16,6 @@
 :host {
   display: var(--base-button-display);
   vertical-align: middle;
-  margin-bottom: var(--base-space-xs);
   align-items: center;
   justify-content: center;
 }

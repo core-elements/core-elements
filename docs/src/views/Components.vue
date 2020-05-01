@@ -15,35 +15,48 @@
           </p>
         </base-text>
       </base-container>
-      <base-box margin-y="xl">
-        <base-grid gap="xl" gap-sm="md" columns="12">
-          <base-grid-item
-            sm="12"
-            md="3"
-            v-for="(menuGroup, name) in groupedComponents"
-            :key="name"
-          >
-            <base-text tag="h2">{{ name }}</base-text>
-            <base-box margin-y="xl">
-              <base-grid columns="1" gap="lg">
-                <base-grid-item sm="1" :key="i" v-for="(page, i) in menuGroup">
-                  <router-link
-                    style="height: 100%;"
-                    tag="base-box"
-                    radius="md"
-                    clickable
-                    full
-                    :to="`/components/${page.name}`"
-                  >
-                    <base-text tag="h3">{{ page.name }}</base-text>
-                    <base-text tag="small">{{ page.desc }}</base-text>
-                  </router-link>
-                </base-grid-item>
-              </base-grid>
-            </base-box>
-          </base-grid-item>
-        </base-grid>
-      </base-box>
+
+      <base-tabs
+        class="tabs"
+        :value="category"
+        @change="(e) => (category = e.target.value)"
+      >
+        <base-tab>All</base-tab>
+        <base-tab>Layout</base-tab>
+        <base-tab>Elements</base-tab>
+        <base-tab>Form</base-tab>
+        <base-tab>Navigation</base-tab>
+      </base-tabs>
+
+      <base-container size="md">
+        <base-box margin-y="xl">
+          <base-grid gap-sm="md" gap-md="lg" columns="12">
+            <base-grid-item
+              sm="6"
+              md="3"
+              lg="3"
+              v-for="component in filteredComponents"
+              :key="component.name"
+            >
+              <router-link
+                style="height: 100%"
+                tag="base-box"
+                depth="sm"
+                padding="lg"
+                radius="xs"
+                clickable
+                full
+                :to="`/components/${component.name}`"
+              >
+                <base-text tag="h3" weight="400">{{
+                  component.name
+                }}</base-text>
+                <base-text tag="small">{{ component.desc }}</base-text>
+              </router-link>
+            </base-grid-item>
+          </base-grid>
+        </base-box>
+      </base-container>
     </div>
   </Page>
 </template>
@@ -57,35 +70,32 @@ export default {
   data() {
     return {
       components,
+      category: "All",
     };
   },
   computed: {
-    groupedComponents() {
-      return this.components.reduce(
-        (acc, comp) => {
-          const catName = comp.category || "Uncategorized";
-
-          const prevComps = acc[`${catName}`] ? acc[`${catName}`] : [];
-
-          return {
-            ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
-          };
-        },
-        {
-          Layout: [],
-          Elements: [],
-          Form: [],
-        }
-      );
+    filteredComponents() {
+      if (this.category === "All") return this.components;
+      return this.components.filter((comp) => comp.category === this.category);
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .components {
   max-width: 100%;
   padding-top: 60px;
+}
+
+.tabs {
+  position: sticky;
+  top: 60px;
+  width: calc(100% + 15px);
+  background: var(--base-color-white);
+  margin-left: -15px;
+  padding-left: 15px;
+  z-index: 500;
+  margin-top: 30px;
 }
 </style>

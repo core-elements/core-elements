@@ -20917,7 +20917,7 @@ var global = arguments[3];
    */
 
   LitElement.render = render$1;
-  var styles = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-flex;--base-button-height:var(--base-size-md);vertical-align:middle;margin-bottom:var(--base-space-xs);-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}:host([full]){--base-button-display:flex;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host(:hover){--base-button-bg-color:var(--base-color-ui-light)}:host(:focus){--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host([disabled]){opacity:.5;cursor:not-allowed}:host([type=primary]){--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]:hover){--base-button-bg-color:var(--base-color-primary-dark)}:host([type=secondary]){--base-button-bg-color:var(--base-color-secondary);--base-button-text-color:var(--base-color-primary)}:host([type=secondary]:hover){--base-button-bg-color:var(--base-color-secondary-dark)}:host([type=transparent]){--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]:hover){--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]){--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]:hover){--base-button-bg-color:var(--base-color-success-dark)}:host([type=danger]){--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]:hover){--base-button-bg-color:var(--base-color-danger-dark)}:host([outline]){--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}::slotted([slot=prepend]){vertical-align:text-bottom;margin-right:var(--base-space-sm)}::slotted([slot=append]){vertical-align:text-bottom;margin-left:var(--base-space-sm)}`;
+  var styles = css`:host{--base-button-padding:0 var(--base-space-md);--base-button-bg-color:var(--base-color-ui-lighter);--base-button-border:0;--base-button-border-radius:none;--base-button-font-size:var(--base-font-size-sm);--base-button-text-color:var(--base-font-color);--base-button-box-shadow:0 0;--base-button-transform:scale(1);--base-button-transition:all .2s ease;--base-button-cursor:pointer;--base-button-display:inline-flex;--base-button-height:var(--base-size-md);vertical-align:middle;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}:host([full]){--base-button-display:flex;width:100%}:host([size=sm]){--base-button-height:var(--base-size-sm);--base-button-padding:0 var(--base-space-sm)}:host([size=md]){--base-button-height:var(--base-size-md);--base-button-padding:0 var(--base-space-md)}:host([size=lg]){--base-button-height:var(--base-size-lg);--base-button-padding:0 var(--base-space-lg)}:host{height:var(--base-button-height);outline:0;color:var(--base-button-text-color);cursor:var(--base-button-cursor);display:var(--base-button-display);box-shadow:var(--base-button-box-shadow);border-radius:var(--base-button-border-radius);font-size:var(--base-button-font-size);padding:var(--base-button-padding);background:var(--base-button-bg-color);border:var(--base-button-border);-webkit-transform:var(--base-button-transform);transform:var(--base-button-transform);-webkit-transition:var(--base-button-transition);transition:var(--base-button-transition)}:host(:hover){--base-button-bg-color:var(--base-color-ui-light)}:host(:focus){--base-button-box-shadow:0 0 0 2px var(--base-color-focus)}:host([disabled]){opacity:.5;cursor:not-allowed}:host([type=primary]){--base-button-bg-color:var(--base-color-primary);--base-button-text-color:var(--base-color-white)}:host([type=primary]:hover){--base-button-bg-color:var(--base-color-primary-dark)}:host([type=secondary]){--base-button-bg-color:var(--base-color-secondary);--base-button-text-color:var(--base-color-primary)}:host([type=secondary]:hover){--base-button-bg-color:var(--base-color-secondary-dark)}:host([type=transparent]){--base-button-bg-color:transparent;--base-button-text-color:var(--base-color-black)}:host([type=transparent]:hover){--base-button-bg-color:var(--base-color-ui-lighter)}:host([type=success]){--base-button-bg-color:var(--base-color-success);--base-button-text-color:var(--base-color-white)}:host([type=success]:hover){--base-button-bg-color:var(--base-color-success-dark)}:host([type=danger]){--base-button-bg-color:var(--base-color-danger);--base-button-text-color:var(--base-color-white)}:host([type=danger]:hover){--base-button-bg-color:var(--base-color-danger-dark)}:host([outline]){--base-button-border:2px solid var(--base-button-bg-color);color:var(--base-button-bg-color);background:none !important}:host([outline]):not([type]){color:var(--base-color-black)}::slotted([slot=prepend]){vertical-align:text-bottom;margin-right:var(--base-space-sm)}::slotted([slot=append]){vertical-align:text-bottom;margin-left:var(--base-space-sm)}`;
   var sharedStyles = css`:host{font-family:var(--base-font-family);box-sizing:border-box}:host([hidden]){display:none}*,:after,:before{box-sizing:inherit}`;
 
   class BaseButton extends LitElement {
@@ -21123,9 +21123,11 @@ var global = arguments[3];
         value=${this.value}
         type="checkbox"
       />
-      <span part="box">
-        <slot name="indicator" part="indicator">&#10003;</slot>
-      </span>
+      <slot name="box">
+        <span part="box">
+          <slot name="indicator" part="indicator">&#10003;</slot>
+        </span>
+      </slot>
       <div for="checkbox-input" part="label"><slot></slot></div>
     `;
     }
@@ -21531,7 +21533,7 @@ var global = arguments[3];
     return new StringMask(pattern, options).validate(value);
   };
 
-  var styles$3 = css`:host{--base-input-bg-color:var(--base-color-white);--base-input-height:var(--base-size-md);--base-input-border-color:var(--base-color-ui-light);--base-input-border-radius:none;--base-input-box-shadow:none;--base-input-placeholder-color:var(--base-color-font-light);--base-input-font-size:var(--base-font-size-sm);vertical-align:middle;min-width:200px;display:inline-block}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:2px solid var(--base-input-border-color)}:host([type=number]) [part=input-field]::-webkit-inner-spin-button,:host([type=number]) [part=input-field]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}:host [part=input]:hover{--base-input-border-color:var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);--base-input-border-color:var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-border-color:var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-border-color:var(--base-color-danger)}:host [part=input-field]{color:var(--base-color-font);background-color:var(--base-input-bg-color);width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:0 var(--base-space-md)}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){margin-left:var(--base-space-sm)}::slotted([slot=append]){margin-right:var(--base-space-sm)}`;
+  var styles$3 = css`:host{--base-input-bg-color:var(--base-color-white);--base-input-padding:0 var(--base-space-md);--base-input-height:var(--base-size-md);--base-input-border-color:var(--base-color-ui-light);--base-input-border-radius:none;--base-input-box-shadow:none;--base-input-placeholder-color:var(--base-color-font-light);--base-input-font-size:var(--base-font-size-sm);vertical-align:middle;min-width:200px;display:inline-block}:host([size=sm]){--base-input-height:var(--base-size-sm);--base-input-padding:0 var(--base-space-sm)}:host([size=md]){--base-input-height:var(--base-size-md)}:host([size=lg]),:host([size=md]){--base-input-padding:0 var(--base-space-md)}:host([size=lg]){--base-input-height:var(--base-size-lg)}:host([full]){width:100%;display:block}:host [part=input]{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;box-shadow:var(--base-input-box-shadow);border-radius:var(--base-input-border-radius);height:var(--base-input-height);border:2px solid var(--base-input-border-color)}:host([type=number]) [part=input-field]::-webkit-inner-spin-button,:host([type=number]) [part=input-field]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}:host [part=input]:hover{--base-input-border-color:var(--base-color-ui)}:host([focused]) [part=input]{--base-input-box-shadow:0 0 0 1px var(--base-color-focus);--base-input-border-color:var(--base-color-focus)}:host(:not([focused])[valid]) [part=input]{--base-input-border-color:var(--base-color-success)}:host(:not([focused])[invalid]) [part=input]{--base-input-border-color:var(--base-color-danger)}:host [part=input-field]{text-align:inherit;color:var(--base-color-font);background-color:var(--base-input-bg-color);width:100%;font-size:var(--base-font-size-sm);border-radius:var(--base-input-border-radius);height:100%;outline:0;border:0;padding:var(--base-input-padding)}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-input-font-size);color:var(--base-input-placeholder-color)}::slotted([slot=help]){color:var(--base-color-font-light)}::slotted([slot=error]),::slotted([slot=help]){display:block;font-size:var(--base-font-size-xs);margin-top:var(--base-space-sm)}::slotted([slot=error]){color:var(--base-color-danger)}::slotted([slot=prepend]){margin-left:var(--base-space-sm)}::slotted([slot=append]){margin-right:var(--base-space-sm)}`;
 
   class BaseInput extends LitElement {
     constructor() {
@@ -21565,6 +21567,14 @@ var global = arguments[3];
       this.min = undefined;
       this.minlength = undefined;
       this.pattern = undefined;
+      this.step = undefined;
+      /**
+       * Input size
+       * @type {"sm"|"md"|"lg"}
+       * @attr
+       */
+
+      this.size = "";
       this.readonly = false;
       this.autovalidate = false;
       this.focused = false;
@@ -21596,6 +21606,12 @@ var global = arguments[3];
           type: String
         },
         pattern: {
+          type: String
+        },
+        size: {
+          type: String
+        },
+        step: {
           type: String
         },
         placeholder: {
@@ -21701,6 +21717,14 @@ var global = arguments[3];
       }
     }
 
+    stepUp() {
+      this.inputEl.stepUp();
+    }
+
+    stepDown() {
+      this.inputEl.stepDown();
+    }
+
     _handleFocusEvent() {
       this.focused = true;
       this.showSuggestions = true;
@@ -21767,6 +21791,7 @@ var global = arguments[3];
           minlength=${ifDefined(this.minlength)}
           max=${ifDefined(this.max)}
           maxlength=${ifDefined(this.maxlength)}
+          step=${ifDefined(this.step)}
           pattern=${ifDefined(this.pattern)}
           @keypress=${this._handleKeypress}
           @input=${this._handleInputEvent}
@@ -22321,7 +22346,7 @@ var global = arguments[3];
     customElements.define("base-flex", BaseFlex);
   }
 
-  var styles$8 = css`:host{--base-font-size:var(--base-font-size-sm);--base-font-weight:400}:host,:host>:first-child{display:inline-block;text-align:left;font-weight:var(--base-font-weight);font-size:var(--base-font-size)}:host([inline]),:host([inline])>:first-child{display:inline-block}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{--base-font-size:var(--base-font-size-xl);--base-font-weight:700}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{--base-font-size:var(--base-font-size-lg);--base-font-weight:700}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{--base-font-size:var(--base-font-size-md);--base-font-weight:700}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{--base-font-size:var(--base-font-size-sm);--base-font-weight:600}:host([look=h5])>:first-child,:host([tag=h5])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:600}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:500}:host([look=small])>:first-child,:host([tag=small])>:first-child{--base-font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"])>:first-child{--base-font-weight:100}:host([weight="200"])>:first-child{--base-font-weight:200}:host([weight="300"])>:first-child{--base-font-weight:300}:host([weight="400"])>:first-child{--base-font-weight:400}:host([weight="500"])>:first-child{--base-font-weight:500}:host([weight="600"])>:first-child{--base-font-weight:600}:host([weight="700"])>:first-child{--base-font-weight:700}:host([weight="800"])>:first-child{--base-font-weight:800}:host([weight="900"])>:first-child{--base-font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{--base-font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
+  var styles$8 = css`:host{--base-font-size:var(--base-font-size-sm);--base-font-weight:400}:host,:host>:first-child{display:inline-block;text-align:left;font-weight:var(--base-font-weight);font-size:var(--base-font-size)}:host([inline]),:host([inline])>:first-child{display:inline-block}:host(:last-child)>:first-child{margin-bottom:0}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{--base-font-size:var(--base-font-size-xl);--base-font-weight:700}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{--base-font-size:var(--base-font-size-lg);--base-font-weight:700}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{--base-font-size:var(--base-font-size-md);--base-font-weight:700}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{--base-font-size:var(--base-font-size-sm);--base-font-weight:600}:host([look=h5])>:first-child,:host([tag=h5])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:600}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:500}:host([look=small])>:first-child,:host([tag=small])>:first-child{--base-font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"])>:first-child{--base-font-weight:100}:host([weight="200"])>:first-child{--base-font-weight:200}:host([weight="300"])>:first-child{--base-font-weight:300}:host([weight="400"])>:first-child{--base-font-weight:400}:host([weight="500"])>:first-child{--base-font-weight:500}:host([weight="600"])>:first-child{--base-font-weight:600}:host([weight="700"])>:first-child{--base-font-weight:700}:host([weight="800"])>:first-child{--base-font-weight:800}:host([weight="900"])>:first-child{--base-font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{--base-font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
 
   class BaseText extends LitElement {
     constructor() {
@@ -22600,7 +22625,7 @@ var global = arguments[3];
     customElements.define("base-textarea", BaseTextArea);
   }
 
-  var styles$c = css`:host{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center}:host([full]){display:-webkit-box;display:flex;width:100%}:host([position=left]){-webkit-box-pack:start;justify-content:flex-start}:host([position=center]){-webkit-box-pack:center;justify-content:center}:host([position=right]){-webkit-box-pack:end;justify-content:flex-end}`;
+  var styles$c = css`:host{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;overflow-x:scroll}:host([full]){display:-webkit-box;display:flex;width:100%}:host([position=left]){-webkit-box-pack:start;justify-content:flex-start}:host([position=center]){-webkit-box-pack:center;justify-content:center}:host([position=right]){-webkit-box-pack:end;justify-content:flex-end}`;
 
   function getTabValue(tab) {
     return tab.value || tab.getAttribute("value") || tab.innerText;
@@ -22713,7 +22738,7 @@ var global = arguments[3];
     customElements.define("base-tabs", BaseTabs);
   }
 
-  var styles$d = css`:host{--base-tab-box-shadow:0 0;cursor:default;display:-webkit-inline-box;display:inline-flex}:host([full]){display:-webkit-box;display:flex;width:100%}:host([disabled]){opacity:.5}:host{border:0;color:var(--base-color-font-light);font-size:var(--base-font-size-sm);background:0;box-shadow:var(--base-tab-box-shadow);outline:0;padding:0 var(--base-space-sm);margin-right:var(--base-space-sm);height:var(--base-size-sm);border-bottom:2px solid transparent}:host(:focus),:host(:hover){border-bottom:2px solid var(--base-color-ui-light)}:host(:focus),:host([selected]){color:var(--base-color-font-dark)}:host([selected]){border-bottom:2px solid var(--base-color-focus)}`;
+  var styles$d = css`:host{--base-tab-box-shadow:0 0;white-space:nowrap;cursor:default;display:-webkit-inline-box;display:inline-flex}:host([full]){display:-webkit-box;display:flex;width:100%}:host([disabled]){opacity:.5}:host{border:0;color:var(--base-color-font-light);font-size:var(--base-font-size-sm);background:0;box-shadow:var(--base-tab-box-shadow);outline:0;padding:0 var(--base-space-sm);margin-right:var(--base-space-sm);height:var(--base-size-sm);border-bottom:2px solid transparent}:host(:focus),:host(:hover){border-bottom:2px solid var(--base-color-ui-light)}:host(:focus),:host([selected]){color:var(--base-color-font-dark)}:host([selected]){border-bottom:2px solid var(--base-color-focus)}`;
 
   class BaseTab extends LitElement {
     constructor() {
@@ -22722,10 +22747,14 @@ var global = arguments[3];
       this.target = "";
       this.disabled = false;
       this._value = "";
+      this.hash = "";
     }
 
     static get properties() {
       return {
+        hash: {
+          type: String
+        },
         target: {
           type: String
         },
@@ -23665,7 +23694,7 @@ var global = arguments[3];
     customElements.define("base-optgroup", BaseOptGroup);
   }
 
-  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);outline:1px #000;display:block;width:100%}:host(:hover){--base-accordion-border-color:var(--base-color-ui)}:host(:last-of-type){border-bottom:1px solid var(--base-accordion-border-color)}:host [part=content]{display:block;width:100%;overflow:hidden;-webkit-transition:max-height .3s ease;transition:max-height .3s ease}:host(:not([open])) [part=content]{max-height:0}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{cursor:pointer;text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([name=prepend]){margin-right:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
+  var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);outline:1px #000;display:block;width:100%}:host(:hover){--base-accordion-border-color:var(--base-color-ui)}:host(:last-of-type){border-bottom:1px solid var(--base-accordion-border-color)}:host [part=content]{display:block;width:100%;overflow:hidden;-webkit-transition:max-height .3s ease;transition:max-height .3s ease}:host(:not([open])) [part=content]{max-height:0}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{cursor:pointer;text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([slot=prepend]){margin-right:var(--base-space-sm)}::slotted([slot=append]){margin-left:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
 
   class BaseAccordion extends LitElement {
     constructor() {
@@ -35463,9 +35492,22 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
-    showSidebar: Boolean
+    showSidebar: Boolean,
+    hasSidebar: Boolean,
+    showInHeader: Boolean,
+    title: String
   },
 
   data() {
@@ -35601,11 +35643,9 @@ exports.default = _default;
                     },
                     [
                       _vm._v(
-                        "\n          " +
-                          _vm._s(_vm.$route.meta.title) +
-                          "\n          "
+                        "\n          " + _vm._s(_vm.title) + "\n          "
                       ),
-                      _vm.$route.meta.hasSidebar
+                      _vm.hasSidebar
                         ? _c("i", {
                             class: _vm.showSidebar
                               ? "gg-chevron-up"
@@ -35794,6 +35834,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   components: {
     Header: _Header.default
@@ -35804,8 +35853,14 @@ var _default = {
       checked: false,
       showSidebar: false
     };
-  }
+  },
 
+  computed: {
+    routerProps() {
+      return this.$route.meta;
+    }
+
+  }
 };
 exports.default = _default;
         var $35d33c = exports.default || module.exports;
@@ -35824,7 +35879,12 @@ exports.default = _default;
     "div",
     [
       _c("Header", {
-        attrs: { showSidebar: _vm.showSidebar },
+        attrs: {
+          hasSidebar: _vm.routerProps.hasSidebar,
+          showInHeader: _vm.routerProps.showInHeader,
+          title: _vm.routerProps.title,
+          showSidebar: _vm.showSidebar
+        },
         on: {
           "toggle-sidebar": function($event) {
             _vm.showSidebar = !_vm.showSidebar
@@ -36470,19 +36530,7 @@ module.exports = {
     "name": "Accordion",
     "desc": "Accordions",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n    </base-box>\n  </base-accordion>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
-    "name": "Checkbox",
-    "desc": "A checkbox element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Custom icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Indicator animation\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .check-animation::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .check-animation[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"check-animation\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    base-checkbox.choice {\n      margin-bottom: var(--base-space-md);\n      padding: 0 var(--base-space-md);\n      height: var(--base-size-xl);\n      border: 2px solid var(--base-color-ui-light);\n    }\n    base-checkbox.choice:hover {\n      border-color: var(--base-color-ui);\n    }\n    base-checkbox.choice[checked] {\n      border-color: var(--base-color-focus);\n    }\n  </style>\n  <base-checkbox class=\"choice\" full>\n    <base-flex justify-content=\"between\" align-items=\"center\">\n      <div>\n        <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n        <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n      </div>\n      <div>\n        <base-text tag=\"h3\">30$</base-text>\n      </div>\n    </base-flex>\n  </base-checkbox>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-box/base-box.md",
-    "name": "Box",
-    "desc": "A general purpose box with padding, border, depth and more",
-    "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n    </base-box>\n  </base-accordion>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n<style>\n  base-accordion .gg-chevron-right {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  base-accordion[open] .gg-chevron-right {\n    transform: rotate(90deg);\n  }\n</style>\n<base-accordion title=\"Title\">\n  <i slot=\"prepend\" class=\"gg-chevron-right\"></i>\n  <span slot=\"append\"></span>\n  <base-box margin-y=\"md\">Content</base-box>\n</base-accordion>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-button/base-button.md",
     "name": "Button",
@@ -36490,11 +36538,17 @@ module.exports = {
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-container/base-container.md",
-    "name": "Container",
-    "desc": "An element to limit the width of your content",
+    "path": "../lib/src/components/base-box/base-box.md",
+    "name": "Box",
+    "desc": "A general purpose box with padding, border, depth and more",
     "category": "Layout",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-checkbox/base-checkbox.md",
+    "name": "Checkbox",
+    "desc": "A checkbox element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>Checkbox</base-checkbox>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox size=\"sm\">Sm</base-checkbox>\n  <base-checkbox size=\"md\">Md</base-checkbox>\n  <base-checkbox size=\"lg\">Lg</base-checkbox>\n</base-knobs>\n\n## Animate indicator\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .animate::part(indicator) {\n      opacity: 0;\n      transition: all 0.5s ease;\n      transform: rotate(-90deg);\n    }\n    .animate[checked]::part(indicator) {\n      opacity: 1;\n      transform: rotate(0deg);\n      color: var(--base-color-white);\n    }\n  </style>\n  <base-checkbox class=\"animate\">\n    Animate default indicator\n  </base-checkbox>\n</base-knobs>\n\n## Custom box\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .heart .gg-heart {\n      color: lightgray;\n    }\n    .heart:hover .gg-heart {\n      color: gray;\n    }\n    .heart[checked] .gg-heart {\n      color: red;\n    }\n  </style>\n  <base-checkbox class=\"heart\">\n  <i slot=\"box\" class=\"gg-heart\"></i>\n    Custom indicator box\n  </base-checkbox>\n</base-knobs>\n\n## Custom indicator\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <base-checkbox>\n    <i slot=\"indicator\" class=\"gg-close\"></i>\n    Checkbox with custom icon\n  </base-checkbox>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-checkbox\">\n  <style>\n    .choice {\n      margin-bottom: var(--base-space-md);\n      padding: 0 var(--base-space-md);\n      height: var(--base-size-xl);\n      border: 2px solid var(--base-color-ui-light);\n    }\n    .choice:hover {\n      border-color: var(--base-color-ui);\n    }\n    .choice[checked] {\n      border-color: var(--base-color-focus);\n    }\n  </style>\n  <base-checkbox class=\"choice\" full>\n    <base-text tag=\"div\" look=\"h3\">French Fries</base-text>\n    <base-text tag=\"div\" look=\"p\">They're really good</base-text>\n  </base-checkbox>\n  <base-checkbox class=\"choice\" full>\n    <base-text tag=\"div\" look=\"h3\">Cheddar</base-text>\n    <base-text tag=\"div\" look=\"p\">Melted over yummy stuff</base-text>\n  </base-checkbox>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-flex/base-flex.md",
     "name": "Flex",
@@ -36502,11 +36556,23 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-flex\">\n<base-flex>\n<base-button>Button</base-button>\n<base-button>Button 2</base-button>\n<base-button>Button 3</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-container/base-container.md",
+    "name": "Container",
+    "desc": "An element to limit the width of your content",
+    "category": "Layout",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-container\">\n<base-container style=\"border: 1px solid gray\">Container</base-container>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-grid/base-grid.md",
     "name": "Grid",
     "desc": "Grid system elements",
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-input/base-input.md",
+    "name": "Input",
+    "desc": "A input element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input size=\"sm\" placeholder=\"Small\"></base-input>\n<base-input size=\"md\" placeholder=\"Medium\"></base-input>\n<base-input size=\"lg\" placeholder=\"Large\"></base-input>\n</base-knobs>\n\n## Search\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  #NumberInput {\n    min-width: 50px;\n    text-align: center;\n  }\n</style>\n<base-button onclick=\"NumberInput.stepDown()\">-</base-button>\n<base-input id=\"NumberInput\" max=\"100\" min=\"10\" step=\"10\" type=\"number\" ></base-input>\n<base-button onclick=\"NumberInput.stepUp()\">+</base-button>\n</base-knobs>\n\n## Masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-label/base-label.md",
     "name": "Label",
@@ -36514,29 +36580,11 @@ module.exports = {
     "category": "Form",
     "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-input/base-input.md",
-    "name": "Input",
-    "desc": "A input element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-input\">\n<base-input placeholder=\"Optional placeholder\"></base-input>\n</base-knobs>\n\n## Search with icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Input masking\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</base-input>\n</base-knobs>\n\n## Validation\n\n### Required input\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</base-input>\n</base-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n### Validation with status icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<base-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</base-input>\n</base-knobs>\n\n## Number with step buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-input\">\n<base-button>-</base-button>\n<base-input type=\"number\" placeholder=\"Search...\">\n</base-input>\n<base-button>+</base-button>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-modal/base-modal.md",
     "name": "Modal",
     "desc": "A modal",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-select/base-select.md",
-    "name": "Select",
-    "desc": "Element with option for multiselect, search and more",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No results found</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select full multiple list-open-on-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\" selected></base-option>\n    <base-option value=\"Option 4\"></base-option>\n    <base-option value=\"Option 5\" selected></base-option>\n    <base-option value=\"Option 6\" selected></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
-  }, {
-    "path": "../lib/src/components/base-text/base-text.md",
-    "name": "Text",
-    "desc": "A general purpose text element",
-    "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-radio/base-radio.md",
     "name": "Radio",
@@ -36550,6 +36598,18 @@ module.exports = {
     "category": "Navigation",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With targets\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs full position=\"left\">\n  <base-tab selected target=\"targetOne\">Tab 1</base-tab>\n  <base-tab target=\"targetTwo\">Tab 2</base-tab>\n</base-tabs>\n<div id=\"targetOne\">Target 1</div>\n<div id=\"targetTwo\">Target 2</div>\n</base-knobs>\n\n## Position\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs full position=\"left\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n<base-tabs full position=\"right\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n<base-tabs full position=\"center\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With buttons\n\nAny child you put inside `base-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `base-tab` as children, and style them accordingly.\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<style>\nbase-tabs base-button[selected],\nbase-tabs base-button[selected]:hover {\n  --base-button-bg-color: var(--base-color-primary);\n  --base-button-text-color: var(--base-color-white);\n}\n</style>\n<base-tabs>\n  <base-button selected>Tab 1</base-button>\n  <base-button>Tab 2</base-button>\n  <base-button disabled>Tab 3</base-button>\n</base-tabs>\n</base-knobs>\n"
   }, {
+    "path": "../lib/src/components/base-text/base-text.md",
+    "name": "Text",
+    "desc": "A general purpose text element",
+    "category": "Elements",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-select/base-select.md",
+    "name": "Select",
+    "desc": "Element with option for multiselect, search and more",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\" disabled></base-option>\n    <base-option value=\"Option 3\"></base-option>\n    <base-option value=\"Option 4\"></base-option>\n  </base-select>\n</base-knobs>\n\n## Searchable\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable clearable placeholder=\"Search\">\n    <base-option value=\"Option 1\"></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\"></base-option>\n  </base-select>\n</base-knobs>\n\n## No options feedback\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select searchable placeholder=\"Search with no results\">\n    <base-option value=\"Option 1\"></base-option>\n    <div slot=\"no-options\">No results found</div>\n  </base-select>\n</base-knobs>\n\n## Multiple\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select full multiple list-open-on-select>\n    <base-option value=\"Option 1\" selected></base-option>\n    <base-option value=\"Option 2\"></base-option>\n    <base-option value=\"Option 3\" selected></base-option>\n    <base-option value=\"Option 4\"></base-option>\n    <base-option value=\"Option 5\" selected></base-option>\n    <base-option value=\"Option 6\" selected></base-option>\n  </base-select>\n</base-knobs>\n\n## Grouped\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n\n### Grouped with icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-select\">\n  <base-select>\n    <base-optgroup label=\"Group 1\">\n      <ion-icon slot=\"prepend\" name=\"people-outline\"></ion-icon>\n      <base-option value=\"Option 1\" selected></base-option>\n      <base-option value=\"Option 2\"></base-option>\n      <base-option value=\"Option 3\"></base-option>\n    </base-optgroup>\n    <base-optgroup label=\"Group 2\">\n      <ion-icon slot=\"prepend\" name=\"person-outline\"></ion-icon>\n      <base-option value=\"Option 4\" selected></base-option>\n      <base-option value=\"Option 5\"></base-option>\n      <base-option value=\"Option 6\"></base-option>\n    </base-optgroup>\n  </base-select>\n</base-knobs>\n"
+  }, {
     "path": "../lib/src/components/base-textarea/base-textarea.md",
     "name": "Text Area",
     "desc": "A general purpose text element",
@@ -36560,7 +36620,7 @@ module.exports = {
     "name": "Toggle",
     "desc": "A general toggle element",
     "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n\n## Animate icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<base-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" style=\"--ggs: 0.8;\" class=\"gg-sun\"></i>\n  Label\n  <i slot=\"off\" style=\"--ggs: 0.8;\" class=\"gg-moon\"></i>\n</base-toggle>\n</base-knobs>\n\n## Animate icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<base-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -36627,6 +36687,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   components: {
     Page: _Page.default
@@ -36634,24 +36707,15 @@ var _default = {
 
   data() {
     return {
-      components: _db.components
+      components: _db.components,
+      category: "All"
     };
   },
 
   computed: {
-    groupedComponents() {
-      return this.components.reduce((acc, comp) => {
-        const catName = comp.category || "Uncategorized";
-        const prevComps = acc[`${catName}`] ? acc[`${catName}`] : [];
-        return { ...acc,
-          [`${catName}`]: [...prevComps, { ...comp
-          }]
-        };
-      }, {
-        Layout: [],
-        Elements: [],
-        Form: []
-      });
+    filteredComponents() {
+      if (this.category === "All") return this.components;
+      return this.components.filter(comp => comp.category === this.category);
     }
 
   }
@@ -36699,71 +36763,83 @@ exports.default = _default;
         ),
         _vm._v(" "),
         _c(
-          "base-box",
-          { attrs: { "margin-y": "xl" } },
+          "base-tabs",
+          {
+            staticClass: "tabs",
+            attrs: { value: _vm.category },
+            on: {
+              change: function(e) {
+                return (_vm.category = e.target.value)
+              }
+            }
+          },
+          [
+            _c("base-tab", [_vm._v("All")]),
+            _vm._v(" "),
+            _c("base-tab", [_vm._v("Layout")]),
+            _vm._v(" "),
+            _c("base-tab", [_vm._v("Elements")]),
+            _vm._v(" "),
+            _c("base-tab", [_vm._v("Form")]),
+            _vm._v(" "),
+            _c("base-tab", [_vm._v("Navigation")])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "base-container",
+          { attrs: { size: "md" } },
           [
             _c(
-              "base-grid",
-              { attrs: { gap: "xl", "gap-sm": "md", columns: "12" } },
-              _vm._l(_vm.groupedComponents, function(menuGroup, name) {
-                return _c(
-                  "base-grid-item",
-                  { key: name, attrs: { sm: "12", md: "3" } },
-                  [
-                    _c("base-text", { attrs: { tag: "h2" } }, [
-                      _vm._v(_vm._s(name))
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "base-box",
-                      { attrs: { "margin-y": "xl" } },
+              "base-box",
+              { attrs: { "margin-y": "xl" } },
+              [
+                _c(
+                  "base-grid",
+                  { attrs: { "gap-sm": "md", "gap-md": "lg", columns: "12" } },
+                  _vm._l(_vm.filteredComponents, function(component) {
+                    return _c(
+                      "base-grid-item",
+                      {
+                        key: component.name,
+                        attrs: { sm: "6", md: "3", lg: "3" }
+                      },
                       [
                         _c(
-                          "base-grid",
-                          { attrs: { columns: "1", gap: "lg" } },
-                          _vm._l(menuGroup, function(page, i) {
-                            return _c(
-                              "base-grid-item",
-                              { key: i, attrs: { sm: "1" } },
-                              [
-                                _c(
-                                  "router-link",
-                                  {
-                                    staticStyle: { height: "100%" },
-                                    attrs: {
-                                      tag: "base-box",
-                                      radius: "md",
-                                      clickable: "",
-                                      full: "",
-                                      to: "/components/" + page.name
-                                    }
-                                  },
-                                  [
-                                    _c("base-text", { attrs: { tag: "h3" } }, [
-                                      _vm._v(_vm._s(page.name))
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "base-text",
-                                      { attrs: { tag: "small" } },
-                                      [_vm._v(_vm._s(page.desc))]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          }),
+                          "router-link",
+                          {
+                            staticStyle: { height: "100%" },
+                            attrs: {
+                              tag: "base-box",
+                              depth: "sm",
+                              padding: "lg",
+                              radius: "xs",
+                              clickable: "",
+                              full: "",
+                              to: "/components/" + component.name
+                            }
+                          },
+                          [
+                            _c(
+                              "base-text",
+                              { attrs: { tag: "h3", weight: "400" } },
+                              [_vm._v(_vm._s(component.name))]
+                            ),
+                            _vm._v(" "),
+                            _c("base-text", { attrs: { tag: "small" } }, [
+                              _vm._v(_vm._s(component.desc))
+                            ])
+                          ],
                           1
                         )
                       ],
                       1
                     )
-                  ],
+                  }),
                   1
                 )
-              }),
+              ],
               1
             )
           ],
@@ -36781,7 +36857,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: null,
+            _scopeId: "data-v-c5436c",
             functional: undefined
           };
         })());
@@ -39222,9 +39298,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
-    showSidebar: Boolean
+    showSidebar: Boolean,
+    title: String
   },
   components: {
     SidebarLayout: _SidebarLayout.default
@@ -39351,6 +39447,7 @@ exports.default = _default;
                       _vm.$router.currentRoute.params.element === page.name
                         ? _c(
                             "div",
+                            { staticClass: "submenu" },
                             _vm._l(_vm.subMenu, function(menu) {
                               return _c(
                                 "router-link",
@@ -39378,6 +39475,7 @@ exports.default = _default;
     _vm._v(" "),
     _c(
       "div",
+      { staticClass: "component" },
       [
         _c("base-text", { attrs: { tag: "h1" } }, [
           _vm._v(_vm._s(_vm.component.name))
@@ -39386,6 +39484,25 @@ exports.default = _default;
         _c("base-text", { attrs: { tag: "p", look: "lead" } }, [
           _vm._v(_vm._s(_vm.component.desc))
         ]),
+        _vm._v(" "),
+        _vm.subMenu.length &&
+        _vm.$router.currentRoute.params.element === _vm.component.name
+          ? _c(
+              "base-tabs",
+              { staticClass: "sticky-tabs", attrs: { full: "" } },
+              _vm._l(_vm.subMenu, function(menu) {
+                return _c(
+                  "router-link",
+                  {
+                    key: menu.id,
+                    attrs: { tag: "base-tab", to: { hash: menu.id } }
+                  },
+                  [_vm._v(_vm._s(menu.title))]
+                )
+              }),
+              1
+            )
+          : _vm._e(),
         _vm._v(" "),
         _c("base-box", {
           staticClass: "markdown-body",
@@ -63139,6 +63256,8 @@ var _Component = _interopRequireDefault(require("./views/Component"));
 
 var _GettingStarted = _interopRequireDefault(require("./views/GettingStarted"));
 
+var _db = require("./db.json");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue.default.config.ignoredElements = [/base-\w*/];
@@ -63198,7 +63317,7 @@ new _vue.default({
     return h(_App.default);
   }
 }).$mount("#app");
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/GettingStarted":"src/views/GettingStarted.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/GettingStarted":"src/views/GettingStarted.vue","./db.json":"src/db.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -63226,7 +63345,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58869" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65148" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

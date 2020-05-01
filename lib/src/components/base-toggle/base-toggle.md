@@ -12,8 +12,9 @@ category: Form
 
 <base-knobs hideTabs src="./components.json" name="base-toggle">
 <base-toggle>
-  <i slot="on" class="gg-check"></i>
+  <i slot="on" style="--ggs: 0.8;" class="gg-sun"></i>
   Label
+  <i slot="off" style="--ggs: 0.8;" class="gg-moon"></i>
 </base-toggle>
 </base-knobs>
 

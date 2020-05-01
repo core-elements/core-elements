@@ -3,6 +3,7 @@
 }
 
 :host {
+  white-space: nowrap;
   cursor: default;
   display: inline-flex;
 }

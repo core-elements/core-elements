@@ -8,7 +8,15 @@ category: Form
 <base-input placeholder="Optional placeholder"></base-input>
 </base-knobs>
 
-## Search with icon
+## Sizes
+
+<base-knobs hideTabs src="./components.json" name="base-input">
+<base-input size="sm" placeholder="Small"></base-input>
+<base-input size="md" placeholder="Medium"></base-input>
+<base-input size="lg" placeholder="Large"></base-input>
+</base-knobs>
+
+## Search
 
 <base-knobs hideTabs src="./components.json" name="base-input">
 <base-input type="search" placeholder="Search...">
@@ -16,7 +24,21 @@ category: Form
 </base-input>
 </base-knobs>
 
-## Input masking
+## Number
+
+<base-knobs hideTabs src="./components.json" name="base-input">
+<style>
+  #NumberInput {
+    min-width: 50px;
+    text-align: center;
+  }
+</style>
+<base-button onclick="NumberInput.stepDown()">-</base-button>
+<base-input id="NumberInput" max="100" min="10" step="10" type="number" ></base-input>
+<base-button onclick="NumberInput.stepUp()">+</base-button>
+</base-knobs>
+
+## Masking
 
 <base-knobs hideTabs src="./components.json" name="base-input">
 <base-input type="tel" mask="+(00) 000 00 000" placeholder="Enter phone number">
@@ -68,13 +90,4 @@ Use a error slot to provide your own error text.
   <ion-icon slot="append" class="check" name="checkmark-outline"></ion-icon>
   <ion-icon slot="append" class="error" name="alert-circle-outline"></ion-icon>
 </base-input>
-</base-knobs>
-
-## Number with step buttons
-
-<base-knobs hideTabs src="./components.json" name="base-input">
-<base-button>-</base-button>
-<base-input type="number" placeholder="Search...">
-</base-input>
-<base-button>+</base-button>
 </base-knobs>

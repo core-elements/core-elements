@@ -13,6 +13,7 @@
           >
             {{ page.name }}
             <div
+              class="submenu"
               v-if="
                 subMenu.length &&
                   $router.currentRoute.params.element === page.name
@@ -30,9 +31,27 @@
       </nav>
     </div>
 
-    <div>
+    <div class="component">
       <base-text tag="h1">{{ component.name }}</base-text>
       <base-text tag="p" look="lead">{{ component.desc }}</base-text>
+
+      <base-tabs
+        class="sticky-tabs"
+        full
+        v-if="
+          subMenu.length &&
+            $router.currentRoute.params.element === component.name
+        "
+      >
+        <router-link
+          tag="base-tab"
+          :to="{ hash: menu.id }"
+          v-for="menu in subMenu"
+          :key="menu.id"
+          >{{ menu.title }}</router-link
+        >
+      </base-tabs>
+
       <base-box class="markdown-body" margin-y="xl" v-html="html"></base-box>
     </div>
   </SidebarLayout>
@@ -44,7 +63,7 @@ import { components } from "../db.json";
 import SidebarLayout from "../layouts/SidebarLayout";
 
 export default {
-  props: { showSidebar: Boolean },
+  props: { showSidebar: Boolean, title: String },
   components: { SidebarLayout },
   mounted() {
     this.setSubMenu();
@@ -104,6 +123,24 @@ export default {
 </script>
 
 <style>
+.component {
+  scroll-behavior: smooth;
+}
+
+.sticky-tabs {
+  margin-top: 60px;
+  position: sticky;
+  top: 60px;
+  z-index: 500;
+  background: var(--base-color-white);
+}
+
+@media (min-width: 800px) {
+  .sticky-tabs {
+    display: none;
+  }
+}
+
 nav[toc] {
   font-size: 1em;
 }
@@ -148,6 +185,7 @@ nav[toc] a:last-of-type {
 nav[toc] a div {
   margin-top: 20px;
   margin-left: 10px;
+  display: none;
 }
 
 nav[toc] a a {
@@ -156,6 +194,10 @@ nav[toc] a a {
 
 @media (min-width: 800px) {
   nav[toc] a {
+    display: block;
+  }
+
+  nav[toc] a div {
     display: block;
   }
 }

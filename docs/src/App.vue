@@ -1,7 +1,16 @@
 <template>
   <div>
-    <Header :showSidebar="showSidebar" @toggle-sidebar="showSidebar = !showSidebar"></Header>
-    <router-view :showSidebar="showSidebar" @toggle-sidebar="showSidebar = !showSidebar"></router-view>
+    <Header
+      :hasSidebar="routerProps.hasSidebar"
+      :showInHeader="routerProps.showInHeader"
+      :title="routerProps.title"
+      :showSidebar="showSidebar"
+      @toggle-sidebar="showSidebar = !showSidebar"
+    ></Header>
+    <router-view
+      :showSidebar="showSidebar"
+      @toggle-sidebar="showSidebar = !showSidebar"
+    ></router-view>
   </div>
 </template>
 
@@ -13,9 +22,14 @@ export default {
   data() {
     return {
       checked: false,
-      showSidebar: false
+      showSidebar: false,
     };
-  }
+  },
+  computed: {
+    routerProps() {
+      return this.$route.meta;
+    },
+  },
 };
 </script>
 
