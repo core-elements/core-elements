@@ -10,23 +10,7 @@
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-          >
-            {{ page.name }}
-            <div
-              class="submenu"
-              v-if="
-                subMenu.length &&
-                  $router.currentRoute.params.element === page.name
-              "
-            >
-              <router-link
-                :to="{ hash: menu.id }"
-                v-for="menu in subMenu"
-                :key="menu.id"
-                >{{ menu.title }}</router-link
-              >
-            </div>
-          </router-link>
+          >{{ page.name }}</router-link>
         </div>
       </nav>
     </div>
@@ -35,23 +19,14 @@
       <base-text tag="h1">{{ component.name }}</base-text>
       <base-text tag="p" look="lead">{{ component.desc }}</base-text>
 
-      <base-tabs
-        class="sticky-tabs"
-        full
-        v-if="
-          subMenu.length &&
-            $router.currentRoute.params.element === component.name
-        "
-      >
-        <router-link
-          tag="base-tab"
-          :to="{ hash: menu.id }"
-          v-for="menu in subMenu"
-          :key="menu.id"
-          >{{ menu.title }}</router-link
-        >
-      </base-tabs>
-
+      <base-box padding-y="sm" v-if="subMenu.length">
+        <base-text tag="p" look="h6">Content</base-text>
+        <ul class="content-list">
+          <li v-for="menu in subMenu" :key="menu.id">
+            <router-link :to="{ hash: menu.id }">{{ menu.title }}</router-link>
+          </li>
+        </ul>
+      </base-box>
       <base-box class="markdown-body" margin-y="xl" v-html="html"></base-box>
     </div>
   </SidebarLayout>
@@ -71,30 +46,30 @@ export default {
   data() {
     return {
       subMenu: [],
-      components,
+      components
     };
   },
   watch: {
     $route: function(val) {
       this.setSubMenu();
-    },
+    }
   },
   methods: {
     setSubMenu() {
       setTimeout(() => {
         const headings = [...document.querySelectorAll("h2")];
-        this.subMenu = headings.map((h) => ({ id: h.id, title: h.innerText }));
+        this.subMenu = headings.map(h => ({ id: h.id, title: h.innerText }));
       }, 0);
     },
     goTo(route) {
       this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
-    },
+    }
   },
   computed: {
     component() {
-      return components.find((c) => c.name === this.$route.params.element);
+      return components.find(c => c.name === this.$route.params.element);
     },
     html() {
       return marked(this.component.content);
@@ -108,17 +83,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevComps, { ...comp }]
           };
         },
         {
           Layout: [],
           Elements: [],
-          Form: [],
+          Form: []
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -127,12 +102,23 @@ export default {
   scroll-behavior: smooth;
 }
 
-.sticky-tabs {
-  margin-top: 60px;
-  position: sticky;
-  top: 60px;
-  z-index: 500;
-  background: var(--base-color-white);
+.content-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.content-list li {
+  margin-bottom: var(--base-space-sm);
+}
+
+.content-list a {
+  color: var(--base-color-font-light);
+  text-decoration: none;
+}
+
+.content-list a:hover {
+  color: var(--base-color-font-dark);
 }
 
 @media (min-width: 800px) {

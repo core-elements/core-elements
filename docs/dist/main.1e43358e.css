@@ -864,8 +864,8 @@
 }
 
 .markdown-body code {
-  background-color: var(--base-color-secondary-light);
-  color: var(--base-color-ui-light);
+  background-color: var(--base-color-ui-light);
+  color: var(--base-color-ui-dark);
   border-radius: 3px;
   margin: 0;
   padding: 0.2em 0.4em;
@@ -1240,12 +1240,23 @@ b {
   scroll-behavior: smooth;
 }
 
-.sticky-tabs {
-  margin-top: 60px;
-  position: sticky;
-  top: 60px;
-  z-index: 500;
-  background: var(--base-color-white);
+.content-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.content-list li {
+  margin-bottom: var(--base-space-sm);
+}
+
+.content-list a {
+  color: var(--base-color-font-light);
+  text-decoration: none;
+}
+
+.content-list a:hover {
+  color: var(--base-color-font-dark);
 }
 
 @media (min-width: 800px) {

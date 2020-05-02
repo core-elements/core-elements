@@ -701,8 +701,8 @@
 }
 
 .markdown-body code {
-  background-color: var(--base-color-secondary-light);
-  color: var(--base-color-ui-light);
+  background-color: var(--base-color-ui-light);
+  color: var(--base-color-ui-dark);
   border-radius: 3px;
   margin: 0;
   padding: 0.2em 0.4em;

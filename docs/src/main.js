@@ -1,6 +1,8 @@
 import "regenerator-runtime/runtime";
 
-import "../../lib/dist/components/base-knobs";
+import BaseKnobs from "../../lib/dist/components/base-knobs";
+
+customElements.define("base-knobs", BaseKnobs);
 
 import "../../lib/dist/main.js";
 
@@ -11,7 +13,6 @@ import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
 import GettingStarted from "./views/GettingStarted";
-import { components } from "./db.json";
 
 Vue.config.ignoredElements = [/base-\w*/];
 Vue.config.ignoredElements = [/ion-\w*/];
@@ -51,7 +52,10 @@ const router = new Router({
   ],
   scrollBehavior: function(to, from, savedPosition) {
     if (to.hash) {
-      return { selector: to.hash };
+      return window.scrollTo({
+        top: document.querySelector(to.hash).offsetTop - 60,
+        behavior: "smooth",
+      });
     } else {
       return { x: 0, y: 0 };
     }

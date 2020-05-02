@@ -144,11 +144,16 @@
     },
     {
       "name": "base-accordion",
-      "path": "./../../lib/src/components/base-accordion/base-accordion.js",
+      "path": "./../../lib/src/components/base-accordion/index.js",
       "attributes": [
         {
           "name": "open",
           "type": "boolean"
+        },
+        {
+          "name": "hide-default-indicator",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -156,6 +161,12 @@
           "name": "open",
           "attribute": "open",
           "type": "boolean"
+        },
+        {
+          "name": "hideDefaultIndicator",
+          "attribute": "hide-default-indicator",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "events": [
@@ -166,7 +177,7 @@
     },
     {
       "name": "base-box",
-      "path": "./../../lib/src/components/base-box/base-box.js",
+      "path": "./../../lib/src/components/base-box/index.js",
       "attributes": [
         {
           "name": "bg",
@@ -328,7 +339,7 @@
     },
     {
       "name": "base-button",
-      "path": "./../../lib/src/components/base-button/base-button.js",
+      "path": "./../../lib/src/components/base-button/index.js",
       "attributes": [
         {
           "name": "disabled",
@@ -400,7 +411,7 @@
     },
     {
       "name": "base-checkbox",
-      "path": "./../../lib/src/components/base-checkbox/base-checkbox.js",
+      "path": "./../../lib/src/components/base-checkbox/index.js",
       "attributes": [
         {
           "name": "disabled",
@@ -470,7 +481,7 @@
     },
     {
       "name": "base-container",
-      "path": "./../../lib/src/components/base-container/base-container.js",
+      "path": "./../../lib/src/components/base-container/index.js",
       "attributes": [
         {
           "name": "center",
@@ -496,7 +507,7 @@
     },
     {
       "name": "base-flex",
-      "path": "./../../lib/src/components/base-flex/base-flex.js",
+      "path": "./../../lib/src/components/base-flex/index.js",
       "attributes": [
         {
           "name": "justify-content",
@@ -703,60 +714,8 @@
       ]
     },
     {
-      "name": "base-grid-item",
-      "path": "./../../lib/src/components/base-grid/base-grid-item.js",
-      "attributes": [
-        {
-          "name": "sm",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "md",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "lg",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "xl",
-          "type": "string",
-          "default": "\"\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "sm",
-          "attribute": "sm",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "md",
-          "attribute": "md",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "lg",
-          "attribute": "lg",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "xl",
-          "attribute": "xl",
-          "type": "string",
-          "default": "\"\""
-        }
-      ]
-    },
-    {
       "name": "base-grid",
-      "path": "./../../lib/src/components/base-grid/base-grid.js",
+      "path": "./../../lib/src/components/base-grid/index.js",
       "attributes": [
         {
           "name": "gap",
@@ -839,8 +798,60 @@
       ]
     },
     {
+      "name": "base-grid-item",
+      "path": "./../../lib/src/components/base-grid/index.js",
+      "attributes": [
+        {
+          "name": "sm",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "md",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "lg",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "xl",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "sm",
+          "attribute": "sm",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "md",
+          "attribute": "md",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "lg",
+          "attribute": "lg",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "xl",
+          "attribute": "xl",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
       "name": "base-input",
-      "path": "./../../lib/src/components/base-input/base-input.js",
+      "path": "./../../lib/src/components/base-input/index.js",
       "attributes": [
         {
           "name": "placeholder",
@@ -1110,7 +1121,7 @@
     },
     {
       "name": "base-knobs",
-      "path": "./../../lib/src/components/base-knobs/base-knobs.js",
+      "path": "./../../lib/src/components/base-knobs/index.js",
       "attributes": [
         {
           "name": "src",
@@ -1224,7 +1235,7 @@
     },
     {
       "name": "base-label",
-      "path": "./../../lib/src/components/base-label/base-label.js",
+      "path": "./../../lib/src/components/base-label/index.js",
       "attributes": [
         {
           "name": "for",
@@ -1286,8 +1297,52 @@
       ]
     },
     {
+      "name": "base-modal",
+      "path": "./../../lib/src/components/base-modal/index.js",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "no-backdrop",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "noBackdrop",
+          "attribute": "no-backdrop",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "close"
+        },
+        {
+          "name": "show"
+        },
+        {
+          "name": "toggle"
+        }
+      ],
+      "events": [
+        {
+          "name": "toggle"
+        }
+      ]
+    },
+    {
       "name": "base-radio",
-      "path": "./../../lib/src/components/base-radio/base-radio.js",
+      "path": "./../../lib/src/components/base-radio/index.js",
       "attributes": [
         {
           "name": "checked",
@@ -1386,111 +1441,8 @@
       ]
     },
     {
-      "name": "base-optgroup",
-      "path": "./../../lib/src/components/base-select/base-optgroup.js",
-      "attributes": [
-        {
-          "name": "label",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "icon",
-          "type": "string",
-          "default": "\"\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "label",
-          "attribute": "label",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "icon",
-          "attribute": "icon",
-          "type": "string",
-          "default": "\"\""
-        }
-      ]
-    },
-    {
-      "name": "base-option",
-      "path": "./../../lib/src/components/base-select/base-option.js",
-      "attributes": [
-        {
-          "name": "label",
-          "type": "string"
-        },
-        {
-          "name": "value",
-          "type": "string"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "selected",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "hidden",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "active",
-          "type": "boolean",
-          "default": "false"
-        }
-      ],
-      "properties": [
-        {
-          "name": "label",
-          "attribute": "label",
-          "type": "string"
-        },
-        {
-          "name": "value",
-          "attribute": "value",
-          "type": "string"
-        },
-        {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "selected",
-          "attribute": "selected",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "hidden",
-          "attribute": "hidden",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "active",
-          "attribute": "active",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "select"
-        }
-      ]
-    },
-    {
       "name": "base-select",
-      "path": "./../../lib/src/components/base-select/base-select.js",
+      "path": "./../../lib/src/components/base-select/index.js",
       "attributes": [
         {
           "name": "value",
@@ -1671,8 +1623,152 @@
       ]
     },
     {
+      "name": "base-option",
+      "path": "./../../lib/src/components/base-select/index.js",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hidden",
+          "attribute": "hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "select"
+        }
+      ]
+    },
+    {
+      "name": "base-optgroup",
+      "path": "./../../lib/src/components/base-select/index.js",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "base-tabs",
+      "path": "./../../lib/src/components/base-tabs/index.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "position",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "tabElements",
+          "type": "Element[]"
+        },
+        {
+          "name": "selectedTab",
+          "type": "Element | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
       "name": "base-tab",
-      "path": "./../../lib/src/components/base-tabs/base-tab.js",
+      "path": "./../../lib/src/components/base-tabs/index.js",
       "attributes": [
         {
           "name": "value",
@@ -1732,49 +1828,8 @@
       ]
     },
     {
-      "name": "base-tabs",
-      "path": "./../../lib/src/components/base-tabs/base-tabs.js",
-      "attributes": [
-        {
-          "name": "value",
-          "type": "string"
-        },
-        {
-          "name": "position",
-          "type": "string",
-          "default": "\"\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "tabElements",
-          "type": "Element[]"
-        },
-        {
-          "name": "selectedTab",
-          "type": "Element | undefined"
-        },
-        {
-          "name": "value",
-          "attribute": "value",
-          "type": "string"
-        },
-        {
-          "name": "position",
-          "attribute": "position",
-          "type": "string",
-          "default": "\"\""
-        }
-      ],
-      "events": [
-        {
-          "name": "change"
-        }
-      ]
-    },
-    {
       "name": "base-text",
-      "path": "./../../lib/src/components/base-text/base-text.js",
+      "path": "./../../lib/src/components/base-text/index.js",
       "attributes": [
         {
           "name": "tag",
@@ -1830,7 +1885,7 @@
     },
     {
       "name": "base-textarea",
-      "path": "./../../lib/src/components/base-textarea/base-textarea.js",
+      "path": "./../../lib/src/components/base-textarea/index.js",
       "attributes": [
         {
           "name": "full",
@@ -1865,7 +1920,7 @@
     },
     {
       "name": "base-toggle",
-      "path": "./../../lib/src/components/base-toggle/base-toggle.js",
+      "path": "./../../lib/src/components/base-toggle/index.js",
       "attributes": [
         {
           "name": "checked",

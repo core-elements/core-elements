@@ -848,7 +848,7 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"../lib/dist/components/sharedstyles-656ad3ab.js":[function(require,module,exports) {
+},{}],"../lib/dist/components/sharedstyles-be6ff695.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3668,7 +3668,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _sharedstyles656ad3ab = require("./sharedstyles-656ad3ab.js");
+var _sharedstylesBe6ff = require("./sharedstyles-be6ff695.js");
 
 /**
  * @license
@@ -3697,14 +3697,14 @@ const previousValues = new WeakMap();
  * vulnerabilities.
  */
 
-const unsafeHTML = (0, _sharedstyles656ad3ab.d)(value => part => {
-  if (!(part instanceof _sharedstyles656ad3ab.N)) {
+const unsafeHTML = (0, _sharedstylesBe6ff.d)(value => part => {
+  if (!(part instanceof _sharedstylesBe6ff.N)) {
     throw new Error('unsafeHTML can only be used in text bindings');
   }
 
   const previousValue = previousValues.get(part);
 
-  if (previousValue !== undefined && (0, _sharedstyles656ad3ab.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
+  if (previousValue !== undefined && (0, _sharedstylesBe6ff.i)(value) && value === previousValue.value && part.value === previousValue.fragment) {
     return;
   }
 
@@ -17839,10 +17839,10 @@ highlight.registerLanguage('xl', xl);
 highlight.registerLanguage('xquery', xquery);
 highlight.registerLanguage('zephir', zephir);
 var lib = highlight;
-var highlightStyles = (0, _sharedstyles656ad3ab.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
-var styles = (0, _sharedstyles656ad3ab.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
+var highlightStyles = (0, _sharedstylesBe6ff.c)`pre{white-space:pre}.hljs{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:14px;border-radius:10px;margin-bottom:30px;display:block;overflow-x:auto;line-height:1.45;padding:2rem;background:#2d2b57;font-weight:400}.hljs-title{color:#fad000;font-weight:400}.hljs-name{color:#a1feff}.hljs-tag{color:#fff}.hljs-attr{color:#f8d000;font-style:italic}.hljs-built_in,.hljs-keyword,.hljs-section,.hljs-selector-tag{color:#fb9e00}.hljs,.hljs-subst{color:#e3dfff}.hljs-addition,.hljs-attribute,.hljs-bullet,.hljs-code,.hljs-deletion,.hljs-quote,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-string,.hljs-symbol,.hljs-template-tag{color:#4cd213}.hljs-meta,.hljs-meta-string{color:#fb9e00}.hljs-comment{color:#ac65ff}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-selector-tag,.hljs-strong{font-weight:400}.hljs-literal,.hljs-number{color:#fa658d}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}`;
+var styles = (0, _sharedstylesBe6ff.c)`.prop{margin-top:10px}nav{margin-top:50px}nav,nav[vertical]{display:-webkit-box;display:flex}nav[vertical]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}button{font-size:1rem;outline:0;font-family:Arial,Helvetica,sans-serif;margin-right:15px;padding:0;cursor:pointer;background:transparent;color:var(--base-color-ui);border:0;border-bottom:1px solid transparent}button:hover{color:var(--base-color-ui-dark)}button[active]{color:#000;border-bottom:1px solid #000}table{border-collapse:collapse;max-width:100%;text-align:left;display:inline-block;overflow-x:scroll;overflow:auto;margin-top:30px;border-radius:10px;border:2px solid var(--base-color-ui-lighter)}table thead tr{background:var(--base-color-ui-lighter)}table th{font-weight:600}table td,table th{padding:10px 23px}table tr td:first-of-type{white-space:nowrap}table tr td:last-of-type{min-width:140px}`;
 
-class BaseKnobs extends _sharedstyles656ad3ab.L {
+class BaseKnobs extends _sharedstylesBe6ff.L {
   constructor() {
     super();
     this.src = "";
@@ -17896,7 +17896,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   static get styles() {
-    return [styles, highlightStyles, _sharedstyles656ad3ab.s];
+    return [styles, highlightStyles, _sharedstylesBe6ff.s];
   }
 
   connectedCallback() {
@@ -17986,7 +17986,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   _propComponent(attr) {
     if (attr.type.includes("|")) {
       const options = attr.type.replace(/"/g, "").split("|");
-      return (0, _sharedstyles656ad3ab.h)`
+      return (0, _sharedstylesBe6ff.h)`
         <tr>
           <td>${attr.name}</td>
           <td>string</td>
@@ -17996,7 +17996,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
               @change=${e => this._handleAttrChange(e, attr)}
             >
               ${options.map(opt => {
-        return (0, _sharedstyles656ad3ab.h)`
+        return (0, _sharedstylesBe6ff.h)`
                   <base-option
                     ?selected=${this.componentEl.getAttribute(attr.name) === opt}
                     value=${opt}
@@ -18011,7 +18011,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
     }
 
     if (attr.type === "string" || attr.type === "String") {
-      return (0, _sharedstyles656ad3ab.h)`
+      return (0, _sharedstylesBe6ff.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18029,7 +18029,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
     }
 
     if (attr.type === "boolean" || attr.type === "Boolean") {
-      return (0, _sharedstyles656ad3ab.h)`
+      return (0, _sharedstylesBe6ff.h)`
         <tr>
           <td>${attr.name}</td>
           <td>${attr.type}</td>
@@ -18050,7 +18050,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   _renderPropTab() {
-    return (0, _sharedstyles656ad3ab.h)`
+    return (0, _sharedstylesBe6ff.h)`
       <table class="props">
         <thead>
           <tr>
@@ -18069,7 +18069,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   _renderSrcTab() {
-    return (0, _sharedstyles656ad3ab.h)`
+    return (0, _sharedstylesBe6ff.h)`
       <div class="src">
         <h2>
           <pre><code><div class="hljs">${unsafeHTML(this.srcHTML)}</div></code></pre>
@@ -18079,22 +18079,22 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
   }
 
   render() {
-    return (0, _sharedstyles656ad3ab.h)`
+    return (0, _sharedstylesBe6ff.h)`
       <slot></slot>
       <base-box padding-y="md">
-        ${this.hideTabs ? null : (0, _sharedstyles656ad3ab.h)`
+        ${this.hideTabs ? null : (0, _sharedstylesBe6ff.h)`
               <base-tabs full @change=${this._handleTabChange}>
-                ${this.hideSrc ? null : (0, _sharedstyles656ad3ab.h)`
+                ${this.hideSrc ? null : (0, _sharedstylesBe6ff.h)`
                       <base-tab ?selected=${this.tab === "src"} value="src">
                         Src
                       </base-tab>
                     `}
-                ${this.hideProps ? null : (0, _sharedstyles656ad3ab.h)`
+                ${this.hideProps ? null : (0, _sharedstylesBe6ff.h)`
                       <base-tab ?selected=${this.tab === "props"} value="props">
                         Props
                       </base-tab>
                     `}
-                ${this.hideEvents ? null : (0, _sharedstyles656ad3ab.h)`
+                ${this.hideEvents ? null : (0, _sharedstylesBe6ff.h)`
                       <base-tab
                         ?selected=${this.tab === "events"}
                         value="events"
@@ -18115,7 +18115,7 @@ class BaseKnobs extends _sharedstyles656ad3ab.L {
 
 var _default = BaseKnobs;
 exports.default = _default;
-},{"./sharedstyles-656ad3ab.js":"../lib/dist/components/sharedstyles-656ad3ab.js"}],"../lib/dist/main.js":[function(require,module,exports) {
+},{"./sharedstyles-be6ff695.js":"../lib/dist/components/sharedstyles-be6ff695.js"}],"../lib/dist/main.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -21130,6 +21130,10 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-checkbox")) {
+    customElements.define("base-checkbox", BaseCheckbox);
+  }
+
   var styles$2 = css`:host{--base-modal-backdrop-bg-color:rgba(0,0,0,0.4);--base-modal-backdrop-transition:all .2s cubic-bezier(0.785,0.135,0.15,0.86);--base-modal-box-transition:all .4s cubic-bezier(0.785,0.135,0.15,0.86);--base-modal-box-box-shadow:none;--base-modal-content-padding:var(--base-space-md);--base-modal-box-border:1px solid var(--base-color-ui);position:fixed;left:0;top:0;width:100%;height:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-transition:all .5s cubic-bezier(.785,.135,.15,.86);transition:all .5s cubic-bezier(.785,.135,.15,.86);z-index:999;overflow-y:inherit;visibility:hidden;opacity:0}:host([open]){opacity:1;visibility:visible}:host [part=backdrop]{opacity:0;-webkit-transition:var(--base-modal-backdrop-transition);transition:var(--base-modal-backdrop-transition);overflow:visible;z-index:400;position:absolute;width:100vw;height:100vh;background:var(--base-modal-backdrop-bg-color)}:host([open]) [part=backdrop]{opacity:1}:host([no-backdrop]) [part=backdrop]{background:transparent}:host [part=box]{position:relative;margin:var(--base-space-sm);border-radius:var(--base-border-radius-sm);border:var(--base-modal-box-border);box-shadow:var(--base-modal-box-box-shadow);-webkit-transition:var(--base-modal-box-transition);transition:var(--base-modal-box-transition);-webkit-transform:translateY(50px);transform:translateY(50px);width:100%;max-width:600px;min-width:200px;min-height:200px;height:auto;background:var(--base-color-white);z-index:1000;overflow-y:scroll;overflow-x:hidden;-webkit-overflow-scrolling:touch}:host([open]) [part=box]{-webkit-transform:translateY(0);transform:translateY(0)}::slotted([slot=header]){box-sizing:border-box;display:block;position:-webkit-sticky;position:sticky;background:var(--ab-color-white);left:0;top:0;width:100%;padding:var(--base-modal-content-padding);display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;border-bottom:1px solid var(--ab-color-ui-400)}:host [part=close-button]{z-index:1;display:inline-block;border:0;font-size:var(--base-font-size-sm);color:var(--base-color-font);background:transparent;cursor:pointer;position:absolute;right:var(--base-space-sm);top:var(--base-space-sm);width:var(--base-space-md);height:var(--base-space-md);fill:currentColor}:host [part=content]{padding:var(--base-modal-content-padding)}::slotted([slot=error]),::slotted([slot=success]){box-sizing:border-box;display:block;border:1px solid var(--base-color-danger)}`;
 
   class BaseModal extends LitElement {
@@ -21209,6 +21213,10 @@ var global = arguments[3];
     `;
     }
 
+  }
+
+  if (!customElements.get("base-modal")) {
+    customElements.define("base-modal", BaseModal);
   }
 
   if (!customElements.get("base-modal")) {
@@ -21805,6 +21813,10 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-input")) {
+    customElements.define("base-input", BaseInput);
+  }
+
   var styles$4 = css`:host{--base-radio-focus-color:var(--base-color-focus);--base-radio-height:var(--base-size-md);--base-radio-box-bg-color:var(--base-color-white);vertical-align:middle;outline:0;height:var(--base-radio-height);cursor:pointer;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;margin-right:var(--base-space-sm)}:host([full]){display:-webkit-box;display:flex;width:100%;margin-right:0}:host [part=input-field]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host [part=label]{line-height:1.5;font-size:var(--hw-font-size-small);display:block;-webkit-box-flex:1;flex:1;margin-left:var(--base-space-sm)}:host [part=box]{display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;border:2px solid var(--base-color-ui-light);border-radius:50%;background:var(--base-radio-box-bg-color);width:calc(var(--base-radio-height) - var(--base-space-md));height:calc(var(--base-radio-height) - var(--base-space-md));-webkit-transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,-webkit-transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease;transition:border-color .3s ease,max-height .3s ease,transform .3s ease,-webkit-transform .3s ease}:host(:focus) [part=box]{box-shadow:0 0 0 2px var(--base-radio-focus-color)}:host(:hover:not([disabled]):not([checked])) [part=box]{--base-radio-box-bg-color:var(--base-color-ui-lighter)}:host([checked]) [part=box]{border-color:var(--base-radio-focus-color)}:host [part=indicator]{color:var(--base-radio-focus-color);fill:currentColor}:host([checked]) [part=indicator] i{border-radius:50%;width:60%;height:60%;background:var(--base-radio-focus-color)}:host([size=sm]){--base-radio-height:var(--base-size-sm)}:host([size=md]){--base-radio-height:var(--base-size-md)}:host([size=lg]){--base-radio-height:var(--base-size-lg)}`;
 
   class BaseRadio extends LitElement {
@@ -21971,6 +21983,10 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-radio")) {
+    customElements.define("base-radio", BaseRadio);
+  }
+
   var styles$5 = css`:host{display:block;width:100%;margin-bottom:var(--base-space-sm)}`;
 
   class BaseLabel extends LitElement {
@@ -21999,6 +22015,10 @@ var global = arguments[3];
       return html` <label for=${this.for}><slot></slot></label> `;
     }
 
+  }
+
+  if (!customElements.get("base-label")) {
+    customElements.define("base-label", BaseLabel);
   }
 
   var styles$6 = css`:host{vertical-align:middle;display:block;width:100%}:host([inline]){display:inline-block;width:auto}:host([clickable]){cursor:pointer;-webkit-transition:all .2s ease;transition:all .2s ease}:host([clickable]:hover){-webkit-transform:translateY(-2px);transform:translateY(-2px)}:host([clickable]:active){-webkit-transform:translateY(0);transform:translateY(0)}:host([bg=primary]){background-color:var(--base-color-primary)}:host([bg=secondary]){background-color:var(--base-color-secondary)}:host([bg=success]){background-color:var(--base-color-success)}:host([bg=danger]){background-color:var(--base-color-danger)}:host([bg=ui-light]){background-color:var(--base-color-ui-light)}:host([bg=ui-lighter]){background-color:var(--base-color-ui-lighter)}:host([bg=ui-lightest]){background-color:var(--base-color-ui-lightest)}:host([bg=ui-dark]){background-color:var(--base-color-ui-dark)}:host([bg=white]){background-color:var(--base-color-white)}:host([bg=black]){background-color:var(--base-color-black)}:host([border=primary]){border:1px solid var(--base-color-primary)}:host([border=secondary]){border:1px solid var(--base-color-secondary)}:host([border=success]){border:1px solid var(--base-color-success)}:host([border=danger]){border:1px solid var(--base-color-danger)}:host([border=ui-light]){border:1px solid var(--base-color-ui-light)}:host([border=ui-lighter]){border:1px solid var(--base-color-ui-lighter)}:host([border=ui-lightest]){border:1px solid var(--base-color-ui-lightest)}:host([border=ui-dark]){border:1px solid var(--base-color-ui-dark)}:host([border=white]){border:1px solid var(--base-color-white)}:host([border=black]){border:1px solid var(--base-color-black)}:host([depth=none]){box-shadow:var(--base-depth-none)}:host([depth=xs]){box-shadow:var(--base-depth-xs)}:host([depth=sm]){box-shadow:var(--base-depth-sm)}:host([depth=md]){box-shadow:var(--base-depth-md)}:host([depth=lg]){box-shadow:var(--base-depth-lg)}:host([depth=xl]){box-shadow:var(--base-depth-xl)}:host([padding=none]){padding:var(--base-space-none)}:host([padding=xs]){padding:var(--base-space-xs)}:host([padding=sm]){padding:var(--base-space-sm)}:host([padding=md]){padding:var(--base-space-md)}:host([padding=lg]){padding:var(--base-space-lg)}:host([padding=xl]){padding:var(--base-space-xl)}:host([padding-x=none]){padding-left:var(--base-space-none);padding-right:var(--base-space-none)}:host([padding-x=xs]){padding-left:var(--base-space-xs);padding-right:var(--base-space-xs)}:host([padding-x=sm]){padding-left:var(--base-space-sm);padding-right:var(--base-space-sm)}:host([padding-x=md]){padding-left:var(--base-space-md);padding-right:var(--base-space-md)}:host([padding-x=lg]){padding-left:var(--base-space-lg);padding-right:var(--base-space-lg)}:host([padding-x=xl]){padding-left:var(--base-space-xl);padding-right:var(--base-space-xl)}:host([padding-y=none]){padding-top:var(--base-space-none);padding-bottom:var(--base-space-none)}:host([padding-y=xs]){padding-top:var(--base-space-xs);padding-bottom:var(--base-space-xs)}:host([padding-y=sm]){padding-top:var(--base-space-sm);padding-bottom:var(--base-space-sm)}:host([padding-y=md]){padding-top:var(--base-space-md);padding-bottom:var(--base-space-md)}:host([padding-y=lg]){padding-top:var(--base-space-lg);padding-bottom:var(--base-space-lg)}:host([padding-y=xl]){padding-top:var(--base-space-xl);padding-bottom:var(--base-space-xl)}:host([margin=none]){margin:var(--base-space-none)}:host([margin=xs]){margin:var(--base-space-xs)}:host([margin=sm]){margin:var(--base-space-sm)}:host([margin=md]){margin:var(--base-space-md)}:host([margin=lg]){margin:var(--base-space-lg)}:host([margin=xl]){margin:var(--base-space-xl)}:host([margin-x=none]){margin-left:var(--base-space-none);margin-right:var(--base-space-none)}:host([margin-x=xs]){margin-left:var(--base-space-xs);margin-right:var(--base-space-xs)}:host([margin-x=sm]){margin-left:var(--base-space-sm);margin-right:var(--base-space-sm)}:host([margin-x=md]){margin-left:var(--base-space-md);margin-right:var(--base-space-md)}:host([margin-x=lg]){margin-left:var(--base-space-lg);margin-right:var(--base-space-lg)}:host([margin-x=xl]){margin-left:var(--base-space-xl);margin-right:var(--base-space-xl)}:host([margin-y=none]){margin-top:var(--base-space-none);margin-bottom:var(--base-space-none)}:host([margin-y=xs]){margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs)}:host([margin-y=sm]){margin-top:var(--base-space-sm);margin-bottom:var(--base-space-sm)}:host([margin-y=md]){margin-top:var(--base-space-md);margin-bottom:var(--base-space-md)}:host([margin-y=lg]){margin-top:var(--base-space-lg);margin-bottom:var(--base-space-lg)}:host([margin-y=xl]){margin-top:var(--base-space-xl);margin-bottom:var(--base-space-xl)}:host([radius=none]){border-radius:var(--base-border-radius-none)}:host([radius=xs]){border-radius:var(--base-border-radius-xs)}:host([radius=sm]){border-radius:var(--base-border-radius-sm)}:host([radius=md]){border-radius:var(--base-border-radius-md)}:host([radius=lg]){border-radius:var(--base-border-radius-lg)}:host([radius=xl]){border-radius:var(--base-border-radius-xl)}`;
@@ -22143,6 +22163,10 @@ var global = arguments[3];
       return html`<slot></slot>`;
     }
 
+  }
+
+  if (!customElements.get("base-box")) {
+    customElements.define("base-box", BaseBox);
   }
 
   var styles$7 = css`:host{width:100%;display:-webkit-box;display:flex}:host([wrap]){flex-wrap:wrap}:host([justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([justify-content=around]){justify-content:space-around}:host([justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([align-items=center]){-webkit-box-align:center;align-items:center}:host([align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}@media(min-width:600px){:host([sm-wrap]){flex-wrap:wrap}:host([sm-justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([sm-justify-content=around]){justify-content:space-around}:host([sm-justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([sm-justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([sm-justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([sm-align-items=center]){-webkit-box-align:center;align-items:center}:host([sm-align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([sm-align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([sm-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([sm-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([sm-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([sm-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1280px){:host([md-wrap]){flex-wrap:wrap}:host([md-justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([md-justify-content=around]){justify-content:space-around}:host([md-justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([md-justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([md-justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([md-align-items=center]){-webkit-box-align:center;align-items:center}:host([md-align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([md-align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([md-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([md-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([md-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([md-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}@media(min-width:1400px){:host([lg-wrap]){flex-wrap:wrap}:host([lg-justify-content=between]){-webkit-box-pack:justify;justify-content:space-between}:host([lg-justify-content=around]){justify-content:space-around}:host([lg-justify-content=center]){-webkit-box-pack:center;justify-content:center}:host([lg-justify-content=start]){-webkit-box-pack:start;justify-content:flex-start}:host([lg-justify-content=end]){-webkit-box-pack:end;justify-content:flex-end}:host([lg-align-items=center]){-webkit-box-align:center;align-items:center}:host([lg-align-items=start]){-webkit-box-align:start;align-items:flex-start}:host([lg-align-items=end]){-webkit-box-align:end;align-items:flex-end}:host([lg-direction=column]){-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}:host([lg-direction=column-reverse]){-webkit-box-orient:vertical;-webkit-box-direction:reverse;flex-direction:column-reverse}:host([lg-direction=row]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}:host([lg-direction=row-reverse]){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}}`;
@@ -22318,6 +22342,10 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-flex")) {
+    customElements.define("base-flex", BaseFlex);
+  }
+
   var styles$8 = css`:host{--base-font-size:var(--base-font-size-sm);--base-font-weight:400}:host,:host>:first-child{display:inline-block;text-align:left;font-weight:var(--base-font-weight);font-size:var(--base-font-size)}:host([inline]),:host([inline])>:first-child{display:inline-block}:host(:last-child)>:first-child{margin-bottom:0}:host([full]),:host([full])>:first-child{display:block;width:100%}:host([look=h1])>:first-child,:host([tag=h1])>:first-child{--base-font-size:var(--base-font-size-xl);--base-font-weight:700}:host([look=h2])>:first-child,:host([tag=h2])>:first-child{--base-font-size:var(--base-font-size-lg);--base-font-weight:700}:host([look=h3])>:first-child,:host([tag=h3])>:first-child{--base-font-size:var(--base-font-size-md);--base-font-weight:700}:host([look=h4])>:first-child,:host([tag=h4])>:first-child{--base-font-size:var(--base-font-size-sm);--base-font-weight:600}:host([look=h5])>:first-child,:host([tag=h5])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:600}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{--base-font-size:var(--base-font-size-xs);--base-font-weight:500}:host([look=small])>:first-child,:host([tag=small])>:first-child{--base-font-size:var(--base-font-size-xs)}:host([look=h1])>:first-child,:host([look=h2])>:first-child,:host([look=h4])>:first-child,:host([look=h5])>:first-child,:host([look=h6])>:first-child,:host([tag=h1])>:first-child,:host([tag=h2])>:first-child,:host([tag=h4])>:first-child,:host([tag=h5])>:first-child,:host([tag=h6])>:first-child{color:var(--base-color-font-dark)}:host([look=p])>:first-child,:host([look=small])>:first-child,:host([tag=p])>:first-child,:host([tag=small])>:first-child{color:var(--base-color-font)}:host([look=i])>:first-child,:host([look=lead])>:first-child,:host([tag=i])>:first-child{color:var(--base-color-font-light)}:host([look=h6])>:first-child,:host([tag=h6])>:first-child{text-transform:uppercase}:host([look=h1]:not([inline])),:host([look=h2]:not([inline])),:host([look=h3]:not([inline])),:host([look=h4]:not([inline])),:host([look=h5]:not([inline])),:host([look=h6]:not([inline])),:host([tag=h1]:not([inline])),:host([tag=h2]:not([inline])),:host([tag=h3]:not([inline])),:host([tag=h4]:not([inline])),:host([tag=h5]:not([inline])),:host([tag=h6]:not([inline])){display:block;width:100%}:host([weight="100"])>:first-child{--base-font-weight:100}:host([weight="200"])>:first-child{--base-font-weight:200}:host([weight="300"])>:first-child{--base-font-weight:300}:host([weight="400"])>:first-child{--base-font-weight:400}:host([weight="500"])>:first-child{--base-font-weight:500}:host([weight="600"])>:first-child{--base-font-weight:600}:host([weight="700"])>:first-child{--base-font-weight:700}:host([weight="800"])>:first-child{--base-font-weight:800}:host([weight="900"])>:first-child{--base-font-weight:900}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6,:host i,:host p,:host small{font-weight:inherit;margin-top:0}:host b,:host h1,:host h2,:host h3,:host h4,:host h5,:host h6{color:var(--base-color-font-dark)}:host p,:host small{color:var(--base-color-font)}:host([look=lead])>:first-child{--base-font-size:1.4rem;line-height:32px;font-weight:300;color:var(--base-color-font-light)}`;
 
   class BaseText extends LitElement {
@@ -22411,6 +22439,10 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-text")) {
+    customElements.define("base-text", BaseText);
+  }
+
   var styles$9 = css`:host{width:100%;max-width:var(--base-container);display:block}:host([center]){margin:0 auto}:host([size=xs]){max-width:var(--base-container-xs)}:host([size=sm]){max-width:var(--base-container-sm)}:host([size=md]){max-width:var(--base-container-md)}:host([size=lg]){max-width:var(--base-container-lg)}:host([size=xl]){max-width:var(--base-container-xl)}`;
 
   class BaseContainer extends LitElement {
@@ -22455,6 +22487,10 @@ var global = arguments[3];
       return html`<slot></slot>`;
     }
 
+  }
+
+  if (!customElements.get("base-container")) {
+    customElements.define("base-container", BaseContainer);
   }
 
   var styles$a = css`:host{--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:var(--base-space-xs);--base-toggle-indicator-size:calc(var(--base-toggle-box-size) - var(--base-toggle-indicator-margin)*2);--base-toggle-icon-size:calc(var(--base-toggle-indicator-size)*0.8);vertical-align:middle;cursor:default;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;height:var(--base-toggle-height)}:host([full]){width:100%}:host([full]),:host label{display:-webkit-box;display:flex}:host label{-webkit-box-align:center;align-items:center}:host input{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);vertical-align:middle}:host input:focus+[part=box]{box-shadow:0 0 0 2px var(--base-color-focus)}[part=box]{position:relative;background:var(--base-color-ui-light);border:2px solid var(--base-color-ui-light);border-radius:300px;display:inline-block;-webkit-transition:all .2s ease;transition:all .2s ease;height:var(--base-toggle-box-size);width:calc(var(--base-toggle-box-size)*1.8);flex-basis:calc(var(--base-toggle-box-size)*1.8);flex-shrink:0;-webkit-box-flex:0;flex-grow:0}:host input:checked+[part=box]{border-color:var(--base-color-focus);background:var(--base-color-focus)}[part=indicator]{background:var(--base-color-white);position:absolute;left:var(--base-toggle-indicator-margin);top:50%;-webkit-transition:all .2s ease;transition:all .2s ease;-webkit-transform:translateY(-50%) translateX(0);transform:translateY(-50%) translateX(0);border-radius:50%;width:var(--base-toggle-indicator-size);height:var(--base-toggle-indicator-size)}:host(:hover) [part=indicator]{box-shadow:0 1px 4px 0 rgba(0,0,0,.2)}[part=box] [part=on]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;display:block;left:var(--base-toggle-indicator-margin)}[part=box] [part=off],[part=box] [part=on]{color:var(--base-color-white);position:absolute;width:var(--base-toggle-icon-size);height:var(--base-toggle-icon-size);border-radius:50%;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);content:""}[part=box] [part=off]{text-align:center;display:block;right:var(--base-toggle-indicator-margin)}:host input:checked+[part=box] [part=indicator]{left:calc(100% - var(--base-toggle-indicator-margin));-webkit-transform:translateY(-50%) translateX(-100%);transform:translateY(-50%) translateX(-100%)}[part=label]{padding-left:var(--base-space-md);font-weight:400}:host([size=sm]){--base-toggle-height:var(--base-size-sm);--base-toggle-box-size:var(--base-size-xs);--base-toggle-indicator-margin:4px}:host([size=md]){--base-toggle-height:var(--base-size-md);--base-toggle-box-size:var(--base-size-sm);--base-toggle-indicator-margin:4px}:host([size=lg]){--base-toggle-height:var(--base-size-lg);--base-toggle-box-size:var(--base-size-md);--base-toggle-indicator-margin:4px}`;
@@ -22546,6 +22582,10 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-toggle")) {
+    customElements.define("base-toggle", BaseToggle);
+  }
+
   var styles$b = css`:host{display:inline-block}:host([full]),:host([full]) textarea{display:block;width:100%}:host textarea{box-sizing:border-box;display:inline-block;outline:0;font-size:var(--base-font-size-sm);font-family:var(--base-font-family);color:var(--base-color-black);background-color:var(--base-color-white);padding:var(--base-space-md);border:2px solid var(--base-color-ui-lighter)}:host textarea:hover{border-color:var(--base-color-ui-light);background-color:var(--base-color-ui-lighter)}:host textarea:focus{border-color:var(--base-color-focus);background-color:var(--base-color-white)}`;
 
   class BaseTextArea extends LitElement {
@@ -22579,6 +22619,10 @@ var global = arguments[3];
       return html`<textarea part="input-field"></textarea>`;
     }
 
+  }
+
+  if (!customElements.get("base-textarea")) {
+    customElements.define("base-textarea", BaseTextArea);
   }
 
   var styles$c = css`:host{display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;overflow-x:scroll}:host([full]){display:-webkit-box;display:flex;width:100%}:host([position=left]){-webkit-box-pack:start;justify-content:flex-start}:host([position=center]){-webkit-box-pack:center;justify-content:center}:host([position=right]){-webkit-box-pack:end;justify-content:flex-end}`;
@@ -22746,6 +22790,14 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-tabs")) {
+    customElements.define("base-tabs", BaseTabs);
+  }
+
+  if (!customElements.get("base-tab")) {
+    customElements.define("base-tab", BaseTab);
+  }
+
   var styles$e = css`:host{--base-grid-columns:12;--base-grid-gap:var(--base-space-md);box-sizing:border-box;display:grid;grid-template-columns:repeat(var(--base-grid-columns),1fr);grid-row-gap:var(--base-grid-gap);grid-column-gap:var(--base-grid-gap);margin:0;width:100%;max-width:100%}:host([gap=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap=md]){--base-grid-gap:var(--base-space-md)}:host([gap=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap=xl]){--base-grid-gap:var(--base-space-xl)}:host([gap-sm=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-sm=md]){--base-grid-gap:var(--base-space-md)}:host([gap-sm=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-sm=xl]){--base-grid-gap:var(--base-space-xl)}@media(min-width:800px){:host([gap-md=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-md=md]){--base-grid-gap:var(--base-space-md)}:host([gap-md=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-md=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1200px){:host([gap-lg=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-lg=md]){--base-grid-gap:var(--base-space-md)}:host([gap-lg=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-lg=xl]){--base-grid-gap:var(--base-space-xl)}}@media(min-width:1400px){:host([gap-xl=sm]){--base-grid-gap:var(--base-space-sm)}:host([gap-xl=md]){--base-grid-gap:var(--base-space-md)}:host([gap-xl=lg]){--base-grid-gap:var(--base-space-lg)}:host([gap-xl=xl]){--base-grid-gap:var(--base-space-xl)}}:host([columns="1"]){--base-grid-columns:1}:host([columns="2"]){--base-grid-columns:2}:host([columns="3"]){--base-grid-columns:3}:host([columns="4"]){--base-grid-columns:4}:host([columns="5"]){--base-grid-columns:5}:host([columns="6"]){--base-grid-columns:6}:host([columns="7"]){--base-grid-columns:7}:host([columns="8"]){--base-grid-columns:8}:host([columns="9"]){--base-grid-columns:9}:host([columns="10"]){--base-grid-columns:10}:host([columns="11"]){--base-grid-columns:11}:host([columns="12"]){--base-grid-columns:12}`;
 
   class BaseGrid extends LitElement {
@@ -22858,6 +22910,14 @@ var global = arguments[3];
       return html` <slot></slot> `;
     }
 
+  }
+
+  if (!customElements.get("base-grid")) {
+    customElements.define("base-grid", BaseGrid);
+  }
+
+  if (!customElements.get("base-grid-item")) {
+    customElements.define("base-grid-item", BaseGridItem);
   }
 
   var selectStyles = css`:host{--base-select-active-color:var(--base-color-focus);--base-select-font-size:var(--base-font-size-sm);--base-select-min-height:var(--base-size-md);--base-select-background:0;--base-select-padding:0;--base-select-placeholder-color:var(--base-color-font-light);--base-select-border-width:2px;--base-select-border-style:solid;--base-select-border-color:var(--base-color-ui-light);--base-select-border-radius:none;--base-select-option-list-border:1px solid var(--base-color-ui-light);--base-select-option-list-border-radius:var(--base-select-border-radius-sm);--base-select-option-list-box-shadow:0 0;--base-select-option-list-position:absolute;--base-select-option-list-top:110%;--base-select-option-list-transition:none;--base-select-option-list-opacity:1;vertical-align:middle;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:between;justify-content:between;flex-wrap:wrap;box-sizing:border-box;max-width:100%;font-size:var(--base-select-font-size);height:var(--base-select-min-height);padding:var(--base-select-padding);background-color:var(--base-color-white);border:var(--base-select-border-width) var(--base-select-border-style) var(--base-select-border-color);border-radius:var(--base-select-border-radius);position:relative}:host([multiple]){min-height:var(--base-select-min-height);height:auto}:host([full]){display:-webkit-box;display:flex}[hidden]{display:none !important}:host(:hover:not([multiple]):not([focused])){--base-select-border-color:var(--base-color-ui)}:host([focused]){box-shadow:0 0 0 1px var(--base-select-active-color);--base-select-border-color:var(--base-select-active-color)}:host([disabled]){--base-select-background:#eee}:host([searchable]) [part=input-field]{cursor:text}:host [part=input-field]::-webkit-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host [part=input-field]::-moz-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host [part=input-field]:-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host [part=input-field]::-ms-input-placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host [part=input-field]::placeholder{font-size:var(--base-select-font-size);color:var(--base-select-placeholder-color)}:host(:not([multiple])) [part=input-field][has-value]::-webkit-input-placeholder{--base-select-placeholder-color:var(--base-color-font);opacity:1}:host(:not([multiple])) [part=input-field][has-value]::-moz-placeholder{--base-select-placeholder-color:var(--base-color-font);opacity:1}:host(:not([multiple])) [part=input-field][has-value]:-ms-input-placeholder{--base-select-placeholder-color:var(--base-color-font);opacity:1}:host(:not([multiple])) [part=input-field][has-value]::-ms-input-placeholder{--base-select-placeholder-color:var(--base-color-font);opacity:1}:host(:not([multiple])) [part=input-field][has-value]::placeholder{--base-select-placeholder-color:var(--base-color-font);opacity:1}.input-wrapper{flex-wrap:wrap;display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;min-height:var(--base-select-min-height)}[part=input-field]{-webkit-box-flex:1;flex:1;width:100%;cursor:pointer;padding-left:8px;background:transparent;color:var(--base-color-font);height:var(--base-select-min-height);font-size:16px;border:0;outline:0}.buttons-wrapper{display:-webkit-box;display:flex}button[part=clear-button]{color:#333;background:transparent}button[part=arrow-button],button[part=clear-button]{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:var(--base-select-min-height);height:var(--base-select-min-height);border:0;outline:0}button[part=arrow-button]{text-align:center;background:0}button[part=arrow-button] .arrow-up{border-bottom:5px solid var(--base-color-black)}button[part=arrow-button] .arrow-down,button[part=arrow-button] .arrow-up{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}button[part=arrow-button] .arrow-down{border-top:5px solid var(--base-color-black)}div[part=tag]{font-size:14px;display:-webkit-inline-box;display:inline-flex;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:center;align-items:center;height:calc(var(--base-select-min-height) - var(--base-space-sm));padding-left:var(--base-space-xs);margin-left:var(--base-space-sm);margin-top:var(--base-space-xs);margin-bottom:var(--base-space-xs);background:var(--base-color-ui-lighter)}button[part=remove-tag]{border:0;color:currentColor;background:0;margin-left:var(--base-space-xs)}:host([list-open]) div[part=option-list]{visibility:visible}div[part=option-list]{visibility:hidden;position:var(--base-select-option-list-position);left:0;top:var(--base-select-option-list-top);width:100%;max-width:100%;z-index:600;-webkit-transition:var(--base-select-option-list-transition);transition:var(--base-select-option-list-transition);box-sizing:border-box;border:var(--base-select-option-list-border);margin:0;opacity:var(--base-select-option-list-opacity);list-style:none;box-shadow:var(--base-select-option-list-box-shadow);border-radius:var(--base-select-option-list-border-radius);background:#fff;max-height:300px;overflow-y:scroll;overflow-x:hidden}::slotted([slot=no-options]){display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;color:var(--base-color-font-ligth);height:var(--base-size-md);padding:0 var(--base-space-sm);background:#fff}`;
@@ -23622,12 +23682,25 @@ var global = arguments[3];
 
   }
 
+  if (!customElements.get("base-select")) {
+    customElements.define("base-select", BaseSelect);
+  }
+
+  if (!customElements.get("base-option")) {
+    customElements.define("base-option", BaseOption);
+  }
+
+  if (!customElements.get("base-optgroup")) {
+    customElements.define("base-optgroup", BaseOptGroup);
+  }
+
   var styles$i = css`:host{--base-accordion-border-color:var(--base-color-ui-light);border-top:1px solid var(--base-accordion-border-color);outline:1px #000;display:block;width:100%}:host(:hover){--base-accordion-border-color:var(--base-color-ui)}:host(:last-of-type){border-bottom:1px solid var(--base-accordion-border-color)}:host [part=content]{display:block;width:100%;overflow:hidden;-webkit-transition:max-height .3s ease;transition:max-height .3s ease}:host(:not([open])) [part=content]{max-height:0}:host [part=title]{-webkit-box-flex:1;flex:1;display:block}:host [part=trigger]{cursor:pointer;text-align:left;padding:0;margin:0;display:-webkit-box;display:flex;width:100%;-webkit-box-align:center;align-items:center;font-size:var(--base-font-size);outline:0;border:0;height:var(--base-size-md)}::slotted([slot=prepend]){margin-right:var(--base-space-sm)}::slotted([slot=append]){margin-left:var(--base-space-sm)}:host [part=append] svg{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease;-webkit-transform:rotate(0);transform:rotate(0)}:host([open]) [part=append] svg{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}`;
 
   class BaseAccordion extends LitElement {
     constructor() {
       super();
       this._open = false;
+      this.hideDefaultIndicator = false;
       this._handleClick = this._handleClick.bind(this);
     }
 
@@ -23636,6 +23709,10 @@ var global = arguments[3];
         open: {
           type: Boolean,
           reflect: true
+        },
+        hideDefaultIndicator: {
+          type: Boolean,
+          attribute: "hide-default-indicator"
         }
       };
     }
@@ -23684,35 +23761,35 @@ var global = arguments[3];
             <slot name="prepend" part="prepend"></slot>
             <div part="title">${this.title}</div>
             <slot name="append" part="append"
-              ><svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
-                  fill="currentColor"
-                />
-              </svg>
+              >${this.hideDefaultIndicator ? null : html`<svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                      fill="currentColor"
+                    />
+                  </svg>`}
             </slot>
           </button>` : html`<button @click=${this._handleClick} part="trigger">
             <slot name="prepend" part="prepend"></slot>
             <slot name="title" part="title"></slot>
             <slot name="append" part="append"
-              ><svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
-                  fill="currentColor"
-                />
-              </svg>
+              >${this.hideDefaultIndicator ? null : html`<svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                      fill="currentColor"
+                    />
+                  </svg>`}
             </slot>
           </button>`}
       <slot part="content"></slot>
@@ -35768,9 +35845,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
 var _default = {
   components: {
     Header: _Header.default
@@ -36454,11 +36528,11 @@ render._withStripped = true
 },{"../layouts/Page":"src/layouts/Page.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/db.json":[function(require,module,exports) {
 module.exports = {
   "components": [{
-    "path": "../lib/src/components/base-accordion/base-accordion.md",
-    "name": "Accordion",
-    "desc": "Accordions",
+    "path": "../lib/src/components/base-button/base-button.md",
+    "name": "Button",
+    "desc": "A general button element",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n    </base-box>\n  </base-accordion>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n<style>\n  base-accordion .gg-chevron-right {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  base-accordion[open] .gg-chevron-right {\n    transform: rotate(90deg);\n  }\n</style>\n<base-accordion title=\"Title\">\n  <i slot=\"prepend\" class=\"gg-chevron-right\"></i>\n  <span slot=\"append\"></span>\n  <base-box margin-y=\"md\">Content</base-box>\n</base-accordion>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-box/base-box.md",
     "name": "Box",
@@ -36466,11 +36540,11 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-box\">\n<base-box padding=\"lg\" depth=\"md\">Box</base-box>\n</base-knobs>\n\n## Card\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-box\">\n  <base-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <base-box padding=\"md\">\n      <base-text tag=\"h2\">Card Title</base-text>\n      <base-text tag=\"h6\">Subtitle</base-text>\n      <base-button type=\"primary\">Click me</base-button>\n    </base-box>\n  </base-box>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-button/base-button.md",
-    "name": "Button",
-    "desc": "A general button element",
+    "path": "../lib/src/components/base-accordion/base-accordion.md",
+    "name": "Accordion",
+    "desc": "Accordions",
     "category": "Elements",
-    "content": "\n<base-knobs src=\"./components.json\" tab=\"props\" name=\"base-button\">\n<base-button>Button</base-button>\n</base-knobs>\n\n## Types\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>Default</base-button>\n<base-button type=\"primary\">Primary</base-button>\n<base-button type=\"secondary\">Secondary</base-button>\n<base-button type=\"success\">Success</base-button>\n<base-button type=\"danger\">Danger</base-button>\n<base-button type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Disabled\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button disabled>Default</base-button>\n<base-button disabled type=\"primary\">Primary</base-button>\n<base-button disabled type=\"secondary\">Secondary</base-button>\n<base-button disabled type=\"success\">Success</base-button>\n<base-button disabled type=\"danger\">Danger</base-button>\n<base-button disabled type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Sizes\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button size=\"sm\">Small</base-button>\n<base-button size=\"md\">Medium</base-button>\n<base-button size=\"lg\">Large</base-button>\n</base-knobs>\n\n## Full\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button full>Full</base-button>\n</base-knobs>\n\n## With icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</base-button>\n<base-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</base-button>\n</base-knobs>\n\n## Outline\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-button outline>Default</base-button>\n<base-button outline type=\"primary\">Primary</base-button>\n<base-button outline type=\"secondary\">Secondary</base-button>\n<base-button outline type=\"success\">Success</base-button>\n<base-button outline type=\"danger\">Danger</base-button>\n<base-button outline type=\"transparent\">Transparent</base-button>\n</base-knobs>\n\n## Group\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-button\">\n<base-flex>\n  <base-button >Option</base-button>\n  <base-button >Option</base-button>\n  <base-button type=\"primary\">Active</base-button>\n  <base-button>Option</base-button>\n</base-flex>\n</base-knobs>\n"
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-accordion\">\n  <base-accordion  title=\"Title\">\n  <base-box margin-y=\"md\">Content</base-box>\n  </base-accordion>\n  <base-accordion  title=\"Title\">\n    <base-box margin-y=\"md\">\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n      <base-text tag=\"h1\">Content</base-text>\n    </base-box>\n  </base-accordion>\n</base-knobs>\n\n## Custom indicator\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-accordion\">\n<style>\n  .indicator [slot=\"prepend\"] {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  .indicator[open] [slot=\"prepend\"] {\n    transform: rotate(90deg);\n  }\n</style>\n<base-accordion class=\"indicator\" hide-default-indicator title=\"Title\">\n  <i slot=\"prepend\" class=\"gg-chevron-right\"></i>\n  <base-box margin-y=\"md\">Content</base-box>\n</base-accordion>\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-checkbox/base-checkbox.md",
     "name": "Checkbox",
@@ -36496,12 +36570,6 @@ module.exports = {
     "category": "Layout",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-grid\">\n<base-grid>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </base-grid-item>\n  <base-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </base-grid-item>\n</base-grid>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-label/base-label.md",
-    "name": "Label",
-    "desc": "Input label",
-    "category": "Form",
-    "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-input/base-input.md",
     "name": "Input",
     "desc": "A input element",
@@ -36513,6 +36581,18 @@ module.exports = {
     "desc": "A modal",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modal\">\n  Modal content\n</base-modal>\n<base-button onclick=\"modal.show()\">Show modal</base-button>\n</base-knobs>\n\n## With Header\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-modal\">\n<base-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</base-modal>\n<base-button onclick=\"modalTwo.show()\">Show modal</base-button>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-label/base-label.md",
+    "name": "Label",
+    "desc": "Input label",
+    "category": "Form",
+    "content": "\n<base-knobs hideEvents tab=\"src\" src=\"./components.json\" name=\"base-label\">\n<base-label>Label</base-label>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-radio/base-radio.md",
+    "name": "Radio",
+    "desc": "Radio button",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
   }, {
     "path": "../lib/src/components/base-select/base-select.md",
     "name": "Select",
@@ -36526,29 +36606,23 @@ module.exports = {
     "category": "Navigation",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs>\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With targets\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs full position=\"left\">\n  <base-tab selected target=\"targetOne\">Tab 1</base-tab>\n  <base-tab target=\"targetTwo\">Tab 2</base-tab>\n</base-tabs>\n<div id=\"targetOne\">Target 1</div>\n<div id=\"targetTwo\">Target 2</div>\n</base-knobs>\n\n## Position\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<base-tabs full position=\"left\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n<base-tabs full position=\"right\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n<base-tabs full position=\"center\">\n  <base-tab selected>Tab 1</base-tab>\n  <base-tab>Tab 2</base-tab>\n</base-tabs>\n</base-knobs>\n\n## With buttons\n\nAny child you put inside `base-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `base-tab` as children, and style them accordingly.\n\n<base-knobs src=\"./components.json\" name=\"base-tabs\">\n<style>\nbase-tabs base-button[selected],\nbase-tabs base-button[selected]:hover {\n  --base-button-bg-color: var(--base-color-primary);\n  --base-button-text-color: var(--base-color-white);\n}\n</style>\n<base-tabs>\n  <base-button selected>Tab 1</base-button>\n  <base-button>Tab 2</base-button>\n  <base-button disabled>Tab 3</base-button>\n</base-tabs>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-radio/base-radio.md",
-    "name": "Radio",
-    "desc": "Radio button",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-radio\">\n<base-radio name=\"example-1\" value=\"1\">Option 1</base-radio>\n<base-radio name=\"example-1\" value=\"2\">Option 2</base-radio>\n<base-radio name=\"example-1\" value=\"3\" disabled>Option 3</base-radio>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  base-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n\n<base-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</base-radio>\n</base-knobs>\n\n## Choice buttons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-radio\">\n<style>\n  base-radio.choice {\n    margin-bottom: var(--base-space-md);\n    padding: 0 var(--base-space-md);\n    height: var(--base-size-xl);\n    border: 2px solid var(--base-color-ui-light);\n  }\n  base-radio.choice:hover {\n    border-color: var(--base-color-ui);\n  }\n  base-radio.choice[checked] {\n    border-color: var(--base-color-focus);\n  }\n</style>\n\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Standard delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">4-5 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">19$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n<base-radio class=\"choice\" name=\"example-4\" full>\n  <base-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <base-text tag=\"div\" look=\"h3\">Express delivery</base-text>\n    <base-text tag=\"div\" look=\"p\">1-2 days</base-text>\n  </div>\n  <div>\n    <base-text tag=\"h3\">30$</base-text>\n  </div>\n  </base-flex>\n</base-radio>\n\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-text/base-text.md",
     "name": "Text",
     "desc": "A general purpose text element",
     "category": "Elements",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-text\">\n<base-text tag=\"h1\">Base text</base-text>\n</base-knobs>\n\n## Tags\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text tag=\"h1\">Typography H1</base-text>\n  <base-text tag=\"h2\">Typography H2</base-text>\n  <base-text tag=\"h3\">Typography H3</base-text>\n  <base-text tag=\"h4\">Typography H4</base-text>\n  <base-text tag=\"h5\">Typography H5</base-text>\n  <base-text tag=\"h6\">Typography H6</base-text>\n  <base-text tag=\"p\">Typography P</base-text>\n  <base-text full tag=\"small\">Typography Small</base-text>\n  <base-text full tag=\"b\">Typography B</base-text>\n  <base-text full tag=\"i\">Typography I</base-text>\n</base-knobs>\n\n## Looks\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-text\">\n  <base-text look=\"h1\">Typography H1</base-text>\n  <base-text look=\"h2\">Typography H2</base-text>\n  <base-text look=\"h3\">Typography H3</base-text>\n  <base-text look=\"h4\">Typography H4</base-text>\n  <base-text look=\"h5\">Typography H5</base-text>\n  <base-text look=\"h6\">Typography H6</base-text>\n  <base-text look=\"p\">Typography P</base-text>\n  <base-text full look=\"lead\">Typography Lead</base-text>\n</base-knobs>\n"
   }, {
-    "path": "../lib/src/components/base-textarea/base-textarea.md",
-    "name": "Text Area",
-    "desc": "A general purpose text element",
-    "category": "Form",
-    "content": "\n<base-knobs src=\"./components.json\" name=\"base-textarea\">\n<base-textarea></base-textarea>\n</base-knobs>\n"
-  }, {
     "path": "../lib/src/components/base-toggle/base-toggle.md",
     "name": "Toggle",
     "desc": "A general toggle element",
     "category": "Form",
     "content": "\n<base-knobs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>Toggle</base-toggle>\n</base-knobs>\n\n## Custom icons\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<base-toggle>\n  <i slot=\"on\" style=\"--ggs: 0.8;\" class=\"gg-sun\"></i>\n  Label\n  <i slot=\"off\" style=\"--ggs: 0.8;\" class=\"gg-moon\"></i>\n</base-toggle>\n</base-knobs>\n\n## Animate icon\n\n<base-knobs hideTabs src=\"./components.json\" name=\"base-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<base-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</base-toggle>\n</base-knobs>\n"
+  }, {
+    "path": "../lib/src/components/base-textarea/base-textarea.md",
+    "name": "Text Area",
+    "desc": "A general purpose text element",
+    "category": "Form",
+    "content": "\n<base-knobs src=\"./components.json\" name=\"base-textarea\">\n<base-textarea></base-textarea>\n</base-knobs>\n"
   }]
 };
 },{}],"src/views/Components.vue":[function(require,module,exports) {
@@ -39220,31 +39294,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   props: {
     showSidebar: Boolean,
@@ -39367,29 +39416,7 @@ exports.default = _default;
                         }
                       }
                     },
-                    [
-                      _vm._v(
-                        "\n          " + _vm._s(page.name) + "\n          "
-                      ),
-                      _vm.subMenu.length &&
-                      _vm.$router.currentRoute.params.element === page.name
-                        ? _c(
-                            "div",
-                            { staticClass: "submenu" },
-                            _vm._l(_vm.subMenu, function(menu) {
-                              return _c(
-                                "router-link",
-                                {
-                                  key: menu.id,
-                                  attrs: { to: { hash: menu.id } }
-                                },
-                                [_vm._v(_vm._s(menu.title))]
-                              )
-                            }),
-                            1
-                          )
-                        : _vm._e()
-                    ]
+                    [_vm._v(_vm._s(page.name))]
                   )
                 })
               ],
@@ -39413,21 +39440,35 @@ exports.default = _default;
           _vm._v(_vm._s(_vm.component.desc))
         ]),
         _vm._v(" "),
-        _vm.subMenu.length &&
-        _vm.$router.currentRoute.params.element === _vm.component.name
+        _vm.subMenu.length
           ? _c(
-              "base-tabs",
-              { staticClass: "sticky-tabs", attrs: { full: "" } },
-              _vm._l(_vm.subMenu, function(menu) {
-                return _c(
-                  "router-link",
-                  {
-                    key: menu.id,
-                    attrs: { tag: "base-tab", to: { hash: menu.id } }
-                  },
-                  [_vm._v(_vm._s(menu.title))]
+              "base-box",
+              { attrs: { "padding-y": "sm" } },
+              [
+                _c("base-text", { attrs: { tag: "p", look: "h6" } }, [
+                  _vm._v("Content")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  { staticClass: "content-list" },
+                  _vm._l(_vm.subMenu, function(menu) {
+                    return _c(
+                      "li",
+                      { key: menu.id },
+                      [
+                        _c(
+                          "router-link",
+                          { attrs: { to: { hash: menu.id } } },
+                          [_vm._v(_vm._s(menu.title))]
+                        )
+                      ],
+                      1
+                    )
+                  }),
+                  0
                 )
-              }),
+              ],
               1
             )
           : _vm._e(),
@@ -63166,7 +63207,7 @@ render._withStripped = true
 
 require("regenerator-runtime/runtime");
 
-require("../../lib/dist/components/base-knobs");
+var _baseKnobs = _interopRequireDefault(require("../../lib/dist/components/base-knobs"));
 
 require("../../lib/dist/main.js");
 
@@ -63184,10 +63225,9 @@ var _Component = _interopRequireDefault(require("./views/Component"));
 
 var _GettingStarted = _interopRequireDefault(require("./views/GettingStarted"));
 
-var _db = require("./db.json");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+customElements.define("base-knobs", _baseKnobs.default);
 _vue.default.config.ignoredElements = [/base-\w*/];
 _vue.default.config.ignoredElements = [/ion-\w*/];
 
@@ -63228,9 +63268,10 @@ const router = new _vueRouter.default({
   }],
   scrollBehavior: function (to, from, savedPosition) {
     if (to.hash) {
-      return {
-        selector: to.hash
-      };
+      return window.scrollTo({
+        top: document.querySelector(to.hash).offsetTop - 60,
+        behavior: "smooth"
+      });
     } else {
       return {
         x: 0,
@@ -63245,7 +63286,7 @@ new _vue.default({
     return h(_App.default);
   }
 }).$mount("#app");
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/GettingStarted":"src/views/GettingStarted.vue","./db.json":"src/db.json"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","../../lib/dist/components/base-knobs":"../lib/dist/components/base-knobs.js","../../lib/dist/main.js":"../lib/dist/main.js","vue":"node_modules/vue/dist/vue.runtime.esm.js","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./App.vue":"src/App.vue","./views/Home":"src/views/Home.vue","./views/Components":"src/views/Components.vue","./views/Component":"src/views/Component.vue","./views/GettingStarted":"src/views/GettingStarted.vue"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -63273,7 +63314,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49464" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56758" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
