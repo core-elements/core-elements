@@ -923,8 +923,14 @@
           "default": "\"undefined\""
         },
         {
-          "name": "size",
+          "name": "step",
           "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "size",
+          "description": "Input size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
         },
         {
@@ -1050,9 +1056,16 @@
           "default": "\"undefined\""
         },
         {
+          "name": "step",
+          "attribute": "step",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
           "name": "size",
           "attribute": "size",
-          "type": "string",
+          "description": "Input size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
         },
         {
