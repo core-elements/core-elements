@@ -7,10 +7,10 @@
 /coverage
 
 # production
-/build
 /.cache
 .cache
 .cache/
+
 
 # misc
 .DS_Store
