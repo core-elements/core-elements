@@ -1,6 +1,6 @@
 {
   "name": "core-elements",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core UI Elements for the web",
   "main": "dist/main.js",
   "module": "dist/main.es.js",
@@ -21,6 +21,7 @@
   "homepage": "https://core-elements.netlify.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "run-s build:*",
     "start": "npm link && npm run dev",
     "dev": "run-p dev:*",
     "build": "run-s build:*",
