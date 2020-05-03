@@ -1,0 +1,1811 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "core-accordion",
+      "path": "./../../lib/src/components/accordion/accordion.wc.js",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean"
+        },
+        {
+          "name": "hide-default-indicator",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean"
+        },
+        {
+          "name": "hideDefaultIndicator",
+          "attribute": "hide-default-indicator",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "toggle"
+        }
+      ]
+    },
+    {
+      "name": "core-box",
+      "path": "./../../lib/src/components/box/box.wc.js",
+      "attributes": [
+        {
+          "name": "bg",
+          "description": "Box background color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "description": "Box border",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "radius",
+          "description": "Box border radius",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "depth",
+          "description": "Box depth",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "clickable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "inline",
+          "description": "Full box",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "padding",
+          "description": "Box padding",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-x",
+          "description": "Box padding horistonal",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin",
+          "description": "Box margin",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-x",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "bg",
+          "attribute": "bg",
+          "description": "Box background color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "border",
+          "attribute": "border",
+          "description": "Box border",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "radius",
+          "attribute": "radius",
+          "description": "Box border radius",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "depth",
+          "attribute": "depth",
+          "description": "Box depth",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "clickable",
+          "attribute": "clickable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "inline",
+          "attribute": "inline",
+          "description": "Full box",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "padding",
+          "attribute": "padding",
+          "description": "Box padding",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingX",
+          "attribute": "padding-x",
+          "description": "Box padding horistonal",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingY",
+          "attribute": "padding-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin",
+          "attribute": "margin",
+          "description": "Box margin",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginX",
+          "attribute": "margin-x",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginY",
+          "attribute": "margin-y",
+          "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "core-button",
+      "path": "./../../lib/src/components/button/button.wc.js",
+      "attributes": [
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "description": "Button state",
+          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "outline",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "Button state",
+          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "outline",
+          "attribute": "outline",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
+      ]
+    },
+    {
+      "name": "core-checkbox",
+      "path": "./../../lib/src/components/checkbox/checkbox.wc.js",
+      "attributes": [
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "inputEl",
+          "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "core-container",
+      "path": "./../../lib/src/components/container/container.wc.js",
+      "attributes": [
+        {
+          "name": "center",
+          "type": "boolean"
+        },
+        {
+          "name": "size",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "center",
+          "attribute": "center",
+          "type": "boolean"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "core-flex",
+      "path": "./../../lib/src/components/flex/flex.wc.js",
+      "attributes": [
+        {
+          "name": "justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "sm-justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sm-align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sm-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sm-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "md-justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "md-align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "md-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "m-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lg-justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lg-align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lg-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lg-wrap",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "j",
+          "attribute": "justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "a",
+          "attribute": "align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "d",
+          "attribute": "direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "wrap",
+          "attribute": "wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "sJ",
+          "attribute": "sm-justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sA",
+          "attribute": "sm-align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sD",
+          "attribute": "sm-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "sWrap",
+          "attribute": "sm-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "mJ",
+          "attribute": "md-justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "mA",
+          "attribute": "md-align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "mD",
+          "attribute": "md-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "mWrap",
+          "attribute": "m-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "lJ",
+          "attribute": "lg-justify-content",
+          "description": "Justify content",
+          "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lA",
+          "attribute": "lg-align-items",
+          "description": "Align items",
+          "type": "\"start\"|\"center\"|\"end\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lD",
+          "attribute": "lg-direction",
+          "description": "Direction items",
+          "type": "\"column\"|\"column-reverse\"|\"row\"|\"row-reverse\"",
+          "default": "\"\""
+        },
+        {
+          "name": "lWrap",
+          "attribute": "lg-wrap",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "core-grid-item",
+      "path": "./../../lib/src/components/grid/grid-item.wc.js",
+      "attributes": [
+        {
+          "name": "sm",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "md",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "lg",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "xl",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "sm",
+          "attribute": "sm",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "md",
+          "attribute": "md",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "lg",
+          "attribute": "lg",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "xl",
+          "attribute": "xl",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "core-grid",
+      "path": "./../../lib/src/components/grid/grid.wc.js",
+      "attributes": [
+        {
+          "name": "gap",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"sm\""
+        },
+        {
+          "name": "gapSm",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gapMd",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gapLg",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gapXl",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "columns",
+          "type": "string",
+          "default": "\"12\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "gap",
+          "attribute": "gap",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"sm\""
+        },
+        {
+          "name": "gapSm",
+          "attribute": "gapSm",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gapMd",
+          "attribute": "gapMd",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gapLg",
+          "attribute": "gapLg",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "gapXl",
+          "attribute": "gapXl",
+          "description": "Grid gap",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "columns",
+          "attribute": "columns",
+          "type": "string",
+          "default": "\"12\""
+        }
+      ]
+    },
+    {
+      "name": "core-input",
+      "path": "./../../lib/src/components/input/input.wc.js",
+      "attributes": [
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "description": "Full input",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "valid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "invalid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "description": "Input type",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"|\"search\"",
+          "default": "\"text\""
+        },
+        {
+          "name": "mask",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "errormessage",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "maxlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "min",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "minlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "pattern",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "step",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "size",
+          "description": "Input size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "readonly",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autovalidate",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autofocus",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "inputEl",
+          "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "required",
+          "attribute": "required",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full input",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "valid",
+          "attribute": "valid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "invalid",
+          "attribute": "invalid",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "description": "Input type",
+          "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"|\"search\"",
+          "default": "\"text\""
+        },
+        {
+          "name": "mask",
+          "attribute": "mask",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "errormessage",
+          "attribute": "errormessage",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "maxlength",
+          "attribute": "maxlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "min",
+          "attribute": "min",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "minlength",
+          "attribute": "minlength",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "pattern",
+          "attribute": "pattern",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "step",
+          "attribute": "step",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Input size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "readonly",
+          "attribute": "readonly",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autovalidate",
+          "attribute": "autovalidate",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "attribute": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "autofocus",
+          "attribute": "autofocus",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "checkValidity"
+        }
+      ],
+      "events": [
+        {
+          "name": "keypress"
+        },
+        {
+          "name": "input"
+        },
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "core-knobs",
+      "path": "./../../lib/src/components/knobs/knobs.wc.js",
+      "attributes": [
+        {
+          "name": "src",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "tab",
+          "type": "string",
+          "default": "\"src\""
+        },
+        {
+          "name": "hideTabs",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideProps",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideSrc",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "element",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideEvents",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "attributes",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "properties",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "componentEl",
+          "type": "Element | null"
+        },
+        {
+          "name": "srcHTML"
+        },
+        {
+          "name": "src",
+          "attribute": "src",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "tab",
+          "attribute": "tab",
+          "type": "string",
+          "default": "\"src\""
+        },
+        {
+          "name": "hideTabs",
+          "attribute": "hideTabs",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideProps",
+          "attribute": "hideProps",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hideSrc",
+          "attribute": "hideSrc",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "element",
+          "attribute": "element",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "hideEvents",
+          "attribute": "hideEvents",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "attributes",
+          "attribute": "attributes",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "properties",
+          "attribute": "properties",
+          "type": "array",
+          "default": "[]"
+        }
+      ]
+    },
+    {
+      "name": "core-label",
+      "path": "./../../lib/src/components/label/label.wc.js",
+      "attributes": [
+        {
+          "name": "for",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "for",
+          "attribute": "for",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "core-modal",
+      "path": "./../../lib/src/components/modal/modal.wc.js",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "no-backdrop",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "noBackdrop",
+          "attribute": "no-backdrop",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "close"
+        },
+        {
+          "name": "show"
+        },
+        {
+          "name": "toggle"
+        }
+      ],
+      "events": [
+        {
+          "name": "toggle"
+        }
+      ]
+    },
+    {
+      "name": "core-radio",
+      "path": "./../../lib/src/components/radio/radio.wc.js",
+      "attributes": [
+        {
+          "name": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "options",
+          "type": "Element[]"
+        },
+        {
+          "name": "currentCheckedItem",
+          "type": "Element | undefined"
+        },
+        {
+          "name": "formElement",
+          "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Sizes",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focus"
+        },
+        {
+          "name": "selectNext"
+        },
+        {
+          "name": "selectPrevious"
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "core-optgroup",
+      "path": "./../../lib/src/components/select/optgroup.wc.js",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "core-option",
+      "path": "./../../lib/src/components/select/option.wc.js",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hidden",
+          "attribute": "hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "select"
+        }
+      ]
+    },
+    {
+      "name": "core-select",
+      "path": "./../../lib/src/components/select/select.wc.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "input-value",
+          "type": "string"
+        },
+        {
+          "name": "list-open",
+          "type": "boolean"
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "aria-label",
+          "type": "string",
+          "default": "\"Select an option\""
+        },
+        {
+          "name": "hide-arrow",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "clearable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disable-filter",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "searchable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "list-open-on-select",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "allOptions",
+          "type": "Element[]"
+        },
+        {
+          "name": "suggestions",
+          "type": "Element[]"
+        },
+        {
+          "name": "activeSuggestion",
+          "type": "Element | undefined"
+        },
+        {
+          "name": "inputValue",
+          "attribute": "input-value",
+          "type": "string"
+        },
+        {
+          "name": "listOpen",
+          "attribute": "list-open",
+          "type": "boolean"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "placeholder",
+          "attribute": "placeholder",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "multiple",
+          "attribute": "multiple",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "ariaLabel",
+          "attribute": "aria-label",
+          "type": "string",
+          "default": "\"Select an option\""
+        },
+        {
+          "name": "hideArrow",
+          "attribute": "hide-arrow",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "clearable",
+          "attribute": "clearable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "attribute": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disableFilter",
+          "attribute": "disable-filter",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "clearSelected"
+        },
+        {
+          "name": "focus"
+        },
+        {
+          "name": "searchable",
+          "attribute": "searchable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "listOpenOnSelect",
+          "attribute": "list-open-on-select",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        },
+        {
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "name": "core-tab",
+      "path": "./../../lib/src/components/tabs/tab.wc.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hash",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "target",
+          "attribute": "target",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hash",
+          "attribute": "hash",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "core-tabs",
+      "path": "./../../lib/src/components/tabs/tabs.wc.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "position",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "tabElements",
+          "type": "Element[]"
+        },
+        {
+          "name": "selectedTab",
+          "type": "Element | undefined"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "position",
+          "attribute": "position",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "core-text",
+      "path": "./../../lib/src/components/text/text.wc.js",
+      "attributes": [
+        {
+          "name": "tag",
+          "description": "Button state",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
+          "default": "\"\""
+        },
+        {
+          "name": "look",
+          "description": "Button look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "default": "\"p\""
+        },
+        {
+          "name": "weight",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tag",
+          "attribute": "tag",
+          "description": "Button state",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
+          "default": "\"\""
+        },
+        {
+          "name": "look",
+          "attribute": "look",
+          "description": "Button look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "default": "\"p\""
+        },
+        {
+          "name": "weight",
+          "attribute": "weight",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "core-textarea",
+      "path": "./../../lib/src/components/textarea/textarea.wc.js",
+      "attributes": [
+        {
+          "name": "full",
+          "type": "boolean"
+        },
+        {
+          "name": "cols",
+          "type": "string"
+        },
+        {
+          "name": "rows",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean"
+        },
+        {
+          "name": "cols",
+          "attribute": "cols",
+          "type": "string"
+        },
+        {
+          "name": "rows",
+          "attribute": "rows",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "core-toggle",
+      "path": "./../../lib/src/components/toggle/toggle.wc.js",
+      "attributes": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Toggle size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "inputEl",
+          "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Toggle size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
+        }
+      ]
+    }
+  ]
+}

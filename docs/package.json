@@ -8,7 +8,7 @@
     "start": "npm link core-elements && npm run dev",
     "dev": "npm run analyze && run-p dev:*",
     "build": "npm run analyze && run-s build:*",
-    "analyze": "wca analyze ../lib/src/components/**/*.wc.js --format json --outDir static/components.json",
+    "analyze": "wca analyze ../lib/src/components/**/*.wc.js --format json --outFile static/components.json",
     "dev:markdown": "markdown-db create ./config.yml ./src -w",
     "dev:web": "parcel index.html",
     "build:markdown": "markdown-db create ./config.yml ./src",

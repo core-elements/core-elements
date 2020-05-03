@@ -4,13 +4,13 @@ desc: A general purpose box with padding, border, depth and more
 category: Layout
 ---
 
-<core-knobs  name="core-box">
+<core-knobs element="core-box">
 <core-box padding="lg" depth="md">Box</core-box>
 </core-knobs>
 
 ## Card
 
-<core-knobs hideTabs  name="core-box">
+<core-knobs hideTabs element="core-box">
   <core-box bg="white" inline depth="sm" radius="md" border="ui-light">
     <img width="400" height="250" src="https://placeimg.com/400/250/tech">
     <core-box padding="md">

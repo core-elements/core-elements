@@ -4,13 +4,13 @@ desc: A general purpose text element
 category: Elements
 ---
 
-<core-knobs  name="core-text">
+<core-knobs  element="core-text">
 <core-text tag="h1">Core text</core-text>
 </core-knobs>
 
 ## Tags
 
-<core-knobs hideTabs  name="core-text">
+<core-knobs hideTabs  element="core-text">
   <core-text tag="h1">Typography H1</core-text>
   <core-text tag="h2">Typography H2</core-text>
   <core-text tag="h3">Typography H3</core-text>
@@ -25,7 +25,7 @@ category: Elements
 
 ## Looks
 
-<core-knobs hideTabs  name="core-text">
+<core-knobs hideTabs  element="core-text">
   <core-text look="h1">Typography H1</core-text>
   <core-text look="h2">Typography H2</core-text>
   <core-text look="h3">Typography H3</core-text>

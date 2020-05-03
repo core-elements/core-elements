@@ -4,7 +4,7 @@ desc: Element with option for multiselect, search and more
 category: Form
 ---
 
-<core-knobs  name="core-select">
+<core-knobs  element="core-select">
   <core-select>
     <core-option value="Option 1" selected></core-option>
     <core-option value="Option 2" disabled></core-option>
@@ -15,7 +15,7 @@ category: Form
 
 ## Searchable
 
-<core-knobs hideTabs  name="core-select">
+<core-knobs hideTabs  element="core-select">
   <core-select searchable clearable placeholder="Search">
     <core-option value="Option 1"></core-option>
     <core-option value="Option 2"></core-option>
@@ -25,7 +25,7 @@ category: Form
 
 ## No options feedback
 
-<core-knobs hideTabs  name="core-select">
+<core-knobs hideTabs  element="core-select">
   <core-select searchable placeholder="Search with no results">
     <core-option value="Option 1"></core-option>
     <div slot="no-options">No results found</div>
@@ -34,7 +34,7 @@ category: Form
 
 ## Multiple
 
-<core-knobs hideTabs  name="core-select">
+<core-knobs hideTabs  element="core-select">
   <core-select full multiple list-open-on-select>
     <core-option value="Option 1" selected></core-option>
     <core-option value="Option 2"></core-option>
@@ -47,7 +47,7 @@ category: Form
 
 ## Grouped
 
-<core-knobs hideTabs  name="core-select">
+<core-knobs hideTabs  element="core-select">
   <core-select>
     <core-optgroup label="Group 1">
       <core-option value="Option 1" selected></core-option>
@@ -64,7 +64,7 @@ category: Form
 
 ### Grouped with icons
 
-<core-knobs hideTabs  name="core-select">
+<core-knobs hideTabs  element="core-select">
   <core-select>
     <core-optgroup label="Group 1">
       <ion-icon slot="prepend" name="people-outline"></ion-icon>

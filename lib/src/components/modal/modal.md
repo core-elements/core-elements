@@ -4,7 +4,7 @@ desc: A modal
 category: Elements
 ---
 
-<core-knobs  name="core-modal">
+<core-knobs  element="core-modal">
 <core-modal id="modal">
   Modal content
 </core-modal>
@@ -13,7 +13,7 @@ category: Elements
 
 ## With Header
 
-<core-knobs hideTabs  name="core-modal">
+<core-knobs hideTabs  element="core-modal">
 <core-modal id="modalTwo">
 <header slot="header">Header</header>
   Modal content

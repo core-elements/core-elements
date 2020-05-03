@@ -4,7 +4,7 @@ desc: Tabs for things
 category: Navigation
 ---
 
-<core-knobs  name="core-tabs">
+<core-knobs  element="core-tabs">
 <core-tabs>
   <core-tab selected>Tab 1</core-tab>
   <core-tab>Tab 2</core-tab>
@@ -13,7 +13,7 @@ category: Navigation
 
 ## With targets
 
-<core-knobs  name="core-tabs">
+<core-knobs  element="core-tabs">
 <core-tabs full position="left">
   <core-tab selected target="targetOne">Tab 1</core-tab>
   <core-tab target="targetTwo">Tab 2</core-tab>
@@ -24,7 +24,7 @@ category: Navigation
 
 ## Position
 
-<core-knobs  name="core-tabs">
+<core-knobs  element="core-tabs">
 <core-tabs full position="left">
   <core-tab selected>Tab 1</core-tab>
   <core-tab>Tab 2</core-tab>
@@ -44,7 +44,7 @@ category: Navigation
 Any child you put inside `core-tabs` will get the `selected` attribute when you click on it.
 This means you can also use other elements than the `core-tab` as children, and style them accordingly.
 
-<core-knobs  name="core-tabs">
+<core-knobs  element="core-tabs">
 <style>
 core-tabs core-button[selected],
 core-tabs core-button[selected]:hover {

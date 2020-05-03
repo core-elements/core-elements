@@ -4,7 +4,7 @@ desc: Accordions
 category: Elements
 ---
 
-<core-knobs name="Accordion" element="core-accordion">
+<core-knobs element="core-accordion">
   <core-accordion  title="Title">
   <core-box margin-y="md">Content</core-box>
   </core-accordion>
@@ -19,7 +19,7 @@ category: Elements
 
 ## Custom indicator
 
-<core-knobs hideTabs name="Accordion">
+<core-knobs hideTabs element="core-accordion">
 <style>
   .indicator [slot="prepend"] {
     transform: rotate(0deg);
