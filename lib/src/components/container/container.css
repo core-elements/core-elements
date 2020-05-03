@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+  max-width: var(--core-container);
+  display: block;
+}
+
+:host([center]) {
+  margin: 0 auto;
+}
+
+@each $i in xs, sm, md, lg, xl {
+  :host([size="$(i)"]) {
+    max-width: var(--core-container-$(i));
+  }
+}

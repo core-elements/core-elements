@@ -1,0 +1,85 @@
+:host {
+  --core-radio-focus-color: var(--core-color-focus);
+  --core-radio-height: var(--core-size-md);
+  --core-radio-box-bg-color: var(--core-color-white);
+}
+
+:host {
+  vertical-align: middle;
+  outline: 0;
+  height: var(--core-radio-height);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--core-space-sm);
+}
+
+:host([full]) {
+  display: flex;
+  width: 100%;
+  margin-right: 0;
+}
+
+:host [part="input-field"] {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  vertical-align: middle;
+}
+
+:host [part="label"] {
+  line-height: 1.5;
+  font-size: var(--hw-font-size-small);
+  display: block;
+  flex: 1;
+  margin-left: var(--core-space-sm);
+}
+
+:host [part="box"] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid var(--core-color-ui-light);
+  border-radius: 50%;
+  background: var(--core-radio-box-bg-color);
+  width: calc(var(--core-radio-height) - var(--core-space-md));
+  height: calc(var(--core-radio-height) - var(--core-space-md));
+  transition: border-color 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+}
+
+:host(:focus) [part="box"] {
+  box-shadow: 0 0 0 2px var(--core-radio-focus-color);
+}
+
+:host(:hover:not([disabled]):not([checked])) [part="box"] {
+  --core-radio-box-bg-color: var(--core-color-ui-lighter);
+}
+
+:host([checked]) [part="box"] {
+  border-color: var(--core-radio-focus-color);
+}
+
+:host [part="indicator"] {
+  color: var(--core-radio-focus-color);
+  fill: currentColor;
+}
+
+:host([checked]) [part="indicator"] i {
+  border-radius: 50%;
+  width: 60%;
+  height: 60%;
+  background: var(--core-radio-focus-color);
+}
+
+:host([size="sm"]) {
+  --core-radio-height: var(--core-size-sm);
+}
+
+:host([size="md"]) {
+  --core-radio-height: var(--core-size-md);
+}
+
+:host([size="lg"]) {
+  --core-radio-height: var(--core-size-lg);
+}

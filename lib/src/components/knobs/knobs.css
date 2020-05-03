@@ -1,0 +1,67 @@
+.prop {
+  margin-top: 10px;
+}
+nav {
+  margin-top: 50px;
+  display: flex;
+}
+nav[vertical] {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-size: 1rem;
+  outline: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 15px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--core-color-ui);
+  border-bottom: 1px solid transparent;
+}
+
+button:hover {
+  color: var(--core-color-ui-dark);
+}
+
+button[active] {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 100%;
+  margin-top: 15px;
+  text-align: left;
+  display: inline-block;
+  overflow-x: scroll;
+  overflow: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--core-color-ui-lighter);
+}
+
+table thead tr {
+  background: var(--core-color-ui-lighter);
+}
+
+table th {
+  font-weight: 600;
+}
+
+table td,
+table th {
+  padding: 10px 23px;
+}
+
+table tr td:first-of-type {
+  white-space: nowrap;
+}
+
+table tr td:last-of-type {
+  min-width: 140px;
+}

@@ -1,9 +1,9 @@
 <template>
   <Page>
     <div class="components">
-      <base-container size="sm">
-        <base-text tag="h1" weight="700">Components</base-text>
-        <base-text type="lead">
+      <core-container size="sm">
+        <core-text tag="h1" weight="700">Components</core-text>
+        <core-text type="lead">
           The library consists of only a few
           <b>essential UI components</b> that work across all frameworks. They
           are flexible enough that you will be able to style them to your needs,
@@ -13,25 +13,21 @@
             youself, have a look at the available themes, or try our theme
             editor to get the look you're after.
           </p>
-        </base-text>
-      </base-container>
+        </core-text>
+      </core-container>
 
-      <base-tabs
-        class="tabs"
-        :value="category"
-        @change="(e) => (category = e.target.value)"
-      >
-        <base-tab>All</base-tab>
-        <base-tab>Layout</base-tab>
-        <base-tab>Elements</base-tab>
-        <base-tab>Form</base-tab>
-        <base-tab>Navigation</base-tab>
-      </base-tabs>
+      <core-tabs class="tabs" :value="category" @change="(e) => (category = e.target.value)">
+        <core-tab>All</core-tab>
+        <core-tab>Layout</core-tab>
+        <core-tab>Elements</core-tab>
+        <core-tab>Form</core-tab>
+        <core-tab>Navigation</core-tab>
+      </core-tabs>
 
-      <base-container size="md">
-        <base-box margin-y="xl">
-          <base-grid gap-sm="md" gap-md="lg" columns="12">
-            <base-grid-item
+      <core-container size="md">
+        <core-box margin-y="xl">
+          <core-grid gap-sm="md" gap-md="lg" columns="12">
+            <core-grid-item
               sm="6"
               md="3"
               lg="3"
@@ -40,7 +36,7 @@
             >
               <router-link
                 style="height: 100%"
-                tag="base-box"
+                tag="core-box"
                 depth="sm"
                 padding="lg"
                 radius="xs"
@@ -48,15 +44,17 @@
                 full
                 :to="`/components/${component.name}`"
               >
-                <base-text tag="h3" weight="400">{{
+                <core-text tag="h3" weight="400">
+                  {{
                   component.name
-                }}</base-text>
-                <base-text tag="small">{{ component.desc }}</base-text>
+                  }}
+                </core-text>
+                <core-text tag="small">{{ component.desc }}</core-text>
               </router-link>
-            </base-grid-item>
-          </base-grid>
-        </base-box>
-      </base-container>
+            </core-grid-item>
+          </core-grid>
+        </core-box>
+      </core-container>
     </div>
   </Page>
 </template>
@@ -70,15 +68,15 @@ export default {
   data() {
     return {
       components,
-      category: "All",
+      category: "All"
     };
   },
   computed: {
     filteredComponents() {
       if (this.category === "All") return this.components;
-      return this.components.filter((comp) => comp.category === this.category);
-    },
-  },
+      return this.components.filter(comp => comp.category === this.category);
+    }
+  }
 };
 </script>
 
@@ -92,7 +90,7 @@ export default {
   position: sticky;
   top: 60px;
   width: calc(100% + 15px);
-  background: var(--base-color-white);
+  background: var(--core-color-white);
   margin-left: -15px;
   padding-left: 15px;
   z-index: 500;

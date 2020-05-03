@@ -18,7 +18,7 @@
 }
 
 .header__route-menu-button {
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   border: 0;
   font-size: 1rem;
   display: flex;
@@ -35,7 +35,7 @@
 
 .header__logo {
   text-decoration: none;
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   font-weight: 500;
   font-size: 1.1rem;
   display: flex;
@@ -43,7 +43,7 @@
 }
 
 .header__logo:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 .header__logo svg {
@@ -51,7 +51,7 @@
 }
 
 .header__nav-wrapper {
-  background: var(--base-color-white);
+  background: var(--core-color-white);
   z-index: 999;
   width: 100%;
   animation: fade-in 0.3s ease;
@@ -78,7 +78,7 @@
 }
 
 .header__nav-item {
-  color: var(--base-color-font-light);
+  color: var(--core-color-font-light);
   margin-bottom: 30px;
   display: block;
   font-size: 2rem;
@@ -86,17 +86,17 @@
 }
 
 .header__nav-item:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 .header__nav-item.router-link-active {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 .header__menu-button {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
   border: 0;
-  padding: 0 var(--base-space-sm);
+  padding: 0 var(--core-space-sm);
   display: flex;
   align-items: center;
   justify-self: center;
@@ -106,7 +106,7 @@
 }
 
 .header__nav-item.home.router-link-active {
-  color: var(--base-color-font);
+  color: var(--core-color-font);
 }
 
 @media (min-width: 800px) {
@@ -218,7 +218,7 @@
   -webkit-text-size-adjust: 100%;
   max-width: 100%;
   width: 100%;
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -864,8 +864,8 @@
 }
 
 .markdown-body code {
-  background-color: var(--base-color-ui-light);
-  color: var(--base-color-ui-dark);
+  background-color: var(--core-color-ui-light);
+  color: var(--core-color-ui-dark);
   border-radius: 3px;
   margin: 0;
   padding: 0.2em 0.4em;
@@ -1168,7 +1168,7 @@ a {
 }
 
 b {
-  color: var(--base-color-black);
+  color: var(--core-color-black);
 }
 .landing {
   padding-top: 60px;
@@ -1181,7 +1181,7 @@ b {
   position: sticky;
   top: 60px;
   width: calc(100% + 15px);
-  background: var(--base-color-white);
+  background: var(--core-color-white);
   margin-left: -15px;
   padding-left: 15px;
   z-index: 500;
@@ -1198,7 +1198,7 @@ b {
   position: fixed;
   z-index: 500;
   display: none;
-  background: var(--base-color-white);
+  background: var(--core-color-white);
   font-size: 1.5em;
   height: calc(100vh - 60px);
   overflow-y: scroll;
@@ -1247,16 +1247,16 @@ b {
 }
 
 .content-list li {
-  margin-bottom: var(--base-space-sm);
+  margin-bottom: var(--core-space-sm);
 }
 
 .content-list a {
-  color: var(--base-color-font-light);
+  color: var(--core-color-font-light);
   text-decoration: none;
 }
 
 .content-list a:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 @media (min-width: 800px) {
@@ -1278,7 +1278,7 @@ nav[toc] {
 }
 
 nav[toc] label {
-  color: var(--base-color-font-light);
+  color: var(--core-color-font-light);
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
@@ -1286,7 +1286,7 @@ nav[toc] label {
 }
 
 nav[toc] a {
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
@@ -1294,12 +1294,12 @@ nav[toc] a {
 }
 
 nav[toc] a.router-link-exact-active {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
   transition: all 0.5s ease;
 }
 
 nav[toc] a:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 nav[toc] a:last-of-type {

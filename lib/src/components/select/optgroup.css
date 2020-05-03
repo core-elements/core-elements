@@ -1,0 +1,25 @@
+:host {
+  --core-optgroup-padding: 0 var(--core-space-sm);
+  display: block;
+}
+
+:host [part="label"] {
+  display: flex;
+  padding: var(--core-optgroup-padding);
+  height: var(--core-size-sm);
+  align-items: center;
+  font-weight: 400;
+  color: var(--core-color-font);
+  text-transform: uppercase;
+  font-size: var(--core-font-size-xs);
+}
+
+:host [part="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+::slotted([slot="prepend"]) {
+  margin-right: var(--core-space-sm);
+}

@@ -1,0 +1,63 @@
+:host {
+  --core-accordion-border-color: var(--core-color-ui-light);
+  border-top: 1px solid var(--core-accordion-border-color);
+  outline: 1px black;
+  display: block;
+  width: 100%;
+}
+
+:host(:hover) {
+  --core-accordion-border-color: var(--core-color-ui);
+}
+
+:host(:last-of-type) {
+  border-bottom: 1px solid var(--core-accordion-border-color);
+}
+
+:host [part="content"] {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+:host(:not([open])) [part="content"] {
+  max-height: 0;
+}
+
+:host [part="title"] {
+  flex: 1;
+  display: block;
+}
+
+:host [part="trigger"] {
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: var(--core-font-size);
+  outline: 0;
+  border: 0;
+  height: var(--core-size-md);
+}
+
+::slotted([slot="prepend"]) {
+  margin-right: var(--core-space-sm);
+}
+
+::slotted([slot="append"]) {
+  margin-left: var(--core-space-sm);
+}
+
+:host [part="append"] svg {
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+:host([open]) [part="append"] svg {
+  transform: rotate(-180deg);
+}

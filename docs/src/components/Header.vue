@@ -1,11 +1,7 @@
 <template>
-  <base-box class="header" padding-x="md" bg="white">
-    <base-container center size="lg">
-      <base-flex
-        class="header__inner"
-        justify-content="between"
-        align-items="center"
-      >
+  <core-box class="header" padding-x="md" bg="white">
+    <core-container center size="lg">
+      <core-flex class="header__inner" justify-content="between" align-items="center">
         <div class="header__left">
           <router-link to="/" class="header__logo">
             <svg
@@ -15,7 +11,7 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M7 16H88V97H7V16Z" fill="var(--base-color-white)" />
+              <path d="M7 16H88V97H7V16Z" fill="var(--core-color-white)" />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -24,7 +20,7 @@
               />
               <path
                 d="M112 75.5C112 100.077 92.0767 120 67.5 120C42.9233 120 23 100.077 23 75.5C23 50.9233 42.9233 31 67.5 31C92.0767 31 112 50.9233 112 75.5Z"
-                fill="var(--base-color-white)"
+                fill="var(--core-color-white)"
               />
               <path
                 fill-rule="evenodd"
@@ -32,10 +28,7 @@
                 d="M67.5 112C87.6584 112 104 95.6584 104 75.5C104 55.3416 87.6584 39 67.5 39C47.3416 39 31 55.3416 31 75.5C31 95.6584 47.3416 112 67.5 112ZM67.5 120C92.0767 120 112 100.077 112 75.5C112 50.9233 92.0767 31 67.5 31C42.9233 31 23 50.9233 23 75.5C23 100.077 42.9233 120 67.5 120Z"
                 fill="currentColor"
               />
-              <path
-                d="M44 0L87.3013 75H0.69873L44 0Z"
-                fill="var(--base-color-white)"
-              />
+              <path d="M44 0L87.3013 75H0.69873L44 0Z" fill="var(--core-color-white)" />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -44,7 +37,7 @@
               />
             </svg>
 
-            <span>Base Elements</span>
+            <span>Core Elements</span>
           </router-link>
           <button @click="handleToggleButton" class="header__route-menu-button">
             {{ title }}
@@ -66,26 +59,22 @@
                 v-on:click.native="showMenu = false"
                 to="/"
                 class="header__nav-item home"
-                >Home</router-link
-              >
+              >Home</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/getting-started"
                 class="header__nav-item"
-                >Getting started</router-link
-              >
+              >Getting started</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/components"
                 class="header__nav-item"
-                >Components</router-link
-              >
+              >Components</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/themes"
                 class="header__nav-item"
-                >Themes</router-link
-              >
+              >Themes</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/themes"
@@ -93,14 +82,13 @@
                 tag="ion-icon"
                 name="logo-github"
                 class="header__nav-item"
-                >Themes</router-link
-              >
+              >Themes</router-link>
             </nav>
           </div>
         </div>
-      </base-flex>
-    </base-container>
-  </base-box>
+      </core-flex>
+    </core-container>
+  </core-box>
 </template>
 
 <script>
@@ -109,26 +97,26 @@ export default {
     showSidebar: Boolean,
     hasSidebar: Boolean,
     showInHeader: Boolean,
-    title: String,
+    title: String
   },
   data() {
     return {
-      showMenu: false,
+      showMenu: false
     };
   },
   watch: {
-    showSidebar: (val) => {
+    showSidebar: val => {
       if (val) document.body.classList.add("no-scroll-mobile");
       else document.body.classList.remove("no-scroll-mobile");
-    },
+    }
   },
   methods: {
     handleToggleButton() {
       if (this.$route.meta.hasSidebar) {
         this.$emit("toggle-sidebar");
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -153,7 +141,7 @@ export default {
 }
 
 .header__route-menu-button {
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   border: 0;
   font-size: 1rem;
   display: flex;
@@ -170,7 +158,7 @@ export default {
 
 .header__logo {
   text-decoration: none;
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   font-weight: 500;
   font-size: 1.1rem;
   display: flex;
@@ -178,7 +166,7 @@ export default {
 }
 
 .header__logo:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 .header__logo svg {
@@ -186,7 +174,7 @@ export default {
 }
 
 .header__nav-wrapper {
-  background: var(--base-color-white);
+  background: var(--core-color-white);
   z-index: 999;
   width: 100%;
   animation: fade-in 0.3s ease;
@@ -213,7 +201,7 @@ export default {
 }
 
 .header__nav-item {
-  color: var(--base-color-font-light);
+  color: var(--core-color-font-light);
   margin-bottom: 30px;
   display: block;
   font-size: 2rem;
@@ -221,17 +209,17 @@ export default {
 }
 
 .header__nav-item:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 .header__nav-item.router-link-active {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 .header__menu-button {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
   border: 0;
-  padding: 0 var(--base-space-sm);
+  padding: 0 var(--core-space-sm);
   display: flex;
   align-items: center;
   justify-self: center;
@@ -241,7 +229,7 @@ export default {
 }
 
 .header__nav-item.home.router-link-active {
-  color: var(--base-color-font);
+  color: var(--core-color-font);
 }
 
 @media (min-width: 800px) {

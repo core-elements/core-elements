@@ -1,8 +1,8 @@
 import "regenerator-runtime/runtime";
 
-import BaseKnobs from "../../lib/dist/components/base-knobs";
+import { Knobs } from "../../lib/dist/components/knobs";
 
-customElements.define("base-knobs", BaseKnobs);
+customElements.define("core-knobs", Knobs);
 
 import "../../lib/dist/main.js";
 
@@ -14,7 +14,7 @@ import Components from "./views/Components";
 import Component from "./views/Component";
 import GettingStarted from "./views/GettingStarted";
 
-Vue.config.ignoredElements = [/base-\w*/];
+Vue.config.ignoredElements = [/core-\w*/];
 Vue.config.ignoredElements = [/ion-\w*/];
 
 Vue.use(Router);
@@ -25,7 +25,7 @@ const router = new Router({
       path: "/",
       component: Home,
       meta: {
-        title: "Base Components",
+        title: "Core Components",
         showInHeader: true,
         hasSidebar: false,
       },

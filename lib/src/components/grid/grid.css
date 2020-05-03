@@ -1,0 +1,54 @@
+:host {
+  --core-grid-columns: 12;
+  --core-grid-gap: var(--core-space-md);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(var(--core-grid-columns), 1fr);
+  grid-row-gap: var(--core-grid-gap);
+  grid-column-gap: var(--core-grid-gap);
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+@each $i in sm, md, lg, xl {
+  :host([gap="$(i)"]) {
+    --core-grid-gap: var(--core-space-$(i));
+  }
+}
+
+@each $i in sm, md, lg, xl {
+  :host([gap-sm="$(i)"]) {
+    --core-grid-gap: var(--core-space-$(i));
+  }
+}
+
+@media (min-width: 800px) {
+  @each $i in sm, md, lg, xl {
+    :host([gap-md="$(i)"]) {
+      --core-grid-gap: var(--core-space-$(i));
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @each $i in sm, md, lg, xl {
+    :host([gap-lg="$(i)"]) {
+      --core-grid-gap: var(--core-space-$(i));
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  @each $i in sm, md, lg, xl {
+    :host([gap-xl="$(i)"]) {
+      --core-grid-gap: var(--core-space-$(i));
+    }
+  }
+}
+
+@each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
+  :host([columns="$(i)"]) {
+    --core-grid-columns: $(i);
+  }
+}

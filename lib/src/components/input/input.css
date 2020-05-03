@@ -1,0 +1,109 @@
+:host {
+  --core-input-bg-color: var(--core-color-white);
+  --core-input-padding: 0 var(--core-space-md);
+  --core-input-height: var(--core-size-md);
+  --core-input-border-color: var(--core-color-ui-light);
+  --core-input-border-radius: none;
+  --core-input-box-shadow: none;
+  --core-input-placeholder-color: var(--core-color-font-light);
+  --core-input-font-size: var(--core-font-size-sm);
+}
+
+:host {
+  vertical-align: middle;
+  min-width: 200px;
+  display: inline-block;
+}
+
+:host([size="sm"]) {
+  --core-input-height: var(--core-size-sm);
+  --core-input-padding: 0 var(--core-space-sm);
+}
+
+:host([size="md"]) {
+  --core-input-height: var(--core-size-md);
+  --core-input-padding: 0 var(--core-space-md);
+}
+
+:host([size="lg"]) {
+  --core-input-height: var(--core-size-lg);
+  --core-input-padding: 0 var(--core-space-md);
+}
+
+:host([full]) {
+  width: 100%;
+  display: block;
+}
+
+:host [part="input"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--core-input-box-shadow);
+  border-radius: var(--core-input-border-radius);
+  height: var(--core-input-height);
+  border: 2px solid var(--core-input-border-color);
+}
+
+:host([type="number"]) [part="input-field"]::-webkit-inner-spin-button,
+:host([type="number"]) [part="input-field"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:host [part="input"]:hover {
+  --core-input-border-color: var(--core-color-ui);
+}
+
+:host([focused]) [part="input"] {
+  --core-input-box-shadow: 0px 0px 0px 1px var(--core-color-focus);
+  --core-input-border-color: var(--core-color-focus);
+}
+
+:host(:not([focused])[valid]) [part="input"] {
+  --core-input-border-color: var(--core-color-success);
+}
+
+:host(:not([focused])[invalid]) [part="input"] {
+  --core-input-border-color: var(--core-color-danger);
+}
+
+:host [part="input-field"] {
+  text-align: inherit;
+  color: var(--core-color-font);
+  background-color: var(--core-input-bg-color);
+  width: 100%;
+  font-size: var(--core-font-size-sm);
+  border-radius: var(--core-input-border-radius);
+  height: 100%;
+  outline: 0;
+  border: 0;
+  padding: var(--core-input-padding);
+}
+
+:host [part="input-field"]::placeholder {
+  font-size: var(--core-input-font-size);
+  color: var(--core-input-placeholder-color);
+}
+
+::slotted([slot="help"]) {
+  display: block;
+  font-size: var(--core-font-size-xs);
+  color: var(--core-color-font-light);
+  margin-top: var(--core-space-sm);
+}
+
+::slotted([slot="error"]) {
+  display: block;
+  font-size: var(--core-font-size-xs);
+  color: var(--core-color-danger);
+  margin-top: var(--core-space-sm);
+}
+
+::slotted([slot="prepend"]) {
+  margin-left: var(--core-space-sm);
+}
+
+::slotted([slot="append"]) {
+  margin-right: var(--core-space-sm);
+}

@@ -1,14 +1,14 @@
 <template>
   <Page>
-    <base-container>
+    <core-container>
       <div class="markdown-body" v-html="gettingstarted()"></div>
-      <base-box padding-y="lg">
-        <base-button type="secondary" @click="$router.push('/components')">
+      <core-box padding-y="lg">
+        <core-button type="secondary" @click="$router.push('/components')">
           See the components
           <i slot="append" class="gg-arrow-right"></i>
-        </base-button>
-      </base-box>
-    </base-container>
+        </core-button>
+      </core-box>
+    </core-container>
   </Page>
 </template>
 

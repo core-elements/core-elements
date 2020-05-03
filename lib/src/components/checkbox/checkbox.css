@@ -1,0 +1,98 @@
+:host {
+  --core-checkbox-bg-color: var(--core-color-white);
+  --core-checkbox-border: 2px solid var(--core-color-ui-light);
+  --core-checkbox-cursor: pointer;
+  --core-checkbox-box-shadow: none;
+  --core-checkbox-height: var(--core-size-md);
+  --core-checkbox-border-radius: none;
+}
+
+:host {
+  cursor: default;
+  outline: 0;
+  vertical-align: middle;
+  height: var(--core-checkbox-height);
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--core-space-sm);
+}
+
+:host([full]) {
+  display: flex;
+  width: 100%;
+  margin-right: 0;
+}
+
+:host([size="sm"]) {
+  --core-checkbox-indicator-font-size: 0.8em;
+  --core-checkbox-height: var(--core-size-sm);
+}
+
+:host([size="md"]) {
+  --core-checkbox-indicator-font-size: 1em;
+  --core-checkbox-height: var(--core-size-md);
+}
+
+:host([size="lg"]) {
+  --core-checkbox-indicator-font-size: 1.4em;
+  --core-checkbox-height: var(--core-size-lg);
+}
+
+:host([disabled]) {
+  color: var(--core-color-font-light);
+}
+
+:host [part="label"] {
+  line-height: 1.5;
+  font-size: var(--hw-font-size-small);
+  display: block;
+  flex: 1;
+  margin-left: var(--core-space-sm);
+}
+
+input {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  vertical-align: middle;
+}
+
+[part="box"] {
+  box-shadow: var(--core-button-box-shadow);
+  background-color: var(--core-checkbox-bg-color);
+  color: var(--core-color-font);
+  width: calc(var(--core-checkbox-height) - var(--core-space-md));
+  height: calc(var(--core-checkbox-height) - var(--core-space-md));
+  border-radius: var(--core-checkbox-border-radius);
+  border: var(--core-checkbox-border);
+  position: relative;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host(:focus) [part="box"] {
+  --core-button-box-shadow: 0 0 0 2px var(--core-color-focus);
+}
+
+:host(:hover) [part="box"] {
+  --core-checkbox-bg-color: var(--core-color-ui-lighter);
+}
+
+:host([checked]) [part="box"] {
+  --core-checkbox-bg-color: var(--core-color-focus);
+  --core-checkbox-border: 1px solid var(--core-color-focus);
+}
+
+[part="box"] [part="indicator"] {
+  font-size: var(--core-checkbox-indicator-font-size);
+  color: var(--core-color-white);
+  fill: currentColor;
+  display: block;
+  opacity: 0;
+}
+
+:host([checked]) [part="indicator"] {
+  opacity: 1;
+}

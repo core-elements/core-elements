@@ -1,0 +1,91 @@
+:host {
+  vertical-align: middle;
+  display: block;
+  width: 100%;
+}
+
+:host([inline]) {
+  display: inline-block;
+  width: auto;
+}
+
+:host([clickable]) {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+:host([clickable]:hover) {
+  transform: translateY(-2px);
+}
+
+:host([clickable]:active) {
+  transform: translateY(0);
+}
+
+@each $i in primary, secondary, success, danger, ui-light, ui-lighter,
+  ui-lightest, ui-dark, white, black
+{
+  :host([bg="$(i)"]) {
+    background-color: var(--core-color-$(i));
+  }
+}
+
+@each $i in primary, secondary, success, danger, ui-light, ui-lighter,
+  ui-lightest, ui-dark, white, black
+{
+  :host([border="$(i)"]) {
+    border: 1px solid var(--core-color-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([depth="$(i)"]) {
+    box-shadow: var(--core-depth-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding="$(i)"]) {
+    padding: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-x="$(i)"]) {
+    padding-left: var(--core-space-$(i));
+    padding-right: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-y="$(i)"]) {
+    padding-top: var(--core-space-$(i));
+    padding-bottom: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin="$(i)"]) {
+    margin: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-x="$(i)"]) {
+    margin-left: var(--core-space-$(i));
+    margin-right: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-y="$(i)"]) {
+    margin-top: var(--core-space-$(i));
+    margin-bottom: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([radius="$(i)"]) {
+    border-radius: var(--core-border-radius-$(i));
+  }
+}

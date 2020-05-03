@@ -1,91 +1,91 @@
 <template>
   <div>
     <Page class="landing">
-      <base-grid columns="12" gap-xl="xl" gap-sm="md">
-        <base-grid-item sm="12" md="9" lg="6">
-          <base-text tag="h1" weight="400">
-            <b>Base Elements</b> is a free collection of essential UI components
+      <core-grid columns="12" gap-xl="xl" gap-sm="md">
+        <core-grid-item sm="12" md="9" lg="6">
+          <core-text tag="h1" weight="400">
+            <b>Core Elements</b> is a free collection of essential UI components
             for any web application
-          </base-text>
-          <base-text tag="p" look="lead">
+          </core-text>
+          <core-text tag="p" look="lead">
             Components that work in
             <b>React</b>,
             <b>Vue</b>,
             <b>Angular</b>, or any other framwork.
-          </base-text>
-          <base-box margin-y="md">
-            <router-link tag="base-button" to="/getting-started" type="primary">Get Started</router-link>
-            <router-link tag="base-button" to="/components" type="secondary">Components</router-link>
-          </base-box>
-          <base-box margin-y="md">
-            <base-tabs
+          </core-text>
+          <core-box margin-y="md">
+            <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
+            <router-link tag="core-button" to="/components" type="secondary">Components</router-link>
+          </core-box>
+          <core-box margin-y="md">
+            <core-tabs
               @change="(e) => (installMethod = e.target.value)"
               :value="installMethod"
             >
-              <base-tab>NPM</base-tab>
-              <base-tab>CDN</base-tab>
-            </base-tabs>
+              <core-tab>NPM</core-tab>
+              <core-tab>CDN</core-tab>
+            </core-tabs>
             <pre
               v-if="installMethod === 'NPM'"
-            ><code align="center" class="hljs">npm install --save base-elements</code></pre>
+            ><code align="center" class="hljs">npm install --save core-elements</code></pre>
             <pre v-if="installMethod === 'CDN'">
-              <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/base-elements"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+              <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/core-elements"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <!----></code>
-    </base-box>
-        </base-grid-item>
+    </core-box>
+        </core-grid-item>
 
-        <base-grid-item sm="12" md="12" lg="6">
-          <base-box depth="md" padding-y="lg" padding-x="lg">
-            <base-text tag="h2">Examples</base-text>
-            <base-grid columns="2">
-              <base-grid-item sm="2" md="1">
-                <base-select placeholder="Select an option">
-                  <base-option label="Option 1"></base-option>
-                  <base-option label="Option 2"></base-option>
-                </base-select>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-checkbox>Option 1</base-checkbox>
-                <base-checkbox>Option 2</base-checkbox>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-input placeholder="Regular input"></base-input>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-radio name="radio">Option 1</base-radio>
-                <base-radio name="radio">Option 2</base-radio>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-select multiple placeholder="Multiple select">
-                  <base-option selected label="Option 1"></base-option>
-                  <base-option label="Option 2"></base-option>
-                </base-select>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-toggle
+        <core-grid-item sm="12" md="12" lg="6">
+          <core-box depth="md" padding-y="lg" padding-x="lg">
+            <core-text tag="h2">Examples</core-text>
+            <core-grid columns="2">
+              <core-grid-item sm="2" md="1">
+                <core-select placeholder="Select an option">
+                  <core-option label="Option 1"></core-option>
+                  <core-option label="Option 2"></core-option>
+                </core-select>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-checkbox>Option 1</core-checkbox>
+                <core-checkbox>Option 2</core-checkbox>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-input placeholder="Regular input"></core-input>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-radio name="radio">Option 1</core-radio>
+                <core-radio name="radio">Option 2</core-radio>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-select multiple placeholder="Multiple select">
+                  <core-option selected label="Option 1"></core-option>
+                  <core-option label="Option 2"></core-option>
+                </core-select>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-toggle
                   :checked="darkMode"
                   @change="e => darkMode = e.target.checked"
-                >Dark mode</base-toggle>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-tabs>
-                  <base-tab selected>Tab 1</base-tab>
-                  <base-tab>Tab 2</base-tab>
-                  <base-tab>Tab 3</base-tab>
-                </base-tabs>
-              </base-grid-item>
-              <base-grid-item sm="2" md="1">
-                <base-modal @toggle="(e) => (modalOpen = e.open)" :open="modalOpen">
+                >Dark mode</core-toggle>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-tabs>
+                  <core-tab selected>Tab 1</core-tab>
+                  <core-tab>Tab 2</core-tab>
+                  <core-tab>Tab 3</core-tab>
+                </core-tabs>
+              </core-grid-item>
+              <core-grid-item sm="2" md="1">
+                <core-modal @toggle="(e) => (modalOpen = e.open)" :open="modalOpen">
                   <header slot="header">Title</header>
                   <div>Content</div>
-                </base-modal>
+                </core-modal>
 
-                <base-button type="primary" @click="modalOpen = true">Show modal</base-button>
-              </base-grid-item>
-            </base-grid>
-          </base-box>
-        </base-grid-item>
-      </base-grid>
+                <core-button type="primary" @click="modalOpen = true">Show modal</core-button>
+              </core-grid-item>
+            </core-grid>
+          </core-box>
+        </core-grid-item>
+      </core-grid>
 
   </div>
 </template>

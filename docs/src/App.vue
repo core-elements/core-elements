@@ -32,7 +32,7 @@ export default {
 
 <style>
 @import "./styles/github-markdown.css";
-@import "../../lib/src/components/base-knobs/shades-of-purple.css";
+@import "../../lib/src/components/knobs/shades-of-purple.css";
 
 html {
   box-sizing: border-box;
@@ -61,6 +61,6 @@ a {
 }
 
 b {
-  color: var(--base-color-black);
+  color: var(--core-color-black);
 }
 </style>

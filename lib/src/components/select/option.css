@@ -1,0 +1,54 @@
+:host {
+  --core-option-padding: 0 var(--core-space-sm);
+  --core-option-bg-color: var(--core-color-white);
+  --core-option-border-radius: 0;
+  --core-option-active-color: var(--core-color-ui-lighter);
+  --core-option-selected-color: var(--core-color-focus);
+  --core-option-selected-active-color: var(--core-color-focus-dark);
+  --core-option-font-color: var(--core-color-black);
+  --core-option-min-height: var(--core-size-md);
+}
+
+:host {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  min-height: var(--core-option-min-height);
+  display: flex;
+  color: var(--core-option-font-color);
+  align-items: center;
+  cursor: pointer;
+  background: var(--core-option-bg-color);
+  text-align: left;
+  border-radius: var(--core-option-border-radius);
+  padding: var(--core-option-padding);
+  margin-top: var(--core-spacing-100);
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+}
+
+:host(:first-child) {
+  margin-top: 0;
+}
+
+:host([disabled]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+:host([active]:not([disabled])) {
+  --core-option-bg-color: var(--core-option-active-color);
+  --core-option-font-color: var(--core-color-font);
+}
+
+:host([selected]:not([active]):not([disabled])) {
+  --core-option-bg-color: var(--core-option-selected-color);
+  --core-option-font-color: var(--core-color-white);
+}
+
+:host([selected][active]) {
+  --core-option-bg-color: var(--core-option-selected-active-color);
+  --core-option-font-color: var(--core-color-white);
+}

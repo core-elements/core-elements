@@ -16,18 +16,18 @@
     </div>
 
     <div class="component">
-      <base-text tag="h1">{{ component.name }}</base-text>
-      <base-text tag="p" look="lead">{{ component.desc }}</base-text>
+      <core-text tag="h1">{{ component.name }}</core-text>
+      <core-text tag="p" look="lead">{{ component.desc }}</core-text>
 
-      <base-box padding-y="sm" v-if="subMenu.length">
-        <base-text tag="p" look="h6">Content</base-text>
+      <core-box padding-y="sm" v-if="subMenu.length">
+        <core-text tag="p" look="h6">Content</core-text>
         <ul class="content-list">
           <li v-for="menu in subMenu" :key="menu.id">
             <router-link :to="{ hash: menu.id }">{{ menu.title }}</router-link>
           </li>
         </ul>
-      </base-box>
-      <base-box class="markdown-body" margin-y="xl" v-html="html"></base-box>
+      </core-box>
+      <core-box class="markdown-body" margin-y="xl" v-html="html"></core-box>
     </div>
   </SidebarLayout>
 </template>
@@ -109,16 +109,16 @@ export default {
 }
 
 .content-list li {
-  margin-bottom: var(--base-space-sm);
+  margin-bottom: var(--core-space-sm);
 }
 
 .content-list a {
-  color: var(--base-color-font-light);
+  color: var(--core-color-font-light);
   text-decoration: none;
 }
 
 .content-list a:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 @media (min-width: 800px) {
@@ -140,7 +140,7 @@ nav[toc] {
 }
 
 nav[toc] label {
-  color: var(--base-color-font-light);
+  color: var(--core-color-font-light);
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
@@ -148,7 +148,7 @@ nav[toc] label {
 }
 
 nav[toc] a {
-  color: var(--base-color-font);
+  color: var(--core-color-font);
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
@@ -156,12 +156,12 @@ nav[toc] a {
 }
 
 nav[toc] a.router-link-exact-active {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
   transition: all 0.5s ease;
 }
 
 nav[toc] a:hover {
-  color: var(--base-color-font-dark);
+  color: var(--core-color-font-dark);
 }
 
 nav[toc] a:last-of-type {

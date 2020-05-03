@@ -1,0 +1,35 @@
+:host {
+  display: inline-block;
+}
+
+:host([full]) {
+  display: block;
+  width: 100%;
+}
+
+:host([full]) textarea {
+  width: 100%;
+  display: block;
+}
+
+:host textarea {
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  font-size: var(--core-font-size-sm);
+  font-family: var(--core-font-family);
+  color: var(--core-color-black);
+  background-color: var(--core-color-white);
+  padding: var(--core-space-md);
+  border: 2px solid var(--core-color-ui-lighter);
+}
+
+:host textarea:hover {
+  border-color: var(--core-color-ui-light);
+  background-color: var(--core-color-ui-lighter);
+}
+
+:host textarea:focus {
+  border-color: var(--core-color-focus);
+  background-color: var(--core-color-white);
+}

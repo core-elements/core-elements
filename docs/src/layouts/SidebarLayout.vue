@@ -32,7 +32,7 @@ export default {
   position: fixed;
   z-index: 500;
   display: none;
-  background: var(--base-color-white);
+  background: var(--core-color-white);
   font-size: 1.5em;
   height: calc(100vh - 60px);
   overflow-y: scroll;
