@@ -1,10 +1,10 @@
 import "regenerator-runtime/runtime";
 
-import { Knobs } from "../../lib/dist/components/knobs";
+import { Knobs } from "core-elements/dist/components/knobs";
 
 customElements.define("core-knobs", Knobs);
 
-import "../../lib/dist/main.js";
+import "core-elements";
 
 import Vue from "vue";
 import Router from "vue-router";

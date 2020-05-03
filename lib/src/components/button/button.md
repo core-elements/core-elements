@@ -4,13 +4,13 @@ desc: A general button element
 category: Elements
 ---
 
-<core-knobs src="./components.json" tab="props" name="core-button">
+<core-knobs  tab="props" name="core-button">
 <core-button>Button</core-button>
 </core-knobs>
 
 ## Types
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-button>Default</core-button>
 <core-button type="primary">Primary</core-button>
 <core-button type="secondary">Secondary</core-button>
@@ -21,7 +21,7 @@ category: Elements
 
 ## Disabled
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-button disabled>Default</core-button>
 <core-button disabled type="primary">Primary</core-button>
 <core-button disabled type="secondary">Secondary</core-button>
@@ -32,7 +32,7 @@ category: Elements
 
 ## Sizes
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-button size="sm">Small</core-button>
 <core-button size="md">Medium</core-button>
 <core-button size="lg">Large</core-button>
@@ -40,13 +40,13 @@ category: Elements
 
 ## Full
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-button full>Full</core-button>
 </core-knobs>
 
 ## With icons
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-button>
   <i slot="prepend" class="gg-check"></i>
   Full
@@ -63,7 +63,7 @@ category: Elements
 
 ## Outline
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-button outline>Default</core-button>
 <core-button outline type="primary">Primary</core-button>
 <core-button outline type="secondary">Secondary</core-button>
@@ -74,7 +74,7 @@ category: Elements
 
 ## Group
 
-<core-knobs hideTabs src="./components.json" name="core-button">
+<core-knobs hideTabs  name="core-button">
 <core-flex>
   <core-button >Option</core-button>
   <core-button >Option</core-button>

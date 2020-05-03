@@ -4,13 +4,13 @@ desc: A general toggle element
 category: Form
 ---
 
-<core-knobs src="./components.json" name="core-toggle">
+<core-knobs  name="core-toggle">
 <core-toggle>Toggle</core-toggle>
 </core-knobs>
 
 ## Custom icons
 
-<core-knobs hideTabs src="./components.json" name="core-toggle">
+<core-knobs hideTabs  name="core-toggle">
 <core-toggle>
   <i slot="on" style="--ggs: 0.8;" class="gg-sun"></i>
   Label
@@ -20,7 +20,7 @@ category: Form
 
 ## Animate icon
 
-<core-knobs hideTabs src="./components.json" name="core-toggle">
+<core-knobs hideTabs  name="core-toggle">
 <style>
   .toggle-animation [slot="on"] {
     opacity: 0;

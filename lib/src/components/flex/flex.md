@@ -4,7 +4,7 @@ desc: Utility element to flex children
 category: Layout
 ---
 
-<core-knobs src="./components.json" tab="props" name="core-flex">
+<core-knobs  tab="props" name="core-flex">
 <core-flex>
 <core-button>Button</core-button>
 <core-button>Button 2</core-button>

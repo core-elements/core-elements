@@ -5,10 +5,10 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev",
+    "start": "npm link core-elements && npm run dev",
     "dev": "npm run analyze && run-p dev:*",
     "build": "npm run analyze && run-s build:*",
-    "analyze": "wca analyze ../lib/src/components/**/*.{js,ts} --format json --outFile static/components.json",
+    "analyze": "wca analyze ../lib/src/components/**/*.wc.js --format json --outDir static/components.json",
     "dev:markdown": "markdown-db create src -w",
     "dev:web": "parcel index.html",
     "build:markdown": "markdown-db create src",
@@ -28,6 +28,7 @@
     "web-component-analyzer": "^1.0.3"
   },
   "dependencies": {
+    "core-elements": "0.0.0",
     "highlight.js": "^9.18.1",
     "hljs": "^6.2.3",
     "marked": "^1.0.0",

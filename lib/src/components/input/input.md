@@ -4,13 +4,13 @@ desc: A input element
 category: Form
 ---
 
-<core-knobs src="./components.json" name="core-input">
+<core-knobs  name="core-input">
 <core-input placeholder="Optional placeholder"></core-input>
 </core-knobs>
 
 ## Sizes
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <core-input size="sm" placeholder="Small"></core-input>
 <core-input size="md" placeholder="Medium"></core-input>
 <core-input size="lg" placeholder="Large"></core-input>
@@ -18,7 +18,7 @@ category: Form
 
 ## Search
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <core-input type="search" placeholder="Search...">
   <ion-icon style="font-size: 2rem" slot="prepend" name="search-outline"></ion-icon>
 </core-input>
@@ -26,7 +26,7 @@ category: Form
 
 ## Number
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <style>
   #NumberInput {
     min-width: 50px;
@@ -40,7 +40,7 @@ category: Form
 
 ## Masking
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <core-input type="tel" mask="+(00) 000 00 000" placeholder="Enter phone number">
 </core-input>
 </core-knobs>
@@ -49,7 +49,7 @@ category: Form
 
 ### Required input
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <core-input required  autovalidate placeholder="Required input">
 <div slot="error">This field is required</div>
 </core-input>
@@ -60,7 +60,7 @@ category: Form
 When using without an error slot the default validation error message on input fields is show.
 Use a error slot to provide your own error text.
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <core-input required type="email" autovalidate placeholder="Enter email">
   <ion-icon style="font-size: 2rem" slot="prepend" name="mail-outline"></ion-icon>
 </core-input>
@@ -68,7 +68,7 @@ Use a error slot to provide your own error text.
 
 ### Validation with status icons
 
-<core-knobs hideTabs src="./components.json" name="core-input">
+<core-knobs hideTabs  name="core-input">
 <style>
   .input-with-status [slot="append"] {
     font-size: 2em;

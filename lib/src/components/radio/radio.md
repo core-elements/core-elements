@@ -4,7 +4,7 @@ desc: Radio button
 category: Form
 ---
 
-<core-knobs src="./components.json" name="core-radio">
+<core-knobs  name="core-radio">
 <core-radio name="example-1" value="1">Option 1</core-radio>
 <core-radio name="example-1" value="2">Option 2</core-radio>
 <core-radio name="example-1" value="3" disabled>Option 3</core-radio>
@@ -12,7 +12,7 @@ category: Form
 
 ## Custom icons
 
-<core-knobs hideTabs src="./components.json" name="core-radio">
+<core-knobs hideTabs  name="core-radio">
 <style>
   core-radio.animate [slot="indicator"] {
     opacity: 0;
@@ -38,7 +38,7 @@ category: Form
 
 ## Choice buttons
 
-<core-knobs hideTabs src="./components.json" name="core-radio">
+<core-knobs hideTabs  name="core-radio">
 <style>
   core-radio.choice {
     margin-bottom: var(--core-space-md);

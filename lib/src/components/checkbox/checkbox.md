@@ -4,13 +4,13 @@ desc: A checkbox element
 category: Form
 ---
 
-<core-knobs src="./components.json" name="core-checkbox">
+<core-knobs  name="core-checkbox">
   <core-checkbox>Checkbox</core-checkbox>
 </core-knobs>
 
 ## Sizes
 
-<core-knobs hideTabs src="./components.json" name="core-checkbox">
+<core-knobs hideTabs  name="core-checkbox">
   <core-checkbox size="sm">Sm</core-checkbox>
   <core-checkbox size="md">Md</core-checkbox>
   <core-checkbox size="lg">Lg</core-checkbox>
@@ -18,7 +18,7 @@ category: Form
 
 ## Animate indicator
 
-<core-knobs hideTabs src="./components.json" name="core-checkbox">
+<core-knobs hideTabs  name="core-checkbox">
   <style>
     .animate::part(indicator) {
       opacity: 0;
@@ -38,7 +38,7 @@ category: Form
 
 ## Custom box
 
-<core-knobs hideTabs src="./components.json" name="core-checkbox">
+<core-knobs hideTabs  name="core-checkbox">
   <style>
     .heart .gg-heart {
       color: lightgray;
@@ -58,7 +58,7 @@ category: Form
 
 ## Custom indicator
 
-<core-knobs hideTabs src="./components.json" name="core-checkbox">
+<core-knobs hideTabs  name="core-checkbox">
   <core-checkbox>
     <i slot="indicator" class="gg-close"></i>
     Checkbox with custom icon
@@ -67,7 +67,7 @@ category: Form
 
 ## Choice buttons
 
-<core-knobs hideTabs src="./components.json" name="core-checkbox">
+<core-knobs hideTabs  name="core-checkbox">
   <style>
     .choice {
       margin-bottom: var(--core-space-md);
