@@ -55,16 +55,16 @@
   --core-input-border-color: var(--core-color-ui);
 }
 
-:host([focused]) [part="input"] {
+:host([focused]:not([valid]):not([invalid])) [part="input"] {
   --core-input-box-shadow: 0px 0px 0px 1px var(--core-color-focus);
   --core-input-border-color: var(--core-color-focus);
 }
 
-:host(:not([focused])[valid]) [part="input"] {
+:host([valid]) [part="input"] {
   --core-input-border-color: var(--core-color-success);
 }
 
-:host(:not([focused])[invalid]) [part="input"] {
+:host([invalid]) [part="input"] {
   --core-input-border-color: var(--core-color-danger);
 }
 

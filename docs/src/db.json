@@ -1,13 +1,6 @@
 {
   "components": [
     {
-      "path": "../lib/src/components/accordion/accordion.md",
-      "name": "Accordion",
-      "desc": "Accordions",
-      "category": "Elements",
-      "content": "\n<core-knobs element=\"core-accordion\">\n  <core-accordion  title=\"Title\">\n  <core-box margin-y=\"md\">Content</core-box>\n  </core-accordion>\n  <core-accordion  title=\"Title\">\n    <core-box margin-y=\"md\">\n      <core-text tag=\"h1\">Content</core-text>\n      <core-text tag=\"h1\">Content</core-text>\n      <core-text tag=\"h1\">Content</core-text>\n    </core-box>\n  </core-accordion>\n</core-knobs>\n\n## Custom indicator\n\n<core-knobs hideTabs element=\"core-accordion\">\n<style>\n  .indicator [slot=\"prepend\"] {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  .indicator[open] [slot=\"prepend\"] {\n    transform: rotate(90deg);\n  }\n</style>\n<core-accordion class=\"indicator\" hide-default-indicator title=\"Title\">\n  <i slot=\"prepend\" class=\"gg-chevron-right\"></i>\n  <core-box margin-y=\"md\">Content</core-box>\n</core-accordion>\n</core-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/box/box.md",
       "name": "Box",
       "desc": "A general purpose box with padding, border, depth and more",
@@ -15,11 +8,32 @@
       "content": "\n<core-knobs element=\"core-box\">\n<core-box padding=\"lg\" depth=\"md\">Box</core-box>\n</core-knobs>\n\n## Card\n\n<core-knobs hideTabs element=\"core-box\">\n  <core-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <core-box padding=\"md\">\n      <core-text tag=\"h2\">Card Title</core-text>\n      <core-text tag=\"h6\">Subtitle</core-text>\n      <core-button type=\"primary\">Click me</core-button>\n    </core-box>\n  </core-box>\n</core-knobs>\n"
     },
     {
+      "path": "../lib/src/components/accordion/accordion.md",
+      "name": "Accordion",
+      "desc": "Accordions",
+      "category": "Elements",
+      "content": "\n<core-knobs element=\"core-accordion\">\n  <core-accordion  title=\"Title\">\n  <core-box margin-y=\"md\">Content</core-box>\n  </core-accordion>\n  <core-accordion  title=\"Title\">\n    <core-box margin-y=\"md\">\n      <core-text tag=\"h1\">Content</core-text>\n      <core-text tag=\"h1\">Content</core-text>\n      <core-text tag=\"h1\">Content</core-text>\n    </core-box>\n  </core-accordion>\n</core-knobs>\n\n## Custom indicator\n\n<core-knobs hideTabs element=\"core-accordion\">\n<style>\n  .indicator [slot=\"prepend\"] {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  .indicator[open] [slot=\"prepend\"] {\n    transform: rotate(90deg);\n  }\n</style>\n<core-accordion class=\"indicator\" hide-default-indicator title=\"Title\">\n  <i slot=\"prepend\" class=\"gg-chevron-right\"></i>\n  <core-box margin-y=\"md\">Content</core-box>\n</core-accordion>\n</core-knobs>\n"
+    },
+    {
       "path": "../lib/src/components/button/button.md",
       "name": "Button",
       "desc": "A general button element",
       "category": "Elements",
       "content": "\n<core-knobs  tab=\"props\" element=\"core-button\">\n<core-button>Button</core-button>\n</core-knobs>\n\n## Types\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-button>Default</core-button>\n<core-button type=\"primary\">Primary</core-button>\n<core-button type=\"secondary\">Secondary</core-button>\n<core-button type=\"success\">Success</core-button>\n<core-button type=\"danger\">Danger</core-button>\n<core-button type=\"transparent\">Transparent</core-button>\n</core-knobs>\n\n## Disabled\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-button disabled>Default</core-button>\n<core-button disabled type=\"primary\">Primary</core-button>\n<core-button disabled type=\"secondary\">Secondary</core-button>\n<core-button disabled type=\"success\">Success</core-button>\n<core-button disabled type=\"danger\">Danger</core-button>\n<core-button disabled type=\"transparent\">Transparent</core-button>\n</core-knobs>\n\n## Sizes\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-button size=\"sm\">Small</core-button>\n<core-button size=\"md\">Medium</core-button>\n<core-button size=\"lg\">Large</core-button>\n</core-knobs>\n\n## Full\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-button full>Full</core-button>\n</core-knobs>\n\n## With icons\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-button>\n  <i slot=\"prepend\" class=\"gg-check\"></i>\n  Full\n</core-button>\n<core-button>\n  <i slot=\"append\" class=\"gg-danger\"></i>\n  Full\n</core-button>\n<core-button>\n  <i slot=\"append\" class=\"gg-chevron-right\"></i>\n  Full\n</core-button>\n</core-knobs>\n\n## Outline\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-button outline>Default</core-button>\n<core-button outline type=\"primary\">Primary</core-button>\n<core-button outline type=\"secondary\">Secondary</core-button>\n<core-button outline type=\"success\">Success</core-button>\n<core-button outline type=\"danger\">Danger</core-button>\n<core-button outline type=\"transparent\">Transparent</core-button>\n</core-knobs>\n\n## Group\n\n<core-knobs hideTabs  element=\"core-button\">\n<core-flex>\n  <core-button >Option</core-button>\n  <core-button >Option</core-button>\n  <core-button type=\"primary\">Active</core-button>\n  <core-button>Option</core-button>\n</core-flex>\n</core-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/input/input.md",
+      "name": "Input",
+      "desc": "A input element",
+      "category": "Form",
+      "content": "\n<core-knobs  element=\"core-input\">\n<core-input placeholder=\"Optional placeholder\"></core-input>\n</core-knobs>\n\n## Sizes\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input size=\"sm\" placeholder=\"Small\"></core-input>\n<core-input size=\"md\" placeholder=\"Medium\"></core-input>\n<core-input size=\"lg\" placeholder=\"Large\"></core-input>\n</core-knobs>\n\n## Search\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</core-input>\n</core-knobs>\n\n## Number\n\n<core-knobs hideTabs  element=\"core-input\">\n<style>\n  #NumberInput {\n    min-width: 50px;\n    text-align: center;\n  }\n</style>\n<core-button onclick=\"NumberInput.stepDown()\">-</core-button>\n<core-input id=\"NumberInput\" max=\"100\" min=\"0\" readonly step=\"10\" value=\"0\" type=\"number\" ></core-input>\n<core-button onclick=\"NumberInput.stepUp()\">+</core-button>\n</core-knobs>\n\n## Masking\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</core-input>\n</core-knobs>\n\n## Validation\n\n### Auto validation\n\nTo autovalidate an input field, provide the `validate` attribute.\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input required  validate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</core-input>\n</core-knobs>\n\nThe input field will indicate an error if the input value is invalid.\n\n`Validate` can also be set to `valid`, `invalid` or `both`, depending if you want the validation to indicate when the value is valid, invalid or both.\n\n### Validate on input\n\nUse `validate-on` to decide which event you want to do the validation on.\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input required type=\"email\" validate=\"both\" validate-on=\"input\" placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</core-input>\n</core-knobs>\n\n### Validation with status icons\n\n<core-knobs hideTabs  element=\"core-input\">\n<style>\n  .status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .status[valid] .check {\n    display: block;\n  }\n  .status[invalid] .error {\n    display: block;\n  }\n</style>\n<core-input class=\"status\" type=\"email\" validate=\"both\" validate-on=\"input\" placeholder=\"Enter email\">\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</core-input>\n</core-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/flex/flex.md",
+      "name": "Flex",
+      "desc": "Utility element to flex children",
+      "category": "Layout",
+      "content": "\n<core-knobs  tab=\"props\" element=\"core-flex\">\n<core-flex>\n<core-button>Button</core-button>\n<core-button>Button 2</core-button>\n<core-button>Button 3</core-button>\n</core-flex>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/checkbox/checkbox.md",
@@ -36,11 +50,11 @@
       "content": "\n<core-knobs  element=\"core-container\">\n<core-container style=\"border: 1px solid gray\">Container</core-container>\n</core-knobs>\n"
     },
     {
-      "path": "../lib/src/components/flex/flex.md",
-      "name": "Flex",
-      "desc": "Utility element to flex children",
-      "category": "Layout",
-      "content": "\n<core-knobs  tab=\"props\" element=\"core-flex\">\n<core-flex>\n<core-button>Button</core-button>\n<core-button>Button 2</core-button>\n<core-button>Button 3</core-button>\n</core-flex>\n</core-knobs>\n"
+      "path": "../lib/src/components/label/label.md",
+      "name": "Label",
+      "desc": "Input label",
+      "category": "Form",
+      "content": "\n<core-knobs hideEvents tab=\"src\"  element=\"core-label\">\n<core-label>Label</core-label>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/grid/grid.md",
@@ -50,11 +64,11 @@
       "content": "\n<core-knobs  element=\"core-grid\">\n<core-grid>\n  <core-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </core-grid-item>\n  <core-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </core-grid-item>\n  <core-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </core-grid-item>\n</core-grid>\n</core-knobs>\n"
     },
     {
-      "path": "../lib/src/components/input/input.md",
-      "name": "Input",
-      "desc": "A input element",
-      "category": "Form",
-      "content": "\n<core-knobs  element=\"core-input\">\n<core-input placeholder=\"Optional placeholder\"></core-input>\n</core-knobs>\n\n## Sizes\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input size=\"sm\" placeholder=\"Small\"></core-input>\n<core-input size=\"md\" placeholder=\"Medium\"></core-input>\n<core-input size=\"lg\" placeholder=\"Large\"></core-input>\n</core-knobs>\n\n## Search\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input type=\"search\" placeholder=\"Search...\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"search-outline\"></ion-icon>\n</core-input>\n</core-knobs>\n\n## Number\n\n<core-knobs hideTabs  element=\"core-input\">\n<style>\n  #NumberInput {\n    min-width: 50px;\n    text-align: center;\n  }\n</style>\n<core-button onclick=\"NumberInput.stepDown()\">-</core-button>\n<core-input id=\"NumberInput\" max=\"100\" min=\"10\" step=\"10\" type=\"number\" ></core-input>\n<core-button onclick=\"NumberInput.stepUp()\">+</core-button>\n</core-knobs>\n\n## Masking\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input type=\"tel\" mask=\"+(00) 000 00 000\" placeholder=\"Enter phone number\">\n</core-input>\n</core-knobs>\n\n## Validation\n\n### Required input\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input required  autovalidate placeholder=\"Required input\">\n<div slot=\"error\">This field is required</div>\n</core-input>\n</core-knobs>\n\n### Simple email validation\n\nWhen using without an error slot the default validation error message on input fields is show.\nUse a error slot to provide your own error text.\n\n<core-knobs hideTabs  element=\"core-input\">\n<core-input required type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon style=\"font-size: 2rem\" slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n</core-input>\n</core-knobs>\n\n### Validation with status icons\n\n<core-knobs hideTabs  element=\"core-input\">\n<style>\n  .input-with-status [slot=\"append\"] {\n    font-size: 2em;\n    display: none;\n  }\n  .input-with-status [slot=\"prepend\"] {\n    font-size: 2em;\n    display: block;\n  }\n  .input-with-status[valid] .check {\n    display: block;\n  }\n  .input-with-status[invalid] .error {\n    display: block;\n  }\n</style>\n<core-input class=\"input-with-status\" type=\"email\" autovalidate placeholder=\"Enter email\">\n  <ion-icon slot=\"prepend\" name=\"mail-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"check\" name=\"checkmark-outline\"></ion-icon>\n  <ion-icon slot=\"append\" class=\"error\" name=\"alert-circle-outline\"></ion-icon>\n</core-input>\n</core-knobs>\n"
+      "path": "../lib/src/components/modal/modal.md",
+      "name": "Modal",
+      "desc": "A modal",
+      "category": "Elements",
+      "content": "\n<core-knobs  element=\"core-modal\">\n<core-modal id=\"modal\">\n  Modal content\n</core-modal>\n<core-button onclick=\"modal.show()\">Show modal</core-button>\n</core-knobs>\n\n## With Header\n\n<core-knobs hideTabs  element=\"core-modal\">\n<core-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</core-modal>\n<core-button onclick=\"modalTwo.show()\">Show modal</core-button>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/radio/radio.md",
@@ -62,13 +76,6 @@
       "desc": "Radio button",
       "category": "Form",
       "content": "\n<core-knobs  element=\"core-radio\">\n<core-radio name=\"example-1\" value=\"1\">Option 1</core-radio>\n<core-radio name=\"example-1\" value=\"2\">Option 2</core-radio>\n<core-radio name=\"example-1\" value=\"3\" disabled>Option 3</core-radio>\n</core-knobs>\n\n## Custom icons\n\n<core-knobs hideTabs  element=\"core-radio\">\n<style>\n  core-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  core-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<core-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</core-radio>\n\n<core-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</core-radio>\n</core-knobs>\n\n## Choice buttons\n\n<core-knobs hideTabs  element=\"core-radio\">\n<style>\n  core-radio.choice {\n    margin-bottom: var(--core-space-md);\n    padding: 0 var(--core-space-md);\n    height: var(--core-size-xl);\n    border: 2px solid var(--core-color-ui-light);\n  }\n  core-radio.choice:hover {\n    border-color: var(--core-color-ui);\n  }\n  core-radio.choice[checked] {\n    border-color: var(--core-color-focus);\n  }\n</style>\n\n<core-radio class=\"choice\" name=\"example-4\" full>\n  <core-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <core-text tag=\"div\" look=\"h3\">Standard delivery</core-text>\n    <core-text tag=\"div\" look=\"p\">4-5 days</core-text>\n  </div>\n  <div>\n    <core-text tag=\"h3\">19$</core-text>\n  </div>\n  </core-flex>\n</core-radio>\n<core-radio class=\"choice\" name=\"example-4\" full>\n  <core-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <core-text tag=\"div\" look=\"h3\">Express delivery</core-text>\n    <core-text tag=\"div\" look=\"p\">1-2 days</core-text>\n  </div>\n  <div>\n    <core-text tag=\"h3\">30$</core-text>\n  </div>\n  </core-flex>\n</core-radio>\n\n</core-knobs>\n"
-    },
-    {
-      "path": "../lib/src/components/modal/modal.md",
-      "name": "Modal",
-      "desc": "A modal",
-      "category": "Elements",
-      "content": "\n<core-knobs  element=\"core-modal\">\n<core-modal id=\"modal\">\n  Modal content\n</core-modal>\n<core-button onclick=\"modal.show()\">Show modal</core-button>\n</core-knobs>\n\n## With Header\n\n<core-knobs hideTabs  element=\"core-modal\">\n<core-modal id=\"modalTwo\">\n<header slot=\"header\">Header</header>\n  Modal content\n</core-modal>\n<core-button onclick=\"modalTwo.show()\">Show modal</core-button>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/tabs/tabs.md",
@@ -104,13 +111,6 @@
       "desc": "A general toggle element",
       "category": "Form",
       "content": "\n<core-knobs  element=\"core-toggle\">\n<core-toggle>Toggle</core-toggle>\n</core-knobs>\n\n## Custom icons\n\n<core-knobs hideTabs  element=\"core-toggle\">\n<core-toggle>\n  <i slot=\"on\" style=\"--ggs: 0.8;\" class=\"gg-sun\"></i>\n  Label\n  <i slot=\"off\" style=\"--ggs: 0.8;\" class=\"gg-moon\"></i>\n</core-toggle>\n</core-knobs>\n\n## Animate icon\n\n<core-knobs hideTabs  element=\"core-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<core-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</core-toggle>\n</core-knobs>\n"
-    },
-    {
-      "path": "../lib/src/components/label/label.md",
-      "name": "Label",
-      "desc": "Input label",
-      "category": "Form",
-      "content": "\n<core-knobs hideEvents tab=\"src\"  element=\"core-label\">\n<core-label>Label</core-label>\n</core-knobs>\n"
     }
   ]
 }

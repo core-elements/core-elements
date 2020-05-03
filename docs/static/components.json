@@ -804,14 +804,19 @@
           "default": "\"\""
         },
         {
+          "name": "validate-on",
+          "type": "string",
+          "default": "\"change\""
+        },
+        {
           "name": "readonly",
           "type": "boolean",
           "default": "false"
         },
         {
-          "name": "autovalidate",
-          "type": "boolean",
-          "default": "false"
+          "name": "validate",
+          "type": "string",
+          "default": "\"undefined\""
         },
         {
           "name": "focused",
@@ -939,16 +944,22 @@
           "default": "\"\""
         },
         {
+          "name": "validateOn",
+          "attribute": "validate-on",
+          "type": "string",
+          "default": "\"change\""
+        },
+        {
           "name": "readonly",
           "attribute": "readonly",
           "type": "boolean",
           "default": "false"
         },
         {
-          "name": "autovalidate",
-          "attribute": "autovalidate",
-          "type": "boolean",
-          "default": "false"
+          "name": "validate",
+          "attribute": "validate",
+          "type": "string",
+          "default": "\"undefined\""
         },
         {
           "name": "focused",

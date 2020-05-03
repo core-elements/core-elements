@@ -34,7 +34,7 @@ category: Form
   }
 </style>
 <core-button onclick="NumberInput.stepDown()">-</core-button>
-<core-input id="NumberInput" max="100" min="10" step="10" type="number" ></core-input>
+<core-input id="NumberInput" max="100" min="0" readonly step="10" value="0" type="number" ></core-input>
 <core-button onclick="NumberInput.stepUp()">+</core-button>
 </core-knobs>
 
@@ -47,21 +47,26 @@ category: Form
 
 ## Validation
 
-### Required input
+### Auto validation
+
+To autovalidate an input field, provide the `validate` attribute.
 
 <core-knobs hideTabs  element="core-input">
-<core-input required  autovalidate placeholder="Required input">
+<core-input required  validate placeholder="Required input">
 <div slot="error">This field is required</div>
 </core-input>
 </core-knobs>
 
-### Simple email validation
+The input field will indicate an error if the input value is invalid.
 
-When using without an error slot the default validation error message on input fields is show.
-Use a error slot to provide your own error text.
+`Validate` can also be set to `valid`, `invalid` or `both`, depending if you want the validation to indicate when the value is valid, invalid or both.
+
+### Validate on input
+
+Use `validate-on` to decide which event you want to do the validation on.
 
 <core-knobs hideTabs  element="core-input">
-<core-input required type="email" autovalidate placeholder="Enter email">
+<core-input required type="email" validate="both" validate-on="input" placeholder="Enter email">
   <ion-icon style="font-size: 2rem" slot="prepend" name="mail-outline"></ion-icon>
 </core-input>
 </core-knobs>
@@ -70,23 +75,22 @@ Use a error slot to provide your own error text.
 
 <core-knobs hideTabs  element="core-input">
 <style>
-  .input-with-status [slot="append"] {
+  .status [slot="append"] {
     font-size: 2em;
     display: none;
   }
-  .input-with-status [slot="prepend"] {
+  .status [slot="prepend"] {
     font-size: 2em;
     display: block;
   }
-  .input-with-status[valid] .check {
+  .status[valid] .check {
     display: block;
   }
-  .input-with-status[invalid] .error {
+  .status[invalid] .error {
     display: block;
   }
 </style>
-<core-input class="input-with-status" type="email" autovalidate placeholder="Enter email">
-  <ion-icon slot="prepend" name="mail-outline"></ion-icon>
+<core-input class="status" type="email" validate="both" validate-on="input" placeholder="Enter email">
   <ion-icon slot="append" class="check" name="checkmark-outline"></ion-icon>
   <ion-icon slot="append" class="error" name="alert-circle-outline"></ion-icon>
 </core-input>
