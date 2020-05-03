@@ -20,7 +20,6 @@
   },
   "homepage": "https://core-elements.netlify.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "release": "np",
     "prepublish": "run-s build:*",
     "start": "npm link && npm run dev",
