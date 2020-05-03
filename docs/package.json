@@ -9,9 +9,9 @@
     "dev": "npm run analyze && run-p dev:*",
     "build": "npm run analyze && run-s build:*",
     "analyze": "wca analyze ../lib/src/components/**/*.wc.js --format json --outDir static/components.json",
-    "dev:markdown": "markdown-db create src -w",
+    "dev:markdown": "markdown-db create ./config.yml ./src -w",
     "dev:web": "parcel index.html",
-    "build:markdown": "markdown-db create src",
+    "build:markdown": "markdown-db create ./config.yml ./src",
     "build:web": "parcel build index.html"
   },
   "keywords": [],
@@ -20,7 +20,7 @@
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.1.2",
     "babel-core": "^6.26.3",
-    "markdown-db": "^0.1.0",
+    "markdown-db": "^0.1.2",
     "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
@@ -32,6 +32,7 @@
     "highlight.js": "^9.18.1",
     "hljs": "^6.2.3",
     "marked": "^1.0.0",
+    "netlify-db": "0.0.2",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4",
     "vue-router": "^3.1.6"

@@ -1,4 +1,0 @@
-collections:
-  - name: "components" # Used in routes, e.g., /admin/collections/blog
-    label: "Components" # Used in the UI
-    folder: "../lib/src/components/" # The path to the folder where the documents are stored
