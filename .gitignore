@@ -3,15 +3,6 @@
 # dependencies
 /node_modules
 
-# testing
-/coverage
-
-# production
-/build
-/.cache
-.cache
-.cache/
-
 # misc
 .DS_Store
 .env
