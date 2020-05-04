@@ -25,7 +25,7 @@ const router = new Router({
       path: "/",
       component: Home,
       meta: {
-        title: "Core Components",
+        title: "Core Elements",
         showInHeader: true,
         hasSidebar: false,
       },
