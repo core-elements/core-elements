@@ -67,13 +67,13 @@ category: Form
 <core-knobs hideTabs  element="core-select">
   <core-select>
     <core-optgroup label="Group 1">
-      <ion-icon slot="prepend" name="people-outline"></ion-icon>
+      <ion-icon slot="start" name="people-outline"></ion-icon>
       <core-option value="Option 1" selected></core-option>
       <core-option value="Option 2"></core-option>
       <core-option value="Option 3"></core-option>
     </core-optgroup>
     <core-optgroup label="Group 2">
-      <ion-icon slot="prepend" name="person-outline"></ion-icon>
+      <ion-icon slot="start" name="person-outline"></ion-icon>
       <core-option value="Option 4" selected></core-option>
       <core-option value="Option 5"></core-option>
       <core-option value="Option 6"></core-option>

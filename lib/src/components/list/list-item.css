@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: var(--core-size-md);
+  color: var(--core-color-font);
+}
+
+:host([selectable]:hover) {
+  background: var(--core-color-ui-lighter);
+}
+
+:host [part="content"] {
+  margin-left: var(--core-space-sm);
+  margin-right: var(--core-space-sm);
+  flex: 1;
+}
+
+::slotted([slot="start"]) {
+  margin-left: var(--core-space-sm);
+}
+
+::slotted([slot="end"]) {
+  margin-right: var(--core-space-sm);
+}

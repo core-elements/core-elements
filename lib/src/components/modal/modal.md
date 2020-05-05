@@ -1,7 +1,7 @@
 ---
 name: Modal
 desc: A modal
-category: Elements
+category: Interaction
 ---
 
 <core-knobs  element="core-modal">

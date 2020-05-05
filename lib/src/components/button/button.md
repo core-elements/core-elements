@@ -1,7 +1,7 @@
 ---
 name: Button
 desc: A general button element
-category: Elements
+category: Interaction
 ---
 
 <core-knobs  tab="props" element="core-button">
@@ -48,15 +48,15 @@ category: Elements
 
 <core-knobs hideTabs  element="core-button">
 <core-button>
-  <i slot="prepend" class="gg-check"></i>
+  <i slot="start" class="gg-check"></i>
   Full
 </core-button>
 <core-button>
-  <i slot="append" class="gg-danger"></i>
+  <i slot="end" class="gg-danger"></i>
   Full
 </core-button>
 <core-button>
-  <i slot="append" class="gg-chevron-right"></i>
+  <i slot="end" class="gg-chevron-right"></i>
   Full
 </core-button>
 </core-knobs>

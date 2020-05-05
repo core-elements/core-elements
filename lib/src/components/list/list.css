@@ -1,0 +1,60 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--core-color-font);
+}
+
+:host([selectable]) slot::slotted(*:hover) {
+  background: var(--core-color-ui-lighter);
+}
+
+:host([selectable]) slot::slotted(*:hover) {
+  background: var(--core-color-ui-lighter);
+}
+
+:host([bordered]) slot::slotted(*) {
+  border-bottom: 1px solid var(--core-color-ui-light);
+}
+
+:host([bordered]) slot::slotted(*:last-of-type) {
+  border-bottom: 0;
+}
+
+:host([inside]) {
+  list-style-position: inside;
+}
+
+:host([bullets]) {
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" ><circle cx="9" cy="11"  r="3" fill="currentColor" /></svg>');
+}
+
+:host([numbered]) {
+  list-style-type: decimal;
+}
+
+:host > * {
+  position: relative;
+  padding-top: var(--core-space-sm);
+  padding-bottom: var(--core-space-sm);
+}
+
+:host([compact]) > * {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+:host([large]) > * {
+  padding-top: var(--core-space-sm);
+  padding-bottom: var(--core-space-sm);
+}
+
+:host([bordered]) > * {
+  border-bottom: 1px solid var(--core-color-ui-light);
+}
+
+:host([bordered]) > * {
+  border-bottom: 0;
+}

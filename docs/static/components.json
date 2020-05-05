@@ -211,6 +211,11 @@
           "default": "\"\""
         },
         {
+          "name": "squared",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "outline",
           "type": "boolean",
           "default": "false"
@@ -240,6 +245,12 @@
           "description": "Button state",
           "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
+        },
+        {
+          "name": "squared",
+          "attribute": "squared",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "outline",
@@ -805,8 +816,9 @@
         },
         {
           "name": "validate-on",
-          "type": "string",
-          "default": "\"change\""
+          "description": "Validate input value on event",
+          "type": "\"blur\"|\"change\"|\"input\"",
+          "default": "\"blur\""
         },
         {
           "name": "readonly",
@@ -815,7 +827,8 @@
         },
         {
           "name": "validate",
-          "type": "string",
+          "description": "Validate input value on event",
+          "type": "\"invalid\"|\"valid\"|\"both\"",
           "default": "\"undefined\""
         },
         {
@@ -946,8 +959,9 @@
         {
           "name": "validateOn",
           "attribute": "validate-on",
-          "type": "string",
-          "default": "\"change\""
+          "description": "Validate input value on event",
+          "type": "\"blur\"|\"change\"|\"input\"",
+          "default": "\"blur\""
         },
         {
           "name": "readonly",
@@ -958,7 +972,8 @@
         {
           "name": "validate",
           "attribute": "validate",
-          "type": "string",
+          "description": "Validate input value on event",
+          "type": "\"invalid\"|\"valid\"|\"both\"",
           "default": "\"undefined\""
         },
         {
@@ -1132,6 +1147,14 @@
           "default": "\"\""
         }
       ]
+    },
+    {
+      "name": "core-list-item",
+      "path": "./../../lib/src/components/list/list-item.wc.js"
+    },
+    {
+      "name": "core-list",
+      "path": "./../../lib/src/components/list/list.wc.js"
     },
     {
       "name": "core-modal",

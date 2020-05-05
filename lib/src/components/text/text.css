@@ -6,7 +6,7 @@
 :host,
 :host > *:first-child {
   display: inline-block;
-  text-align: left;
+  text-align: inerhit;
   font-weight: var(--core-font-weight);
   font-size: var(--core-font-size);
 }

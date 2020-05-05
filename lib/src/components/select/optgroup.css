@@ -20,6 +20,6 @@
   margin: 0;
 }
 
-::slotted([slot="prepend"]) {
+::slotted([slot="start"]) {
   margin-right: var(--core-space-sm);
 }

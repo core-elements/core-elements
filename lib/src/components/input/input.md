@@ -20,7 +20,7 @@ category: Form
 
 <core-knobs hideTabs  element="core-input">
 <core-input type="search" placeholder="Search...">
-  <ion-icon style="font-size: 2rem" slot="prepend" name="search-outline"></ion-icon>
+  <ion-icon style="font-size: 2rem" slot="start" name="search-outline"></ion-icon>
 </core-input>
 </core-knobs>
 
@@ -67,7 +67,7 @@ Use `validate-on` to decide which event you want to do the validation on.
 
 <core-knobs hideTabs  element="core-input">
 <core-input required type="email" validate="both" validate-on="input" placeholder="Enter email">
-  <ion-icon style="font-size: 2rem" slot="prepend" name="mail-outline"></ion-icon>
+  <ion-icon style="font-size: 2rem" slot="start" name="mail-outline"></ion-icon>
 </core-input>
 </core-knobs>
 
@@ -75,11 +75,11 @@ Use `validate-on` to decide which event you want to do the validation on.
 
 <core-knobs hideTabs  element="core-input">
 <style>
-  .status [slot="append"] {
+  .status [slot="end"] {
     font-size: 2em;
     display: none;
   }
-  .status [slot="prepend"] {
+  .status [slot="start"] {
     font-size: 2em;
     display: block;
   }
@@ -91,7 +91,7 @@ Use `validate-on` to decide which event you want to do the validation on.
   }
 </style>
 <core-input class="status" type="email" validate="both" validate-on="input" placeholder="Enter email">
-  <ion-icon slot="append" class="check" name="checkmark-outline"></ion-icon>
-  <ion-icon slot="append" class="error" name="alert-circle-outline"></ion-icon>
+  <ion-icon slot="end" class="check" name="checkmark-outline"></ion-icon>
+  <ion-icon slot="end" class="error" name="alert-circle-outline"></ion-icon>
 </core-input>
 </core-knobs>

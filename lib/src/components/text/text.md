@@ -1,7 +1,7 @@
 ---
 name: Text
 desc: A general purpose text element
-category: Elements
+category: Layout
 ---
 
 <core-knobs  element="core-text">

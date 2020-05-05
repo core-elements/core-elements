@@ -1,7 +1,7 @@
 ---
 name: Accordion
 desc: Accordions
-category: Elements
+category: Interaction
 ---
 
 <core-knobs element="core-accordion">
@@ -21,16 +21,16 @@ category: Elements
 
 <core-knobs hideTabs element="core-accordion">
 <style>
-  .indicator [slot="prepend"] {
+  .indicator [slot="start"] {
     transform: rotate(0deg);
     transition: all 0.2s ease;
   }
-  .indicator[open] [slot="prepend"] {
+  .indicator[open] [slot="start"] {
     transform: rotate(90deg);
   }
 </style>
 <core-accordion class="indicator" hide-default-indicator title="Title">
-  <i slot="prepend" class="gg-chevron-right"></i>
+  <i slot="start" class="gg-chevron-right"></i>
   <core-box margin-y="md">Content</core-box>
 </core-accordion>
 </core-knobs>

@@ -44,20 +44,20 @@
   height: var(--core-size-md);
 }
 
-::slotted([slot="prepend"]) {
+::slotted([slot="start"]) {
   margin-right: var(--core-space-sm);
 }
 
-::slotted([slot="append"]) {
+::slotted([slot="end"]) {
   margin-left: var(--core-space-sm);
 }
 
-:host [part="append"] svg {
+:host [part="end"] svg {
   transform-origin: center;
   transition: transform 0.2s ease;
   transform: rotate(0deg);
 }
 
-:host([open]) [part="append"] svg {
+:host([open]) [part="end"] svg {
   transform: rotate(-180deg);
 }

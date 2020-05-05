@@ -5,7 +5,7 @@
       <core-box padding-y="lg">
         <core-button type="secondary" @click="$router.push('/components')">
           See the components
-          <i slot="append" class="gg-arrow-right"></i>
+          <i slot="end" class="gg-arrow-right"></i>
         </core-button>
       </core-box>
     </core-container>

@@ -69,6 +69,26 @@
   cursor: not-allowed;
 }
 
+:host([squared]) {
+  width: var(--core-button-height);
+  height: var(--core-button-height);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slots */
+
+::slotted([slot="start"]) {
+  vertical-align: text-bottom;
+  margin-right: var(--core-space-sm);
+}
+
+::slotted([slot="end"]) {
+  vertical-align: text-bottom;
+  margin-left: var(--core-space-sm);
+}
+
 /* Types */
 
 :host([type="primary"]) {
@@ -126,14 +146,4 @@
 
 :host([outline]):not([type]) {
   color: var(--core-color-black);
-}
-
-::slotted([slot="prepend"]) {
-  vertical-align: text-bottom;
-  margin-right: var(--core-space-sm);
-}
-
-::slotted([slot="append"]) {
-  vertical-align: text-bottom;
-  margin-left: var(--core-space-sm);
 }

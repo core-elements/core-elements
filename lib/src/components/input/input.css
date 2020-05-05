@@ -100,10 +100,10 @@
   margin-top: var(--core-space-sm);
 }
 
-::slotted([slot="prepend"]) {
+::slotted([slot="start"]) {
   margin-left: var(--core-space-sm);
 }
 
-::slotted([slot="append"]) {
+::slotted([slot="end"]) {
   margin-right: var(--core-space-sm);
 }

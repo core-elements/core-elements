@@ -19,7 +19,7 @@
       <core-tabs class="tabs" :value="category" @change="(e) => (category = e.target.value)">
         <core-tab>All</core-tab>
         <core-tab>Layout</core-tab>
-        <core-tab>Elements</core-tab>
+        <core-tab>Interaction</core-tab>
         <core-tab>Form</core-tab>
         <core-tab>Navigation</core-tab>
       </core-tabs>
