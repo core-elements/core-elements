@@ -26,6 +26,8 @@
 }
 
 :host [part="trigger"] {
+  background: transparent;
+  color: inherit;
   cursor: pointer;
   text-align: left;
   padding: 0;
