@@ -1,11 +1,13 @@
 :host {
   --core-font-size: var(--core-font-size-sm);
   --core-font-weight: 400;
+  --core-text-color: inherit;
 }
 
 :host,
 :host > *:first-child {
   display: inline-block;
+  color: var(--core-text-color);
   text-align: inerhit;
   font-weight: var(--core-font-weight);
   font-size: var(--core-font-size);
@@ -77,20 +79,20 @@
 :host([tag="h5"]) > *:first-child,
 :host([look="h6"]) > *:first-child,
 :host([tag="h6"]) > *:first-child {
-  color: var(--core-color-font-dark);
+  --core-text-color: var(--core-color-font-dark);
 }
 
 :host([look="p"]) > *:first-child,
 :host([tag="p"]) > *:first-child,
 :host([look="small"]) > *:first-child,
 :host([tag="small"]) > *:first-child {
-  color: var(--core-color-font);
+  --core-text-color: var(--core-color-font);
 }
 
 :host([look="i"]) > *:first-child,
 :host([tag="i"]) > *:first-child,
 :host([look="lead"]) > *:first-child {
-  color: var(--core-color-font-light);
+  --core-text-color: var(--core-color-font-light);
 }
 
 :host([tag="h6"]) > *:first-child,
@@ -124,6 +126,14 @@
   }
 }
 
+@each $i in primary, secondary, success, danger, ui-light, ui-lighter,
+  ui-lightest, ui-dark, white, black
+{
+  :host([color="$(i)"]) > *:first-child {
+    --core-text-color: var(--core-color-$(i));
+  }
+}
+
 :host h1,
 :host h2,
 :host h3,
@@ -145,17 +155,17 @@
 :host h5,
 :host h6,
 :host b {
-  color: var(--core-color-font-dark);
+  --core-text-color: var(--core-color-font-dark);
 }
 
 :host small,
 :host p {
-  color: var(--core-color-font);
+  --core-text-color: var(--core-color-font);
 }
 
 :host([look="lead"]) > *:first-child {
   --core-font-size: 1.4rem;
   line-height: 32px;
   font-weight: 300;
-  color: var(--core-color-font-light);
+  --core-text-color: var(--core-color-font-light);
 }

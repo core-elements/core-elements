@@ -1,6 +1,5 @@
 :host {
   --core-accordion-border-color: var(--core-color-ui-light);
-  border-top: 1px solid var(--core-accordion-border-color);
   outline: 1px black;
   display: block;
   width: 100%;
@@ -8,10 +7,6 @@
 
 :host(:hover) {
   --core-accordion-border-color: var(--core-color-ui);
-}
-
-:host(:last-of-type) {
-  border-bottom: 1px solid var(--core-accordion-border-color);
 }
 
 :host [part="content"] {

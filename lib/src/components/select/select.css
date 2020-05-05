@@ -10,13 +10,13 @@
   --core-select-border-style: solid;
   --core-select-border-color: var(--core-color-ui-light);
   --core-select-border-radius: none;
-  --core-select-option-list-border: 1px solid var(--core-color-ui-light);
-  --core-select-option-list-border-radius: var(--core-select-border-radius-sm);
-  --core-select-option-list-box-shadow: 0px;
-  --core-select-option-list-position: absolute;
-  --core-select-option-list-top: 110%;
-  --core-select-option-list-transition: none;
-  --core-select-option-list-opacity: 1;
+  --core-select-list-border: 1px solid var(--core-color-ui-light);
+  --core-select-list-border-radius: var(--core-select-border-radius-sm);
+  --core-select-list-box-shadow: 0px;
+  --core-select-list-position: absolute;
+  --core-select-list-top: 110%;
+  --core-select-list-transition: none;
+  --core-select-list-opacity: 1;
 }
 
 :host {
@@ -163,26 +163,26 @@ button[part="remove-tag"] {
   margin-left: var(--core-space-xs);
 }
 
-:host([list-open]) div[part="option-list"] {
+:host([list-open]) div[part="list"] {
   visibility: visible;
 }
 
-div[part="option-list"] {
+div[part="list"] {
   visibility: hidden;
-  position: var(--core-select-option-list-position);
+  position: var(--core-select-list-position);
   left: 0;
-  top: var(--core-select-option-list-top);
+  top: var(--core-select-list-top);
   width: 100%;
   max-width: 100%;
   z-index: 600;
-  transition: var(--core-select-option-list-transition);
+  transition: var(--core-select-list-transition);
   box-sizing: border-box;
-  border: var(--core-select-option-list-border);
+  border: var(--core-select-list-border);
   margin: 0;
-  opacity: var(--core-select-option-list-opacity);
+  opacity: var(--core-select-list-opacity);
   list-style: none;
-  box-shadow: var(--core-select-option-list-box-shadow);
-  border-radius: var(--core-select-option-list-border-radius);
+  box-shadow: var(--core-select-list-box-shadow);
+  border-radius: var(--core-select-list-border-radius);
   background: white;
   max-height: 300px;
   overflow-y: scroll;
