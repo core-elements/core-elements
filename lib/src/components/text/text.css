@@ -5,7 +5,7 @@
 }
 
 :host,
-:host > *:first-child {
+:host {
   display: inline-block;
   color: var(--core-text-color);
   text-align: inerhit;
@@ -13,90 +13,97 @@
   font-size: var(--core-font-size);
 }
 
-:host([inline]),
-:host([inline]) > *:first-child {
-  display: inline-block;
+:host > *:first-child {
+  display: inherit;
+  color: inherit;
+  text-align: inerhit;
+  font-weight: ineherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 :host(:last-child) > *:first-child {
   margin-bottom: 0;
 }
 
-:host([full]),
-:host([full]) > *:first-child {
+:host([inline]) {
+  display: inline-block;
+}
+
+:host([full]) {
   display: block;
   width: 100%;
 }
 
-:host([tag="h1"]) > *:first-child,
-:host([look="h1"]) > *:first-child {
+:host([tag="h1"]),
+:host([look="h1"]) {
   --core-font-size: var(--core-font-size-xl);
   --core-font-weight: 700;
 }
 
-:host([tag="h2"]) > *:first-child,
-:host([look="h2"]) > *:first-child {
+:host([tag="h2"]),
+:host([look="h2"]) {
   --core-font-size: var(--core-font-size-lg);
   --core-font-weight: 700;
 }
 
-:host([tag="h3"]) > *:first-child,
-:host([look="h3"]) > *:first-child {
+:host([tag="h3"]),
+:host([look="h3"]) {
   --core-font-size: var(--core-font-size-md);
   --core-font-weight: 700;
 }
 
-:host([tag="h4"]) > *:first-child,
-:host([look="h4"]) > *:first-child {
+:host([tag="h4"]),
+:host([look="h4"]) {
   --core-font-size: var(--core-font-size-sm);
   --core-font-weight: 600;
 }
 
-:host([tag="h5"]) > *:first-child,
-:host([look="h5"]) > *:first-child {
+:host([tag="h5"]),
+:host([look="h5"]) {
   --core-font-size: var(--core-font-size-xs);
   --core-font-weight: 600;
 }
 
-:host([tag="h6"]) > *:first-child,
-:host([look="h6"]) > *:first-child {
+:host([tag="h6"]),
+:host([look="h6"]) {
   --core-font-size: var(--core-font-size-xs);
   --core-font-weight: 500;
 }
 
-:host([tag="small"]) > *:first-child,
-:host([look="small"]) > *:first-child {
+:host([tag="small"]),
+:host([look="small"]) {
   --core-font-size: var(--core-font-size-xs);
 }
 
-:host([look="h1"]) > *:first-child,
-:host([tag="h1"]) > *:first-child,
-:host([look="h2"]) > *:first-child,
-:host([tag="h2"]) > *:first-child,
-:host([look="h4"]) > *:first-child,
-:host([tag="h4"]) > *:first-child,
-:host([look="h5"]) > *:first-child,
-:host([tag="h5"]) > *:first-child,
-:host([look="h6"]) > *:first-child,
-:host([tag="h6"]) > *:first-child {
+:host([look="h1"]),
+:host([tag="h1"]),
+:host([look="h2"]),
+:host([tag="h2"]),
+:host([look="h4"]),
+:host([tag="h4"]),
+:host([look="h5"]),
+:host([tag="h5"]),
+:host([look="h6"]),
+:host([tag="h6"]) {
   --core-text-color: var(--core-color-font-dark);
 }
 
-:host([look="p"]) > *:first-child,
-:host([tag="p"]) > *:first-child,
-:host([look="small"]) > *:first-child,
-:host([tag="small"]) > *:first-child {
+:host([look="p"]),
+:host([tag="p"]),
+:host([look="small"]),
+:host([tag="small"]) {
   --core-text-color: var(--core-color-font);
 }
 
-:host([look="i"]) > *:first-child,
-:host([tag="i"]) > *:first-child,
-:host([look="lead"]) > *:first-child {
+:host([look="i"]),
+:host([tag="i"]),
+:host([look="lead"]) {
   --core-text-color: var(--core-color-font-light);
 }
 
-:host([tag="h6"]) > *:first-child,
-:host([look="h6"]) > *:first-child {
+:host([tag="h6"]),
+:host([look="h6"]) {
   text-transform: uppercase;
 }
 
@@ -120,8 +127,15 @@
   width: 100%;
 }
 
+:host([look="lead"]) {
+  --core-font-size: 1.4rem;
+  line-height: 32px;
+  font-weight: 300;
+  --core-text-color: var(--core-color-font-light);
+}
+
 @each $i in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
-  :host([weight="$(i)"]) > *:first-child {
+  :host([weight="$(i)"]) {
     --core-font-weight: $(i);
   }
 }
@@ -129,7 +143,7 @@
 @each $i in primary, secondary, success, danger, ui-light, ui-lighter,
   ui-lightest, ui-dark, white, black
 {
-  :host([color="$(i)"]) > *:first-child {
+  :host([color="$(i)"]) {
     --core-text-color: var(--core-color-$(i));
   }
 }
@@ -146,26 +160,4 @@
 :host i {
   font-weight: inherit;
   margin-top: 0;
-}
-
-:host h1,
-:host h2,
-:host h3,
-:host h4,
-:host h5,
-:host h6,
-:host b {
-  --core-text-color: var(--core-color-font-dark);
-}
-
-:host small,
-:host p {
-  --core-text-color: var(--core-color-font);
-}
-
-:host([look="lead"]) > *:first-child {
-  --core-font-size: 1.4rem;
-  line-height: 32px;
-  font-weight: 300;
-  --core-text-color: var(--core-color-font-light);
 }
