@@ -18,6 +18,18 @@
   vertical-align: middle;
   align-items: center;
   justify-content: center;
+  height: var(--core-button-height);
+  outline: 0;
+  color: var(--core-button-text-color);
+  cursor: var(--core-button-cursor);
+  box-shadow: var(--core-button-box-shadow);
+  border-radius: var(--core-button-border-radius);
+  font-size: var(--core-button-font-size);
+  padding: var(--core-button-padding);
+  background: var(--core-button-bg-color);
+  border: var(--core-button-border);
+  transform: var(--core-button-transform);
+  transition: var(--core-button-transition);
 }
 
 :host([full]) {
@@ -38,22 +50,6 @@
 :host([size="lg"]) {
   --core-button-height: var(--core-size-lg);
   --core-button-padding: 0 var(--core-space-lg);
-}
-
-:host {
-  height: var(--core-button-height);
-  outline: 0;
-  color: var(--core-button-text-color);
-  cursor: var(--core-button-cursor);
-  display: var(--core-button-display);
-  box-shadow: var(--core-button-box-shadow);
-  border-radius: var(--core-button-border-radius);
-  font-size: var(--core-button-font-size);
-  padding: var(--core-button-padding);
-  background: var(--core-button-bg-color);
-  border: var(--core-button-border);
-  transform: var(--core-button-transform);
-  transition: var(--core-button-transition);
 }
 
 :host(:hover) {

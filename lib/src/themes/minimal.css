@@ -121,9 +121,6 @@
   --core-color-danger: hsl(var(--core-color-danger-hue), 100%, 40%);
   --core-color-danger-dark: hsl(var(--core-color-danger-hue), 100%, 30%);
 
-  --core-color-white: black;
-  --core-color-black: white;
-
   --core-color-ui-hue: 0;
   --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 0%, 20%);
   --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 0%, 30%);
@@ -133,17 +130,20 @@
   --core-color-ui-darker: hsl(var(--core-color-ui-hue), 0%, 90%);
   --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 0%, 95%);
 
+  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 0%);
+  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
+
   --core-color-font-light: hsl(var(--core-color-ui-hue), 0%, 70%);
   --core-color-font: hsl(var(--core-color-ui-hue), 0%, 80%);
   --core-color-font-dark: hsl(var(--core-color-ui-hue), 0%, 100%);
 }
 
-[mode="dark"] base-button[type="secondary"] {
+[mode="dark"] core-button[type="secondary"] {
   --core-button-bg-color: var(--core-color-black);
   --core-button-text-color: var(--core-color-white);
 }
 
-[mode="dark"] base-button[type="secondary"]:hover {
+[mode="dark"] core-button[type="secondary"]:hover {
   --core-button-bg-color: var(--core-color-black);
   --core-button-text-color: var(--core-color-white);
 }
