@@ -1,5 +1,22 @@
 :host {
+  --core-textarea-bg-color: var(--core-color-white);
+  --core-textarea-padding: 0 var(--core-space-md);
+  --core-textarea-height: var(--core-size-md);
+  --core-textarea-border-color: var(--core-color-ui-light);
+  --core-textarea-border-radius: none;
+  --core-textarea-box-shadow: none;
+  --core-textarea-placeholder-color: var(--core-color-font-light);
+  --core-textarea-font-size: var(--core-font-size-sm);
+  --core-textarea-font-family: var(--core-font-family);
+  --core-textarea-color: var(--core-color-font);
+}
+
+:host {
   display: inline-block;
+  font-size: var(--core-textarea-font-size);
+  font-family: var(--core-textarea-font-family);
+  color: var(--core-textarea-color);
+  background-color: var(--core-textarea-bg-color);
 }
 
 :host([full]) {
@@ -13,23 +30,23 @@
 }
 
 :host textarea {
+  box-shadow: var(--core-input-box-shadow);
   box-sizing: border-box;
-  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+  display: inherit;
   outline: 0;
-  font-size: var(--core-font-size-sm);
-  font-family: var(--core-font-family);
-  color: var(--core-color-black);
-  background-color: var(--core-color-white);
   padding: var(--core-space-md);
-  border: 2px solid var(--core-color-ui-lighter);
+  border: 2px solid var(--core-textarea-border-color);
 }
 
 :host textarea:hover {
-  border-color: var(--core-color-ui-light);
-  background-color: var(--core-color-ui-lighter);
+  --core-textarea-border-color: var(--core-color-ui);
 }
 
 :host textarea:focus {
-  border-color: var(--core-color-focus);
-  background-color: var(--core-color-white);
+  --core-textarea-border-color: var(--core-color-focus);
+  --core-textarea-box-shadow: 0px 0px 0px 1px var(--core-color-focus);
 }
