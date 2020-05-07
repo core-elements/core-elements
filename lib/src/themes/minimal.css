@@ -30,21 +30,21 @@
   --core-color-danger: hsl(var(--core-color-danger-hue), 75%, 40%);
   --core-color-danger-dark: hsl(var(--core-color-danger-hue), 75%, 30%);
 
-  --core-color-white: white;
-  --core-color-black: black;
+  --core-color-ui-hue: var(--core-color-primary-hue);
+  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 95%);
+  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 90%);
+  --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 80%);
+  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 70%);
+  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 10%, 30%);
+  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 20%);
+  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 10%);
 
-  --core-color-ui-hue: 0;
-  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 0%, 95%);
-  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 0%, 90%);
-  --core-color-ui-light: hsl(var(--core-color-ui-hue), 0%, 80%);
-  --core-color-ui: hsl(var(--core-color-ui-hue), 0%, 70%);
-  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 0%, 30%);
-  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 0%, 20%);
-  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 0%, 10%);
+  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 45%);
+  --core-color-font: hsl(var(--core-color-ui-hue), 10%, 25%);
+  --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 10%);
 
-  --core-color-font-light: hsl(var(--core-color-ui-hue), 0%, 45%);
-  --core-color-font: hsl(var(--core-color-ui-hue), 0%, 25%);
-  --core-color-font-dark: hsl(var(--core-color-ui-hue), 0%, 5%);
+  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
+  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
 
   --core-container: 800px;
   --core-container-xs: 600px;
@@ -121,21 +121,21 @@
   --core-color-danger: hsl(var(--core-color-danger-hue), 100%, 40%);
   --core-color-danger-dark: hsl(var(--core-color-danger-hue), 100%, 30%);
 
-  --core-color-ui-hue: 0;
-  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 0%, 20%);
-  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 0%, 30%);
-  --core-color-ui-light: hsl(var(--core-color-ui-hue), 0%, 45%);
-  --core-color-ui: hsl(var(--core-color-ui-hue), 0%, 60%);
-  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 0%, 80%);
-  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 0%, 90%);
-  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 0%, 95%);
+  --core-color-ui-hue: var(--core-color-primary-hue);
+  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 20%);
+  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 30%);
+  --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 45%);
+  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 60%);
+  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 10%, 80%);
+  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 90%);
+  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 95%);
+
+  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 70%);
+  --core-color-font: hsl(var(--core-color-ui-hue), 10%, 80%);
+  --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 100%);
 
   --core-color-white: hsl(var(--core-color-ui-hue), 0%, 0%);
   --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
-
-  --core-color-font-light: hsl(var(--core-color-ui-hue), 0%, 70%);
-  --core-color-font: hsl(var(--core-color-ui-hue), 0%, 80%);
-  --core-color-font-dark: hsl(var(--core-color-ui-hue), 0%, 100%);
 }
 
 [mode="dark"] core-button[type="secondary"] {
