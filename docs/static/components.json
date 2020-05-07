@@ -1343,17 +1343,17 @@
           "type": "string"
         },
         {
+          "name": "hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "disabled",
           "type": "boolean",
           "default": "false"
         },
         {
           "name": "selected",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "hidden",
           "type": "boolean",
           "default": "false"
         },
@@ -1375,6 +1375,12 @@
           "type": "string"
         },
         {
+          "name": "hidden",
+          "attribute": "hidden",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "disabled",
           "attribute": "disabled",
           "type": "boolean",
@@ -1383,12 +1389,6 @@
         {
           "name": "selected",
           "attribute": "selected",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "hidden",
-          "attribute": "hidden",
           "type": "boolean",
           "default": "false"
         },
@@ -1562,6 +1562,9 @@
         },
         {
           "name": "focus"
+        },
+        {
+          "name": "blur"
         },
         {
           "name": "searchable",
