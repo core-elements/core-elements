@@ -28,7 +28,7 @@
     "web-component-analyzer": "^1.0.3"
   },
   "dependencies": {
-    "core-elements": "0.0.8",
+    "core-elements": "0.0.9",
     "highlight.js": "^9.18.1",
     "hljs": "^6.2.3",
     "marked": "^1.0.0",
