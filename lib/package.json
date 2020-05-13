@@ -1,6 +1,6 @@
 {
   "name": "core-elements",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Core UI Elements for the web",
   "main": "dist/main.js",
   "module": "dist/main.es.js",
@@ -34,6 +34,7 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
     "@rollup/plugin-commonjs": "^11.1.0",
     "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
