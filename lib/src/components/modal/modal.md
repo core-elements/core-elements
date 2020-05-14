@@ -11,11 +11,10 @@ category: Interaction
 <core-button onclick="modal.show()">Show modal</core-button>
 </core-knobs>
 
-## With Header
+## With Title
 
 <core-knobs hideTabs  element="core-modal">
-<core-modal id="modalTwo">
-<header slot="header">Header</header>
+<core-modal title="Title" id="modalTwo">
   Modal content
 </core-modal>
 <core-button onclick="modalTwo.show()">Show modal</core-button>

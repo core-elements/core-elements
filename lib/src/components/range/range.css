@@ -1,0 +1,46 @@
+:host {
+  user-drag: none;
+  transform: scale(1);
+  cursor: inherit;
+  height: 36px;
+  display: flex;
+  width: 100%;
+}
+
+[part="line"] {
+  user-drag: none;
+  position: relative;
+  height: 5px;
+  width: 100%;
+  border-radius: 4px;
+  transition: background 0.5s ease;
+  background: linear-gradient(
+    to right,
+    rgb(12, 41, 96) 0%,
+    rgb(12, 41, 96) 31.5%,
+    rgb(39, 110, 241) 31.5%,
+    rgb(39, 110, 241) 33.1%,
+    rgb(156, 188, 248) 33.1%,
+    rgb(156, 188, 248) 66.7%,
+    rgb(204, 204, 204) 66.7%,
+    rgb(204, 204, 204) 100%
+  );
+  align-self: center;
+}
+
+[part="thumb"] {
+  position: absolute;
+  z-index: 1;
+  cursor: grab;
+  user-drag: none;
+  user-select: none;
+  touch-action: none;
+  height: 42px;
+  width: 42px;
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(170, 170, 170) 0px 2px 6px;
+}

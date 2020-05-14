@@ -72,10 +72,11 @@
   transform: translateY(0px);
 }
 
-::slotted([slot="header"]) {
+[part="header"] {
   box-sizing: border-box;
   display: block;
   position: sticky;
+  z-index: 500;
   background: var(--ab-color-white);
   left: 0;
   top: 0;

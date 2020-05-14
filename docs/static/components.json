@@ -758,11 +758,6 @@
           "default": "false"
         },
         {
-          "name": "autocomplete",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
           "name": "type",
           "description": "Input type",
           "type": "\"text\"|\"password\"|\"email\"|\"tel\"|\"number\"|\"url\"|\"search\"",
@@ -777,6 +772,11 @@
           "name": "errormessage",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "autocomplete",
+          "type": "string",
+          "default": "\"undefined\""
         },
         {
           "name": "max",
@@ -889,12 +889,6 @@
           "default": "false"
         },
         {
-          "name": "autocomplete",
-          "attribute": "autocomplete",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
           "name": "type",
           "attribute": "type",
           "description": "Input type",
@@ -912,6 +906,16 @@
           "attribute": "errormessage",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "inputmode",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "autocomplete",
+          "attribute": "autocomplete",
+          "type": "string",
+          "default": "\"undefined\""
         },
         {
           "name": "max",
@@ -1166,6 +1170,11 @@
           "default": "false"
         },
         {
+          "name": "title",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "no-backdrop",
           "type": "boolean",
           "default": "false"
@@ -1177,6 +1186,12 @@
           "attribute": "open",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "type": "string",
+          "default": "\"\""
         },
         {
           "name": "noBackdrop",
@@ -1297,6 +1312,59 @@
       "events": [
         {
           "name": "change"
+        }
+      ]
+    },
+    {
+      "name": "core-range",
+      "path": "./../../lib/src/components/range/range.wc.js",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "100"
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "default": "10"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "string"
+        },
+        {
+          "name": "arrayValues"
+        },
+        {
+          "name": "min",
+          "attribute": "min",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "max",
+          "attribute": "max",
+          "type": "number",
+          "default": "100"
+        },
+        {
+          "name": "step",
+          "attribute": "step",
+          "type": "number",
+          "default": "10"
         }
       ]
     },
@@ -1805,6 +1873,11 @@
           "name": "value",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -1836,6 +1909,12 @@
           "attribute": "value",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "events": [
