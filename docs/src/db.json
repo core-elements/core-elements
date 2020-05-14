@@ -124,7 +124,7 @@
       "name": "Toggle",
       "desc": "A general toggle element",
       "category": "Form",
-      "content": "\n<core-knobs  element=\"core-toggle\">\n<core-toggle>Toggle</core-toggle>\n</core-knobs>\n\n## Custom icons\n\n<core-knobs hideTabs  element=\"core-toggle\">\n<core-toggle>\n  <i slot=\"on\" style=\"--ggs: 0.8;\" class=\"gg-sun\"></i>\n  Label\n  <i slot=\"off\" style=\"--ggs: 0.8;\" class=\"gg-moon\"></i>\n</core-toggle>\n</core-knobs>\n\n## Animate icon\n\n<core-knobs hideTabs  element=\"core-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<core-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</core-toggle>\n</core-knobs>\n"
+      "content": "\n<core-knobs element=\"core-toggle\">\n<core-toggle>Toggle</core-toggle>\n</core-knobs>\n\n## Custom icons\n\n<core-knobs hideTabs  element=\"core-toggle\">\n<core-toggle checked>\n  <i slot=\"on\" style=\"--ggs: 0.8;\" class=\"gg-sun\"></i>\n  Label\n  <i slot=\"off\" style=\"--ggs: 0.8;\" class=\"gg-moon\"></i>\n</core-toggle>\n</core-knobs>\n\n## Animate icon\n\n<core-knobs hideTabs  element=\"core-toggle\">\n<style>\n  .toggle-animation [slot=\"on\"] {\n    opacity: 0;\n    transition: all 0.5s ease;\n    transform: rotate(-45deg);\n  }\n  .toggle-animation[checked] [slot=\"on\"] {\n    opacity: 1;\n    visibility: visible;\n    transform: rotate(0deg);\n  }\n</style>\n<core-toggle class=\"toggle-animation\">\n  <i slot=\"on\" class=\"gg-check\"></i>\n  Label\n</core-toggle>\n</core-knobs>\n"
     }
   ]
 }

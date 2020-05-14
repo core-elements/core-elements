@@ -4,14 +4,14 @@ desc: A general toggle element
 category: Form
 ---
 
-<core-knobs  element="core-toggle">
+<core-knobs element="core-toggle">
 <core-toggle>Toggle</core-toggle>
 </core-knobs>
 
 ## Custom icons
 
 <core-knobs hideTabs  element="core-toggle">
-<core-toggle>
+<core-toggle checked>
   <i slot="on" style="--ggs: 0.8;" class="gg-sun"></i>
   Label
   <i slot="off" style="--ggs: 0.8;" class="gg-moon"></i>
