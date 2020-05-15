@@ -4,6 +4,10 @@
     cubic-bezier(0.785, 0.135, 0.15, 0.86);
   --core-modal-box-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   --core-modal-box-box-shadow: none;
+  --core-modal-box-max-height: 90%;
+  --core-modal-box-min-height: 300px;
+  --core-modal-box-max-width: 600px;
+  --core-modal-box-min-width: 200px;
   --core-modal-content-padding: var(--core-space-md);
   --core-modal-box-border: 1px solid var(--core-color-ui);
 }
@@ -57,9 +61,10 @@
   transition: var(--core-modal-box-transition);
   transform: translateY(50px);
   width: 100%;
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 200px;
+  max-width: var(--core-modal-box-max-width);
+  min-width: var(--core-modal-box-min-width);
+  min-height: var(--core-modal-box-min-height);
+  max-height: var(--core-modal-box-max-height);
   height: auto;
   background: var(--core-color-white);
   z-index: 1000;
