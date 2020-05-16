@@ -22,7 +22,11 @@
   line-height: inherit;
 }
 
-:host(:last-child) > *:first-child {
+:host([no-wrap]) > *:first-child {
+  white-space: nowrap;
+}
+
+:host(:last-of-type) > *:first-child {
   margin-bottom: 0;
 }
 
