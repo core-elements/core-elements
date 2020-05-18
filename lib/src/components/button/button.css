@@ -3,7 +3,7 @@
   --core-button-bg-color: var(--core-color-ui-lighter);
   --core-button-border: none;
   --core-button-border-radius: none;
-  --core-button-font-size: var(--core-font-size-sm);
+  --core-button-font-size: var(--core-font-size-md);
   --core-button-text-color: var(--core-font-color);
   --core-button-box-shadow: 0;
   --core-button-transform: scale(1);
@@ -38,16 +38,19 @@
 }
 
 :host([size="sm"]) {
+  --core-button-font-size: var(--core-font-size-md);
   --core-button-height: var(--core-size-sm);
-  --core-button-padding: 0 var(--core-space-sm);
+  --core-button-padding: 0 var(--core-space-md);
 }
 
 :host([size="md"]) {
+  --core-button-font-size: var(--core-font-size-md);
   --core-button-height: var(--core-size-md);
   --core-button-padding: 0 var(--core-space-md);
 }
 
 :host([size="lg"]) {
+  --core-button-font-size: var(--core-font-size-md);
   --core-button-height: var(--core-size-lg);
   --core-button-padding: 0 var(--core-space-lg);
 }

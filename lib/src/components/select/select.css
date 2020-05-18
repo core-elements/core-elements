@@ -1,7 +1,7 @@
 :host {
   /* ASSIGN TO LOCAL VARIABLES */
   --core-select-active-color: var(--core-color-focus);
-  --core-select-font-size: var(--core-font-size-sm);
+  --core-select-font-size: var(--core-font-size-md);
   --core-select-min-height: var(--core-size-md);
   --core-select-background: none;
   --core-select-padding: 0px;
@@ -86,6 +86,17 @@
   min-height: var(--core-select-min-height);
 }
 
+[part="input-field-wrapper"] {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+::slotted([slot="start"]) {
+  margin-right: var(--core-space-sm);
+}
+
 [part="input-field"] {
   flex: 1;
   width: 100%;
@@ -127,15 +138,14 @@ button[part="arrow-button"] {
   outline: 0;
 }
 
-button[part="arrow-button"] .arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--core-color-black);
+:host([list-open]) {
 }
 
-button[part="arrow-button"] .arrow-down {
+:host([list-open]) button[part="arrow-button"] .arrow-icon {
+  transform: rotate(180deg);
+}
+
+button[part="arrow-button"] .arrow-icon {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;

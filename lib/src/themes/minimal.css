@@ -60,10 +60,11 @@
   --core-space-xl: 64px;
 
   --core-font-size-xs: 0.83em;
-  --core-font-size-sm: 1em;
-  --core-font-size-md: 1.17em;
-  --core-font-size-lg: 1.5em;
-  --core-font-size-xl: 2em;
+  --core-font-size-sm: 0.9em;
+  --core-font-size-md: 1em;
+  --core-font-size-lg: 1.17em;
+  --core-font-size-xl: 1.5em;
+  --core-font-size-xxl: 2em;
 
   --core-border-radius-xs: 2px;
   --core-border-radius-sm: 4px;

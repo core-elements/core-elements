@@ -1,5 +1,5 @@
 :host {
-  --core-modal-backdrop-bg-color: rgba(0, 0, 0, 0.4);
+  --core-modal-backdrop-bg-color: rgba(0, 0, 0, 0.1);
   --core-modal-backdrop-transition: all 0.2s
     cubic-bezier(0.785, 0.135, 0.15, 0.86);
   --core-modal-box-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -98,7 +98,7 @@
   z-index: 1;
   display: inline-block;
   border: 0;
-  font-size: var(--core-font-size-sm);
+  font-size: var(--core-font-size-md);
   color: var(--core-color-font);
   background: transparent;
   cursor: pointer;

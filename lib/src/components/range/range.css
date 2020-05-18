@@ -1,46 +1,63 @@
 :host {
   user-drag: none;
-  transform: scale(1);
   cursor: inherit;
-  height: 36px;
-  display: flex;
+  display: block;
+  height: auto;
   width: 100%;
+}
+
+[part="line-wrapper"] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: var(--core-size-xs);
+  padding: 0 calc(var(--core-size-xs) / 2);
 }
 
 [part="line"] {
   user-drag: none;
   position: relative;
+  display: block;
   height: 5px;
   width: 100%;
+  background: var(--core-color-ui-light);
   border-radius: 4px;
   transition: background 0.5s ease;
-  background: linear-gradient(
-    to right,
-    rgb(12, 41, 96) 0%,
-    rgb(12, 41, 96) 31.5%,
-    rgb(39, 110, 241) 31.5%,
-    rgb(39, 110, 241) 33.1%,
-    rgb(156, 188, 248) 33.1%,
-    rgb(156, 188, 248) 66.7%,
-    rgb(204, 204, 204) 66.7%,
-    rgb(204, 204, 204) 100%
-  );
   align-self: center;
 }
 
+[part="track"] {
+  background: var(--core-color-primary);
+  position: absolute;
+  transition: all 0.2s ease;
+  height: 5px;
+}
+
 [part="thumb"] {
+  outline: 0;
   position: absolute;
   z-index: 1;
   cursor: grab;
   user-drag: none;
   user-select: none;
   touch-action: none;
-  height: 42px;
-  width: 42px;
-  border-radius: 4px;
+  height: var(--core-size-xs);
+  width: var(--core-size-xs);
+  border-radius: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(calc(var(--core-size-xs) / 2 * -1));
   transition: all 0.2s ease;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgb(170, 170, 170) 0px 2px 6px;
+}
+
+[part="thumb"]:focus {
+  box-shadow: 0 0 0 2px var(--core-color-focus);
+}
+
+[part="labels"] {
+  margin-top: var(--core-space-md);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }

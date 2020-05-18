@@ -1,5 +1,5 @@
 :host {
-  --core-font-size: var(--core-font-size-sm);
+  --core-font-size: var(--core-font-size-md);
   --core-font-weight: 400;
   --core-text-color: inherit;
 }
@@ -41,31 +41,31 @@
 
 :host([tag="h1"]),
 :host([look="h1"]) {
-  --core-font-size: var(--core-font-size-xl);
+  --core-font-size: var(--core-font-size-xxl);
   --core-font-weight: 700;
 }
 
 :host([tag="h2"]),
 :host([look="h2"]) {
-  --core-font-size: var(--core-font-size-lg);
+  --core-font-size: var(--core-font-size-xl);
   --core-font-weight: 700;
 }
 
 :host([tag="h3"]),
 :host([look="h3"]) {
-  --core-font-size: var(--core-font-size-md);
+  --core-font-size: var(--core-font-size-lg);
   --core-font-weight: 700;
 }
 
 :host([tag="h4"]),
 :host([look="h4"]) {
-  --core-font-size: var(--core-font-size-sm);
+  --core-font-size: var(--core-font-size-md);
   --core-font-weight: 600;
 }
 
 :host([tag="h5"]),
 :host([look="h5"]) {
-  --core-font-size: var(--core-font-size-xs);
+  --core-font-size: var(--core-font-size-sm);
   --core-font-weight: 600;
 }
 

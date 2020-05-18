@@ -6,7 +6,7 @@
   --core-input-border-radius: none;
   --core-input-box-shadow: none;
   --core-input-placeholder-color: var(--core-color-font-light);
-  --core-input-font-size: var(--core-font-size-sm);
+  --core-input-font-size: var(--core-font-size-md);
 }
 
 :host {
@@ -73,7 +73,7 @@
   color: var(--core-color-font);
   background-color: var(--core-input-bg-color);
   width: 100%;
-  font-size: var(--core-font-size-sm);
+  font-size: var(--core-font-size-md);
   border-radius: var(--core-input-border-radius);
   height: 100%;
   outline: 0;

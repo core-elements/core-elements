@@ -6,7 +6,7 @@
   --core-textarea-border-radius: none;
   --core-textarea-box-shadow: none;
   --core-textarea-placeholder-color: var(--core-color-font-light);
-  --core-textarea-font-size: var(--core-font-size-sm);
+  --core-textarea-font-size: var(--core-font-size-md);
   --core-textarea-font-family: var(--core-font-family);
   --core-textarea-color: var(--core-color-font);
 }

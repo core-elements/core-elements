@@ -20,7 +20,7 @@
 :host {
   border: 0;
   color: var(--core-color-font-light);
-  font-size: var(--core-font-size-sm);
+  font-size: var(--core-font-size-md);
   background: none;
   box-shadow: var(--core-tab-box-shadow);
   outline: 0;

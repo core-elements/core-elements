@@ -11,15 +11,6 @@
 
 :host([clickable]) {
   cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-:host([clickable]:hover) {
-  transform: translateY(-2px);
-}
-
-:host([clickable]:active) {
-  transform: translateY(0);
 }
 
 @each $i in primary, primary-light, primary-dark, secondary, secondary-light,
@@ -36,7 +27,7 @@
   white, black
 {
   :host([border="$(i)"]) {
-    border: 1px solid var(--core-color-$(i));
+    border: 2px solid var(--core-color-$(i));
   }
 }
 
@@ -67,6 +58,30 @@
 }
 
 @each $i in none, xs, sm, md, lg, xl {
+  :host([padding-l="$(i)"]) {
+    padding-left: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-r="$(i)"]) {
+    padding-right: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-t="$(i)"]) {
+    padding-top: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([padding-b="$(i)"]) {
+    padding-bottom: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
   :host([margin="$(i)"]) {
     margin: var(--core-space-$(i));
   }
@@ -82,6 +97,30 @@
 @each $i in none, xs, sm, md, lg, xl {
   :host([margin-y="$(i)"]) {
     margin-top: var(--core-space-$(i));
+    margin-bottom: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-l="$(i)"]) {
+    margin-left: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-r="$(i)"]) {
+    margin-right: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-t="$(i)"]) {
+    margin-top: var(--core-space-$(i));
+  }
+}
+
+@each $i in none, xs, sm, md, lg, xl {
+  :host([margin-b="$(i)"]) {
     margin-bottom: var(--core-space-$(i));
   }
 }
