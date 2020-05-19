@@ -9,7 +9,7 @@
   --core-modal-box-max-width: 600px;
   --core-modal-box-min-width: 200px;
   --core-modal-content-padding: var(--core-space-md);
-  --core-modal-box-border: 1px solid var(--core-color-ui);
+  --core-modal-box-border: 1px solid transparent;
 }
 
 :host {
