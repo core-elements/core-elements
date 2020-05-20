@@ -12,7 +12,7 @@
   max-width: 100%;
 }
 
-@each $i in xs, sm, md, lg, xl {
+@each $i in xxs, xs, sm, md, lg, xl {
   :host([size="$(i)"]) {
     max-width: var(--core-container-$(i));
   }
