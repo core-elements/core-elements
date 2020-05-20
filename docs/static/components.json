@@ -92,6 +92,30 @@
           "default": "\"\""
         },
         {
+          "name": "padding-l",
+          "description": "Box margin left",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-r",
+          "description": "Box padding right",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-t",
+          "description": "Box padding top",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "padding-b",
+          "description": "Box padding bottom",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
           "name": "margin",
           "description": "Box margin",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
@@ -106,6 +130,30 @@
         {
           "name": "margin-y",
           "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-l",
+          "description": "Box margin left",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-r",
+          "description": "Box margin right",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-t",
+          "description": "Box margin top",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "margin-b",
+          "description": "Box margin bottom",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         }
@@ -174,6 +222,34 @@
           "default": "\"\""
         },
         {
+          "name": "paddingL",
+          "attribute": "padding-l",
+          "description": "Box margin left",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingR",
+          "attribute": "padding-r",
+          "description": "Box padding right",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingT",
+          "attribute": "padding-t",
+          "description": "Box padding top",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "paddingB",
+          "attribute": "padding-b",
+          "description": "Box padding bottom",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
           "name": "margin",
           "attribute": "margin",
           "description": "Box margin",
@@ -191,6 +267,34 @@
           "name": "marginY",
           "attribute": "margin-y",
           "description": "Box padding vertical",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginL",
+          "attribute": "margin-l",
+          "description": "Box margin left",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginR",
+          "attribute": "margin-r",
+          "description": "Box margin right",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginT",
+          "attribute": "margin-t",
+          "description": "Box margin top",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
+        },
+        {
+          "name": "marginB",
+          "attribute": "margin-b",
+          "description": "Box margin bottom",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         }
@@ -470,6 +574,11 @@
           "name": "lg-wrap",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "full-height",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -578,6 +687,12 @@
         {
           "name": "lWrap",
           "attribute": "lg-wrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "fullHeight",
+          "attribute": "full-height",
           "type": "boolean",
           "default": "false"
         }
@@ -832,6 +947,16 @@
           "default": "\"undefined\""
         },
         {
+          "name": "id",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
           "name": "focused",
           "type": "boolean",
           "default": "false"
@@ -981,6 +1106,18 @@
           "default": "\"undefined\""
         },
         {
+          "name": "id",
+          "attribute": "id",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"undefined\""
+        },
+        {
           "name": "focused",
           "attribute": "focused",
           "type": "boolean",
@@ -1061,6 +1198,11 @@
           "name": "properties",
           "type": "array",
           "default": "[]"
+        },
+        {
+          "name": "events",
+          "type": "array",
+          "default": "[]"
         }
       ],
       "properties": [
@@ -1128,6 +1270,12 @@
         {
           "name": "properties",
           "attribute": "properties",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "events",
+          "attribute": "events",
           "type": "array",
           "default": "[]"
         }
@@ -1337,6 +1485,11 @@
           "name": "step",
           "type": "number",
           "default": "10"
+        },
+        {
+          "name": "sensitivity",
+          "type": "number",
+          "default": "1"
         }
       ],
       "properties": [
@@ -1365,6 +1518,12 @@
           "attribute": "step",
           "type": "number",
           "default": "10"
+        },
+        {
+          "name": "sensitivity",
+          "attribute": "sensitivity",
+          "type": "number",
+          "default": "1"
         }
       ]
     },
@@ -1652,6 +1811,9 @@
           "name": "change"
         },
         {
+          "name": "select"
+        },
+        {
           "name": "input"
         }
       ]
@@ -1775,6 +1937,11 @@
           "default": "\"p\""
         },
         {
+          "name": "noWrap",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "weight",
           "type": "string",
           "default": "\"\""
@@ -1799,6 +1966,12 @@
           "description": "Button look",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
           "default": "\"p\""
+        },
+        {
+          "name": "noWrap",
+          "attribute": "noWrap",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "weight",
