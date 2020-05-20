@@ -24,6 +24,13 @@ category: Form
 </core-input>
 </core-knobs>
 
+## Autocomplete
+
+<core-knobs hideTabs  element="core-input">
+<core-input autocomplete="email" type="email" placeholder="Email">
+</core-input>
+</core-knobs>
+
 ## Number
 
 <core-knobs hideTabs  element="core-input">
