@@ -4,7 +4,7 @@
   --core-button-border: none;
   --core-button-border-radius: none;
   --core-button-font-size: var(--core-font-size-md);
-  --core-button-text-color: var(--core-font-color);
+  --core-button-text-color: var(--core-color-font);
   --core-button-box-shadow: 0;
   --core-button-transform: scale(1);
   --core-button-transition: all 0.2s ease;
@@ -56,7 +56,7 @@
 }
 
 :host(:hover) {
-  --core-button-bg-color: var(--core-color-ui-light);
+  --core-button-bg-color: var(--core-color-ui-lightest);
 }
 
 :host(:focus) {
@@ -96,7 +96,7 @@
 }
 
 :host([type="primary"]:hover) {
-  --core-button-bg-color: var(--core-color-primary-dark);
+  --core-button-bg-color: var(--core-color-primary-light);
 }
 
 :host([type="secondary"]) {
@@ -105,7 +105,7 @@
 }
 
 :host([type="secondary"]:hover) {
-  --core-button-bg-color: var(--core-color-secondary-dark);
+  --core-button-bg-color: var(--core-color-secondary-light);
 }
 
 :host([type="transparent"]) {
@@ -123,7 +123,16 @@
 }
 
 :host([type="success"]:hover) {
-  --core-button-bg-color: var(--core-color-success-dark);
+  --core-button-bg-color: var(--core-color-success-light);
+}
+
+:host([type="warning"]) {
+  --core-button-bg-color: var(--core-color-warning);
+  --core-button-text-color: var(--core-color-white);
+}
+
+:host([type="warning"]:hover) {
+  --core-button-bg-color: var(--core-color-warning-light);
 }
 
 :host([type="danger"]) {
@@ -132,7 +141,7 @@
 }
 
 :host([type="danger"]:hover) {
-  --core-button-bg-color: var(--core-color-danger-dark);
+  --core-button-bg-color: var(--core-color-danger-light);
 }
 
 /* Styles */

@@ -15,6 +15,7 @@ category: Interaction
 <core-button type="primary">Primary</core-button>
 <core-button type="secondary">Secondary</core-button>
 <core-button type="success">Success</core-button>
+<core-button type="warning">Warning</core-button>
 <core-button type="danger">Danger</core-button>
 <core-button type="transparent">Transparent</core-button>
 </core-knobs>
@@ -22,12 +23,7 @@ category: Interaction
 ## Disabled
 
 <core-knobs hideTabs  element="core-button">
-<core-button disabled>Default</core-button>
 <core-button disabled type="primary">Primary</core-button>
-<core-button disabled type="secondary">Secondary</core-button>
-<core-button disabled type="success">Success</core-button>
-<core-button disabled type="danger">Danger</core-button>
-<core-button disabled type="transparent">Transparent</core-button>
 </core-knobs>
 
 ## Sizes
