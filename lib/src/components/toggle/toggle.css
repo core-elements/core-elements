@@ -7,7 +7,7 @@
   );
   --core-toggle-icon-size: calc(var(--core-toggle-indicator-size) * 0.8);
   vertical-align: middle;
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   height: var(--core-toggle-height);
@@ -16,6 +16,11 @@
 :host([full]) {
   display: flex;
   width: 100%;
+}
+
+:host([disabled]) {
+  cursor: default;
+  opacity: 0;
 }
 
 :host label {

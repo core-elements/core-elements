@@ -17,7 +17,7 @@
             <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
             <router-link tag="core-button" to="/components" type="secondary">Components</router-link>
           </core-box>
-          <core-box margin-y="md">
+          <core-box margin-y="lg">
             <core-tabs
               @change="(e) => (installMethod = e.target.value)"
               :value="installMethod"
@@ -25,18 +25,23 @@
               <core-tab>NPM</core-tab>
               <core-tab>CDN</core-tab>
             </core-tabs>
-            <pre
+          </core-box>
+          <core-box>
+      <pre
               v-if="installMethod === 'NPM'"
             ><code align="center" class="hljs">npm install --save core-elements</code></pre>
             <pre v-if="installMethod === 'CDN'">
               <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/core-elements"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<!----></code>
-    </core-box>
+<!----></code></pre>
+        </core-box>
+
         </core-grid-item>
 
         <core-grid-item sm="12" md="12" lg="6">
           <core-box depth="md" padding-y="lg" padding-x="lg">
-            <core-text tag="h2">Examples</core-text>
+            <core-box margin-b="lg">
+            <core-text tag="h2" weight="500">Examples</core-text>
+            </core-box>
             <core-grid columns="2">
               <core-grid-item sm="2" md="1">
                 <core-select placeholder="Select an option">

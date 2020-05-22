@@ -5,7 +5,7 @@
       "name": "Accordion",
       "desc": "Accordions",
       "category": "Interaction",
-      "content": "\n<core-knobs element=\"core-accordion\">\n  <core-accordion  title=\"Title\">\n  <core-box margin-y=\"md\">Content</core-box>\n  </core-accordion>\n  <core-accordion  title=\"Title\">\n    <core-box margin-y=\"md\">\n      <core-text tag=\"h1\">Content</core-text>\n      <core-text tag=\"h1\">Content</core-text>\n      <core-text tag=\"h1\">Content</core-text>\n    </core-box>\n  </core-accordion>\n</core-knobs>\n\n## Custom indicator\n\n<core-knobs hideTabs element=\"core-accordion\">\n<style>\n  .indicator [slot=\"start\"] {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  .indicator[open] [slot=\"start\"] {\n    transform: rotate(90deg);\n  }\n</style>\n<core-accordion class=\"indicator\" hide-default-indicator title=\"Title\">\n  <i slot=\"start\" class=\"gg-chevron-right\"></i>\n  <core-box margin-y=\"md\">Content</core-box>\n</core-accordion>\n</core-knobs>\n"
+      "content": "\n<core-knobs element=\"core-accordion\">\n<core-accordion  title=\"Title\">\n  <core-box margin-y=\"md\">Content</core-box>\n</core-accordion>\n</core-knobs>\n\n## Custom indicator\n\n<core-knobs hideTabs element=\"core-accordion\">\n<style>\n  .indicator [slot=\"start\"] {\n    transform: rotate(0deg);\n    transition: all 0.2s ease;\n  }\n  .indicator[open] [slot=\"start\"] {\n    transform: rotate(90deg);\n  }\n</style>\n<core-accordion class=\"indicator\" hide-default-indicator title=\"Title\">\n  <i slot=\"start\" class=\"gg-chevron-right\"></i>\n  <core-box margin-y=\"md\">Content</core-box>\n</core-accordion>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/button/button.md",
@@ -20,13 +20,6 @@
       "desc": "A general purpose box with padding, border, depth and more",
       "category": "Layout",
       "content": "\n<core-knobs element=\"core-box\">\n<core-box padding=\"lg\" depth=\"md\">Box</core-box>\n</core-knobs>\n\n## Card\n\n<core-knobs hideTabs element=\"core-box\">\n  <core-box bg=\"white\" inline depth=\"sm\" radius=\"md\" border=\"ui-light\">\n    <img width=\"400\" height=\"250\" src=\"https://placeimg.com/400/250/tech\">\n    <core-box padding=\"md\">\n      <core-text tag=\"h2\">Card Title</core-text>\n      <core-text tag=\"h6\">Subtitle</core-text>\n      <core-button type=\"primary\">Click me</core-button>\n    </core-box>\n  </core-box>\n</core-knobs>\n"
-    },
-    {
-      "path": "../lib/src/components/container/container.md",
-      "name": "Container",
-      "desc": "An element to limit the width of your content",
-      "category": "Layout",
-      "content": "\n<core-knobs  element=\"core-container\">\n<core-container style=\"border: 1px solid gray\">Container</core-container>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/checkbox/checkbox.md",
@@ -50,6 +43,13 @@
       "content": "\n<core-knobs  element=\"core-grid\">\n<core-grid>\n  <core-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"6\">\n    Grid Item 1\n  </core-grid-item>\n  <core-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"4\">\n    Grid Item 2\n  </core-grid-item>\n  <core-grid-item style=\"border: 1px solid gray\" sm=\"12\" md=\"2\">\n    Grid Item 3\n  </core-grid-item>\n</core-grid>\n</core-knobs>\n"
     },
     {
+      "path": "../lib/src/components/container/container.md",
+      "name": "Container",
+      "desc": "An element to limit the width of your content",
+      "category": "Layout",
+      "content": "\n<core-knobs  element=\"core-container\">\n<core-container style=\"border: 1px solid gray\">Container</core-container>\n</core-knobs>\n"
+    },
+    {
       "path": "../lib/src/components/input/input.md",
       "name": "Input",
       "desc": "A input element",
@@ -64,13 +64,6 @@
       "content": "\n<core-knobs hideEvents tab=\"src\"  element=\"core-label\">\n<core-label>Label</core-label>\n</core-knobs>\n"
     },
     {
-      "path": "../lib/src/components/modal/modal.md",
-      "name": "Modal",
-      "desc": "A modal",
-      "category": "Interaction",
-      "content": "\n<core-knobs  element=\"core-modal\">\n<core-modal id=\"modal\">\n  Modal content\n</core-modal>\n<core-button onclick=\"modal.show()\">Show modal</core-button>\n</core-knobs>\n\n## With Title\n\n<core-knobs hideTabs  element=\"core-modal\">\n<core-modal title=\"Title\" id=\"modalTwo\">\n  Modal content\n</core-modal>\n<core-button onclick=\"modalTwo.show()\">Show modal</core-button>\n</core-knobs>\n"
-    },
-    {
       "path": "../lib/src/components/list/list.md",
       "name": "List",
       "desc": "List",
@@ -78,18 +71,25 @@
       "content": "\n<core-knobs element=\"core-list\">\n  <core-list bordered selectable>\n    <core-list-item>\n     <i slot=\"start\" class=\"gg-check\"></i>\n      List item\n    </core-list-item>\n    <core-list-item>\n     <i slot=\"start\" class=\"gg-check\"></i>\n      List item\n    </core-list-item>\n  </core-list>\n</core-knobs>\n"
     },
     {
+      "path": "../lib/src/components/modal/modal.md",
+      "name": "Modal",
+      "desc": "A modal",
+      "category": "Interaction",
+      "content": "\n<core-knobs  element=\"core-modal\">\n<core-modal id=\"modal\">\n  Modal content\n</core-modal>\n<core-button onclick=\"modal.show()\">Show modal</core-button>\n</core-knobs>\n\n## With Title\n\n<core-knobs hideTabs  element=\"core-modal\">\n<core-modal title=\"Title\" id=\"modalTwo\">\n  Modal content\n</core-modal>\n<core-button onclick=\"modalTwo.show()\">Show modal</core-button>\n</core-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/overlay/overlay.md",
+      "name": "Overlay",
+      "desc": "Overlay",
+      "category": "Interaction",
+      "content": "\n<core-knobs hideEvents tab=\"src\"  element=\"core-overlay\">\n<core-overlay position-y=\"center\" position-x=\"center\">\n  <core-button full slot=\"trigger\">Button</core-button>\n  <core-box slot=\"content\" padding=\"sm\" depth=\"sm\">\n    <core-text>Hello</core-text>\n  </core-box>\n</core-overlay>\n</core-knobs>\n"
+    },
+    {
       "path": "../lib/src/components/radio/radio.md",
       "name": "Radio",
       "desc": "Radio button",
       "category": "Form",
       "content": "\n<core-knobs  element=\"core-radio\">\n<core-radio name=\"example-1\" value=\"1\">Option 1</core-radio>\n<core-radio name=\"example-1\" value=\"2\">Option 2</core-radio>\n<core-radio name=\"example-1\" value=\"3\" disabled>Option 3</core-radio>\n</core-knobs>\n\n## Custom icons\n\n<core-knobs hideTabs  element=\"core-radio\">\n<style>\n  core-radio.animate [slot=\"indicator\"] {\n    opacity: 0;\n    transform: rotate(-45deg);\n    transition: transform 0.4s ease;\n  }\n  core-radio.animate[checked] [slot=\"indicator\"] {\n    opacity: 1;\n    transform: rotate(0deg);\n  }\n</style>\n\n<core-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</core-radio>\n\n<core-radio class=\"animate\" name=\"example-3\">\n  <span>Radio</span>\n  <i slot=\"indicator\" class=\"gg-check\"></i>\n</core-radio>\n</core-knobs>\n\n## Choice buttons\n\n<core-knobs hideTabs  element=\"core-radio\">\n<style>\n  core-radio.choice {\n    margin-bottom: var(--core-space-md);\n    padding: 0 var(--core-space-md);\n    height: var(--core-size-xl);\n    border: 2px solid var(--core-color-ui-light);\n  }\n  core-radio.choice:hover {\n    border-color: var(--core-color-ui);\n  }\n  core-radio.choice[checked] {\n    border-color: var(--core-color-focus);\n  }\n</style>\n\n<core-radio class=\"choice\" name=\"example-4\" full>\n  <core-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <core-text tag=\"div\" look=\"h3\">Standard delivery</core-text>\n    <core-text tag=\"div\" look=\"p\">4-5 days</core-text>\n  </div>\n  <div>\n    <core-text tag=\"h3\">19$</core-text>\n  </div>\n  </core-flex>\n</core-radio>\n<core-radio class=\"choice\" name=\"example-4\" full>\n  <core-flex justify-content=\"between\" align-items=\"center\">\n  <div>\n    <core-text tag=\"div\" look=\"h3\">Express delivery</core-text>\n    <core-text tag=\"div\" look=\"p\">1-2 days</core-text>\n  </div>\n  <div>\n    <core-text tag=\"h3\">30$</core-text>\n  </div>\n  </core-flex>\n</core-radio>\n\n</core-knobs>\n"
-    },
-    {
-      "path": "../lib/src/components/range/range.md",
-      "name": "Range",
-      "desc": "Range",
-      "category": "Form",
-      "content": "\n<core-knobs element=\"core-range\">\n  <core-range step=\"1\" value=\"10\"><core-range>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/select/select.md",
@@ -106,11 +106,11 @@
       "content": "\n<core-knobs  element=\"core-tabs\">\n<core-tabs>\n  <core-tab selected>Tab 1</core-tab>\n  <core-tab>Tab 2</core-tab>\n</core-tabs>\n</core-knobs>\n\n## With targets\n\n<core-knobs  element=\"core-tabs\">\n<core-tabs full position=\"left\">\n  <core-tab selected target=\"targetOne\">Tab 1</core-tab>\n  <core-tab target=\"targetTwo\">Tab 2</core-tab>\n</core-tabs>\n<div id=\"targetOne\">Target 1</div>\n<div id=\"targetTwo\">Target 2</div>\n</core-knobs>\n\n## Position\n\n<core-knobs  element=\"core-tabs\">\n<core-tabs full position=\"left\">\n  <core-tab selected>Tab 1</core-tab>\n  <core-tab>Tab 2</core-tab>\n</core-tabs>\n<core-tabs full position=\"right\">\n  <core-tab selected>Tab 1</core-tab>\n  <core-tab>Tab 2</core-tab>\n</core-tabs>\n<core-tabs full position=\"center\">\n  <core-tab selected>Tab 1</core-tab>\n  <core-tab>Tab 2</core-tab>\n</core-tabs>\n</core-knobs>\n\n## With buttons\n\nAny child you put inside `core-tabs` will get the `selected` attribute when you click on it.\nThis means you can also use other elements than the `core-tab` as children, and style them accordingly.\n\n<core-knobs  element=\"core-tabs\">\n<style>\ncore-tabs core-button[selected],\ncore-tabs core-button[selected]:hover {\n  --core-button-bg-color: var(--core-color-primary);\n  --core-button-text-color: var(--core-color-white);\n}\n</style>\n<core-tabs>\n  <core-button selected>Tab 1</core-button>\n  <core-button>Tab 2</core-button>\n  <core-button disabled>Tab 3</core-button>\n</core-tabs>\n</core-knobs>\n"
     },
     {
-      "path": "../lib/src/components/text/text.md",
-      "name": "Text",
-      "desc": "A general purpose text element",
-      "category": "Layout",
-      "content": "\n<core-knobs  element=\"core-text\">\n<core-text tag=\"h1\">Core text</core-text>\n</core-knobs>\n\n## Tags\n\n<core-knobs hideTabs  element=\"core-text\">\n  <core-text tag=\"h1\">Typography H1</core-text>\n  <core-text tag=\"h2\">Typography H2</core-text>\n  <core-text tag=\"h3\">Typography H3</core-text>\n  <core-text tag=\"h4\">Typography H4</core-text>\n  <core-text tag=\"h5\">Typography H5</core-text>\n  <core-text tag=\"h6\">Typography H6</core-text>\n  <core-text tag=\"p\">Typography P</core-text>\n  <core-text full tag=\"small\">Typography Small</core-text>\n  <core-text full tag=\"b\">Typography B</core-text>\n  <core-text full tag=\"i\">Typography I</core-text>\n</core-knobs>\n\n## Looks\n\n<core-knobs hideTabs  element=\"core-text\">\n  <core-text look=\"h1\">Typography H1</core-text>\n  <core-text look=\"h2\">Typography H2</core-text>\n  <core-text look=\"h3\">Typography H3</core-text>\n  <core-text look=\"h4\">Typography H4</core-text>\n  <core-text look=\"h5\">Typography H5</core-text>\n  <core-text look=\"h6\">Typography H6</core-text>\n  <core-text look=\"p\">Typography P</core-text>\n  <core-text full look=\"lead\">Typography Lead</core-text>\n</core-knobs>\n"
+      "path": "../lib/src/components/range/range.md",
+      "name": "Range",
+      "desc": "Range",
+      "category": "Form",
+      "content": "\n<core-knobs element=\"core-range\">\n  <core-range step=\"1\" value=\"10\"><core-range>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/textarea/textarea.md",
@@ -118,6 +118,13 @@
       "desc": "A general purpose text element",
       "category": "Form",
       "content": "\n<core-knobs  element=\"core-textarea\">\n<core-textarea></core-textarea>\n</core-knobs>\n"
+    },
+    {
+      "path": "../lib/src/components/text/text.md",
+      "name": "Text",
+      "desc": "A general purpose text element",
+      "category": "Layout",
+      "content": "\n<core-knobs  element=\"core-text\">\n<core-text tag=\"h1\">Core text</core-text>\n</core-knobs>\n\n## Tags\n\n<core-knobs hideTabs  element=\"core-text\">\n  <core-text tag=\"h1\">Typography H1</core-text>\n  <core-text tag=\"h2\">Typography H2</core-text>\n  <core-text tag=\"h3\">Typography H3</core-text>\n  <core-text tag=\"h4\">Typography H4</core-text>\n  <core-text tag=\"h5\">Typography H5</core-text>\n  <core-text tag=\"h6\">Typography H6</core-text>\n  <core-text tag=\"p\">Typography P</core-text>\n  <core-text full tag=\"small\">Typography Small</core-text>\n  <core-text full tag=\"b\">Typography B</core-text>\n  <core-text full tag=\"i\">Typography I</core-text>\n</core-knobs>\n\n## Looks\n\n<core-knobs hideTabs  element=\"core-text\">\n  <core-text look=\"h1\">Typography H1</core-text>\n  <core-text look=\"h2\">Typography H2</core-text>\n  <core-text look=\"h3\">Typography H3</core-text>\n  <core-text look=\"h4\">Typography H4</core-text>\n  <core-text look=\"h5\">Typography H5</core-text>\n  <core-text look=\"h6\">Typography H6</core-text>\n  <core-text look=\"p\">Typography P</core-text>\n  <core-text full look=\"lead\">Typography Lead</core-text>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/toggle/toggle.md",

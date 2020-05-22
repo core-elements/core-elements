@@ -8,7 +8,7 @@
 }
 
 :host {
-  cursor: default;
+  cursor: pointer;
   outline: 0;
   vertical-align: middle;
   height: var(--core-checkbox-height);

@@ -1891,6 +1891,11 @@
           "name": "position",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "size",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "properties": [
@@ -1910,6 +1915,12 @@
         {
           "name": "position",
           "attribute": "position",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
           "type": "string",
           "default": "\"\""
         }

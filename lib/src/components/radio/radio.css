@@ -20,6 +20,11 @@
   margin-right: 0;
 }
 
+:host([disabled]) {
+  opacity: 0.5;
+  cursor: default;
+}
+
 :host [part="input-field"] {
   position: absolute;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */

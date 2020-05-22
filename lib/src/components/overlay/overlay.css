@@ -1,0 +1,79 @@
+:host {
+  --core-overlay-translateX: -50%;
+  --core-overlay-translateY: 0px;
+  --core-overlay-scale: 0.8;
+  --core-overlay-opacity: 0;
+  --core-overlay-offset: var(--core-space-sm);
+}
+
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+:host([full]) {
+  width: 100%;
+  display: block;
+}
+
+[part="content"] {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: var(--core-overlay-opacity);
+  background: var(--core-color-white);
+  top: calc(100% + var(--core-overlay-offset));
+  left: 50%;
+  transform: scale(var(--core-overlay-scale))
+    translateX(var(--core-overlay-translateX))
+    translateY(var(--core-overlay-translateY));
+  transition: all 0.2s ease;
+  width: 100%;
+  border: 0;
+  z-index: 900;
+}
+
+/* MODIFIERS */
+
+:host([hoverable]:hover) [part="content"],
+:host([open]) [part="content"] {
+  visibility: visible;
+  --core-overlay-scale: 1;
+  --core-overlay-opacity: 1;
+  transition: all 0.2s ease;
+}
+
+:host([position-x="left"]) [part="content"] {
+  right: auto;
+  left: 0;
+  --core-overlay-translateX: 0px;
+}
+
+:host([position-x="right"]) [part="content"] {
+  left: auto;
+  right: 0;
+  --core-overlay-translateX: 0px;
+}
+
+:host([position-x="center"]) [part="content"] {
+  left: 50%;
+  --core-overlay-translateX: -50%;
+}
+
+:host([position-y="top"]) [part="content"] {
+  top: auto;
+  bottom: calc(100% + var(--core-overlay-offset));
+  --core-overlay-translateY: 0px;
+}
+
+:host([position-y="bottom"]) [part="content"] {
+  top: calc(100% + var(--core-overlay-offset));
+  bottom: auto;
+  --core-overlay-translateY: 0px;
+}
+
+:host([position-y="center"]) [part="content"] {
+  top: 50%;
+  bottom: auto;
+  --core-overlay-translateY: -50%;
+}

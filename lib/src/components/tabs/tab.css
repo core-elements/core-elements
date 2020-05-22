@@ -3,9 +3,21 @@
 }
 
 :host {
+  height: var(--core-tab-height);
   white-space: nowrap;
   cursor: default;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  color: var(--core-color-font-light);
+  font-size: var(--core-font-size-md);
+  background: none;
+  box-shadow: var(--core-tab-box-shadow);
+  outline: 0;
+  padding: 0 var(--core-space-sm);
+  margin-right: var(--core-space-sm);
+  border-bottom: 2px solid transparent;
 }
 
 :host([full]) {
@@ -15,19 +27,6 @@
 
 :host([disabled]) {
   opacity: 0.5;
-}
-
-:host {
-  border: 0;
-  color: var(--core-color-font-light);
-  font-size: var(--core-font-size-md);
-  background: none;
-  box-shadow: var(--core-tab-box-shadow);
-  outline: 0;
-  padding: 0 var(--core-space-sm);
-  margin-right: var(--core-space-sm);
-  height: var(--core-size-sm);
-  border-bottom: 2px solid transparent;
 }
 
 :host(:hover) {

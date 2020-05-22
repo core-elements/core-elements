@@ -75,14 +75,6 @@
                 to="/themes"
                 class="header__nav-item"
               >Themes</router-link>
-              <router-link
-                v-on:click.native="showMenu = false"
-                to="/themes"
-                style="font-size: 1.2em"
-                tag="ion-icon"
-                name="logo-github"
-                class="header__nav-item"
-              >Themes</router-link>
             </nav>
           </div>
         </div>

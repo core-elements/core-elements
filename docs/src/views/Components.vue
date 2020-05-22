@@ -16,6 +16,22 @@
         </core-text>
       </core-container>
 
+      <core-container size="xs">
+        <core-box depth="md" margin-y="lg">
+          <core-input
+            autofocus
+            :value="search"
+            @input="e => search = e.target.value"
+            full
+            type="search"
+            size="lg"
+            placeholder="Search"
+          >
+            <ion-icon name="search-outline" size="medium" slot="start"></ion-icon>
+          </core-input>
+        </core-box>
+      </core-container>
+
       <core-tabs class="tabs" :value="category" @change="(e) => (category = e.target.value)">
         <core-tab>All</core-tab>
         <core-tab>Layout</core-tab>
@@ -68,13 +84,20 @@ export default {
   data() {
     return {
       components,
-      category: "All"
+      category: "All",
+      search: ""
     };
   },
   computed: {
-    filteredComponents() {
+    tabbedComponents() {
       if (this.category === "All") return this.components;
       return this.components.filter(comp => comp.category === this.category);
+    },
+    filteredComponents() {
+      if (this.search === "") return this.tabbedComponents;
+      return this.tabbedComponents.filter(comp =>
+        comp.name.toLowerCase().includes(this.search.toLowerCase())
+      );
     }
   }
 };

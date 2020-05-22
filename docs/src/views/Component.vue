@@ -20,7 +20,9 @@
       <core-text tag="p" look="lead">{{ component.desc }}</core-text>
 
       <core-box padding-y="sm" v-if="subMenu.length">
-        <core-text tag="p" look="h6">Content</core-text>
+        <core-box margin-y="md">
+          <core-text tag="p" look="h6">Content</core-text>
+        </core-box>
         <ul class="content-list">
           <li v-for="menu in subMenu" :key="menu.id">
             <router-link :to="{ hash: menu.id }">{{ menu.title }}</router-link>

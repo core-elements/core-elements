@@ -2,84 +2,84 @@
   --core-modal-backdrop-bg-color: rgba(0, 0, 0, 0.1);
   --core-modal-backdrop-transition: all 0.2s
     cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  --core-modal-box-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  --core-modal-box-box-shadow: none;
-  --core-modal-box-max-height: 90%;
-  --core-modal-box-min-height: 300px;
-  --core-modal-box-max-width: 600px;
-  --core-modal-box-min-width: 200px;
+  --core-modal-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --core-modal-box-shadow: none;
+  --core-modal-max-height: 90%;
+  --core-modal-min-height: 300px;
+  --core-modal-max-width: 600px;
+  --core-modal-min-width: 200px;
   --core-modal-content-padding: var(--core-space-md);
-  --core-modal-box-border: 1px solid transparent;
+  --core-modal-border: 1px solid transparent;
+  --core-modal-translateY: 100%;
+  --core-modal-translateX: 0px;
 }
 
 :host {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  z-index: 999;
-  overflow-y: inherit;
   visibility: hidden;
-  opacity: 0;
 }
 
 :host([open]) {
-  opacity: 1;
   visibility: visible;
 }
 
-:host [part="backdrop"] {
-  opacity: 0;
-  transition: var(--core-modal-backdrop-transition);
-  overflow: hidden;
-  z-index: 400;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: var(--core-modal-backdrop-bg-color);
-}
-
-:host([open]) [part="backdrop"] {
-  opacity: 1;
-}
-
-:host([no-backdrop]) [part="backdrop"] {
-  background: rgba(0, 0, 0, 0);
-}
-
-:host [part="box"] {
-  opacity: 0;
-  position: relative;
-  border-radius: var(--core-border-radius-sm);
-  border: var(--core-modal-box-border);
-  box-shadow: var(--core-modal-box-box-shadow);
-  transition: var(--core-modal-box-transition);
-  transform: translateY(50px);
+[part="modal"] {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: var(--core-modal-box-max-width);
-  min-width: var(--core-modal-box-min-width);
-  min-height: var(--core-modal-box-min-height);
-  max-height: var(--core-modal-box-max-height);
+  max-width: var(--core-modal-max-width);
+  min-width: var(--core-modal-min-width);
+  min-height: var(--core-modal-min-height);
+  max-height: var(--core-modal-max-height);
   height: auto;
+  transform: translateX(var(--core-modal-translateX))
+    translateY(var(--core-modal-translateY));
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  visibility: hidden;
+  border-radius: var(--core-border-radius-sm);
+  border: var(--core-modal-border);
+  box-shadow: var(--core-modal-box-shadow);
+  transition: var(--core-modal-transition);
   background: var(--core-color-white);
-  z-index: 1000;
+  z-index: 999;
+  opacity: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
-:host([open]) [part="box"] {
+:host([open]) [part="modal"] {
+  visibility: visible;
   opacity: 1;
-  transform: translateY(0px);
+  --core-modal-translateY: 0px;
+}
+
+[name="backdrop"] {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: var(--core-color-ui-dark);
+  opacity: 0.1;
+}
+
+[part="content"] {
+  flex: 1;
+  padding: var(--core-modal-content-padding);
 }
 
 [part="header"] {
-  box-sizing: border-box;
   display: block;
   position: sticky;
   z-index: 500;
@@ -91,10 +91,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--ab-color-ui-400);
 }
 
-:host [part="close-button"] {
+[part="title"] {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: var(--core-space-sm);
+}
+
+[part="close-button"] {
   z-index: 1;
   display: inline-block;
   border: 0;
@@ -110,18 +117,16 @@
   fill: currentColor;
 }
 
-:host [part="content"] {
+[part="footer"] {
+  display: block;
+  position: sticky;
+  z-index: 500;
+  background: var(--core-color-white);
+  left: 0;
+  bottom: 0;
+  width: 100%;
   padding: var(--core-modal-content-padding);
-}
-
-::slotted([slot="error"]) {
-  box-sizing: border-box;
-  display: block;
-  border: 1px solid var(--core-color-danger);
-}
-
-::slotted([slot="success"]) {
-  box-sizing: border-box;
-  display: block;
-  border: 1px solid var(--core-color-danger);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

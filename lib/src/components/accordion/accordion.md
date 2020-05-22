@@ -5,16 +5,9 @@ category: Interaction
 ---
 
 <core-knobs element="core-accordion">
-  <core-accordion  title="Title">
+<core-accordion  title="Title">
   <core-box margin-y="md">Content</core-box>
-  </core-accordion>
-  <core-accordion  title="Title">
-    <core-box margin-y="md">
-      <core-text tag="h1">Content</core-text>
-      <core-text tag="h1">Content</core-text>
-      <core-text tag="h1">Content</core-text>
-    </core-box>
-  </core-accordion>
+</core-accordion>
 </core-knobs>
 
 ## Custom indicator
