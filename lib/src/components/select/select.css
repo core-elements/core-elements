@@ -1,7 +1,7 @@
 :host {
   /* ASSIGN TO LOCAL VARIABLES */
   --core-select-active-color: var(--core-color-focus);
-  --core-select-font-size: var(--core-font-size-md);
+  --core-select-font-size: 16px;
   --core-select-min-height: var(--core-size-md);
   --core-select-background: none;
   --core-select-padding: 0px;

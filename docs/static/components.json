@@ -1314,38 +1314,25 @@
       "attributes": [
         {
           "name": "open",
-          "type": "boolean",
-          "default": "false"
+          "type": "boolean"
         },
         {
           "name": "title",
           "type": "string",
           "default": "\"\""
-        },
-        {
-          "name": "no-backdrop",
-          "type": "boolean",
-          "default": "false"
         }
       ],
       "properties": [
         {
           "name": "open",
           "attribute": "open",
-          "type": "boolean",
-          "default": "false"
+          "type": "boolean"
         },
         {
           "name": "title",
           "attribute": "title",
           "type": "string",
           "default": "\"\""
-        },
-        {
-          "name": "noBackdrop",
-          "attribute": "no-backdrop",
-          "type": "boolean",
-          "default": "false"
         },
         {
           "name": "close"
@@ -1358,6 +1345,12 @@
         }
       ],
       "events": [
+        {
+          "name": "open"
+        },
+        {
+          "name": "close"
+        },
         {
           "name": "toggle"
         }

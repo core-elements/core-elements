@@ -20,7 +20,7 @@
 
 :host([disabled]) {
   cursor: default;
-  opacity: 0;
+  opacity: 0.5;
 }
 
 :host label {

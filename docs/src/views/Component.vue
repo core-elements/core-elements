@@ -89,8 +89,8 @@ export default {
           };
         },
         {
+          Interaction: [],
           Layout: [],
-          Elements: [],
           Form: []
         }
       );
