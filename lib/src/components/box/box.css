@@ -26,6 +26,15 @@
   secondary-dark, success, danger, ui-light, ui-lighter, ui-lightest, ui-dark,
   white, black
 {
+  :host([color="$(i)"]) {
+    color: var(--core-color-$(i));
+  }
+}
+
+@each $i in primary, primary-light, primary-dark, secondary, secondary-light,
+  secondary-dark, success, danger, ui-light, ui-lighter, ui-lightest, ui-dark,
+  white, black
+{
   :host([border="$(i)"]) {
     border: 2px solid var(--core-color-$(i));
   }

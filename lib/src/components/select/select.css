@@ -97,6 +97,11 @@
   margin-right: var(--core-space-sm);
 }
 
+::slotted([slot="end"]) {
+  margin-right: var(--core-space-sm);
+  margin-left: var(--core-space-sm);
+}
+
 [part="input-field"] {
   flex: 1;
   width: 100%;

@@ -1,4 +1,5 @@
 :host {
+  --core-list-item-height: var(--core-size-md);
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -7,12 +8,24 @@
   color: var(--core-color-font);
 }
 
-:host([selectable]) slot::slotted(*:hover) {
-  background: var(--core-color-ui-lighter);
+:host([size="sm"]) {
+  --core-list-item-height: var(--core-size-sm);
+}
+
+:host([size="md"]) {
+  --core-list-item-height: var(--core-size-md);
+}
+
+:host([size="lg"]) {
+  --core-list-item-height: var(--core-size-lg);
+}
+
+:host([size="xl"]) {
+  --core-list-item-height: var(--core-size-xl);
 }
 
 :host([selectable]) slot::slotted(*:hover) {
-  background: var(--core-color-ui-lighter);
+  cursor: pointer;
 }
 
 :host([bordered]) slot::slotted(*) {
@@ -37,16 +50,6 @@
 
 :host > * {
   position: relative;
-  padding-top: var(--core-space-sm);
-  padding-bottom: var(--core-space-sm);
-}
-
-:host([compact]) > * {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-:host([large]) > * {
   padding-top: var(--core-space-sm);
   padding-bottom: var(--core-space-sm);
 }
