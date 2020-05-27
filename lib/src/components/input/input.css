@@ -82,7 +82,7 @@
 }
 
 :host [part="input-field"]::placeholder {
-  font-size: var(--core-input-font-size);
+  font-size: inherit;
   color: var(--core-input-placeholder-color);
 }
 
