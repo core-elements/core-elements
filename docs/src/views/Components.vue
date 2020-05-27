@@ -26,9 +26,7 @@
             type="search"
             size="lg"
             placeholder="Search"
-          >
-            <ion-icon name="search-outline" size="medium" slot="start"></ion-icon>
-          </core-input>
+          ></core-input>
         </core-box>
       </core-container>
 

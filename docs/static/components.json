@@ -45,6 +45,12 @@
           "default": "\"\""
         },
         {
+          "name": "color",
+          "description": "Box font color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
           "name": "border",
           "description": "Box border",
           "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
@@ -163,6 +169,13 @@
           "name": "bg",
           "attribute": "bg",
           "description": "Box background color",
+          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "color",
+          "attribute": "color",
+          "description": "Box font color",
           "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
@@ -1302,11 +1315,47 @@
     },
     {
       "name": "core-list-item",
-      "path": "./../../lib/src/components/list/list-item.wc.js"
+      "path": "./../../lib/src/components/list/list-item.wc.js",
+      "properties": [
+        {
+          "name": "showListStart",
+          "type": "Element | null"
+        },
+        {
+          "name": "showListEnd",
+          "type": "Element | null"
+        }
+      ]
     },
     {
       "name": "core-list",
-      "path": "./../../lib/src/components/list/list.wc.js"
+      "path": "./../../lib/src/components/list/list.wc.js",
+      "attributes": [
+        {
+          "name": "selectable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "bordered",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "selectable",
+          "attribute": "selectable",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "bordered",
+          "attribute": "bordered",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
     },
     {
       "name": "core-modal",
@@ -1323,6 +1372,14 @@
         }
       ],
       "properties": [
+        {
+          "name": "showHeader",
+          "type": "string | Element"
+        },
+        {
+          "name": "showFooter",
+          "type": "Element | null"
+        },
         {
           "name": "open",
           "attribute": "open",
@@ -1941,6 +1998,11 @@
           "default": "\"p\""
         },
         {
+          "name": "noMargin",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "noWrap",
           "type": "boolean",
           "default": "false"
@@ -1970,6 +2032,12 @@
           "description": "Button look",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
           "default": "\"p\""
+        },
+        {
+          "name": "noMargin",
+          "attribute": "noMargin",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "noWrap",
