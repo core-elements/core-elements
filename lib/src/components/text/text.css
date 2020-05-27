@@ -34,6 +34,11 @@
   display: inline-block;
 }
 
+:host([inline]) > *:first-child,
+:host([no-margin]) > *:first-child {
+  margin-bottom: 0;
+}
+
 :host([full]) {
   display: block;
   width: 100%;
