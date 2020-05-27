@@ -8,7 +8,7 @@
   --core-modal-min-height: 300px;
   --core-modal-max-width: 600px;
   --core-modal-min-width: 200px;
-  --core-modal-content-padding: var(--core-space-md);
+  --core-modal-padding: var(--core-space-md);
   --core-modal-border: 1px solid transparent;
   --core-modal-translateY: 100%;
   --core-modal-translateX: 0px;
@@ -76,57 +76,60 @@
 
 [part="content"] {
   flex: 1;
-  padding: var(--core-modal-content-padding);
+  padding: var(--core-modal-padding);
 }
 
 [part="header"] {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   z-index: 500;
   background: var(--core-color-white);
   left: 0;
   top: 0;
   width: 100%;
-  padding: var(--core-modal-content-padding);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: var(--core-modal-padding);
+  min-height: var(--core-size-md);
 }
 
-[part="title"] {
+[part="header-middle"] {
   display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: var(--core-space-sm);
+  flex: 1;
+  text-align: center;
 }
 
-[part="close-button"] {
+[part="header-start"] {
   z-index: 1;
-  display: inline-block;
-  border: 0;
+  display: block;
+  min-width: 25%;
   font-size: var(--core-font-size-md);
   color: var(--core-color-font);
-  background: transparent;
-  cursor: pointer;
-  position: absolute;
-  right: var(--core-space-sm);
-  top: var(--core-space-sm);
-  width: var(--core-space-md);
-  height: var(--core-space-md);
   fill: currentColor;
 }
 
-[part="footer"] {
+[part="header-end"] {
+  z-index: 1;
   display: block;
-  position: sticky;
-  z-index: 500;
+  min-width: 25%;
+  text-align: right;
+  font-size: var(--core-font-size-md);
+  color: var(--core-color-font);
+  fill: currentColor;
+}
+
+[part="close"] {
+  cursor: pointer;
+}
+
+[part="footer"] {
   background: var(--core-color-white);
+  padding: var(--core-modal-padding);
+  min-height: var(--core-size-md);
+  display: block;
+  width: 100%;
+  position: sticky;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: var(--core-modal-content-padding);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 500;
 }
