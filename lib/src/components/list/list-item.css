@@ -14,8 +14,6 @@
 }
 
 [part="content"] {
-  margin-left: var(--core-space-sm);
-  margin-right: var(--core-space-sm);
   flex: 1;
 }
 
