@@ -9,7 +9,7 @@
   --core-accordion-border-color: var(--core-color-ui);
 }
 
-:host [part="content"] {
+[part="content"] {
   display: block;
   width: 100%;
   overflow: hidden;
@@ -20,12 +20,12 @@
   max-height: 0;
 }
 
-:host [part="title"] {
+[part="title"] {
   flex: 1;
   display: block;
 }
 
-:host [part="trigger"] {
+[part="trigger"] {
   background: transparent;
   color: inherit;
   cursor: pointer;
@@ -41,15 +41,15 @@
   height: var(--core-size-md);
 }
 
-::slotted([slot="start"]) {
+[part="start"] {
   margin-right: var(--core-space-sm);
 }
 
-::slotted([slot="end"]) {
+[part="end"] {
   margin-left: var(--core-space-sm);
 }
 
-:host [part="end"] svg {
+[part="end"] svg {
   transform-origin: center;
   transition: transform 0.2s ease;
   transform: rotate(0deg);

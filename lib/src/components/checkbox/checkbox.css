@@ -73,7 +73,7 @@ input {
 }
 
 :host(:focus) [part="box"] {
-  --core-button-box-shadow: 0 0 0 2px var(--core-color-focus);
+  --core-button-box-shadow: var(--core-focus-outline);
 }
 
 :host(:hover) [part="box"] {

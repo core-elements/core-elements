@@ -1,7 +1,8 @@
 :host {
   /* ASSIGN TO LOCAL VARIABLES */
-  --core-select-active-color: var(--core-color-focus);
+  --core-select-focus-color: var(--core-color-focus);
   --core-select-font-size: 16px;
+  --core-select-box-shadow: none;
   --core-select-min-height: var(--core-size-md);
   --core-select-background: none;
   --core-select-padding: 0px;
@@ -57,8 +58,8 @@
 }
 
 :host([focused]) {
-  box-shadow: 0px 0px 0px 1px var(--core-select-active-color);
-  --core-select-border-color: var(--core-select-active-color);
+  --core-select-box-shadow: var(--core-focus-outline);
+  --core-select-border-color: var(--core-select-focus-color);
 }
 
 :host([disabled]) {
@@ -93,13 +94,14 @@
   justify-content: center;
 }
 
-::slotted([slot="start"]) {
-  margin-right: var(--core-space-sm);
+[part="start"] {
+  display: flex;
+  margin-left: var(--core-space-sm);
 }
 
-::slotted([slot="end"]) {
+[part="end"] {
+  display: flex;
   margin-right: var(--core-space-sm);
-  margin-left: var(--core-space-sm);
 }
 
 [part="input-field"] {

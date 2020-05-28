@@ -1,4 +1,5 @@
 :host {
+  --core-radio-box-shadow: none;
   --core-radio-focus-color: var(--core-color-focus);
   --core-radio-height: var(--core-size-md);
   --core-radio-box-bg-color: var(--core-color-white);
@@ -54,7 +55,7 @@
 }
 
 :host(:focus) [part="box"] {
-  box-shadow: 0 0 0 2px var(--core-radio-focus-color);
+  --core-radio-box-shadow: var(--core-focus-outline);
 }
 
 :host(:hover:not([disabled]):not([checked])) [part="box"] {

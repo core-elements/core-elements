@@ -48,5 +48,5 @@
 
 :host textarea:focus {
   --core-textarea-border-color: var(--core-color-focus);
-  --core-textarea-box-shadow: 0px 0px 0px 1px var(--core-color-focus);
+  --core-textarea-box-shadow: var(--core-focus-outline);
 }

@@ -5,7 +5,7 @@ category: Interaction
 ---
 
 <core-knobs element="core-accordion">
-<core-accordion  title="Title">
+<core-accordion title="Title">
   <core-box margin-y="md">Content</core-box>
 </core-accordion>
 </core-knobs>

@@ -19,12 +19,10 @@
 
 [part="end"] {
   display: flex;
+  margin-left: var(--core-space-md);
 }
 
-::slotted([slot="start"]) {
-  margin-left: var(--core-space-sm);
-}
-
-::slotted([slot="end"]) {
-  margin-right: var(--core-space-sm);
+[part="start"] {
+  display: flex;
+  margin-right: var(--core-space-md);
 }

@@ -60,7 +60,7 @@
 }
 
 :host(:focus) {
-  --core-button-box-shadow: 0 0 0 2px var(--core-color-focus);
+  --core-button-box-shadow: var(--core-focus-outline);
 }
 
 :host([disabled]) {
@@ -76,14 +76,20 @@
   padding: 0;
 }
 
+:host([rounded]) {
+  border-radius: 300px;
+}
+
 /* Slots */
 
-::slotted([slot="start"]) {
+[part="start"] {
+  display: flex;
   vertical-align: text-bottom;
   margin-right: var(--core-space-sm);
 }
 
-::slotted([slot="end"]) {
+[part="end"] {
+  display: flex;
   vertical-align: text-bottom;
   margin-left: var(--core-space-sm);
 }

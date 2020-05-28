@@ -20,6 +20,12 @@ category: Interaction
 <core-button type="transparent">Transparent</core-button>
 </core-knobs>
 
+## Rounded
+
+<core-knobs hideTabs element="core-button">
+<core-button rounded>Rounded</core-button>
+</core-knobs>
+
 ## Disabled
 
 <core-knobs hideTabs  element="core-button">
@@ -45,15 +51,14 @@ category: Interaction
 <core-knobs hideTabs  element="core-button">
 <core-button>
   <i slot="start" class="gg-check"></i>
-  Full
+  Left
 </core-button>
 <core-button>
   <i slot="end" class="gg-danger"></i>
-  Full
+  Right
 </core-button>
-<core-button>
-  <i slot="end" class="gg-chevron-right"></i>
-  Full
+<core-button squared>
+  <i class="gg-profile"></i>
 </core-button>
 </core-knobs>
 

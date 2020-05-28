@@ -22,6 +22,23 @@ category: Navigation
 <div id="targetTwo">Target 2</div>
 </core-knobs>
 
+## Vertical
+
+<core-knobs  element="core-tabs">
+<core-tabs full vertical position="left">
+  <core-tab selected>Tab 1</core-tab>
+  <core-tab>Tab 2</core-tab>
+</core-tabs>
+<core-tabs full position="right">
+  <core-tab selected>Tab 1</core-tab>
+  <core-tab>Tab 2</core-tab>
+</core-tabs>
+<core-tabs full position="center">
+  <core-tab selected>Tab 1</core-tab>
+  <core-tab>Tab 2</core-tab>
+</core-tabs>
+</core-knobs>
+
 ## Position
 
 <core-knobs  element="core-tabs">

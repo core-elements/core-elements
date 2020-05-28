@@ -81,7 +81,7 @@
               </core-grid-item>
               <core-grid-item sm="2" md="1">
                 <core-modal @toggle="(e) => (modalOpen = e.target.open)" :open="modalOpen">
-                  <header slot="header">Title</header>
+                  <div slot="header-middle">Title</div>
                   <div>Content</div>
                 </core-modal>
 

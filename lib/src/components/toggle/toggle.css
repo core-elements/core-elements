@@ -1,4 +1,5 @@
 :host {
+  --core-toggle-box-shadow: none;
   --core-toggle-height: var(--core-size-md);
   --core-toggle-box-size: var(--core-size-sm);
   --core-toggle-indicator-margin: var(--core-space-xs);
@@ -6,6 +7,9 @@
     var(--core-toggle-box-size) - (var(--core-toggle-indicator-margin) * 2)
   );
   --core-toggle-icon-size: calc(var(--core-toggle-indicator-size) * 0.8);
+}
+
+:host {
   vertical-align: middle;
   cursor: pointer;
   display: inline-flex;
@@ -36,7 +40,7 @@
 }
 
 :host input:focus + [part="box"] {
-  box-shadow: 0px 0px 0px 2px var(--core-color-focus);
+  --core-toggle-box-shadow: var(--core-focus-outline);
 }
 
 [part="box"] {

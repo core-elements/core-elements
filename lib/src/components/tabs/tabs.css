@@ -14,6 +14,10 @@
   width: 100%;
 }
 
+:host([vertical]) {
+  flex-direction: column;
+}
+
 :host([size="sm"]) {
   --core-tab-height: var(--core-size-sm);
 }

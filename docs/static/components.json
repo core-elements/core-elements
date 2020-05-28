@@ -22,6 +22,14 @@
           "type": "boolean"
         },
         {
+          "name": "hasStartSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasEndSlot",
+          "type": "Element | null"
+        },
+        {
           "name": "hideDefaultIndicator",
           "attribute": "hide-default-indicator",
           "type": "boolean",
@@ -338,6 +346,11 @@
           "default": "false"
         },
         {
+          "name": "rounded",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "full",
           "description": "Full button",
           "type": "Boolean",
@@ -357,6 +370,14 @@
           "type": "boolean"
         },
         {
+          "name": "hasStartSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasEndSlot",
+          "type": "Element | null"
+        },
+        {
           "name": "type",
           "attribute": "type",
           "description": "Button state",
@@ -372,6 +393,12 @@
         {
           "name": "outline",
           "attribute": "outline",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "rounded",
+          "attribute": "rounded",
           "type": "boolean",
           "default": "false"
         },
@@ -994,6 +1021,22 @@
         {
           "name": "inputEl",
           "type": "HTMLInputElement | null"
+        },
+        {
+          "name": "hasHelpSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasErrorSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasStartSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasEndSlot",
+          "type": "Element | null"
         },
         {
           "name": "required",
@@ -1781,6 +1824,14 @@
           "type": "boolean"
         },
         {
+          "name": "hasStartSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasEndSlot",
+          "type": "Element | null"
+        },
+        {
           "name": "full",
           "attribute": "full",
           "type": "boolean",
@@ -1946,6 +1997,11 @@
           "name": "size",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "vertical",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -1973,6 +2029,12 @@
           "attribute": "size",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "vertical",
+          "attribute": "vertical",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "events": [

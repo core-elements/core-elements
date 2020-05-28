@@ -3,7 +3,7 @@
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   --core-color-primary-hue: 250;
-  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 65%);
+  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 68%);
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 60%);
   --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 50%);
 
@@ -14,7 +14,8 @@
 
   --core-color-focus-light: var(--core-color-primary-light);
   --core-color-focus: var(--core-color-primary);
-  --core-color-focus-dark: var(--core-color-primary-dark);
+  --core-color-focus-dark: var(--core-color-primary);
+  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
 
   --core-color-success-hue: 130;
   --core-color-success-light: hsl(var(--core-color-success-hue), 48%, 48%);

@@ -22,6 +22,7 @@ category: Interaction
     <core-list-item>
      <i slot="start" class="gg-check"></i>
       List item
+      <i slot="end" class="gg-chevron-right"></i>
     </core-list-item>
     <core-list-item>
       <i slot="start" class="gg-check"></i>

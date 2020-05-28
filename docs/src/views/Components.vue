@@ -18,15 +18,22 @@
 
       <core-container size="xs">
         <core-box depth="md" margin-y="lg">
-          <core-input
-            autofocus
-            :value="search"
-            @input="e => search = e.target.value"
+          <core-select
+            :input-value="search"
+            @input="e => search = e.target.inputValue"
+            @select="(e) => $router.push('/components/' + e.target.value)"
             full
-            type="search"
             size="lg"
+            searchable
             placeholder="Search"
-          ></core-input>
+          >
+            <ion-icon slot="start" name="search"></ion-icon>
+            <core-option
+              :key="component.name"
+              v-for="component in components"
+              :value="component.name"
+            >{{component.name}}</core-option>
+          </core-select>
         </core-box>
       </core-container>
 
