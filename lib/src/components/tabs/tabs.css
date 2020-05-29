@@ -1,5 +1,12 @@
 :host {
   --core-tab-height: var(--core-size-md);
+  --core-tab-box-shadow: 0;
+  --core-tab-border-width: 2px;
+  --core-tab-border-color: transparent;
+  /* TODO: This is weeeeird, cannot set shorthand properties for border width or border style */
+  --core-tab-border-bottom-style: solid;
+  --core-tab-border-right-style: none;
+  --core-tab-color: var(--core-color-font-light);
 }
 
 :host {
@@ -16,6 +23,8 @@
 
 :host([vertical]) {
   flex-direction: column;
+  --core-tab-border-bottom-style: none;
+  --core-tab-border-right-style: solid;
 }
 
 :host([size="sm"]) {

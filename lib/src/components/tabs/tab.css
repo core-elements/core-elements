@@ -1,23 +1,21 @@
 :host {
-  --core-tab-box-shadow: 0;
-}
-
-:host {
   height: var(--core-tab-height);
   white-space: nowrap;
   cursor: default;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 0;
-  color: var(--core-color-font-light);
+  color: var(--core-tab-color);
   font-size: var(--core-font-size-md);
-  background: none;
+  background: transparent;
   box-shadow: var(--core-tab-box-shadow);
   outline: 0;
   padding: 0 var(--core-space-sm);
   margin-right: var(--core-space-sm);
-  border-bottom: 2px solid transparent;
+  border-width: var(--core-tab-border-width);
+  border-color: var(--core-tab-border-color);
+  border-bottom-style: var(--core-tab-border-bottom-style);
+  border-right-style: var(--core-tab-border-right-style);
 }
 
 :host([full]) {
@@ -30,15 +28,15 @@
 }
 
 :host(:hover) {
-  border-bottom: 2px solid var(--core-color-ui-light);
+  --core-tab-border-color: var(--core-color-ui-light);
 }
 
 :host(:focus) {
-  border-bottom: 2px solid var(--core-color-ui-light);
-  color: var(--core-color-font-dark);
+  --core-tab-border-color: var(--core-color-ui-light);
+  --core-tab-color: var(--core-color-font-dark);
 }
 
 :host([selected]) {
-  color: var(--core-color-font-dark);
-  border-bottom: 2px solid var(--core-color-focus);
+  --core-tab-color: var(--core-color-font-dark);
+  --core-tab-border-color: var(--core-color-focus);
 }

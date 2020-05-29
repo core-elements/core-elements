@@ -29,14 +29,6 @@ category: Navigation
   <core-tab selected>Tab 1</core-tab>
   <core-tab>Tab 2</core-tab>
 </core-tabs>
-<core-tabs full position="right">
-  <core-tab selected>Tab 1</core-tab>
-  <core-tab>Tab 2</core-tab>
-</core-tabs>
-<core-tabs full position="center">
-  <core-tab selected>Tab 1</core-tab>
-  <core-tab>Tab 2</core-tab>
-</core-tabs>
 </core-knobs>
 
 ## Position
