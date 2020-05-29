@@ -67,6 +67,9 @@
 [part="indicator"] {
   background: var(--core-color-white);
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: var(--core-toggle-indicator-margin);
   top: 50%;
   transition: all 0.2s ease;

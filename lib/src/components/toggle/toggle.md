@@ -10,11 +10,30 @@ category: Form
 
 ## Custom icons
 
+### On / Off
+
 <core-knobs hideTabs  element="core-toggle">
 <core-toggle checked>
   <i slot="on" style="--ggs: 0.8;" class="gg-sun"></i>
   Label
   <i slot="off" style="--ggs: 0.8;" class="gg-moon"></i>
+</core-toggle>
+</core-knobs>
+
+### Indicator icon
+
+<core-knobs hideTabs  element="core-toggle">
+<style>
+  .indicator-icon i {
+    display: none;
+  }
+  .indicator-icon[checked] i {
+    display: block;
+  }
+</style>
+<core-toggle class="indicator-icon" checked>
+   <span slot="indicator"><i class="gg-check"></i></span>
+  Label
 </core-toggle>
 </core-knobs>
 
