@@ -35,6 +35,7 @@
 
 [part="thumb"] {
   outline: 0;
+  border: 2px solid var(--core-color-ui-light);
   position: absolute;
   z-index: 1;
   cursor: grab;
