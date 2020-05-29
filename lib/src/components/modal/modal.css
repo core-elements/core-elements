@@ -4,6 +4,7 @@
     cubic-bezier(0.785, 0.135, 0.15, 0.86);
   --core-modal-transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   --core-modal-box-shadow: none;
+  --core-modal-width: 100%;
   --core-modal-max-height: 90%;
   --core-modal-min-height: 300px;
   --core-modal-max-width: 600px;
@@ -12,6 +13,8 @@
   --core-modal-border: 1px solid transparent;
   --core-modal-translateY: 100%;
   --core-modal-translateX: 0px;
+  --core-modal-justify: center;
+  --core-modal-align: center;
 }
 
 :host {
@@ -22,8 +25,8 @@
   left: 0;
   top: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--core-modal-align);
+  justify-content: var(--core-modal-justify);
   visibility: hidden;
 }
 
@@ -34,7 +37,7 @@
 [part="modal"] {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: var(--core-modal-width);
   max-width: var(--core-modal-max-width);
   min-width: var(--core-modal-min-width);
   min-height: var(--core-modal-min-height);
