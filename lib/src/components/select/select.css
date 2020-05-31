@@ -2,16 +2,19 @@
   /* ASSIGN TO LOCAL VARIABLES */
   --core-select-focus-color: var(--core-color-focus);
   --core-select-font-size: 16px;
-  --core-select-box-shadow: none;
   --core-select-min-height: var(--core-size-md);
   --core-select-background: none;
   --core-select-padding: 0px;
   --core-select-placeholder-color: var(--core-color-font-light);
-  --core-select-border-width: 2px;
+  --core-select-border-width: var(--core-default-border-width);
   --core-select-border-style: solid;
   --core-select-border-color: var(--core-color-ui-light);
-  --core-select-border-radius: none;
-  --core-select-list-border: 1px solid var(--core-color-ui-light);
+  --core-select-border-radius: var(--core-default-border-radius);
+
+  --core-select-input-box-shadow: none;
+
+  --core-select-list-border: var(--core-border-width-sm) solid
+    var(--core-color-ui-light);
   --core-select-list-border-radius: var(--core-select-border-radius-sm);
   --core-select-list-box-shadow: 0px;
   --core-select-list-position: absolute;
@@ -37,6 +40,7 @@
   border-style: var(--core-select-border-style);
   border-color: var(--core-select-border-color);
   border-radius: var(--core-select-border-radius);
+  box-shadow: var(--core-select-input-box-shadow);
   position: relative;
 }
 
@@ -53,12 +57,12 @@
   display: none !important;
 }
 
-:host(:hover:not([multiple]):not([focused])) {
+:host(:hover:not([focused])) {
   --core-select-border-color: var(--core-color-ui);
 }
 
 :host([focused]) {
-  --core-select-box-shadow: var(--core-focus-outline);
+  --core-select-input-box-shadow: var(--core-focus-outline);
   --core-select-border-color: var(--core-select-focus-color);
 }
 

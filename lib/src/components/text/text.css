@@ -1,25 +1,28 @@
 :host {
-  --core-font-size: var(--core-font-size-md);
-  --core-font-weight: 400;
-  --core-text-color: inherit;
+  --core-text-size: var(--core-font-size-md);
+  --core-text-weight: 400;
+  --core-text-color: currentColor;
+  --core-text-line-height: 1;
 }
 
 :host,
 :host {
   display: inline-block;
   color: var(--core-text-color);
-  text-align: inerhit;
-  font-weight: var(--core-font-weight);
-  font-size: var(--core-font-size);
+  text-align: inherit;
+  line-height: var(--core-text-line-height);
+  font-weight: var(--core-text-weight);
+  font-size: var(--core-text-size);
 }
 
 :host > *:first-child {
   display: inherit;
   color: inherit;
   text-align: inerhit;
-  font-weight: ineherit;
+  font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
+  margin-top: 0;
 }
 
 :host([no-wrap]) > *:first-child {
@@ -44,45 +47,107 @@
   width: 100%;
 }
 
-:host([tag="h1"]),
+:host([tag="h1"]) {
+  --core-text-size: var(--core-font-size-xxl);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.125;
+}
+
+:host([tag="h2"]) {
+  --core-text-size: var(--core-font-size-xl);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.25;
+}
+
+:host([tag="h3"]) {
+  --core-text-size: var(--core-font-size-lg);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.25;
+}
+
+:host([tag="h4"]) {
+  --core-text-size: var(--core-font-size-md);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.5;
+}
+
+:host([tag="h5"]) {
+  --core-text-size: var(--core-font-size-sm);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.5;
+}
+
+:host([tag="h6"]) {
+  --core-text-size: var(--core-font-size-xs);
+  --core-text-weight: 500;
+  --core-text-line-height: 1.5;
+}
+
+:host([tag="p"]) {
+  --core-text-weight: 400;
+  --core-text-size: var(--core-font-size-md);
+  --core-text-line-height: 1.5;
+}
+
+:host([tag="small"]) {
+  --core-text-weight: 400;
+  --core-text-size: var(--core-font-size-xs);
+  --core-text-line-height: 1.5;
+}
+
 :host([look="h1"]) {
-  --core-font-size: var(--core-font-size-xxl);
-  --core-font-weight: 700;
+  --core-text-size: var(--core-font-size-xxl);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.125;
 }
 
-:host([tag="h2"]),
 :host([look="h2"]) {
-  --core-font-size: var(--core-font-size-xl);
-  --core-font-weight: 700;
+  --core-text-size: var(--core-font-size-xl);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.25;
 }
 
-:host([tag="h3"]),
 :host([look="h3"]) {
-  --core-font-size: var(--core-font-size-lg);
-  --core-font-weight: 700;
+  --core-text-size: var(--core-font-size-lg);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.25;
 }
 
-:host([tag="h4"]),
 :host([look="h4"]) {
-  --core-font-size: var(--core-font-size-md);
-  --core-font-weight: 600;
+  --core-text-size: var(--core-font-size-md);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.5;
 }
 
-:host([tag="h5"]),
 :host([look="h5"]) {
-  --core-font-size: var(--core-font-size-sm);
-  --core-font-weight: 600;
+  --core-text-size: var(--core-font-size-sm);
+  --core-text-weight: 600;
+  --core-text-line-height: 1.5;
 }
 
-:host([tag="h6"]),
 :host([look="h6"]) {
-  --core-font-size: var(--core-font-size-xs);
-  --core-font-weight: 500;
+  --core-text-size: var(--core-font-size-xs);
+  --core-text-weight: 500;
+  --core-text-line-height: 1.5;
 }
 
-:host([tag="small"]),
+:host([look="p"]) {
+  --core-text-weight: 400;
+  --core-text-size: var(--core-font-size-md);
+  --core-text-line-height: 1.5;
+}
+
+:host([look="lead"]) {
+  --core-text-size: var(--core-font-size-lg);
+  --core-text-line-height: 1.5;
+  --core-text-font-weight: 300;
+  --core-text-color: var(--core-color-font-light);
+}
+
 :host([look="small"]) {
-  --core-font-size: var(--core-font-size-xs);
+  --core-text-weight: 400;
+  --core-text-size: var(--core-font-size-xs);
+  --core-text-line-height: 1.5;
 }
 
 :host([look="h1"]),
@@ -136,16 +201,17 @@
   width: 100%;
 }
 
-:host([look="lead"]) {
-  --core-font-size: 1.4rem;
-  line-height: 32px;
-  font-weight: 300;
-  --core-text-color: var(--core-color-font-light);
+@each $i in xs, sm, md, lg, xl, xxl {
+  :host([size="$(i)"]) {
+    --core-text-size: var(--core-font-size-$(i));
+  }
 }
 
-@each $i in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+@each $i in 100, 200, 300, 400, 500, 600, 700, 800, 900, normal, bold, bolder,
+  lighter
+{
   :host([weight="$(i)"]) {
-    --core-font-weight: $(i);
+    --core-text-weight: $(i);
   }
 }
 
@@ -155,18 +221,4 @@
   :host([color="$(i)"]) {
     --core-text-color: var(--core-color-$(i));
   }
-}
-
-:host h1,
-:host h2,
-:host h3,
-:host h4,
-:host h5,
-:host h6,
-:host p,
-:host small,
-:host b,
-:host i {
-  font-weight: inherit;
-  margin-top: 0;
 }

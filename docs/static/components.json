@@ -1770,17 +1770,17 @@
           "default": "false"
         },
         {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "focused",
           "type": "boolean",
           "default": "false"
         },
         {
           "name": "disable-filter",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
           "type": "boolean",
           "default": "false"
         },
@@ -1868,12 +1868,6 @@
           "default": "false"
         },
         {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "focused",
           "attribute": "focused",
           "type": "boolean",
@@ -1882,6 +1876,12 @@
         {
           "name": "disableFilter",
           "attribute": "disable-filter",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
           "type": "boolean",
           "default": "false"
         },
@@ -2054,9 +2054,15 @@
           "default": "\"\""
         },
         {
-          "name": "look",
+          "name": "size",
           "description": "Button look",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "default": "\"\""
+        },
+        {
+          "name": "look",
+          "description": "Button look",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
           "default": "\"p\""
         },
         {
@@ -2089,10 +2095,17 @@
           "default": "\"\""
         },
         {
+          "name": "size",
+          "attribute": "size",
+          "description": "Button look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "default": "\"\""
+        },
+        {
           "name": "look",
           "attribute": "look",
           "description": "Button look",
-          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
           "default": "\"p\""
         },
         {

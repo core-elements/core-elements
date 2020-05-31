@@ -36,7 +36,7 @@
   white, black
 {
   :host([border="$(i)"]) {
-    border: 2px solid var(--core-color-$(i));
+    border: var(--core-border-width-sm) solid var(--core-color-$(i));
   }
 }
 

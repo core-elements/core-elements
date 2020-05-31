@@ -22,16 +22,3 @@ category: Layout
   <core-text full tag="b">Typography B</core-text>
   <core-text full tag="i">Typography I</core-text>
 </core-knobs>
-
-## Looks
-
-<core-knobs hideTabs  element="core-text">
-  <core-text look="h1">Typography H1</core-text>
-  <core-text look="h2">Typography H2</core-text>
-  <core-text look="h3">Typography H3</core-text>
-  <core-text look="h4">Typography H4</core-text>
-  <core-text look="h5">Typography H5</core-text>
-  <core-text look="h6">Typography H6</core-text>
-  <core-text look="p">Typography P</core-text>
-  <core-text full look="lead">Typography Lead</core-text>
-</core-knobs>

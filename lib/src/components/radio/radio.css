@@ -46,7 +46,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 2px solid var(--core-color-ui-light);
+  box-shadow: var(--core-radio-box-shadow);
+  border: var(--core-default-border-width) solid var(--core-color-ui-light);
   border-radius: 50%;
   background: var(--core-radio-box-bg-color);
   width: calc(var(--core-radio-height) - var(--core-space-md));
@@ -54,7 +55,7 @@
   transition: border-color 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
 }
 
-:host(:focus) [part="box"] {
+:host input:focus + [part="box"] {
   --core-radio-box-shadow: var(--core-focus-outline);
 }
 

@@ -2,8 +2,8 @@
   <Page>
     <div class="components">
       <core-container size="sm">
-        <core-text tag="h1" weight="700">Components</core-text>
-        <core-text type="lead">
+        <core-text tag="h1">Components</core-text>
+        <core-text tag="p" look="lead">
           The library consists of only a few
           <b>essential UI components</b> that work across all frameworks. They
           are flexible enough that you will be able to style them to your needs,
