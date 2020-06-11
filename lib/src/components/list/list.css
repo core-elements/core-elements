@@ -1,5 +1,6 @@
 :host {
   --core-list-item-height: var(--core-size-md);
+  --core-list-item-padding: 0 var(--core-space-md);
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -10,18 +11,22 @@
 
 :host([size="sm"]) {
   --core-list-item-height: var(--core-size-sm);
+  --core-list-item-padding: 0 var(--core-space-md);
 }
 
 :host([size="md"]) {
   --core-list-item-height: var(--core-size-md);
+  --core-list-item-padding: 0 var(--core-space-md);
 }
 
 :host([size="lg"]) {
   --core-list-item-height: var(--core-size-lg);
+  --core-list-item-padding: 0 var(--core-space-lg);
 }
 
 :host([size="xl"]) {
   --core-list-item-height: var(--core-size-xl);
+  --core-list-item-padding: 0 var(--core-space-lg);
 }
 
 :host([selectable]) slot::slotted(*:hover) {
