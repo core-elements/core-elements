@@ -45,13 +45,6 @@ category: Form
 <core-button onclick="NumberInput.stepUp()">+</core-button>
 </core-knobs>
 
-## Masking
-
-<core-knobs hideTabs  element="core-input">
-<core-input type="tel" mask="+(00) 000 00 000" placeholder="Enter phone number">
-</core-input>
-</core-knobs>
-
 ## Validation
 
 ### Auto validation
