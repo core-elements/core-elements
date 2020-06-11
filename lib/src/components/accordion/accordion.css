@@ -25,6 +25,10 @@
   display: block;
 }
 
+::slotted([slot="title"]) {
+  cursor: pointer;
+}
+
 [part="trigger"] {
   background: transparent;
   color: inherit;
