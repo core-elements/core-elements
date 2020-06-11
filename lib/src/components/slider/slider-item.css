@@ -1,0 +1,22 @@
+:host {
+  display: inline-block;
+  scroll-snap-align: var(--core-slider-snap-align);
+  flex: 0 0 var(--core-slider-item-width);
+  margin-right: var(--core-slider-item-gap);
+}
+
+:host(:last-of-type) {
+  margin-right: 0;
+}
+
+:host([snap-align="center"]) {
+  --core-slider-snap-align: center;
+}
+
+:host([snap-align="start"]) {
+  --core-slider-snap-align: start;
+}
+
+:host([snap-align="end"]) {
+  --core-slider-snap-align: end;
+}
