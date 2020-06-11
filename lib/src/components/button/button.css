@@ -2,7 +2,7 @@
   --core-button-padding: 0 var(--core-space-md);
   --core-button-bg-color: var(--core-color-ui-lighter);
   --core-button-border: none;
-  --core-button-border-radius: var(--core-default-border-radius);
+  --core-button-border-radius: var(--core-border-radius-default);
   --core-button-font-size: var(--core-font-size-md);
   --core-button-text-color: var(--core-color-font);
   --core-button-box-shadow: 0;
@@ -40,7 +40,7 @@
 :host([size="sm"]) {
   --core-button-font-size: var(--core-font-size-md);
   --core-button-height: var(--core-size-sm);
-  --core-button-padding: 0 var(--core-space-md);
+  --core-button-padding: 0 var(--core-space-sm);
 }
 
 :host([size="md"]) {
