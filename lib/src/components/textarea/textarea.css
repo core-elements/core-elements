@@ -3,7 +3,7 @@
   --core-textarea-padding: 0 var(--core-space-md);
   --core-textarea-height: var(--core-size-md);
   --core-textarea-border-color: var(--core-color-ui-light);
-  --core-textarea-border-radius: var(--core-default-border-radius);
+  --core-textarea-border-radius: var(--core-border-radius-default);
   --core-textarea-box-shadow: none;
   --core-textarea-placeholder-color: var(--core-color-font-light);
   --core-textarea-font-size: var(--core-font-size-md);
@@ -39,7 +39,7 @@
   display: inherit;
   outline: 0;
   padding: var(--core-space-md);
-  border: var(--core-default-border-width) solid
+  border: var(--core-border-width-default) solid
     var(--core-textarea-border-color);
 }
 

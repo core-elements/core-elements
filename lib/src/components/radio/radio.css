@@ -47,7 +47,7 @@
   align-items: center;
   position: relative;
   box-shadow: var(--core-radio-box-shadow);
-  border: var(--core-default-border-width) solid var(--core-color-ui-light);
+  border: var(--core-border-width-default) solid var(--core-color-ui-light);
   border-radius: 50%;
   background: var(--core-radio-box-bg-color);
   width: calc(var(--core-radio-height) - var(--core-space-md));

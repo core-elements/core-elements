@@ -6,10 +6,10 @@
   --core-select-background: none;
   --core-select-padding: 0px;
   --core-select-placeholder-color: var(--core-color-font-light);
-  --core-select-border-width: var(--core-default-border-width);
+  --core-select-border-width: var(--core-border-width-default);
   --core-select-border-style: solid;
   --core-select-border-color: var(--core-color-ui-light);
-  --core-select-border-radius: var(--core-default-border-radius);
+  --core-select-border-radius: var(--core-border-radius-default);
 
   --core-select-input-box-shadow: none;
 
@@ -112,7 +112,7 @@
   flex: 1;
   width: 100%;
   cursor: pointer;
-  padding-left: 8px;
+  padding-left: var(--core-space-sm);
   background: transparent;
   color: var(--core-color-font);
   height: var(--core-select-min-height);

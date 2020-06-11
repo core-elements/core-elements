@@ -1,11 +1,11 @@
 :host {
   --core-checkbox-bg-color: var(--core-color-white);
-  --core-checkbox-border: var(--core-default-border-width) solid
+  --core-checkbox-border: var(--core-border-width-default) solid
     var(--core-color-ui-light);
   --core-checkbox-cursor: pointer;
   --core-checkbox-box-shadow: none;
   --core-checkbox-height: var(--core-size-md);
-  --core-checkbox-border-radius: var(--core-default-border-radius);
+  --core-checkbox-border-radius: var(--core-border-radius-default);
 }
 
 :host {

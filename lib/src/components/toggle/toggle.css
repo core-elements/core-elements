@@ -3,7 +3,7 @@
   --core-toggle-height: var(--core-size-md);
   --core-toggle-box-size: var(--core-size-sm);
   --core-toggle-box-border-radius: 300px;
-  --core-toggle-indicator-margin: var(--core-space-xs);
+  --core-toggle-indicator-margin: var(--core-space-xxs);
   --core-toggle-indicator-size: calc(
     var(--core-toggle-box-size) - (var(--core-toggle-indicator-margin) * 2)
   );
@@ -48,7 +48,7 @@
   position: relative;
   box-shadow: var(--core-toggle-box-shadow);
   background: var(--core-color-ui-light);
-  border: var(--core-default-border-width) solid var(--core-color-ui-light);
+  border: var(--core-border-width-default) solid var(--core-color-ui-light);
   border-radius: var(--core-toggle-box-border-radius);
   display: inline-block;
   transition: all 0.2s ease;

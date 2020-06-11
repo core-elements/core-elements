@@ -3,7 +3,7 @@
   --core-input-padding: 0 var(--core-space-md);
   --core-input-height: var(--core-size-md);
   --core-input-border-color: var(--core-color-ui-light);
-  --core-input-border-radius: var(--core-default-border-radius);
+  --core-input-border-radius: var(--core-border-radius-default);
   --core-input-box-shadow: none;
   --core-input-placeholder-color: var(--core-color-font-light);
   --core-input-font-size: 16px;
@@ -42,7 +42,7 @@
   box-shadow: var(--core-input-box-shadow);
   border-radius: var(--core-input-border-radius);
   height: var(--core-input-height);
-  border: var(--core-default-border-width) solid var(--core-input-border-color);
+  border: var(--core-border-width-default) solid var(--core-input-border-color);
 }
 
 :host([type="number"]) [part="input-field"]::-webkit-inner-spin-button,
