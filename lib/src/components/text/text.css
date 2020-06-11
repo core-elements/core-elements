@@ -215,8 +215,9 @@
   }
 }
 
-@each $i in primary, secondary, success, danger, ui-light, ui-lighter,
-  ui-lightest, ui-dark, white, black
+@each $i in primary, secondary, success, danger, ui, ui-dark, ui-darker,
+  ui-darkest, ui-light, ui-lighter, ui-lightest, ui-dark, white, black,
+  font-light, font-dark, font
 {
   :host([color="$(i)"]) {
     --core-text-color: var(--core-color-$(i));
