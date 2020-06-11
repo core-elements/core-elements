@@ -7,6 +7,11 @@
   flex-wrap: wrap;
 }
 
+:host([inline]) {
+  width: initial;
+  display: inline-flex;
+}
+
 :host([full-height]) {
   height: 100%;
 }
