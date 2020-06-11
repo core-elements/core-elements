@@ -1,4 +1,10 @@
 :host {
+  --core-range-label-font-size: inherit;
+  --core-range-label-text-transform: initial;
+  --core-range-label-text-color: currentColor;
+}
+
+:host {
   user-drag: none;
   cursor: inherit;
   display: block;
@@ -61,4 +67,10 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+
+[part="label"] {
+  font-size: var(--core-range-label-font-size);
+  text-transform: var(--core-range-label-text-transform);
+  color: var(--core-range-label-text-color);
 }
