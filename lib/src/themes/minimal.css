@@ -2,13 +2,13 @@
   /* FONT */
   --core-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --core-font-scale: 1;
-  --core-font-size-xs: calc(1em / var(--core-font-scale) * 0.8);
-  --core-font-size-sm: calc(1em / var(--core-font-scale) * 0.9);
-  --core-font-size-md: calc(1em / var(--core-font-scale) * 1);
-  --core-font-size-lg: calc(1em / var(--core-font-scale) * 1.5);
-  --core-font-size-xl: calc(1em / var(--core-font-scale) * 2);
-  --core-font-size-xxl: calc(1em / var(--core-font-scale) * 2.4);
+  --core-font-size-unit: 1em;
+  --core-font-size-xs: calc(var(--core-font-size-unit) * 0.8);
+  --core-font-size-sm: calc(var(--core-font-size-unit) * 0.9);
+  --core-font-size-md: calc(var(--core-font-size-unit) * 1);
+  --core-font-size-lg: calc(var(--core-font-size-unit) * 1.5);
+  --core-font-size-xl: calc(var(--core-font-size-unit) * 2);
+  --core-font-size-xxl: calc(var(--core-font-size-unit) * 2.4);
 
   /* COLORS */
   --core-color-primary-hue: 250;
@@ -66,25 +66,27 @@
   --core-container-lg: 1200px;
   --core-container-xl: 1400px;
 
-  --core-space-xs: 4px;
-  --core-space-sm: 8px;
-  --core-space-md: 16px;
-  --core-space-lg: 32px;
-  --core-space-xl: 64px;
+  --core-space-unit: 1em;
+  --core-space-xxs: calc(var(--core-space-unit) * 0.25);
+  --core-space-xs: calc(var(--core-space-unit) * 0.5);
+  --core-space-sm: calc(var(--core-space-unit) * 0.75);
+  --core-space-md: calc(var(--core-space-unit) * 1);
+  --core-space-lg: calc(var(--core-space-unit) * 1.5);
+  --core-space-xl: calc(var(--core-space-unit) * 3.25);
+  --core-space-xxl: calc(var(--core-space-unit) * 5.25);
 
   --core-border-width-sm: 1px;
   --core-border-width-md: 2px;
   --core-border-width-lg: 3px;
-  --core-default-border-width: var(--core-border-width-md);
+  --core-border-width-default: var(--core-border-width-md);
 
   --core-border-radius-xs: 2px;
   --core-border-radius-sm: 4px;
   --core-border-radius-md: 8px;
   --core-border-radius-lg: 16px;
   --core-border-radius-xl: 32px;
-  --core-default-border-radius: 0;
+  --core-border-radius-default: 0;
 
-  --core-size: 48px;
   --core-size-xs: 24px;
   --core-size-md: 48px;
   --core-size-sm: 36px;
