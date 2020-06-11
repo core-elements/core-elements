@@ -17,6 +17,10 @@
       ],
       "properties": [
         {
+          "name": "contentSlot",
+          "type": "Element | null"
+        },
+        {
           "name": "open",
           "attribute": "open",
           "type": "boolean"
@@ -524,6 +528,11 @@
       "path": "./../../lib/src/components/flex/flex.wc.js",
       "attributes": [
         {
+          "name": "inline",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
@@ -622,6 +631,12 @@
         }
       ],
       "properties": [
+        {
+          "name": "inline",
+          "attribute": "inline",
+          "type": "boolean",
+          "default": "false"
+        },
         {
           "name": "j",
           "attribute": "justify-content",
@@ -1191,9 +1206,6 @@
       ],
       "events": [
         {
-          "name": "keypress"
-        },
-        {
           "name": "input"
         },
         {
@@ -1592,7 +1604,8 @@
           "type": "string"
         },
         {
-          "name": "arrayValues"
+          "name": "arrayValues",
+          "type": "array"
         },
         {
           "name": "min",
@@ -1617,6 +1630,11 @@
           "attribute": "sensitivity",
           "type": "number",
           "default": "1"
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
         }
       ]
     },
@@ -1916,6 +1934,114 @@
         },
         {
           "name": "input"
+        }
+      ]
+    },
+    {
+      "name": "core-slider-item",
+      "path": "./../../lib/src/components/slider/slider-item.wc.js",
+      "attributes": [
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "core-slider",
+      "path": "./../../lib/src/components/slider/slider.wc.js",
+      "attributes": [
+        {
+          "name": "active",
+          "type": "string"
+        },
+        {
+          "name": "snap-align",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "no-scroll",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "navigation",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "active",
+          "attribute": "active",
+          "type": "string"
+        },
+        {
+          "name": "sliderSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "sliderItems",
+          "type": "ChildNode[]"
+        },
+        {
+          "name": "activeEl",
+          "type": "ChildNode"
+        },
+        {
+          "name": "prevEl",
+          "type": "ChildNode"
+        },
+        {
+          "name": "nextEl",
+          "type": "ChildNode"
+        },
+        {
+          "name": "snapAlign",
+          "attribute": "snap-align",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "noScroll",
+          "attribute": "no-scroll",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "scrolling",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "navigation",
+          "attribute": "navigation",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "handleScroll"
+        },
+        {
+          "name": "itemIsWithinScrollRange"
+        },
+        {
+          "name": "calculateActiveScrollPos"
+        }
+      ],
+      "events": [
+        {
+          "name": "change"
         }
       ]
     },

@@ -3,15 +3,20 @@
     <div slot="sidebar">
       <nav toc>
         <a @click.prevent="() => goTo('/components')">Overview</a>
-        <div v-for="(menuGroup, name) in groupedComponents" :key="name">
-          <label>{{ name }}</label>
+        <core-accordion
+          :title="name"
+          class="menu-group"
+          v-for="(menuGroup, name) in groupedComponents"
+          :key="name"
+        >
+          <label slot="title">{{ name }}</label>
           <router-link
             @click.native="$emit('toggle-sidebar')"
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
           >{{ page.name }}</router-link>
-        </div>
+        </core-accordion>
       </nav>
     </div>
 
@@ -131,6 +136,7 @@ export default {
 
 nav[toc] {
   font-size: 1em;
+  padding-right: var(--core-space-lg);
 }
 
 @media (max-width: 800px) {
@@ -170,7 +176,7 @@ nav[toc] a:last-of-type {
   margin-bottom: 30px;
 }
 
-nav[toc] a div {
+nav[toc] a .menu-group {
   margin-top: 20px;
   margin-left: 10px;
   display: none;
