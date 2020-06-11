@@ -1,10 +1,10 @@
 ---
 name: Tabs
 desc: Tabs for things
-category: Navigation
+category: Interaction
 ---
 
-<core-knobs  element="core-tabs">
+<core-knobs element="core-tabs">
 <core-tabs>
   <core-tab selected>Tab 1</core-tab>
   <core-tab>Tab 2</core-tab>
