@@ -25,7 +25,8 @@
   display: block;
 }
 
-::slotted([slot="title"]) {
+::slotted([slot="title"]),
+::slotted([slot="trigger"]) {
   cursor: pointer;
 }
 
