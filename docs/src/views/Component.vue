@@ -2,7 +2,6 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <a @click.prevent="() => goTo('/components')">Overview</a>
         <core-accordion
           :title="name"
           class="menu-group"
