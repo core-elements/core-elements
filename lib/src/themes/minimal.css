@@ -1,5 +1,52 @@
 :root {
-  /* FONT */
+  /* COLORS */
+  --core-color-primary-hue: 250;
+  --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 60%);
+  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 68%);
+  --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 50%);
+
+  --core-color-secondary-hue: 250;
+  --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 95%);
+  --core-color-secondary-light: hsl(var(--core-color-secondary-hue), 100%, 97%);
+  --core-color-secondary-dark: hsl(var(--core-color-secondary-hue), 100%, 90%);
+
+  --core-color-focus: var(--core-color-primary);
+  --core-color-focus-light: var(--core-color-primary-light);
+  --core-color-focus-dark: var(--core-color-primary-dark);
+  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
+
+  --core-color-success-hue: 130;
+  --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
+  --core-color-success-light: hsl(var(--core-color-success-hue), 48%, 48%);
+  --core-color-success-dark: hsl(var(--core-color-success-hue), 48%, 30%);
+
+  --core-color-warning-hue: 46;
+  --core-color-warning: hsl(var(--core-color-warning-hue), 70%, 61%);
+  --core-color-warning-light: hsl(var(--core-color-warning-hue), 70%, 68%);
+  --core-color-warning-dark: hsl(var(--core-color-warning-hue), 70%, 51%);
+
+  --core-color-danger-hue: 349;
+  --core-color-danger: hsl(var(--core-color-danger-hue), 75%, 40%);
+  --core-color-danger-light: hsl(var(--core-color-danger-hue), 75%, 44%);
+  --core-color-danger-dark: hsl(var(--core-color-danger-hue), 75%, 30%);
+
+  --core-color-ui-hue: var(--core-color-primary-hue);
+  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 70%);
+  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 95%);
+  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 90%);
+  --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 80%);
+  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 10%, 30%);
+  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 20%);
+  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 10%);
+
+  --core-color-font: hsl(var(--core-color-ui-hue), 10%, 25%);
+  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 45%);
+  --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 10%);
+
+  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
+  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
+
+  /* SIZES */
   --core-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --core-font-size-unit: 1em;
@@ -10,62 +57,6 @@
   --core-font-size-xl: calc(var(--core-font-size-unit) * 2);
   --core-font-size-xxl: calc(var(--core-font-size-unit) * 2.4);
 
-  /* COLORS */
-  --core-color-primary-hue: 250;
-  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 68%);
-  --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 60%);
-  --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 50%);
-
-  --core-color-secondary-hue: 250;
-  --core-color-secondary-light: hsl(var(--core-color-secondary-hue), 100%, 97%);
-  --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 95%);
-  --core-color-secondary-dark: hsl(var(--core-color-secondary-hue), 100%, 90%);
-
-  --core-color-focus-light: var(--core-color-primary-light);
-  --core-color-focus: var(--core-color-primary);
-  --core-color-focus-dark: var(--core-color-primary);
-  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
-
-  --core-color-success-hue: 130;
-  --core-color-success-light: hsl(var(--core-color-success-hue), 48%, 48%);
-  --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
-  --core-color-success-dark: hsl(var(--core-color-success-hue), 48%, 30%);
-
-  --core-color-warning-hue: 46;
-  --core-color-warning-light: hsl(var(--core-color-warning-hue), 70%, 68%);
-  --core-color-warning: hsl(var(--core-color-warning-hue), 70%, 61%);
-  --core-color-warning-dark: hsl(var(--core-color-warning-hue), 70%, 51%);
-
-  --core-color-danger-hue: 349;
-  --core-color-danger-light: hsl(var(--core-color-danger-hue), 75%, 44%);
-  --core-color-danger: hsl(var(--core-color-danger-hue), 75%, 40%);
-  --core-color-danger-dark: hsl(var(--core-color-danger-hue), 75%, 30%);
-
-  --core-color-ui-hue: var(--core-color-primary-hue);
-  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 95%);
-  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 90%);
-  --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 80%);
-  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 70%);
-  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 10%, 30%);
-  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 20%);
-  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 10%);
-
-  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 45%);
-  --core-color-font: hsl(var(--core-color-ui-hue), 10%, 25%);
-  --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 10%);
-
-  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
-  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
-
-  /* SIZES */
-  --core-container: 800px;
-  --core-container-xxs: 300px;
-  --core-container-xs: 600px;
-  --core-container-sm: 800px;
-  --core-container-md: 1000px;
-  --core-container-lg: 1200px;
-  --core-container-xl: 1400px;
-
   --core-space-unit: 1em;
   --core-space-xxs: calc(var(--core-space-unit) * 0.25);
   --core-space-xs: calc(var(--core-space-unit) * 0.5);
@@ -74,6 +65,14 @@
   --core-space-lg: calc(var(--core-space-unit) * 1.5);
   --core-space-xl: calc(var(--core-space-unit) * 3.25);
   --core-space-xxl: calc(var(--core-space-unit) * 5.25);
+
+  --core-container: 800px;
+  --core-container-xxs: 300px;
+  --core-container-xs: 600px;
+  --core-container-sm: 800px;
+  --core-container-md: 1000px;
+  --core-container-lg: 1200px;
+  --core-container-xl: 1400px;
 
   --core-border-width-sm: 1px;
   --core-border-width-md: 2px;
@@ -121,21 +120,16 @@
   }
 }
 
-@media (min-width: 800px) {
-  [theme="minimal"] {
-    font-size: 18px;
-  }
-}
-
 [mode="dark"] {
   --core-color-primary-hue: 400;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 50%);
   --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 70%);
   --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 60%);
 
-  --core-color-focus-light: var(--core-color-primary-light);
   --core-color-focus: var(--core-color-primary);
+  --core-color-focus-light: var(--core-color-primary-light);
   --core-color-focus-dark: var(--core-color-primary-dark);
+  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
 
   --core-color-secondary-hue: 400;
   --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 100%);
