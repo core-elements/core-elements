@@ -3,7 +3,7 @@
     <core-container center size="lg">
       <core-flex class="header__inner" justify-content="between" align-items="center">
         <div class="header__left">
-          <router-link to="/" class="header__logo">
+          <router-link v-on:click.native="handleToggleButton" to="/" class="header__logo">
             <svg
               width="30"
               height="30"
@@ -72,9 +72,9 @@
               >Components</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
-                to="/themes"
+                to="/theme-editor"
                 class="header__nav-item"
-              >Themes</router-link>
+              >Theme Editor</router-link>
             </nav>
           </div>
         </div>
