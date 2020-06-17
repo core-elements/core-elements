@@ -701,7 +701,7 @@
 }
 
 .markdown-body code {
-  background-color: var(--core-color-ui-light);
+  background-color: var(--core-color-ui-lighter);
   color: var(--core-color-ui-dark);
   border-radius: 3px;
   margin: 0;
