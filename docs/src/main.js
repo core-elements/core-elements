@@ -13,6 +13,7 @@ import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
 import GettingStarted from "./views/GettingStarted";
+import ThemeEditor from "./views/ThemeEditor";
 
 Vue.config.ignoredElements = [/core-\w*/];
 Vue.config.ignoredElements = [/ion-\w*/];
@@ -43,6 +44,15 @@ const router = new Router({
     {
       path: "/getting-started",
       component: GettingStarted,
+      meta: {
+        title: "Getting Started",
+        showInHeader: true,
+        hasSidebar: false,
+      },
+    },
+    {
+      path: "/theme-editor",
+      component: ThemeEditor,
       meta: {
         title: "Getting Started",
         showInHeader: true,
