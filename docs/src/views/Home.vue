@@ -13,7 +13,7 @@
             <b>Vue</b>,
             <b>Angular</b>, or any other framwork.
           </core-text>
-          <core-box margin-y="md">
+          <core-box margin-y="lg">
             <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
             <router-link tag="core-button" to="/components" type="secondary">Components</router-link>
           </core-box>
