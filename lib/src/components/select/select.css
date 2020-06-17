@@ -74,9 +74,14 @@
   cursor: text;
 }
 
-:host [part="input-field"]::placeholder {
+[part="input-field"]::placeholder {
   font-size: var(--core-select-font-size);
   color: var(--core-select-placeholder-color);
+  text-overflow: ellipsis;
+}
+
+:host([multiple]) [part="input-field"][placeholder] {
+  min-width: 100px;
 }
 
 :host(:not([multiple])) [part="input-field"][has-value]::placeholder {
