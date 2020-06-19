@@ -1,97 +1,66 @@
 <template>
   <div>
     <Page class="landing">
-      <core-grid columns="12" gap-xl="xl" gap-sm="md">
-        <core-grid-item sm="12" md="9" lg="6">
-          <core-text tag="h1" weight="400">
-            <b>Core Elements</b> is a free collection of essential UI components
-            for any web application
-          </core-text>
+      <core-container style="text-align: center" center size="sm">
+        <core-box margin-y="lg">
+          <core-text tag="h1" weight="400">Everything you wish HTML elements could do</core-text>
+        </core-box>
+      </core-container>
+      <core-container style="text-align: center" full center size="xs">
+        <core-box margin-t="lg" margin-b="xl">
           <core-text tag="p" look="lead">
-            Components that work in
+            Completely customizable HTML elements that work in
             <b>React</b>,
             <b>Vue</b>,
             <b>Angular</b>, or any other framwork.
           </core-text>
-          <core-box margin-y="lg">
-            <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
-            <router-link tag="core-button" to="/components" type="secondary">Components</router-link>
-          </core-box>
-          <core-box margin-y="lg">
+        </core-box>
+      </core-container>
+      <core-container style="text-align: center" center size="xs">
+        <core-box margin-y="lg">
+          <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
+          <router-link tag="core-button" to="/components" type="secondary">Components</router-link>
+        </core-box>
+        <core-box margin-y="lg">
+          <core-tabs @change="(e) => (installMethod = e.target.value)" :value="installMethod">
+            <core-tab>NPM</core-tab>
+            <core-tab>CDN</core-tab>
+          </core-tabs>
+        </core-box>
+        <core-box>
+          <pre v-if="installMethod === 'NPM'"><code align="center" class="hljs">npm install --save core-elements</code></pre>
+          <pre v-if="installMethod === 'CDN'">
+              <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/core-elements"</span>&gt;</span><span
+  class="hljs-tag"
+>&lt;/<span class="hljs-name">script</span>&gt;</span>
+<!----></code></pre>
+        </core-box>
+      </core-container>
+
+      <core-container size="sm" center>
+        <core-box margin-t="xl" padding-t="xl" margin-b="xl">
+          <core-text
+            weight="400"
+            style="text-align: center"
+            tag="h2"
+          >Ever wanted to style the select element?</core-text>
+        </core-box>
+        <core-container center size="xs">
+          <core-box margin-b="lg">
             <core-tabs
-              @change="(e) => (installMethod = e.target.value)"
-              :value="installMethod"
+              :value="activeSelectExample"
+              @change="e => activeSelectExample = e.target.value"
             >
-              <core-tab>NPM</core-tab>
-              <core-tab>CDN</core-tab>
+              <core-tab value="basicSelect">Basic</core-tab>
+              <core-tab value="roundedSelect">Rounded</core-tab>
             </core-tabs>
           </core-box>
           <core-box>
-      <pre
-              v-if="installMethod === 'NPM'"
-            ><code align="center" class="hljs">npm install --save core-elements</code></pre>
-            <pre v-if="installMethod === 'CDN'">
-              <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/core-elements"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<!----></code></pre>
-        </core-box>
-
-        </core-grid-item>
-
-        <core-grid-item sm="12" md="12" lg="6">
-          <core-box depth="md" padding-y="lg" padding-x="lg">
-            <core-box margin-b="lg">
-            <core-text tag="h2" weight="500">Examples</core-text>
-            </core-box>
-            <core-grid columns="2">
-              <core-grid-item sm="2" md="1">
-                <core-select placeholder="Select an option">
-                  <core-option label="Option 1"></core-option>
-                  <core-option label="Option 2"></core-option>
-                </core-select>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-checkbox>Option 1</core-checkbox>
-                <core-checkbox>Option 2</core-checkbox>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-input placeholder="Regular input"></core-input>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-radio name="radio">Option 1</core-radio>
-                <core-radio name="radio">Option 2</core-radio>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-select multiple placeholder="Multiple select">
-                  <core-option selected label="Option 1"></core-option>
-                  <core-option label="Option 2"></core-option>
-                </core-select>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-toggle
-                  :checked="darkMode"
-                  @change="e => darkMode = e.target.checked"
-                >Dark mode</core-toggle>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-tabs>
-                  <core-tab selected>Tab 1</core-tab>
-                  <core-tab>Tab 2</core-tab>
-                  <core-tab>Tab 3</core-tab>
-                </core-tabs>
-              </core-grid-item>
-              <core-grid-item sm="2" md="1">
-                <core-modal @toggle="(e) => (modalOpen = e.target.open)" :open="modalOpen">
-                  <div slot="header-middle">Title</div>
-                  <div>Content</div>
-                </core-modal>
-
-                <core-button type="primary" @click="modalOpen = true">Show modal</core-button>
-              </core-grid-item>
-            </core-grid>
+            <core-knobs hideTabs v-html="html" element="core-select"></core-knobs>
           </core-box>
-        </core-grid-item>
-      </core-grid>
-
+        </core-container>
+      </core-container>
+    </Page>
   </div>
 </template>
 
@@ -105,10 +74,53 @@ export default {
   },
   data() {
     return {
+      activeSelectExample: "basicSelect",
       darkMode: false,
       installMethod: "NPM",
       modalOpen: false
     };
+  },
+  computed: {
+    html() {
+      return this[this.activeSelectExample];
+    },
+    roundedSelect() {
+      return `
+  <style>
+    core-select {
+      border-radius: 30px;
+    }
+    core-select::part(list) {
+      border-radius: 10px;
+      box-shadow: 1px 10px 10px 0px rgba(0,0,0,0.2);
+      top: calc(100% + 30px);
+      transition: all 0.2s ease;
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    core-select[list-open]::part(list) {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    core-option[selected]::before {
+      content: "✓";
+      padding-right: 10px;
+    }
+  </style>
+  <core-select full>
+    <core-option value="1" selected>Option</core-option>
+    <core-option value="2">Option</core-option>
+  </core-select>
+      `;
+    },
+    basicSelect() {
+      return `
+  <core-select full>
+    <core-option value="1" selected>Option</core-option>
+    <core-option value="2">Option</core-option>
+  </core-select>
+      `;
+    }
   },
   watch: {
     darkMode: val => {

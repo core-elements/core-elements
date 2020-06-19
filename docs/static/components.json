@@ -1595,6 +1595,11 @@
           "name": "sensitivity",
           "type": "number",
           "default": "1"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "properties": [
@@ -1630,6 +1635,12 @@
           "attribute": "sensitivity",
           "type": "number",
           "default": "1"
+        },
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "events": [
@@ -1765,7 +1776,7 @@
         {
           "name": "placeholder",
           "type": "string",
-          "default": "\"\""
+          "default": "\"undefined\""
         },
         {
           "name": "multiple",
@@ -1859,7 +1870,7 @@
           "name": "placeholder",
           "attribute": "placeholder",
           "type": "string",
-          "default": "\"\""
+          "default": "\"undefined\""
         },
         {
           "name": "multiple",

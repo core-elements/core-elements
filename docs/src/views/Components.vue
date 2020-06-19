@@ -17,7 +17,7 @@
       </core-container>
 
       <core-container size="xs">
-        <core-box depth="md" margin-y="lg">
+        <core-box margin-y="lg">
           <core-select
             :input-value="search"
             @input="e => search = e.target.inputValue"
