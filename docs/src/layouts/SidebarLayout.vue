@@ -1,11 +1,13 @@
 <template>
   <Page>
-    <div class="sidebar" :class="{ show: showSidebar }">
-      <slot name="sidebar"></slot>
-    </div>
-    <main class="main">
-      <slot></slot>
-    </main>
+    <core-flex>
+      <div class="sidebar" :class="{ show: showSidebar }">
+        <slot name="sidebar"></slot>
+      </div>
+      <main class="main">
+        <slot></slot>
+      </main>
+    </core-flex>
   </Page>
 </template>
 

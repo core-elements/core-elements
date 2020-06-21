@@ -1,6 +1,8 @@
 <template>
-  <Page>
-    <core-container>
+  <SidebarLayout :showSidebar="showSidebar">
+    <div slot="sidebar">Halla</div>
+
+    <div>
       <div class="markdown-body" v-html="gettingstarted()"></div>
       <core-box padding-y="lg">
         <core-button type="secondary" @click="$router.push('/components')">
@@ -8,15 +10,15 @@
           <i slot="end" class="gg-arrow-right"></i>
         </core-button>
       </core-box>
-    </core-container>
-  </Page>
+    </div>
+  </SidebarLayout>
 </template>
 
 <script>
 import hljs from "highlight.js";
 import marked from "marked";
 import gettingstarted from "../markdown/getting-started.md";
-import Page from "../layouts/Page";
+import SidebarLayout from "../layouts/SidebarLayout";
 
 const options = {
   highlight: function(code, lang) {
@@ -28,7 +30,8 @@ const options = {
 //marked.setOptions(options);
 
 export default {
-  components: { Page },
+  props: { showSidebar: Boolean, title: String },
+  components: { SidebarLayout },
   methods: {
     gettingstarted() {
       const mark = marked.setOptions(options);
