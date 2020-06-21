@@ -47,7 +47,7 @@
     translateY(var(--core-modal-translateY));
   transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   visibility: hidden;
-  border-radius: var(--core-border-radius-sm);
+  border-radius: var(--core-border-radius-default);
   border: var(--core-modal-border);
   box-shadow: var(--core-modal-box-shadow);
   transition: var(--core-modal-transition);
