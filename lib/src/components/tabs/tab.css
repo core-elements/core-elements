@@ -1,7 +1,7 @@
 :host {
   height: var(--core-tab-height);
   white-space: nowrap;
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
