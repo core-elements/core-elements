@@ -31,23 +31,6 @@ category: Interaction
 </core-tabs>
 </core-knobs>
 
-## Position
-
-<core-knobs  element="core-tabs">
-<core-tabs full position="left">
-  <core-tab selected>Tab 1</core-tab>
-  <core-tab>Tab 2</core-tab>
-</core-tabs>
-<core-tabs full position="right">
-  <core-tab selected>Tab 1</core-tab>
-  <core-tab>Tab 2</core-tab>
-</core-tabs>
-<core-tabs full position="center">
-  <core-tab selected>Tab 1</core-tab>
-  <core-tab>Tab 2</core-tab>
-</core-tabs>
-</core-knobs>
-
 ## With buttons
 
 Any child you put inside `core-tabs` will get the `selected` attribute when you click on it.

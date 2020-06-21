@@ -14,6 +14,7 @@
   align-items: center;
   overflow-x: scroll;
   height: var(--core-tab-height);
+  max-width: 100%;
 }
 
 :host([full]) {
@@ -37,16 +38,4 @@
 
 :host([size="lg"]) {
   --core-tab-height: var(--core-size-lg);
-}
-
-:host([position="left"]) {
-  justify-content: flex-start;
-}
-
-:host([position="center"]) {
-  justify-content: center;
-}
-
-:host([position="right"]) {
-  justify-content: flex-end;
 }
