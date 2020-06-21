@@ -84,7 +84,7 @@
   --core-border-radius-md: 8px;
   --core-border-radius-lg: 16px;
   --core-border-radius-xl: 32px;
-  --core-border-radius-default: 0;
+  --core-border-radius-default: var(--core-border-radius-sm);
 
   --core-size-xs: 24px;
   --core-size-md: 48px;
