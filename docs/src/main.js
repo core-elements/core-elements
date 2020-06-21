@@ -47,7 +47,7 @@ const router = new Router({
       meta: {
         title: "Getting Started",
         showInHeader: true,
-        hasSidebar: false,
+        hasSidebar: true,
       },
     },
     {
