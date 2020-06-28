@@ -3,6 +3,8 @@
   --core-radio-focus-color: var(--core-color-focus);
   --core-radio-height: var(--core-size-md);
   --core-radio-box-bg-color: var(--core-color-white);
+  --core-radio-box-border: var(--core-border-width-default) solid
+    var(--core-color-ui-light);
 }
 
 :host {
@@ -41,13 +43,13 @@
   margin-left: var(--core-space-sm);
 }
 
-:host [part="box"] {
+[part="box"] {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   position: relative;
   box-shadow: var(--core-radio-box-shadow);
-  border: var(--core-border-width-default) solid var(--core-color-ui-light);
+  border: var(--core-radio-box-border);
   border-radius: 50%;
   background: var(--core-radio-box-bg-color);
   width: calc(var(--core-radio-height) - var(--core-space-md));
@@ -55,8 +57,10 @@
   transition: border-color 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
 }
 
-:host input:focus + [part="box"] {
+:host([focused]) [part="box"] {
   --core-radio-box-shadow: var(--core-focus-outline);
+  --core-radio-box-border: var(--core-border-width-default) solid
+    var(--core-color-focus);
 }
 
 :host(:hover:not([disabled]):not([checked])) [part="box"] {
@@ -67,7 +71,7 @@
   border-color: var(--core-radio-focus-color);
 }
 
-:host [part="indicator"] {
+[part="indicator"] {
   color: var(--core-radio-focus-color);
   fill: currentColor;
 }

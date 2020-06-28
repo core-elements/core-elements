@@ -20,19 +20,34 @@ category: Form
 </core-toggle>
 </core-knobs>
 
+## Label position
+
+<core-knobs hideTabs  element="core-toggle">
+  <style>
+    .position {
+      flex-direction: row-reverse;
+    }
+    .position::part(label) {
+      margin-right: var(--core-space-md);
+      margin-left: 0;
+    }
+  </style>
+  <core-toggle label="Left label" class="position"></core-toggle>
+</core-knobs>
+
 ### Indicator icon
 
 <core-knobs hideTabs  element="core-toggle">
 <style>
-  .indicator-icon i {
+  .indicator-icon [slot="indicator"]{
     display: none;
   }
-  .indicator-icon[checked] i {
+  .indicator-icon[checked] [slot="indicator"]{
     display: block;
   }
 </style>
 <core-toggle class="indicator-icon" checked>
-   <span slot="indicator"><i class="gg-check"></i></span>
+   <ion-icon slot="indicator" name="checkmark-outline">
   Label
 </core-toggle>
 </core-knobs>

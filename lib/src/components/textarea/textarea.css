@@ -30,6 +30,7 @@
 }
 
 :host textarea {
+  border-radius: var(--core-border-radius-default);
   box-shadow: var(--core-input-box-shadow);
   box-sizing: border-box;
   font-size: inherit;

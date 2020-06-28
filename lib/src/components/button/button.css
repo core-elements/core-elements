@@ -149,15 +149,3 @@
 :host([type="danger"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-danger-dark);
 }
-
-/* Styles */
-
-:host([outline]) {
-  --core-button-border: 2px solid var(--core-button-bg-color);
-  color: var(--core-button-bg-color);
-  background: none !important;
-}
-
-:host([outline]):not([type]) {
-  color: var(--core-color-black);
-}

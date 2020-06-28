@@ -42,6 +42,9 @@
       ],
       "events": [
         {
+          "name": "click"
+        },
+        {
           "name": "toggle"
         }
       ]
@@ -345,11 +348,6 @@
           "default": "false"
         },
         {
-          "name": "outline",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "rounded",
           "type": "boolean",
           "default": "false"
@@ -395,12 +393,6 @@
           "default": "false"
         },
         {
-          "name": "outline",
-          "attribute": "outline",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "rounded",
           "attribute": "rounded",
           "type": "boolean",
@@ -432,11 +424,15 @@
       "path": "./../../lib/src/components/checkbox/checkbox.wc.js",
       "attributes": [
         {
-          "name": "disabled",
+          "name": "focused",
           "type": "boolean"
         },
         {
           "name": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
           "type": "boolean"
         },
         {
@@ -454,21 +450,27 @@
           "name": "value",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "properties": [
         {
-          "name": "disabled",
-          "attribute": "disabled",
+          "name": "focused",
+          "attribute": "focused",
           "type": "boolean"
-        },
-        {
-          "name": "inputEl",
-          "type": "HTMLInputElement | null"
         },
         {
           "name": "checked",
           "attribute": "checked",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
           "type": "boolean"
         },
         {
@@ -487,6 +489,12 @@
         {
           "name": "value",
           "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
           "type": "string",
           "default": "\"\""
         }
@@ -1395,6 +1403,11 @@
           "name": "bordered",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -1407,6 +1420,12 @@
         {
           "name": "bordered",
           "attribute": "bordered",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
           "type": "boolean",
           "default": "false"
         }
@@ -1972,30 +1991,15 @@
       "path": "./../../lib/src/components/slider/slider.wc.js",
       "attributes": [
         {
-          "name": "active",
-          "type": "string"
-        },
-        {
-          "name": "snap-align",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "no-scroll",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "navigation",
-          "type": "boolean",
-          "default": "false"
+          "name": "autoHeight",
+          "type": "boolean"
         }
       ],
       "properties": [
         {
-          "name": "active",
-          "attribute": "active",
-          "type": "string"
+          "name": "autoHeight",
+          "attribute": "autoHeight",
+          "type": "boolean"
         },
         {
           "name": "sliderSlot",
@@ -2004,55 +2008,6 @@
         {
           "name": "sliderItems",
           "type": "ChildNode[]"
-        },
-        {
-          "name": "activeEl",
-          "type": "ChildNode"
-        },
-        {
-          "name": "prevEl",
-          "type": "ChildNode"
-        },
-        {
-          "name": "nextEl",
-          "type": "ChildNode"
-        },
-        {
-          "name": "snapAlign",
-          "attribute": "snap-align",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
-          "name": "noScroll",
-          "attribute": "no-scroll",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "scrolling",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "navigation",
-          "attribute": "navigation",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "handleScroll"
-        },
-        {
-          "name": "itemIsWithinScrollRange"
-        },
-        {
-          "name": "calculateActiveScrollPos"
-        }
-      ],
-      "events": [
-        {
-          "name": "change"
         }
       ]
     },
@@ -2126,11 +2081,6 @@
           "type": "string"
         },
         {
-          "name": "position",
-          "type": "string",
-          "default": "\"\""
-        },
-        {
           "name": "size",
           "type": "string",
           "default": "\"\""
@@ -2154,12 +2104,6 @@
           "name": "value",
           "attribute": "value",
           "type": "string"
-        },
-        {
-          "name": "position",
-          "attribute": "position",
-          "type": "string",
-          "default": "\"\""
         },
         {
           "name": "size",
@@ -2221,6 +2165,11 @@
           "name": "full",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "uppercase",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -2266,6 +2215,12 @@
         {
           "name": "full",
           "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "uppercase",
+          "attribute": "uppercase",
           "type": "boolean",
           "default": "false"
         }
@@ -2332,16 +2287,17 @@
           "default": "\"\""
         },
         {
+          "name": "name",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "disabled",
           "type": "boolean",
           "default": "false"
         }
       ],
       "properties": [
-        {
-          "name": "inputEl",
-          "type": "HTMLInputElement | null"
-        },
         {
           "name": "checked",
           "attribute": "checked",
@@ -2364,6 +2320,12 @@
         {
           "name": "value",
           "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "name",
+          "attribute": "name",
           "type": "string",
           "default": "\"\""
         },

@@ -28,11 +28,6 @@
   opacity: 0.5;
 }
 
-:host label {
-  display: flex;
-  align-items: center;
-}
-
 :host input {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
@@ -121,7 +116,7 @@
 }
 
 [part="label"] {
-  padding-left: var(--core-space-md);
+  margin-left: var(--core-space-md);
   font-weight: 400;
 }
 

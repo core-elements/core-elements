@@ -47,6 +47,10 @@
   width: 100%;
 }
 
+:host([uppercase]) {
+  text-transform: uppercase;
+}
+
 :host([tag="h1"]) {
   --core-text-size: var(--core-font-size-xxl);
   --core-text-weight: 600;

@@ -8,7 +8,6 @@
           v-for="(menuGroup, name) in groupedComponents"
           :key="name"
         >
-          <label slot="title">{{ name }}</label>
           <router-link
             @click.native="$emit('toggle-sidebar')"
             :to="`/components/${page.name}`"
@@ -23,15 +22,20 @@
       <core-text tag="h1">{{ component.name }}</core-text>
       <core-text tag="p" look="lead">{{ component.desc }}</core-text>
 
-      <core-box padding-y="sm" v-if="subMenu.length">
-        <core-box margin-y="md">
-          <core-text tag="p" look="h6">Content</core-text>
-        </core-box>
-        <ul class="content-list">
-          <li v-for="menu in subMenu" :key="menu.id">
-            <router-link :to="{ hash: menu.id }">{{ menu.title }}</router-link>
-          </li>
-        </ul>
+      <core-box
+        bg="white"
+        style="position: sticky; top: 0; left: 0; z-index: 500"
+        padding-t="xl"
+        v-if="subMenu.length"
+      >
+        <core-tabs>
+          <router-link
+            tag="core-tab"
+            :to="{ hash: menu.id }"
+            v-for="menu in subMenu"
+            :key="menu.id"
+          >{{ menu.title }}</router-link>
+        </core-tabs>
       </core-box>
       <core-box class="markdown-body" margin-y="xl" v-html="html"></core-box>
     </div>
@@ -151,11 +155,10 @@ nav[toc] label {
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
-  margin-bottom: 10px;
 }
 
 nav[toc] a {
-  color: var(--core-color-font);
+  color: var(--core-color-font-light);
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
@@ -175,14 +178,23 @@ nav[toc] a:last-of-type {
   margin-bottom: 30px;
 }
 
-nav[toc] a .menu-group {
-  margin-top: 20px;
-  margin-left: 10px;
-  display: none;
-}
-
 nav[toc] a a {
   font-size: 1rem;
+}
+
+nav[toc] .menu-group::part(trigger) {
+  border-radius: var(--core-border-radius-default);
+  padding: 0 var(--core-space-sm);
+  margin-bottom: var(--core-space-sm);
+  transition: all 0.2s ease;
+}
+
+nav[toc] .menu-group::part(content) {
+  padding: 0 var(--core-space-sm);
+}
+
+nav[toc] .menu-group::part(trigger):hover {
+  background: var(--core-color-ui-lightest);
 }
 
 @media (min-width: 800px) {

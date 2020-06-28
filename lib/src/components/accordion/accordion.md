@@ -28,6 +28,27 @@ category: Interaction
 </core-accordion>
 </core-knobs>
 
+## Animate content
+
+<core-knobs hideTabs element="core-accordion">
+<style>
+  .animate::part(content) {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease;
+  }
+  .animate[open]::part(content) {
+    transition: all 0.2s ease;
+    transform: translateY(0px);
+    max-height: 200px;
+  }
+</style>
+<core-accordion class="animate" title="Title">
+  <core-box margin-y="md">Content</core-box>
+</core-accordion>
+</core-knobs>
+
 ## Box
 
 The `trigger` slot gets cursor: pointer by default.

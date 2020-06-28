@@ -29,6 +29,11 @@
   --core-list-item-padding: 0 var(--core-space-lg);
 }
 
+:host([full]) {
+  width: 100%;
+  --core-list-item-padding: 0;
+}
+
 :host([selectable]) slot::slotted(*:hover) {
   cursor: pointer;
 }

@@ -62,24 +62,29 @@ category: Interaction
 </core-button>
 </core-knobs>
 
-## Outline
-
-<core-knobs hideTabs  element="core-button">
-<core-button outline>Default</core-button>
-<core-button outline type="primary">Primary</core-button>
-<core-button outline type="secondary">Secondary</core-button>
-<core-button outline type="success">Success</core-button>
-<core-button outline type="danger">Danger</core-button>
-<core-button outline type="transparent">Transparent</core-button>
-</core-knobs>
-
 ## Group
 
 <core-knobs hideTabs  element="core-button">
-<core-flex>
+<style>
+  .group {
+    display: flex;
+  }
+  .group core-button {
+    border-radius: 0;
+  }
+  .group core-button:first-of-type {
+    border-top-left-radius: var(--core-border-radius-default);
+    border-bottom-left-radius: var(--core-border-radius-default);
+  }
+  .group core-button:last-of-type {
+    border-top-right-radius: var(--core-border-radius-default);
+    border-bottom-right-radius: var(--core-border-radius-default);
+  }
+</style>
+<div class="group">
   <core-button >Option</core-button>
   <core-button >Option</core-button>
   <core-button type="primary">Active</core-button>
   <core-button>Option</core-button>
-</core-flex>
+</div>
 </core-knobs>

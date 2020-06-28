@@ -109,14 +109,14 @@
 [theme="minimal"] {
   transition: background 0.2s ease;
   color: var(--core-color-font);
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--core-font-family);
   background-color: var(--core-color-white);
 }
 
 @media (min-width: 600px) {
   [theme="minimal"] {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 

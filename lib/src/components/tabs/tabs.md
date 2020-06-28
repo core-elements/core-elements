@@ -14,7 +14,7 @@ category: Interaction
 ## With targets
 
 <core-knobs  element="core-tabs">
-<core-tabs full position="left">
+<core-tabs full>
   <core-tab selected target="targetOne">Tab 1</core-tab>
   <core-tab target="targetTwo">Tab 2</core-tab>
 </core-tabs>
@@ -25,7 +25,7 @@ category: Interaction
 ## Vertical
 
 <core-knobs  element="core-tabs">
-<core-tabs full vertical position="left">
+<core-tabs full vertical>
   <core-tab selected>Tab 1</core-tab>
   <core-tab>Tab 2</core-tab>
 </core-tabs>

@@ -4,8 +4,8 @@ desc: A checkbox element
 category: Form
 ---
 
-<core-knobs  element="core-checkbox">
-  <core-checkbox>Checkbox</core-checkbox>
+<core-knobs element="core-checkbox">
+  <core-checkbox label="Checkbox"></core-checkbox>
 </core-knobs>
 
 ## Sizes
@@ -20,6 +20,13 @@ category: Form
 
 <core-knobs hideTabs  element="core-checkbox">
   <style>
+    .animate:active::part(box) {
+      transform: scale(0.85);
+    }
+    .animate::part(box) {
+      transform: scale(1);
+      transition: all 0.2s ease;
+    }
     .animate::part(indicator) {
       opacity: 0;
       transition: all 0.5s ease;
@@ -36,22 +43,30 @@ category: Form
   </core-checkbox>
 </core-knobs>
 
-## Custom box
+## Label position
 
 <core-knobs hideTabs  element="core-checkbox">
   <style>
-    .heart .gg-heart {
-      color: lightgray;
+    .position {
+      flex-direction: row-reverse;
     }
-    .heart:hover .gg-heart {
-      color: gray;
-    }
-    .heart[checked] .gg-heart {
-      color: red;
+    .position::part(label) {
+      margin-right: var(--core-space-md);
+      margin-left: 0;
     }
   </style>
-  <core-checkbox class="heart">
-  <i slot="box" class="gg-heart"></i>
+  <core-checkbox label="Left label" class="position"></core-checkbox>
+</core-knobs>
+
+## Style the box
+
+<core-knobs hideTabs  element="core-checkbox">
+  <style>
+    .box::part(box) {
+      border-radius: 50%;
+    }
+  </style>
+  <core-checkbox class="box">
     Custom indicator box
   </core-checkbox>
 </core-knobs>
@@ -65,14 +80,37 @@ category: Form
   </core-checkbox>
 </core-knobs>
 
+<core-knobs hideTabs  element="core-checkbox">
+  <style>
+    .heart::part(box) {
+      border: 0;
+      background: none;
+      box-shadow: none;
+    }
+    .heart [slot="indicator"] {
+      color: lightgray;
+    }
+    .heart:hover [slot="indicator"] {
+      color: gray;
+    }
+    .heart[checked] [slot="indicator"] {
+      color: red;
+    }
+  </style>
+  <core-checkbox class="heart">
+    <i slot="indicator" class="gg-heart"></i>
+    Remove default box styling
+  </core-checkbox>
+</core-knobs>
+
 ## Choice buttons
 
 <core-knobs hideTabs  element="core-checkbox">
   <style>
     .choice {
       margin-bottom: var(--core-space-md);
-      padding: 0 var(--core-space-md);
-      height: var(--core-size-xl);
+      padding: var(--core-space-md);
+      height: auto;
       border: 2px solid var(--core-color-ui-light);
     }
     .choice:hover {

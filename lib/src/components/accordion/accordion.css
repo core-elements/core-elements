@@ -1,23 +1,18 @@
 :host {
-  --core-accordion-border-color: var(--core-color-ui-light);
   outline: 1px black;
   display: block;
   width: 100%;
 }
 
-:host(:hover) {
-  --core-accordion-border-color: var(--core-color-ui);
-}
-
 [part="content"] {
-  display: block;
+  display: none;
   width: 100%;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  max-width: 100%;
+  transition: all 0.2s ease;
 }
 
-:host(:not([open])) [part="content"] {
-  max-height: 0;
+:host([open]) [part="content"] {
+  display: block;
 }
 
 [part="title"] {

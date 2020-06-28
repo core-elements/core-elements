@@ -75,6 +75,12 @@
                 to="/theme-editor"
                 class="header__nav-item"
               >Theme Editor</router-link>
+              <core-toggle
+                :checked="darkMode"
+                @change="e => darkMode = e.target.checked"
+                class="header__nav-item"
+                size="sm"
+              ></core-toggle>
             </nav>
           </div>
         </div>
@@ -93,6 +99,7 @@ export default {
   },
   data() {
     return {
+      darkMode: localStorage.getItem("darkMode") === "true" ? true : false,
       showMenu: false
     };
   },
@@ -100,6 +107,15 @@ export default {
     showSidebar: val => {
       if (val) document.body.classList.add("no-scroll-mobile");
       else document.body.classList.remove("no-scroll-mobile");
+    },
+    darkMode: {
+      handler: function(val) {
+        console.log(val);
+        document.body.setAttribute("mode", val ? "dark" : "light");
+        localStorage.setItem("darkMode", val);
+        console.log(Boolean(localStorage.getItem("darkMode")));
+      },
+      immediate: true
     }
   },
   methods: {
@@ -195,7 +211,7 @@ export default {
 .header__nav-item {
   color: var(--core-color-font-light);
   margin-bottom: 30px;
-  display: block;
+  display: flex;
   font-size: 2rem;
   text-decoration: none;
 }
@@ -261,7 +277,7 @@ export default {
   .header__nav-item {
     font-size: 1rem;
     margin-bottom: 0;
-    display: inline-block;
+    display: inline-flex;
     margin-left: 15px;
   }
 }

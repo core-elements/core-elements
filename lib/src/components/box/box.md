@@ -30,7 +30,7 @@ category: Layout
     <core-text tag="h2">Small</core-text>
     <core-text tag="p" color="ui" >Free</core-text>
     <core-box margin-y="lg">
-      <core-list size="md">
+      <core-list full size="md">
         <core-list-item>
         <i slot="start" class="gg-check-o"></i>
         Figma & Sketch Files
