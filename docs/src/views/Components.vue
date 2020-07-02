@@ -1,23 +1,13 @@
 <template>
   <Page>
     <div class="components">
-      <core-container size="sm">
+      <core-container center style="text-align: center" size="sm">
         <core-text tag="h1">Components</core-text>
-        <core-text tag="p" look="lead">
-          The library consists of only a few
-          <b>essential UI components</b> that work across all frameworks. They
-          are flexible enough that you will be able to style them to your needs,
-          but also good enough looking that you could use them out of the box.
-          <p>
-            If you're in a rush, and don't have time to style the components
-            youself, have a look at the available themes, or try our theme
-            editor to get the look you're after.
-          </p>
-        </core-text>
+        <core-text tag="p" look="lead">Lightweight components used in all things</core-text>
       </core-container>
 
-      <core-container size="xs">
-        <core-box margin-y="lg">
+      <core-container style="text-align: center" center size="xs">
+        <core-box margin-y="xl">
           <core-select
             :input-value="search"
             @input="e => search = e.target.inputValue"
@@ -37,15 +27,16 @@
         </core-box>
       </core-container>
 
-      <core-tabs class="tabs" :value="category" @change="(e) => (category = e.target.value)">
-        <core-tab>All</core-tab>
-        <core-tab>Layout</core-tab>
-        <core-tab>Interaction</core-tab>
-        <core-tab>Form</core-tab>
-        <core-tab>Navigation</core-tab>
-      </core-tabs>
+      <core-container style="text-align: center" center size="xs">
+        <core-tabs class="tabs" :value="category" @change="(e) => (category = e.target.value)">
+          <core-tab>All</core-tab>
+          <core-tab>Layout</core-tab>
+          <core-tab>Interaction</core-tab>
+          <core-tab>Form</core-tab>
+        </core-tabs>
+      </core-container>
 
-      <core-container size="md">
+      <core-container center size="sm">
         <core-box margin-y="xl">
           <core-grid gap-sm="md" gap-md="lg" columns="12">
             <core-grid-item
@@ -56,7 +47,7 @@
               :key="component.name"
             >
               <router-link
-                style="height: 100%"
+                style="text-align: center"
                 tag="core-box"
                 depth="sm"
                 padding="lg"
@@ -65,12 +56,14 @@
                 full
                 :to="`/components/${component.name}`"
               >
-                <core-text tag="h3" weight="400">
+                <core-box padding-b="sm">
+                  <ion-icon style="font-size: 2rem" :name="component.icon"></ion-icon>
+                </core-box>
+                <core-text size="md" weight="400">
                   {{
                   component.name
                   }}
                 </core-text>
-                <core-text tag="small">{{ component.desc }}</core-text>
               </router-link>
             </core-grid-item>
           </core-grid>
@@ -117,11 +110,9 @@ export default {
 .tabs {
   position: sticky;
   top: 60px;
-  width: calc(100% + 15px);
   background: var(--core-color-white);
   margin-left: -15px;
   padding-left: 15px;
   z-index: 500;
-  margin-top: 30px;
 }
 </style>

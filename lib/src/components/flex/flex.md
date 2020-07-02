@@ -2,6 +2,7 @@
 name: Flex
 desc: Utility element to flex children
 category: Layout
+icon: ellipsis-horizontal-outline
 ---
 
 <core-knobs  tab="props" element="core-flex">

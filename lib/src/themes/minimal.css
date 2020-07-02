@@ -104,6 +104,16 @@
     0px 12px 24px -6px rgba(9, 30, 66, 0.25);
   --core-depth-xl: 0px 6px 6px 0px rgba(9, 30, 66, 0.1),
     0px 20px 32px -8px rgba(9, 30, 66, 0.25);
+
+  /*  ANIMATION */
+  --core-animation-duration-sm: 0.2s;
+  --core-animation-duration-md: 0.4s;
+  --core-animation-duration-lg: 0.6s;
+
+  --core-timing-function-ease: ease;
+  --core-timing-function-ease-in: ease-in;
+  --core-timing-function-ease-out: ease-out;
+  --core-timing-function-ease-in-out: ease-in-out;
 }
 
 [theme="minimal"] {

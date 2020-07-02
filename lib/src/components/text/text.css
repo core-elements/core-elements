@@ -144,7 +144,7 @@
 :host([look="lead"]) {
   --core-text-size: var(--core-font-size-lg);
   --core-text-line-height: 1.5;
-  --core-text-font-weight: 300;
+  --core-text-weight: 300;
   --core-text-color: var(--core-color-font-light);
 }
 

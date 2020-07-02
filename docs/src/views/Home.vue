@@ -55,10 +55,10 @@
               @change="(e) => (activeSelectExample = e.target.value)"
             >
               <core-tab value="basicSelect">Basic</core-tab>
+              <core-tab value="animatedSelect">Animated</core-tab>
               <core-tab value="checkMarkSelect">Checkmark</core-tab>
               <core-tab value="comboSelect">Multiple</core-tab>
               <core-tab value="roundedSelect">Rounded</core-tab>
-              <core-tab value="animatedSelect">Animated</core-tab>
               <core-tab value="mobileSelect">Mobile</core-tab>
               <core-tab value="cssVariables">CSS Variables</core-tab>
             </core-tabs>
@@ -91,14 +91,16 @@ export default {
     animatedSelect() {
       return `
   <style>
+    core-select {
+      perspective: 1000px;
+    }
     core-select::part(list) {
-      transition: all 0.2s ease;
-      transform: translateY(50px);
-      opacity: 0;
+      transform-origin: top;
+      transform: rotateX(-90deg);
     }
     core-select[list-open]::part(list) {
-      transform: translateY(0px);
-      opacity: 1;
+      transform: rotateX(0deg);
+      transition: all 0.4s cubic-bezier(0.13, 0.06, 0.03, 1.5);
     }
   </style>
   <core-select full>

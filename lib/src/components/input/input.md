@@ -2,6 +2,7 @@
 name: Input
 desc: A input element
 category: Form
+icon: pencil-outline
 ---
 
 <core-knobs  element="core-input">

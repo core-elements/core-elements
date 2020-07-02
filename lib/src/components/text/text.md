@@ -2,6 +2,7 @@
 name: Text
 desc: A general purpose text element
 category: Layout
+icon: text-outline
 ---
 
 <core-knobs  element="core-text">

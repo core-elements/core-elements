@@ -2,6 +2,7 @@
 name: Tabs
 desc: Tabs for things
 category: Interaction
+icon: library-outline
 ---
 
 <core-knobs element="core-tabs">

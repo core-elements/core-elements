@@ -2,6 +2,7 @@
 name: Button
 desc: A general button element
 category: Interaction
+icon: tablet-landscape-outline
 ---
 
 <core-knobs  tab="props" element="core-button">
@@ -29,7 +30,9 @@ category: Interaction
 ## Disabled
 
 <core-knobs hideTabs  element="core-button">
-<core-button onclick="alert('hello')" disabled type="primary">Primary</core-button>
+<core-button onclick="alert('hello')" disabled type="primary">
+  Primary
+</core-button>
 </core-knobs>
 
 ## Sizes

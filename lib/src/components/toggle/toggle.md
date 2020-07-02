@@ -2,6 +2,7 @@
 name: Toggle
 desc: A general toggle element
 category: Form
+icon: toggle-outline
 ---
 
 <core-knobs element="core-toggle">

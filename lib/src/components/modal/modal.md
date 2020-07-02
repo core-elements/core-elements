@@ -2,6 +2,7 @@
 name: Modal
 desc: A modal
 category: Interaction
+icon: albums-outline
 ---
 
 <core-button onclick="modal.show()">Show modal</core-button>

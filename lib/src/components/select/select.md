@@ -2,6 +2,7 @@
 name: Select
 desc: Element with option for multiselect, search and more
 category: Form
+icon: caret-down-circle-outline
 ---
 
 <core-knobs  element="core-select">
@@ -29,6 +30,36 @@ category: Form
   <core-select searchable placeholder="Search with no results">
     <core-option value="Option 1"></core-option>
     <div slot="no-options">No results found</div>
+  </core-select>
+</core-knobs>
+
+## Animate
+
+### With keyframes
+
+<core-knobs hideTabs  element="core-select">
+  <style>
+    .keyframes {
+      perspective: 1000px;
+    }
+    .keyframes::part(list) {
+      transform-origin: top;
+      transition: all 0.2s cubic-bezier(0.13, 0.06, 0.03, 0);
+      transform: rotateX(-90deg);
+    }
+    .keyframes[list-open]::part(list) {
+      transform-origin: top;
+      transform: rotateX(0deg);
+      transition: all 0.4s cubic-bezier(0.13, 0.06, 0.03, 1.5);
+    }
+  </style>
+  <core-select class="keyframes" full>
+      <core-option value="Option 1" selected></core-option>
+      <core-option value="Option 2"></core-option>
+      <core-option value="Option 3" selected></core-option>
+      <core-option value="Option 4"></core-option>
+      <core-option value="Option 5" selected></core-option>
+      <core-option value="Option 6" selected></core-option>
   </core-select>
 </core-knobs>
 

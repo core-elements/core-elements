@@ -2,6 +2,7 @@
 name: Grid
 desc: Grid system elements
 category: Layout
+icon: grid-outline
 ---
 
 <core-knobs  element="core-grid">

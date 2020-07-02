@@ -432,10 +432,6 @@
           "type": "boolean"
         },
         {
-          "name": "disabled",
-          "type": "boolean"
-        },
-        {
           "name": "full",
           "type": "boolean",
           "default": "false"
@@ -445,6 +441,16 @@
           "description": "Sizes",
           "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "value",
@@ -464,13 +470,12 @@
           "type": "boolean"
         },
         {
-          "name": "checked",
-          "attribute": "checked",
-          "type": "boolean"
+          "name": "formElement",
+          "type": "HTMLInputElement | null"
         },
         {
-          "name": "disabled",
-          "attribute": "disabled",
+          "name": "checked",
+          "attribute": "checked",
           "type": "boolean"
         },
         {
@@ -485,6 +490,18 @@
           "description": "Sizes",
           "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "value",
@@ -511,23 +528,31 @@
       "attributes": [
         {
           "name": "center",
-          "type": "boolean"
+          "description": "Center  container",
+          "type": "Boolean",
+          "default": "false"
         },
         {
           "name": "size",
-          "type": "string"
+          "description": "Width of container",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
         }
       ],
       "properties": [
         {
           "name": "center",
           "attribute": "center",
-          "type": "boolean"
+          "description": "Center  container",
+          "type": "Boolean",
+          "default": "false"
         },
         {
           "name": "size",
           "attribute": "size",
-          "type": "string"
+          "description": "Width of container",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "default": "\"\""
         }
       ]
     },
@@ -1377,8 +1402,8 @@
       ]
     },
     {
-      "name": "core-list-item",
-      "path": "./../../lib/src/components/list/list-item.wc.js",
+      "name": "core-menu-item",
+      "path": "./../../lib/src/components/menu/menu-item.wc.js",
       "properties": [
         {
           "name": "showListStart",
@@ -1391,8 +1416,8 @@
       ]
     },
     {
-      "name": "core-list",
-      "path": "./../../lib/src/components/list/list.wc.js",
+      "name": "core-menu",
+      "path": "./../../lib/src/components/menu/menu.wc.js",
       "attributes": [
         {
           "name": "selectable",
@@ -1517,6 +1542,11 @@
           "default": "false"
         },
         {
+          "name": "focused",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "disabled",
           "type": "boolean",
           "default": "false"
@@ -1562,6 +1592,12 @@
         {
           "name": "full",
           "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "focused",
+          "attribute": "focused",
           "type": "boolean",
           "default": "false"
         },
@@ -2267,8 +2303,7 @@
       "attributes": [
         {
           "name": "checked",
-          "type": "boolean",
-          "default": "false"
+          "type": "boolean"
         },
         {
           "name": "full",
@@ -2287,6 +2322,11 @@
           "default": "\"\""
         },
         {
+          "name": "label",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "name",
           "type": "string",
           "default": "\"\""
@@ -2299,10 +2339,13 @@
       ],
       "properties": [
         {
+          "name": "formElement",
+          "type": "HTMLInputElement | null"
+        },
+        {
           "name": "checked",
           "attribute": "checked",
-          "type": "boolean",
-          "default": "false"
+          "type": "boolean"
         },
         {
           "name": "full",
@@ -2320,6 +2363,12 @@
         {
           "name": "value",
           "attribute": "value",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "label",
+          "attribute": "label",
           "type": "string",
           "default": "\"\""
         },

@@ -2,6 +2,7 @@
 name: Radio
 desc: Radio button
 category: Form
+icon: radio-button-on-outline
 ---
 
 <core-knobs  element="core-radio">

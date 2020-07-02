@@ -2,6 +2,7 @@
 name: Checkbox
 desc: A checkbox element
 category: Form
+icon: checkbox-outline
 ---
 
 <core-knobs element="core-checkbox">

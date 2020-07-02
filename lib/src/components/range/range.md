@@ -2,6 +2,7 @@
 name: Range
 desc: Range
 category: Form
+icon: options-outline
 ---
 
 <core-knobs element="core-range">
