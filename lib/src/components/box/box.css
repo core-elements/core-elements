@@ -14,8 +14,8 @@
 }
 
 @each $i in primary, primary-light, primary-dark, secondary, secondary-light,
-  secondary-dark, success, danger, ui-light, ui-lighter, ui-lightest, ui-dark,
-  white, black
+  secondary-dark, success, warning, danger, ui-light, ui-lighter, ui-lightest,
+  ui-dark, white, black
 {
   :host([bg="$(i)"]) {
     background-color: var(--core-color-$(i));
@@ -23,8 +23,8 @@
 }
 
 @each $i in primary, primary-light, primary-dark, secondary, secondary-light,
-  secondary-dark, success, danger, ui-light, ui-lighter, ui-lightest, ui-dark,
-  white, black
+  secondary-dark, success, warning, danger, ui-light, ui-lighter, ui-lightest,
+  ui-dark, white, black
 {
   :host([color="$(i)"]) {
     color: var(--core-color-$(i));
@@ -32,8 +32,8 @@
 }
 
 @each $i in primary, primary-light, primary-dark, secondary, secondary-light,
-  secondary-dark, success, danger, ui-light, ui-lighter, ui-lightest, ui-dark,
-  white, black
+  secondary-dark, success, warning, danger, ui-light, ui-lighter, ui-lightest,
+  ui-dark, white, black
 {
   :host([border="$(i)"]) {
     border: var(--core-border-width-sm) solid var(--core-color-$(i));

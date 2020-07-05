@@ -66,6 +66,11 @@ icon: caret-down-circle-outline
 ## Multiple
 
 <core-knobs hideTabs  element="core-select">
+  <style>
+    core-select[multiple] core-option[selected] {
+      display: none;
+    }
+  </style>
   <core-select full multiple list-open-on-select>
     <core-option value="Option 1" selected></core-option>
     <core-option value="Option 2"></core-option>
@@ -79,7 +84,7 @@ icon: caret-down-circle-outline
 ## Grouped
 
 <core-knobs hideTabs  element="core-select">
-  <core-select>
+  <core-select immediate-select>
     <core-optgroup label="Group 1">
       <core-option value="Option 1" selected></core-option>
       <core-option value="Option 2"></core-option>

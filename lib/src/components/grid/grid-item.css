@@ -1,9 +1,16 @@
 :host {
+  --core-grid-item-column-start: auto;
+  --core-grid-item-column-end: span 1;
+  --core-grid-item-row-end: span 1;
+}
+
+:host {
   display: block;
   width: 100%;
   max-width: 100%;
-  grid-column-end: var(--core-grid-ce, span 1);
-  grid-row-end: var(--core-grid-re, span 1);
+  grid-column-start: var(--core-grid-item-column-start);
+  grid-column-end: var(--core-grid-item-column-end);
+  grid-row-end: var(--core-grid-item-row-end);
   appearance: none;
   margin-bottom: 0;
   box-sizing: border-box;
@@ -22,18 +29,42 @@
 
 @each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
   :host([sm="$(i)"]) {
-    display: block;
-    max-width: 100%;
-    --core-grid-ce: span $(i);
+    --core-grid-item-column-start: auto;
+    --core-grid-item-column-end: span $(i);
+  }
+
+  :host([sm^="$(i)+"]),
+  :host([sm^="$(i)-"]) {
+    --core-grid-item-column-start: $(i);
+  }
+
+  :host([sm$="-$(i)"]) {
+    --core-grid-item-column-end: calc($(i) + 1);
+  }
+
+  :host([sm$="+$(i)"]) {
+    --core-grid-item-column-end: span calc($(i) + 1);
   }
 }
 
 @media (min-width: 800px) {
   @each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
     :host([md="$(i)"]) {
-      display: block;
-      max-width: 100%;
-      --core-grid-ce: span $(i);
+      --core-grid-item-column-start: auto;
+      --core-grid-item-column-end: span $(i);
+    }
+
+    :host([md^="$(i)+"]),
+    :host([md^="$(i)-"]) {
+      --core-grid-item-column-start: $(i);
+    }
+
+    :host([md$="-$(i)"]) {
+      --core-grid-item-column-end: calc($(i) + 1);
+    }
+
+    :host([md$="+$(i)"]) {
+      --core-grid-item-column-end: span calc($(i) + 1);
     }
   }
 }
@@ -41,9 +72,21 @@
 @media (min-width: 1200px) {
   @each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
     :host([lg="$(i)"]) {
-      display: block;
-      max-width: 100%;
-      --core-grid-ce: span $(i);
+      --core-grid-item-column-start: auto;
+      --core-grid-item-column-end: span $(i);
+    }
+
+    :host([lg^="$(i)+"]),
+    :host([lg^="$(i)-"]) {
+      --core-grid-item-column-start: $(i);
+    }
+
+    :host([lg$="-$(i)"]) {
+      --core-grid-item-column-end: calc($(i) + 1);
+    }
+
+    :host([lg$="+$(i)"]) {
+      --core-grid-item-column-end: span calc($(i) + 1);
     }
   }
 }
@@ -51,9 +94,21 @@
 @media (min-width: 1400px) {
   @each $i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
     :host([xl="$(i)"]) {
-      display: block;
-      max-width: 100%;
-      --core-grid-ce: span $(i);
+      --core-grid-item-column-start: auto;
+      --core-grid-item-column-end: span $(i);
+    }
+
+    :host([xl^="$(i)+"]),
+    :host([xl^="$(i)-"]) {
+      --core-grid-item-column-start: $(i);
+    }
+
+    :host([xl$="-$(i)"]) {
+      --core-grid-item-column-end: calc($(i) + 1);
+    }
+
+    :host([xl$="+$(i)"]) {
+      --core-grid-item-column-end: span calc($(i) + 1);
     }
   }
 }

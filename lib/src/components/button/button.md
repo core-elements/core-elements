@@ -12,9 +12,8 @@ icon: tablet-landscape-outline
 ## Types
 
 <core-knobs hideTabs  element="core-button">
-<core-button>Default</core-button>
+<core-button>Normal</core-button>
 <core-button type="primary">Primary</core-button>
-<core-button type="secondary">Secondary</core-button>
 <core-button type="success">Success</core-button>
 <core-button type="warning">Warning</core-button>
 <core-button type="danger">Danger</core-button>

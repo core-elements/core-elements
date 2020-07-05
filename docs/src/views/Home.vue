@@ -3,32 +3,41 @@
     <Page class="landing">
       <core-container style="text-align: center" center size="md">
         <core-box margin-y="lg">
-          <core-text tag="h1" weight="500">Everything you wish HTML elements could do</core-text>
+          <core-text tag="h1" weight="500"
+            >Everything you wish HTML elements could do</core-text
+          >
         </core-box>
       </core-container>
       <core-container style="text-align: center" full center size="xs">
         <core-box margin-t="lg" margin-b="xl">
           <core-text tag="p" look="lead">
             Completely customizable components that work in
-            <b>React</b>,
-            <b>Vue</b>,
-            <b>Angular</b>, or any other framwork.
+            <b>React</b>, <b>Vue</b>, <b>Angular</b>, or any other framwork.
           </core-text>
         </core-box>
       </core-container>
       <core-container style="text-align: center" center size="xs">
         <core-box margin-y="lg">
-          <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
-          <router-link tag="core-button" to="/components" type="secondary">Components</router-link>
+          <router-link tag="core-button" to="/getting-started" type="primary"
+            >Get Started</router-link
+          >
+          <router-link tag="core-button" to="/components"
+            >Components</router-link
+          >
         </core-box>
         <core-box margin-y="lg">
-          <core-tabs @change="(e) => (installMethod = e.target.value)" :value="installMethod">
+          <core-tabs
+            @change="(e) => (installMethod = e.target.value)"
+            :value="installMethod"
+          >
             <core-tab>NPM</core-tab>
             <core-tab>CDN</core-tab>
           </core-tabs>
         </core-box>
         <core-box>
-          <pre v-if="installMethod === 'NPM'"><code align="center" class="hljs">npm install --save core-elements</code></pre>
+          <pre
+            v-if="installMethod === 'NPM'"
+          ><code align="center" class="hljs">npm install --save core-elements</code></pre>
           <pre v-if="installMethod === 'CDN'">
               <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/core-elements"</span>&gt;</span><span
   class="hljs-tag"
@@ -37,9 +46,93 @@
         </core-box>
       </core-container>
 
+      <core-container center size="md">
+        <core-box margin-t="xl" padding-t="xl" margin-b="xl">
+          <core-text style="text-align: center" tag="h2">Features</core-text>
+        </core-box>
+
+        <core-grid columns="1" columns-md="3">
+          <core-grid-item sm="1" md="1">
+            <core-box padding="md">
+              <ion-icon
+                style="font-size: 2.5rem; color: var(--core-color-font-dark); margin-bottom: 20px;"
+                name="rocket-outline"
+              ></ion-icon>
+              <core-text tag="h3">
+                Lightweight & performant
+              </core-text>
+              <ul class="check-list">
+                <li>
+                  Tree-shakeable
+                </li>
+                <li>
+                  No dependencies
+                </li>
+                <li>
+                  Average on 10kb per element
+                </li>
+                <li>
+                  Total package on 200kb
+                </li>
+              </ul>
+            </core-box>
+          </core-grid-item>
+          <core-grid-item sm="1" md="1">
+            <core-box padding="md">
+              <ion-icon
+                style="font-size: 2.5rem; color: var(--core-color-font-dark); margin-bottom: 20px;"
+                name="color-fill-outline"
+              ></ion-icon>
+              <core-text tag="h3">Themeable</core-text>
+              <ul class="check-list">
+                <li>
+                  Optional global theming
+                </li>
+                <li>
+                  Total control on each element
+                </li>
+                <li>
+                  Support for dark mode
+                </li>
+                <li>
+                  Style with normal CSS
+                </li>
+              </ul>
+            </core-box>
+          </core-grid-item>
+          <core-grid-item sm="1" md="1">
+            <core-box padding="md">
+              <ion-icon
+                style="font-size: 2.5rem; color: var(--core-color-font-dark); margin-bottom: 20px;"
+                name="logo-html5"
+              ></ion-icon>
+              <core-text tag="h3">HTML Standard</core-text>
+              <ul class="check-list">
+                <li>
+                  Supports any framework
+                </li>
+                <li>
+                  A11y compliant
+                </li>
+                <li>
+                  Built with modern web standards
+                </li>
+              </ul>
+            </core-box>
+          </core-grid-item>
+        </core-grid>
+      </core-container>
+
       <core-container size="sm" center>
-        <core-box style="text-align: center" margin-t="xl" padding-t="xl" margin-b="xl">
-          <core-text weight="500" tag="h2">Finally total control over the select element</core-text>
+        <core-box
+          style="text-align: center"
+          margin-t="xl"
+          padding-t="xl"
+          margin-b="xl"
+        >
+          <core-text weight="500" tag="h2"
+            >Finally total control over the select element</core-text
+          >
 
           <core-text tag="p">
             Core Elements is a collection of the HTML elements you wished
@@ -64,7 +157,12 @@
             </core-tabs>
           </core-box>
           <core-box>
-            <core-knobs ref="knob" hideTabs v-html="html" element="core-select"></core-knobs>
+            <core-knobs
+              ref="knob"
+              hideTabs
+              v-html="html"
+              element="core-select"
+            ></core-knobs>
           </core-box>
         </core-container>
       </core-container>
@@ -81,7 +179,7 @@ export default {
     return {
       activeSelectExample: "basicSelect",
       installMethod: "NPM",
-      modalOpen: false
+      modalOpen: false,
     };
   },
   computed: {
@@ -233,23 +331,43 @@ export default {
     <core-option value="3">Option 3</core-option>
   </core-select>
       `;
-    }
+    },
   },
   watch: {
-    darkMode: val => {
+    darkMode: (val) => {
       if (val) document.body.setAttribute("mode", "dark");
       else document.body.removeAttribute("mode");
     },
     activeSelectExample: function(val) {
       this.$refs.knob._fetchJson();
       this.$refs.knob._observeProps();
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
 .landing {
   padding-top: 60px;
+}
+
+.check-list {
+  margin-top: var(--core-space-lg);
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.check-list li {
+  position: relative;
+  margin-bottom: var(--core-space-sm);
+}
+
+.check-list li:before {
+  content: "\2713";
+  color: var(--core-color-primary);
+  position: absolute;
+  left: -25px;
+  top: 0;
 }
 </style>

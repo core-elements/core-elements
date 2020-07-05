@@ -2,19 +2,22 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <core-accordion
-          :title="name"
+        <div
           class="menu-group"
           v-for="(menuGroup, name) in groupedComponents"
           :key="name"
         >
+          <core-box margin-b="sm">
+            <core-text weight="500" color="black">{{ name }}</core-text>
+          </core-box>
           <router-link
             @click.native="$emit('toggle-sidebar')"
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-          >{{ page.name }}</router-link>
-        </core-accordion>
+            >{{ page.name }}</router-link
+          >
+        </div>
       </nav>
     </div>
 
@@ -34,7 +37,8 @@
             :to="{ hash: menu.id }"
             v-for="menu in subMenu"
             :key="menu.id"
-          >{{ menu.title }}</router-link>
+            >{{ menu.title }}</router-link
+          >
         </core-tabs>
       </core-box>
       <core-box class="markdown-body" margin-y="xl" v-html="html"></core-box>
@@ -56,30 +60,30 @@ export default {
   data() {
     return {
       subMenu: [],
-      components
+      components,
     };
   },
   watch: {
     $route: function(val) {
       this.setSubMenu();
-    }
+    },
   },
   methods: {
     setSubMenu() {
       setTimeout(() => {
         const headings = [...document.querySelectorAll("h2")];
-        this.subMenu = headings.map(h => ({ id: h.id, title: h.innerText }));
+        this.subMenu = headings.map((h) => ({ id: h.id, title: h.innerText }));
       }, 0);
     },
     goTo(route) {
       this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
-    }
+    },
   },
   computed: {
     component() {
-      return components.find(c => c.name === this.$route.params.element);
+      return components.find((c) => c.name === this.$route.params.element);
     },
     html() {
       return marked(this.component.content);
@@ -93,17 +97,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }]
+            [`${catName}`]: [...prevComps, { ...comp }],
           };
         },
         {
           Interaction: [],
           Layout: [],
-          Form: []
+          Form: [],
         }
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -162,16 +166,17 @@ nav[toc] a {
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
+  font-weight: 400;
   margin-right: 10px;
+}
+
+nav[toc] a:hover {
+  color: var(--core-color-font-dark);
 }
 
 nav[toc] a.router-link-exact-active {
   color: var(--core-color-font-dark);
   transition: all 0.5s ease;
-}
-
-nav[toc] a:hover {
-  color: var(--core-color-font-dark);
 }
 
 nav[toc] a:last-of-type {

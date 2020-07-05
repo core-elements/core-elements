@@ -39,8 +39,8 @@
   --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 20%);
   --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 10%);
 
-  --core-color-font: hsl(var(--core-color-ui-hue), 10%, 25%);
-  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 45%);
+  --core-color-font: hsl(var(--core-color-ui-hue), 10%, 40%);
+  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 50%);
   --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 10%);
 
   --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
@@ -53,9 +53,9 @@
   --core-font-size-xs: calc(var(--core-font-size-unit) * 0.8);
   --core-font-size-sm: calc(var(--core-font-size-unit) * 0.9);
   --core-font-size-md: calc(var(--core-font-size-unit) * 1);
-  --core-font-size-lg: calc(var(--core-font-size-unit) * 1.5);
-  --core-font-size-xl: calc(var(--core-font-size-unit) * 2);
-  --core-font-size-xxl: calc(var(--core-font-size-unit) * 2.4);
+  --core-font-size-lg: calc(var(--core-font-size-unit) * 1.25);
+  --core-font-size-xl: calc(var(--core-font-size-unit) * 1.8);
+  --core-font-size-xxl: calc(var(--core-font-size-unit) * 2.2);
 
   --core-space-unit: 1em;
   --core-space-xxs: calc(var(--core-space-unit) * 0.25);
@@ -86,11 +86,11 @@
   --core-border-radius-xl: 32px;
   --core-border-radius-default: var(--core-border-radius-sm);
 
-  --core-size-xs: 24px;
-  --core-size-md: 48px;
-  --core-size-sm: 36px;
-  --core-size-lg: 58px;
-  --core-size-xl: 64px;
+  --core-size-xs: 1.5rem;
+  --core-size-sm: 1.8rem;
+  --core-size-md: 2.4rem;
+  --core-size-lg: 3.2rem;
+  --core-size-xl: 4rem;
 
   /* DEPTH */
   --core-depth-none: none;
@@ -116,44 +116,28 @@
   --core-timing-function-ease-in-out: ease-in-out;
 }
 
-[theme="minimal"] {
-  transition: background 0.2s ease;
-  color: var(--core-color-font);
-  font-size: 16px;
-  font-family: var(--core-font-family);
-  background-color: var(--core-color-white);
-}
-
-@media (min-width: 600px) {
-  [theme="minimal"] {
-    font-size: 17px;
-  }
-}
-
 [mode="dark"] {
-  --core-color-primary-hue: 400;
-  --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 50%);
+  --core-color-primary-hue: 240;
+  --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 80%);
   --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 70%);
-  --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 60%);
+  --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 90%);
 
   --core-color-focus: var(--core-color-primary);
-  --core-color-focus-light: var(--core-color-primary-light);
-  --core-color-focus-dark: var(--core-color-primary-dark);
+  --core-color-focus-light: var(--core-color-primary-dark);
+  --core-color-focus-dark: var(--core-color-primary-light);
   --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
 
-  --core-color-secondary-hue: 400;
-  --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 100%);
+  --core-color-secondary-hue: 250;
+  --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 50%);
+  --core-color-secondary-light: hsl(var(--core-color-secondary-hue), 100%, 97%);
   --core-color-secondary-dark: hsl(var(--core-color-secondary-hue), 100%, 90%);
 
-  --core-color-success-hue: 140;
   --core-color-success: hsl(var(--core-color-success-hue), 100%, 40%);
   --core-color-success-dark: hsl(var(--core-color-success-hue), 100%, 30%);
 
-  --core-color-danger-hue: 0;
   --core-color-danger: hsl(var(--core-color-danger-hue), 100%, 40%);
   --core-color-danger-dark: hsl(var(--core-color-danger-hue), 100%, 30%);
 
-  --core-color-ui-hue: var(--core-color-primary-hue);
   --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 20%);
   --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 30%);
   --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 45%);
@@ -162,20 +146,37 @@
   --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 90%);
   --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 95%);
 
+  /* DEPTH */
+  --core-depth-none: none;
+  --core-depth-xs: 0px 1px 1px 0px rgba(255, 255, 255, 0.06),
+    0px 2px 4px 0px rgba(255, 255, 255, 0.15);
+  --core-depth-sm: 0px 2px 2px 0px rgba(255, 255, 255, 0.06),
+    0px 4px 8px -2px rgba(255, 255, 255, 0.25);
+  --core-depth-md: 0px 2px 2px 0px rgba(255, 255, 255, 0.06),
+    0px 8px 16px -4px rgba(255, 255, 255, 0.25);
+  --core-depth-lg: 0px 4px 4px 0px rgba(255, 255, 255, 0.06),
+    0px 12px 24px -6px rgba(255, 255, 255, 0.25);
+  --core-depth-xl: 0px 6px 6px 0px rgba(255, 255, 255, 0.1),
+    0px 20px 32px -8px rgba(255, 255, 255, 0.25);
+
   --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 70%);
   --core-color-font: hsl(var(--core-color-ui-hue), 10%, 80%);
   --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 100%);
 
-  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 0%);
+  --core-color-white: hsl(255, 20%, 15%);
   --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
 }
 
-[mode="dark"] core-button[type="secondary"] {
-  --core-button-bg-color: var(--core-color-black);
-  --core-button-text-color: var(--core-color-white);
+html {
+  transition: background 0.2s ease;
+  color: var(--core-color-font);
+  font-size: 16px;
+  font-family: var(--core-font-family);
+  background-color: var(--core-color-white);
 }
 
-[mode="dark"] core-button[type="secondary"]:hover {
-  --core-button-bg-color: var(--core-color-black);
-  --core-button-text-color: var(--core-color-white);
+@media (min-width: 600px) {
+  html {
+    font-size: 18px;
+  }
 }

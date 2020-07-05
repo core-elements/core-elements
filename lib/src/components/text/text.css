@@ -158,6 +158,8 @@
 :host([tag="h1"]),
 :host([look="h2"]),
 :host([tag="h2"]),
+:host([look="h3"]),
+:host([tag="h3"]),
 :host([look="h4"]),
 :host([tag="h4"]),
 :host([look="h5"]),

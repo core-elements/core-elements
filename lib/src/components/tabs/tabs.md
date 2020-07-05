@@ -32,22 +32,32 @@ icon: library-outline
 </core-tabs>
 </core-knobs>
 
-## With buttons
-
-Any child you put inside `core-tabs` will get the `selected` attribute when you click on it.
-This means you can also use other elements than the `core-tab` as children, and style them accordingly.
+## Button style
 
 <core-knobs  element="core-tabs">
 <style>
-core-tabs core-button[selected],
-core-tabs core-button[selected]:hover {
-  --core-button-bg-color: var(--core-color-primary);
-  --core-button-text-color: var(--core-color-white);
-}
+  .buttons core-tab {
+    border: 2px solid var(--core-color-ui-light);
+    margin: 0;
+    background: var(--core-color-white);
+  }
+  .buttons core-tab:not(:first-of-type) {
+    border-left: 0; 
+  }
+  .buttons core-tab:first-of-type {
+    border-top-left-radius: var(--core-border-radius-default);
+    border-bottom-left-radius: var(--core-border-radius-default);
+  }
+  .buttons core-tab:last-of-type {
+    border-top-right-radius: var(--core-border-radius-default);
+    border-bottom-right-radius: var(--core-border-radius-default);
+  }
+  .buttons core-tab[selected] {
+    background: var(--core-color-ui-lightest);
+  }
 </style>
-<core-tabs>
-  <core-button selected>Tab 1</core-button>
-  <core-button>Tab 2</core-button>
-  <core-button disabled>Tab 3</core-button>
+<core-tabs class="buttons">
+  <core-tab selected target="targetOne">Tab 1</core-tab>
+  <core-tab target="targetTwo">Tab 2</core-tab>
 </core-tabs>
 </core-knobs>

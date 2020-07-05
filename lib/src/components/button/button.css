@@ -1,6 +1,6 @@
 :host {
   --core-button-padding: 0 var(--core-space-md);
-  --core-button-bg-color: var(--core-color-ui-lighter);
+  --core-button-bg-color: var(--core-color-ui-lightest);
   --core-button-border: none;
   --core-button-border-radius: var(--core-border-radius-default);
   --core-button-font-size: var(--core-font-size-md);
@@ -38,7 +38,7 @@
 }
 
 :host(:hover) {
-  --core-button-bg-color: var(--core-color-ui-light);
+  --core-button-bg-color: var(--core-color-ui-lighter);
 }
 
 :host(:focus) {
@@ -103,15 +103,6 @@
 
 :host([type="primary"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-primary-dark);
-}
-
-:host([type="secondary"]) {
-  --core-button-bg-color: var(--core-color-secondary);
-  --core-button-text-color: var(--core-color-primary);
-}
-
-:host([type="secondary"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-secondary-dark);
 }
 
 :host([type="transparent"]) {

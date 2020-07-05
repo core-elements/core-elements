@@ -339,7 +339,7 @@
         {
           "name": "type",
           "description": "Button state",
-          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
+          "type": "\"\"|\"primary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
         {
@@ -383,7 +383,7 @@
           "name": "type",
           "attribute": "type",
           "description": "Button state",
-          "type": "\"primary\"|\"secondary\"|\"transparent\"|\"success\"|\"danger\"",
+          "type": "\"\"|\"primary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
         },
         {
@@ -1869,6 +1869,17 @@
           "default": "false"
         },
         {
+          "name": "size",
+          "description": "Select element size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "immediate-select",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "searchable",
           "type": "boolean",
           "default": "false"
@@ -1974,6 +1985,19 @@
         },
         {
           "name": "focus"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Select element size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        },
+        {
+          "name": "immediateSelect",
+          "attribute": "immediate-select",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "blur"

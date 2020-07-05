@@ -57,6 +57,18 @@
   display: none !important;
 }
 
+:host([size="sm"]) {
+  --core-select-min-height: var(--core-size-sm);
+}
+
+:host([size="md"]) {
+  --core-select-min-height: var(--core-size-md);
+}
+
+:host([size="lg"]) {
+  --core-select-min-height: var(--core-size-lg);
+}
+
 :host(:hover:not([focused])) {
   --core-select-border-color: var(--core-color-ui);
 }

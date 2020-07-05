@@ -1,9 +1,17 @@
 <template>
   <core-box class="header" padding-x="md" bg="white">
     <core-container center size="lg">
-      <core-flex class="header__inner" justify-content="between" align-items="center">
+      <core-flex
+        class="header__inner"
+        justify-content="between"
+        align-items="center"
+      >
         <div class="header__left">
-          <router-link v-on:click.native="handleToggleButton" to="/" class="header__logo">
+          <router-link
+            v-on:click.native="handleToggleButton"
+            to="/"
+            class="header__logo"
+          >
             <svg
               width="30"
               height="30"
@@ -28,7 +36,10 @@
                 d="M67.5 112C87.6584 112 104 95.6584 104 75.5C104 55.3416 87.6584 39 67.5 39C47.3416 39 31 55.3416 31 75.5C31 95.6584 47.3416 112 67.5 112ZM67.5 120C92.0767 120 112 100.077 112 75.5C112 50.9233 92.0767 31 67.5 31C42.9233 31 23 50.9233 23 75.5C23 100.077 42.9233 120 67.5 120Z"
                 fill="currentColor"
               />
-              <path d="M44 0L87.3013 75H0.69873L44 0Z" fill="var(--core-color-white)" />
+              <path
+                d="M44 0L87.3013 75H0.69873L44 0Z"
+                fill="var(--core-color-white)"
+              />
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -59,25 +70,29 @@
                 v-on:click.native="showMenu = false"
                 to="/"
                 class="header__nav-item home"
-              >Home</router-link>
+                >Home</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/getting-started"
                 class="header__nav-item"
-              >Getting started</router-link>
+                >Getting started</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/components"
                 class="header__nav-item"
-              >Components</router-link>
+                >Components</router-link
+              >
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/theme-editor"
                 class="header__nav-item"
-              >Theme Editor</router-link>
+                >Theme Editor</router-link
+              >
               <core-toggle
                 :checked="darkMode"
-                @change="e => darkMode = e.target.checked"
+                @change="(e) => (darkMode = e.target.checked)"
                 class="header__nav-item"
                 size="sm"
               ></core-toggle>
@@ -95,36 +110,34 @@ export default {
     showSidebar: Boolean,
     hasSidebar: Boolean,
     showInHeader: Boolean,
-    title: String
+    title: String,
   },
   data() {
     return {
       darkMode: localStorage.getItem("darkMode") === "true" ? true : false,
-      showMenu: false
+      showMenu: false,
     };
   },
   watch: {
-    showSidebar: val => {
+    showSidebar: (val) => {
       if (val) document.body.classList.add("no-scroll-mobile");
       else document.body.classList.remove("no-scroll-mobile");
     },
     darkMode: {
       handler: function(val) {
-        console.log(val);
-        document.body.setAttribute("mode", val ? "dark" : "light");
+        document.documentElement.setAttribute("mode", val ? "dark" : "light");
         localStorage.setItem("darkMode", val);
-        console.log(Boolean(localStorage.getItem("darkMode")));
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   methods: {
     handleToggleButton() {
       if (this.$route.meta.hasSidebar) {
         this.$emit("toggle-sidebar");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

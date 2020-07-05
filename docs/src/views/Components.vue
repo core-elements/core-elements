@@ -3,14 +3,17 @@
     <div class="components">
       <core-container center style="text-align: center" size="sm">
         <core-text tag="h1">Components</core-text>
-        <core-text tag="p" look="lead">Lightweight components used in all things</core-text>
+        <core-text tag="p" look="lead"
+          >A collection of lightweight elements that implement the most common
+          UI patterns in web development</core-text
+        >
       </core-container>
 
       <core-container style="text-align: center" center size="xs">
         <core-box margin-y="xl">
           <core-select
             :input-value="search"
-            @input="e => search = e.target.inputValue"
+            @input="(e) => (search = e.target.inputValue)"
             @select="(e) => $router.push('/components/' + e.target.value)"
             full
             size="lg"
@@ -22,13 +25,18 @@
               :key="component.name"
               v-for="component in components"
               :value="component.name"
-            >{{component.name}}</core-option>
+              >{{ component.name }}</core-option
+            >
           </core-select>
         </core-box>
       </core-container>
 
       <core-container style="text-align: center" center size="xs">
-        <core-tabs class="tabs" :value="category" @change="(e) => (category = e.target.value)">
+        <core-tabs
+          class="tabs"
+          :value="category"
+          @change="(e) => (category = e.target.value)"
+        >
           <core-tab>All</core-tab>
           <core-tab>Layout</core-tab>
           <core-tab>Interaction</core-tab>
@@ -57,12 +65,13 @@
                 :to="`/components/${component.name}`"
               >
                 <core-box padding-b="sm">
-                  <ion-icon style="font-size: 2rem" :name="component.icon"></ion-icon>
+                  <ion-icon
+                    style="font-size: 2rem"
+                    :name="component.icon"
+                  ></ion-icon>
                 </core-box>
                 <core-text size="md" weight="400">
-                  {{
-                  component.name
-                  }}
+                  {{ component.name }}
                 </core-text>
               </router-link>
             </core-grid-item>
@@ -83,21 +92,21 @@ export default {
     return {
       components,
       category: "All",
-      search: ""
+      search: "",
     };
   },
   computed: {
     tabbedComponents() {
       if (this.category === "All") return this.components;
-      return this.components.filter(comp => comp.category === this.category);
+      return this.components.filter((comp) => comp.category === this.category);
     },
     filteredComponents() {
       if (this.search === "") return this.tabbedComponents;
-      return this.tabbedComponents.filter(comp =>
+      return this.tabbedComponents.filter((comp) =>
         comp.name.toLowerCase().includes(this.search.toLowerCase())
       );
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -5,7 +5,7 @@
   --core-option-active-color: var(--core-color-ui-lighter);
   --core-option-selected-color: var(--core-color-focus);
   --core-option-selected-active-color: var(--core-color-focus-dark);
-  --core-option-font-color: var(--core-color-black);
+  --core-option-font-color: var(--core-color-font);
   --core-option-min-height: var(--core-size-md);
 }
 
@@ -34,21 +34,15 @@
 }
 
 :host([disabled]) {
-  opacity: 0.5;
+  --core-option-font-color: var(--core-color-ui-lighter);
   cursor: not-allowed;
 }
 
 :host([active]:not([disabled])) {
   --core-option-bg-color: var(--core-option-active-color);
-  --core-option-font-color: var(--core-color-font);
 }
 
-:host([selected]:not([active]):not([disabled])) {
+:host([selected]:not([disabled])) {
   --core-option-bg-color: var(--core-option-selected-color);
-  --core-option-font-color: var(--core-color-white);
-}
-
-:host([selected][active]) {
-  --core-option-bg-color: var(--core-option-selected-active-color);
   --core-option-font-color: var(--core-color-white);
 }

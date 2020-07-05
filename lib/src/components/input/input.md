@@ -21,7 +21,7 @@ icon: pencil-outline
 
 <core-knobs hideTabs  element="core-input">
 <core-input type="search" placeholder="Search...">
-  <ion-icon style="font-size: 2rem" slot="start" name="search-outline"></ion-icon>
+  <ion-icon style="font-size: 1em" slot="start" name="search-outline"></ion-icon>
 </core-input>
 </core-knobs>
 
@@ -68,7 +68,7 @@ Use `validate-on` to decide which event you want to do the validation on.
 
 <core-knobs hideTabs  element="core-input">
 <core-input required type="email" validate="both" validate-on="input" placeholder="Enter email">
-  <ion-icon style="font-size: 2rem" slot="start" name="mail-outline"></ion-icon>
+  <ion-icon style="font-size: 1em" slot="start" name="mail-outline"></ion-icon>
 </core-input>
 </core-knobs>
 
@@ -76,22 +76,32 @@ Use `validate-on` to decide which event you want to do the validation on.
 
 <core-knobs hideTabs  element="core-input">
 <style>
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
   .status [slot="end"] {
-    font-size: 2em;
     display: none;
   }
-  .status [slot="start"] {
-    font-size: 2em;
-    display: block;
-  }
-  .status[valid] .check {
-    display: block;
-  }
+  .status[valid] .check,
   .status[invalid] .error {
     display: block;
+    animation: fadein 0.2s ease;
+  }
+  .status[valid] .check {
+    color: var(--core-color-success);
+  }
+  .status[invalid] .error {
+    color: var(--core-color-danger);
   }
 </style>
-<core-input class="status" type="email" validate="both" validate-on="input" placeholder="Enter email">
+<core-input class="status" required type="email" validate="both" validate-on="input" placeholder="Enter email">
   <ion-icon slot="end" class="check" name="checkmark-outline"></ion-icon>
   <ion-icon slot="end" class="error" name="alert-circle-outline"></ion-icon>
 </core-input>
