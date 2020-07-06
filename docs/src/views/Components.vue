@@ -16,7 +16,6 @@
             @input="(e) => (search = e.target.inputValue)"
             @select="(e) => $router.push('/components/' + e.target.value)"
             full
-            size="lg"
             searchable
             placeholder="Search"
           >

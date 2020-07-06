@@ -200,6 +200,7 @@ button[part="remove-tag"] {
   border: 0;
   color: currentColor;
   background: none;
+  cursor: pointer;
   margin-left: var(--core-space-xs);
 }
 
