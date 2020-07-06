@@ -56,8 +56,7 @@
   --core-input-border-color: var(--core-color-ui);
 }
 
-:host([focused]:not([valid]):not([invalid])) [part="input"] {
-  --core-input-box-shadow: var(--core-focus-outline);
+:host(:focus-within) [part="input"] {
   --core-input-border-color: var(--core-color-focus);
 }
 

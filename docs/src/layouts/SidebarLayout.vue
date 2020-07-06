@@ -28,8 +28,9 @@ export default {
   padding-bottom: 60px;
   top: 60px;
   left: 0;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: var(--core-space-lg);
+  padding-right: var(--core-space-lg);
+  margin-right: var(--core-space-lg);
   width: 100%;
   position: fixed;
   z-index: 500;
@@ -63,7 +64,7 @@ export default {
     position: sticky;
     top: 0;
     font-size: 1.2em;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-left: 0;
     padding-right: 0;
   }

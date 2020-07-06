@@ -1413,6 +1413,11 @@
           "name": "showListEnd",
           "type": "Element | null"
         }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
       ]
     },
     {
@@ -1875,11 +1880,6 @@
           "default": "\"\""
         },
         {
-          "name": "immediate-select",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "searchable",
           "type": "boolean",
           "default": "false"
@@ -1992,12 +1992,6 @@
           "description": "Select element size",
           "type": "\"sm\"|\"md\"|\"lg\"",
           "default": "\"\""
-        },
-        {
-          "name": "immediateSelect",
-          "attribute": "immediate-select",
-          "type": "boolean",
-          "default": "false"
         },
         {
           "name": "blur"
@@ -2146,6 +2140,11 @@
           "default": "\"\""
         },
         {
+          "name": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "vertical",
           "type": "boolean",
           "default": "false"
@@ -2172,6 +2171,12 @@
           "default": "\"\""
         },
         {
+          "name": "full",
+          "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "vertical",
           "attribute": "vertical",
           "type": "boolean",
@@ -2190,21 +2195,21 @@
       "attributes": [
         {
           "name": "tag",
-          "description": "Button state",
+          "description": "Tag",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
-          "default": "\"\""
+          "default": "\"p\""
         },
         {
           "name": "size",
-          "description": "Button look",
+          "description": "Text size",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
           "default": "\"\""
         },
         {
           "name": "look",
-          "description": "Button look",
+          "description": "Look like",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
-          "default": "\"p\""
+          "default": "\"\""
         },
         {
           "name": "noMargin",
@@ -2236,23 +2241,23 @@
         {
           "name": "tag",
           "attribute": "tag",
-          "description": "Button state",
+          "description": "Tag",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
-          "default": "\"\""
+          "default": "\"p\""
         },
         {
           "name": "size",
           "attribute": "size",
-          "description": "Button look",
+          "description": "Text size",
           "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
           "default": "\"\""
         },
         {
           "name": "look",
           "attribute": "look",
-          "description": "Button look",
+          "description": "Look like",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
-          "default": "\"p\""
+          "default": "\"\""
         },
         {
           "name": "noMargin",

@@ -15,6 +15,7 @@
 
   --core-select-list-border: var(--core-border-width-sm) solid
     var(--core-color-ui-light);
+  --core-select-list-bg: var(--core-color-white);
   --core-select-list-border-radius: var(--core-select-border-radius);
   --core-select-list-box-shadow: 0px;
   --core-select-list-position: absolute;
@@ -69,12 +70,11 @@
   --core-select-min-height: var(--core-size-lg);
 }
 
-:host(:hover:not([focused])) {
+:host(:hover:not(:focus-within)) {
   --core-select-border-color: var(--core-color-ui);
 }
 
-:host([focused]) {
-  --core-select-input-box-shadow: var(--core-focus-outline);
+:host(:focus-within) {
   --core-select-border-color: var(--core-select-focus-color);
 }
 
@@ -149,6 +149,7 @@ button[part="clear-button"] {
   width: var(--core-select-min-height);
   height: var(--core-select-min-height);
   color: #333;
+  cursor: pointer;
   border: 0;
   background: transparent;
   outline: 0;
@@ -186,6 +187,7 @@ div[part="tag"] {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: var(--core-border-radius-default);
   height: calc(var(--core-select-min-height) - var(--core-space-sm));
   padding-left: var(--core-space-xs);
   margin-left: var(--core-space-sm);
@@ -206,6 +208,7 @@ button[part="remove-tag"] {
 }
 
 div[part="list"] {
+  background: var(--core-select-list-bg);
   visibility: hidden;
   position: var(--core-select-list-position);
   left: 0;
@@ -221,9 +224,8 @@ div[part="list"] {
   list-style: none;
   box-shadow: var(--core-select-list-box-shadow);
   border-radius: var(--core-select-list-border-radius);
-  background: white;
-  max-height: 300px;
-  overflow-y: scroll;
+  max-height: 250px;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -233,5 +235,4 @@ div[part="list"] {
   color: var(--core-color-font-ligth);
   height: var(--core-size-md);
   padding: 0 var(--core-space-sm);
-  background: white;
 }

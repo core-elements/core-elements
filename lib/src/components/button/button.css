@@ -7,7 +7,7 @@
   --core-button-text-color: var(--core-color-font);
   --core-button-box-shadow: 0;
   --core-button-transform: scale(1);
-  --core-button-transition: all 0.2s ease;
+  --core-button-transition: none;
   --core-button-cursor: pointer;
   --core-button-display: inline-flex;
   --core-button-height: var(--core-size-md);
@@ -19,10 +19,8 @@
   align-items: center;
   justify-content: center;
   height: var(--core-button-height);
-  outline: 0;
   color: var(--core-button-text-color);
   cursor: var(--core-button-cursor);
-  box-shadow: var(--core-button-box-shadow);
   border-radius: var(--core-button-border-radius);
   font-size: var(--core-button-font-size);
   padding: var(--core-button-padding);
@@ -37,12 +35,13 @@
   width: 100%;
 }
 
-:host(:hover) {
-  --core-button-bg-color: var(--core-color-ui-lighter);
+:host(:focus) {
+  box-shadow: var(--core-focus-outline);
+  outline: 0;
 }
 
-:host(:focus) {
-  --core-button-box-shadow: var(--core-focus-outline);
+:host(:hover) {
+  --core-button-bg-color: var(--core-color-ui-lighter);
 }
 
 :host([disabled]) {

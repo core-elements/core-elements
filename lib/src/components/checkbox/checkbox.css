@@ -73,9 +73,9 @@ input {
   justify-content: center;
 }
 
-:host([focused]) [part="box"] {
-  --core-checkbox-border-color: var(--core-color-focus);
+:host(:focus-within) [part="box"] {
   box-shadow: var(--core-focus-outline);
+  outline: 0;
 }
 
 :host(:hover) [part="box"] {
@@ -83,8 +83,8 @@ input {
 }
 
 :host([checked]) [part="box"] {
-  --core-checkbox-bg-color: var(--core-color-focus);
-  --core-checkbox-border-color: var(--core-color-focus);
+  --core-checkbox-bg-color: var(--core-color-primary);
+  --core-checkbox-border-color: var(--core-color-primary);
 }
 
 [part="indicator"] {

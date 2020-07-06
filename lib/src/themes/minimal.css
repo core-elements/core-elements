@@ -2,7 +2,7 @@
   /* COLORS */
   --core-color-primary-hue: 250;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 60%);
-  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 68%);
+  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 70%);
   --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 50%);
 
   --core-color-secondary-hue: 250;
@@ -13,7 +13,7 @@
   --core-color-focus: var(--core-color-primary);
   --core-color-focus-light: var(--core-color-primary-light);
   --core-color-focus-dark: var(--core-color-primary-dark);
-  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
+  --core-focus-outline: 0px 0px 0px 2px var(--core-color-focus);
 
   --core-color-success-hue: 130;
   --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
@@ -125,7 +125,6 @@
   --core-color-focus: var(--core-color-primary);
   --core-color-focus-light: var(--core-color-primary-dark);
   --core-color-focus-dark: var(--core-color-primary-light);
-  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
 
   --core-color-secondary-hue: 250;
   --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 50%);
@@ -148,16 +147,16 @@
 
   /* DEPTH */
   --core-depth-none: none;
-  --core-depth-xs: 0px 1px 1px 0px rgba(255, 255, 255, 0.06),
-    0px 2px 4px 0px rgba(255, 255, 255, 0.15);
-  --core-depth-sm: 0px 2px 2px 0px rgba(255, 255, 255, 0.06),
-    0px 4px 8px -2px rgba(255, 255, 255, 0.25);
-  --core-depth-md: 0px 2px 2px 0px rgba(255, 255, 255, 0.06),
-    0px 8px 16px -4px rgba(255, 255, 255, 0.25);
-  --core-depth-lg: 0px 4px 4px 0px rgba(255, 255, 255, 0.06),
-    0px 12px 24px -6px rgba(255, 255, 255, 0.25);
-  --core-depth-xl: 0px 6px 6px 0px rgba(255, 255, 255, 0.1),
-    0px 20px 32px -8px rgba(255, 255, 255, 0.25);
+  --core-depth-xs: 0px 1px 1px 0px rgba(0, 0, 0, 0.06),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  --core-depth-sm: 0px 2px 2px 0px rgba(0, 0, 0, 0.06),
+    0px 4px 8px -2px rgba(0, 0, 0, 0.2);
+  --core-depth-md: 0px 2px 2px 0px rgba(0, 0, 0, 0.06),
+    0px 8px 16px -4px rgba(0, 0, 0, 0.2);
+  --core-depth-lg: 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+    0px 12px 24px -6px rgba(0, 0, 0, 0.2);
+  --core-depth-xl: 0px 6px 6px 0px rgba(0, 0, 0, 0.1),
+    0px 20px 32px -8px rgba(0, 0, 0, 0.2);
 
   --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 70%);
   --core-color-font: hsl(var(--core-color-ui-hue), 10%, 80%);
@@ -168,6 +167,7 @@
 }
 
 html {
+  text-rendering: optimizeLegibility;
   transition: background 0.2s ease;
   color: var(--core-color-font);
   font-size: 16px;
@@ -179,4 +179,46 @@ html {
   html {
     font-size: 18px;
   }
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 1.2rem;
+  height: 1.2rem;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+  width: 6px;
+}
+*::-webkit-scrollbar-track:vertical {
+  border-left: 1px solid var(--core-color-ui-lightest);
+  border-right: 1px solid var(--core-color-ui-lightest);
+}
+*::-webkit-scrollbar-track:horizontal {
+  border-top: 1px solid var(--core-color-ui-lightest);
+}
+*::-webkit-scrollbar-thumb {
+  min-width: 3rem;
+  min-height: 3rem;
+  background-color: var(--core-color-ui-lighter);
+  border: 0.4rem solid transparent;
+  -moz-background-clip: content; /* Firefox 3.6 */
+  -webkit-background-clip: content; /* Safari 4? Chrome 6? */
+  background-clip: content-box;
+  border-radius: 1rem;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--core-color-ui-light);
+  border-color: transparent;
+}
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+  border-left: 1px solid var(--core-color-ui-lightest);
+  border-top: 1px solid var(--core-color-ui-lightest);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--core-color-ui-lighter) transparent;
 }

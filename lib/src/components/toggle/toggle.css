@@ -35,8 +35,9 @@
   vertical-align: middle;
 }
 
-:host input:focus + [part="box"] {
-  --core-toggle-box-shadow: var(--core-focus-outline);
+:host(:focus-within) [part="box"] {
+  box-shadow: var(--core-focus-outline);
+  outline: 0;
 }
 
 [part="box"] {
@@ -46,7 +47,7 @@
   border: var(--core-border-width-default) solid var(--core-color-ui-light);
   border-radius: var(--core-toggle-box-border-radius);
   display: inline-block;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
   height: var(--core-toggle-box-size);
   width: calc(var(--core-toggle-box-size) * 1.8);
   flex-basis: calc(
@@ -56,7 +57,7 @@
   flex-grow: 0;
 }
 
-:host input:checked + [part="box"] {
+:host([checked]) [part="box"] {
   border-color: var(--core-color-focus);
   background: var(--core-color-focus);
 }

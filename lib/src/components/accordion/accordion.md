@@ -6,8 +6,14 @@ icon: file-tray-stacked-outline
 ---
 
 <core-knobs element="core-accordion">
-<core-accordion title="Title">
-  <core-box margin-y="md">Content</core-box>
+<core-accordion title="Accordion 1">
+  <core-box padding="md">Content</core-box>
+</core-accordion>
+<core-accordion title="Accordion 2">
+  <core-box padding="md">Content</core-box>
+</core-accordion>
+<core-accordion title="Accordion 3">
+  <core-box padding="md">Content</core-box>
 </core-accordion>
 </core-knobs>
 
@@ -25,7 +31,7 @@ icon: file-tray-stacked-outline
 </style>
 <core-accordion class="indicator" hide-default-indicator title="Title">
   <i slot="start" class="gg-chevron-right"></i>
-  <core-box margin-y="md">Content</core-box>
+  <core-box padding="md">Content</core-box>
 </core-accordion>
 </core-knobs>
 
@@ -46,7 +52,7 @@ icon: file-tray-stacked-outline
   }
 </style>
 <core-accordion class="animate" title="Title">
-  <core-box margin-y="md">Content</core-box>
+  <core-box padding="md">Content</core-box>
 </core-accordion>
 </core-knobs>
 
@@ -77,7 +83,9 @@ Because of this you will need to add keyframes on the slotted content like this:
 </style>
 <core-accordion class="animate-2" title="Title">
   <div class="content">
-  <core-box border="primary" padding="lg" margin-y="md">Content</core-box>
+  <core-box padding="md">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </core-box>
   </div>
 </core-accordion>
 </core-knobs>
@@ -117,6 +125,6 @@ The `trigger` slot gets cursor: pointer by default.
     <i class="gg-remove-r"></i>
     <span>How do I do this?</span>
   </div>
-  <core-box margin-y="md">This is how you do it</core-box>
+  <core-box padding="md">This is how you do it</core-box>
 </core-accordion>
 </core-knobs>

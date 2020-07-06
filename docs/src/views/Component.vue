@@ -2,11 +2,7 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <div
-          class="menu-group"
-          v-for="(menuGroup, name) in groupedComponents"
-          :key="name"
-        >
+        <div class="menu-group" v-for="(menuGroup, name) in groupedComponents" :key="name">
           <core-box margin-b="sm">
             <core-text weight="500" color="black">{{ name }}</core-text>
           </core-box>
@@ -15,8 +11,7 @@
             :to="`/components/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-            >{{ page.name }}</router-link
-          >
+          >{{ page.name }}</router-link>
         </div>
       </nav>
     </div>
@@ -27,7 +22,7 @@
 
       <core-box
         bg="white"
-        style="position: sticky; top: 0; left: 0; z-index: 500"
+        style="position: sticky; top: 0; left: 0; z-index: 300"
         padding-t="xl"
         v-if="subMenu.length"
       >
@@ -37,8 +32,7 @@
             :to="{ hash: menu.id }"
             v-for="menu in subMenu"
             :key="menu.id"
-            >{{ menu.title }}</router-link
-          >
+          >{{ menu.title }}</router-link>
         </core-tabs>
       </core-box>
       <core-box class="markdown-body" margin-y="xl" v-html="html"></core-box>
@@ -60,30 +54,30 @@ export default {
   data() {
     return {
       subMenu: [],
-      components,
+      components
     };
   },
   watch: {
     $route: function(val) {
       this.setSubMenu();
-    },
+    }
   },
   methods: {
     setSubMenu() {
       setTimeout(() => {
         const headings = [...document.querySelectorAll("h2")];
-        this.subMenu = headings.map((h) => ({ id: h.id, title: h.innerText }));
+        this.subMenu = headings.map(h => ({ id: h.id, title: h.innerText }));
       }, 0);
     },
     goTo(route) {
       this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
-    },
+    }
   },
   computed: {
     component() {
-      return components.find((c) => c.name === this.$route.params.element);
+      return components.find(c => c.name === this.$route.params.element);
     },
     html() {
       return marked(this.component.content);
@@ -97,17 +91,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevComps, { ...comp }]
           };
         },
         {
           Interaction: [],
           Layout: [],
-          Form: [],
+          Form: []
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>
 

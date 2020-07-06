@@ -30,6 +30,7 @@
 :host(:focus) {
   z-index: 1;
   box-shadow: var(--core-focus-outline);
+  outline: 0;
 }
 
 :host([size="sm"]) {

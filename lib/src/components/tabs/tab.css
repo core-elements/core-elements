@@ -2,7 +2,7 @@
   height: var(--core-tab-height);
   white-space: nowrap;
   cursor: pointer;
-  display: inline-flex;
+  display: var(--core-tab-display);
   align-items: center;
   justify-content: center;
   color: var(--core-tab-color);
@@ -16,11 +16,6 @@
   border-color: var(--core-tab-border-color);
   border-bottom-style: var(--core-tab-border-bottom-style);
   border-right-style: var(--core-tab-border-right-style);
-}
-
-:host([full]) {
-  display: flex;
-  width: 100%;
 }
 
 :host([disabled]) {

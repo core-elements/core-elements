@@ -57,10 +57,9 @@
   transition: border-color 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
 }
 
-:host([focused]) [part="box"] {
-  --core-radio-box-shadow: var(--core-focus-outline);
-  --core-radio-box-border: var(--core-border-width-default) solid
-    var(--core-color-focus);
+:host(:focus-within) [part="box"] {
+  box-shadow: var(--core-focus-outline);
+  outline: 0;
 }
 
 :host(:hover:not([disabled]):not([checked])) [part="box"] {
@@ -68,7 +67,7 @@
 }
 
 :host([checked]) [part="box"] {
-  border-color: var(--core-radio-focus-color);
+  border-color: var(--core-color-primary);
 }
 
 [part="indicator"] {

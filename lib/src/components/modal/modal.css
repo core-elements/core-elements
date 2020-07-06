@@ -54,7 +54,7 @@
   background: var(--core-color-white);
   z-index: 999;
   opacity: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }

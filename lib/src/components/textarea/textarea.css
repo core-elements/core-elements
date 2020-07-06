@@ -19,6 +19,14 @@
   background-color: var(--core-textarea-bg-color);
 }
 
+:host(:hover) {
+  --core-textarea-border-color: var(--core-color-ui);
+}
+
+:host(:focus-within) {
+  --core-textarea-border-color: var(--core-color-focus);
+}
+
 :host([full]) {
   display: block;
   width: 100%;
@@ -42,13 +50,4 @@
   padding: var(--core-space-md);
   border: var(--core-border-width-default) solid
     var(--core-textarea-border-color);
-}
-
-:host textarea:hover {
-  --core-textarea-border-color: var(--core-color-ui);
-}
-
-:host textarea:focus {
-  --core-textarea-border-color: var(--core-color-focus);
-  --core-textarea-box-shadow: var(--core-focus-outline);
 }

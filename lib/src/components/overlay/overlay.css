@@ -18,7 +18,7 @@
 
 [part="content"] {
   position: absolute;
-  display: block;
+  display: inline-block;
   visibility: hidden;
   opacity: var(--core-overlay-opacity);
   background: var(--core-color-white);
@@ -28,7 +28,7 @@
     translateX(var(--core-overlay-translateX))
     translateY(var(--core-overlay-translateY));
   transition: all 0.2s ease;
-  width: 100%;
+  width: auto;
   border: 0;
   z-index: 900;
 }

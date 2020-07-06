@@ -1,7 +1,36 @@
 :host {
-  outline: 1px black;
+  --core-accordion-trigger: var(--core-color-white);
+  --core-accordion-content-padding: 0;
+  --core-accordion-trigger-padding: 0 var(--core-space-md);
+}
+
+:host {
   display: block;
   width: 100%;
+}
+
+[part="trigger"] {
+  background: var(--core-accordion-trigger-bg);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  margin: 0;
+  padding: var(--core-accordion-trigger-padding);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: var(--core-font-size);
+  border: 0;
+  height: var(--core-size-md);
+}
+
+:host [part="trigger"]:hover {
+  --core-accordion-trigger-bg: var(--core-color-ui-lightest);
+}
+
+:host(:focus-within) [part="trigger"] {
+  box-shadow: var(--core-focus-outline);
+  outline: 0;
 }
 
 [part="content"] {
@@ -11,6 +40,7 @@
 
 :host([open]) [part="content"] {
   display: block;
+  --core-accordion-content-padding: var(--core-space-md);
 }
 
 [part="title"] {
@@ -21,22 +51,6 @@
 ::slotted([slot="title"]),
 ::slotted([slot="trigger"]) {
   cursor: pointer;
-}
-
-[part="trigger"] {
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  font-size: var(--core-font-size);
-  outline: 0;
-  border: 0;
-  height: var(--core-size-md);
 }
 
 [part="start"] {
