@@ -1,4 +1,5 @@
 :host {
+  --core-accordion-trigger-height: var(--core-size-md);
   --core-accordion-trigger: var(--core-color-white);
   --core-accordion-content-padding: 0;
   --core-accordion-trigger-padding: 0 var(--core-space-md);
@@ -9,26 +10,40 @@
   width: 100%;
 }
 
+:host([size="sm"]) {
+  --core-accordion-trigger-height: var(--core-size-sm);
+}
+
+:host([size="md"]) {
+  --core-accordion-trigger-height: var(--core-size-md);
+}
+
+:host([size="lg"]) {
+  --core-accordion-trigger-height: var(--core-size-lg);
+}
+
 [part="trigger"] {
   background: var(--core-accordion-trigger-bg);
   color: inherit;
   cursor: pointer;
   text-align: left;
   margin: 0;
+  height: var(--core-accordion-trigger-height);
   padding: var(--core-accordion-trigger-padding);
   display: flex;
   width: 100%;
   align-items: center;
   font-size: var(--core-font-size);
   border: 0;
-  height: var(--core-size-md);
+  outline: 0;
 }
 
-:host [part="trigger"]:hover {
+[part="trigger"]:hover {
   --core-accordion-trigger-bg: var(--core-color-ui-lightest);
 }
 
-:host(:focus-within) [part="trigger"] {
+[part="trigger"]:focus {
+  z-index: 1;
   box-shadow: var(--core-focus-outline);
   outline: 0;
 }
