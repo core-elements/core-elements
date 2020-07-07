@@ -13,7 +13,7 @@
   --core-color-focus: var(--core-color-primary);
   --core-color-focus-light: var(--core-color-primary-light);
   --core-color-focus-dark: var(--core-color-primary-dark);
-  --core-focus-outline: 0px 0px 0px 2px var(--core-color-focus);
+  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
 
   --core-color-success-hue: 130;
   --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
