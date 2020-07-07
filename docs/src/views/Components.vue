@@ -1,7 +1,7 @@
 <template>
   <Page>
     <div class="components">
-      <core-container center style="text-align: center" size="sm">
+      <core-container center style="text-align: center" size="xs">
         <core-text tag="h1">Components</core-text>
         <core-text tag="p" look="lead">
           A collection of lightweight elements that implement the most common

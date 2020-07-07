@@ -110,7 +110,7 @@
 }
 
 :host([type="transparent"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-ui-lighter);
+  --core-button-bg-color: var(--core-color-ui-lightest);
 }
 
 :host([type="success"]) {

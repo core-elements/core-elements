@@ -1,6 +1,35 @@
 <template>
   <SidebarLayout :showSidebar="showSidebar">
-    <div slot="sidebar">Halla</div>
+    <div slot="sidebar">
+      <nav toc>
+        <div class="menu-group">
+          <core-box margin-b="sm">
+            <core-text weight="500" color="black">Getting started</core-text>
+          </core-box>
+          <router-link :to="{ hash: 'introduction' }">Introduction</router-link>
+          <router-link :to="{ hash: 'installation' }">Installation</router-link>
+        </div>
+        <div class="menu-group">
+          <core-box margin-b="sm">
+            <core-text weight="500" color="black">Concepts</core-text>
+          </core-box>
+          <router-link :to="{ hash: 'styling' }">Styling</router-link>
+          <router-link :to="{ hash: 'slots' }">Named slots</router-link>
+          <router-link :to="{ hash: 'events' }">Events</router-link>
+          <router-link :to="{ hash: 'attributes' }">Attributes and properties</router-link>
+          <router-link :to="{ hash: 'parts' }">Parts</router-link>
+        </div>
+        <div class="menu-group">
+          <core-box margin-b="sm">
+            <core-text weight="500" color="black">Guides</core-text>
+          </core-box>
+          <router-link :to="{ hash: 'react' }">React</router-link>
+          <router-link :to="{ hash: 'vue' }">Vue</router-link>
+          <router-link :to="{ hash: 'angular' }">Angular</router-link>
+          <router-link :to="{ hash: 'vanilla' }">Vanilla</router-link>
+        </div>
+      </nav>
+    </div>
 
     <div>
       <div class="markdown-body" v-html="gettingstarted()"></div>
