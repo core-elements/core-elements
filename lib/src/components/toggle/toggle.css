@@ -15,7 +15,7 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  height: var(--core-toggle-height);
+  min-height: var(--core-toggle-height);
 }
 
 :host([full]) {
@@ -43,8 +43,8 @@
 [part="box"] {
   position: relative;
   box-shadow: var(--core-toggle-box-shadow);
-  background: var(--core-color-ui-light);
-  border: var(--core-border-width-default) solid var(--core-color-ui-light);
+  background: var(--core-color-ui);
+  border: var(--core-border-width-default) solid var(--core-color-ui);
   border-radius: var(--core-toggle-box-border-radius);
   display: inline-block;
   transition: transform 0.2s ease;

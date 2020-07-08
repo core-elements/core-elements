@@ -145,7 +145,7 @@
   --core-text-size: var(--core-font-size-lg);
   --core-text-line-height: 1.5;
   --core-text-weight: 300;
-  --core-text-color: var(--core-color-font-light);
+  --core-text-color: var(--core-color-font-weak);
 }
 
 :host([look="small"]) {
@@ -166,7 +166,7 @@
 :host([tag="h5"]),
 :host([look="h6"]),
 :host([tag="h6"]) {
-  --core-text-color: var(--core-color-font-dark);
+  --core-text-color: var(--core-color-font-heading);
 }
 
 :host([look="p"]),
@@ -179,7 +179,7 @@
 :host([look="i"]),
 :host([tag="i"]),
 :host([look="lead"]) {
-  --core-text-color: var(--core-color-font-light);
+  --core-text-color: var(--core-color-font-weak);
 }
 
 :host([tag="h6"]),
@@ -221,11 +221,8 @@
   }
 }
 
-@each $i in primary, secondary, success, danger, ui, ui-dark, ui-darker,
-  ui-darkest, ui-light, ui-lighter, ui-lightest, ui-dark, white, black,
-  font-light, font-dark, font
-{
+@each $i in weak, strong, heading {
   :host([color="$(i)"]) {
-    --core-text-color: var(--core-color-$(i));
+    --core-text-color: var(--core-color-font-$(i));
   }
 }

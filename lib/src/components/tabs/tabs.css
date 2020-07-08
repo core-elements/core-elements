@@ -7,7 +7,7 @@
   /* TODO: This is weeeeird, cannot set shorthand properties for border width or border style */
   --core-tab-border-bottom-style: solid;
   --core-tab-border-right-style: none;
-  --core-tab-color: var(--core-color-font-light);
+  --core-tab-color: var(--core-color-font-weak);
 }
 
 :host {

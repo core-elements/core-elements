@@ -1,5 +1,5 @@
 :host {
-  height: var(--core-tab-height);
+  min-height: var(--core-tab-height);
   white-space: nowrap;
   cursor: pointer;
   display: var(--core-tab-display);
@@ -23,15 +23,15 @@
 }
 
 :host(:hover) {
-  --core-tab-border-color: var(--core-color-ui-light);
+  --core-tab-border-color: var(--core-color-ui);
 }
 
 :host(:focus) {
-  --core-tab-border-color: var(--core-color-ui-light);
-  --core-tab-color: var(--core-color-font-dark);
+  --core-tab-border-color: var(--core-color-ui);
+  --core-tab-color: var(--core-color-font-strong);
 }
 
 :host([selected]) {
-  --core-tab-color: var(--core-color-font-dark);
+  --core-tab-color: var(--core-color-font-strong);
   --core-tab-border-color: var(--core-color-focus);
 }

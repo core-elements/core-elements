@@ -26,7 +26,7 @@
   display: block;
   height: 5px;
   width: 100%;
-  background: var(--core-color-ui-light);
+  background: var(--core-color-ui);
   border-radius: 4px;
   transition: background 0.5s ease;
   align-self: center;
@@ -41,7 +41,7 @@
 
 [part="thumb"] {
   outline: 0;
-  border: 2px solid var(--core-color-ui-light);
+  border: 2px solid var(--core-color-ui);
   position: absolute;
   z-index: 1;
   cursor: grab;

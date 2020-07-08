@@ -18,7 +18,7 @@
       </core-container>
       <core-container style="text-align: center" center size="xs">
         <core-box margin-y="lg">
-          <router-link tag="core-button" to="/getting-started" type="primary">Get Started</router-link>
+          <router-link tag="core-button" to="/documentation/introduction" type="primary">Get Started</router-link>
           <router-link tag="core-button" to="/components">Components</router-link>
         </core-box>
         <core-box margin-y="lg">
@@ -46,7 +46,7 @@
           <core-grid-item sm="1" md="1">
             <core-box class="feature-box" padding="md">
               <ion-icon
-                style="font-size: 2.5rem; color: var(--core-color-font-dark); margin-bottom: 20px;"
+                style="font-size: 2.5rem; color: var(--core-color-font-strong); margin-bottom: 20px;"
                 name="rocket-outline"
               ></ion-icon>
               <core-text tag="h3">Lightweight & performant</core-text>
@@ -61,7 +61,7 @@
           <core-grid-item sm="1" md="1">
             <core-box class="feature-box" padding="md">
               <ion-icon
-                style="font-size: 2.5rem; color: var(--core-color-font-dark); margin-bottom: 20px;"
+                style="font-size: 2.5rem; color: var(--core-color-font-strong); margin-bottom: 20px;"
                 name="color-fill-outline"
               ></ion-icon>
               <core-text tag="h3">Themeable</core-text>
@@ -76,7 +76,7 @@
           <core-grid-item sm="1" md="1">
             <core-box class="feature-box" padding="md">
               <ion-icon
-                style="font-size: 2.5rem; color: var(--core-color-font-dark); margin-bottom: 20px;"
+                style="font-size: 2.5rem; color: var(--core-color-font-strong); margin-bottom: 20px;"
                 name="logo-html5"
               ></ion-icon>
               <core-text tag="h3">HTML Standard</core-text>

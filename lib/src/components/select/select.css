@@ -5,16 +5,16 @@
   --core-select-min-height: var(--core-size-md);
   --core-select-background: none;
   --core-select-padding: 0px;
-  --core-select-placeholder-color: var(--core-color-font-light);
+  --core-select-placeholder-color: var(--core-color-font-weak);
   --core-select-border-width: var(--core-border-width-default);
   --core-select-border-style: solid;
-  --core-select-border-color: var(--core-color-ui-light);
+  --core-select-border-color: var(--core-color-ui);
   --core-select-border-radius: var(--core-border-radius-default);
 
   --core-select-input-box-shadow: none;
 
   --core-select-list-border: var(--core-border-width-sm) solid
-    var(--core-color-ui-light);
+    var(--core-color-ui);
   --core-select-list-bg: var(--core-color-white);
   --core-select-list-border-radius: var(--core-select-border-radius);
   --core-select-list-box-shadow: 0px;
@@ -71,7 +71,7 @@
 }
 
 :host(:hover:not(:focus-within)) {
-  --core-select-border-color: var(--core-color-ui);
+  --core-select-border-color: var(--core-color-ui-strong);
 }
 
 :host(:focus-within) {
@@ -193,7 +193,7 @@ div[part="tag"] {
   margin-left: var(--core-space-sm);
   margin-top: var(--core-space-xs);
   margin-bottom: var(--core-space-xs);
-  background: var(--core-color-ui-lighter);
+  background: var(--core-color-ui-weak);
 }
 
 button[part="remove-tag"] {

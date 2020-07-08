@@ -2,9 +2,9 @@
   --core-option-padding: 0 var(--core-space-sm);
   --core-option-bg-color: var(--core-color-white);
   --core-option-border-radius: 0;
-  --core-option-active-color: var(--core-color-ui-lightest);
+  --core-option-active-color: var(--core-color-ui-weak);
   --core-option-selected-color: var(--core-color-focus);
-  --core-option-selected-active-color: var(--core-color-focus-dark);
+  --core-option-selected-active-color: var(--core-color-focus-strong);
   --core-option-font-color: var(--core-color-font);
   --core-option-min-height: var(--core-size-md);
 }
@@ -34,7 +34,7 @@
 }
 
 :host([disabled]) {
-  --core-option-font-color: var(--core-color-ui-lighter);
+  --core-option-font-color: var(--core-color-ui);
   cursor: not-allowed;
 }
 

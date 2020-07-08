@@ -44,7 +44,7 @@
 }
 
 :host([bordered]) slot::slotted(*) {
-  border-bottom: 1px solid var(--core-color-ui-light);
+  border-bottom: 1px solid var(--core-color-ui);
 }
 
 :host([bordered]) slot::slotted(*:last-of-type) {
@@ -70,7 +70,7 @@
 }
 
 :host([bordered]) > * {
-  border-bottom: 1px solid var(--core-color-ui-light);
+  border-bottom: 1px solid var(--core-color-ui);
 }
 
 :host([bordered]) > * {

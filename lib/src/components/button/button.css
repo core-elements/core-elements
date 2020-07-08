@@ -1,6 +1,6 @@
 :host {
   --core-button-padding: 0 var(--core-space-md);
-  --core-button-bg-color: var(--core-color-ui-lightest);
+  --core-button-bg-color: var(--core-color-ui-weak);
   --core-button-border: none;
   --core-button-border-radius: var(--core-border-radius-default);
   --core-button-font-size: var(--core-font-size-md);
@@ -41,7 +41,7 @@
 }
 
 :host(:hover) {
-  --core-button-bg-color: var(--core-color-ui-lighter);
+  --core-button-bg-color: var(--core-color-ui);
 }
 
 :host([disabled]) {
@@ -101,7 +101,7 @@
 }
 
 :host([type="primary"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-primary-dark);
+  --core-button-bg-color: var(--core-color-primary-strong);
 }
 
 :host([type="transparent"]) {
@@ -110,7 +110,7 @@
 }
 
 :host([type="transparent"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-ui-lightest);
+  --core-button-bg-color: var(--core-color-ui-weak);
 }
 
 :host([type="success"]) {
@@ -119,7 +119,7 @@
 }
 
 :host([type="success"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-success-dark);
+  --core-button-bg-color: var(--core-color-success-strong);
 }
 
 :host([type="warning"]) {
@@ -128,7 +128,7 @@
 }
 
 :host([type="warning"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-warning-dark);
+  --core-button-bg-color: var(--core-color-warning-strong);
 }
 
 :host([type="danger"]) {
@@ -137,5 +137,5 @@
 }
 
 :host([type="danger"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-danger-dark);
+  --core-button-bg-color: var(--core-color-danger-strong);
 }

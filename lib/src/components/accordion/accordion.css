@@ -28,7 +28,7 @@
   cursor: pointer;
   text-align: left;
   margin: 0;
-  height: var(--core-accordion-trigger-height);
+  min-height: var(--core-accordion-trigger-height);
   padding: var(--core-accordion-trigger-padding);
   display: flex;
   width: 100%;
@@ -39,7 +39,7 @@
 }
 
 [part="trigger"]:hover {
-  --core-accordion-trigger-bg: var(--core-color-ui-lightest);
+  --core-accordion-trigger-bg: var(--core-color-ui-weak);
 }
 
 [part="trigger"]:focus {

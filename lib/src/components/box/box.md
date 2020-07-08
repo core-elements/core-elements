@@ -12,7 +12,7 @@ icon: cube-outline
 ## Card
 
 <core-knobs hideTabs element="core-box">
-  <core-box bg="white" inline depth="sm" border="ui-lightest">
+  <core-box bg="white" inline depth="sm" border="ui-weakest">
     <img width="400" height="250" src="https://placeimg.com/400/250/tech">
     <core-box padding="md">
       <core-text tag="h2">Card Title</core-text>
@@ -45,9 +45,9 @@ icon: cube-outline
     margin-right: 10px;
   }
 </style>
-<core-box class="pricing" bg="ui-lightest" padding="lg" inline depth="sm">
+<core-box class="pricing" bg="ui-weakest" padding="lg" inline depth="sm">
   <core-text tag="h2">Small</core-text>
-  <core-text tag="p" color="ui" >Free</core-text>
+  <core-text tag="p" color="weak" >Free</core-text>
   <core-box margin-y="lg">
     <ul full size="md">
       <li>

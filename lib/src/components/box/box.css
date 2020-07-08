@@ -13,27 +13,24 @@
   cursor: pointer;
 }
 
-@each $i in primary, primary-light, primary-dark, secondary, secondary-light,
-  secondary-dark, success, warning, danger, ui-light, ui-lighter, ui-lightest,
-  ui-dark, white, black
+@each $i in primary, primary-weak, primary-strong, secondary, secondary-weak,
+  secondary-strong, success, warning, danger, ui-weak, ui-strong, white, black
 {
   :host([bg="$(i)"]) {
     background-color: var(--core-color-$(i));
   }
 }
 
-@each $i in primary, primary-light, primary-dark, secondary, secondary-light,
-  secondary-dark, success, warning, danger, ui-light, ui-lighter, ui-lightest,
-  ui-dark, white, black
+@each $i in primary, success, warning, danger, ui, ui-weak, ui-strong, white,
+  black
 {
   :host([color="$(i)"]) {
     color: var(--core-color-$(i));
   }
 }
 
-@each $i in primary, primary-light, primary-dark, secondary, secondary-light,
-  secondary-dark, success, warning, danger, ui-light, ui-lighter, ui-lightest,
-  ui-dark, white, black
+@each $i in primary, success, warning, danger, ui, ui-weak, ui-strong, white,
+  black
 {
   :host([border="$(i)"]) {
     border: var(--core-border-width-sm) solid var(--core-color-$(i));

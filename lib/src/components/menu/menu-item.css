@@ -24,7 +24,7 @@
 }
 
 :host(:hover) {
-  --core-list-item-bg: var(--core-color-ui-lightest);
+  --core-list-item-bg: var(--core-color-ui-weak);
 }
 
 :host(:focus) {

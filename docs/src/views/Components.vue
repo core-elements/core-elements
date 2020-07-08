@@ -123,7 +123,7 @@ export default {
   max-width: 250px;
   text-align: center;
   border-radius: var(--core-border-radius-default);
-  background: var(--core-color-ui-lightest);
+  background: var(--core-color-ui-weak);
   color: var(--core-color-black);
   padding: var(--core-space-sm);
 }
@@ -140,7 +140,6 @@ export default {
   border-style: solid;
   border-width: var(--core-space-xxs) var(--core-space-xxs) 0
     var(--core-space-xxs);
-  border-color: var(--core-color-ui-lightest) transparent transparent
-    transparent;
+  border-color: var(--core-color-ui-weak) transparent transparent transparent;
 }
 </style>

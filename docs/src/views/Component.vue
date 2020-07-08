@@ -4,7 +4,7 @@
       <nav toc>
         <div class="menu-group" v-for="(menuGroup, name) in groupedComponents" :key="name">
           <core-box margin-b="sm">
-            <core-text weight="500" color="black">{{ name }}</core-text>
+            <core-text weight="500" color="strong">{{ name }}</core-text>
           </core-box>
           <router-link
             @click.native="$emit('toggle-sidebar')"
@@ -121,12 +121,12 @@ export default {
 }
 
 .content-list a {
-  color: var(--core-color-font-light);
+  color: var(--core-color-font-weak);
   text-decoration: none;
 }
 
 .content-list a:hover {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
 }
 
 @media (min-width: 800px) {
@@ -149,14 +149,14 @@ nav[toc] {
 }
 
 nav[toc] label {
-  color: var(--core-color-font-light);
+  color: var(--core-color-font-weak);
   text-transform: uppercase;
   font-size: 0.7em;
   display: block;
 }
 
 nav[toc] a {
-  color: var(--core-color-font-light);
+  color: var(--core-color-font-weak);
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
@@ -165,11 +165,11 @@ nav[toc] a {
 }
 
 nav[toc] a:hover {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
 }
 
 nav[toc] a.router-link-exact-active {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
   transition: all 0.5s ease;
 }
 
@@ -179,21 +179,6 @@ nav[toc] a:last-of-type {
 
 nav[toc] a a {
   font-size: 1rem;
-}
-
-nav[toc] .menu-group::part(trigger) {
-  border-radius: var(--core-border-radius-default);
-  padding: 0 var(--core-space-sm);
-  margin-bottom: var(--core-space-sm);
-  transition: all 0.2s ease;
-}
-
-nav[toc] .menu-group::part(content) {
-  padding: 0 var(--core-space-sm);
-}
-
-nav[toc] .menu-group::part(trigger):hover {
-  background: var(--core-color-ui-lightest);
 }
 
 @media (min-width: 800px) {

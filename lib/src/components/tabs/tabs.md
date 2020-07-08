@@ -37,7 +37,7 @@ icon: library-outline
 <core-knobs  element="core-tabs">
 <style>
   .buttons core-tab {
-    border: 2px solid var(--core-color-ui-light);
+    border: 2px solid var(--core-color-ui);
     margin: 0;
     background: var(--core-color-white);
   }
@@ -53,7 +53,7 @@ icon: library-outline
     border-bottom-right-radius: var(--core-border-radius-default);
   }
   .buttons core-tab[selected] {
-    background: var(--core-color-ui-lightest);
+    background: var(--core-color-ui-weak);
   }
 </style>
 <core-tabs class="buttons">

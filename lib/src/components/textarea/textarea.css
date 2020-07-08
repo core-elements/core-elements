@@ -2,10 +2,10 @@
   --core-textarea-bg-color: var(--core-color-white);
   --core-textarea-padding: 0 var(--core-space-md);
   --core-textarea-height: var(--core-size-md);
-  --core-textarea-border-color: var(--core-color-ui-light);
+  --core-textarea-border-color: var(--core-color-ui);
   --core-textarea-border-radius: var(--core-border-radius-default);
   --core-textarea-box-shadow: none;
-  --core-textarea-placeholder-color: var(--core-color-font-light);
+  --core-textarea-placeholder-color: var(--core-color-font-weak);
   --core-textarea-font-size: var(--core-font-size-md);
   --core-textarea-font-family: var(--core-font-family);
   --core-textarea-color: var(--core-color-font);

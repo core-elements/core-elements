@@ -112,7 +112,7 @@ icon: checkbox-outline
       margin-bottom: var(--core-space-md);
       padding: var(--core-space-md);
       height: auto;
-      border: 2px solid var(--core-color-ui-light);
+      border: 2px solid var(--core-color-ui);
     }
     .choice:hover {
       border-color: var(--core-color-ui);

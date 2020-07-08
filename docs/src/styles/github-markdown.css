@@ -56,7 +56,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
 }
 
 .markdown-body {
@@ -434,11 +434,11 @@
   background-color: #fff !important;
 }
 
-.markdown-body .bg-gray-light {
+.markdown-body .bg-gray-weak {
   background-color: #fafbfc !important;
 }
 
-.markdown-body .text-gray-light {
+.markdown-body .text-gray-weak {
   color: #6a737d !important;
 }
 
@@ -710,8 +710,8 @@
 }
 
 .markdown-body code {
-  background-color: var(--core-color-ui-lighter);
-  color: var(--core-color-ui-dark);
+  background-color: var(--core-color-ui-weak);
+  color: var(--core-color-font-weak);
   border-radius: 3px;
   margin: 0;
   padding: 0.2em 0.4em;

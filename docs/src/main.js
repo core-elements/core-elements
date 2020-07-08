@@ -12,7 +12,7 @@ import App from "./App.vue";
 import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
-import GettingStarted from "./views/GettingStarted";
+import Documentation from "./views/Documentation";
 import ThemeEditor from "./views/ThemeEditor";
 
 Vue.config.ignoredElements = [/core-\w*/];
@@ -42,10 +42,10 @@ const router = new Router({
       meta: { title: "Select component", hasSidebar: true },
     },
     {
-      path: "/getting-started",
-      component: GettingStarted,
+      path: "/documentation/:slug",
+      component: Documentation,
       meta: {
-        title: "Getting Started",
+        title: "Documentation",
         showInHeader: true,
         hasSidebar: true,
       },

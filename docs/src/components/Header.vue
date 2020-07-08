@@ -68,9 +68,9 @@
               >Home</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
-                to="/getting-started"
+                to="/documentation/introduction"
                 class="header__nav-item"
-              >Getting started</router-link>
+              >Documentation</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/components"
@@ -178,7 +178,7 @@ export default {
 }
 
 .header__logo:hover {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
 }
 
 .header__logo svg {
@@ -213,7 +213,7 @@ export default {
 }
 
 .header__nav-item {
-  color: var(--core-color-font-light);
+  color: var(--core-color-font-weak);
   margin-bottom: 30px;
   display: flex;
   font-size: 2rem;
@@ -221,11 +221,11 @@ export default {
 }
 
 .header__nav-item:hover {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
 }
 
 .header__nav-item.router-link-active {
-  color: var(--core-color-font-dark);
+  color: var(--core-color-font-strong);
 }
 
 .header__nav-item.home.router-link-active {

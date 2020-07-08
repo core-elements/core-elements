@@ -10,6 +10,11 @@
           "type": "boolean"
         },
         {
+          "name": "size",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "hide-default-indicator",
           "type": "boolean",
           "default": "false"
@@ -32,6 +37,12 @@
         {
           "name": "hasEndSlot",
           "type": "Element | null"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string",
+          "default": "\"\""
         },
         {
           "name": "hideDefaultIndicator",
@@ -424,10 +435,6 @@
       "path": "./../../lib/src/components/checkbox/checkbox.wc.js",
       "attributes": [
         {
-          "name": "focused",
-          "type": "boolean"
-        },
-        {
           "name": "checked",
           "type": "boolean"
         },
@@ -464,11 +471,6 @@
         }
       ],
       "properties": [
-        {
-          "name": "focused",
-          "attribute": "focused",
-          "type": "boolean"
-        },
         {
           "name": "formElement",
           "type": "HTMLInputElement | null"
@@ -1045,11 +1047,6 @@
           "default": "\"undefined\""
         },
         {
-          "name": "focused",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "autofocus",
           "type": "boolean",
           "default": "false"
@@ -1220,12 +1217,6 @@
           "attribute": "name",
           "type": "string",
           "default": "\"undefined\""
-        },
-        {
-          "name": "focused",
-          "attribute": "focused",
-          "type": "boolean",
-          "default": "false"
         },
         {
           "name": "autofocus",
@@ -1547,11 +1538,6 @@
           "default": "false"
         },
         {
-          "name": "focused",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "disabled",
           "type": "boolean",
           "default": "false"
@@ -1597,12 +1583,6 @@
         {
           "name": "full",
           "attribute": "full",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "focused",
-          "attribute": "focused",
           "type": "boolean",
           "default": "false"
         },
@@ -1859,11 +1839,6 @@
           "default": "false"
         },
         {
-          "name": "focused",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "disable-filter",
           "type": "boolean",
           "default": "false"
@@ -1959,12 +1934,6 @@
         {
           "name": "clearable",
           "attribute": "clearable",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "focused",
-          "attribute": "focused",
           "type": "boolean",
           "default": "false"
         },

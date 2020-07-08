@@ -2,10 +2,10 @@
   --core-input-bg-color: var(--core-color-white);
   --core-input-padding: 0 var(--core-space-md);
   --core-input-height: var(--core-size-md);
-  --core-input-border-color: var(--core-color-ui-light);
+  --core-input-border-color: var(--core-color-ui);
   --core-input-border-radius: var(--core-border-radius-default);
   --core-input-box-shadow: none;
-  --core-input-placeholder-color: var(--core-color-font-light);
+  --core-input-placeholder-color: var(--core-color-font-weak);
   --core-input-font-size: 16px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 :host [part="input"]:hover {
-  --core-input-border-color: var(--core-color-ui);
+  --core-input-border-color: var(--core-color-ui-strong);
 }
 
 :host(:focus-within) [part="input"] {
@@ -89,7 +89,7 @@
 [part="help"] {
   display: block;
   font-size: var(--core-font-size-xs);
-  color: var(--core-color-font-light);
+  color: var(--core-color-font-weak);
   margin-top: var(--core-space-sm);
 }
 

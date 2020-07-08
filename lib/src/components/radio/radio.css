@@ -4,13 +4,13 @@
   --core-radio-height: var(--core-size-md);
   --core-radio-box-bg-color: var(--core-color-white);
   --core-radio-box-border: var(--core-border-width-default) solid
-    var(--core-color-ui-light);
+    var(--core-color-ui);
 }
 
 :host {
   vertical-align: middle;
   outline: 0;
-  height: var(--core-radio-height);
+  min-height: var(--core-radio-height);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -63,7 +63,7 @@
 }
 
 :host(:hover:not([disabled]):not([checked])) [part="box"] {
-  --core-radio-box-bg-color: var(--core-color-ui-lighter);
+  --core-radio-box-bg-color: var(--core-color-ui-weak);
 }
 
 :host([checked]) [part="box"] {

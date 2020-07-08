@@ -24,7 +24,7 @@ button {
 }
 
 button:hover {
-  color: var(--core-color-ui-dark);
+  color: var(--core-color-ui-strong);
 }
 
 button[active] {
@@ -42,11 +42,11 @@ table {
   overflow: auto;
   margin-top: 30px;
   border-radius: 10px;
-  border: 2px solid var(--core-color-ui-lighter);
+  border: 2px solid var(--core-color-ui);
 }
 
 table thead tr {
-  background: var(--core-color-ui-lighter);
+  background: var(--core-color-ui);
 }
 
 table th {

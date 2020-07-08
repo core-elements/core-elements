@@ -2,46 +2,42 @@
   /* COLORS */
   --core-color-primary-hue: 250;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 60%);
-  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 70%);
-  --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 50%);
-
-  --core-color-secondary-hue: 250;
-  --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 95%);
-  --core-color-secondary-light: hsl(var(--core-color-secondary-hue), 100%, 97%);
-  --core-color-secondary-dark: hsl(var(--core-color-secondary-hue), 100%, 90%);
+  --core-color-primary-weak: hsl(var(--core-color-primary-hue), 100%, 70%);
+  --core-color-primary-strong: hsl(var(--core-color-primary-hue), 100%, 50%);
+  --core-color-primary-contrast: hsl(var(--core-color-primary-hue), 100%, 100%);
 
   --core-color-focus: var(--core-color-primary);
-  --core-color-focus-light: var(--core-color-primary-light);
-  --core-color-focus-dark: var(--core-color-primary-dark);
+  --core-color-focus-weak: var(--core-color-primary-weak);
+  --core-color-focus-strong: var(--core-color-primary-strong);
   --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
 
   --core-color-success-hue: 130;
   --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
-  --core-color-success-light: hsl(var(--core-color-success-hue), 48%, 48%);
-  --core-color-success-dark: hsl(var(--core-color-success-hue), 48%, 30%);
+  --core-color-success-weak: hsl(var(--core-color-success-hue), 48%, 48%);
+  --core-color-success-strong: hsl(var(--core-color-success-hue), 48%, 30%);
+  --core-color-success-contrast: hsl(var(--core-color-success-hue), 48%, 100%);
 
   --core-color-warning-hue: 46;
   --core-color-warning: hsl(var(--core-color-warning-hue), 70%, 61%);
-  --core-color-warning-light: hsl(var(--core-color-warning-hue), 70%, 68%);
-  --core-color-warning-dark: hsl(var(--core-color-warning-hue), 70%, 51%);
+  --core-color-warning-weak: hsl(var(--core-color-warning-hue), 70%, 68%);
+  --core-color-warning-strong: hsl(var(--core-color-warning-hue), 70%, 51%);
+  --core-color-warning-contrast: hsl(var(--core-color-warning-hue), 70%, 100%);
 
   --core-color-danger-hue: 349;
   --core-color-danger: hsl(var(--core-color-danger-hue), 75%, 40%);
-  --core-color-danger-light: hsl(var(--core-color-danger-hue), 75%, 44%);
-  --core-color-danger-dark: hsl(var(--core-color-danger-hue), 75%, 30%);
+  --core-color-danger-weak: hsl(var(--core-color-danger-hue), 75%, 44%);
+  --core-color-danger-strong: hsl(var(--core-color-danger-hue), 75%, 30%);
+  --core-color-danger-contrast: hsl(var(--core-color-danger-hue), 70%, 100%);
 
   --core-color-ui-hue: var(--core-color-primary-hue);
-  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 70%);
-  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 95%);
-  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 90%);
-  --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 80%);
-  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 10%, 30%);
-  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 20%);
-  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 10%);
+  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 85%);
+  --core-color-ui-weak: hsl(var(--core-color-ui-hue), 10%, 95%);
+  --core-color-ui-strong: hsl(var(--core-color-ui-hue), 10%, 70%);
 
   --core-color-font: hsl(var(--core-color-ui-hue), 10%, 40%);
-  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 50%);
-  --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 10%);
+  --core-color-font-weak: hsl(var(--core-color-ui-hue), 10%, 50%);
+  --core-color-font-strong: hsl(var(--core-color-ui-hue), 10%, 10%);
+  --core-color-font-heading: var(--core-color-font-strong);
 
   --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
   --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
@@ -119,31 +115,31 @@
 [mode="dark"] {
   --core-color-primary-hue: 240;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 80%);
-  --core-color-primary-light: hsl(var(--core-color-primary-hue), 100%, 70%);
-  --core-color-primary-dark: hsl(var(--core-color-primary-hue), 100%, 90%);
+  --core-color-primary-weak: hsl(var(--core-color-primary-hue), 100%, 70%);
+  --core-color-primary-strong: hsl(var(--core-color-primary-hue), 100%, 90%);
 
   --core-color-focus: var(--core-color-primary);
-  --core-color-focus-light: var(--core-color-primary-dark);
-  --core-color-focus-dark: var(--core-color-primary-light);
+  --core-color-focus-weak: var(--core-color-primary-strong);
+  --core-color-focus-strong: var(--core-color-primary-weak);
 
   --core-color-secondary-hue: 250;
   --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 50%);
-  --core-color-secondary-light: hsl(var(--core-color-secondary-hue), 100%, 97%);
-  --core-color-secondary-dark: hsl(var(--core-color-secondary-hue), 100%, 90%);
+  --core-color-secondary-weak: hsl(var(--core-color-secondary-hue), 100%, 97%);
+  --core-color-secondary-strong: hsl(
+    var(--core-color-secondary-hue),
+    100%,
+    90%
+  );
 
   --core-color-success: hsl(var(--core-color-success-hue), 100%, 40%);
-  --core-color-success-dark: hsl(var(--core-color-success-hue), 100%, 30%);
+  --core-color-success-strong: hsl(var(--core-color-success-hue), 100%, 30%);
 
   --core-color-danger: hsl(var(--core-color-danger-hue), 100%, 40%);
-  --core-color-danger-dark: hsl(var(--core-color-danger-hue), 100%, 30%);
+  --core-color-danger-strong: hsl(var(--core-color-danger-hue), 100%, 30%);
 
-  --core-color-ui-lightest: hsl(var(--core-color-ui-hue), 10%, 20%);
-  --core-color-ui-lighter: hsl(var(--core-color-ui-hue), 10%, 30%);
-  --core-color-ui-light: hsl(var(--core-color-ui-hue), 10%, 45%);
-  --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 60%);
-  --core-color-ui-dark: hsl(var(--core-color-ui-hue), 10%, 80%);
-  --core-color-ui-darker: hsl(var(--core-color-ui-hue), 10%, 90%);
-  --core-color-ui-darkest: hsl(var(--core-color-ui-hue), 10%, 95%);
+  --core-color-ui-weak: hsl(var(--core-color-primary-hue), 10%, 20%);
+  --core-color-ui: hsl(var(--core-color-primary-hue), 10%, 30%);
+  --core-color-ui-strong: hsl(var(--core-color-primary-hue), 10%, 40%);
 
   /* DEPTH */
   --core-depth-none: none;
@@ -158,9 +154,10 @@
   --core-depth-xl: 0px 6px 6px 0px rgba(0, 0, 0, 0.1),
     0px 20px 32px -8px rgba(0, 0, 0, 0.2);
 
-  --core-color-font-light: hsl(var(--core-color-ui-hue), 10%, 70%);
+  --core-color-font-weak: hsl(var(--core-color-ui-hue), 10%, 70%);
   --core-color-font: hsl(var(--core-color-ui-hue), 10%, 80%);
-  --core-color-font-dark: hsl(var(--core-color-ui-hue), 10%, 100%);
+  --core-color-font-strong: hsl(var(--core-color-ui-hue), 10%, 100%);
+  --core-color-font-heading: var(--core-color-font-strong);
 
   --core-color-white: hsl(255, 20%, 15%);
   --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
@@ -170,15 +167,9 @@ html {
   text-rendering: optimizeLegibility;
   transition: background 0.2s ease;
   color: var(--core-color-font);
-  font-size: 16px;
+  font-size: 18px;
   font-family: var(--core-font-family);
   background-color: var(--core-color-white);
-}
-
-@media (min-width: 600px) {
-  html {
-    font-size: 18px;
-  }
 }
 
 /* Works on Chrome/Edge/Safari */
@@ -193,16 +184,16 @@ html {
   width: 6px;
 }
 *::-webkit-scrollbar-track:vertical {
-  border-left: 1px solid var(--core-color-ui-lightest);
-  border-right: 1px solid var(--core-color-ui-lightest);
+  border-left: 1px solid var(--core-color-ui-weak);
+  border-right: 1px solid var(--core-color-ui-weak);
 }
 *::-webkit-scrollbar-track:horizontal {
-  border-top: 1px solid var(--core-color-ui-lightest);
+  border-top: 1px solid var(--core-color-ui-weak);
 }
 *::-webkit-scrollbar-thumb {
   min-width: 3rem;
   min-height: 3rem;
-  background-color: var(--core-color-ui-lighter);
+  background-color: var(--core-color-ui);
   border: 0.4rem solid transparent;
   -moz-background-clip: content; /* Firefox 3.6 */
   -webkit-background-clip: content; /* Safari 4? Chrome 6? */
@@ -210,15 +201,15 @@ html {
   border-radius: 1rem;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background-color: var(--core-color-ui-light);
+  background-color: var(--core-color-ui);
   border-color: transparent;
 }
 *::-webkit-scrollbar-corner {
   background-color: transparent;
-  border-left: 1px solid var(--core-color-ui-lightest);
-  border-top: 1px solid var(--core-color-ui-lightest);
+  border-left: 1px solid var(--core-color-ui-weak);
+  border-top: 1px solid var(--core-color-ui-weak);
 }
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--core-color-ui-lighter) transparent;
+  scrollbar-color: var(--core-color-ui) transparent;
 }
