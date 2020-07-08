@@ -1,6 +1,6 @@
 {
   "name": "core-elements",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "Core UI Elements for the web",
   "main": "dist/main.js",
   "module": "dist/main.es.js",
