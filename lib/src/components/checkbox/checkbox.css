@@ -8,6 +8,7 @@
   --core-checkbox-height: var(--core-size-md);
   --core-checkbox-border-radius: var(--core-border-radius-default);
   --core-checkbox-indicator-color: var(--core-color-white);
+  --core-checkbox-label-color: currentColor;
 }
 
 :host {
@@ -49,6 +50,7 @@
   font-size: var(--hw-font-size-small);
   display: inline-block;
   flex: 1;
+  color: var(--core-checkbox-label-color);
   margin-left: var(--core-space-sm);
 }
 

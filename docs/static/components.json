@@ -1416,11 +1416,6 @@
       "path": "./../../lib/src/components/menu/menu.wc.js",
       "attributes": [
         {
-          "name": "selectable",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "bordered",
           "type": "boolean",
           "default": "false"
@@ -1432,12 +1427,6 @@
         }
       ],
       "properties": [
-        {
-          "name": "selectable",
-          "attribute": "selectable",
-          "type": "boolean",
-          "default": "false"
-        },
         {
           "name": "bordered",
           "attribute": "bordered",
