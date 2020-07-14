@@ -101,17 +101,18 @@
   opacity: 1;
 }
 
-.input-wrapper {
+[part="input-wrapper"] {
   flex-wrap: wrap;
   display: flex;
   flex: 1;
-  min-height: var(--core-select-min-height);
+  height: 100%;
 }
 
 [part="input-field-wrapper"] {
   display: flex;
   align-items: center;
   flex: 1;
+  height: 100%;
   justify-content: center;
 }
 
@@ -132,7 +133,7 @@
   padding-left: var(--core-space-sm);
   background: transparent;
   color: var(--core-color-font);
-  height: var(--core-select-min-height);
+  height: 100%;
   font-size: 16px;
   border: 0;
   outline: 0;

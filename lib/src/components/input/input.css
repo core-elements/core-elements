@@ -10,10 +10,20 @@
 }
 
 :host {
-  vertical-align: middle;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
   min-width: 300px;
   max-width: 100%;
-  display: inline-block;
+  box-shadow: var(--core-input-box-shadow);
+  border-radius: var(--core-input-border-radius);
+  height: var(--core-input-height);
+  border: var(--core-border-width-default) solid var(--core-input-border-color);
+}
+
+:host([full]) {
+  width: 100%;
+  display: flex;
 }
 
 :host([size="sm"]) {
@@ -31,41 +41,26 @@
   --core-input-padding: 0 var(--core-space-md);
 }
 
-:host([full]) {
-  width: 100%;
-  display: block;
-}
-
-:host [part="input"] {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--core-input-box-shadow);
-  border-radius: var(--core-input-border-radius);
-  height: var(--core-input-height);
-  border: var(--core-border-width-default) solid var(--core-input-border-color);
-}
-
 :host([type="number"]) [part="input-field"]::-webkit-inner-spin-button,
 :host([type="number"]) [part="input-field"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-:host [part="input"]:hover {
+:host:hover {
   --core-input-border-color: var(--core-color-ui-strong);
 }
 
-:host(:focus-within) [part="input"] {
+:host(:focus-within) {
   --core-select-border-color: var(--core-color-ui-strong);
   box-shadow: var(--core-focus-outline);
 }
 
-:host([valid]) [part="input"] {
+:host([valid]) {
   --core-input-border-color: var(--core-color-success);
 }
 
-:host([invalid]) [part="input"] {
+:host([invalid]) {
   --core-input-border-color: var(--core-color-danger);
 }
 
