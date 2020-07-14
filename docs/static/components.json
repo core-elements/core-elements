@@ -3,8 +3,12 @@
   "tags": [
     {
       "name": "core-accordion",
-      "path": "./../../lib/src/components/accordion/accordion.wc.js",
+      "path": "./../../lib/src/components/accordion/accordion-item.wc.js",
       "attributes": [
+        {
+          "name": "heading",
+          "type": "string"
+        },
         {
           "name": "open",
           "type": "boolean"
@@ -22,8 +26,16 @@
       ],
       "properties": [
         {
+          "name": "heading",
+          "attribute": "heading",
+          "type": "string"
+        },
+        {
           "name": "contentSlot",
           "type": "Element | null"
+        },
+        {
+          "name": "mode"
         },
         {
           "name": "open",
@@ -57,6 +69,36 @@
         },
         {
           "name": "toggle"
+        }
+      ]
+    },
+    {
+      "name": "core-accordion",
+      "path": "./../../lib/src/components/accordion/accordion.wc.js",
+      "attributes": [
+        {
+          "name": "mode",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "mode",
+          "attribute": "mode",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string",
+          "default": "\"\""
         }
       ]
     },
@@ -348,7 +390,7 @@
           "type": "boolean"
         },
         {
-          "name": "type",
+          "name": "variant",
           "description": "Button state",
           "type": "\"\"|\"primary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
@@ -391,8 +433,8 @@
           "type": "Element | null"
         },
         {
-          "name": "type",
-          "attribute": "type",
+          "name": "variant",
+          "attribute": "variant",
           "description": "Button state",
           "type": "\"\"|\"primary\"|\"transparent\"|\"success\"|\"danger\"",
           "default": "\"\""
@@ -1413,33 +1455,7 @@
     },
     {
       "name": "core-menu",
-      "path": "./../../lib/src/components/menu/menu.wc.js",
-      "attributes": [
-        {
-          "name": "bordered",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "full",
-          "type": "boolean",
-          "default": "false"
-        }
-      ],
-      "properties": [
-        {
-          "name": "bordered",
-          "attribute": "bordered",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "full",
-          "attribute": "full",
-          "type": "boolean",
-          "default": "false"
-        }
-      ]
+      "path": "./../../lib/src/components/menu/menu.wc.js"
     },
     {
       "name": "core-modal",
@@ -1450,7 +1466,7 @@
           "type": "boolean"
         },
         {
-          "name": "title",
+          "name": "heading",
           "type": "string",
           "default": "\"\""
         }
@@ -1470,8 +1486,8 @@
           "type": "boolean"
         },
         {
-          "name": "title",
-          "attribute": "title",
+          "name": "heading",
+          "attribute": "heading",
           "type": "string",
           "default": "\"\""
         },
