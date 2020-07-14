@@ -15,9 +15,9 @@ icon: toggle-outline
 
 <core-knobs hideTabs  element="core-toggle">
 <core-toggle checked>
-  <i slot="on" style="--ggs: 0.8;" class="gg-sun"></i>
+  <ion-icon slot="on" name="sunny-outline"></ion-icon>
   Label
-  <i slot="off" style="--ggs: 0.8;" class="gg-moon"></i>
+  <ion-icon slot="off" name="moon-outline"></ion-icon>
 </core-toggle>
 </core-knobs>
 
@@ -58,18 +58,15 @@ icon: toggle-outline
 <core-knobs hideTabs  element="core-toggle">
 <style>
   .toggle-animation [slot="on"] {
-    opacity: 0;
     transition: all 0.5s ease;
     transform: rotate(-45deg);
   }
   .toggle-animation[checked] [slot="on"] {
-    opacity: 1;
-    visibility: visible;
     transform: rotate(0deg);
   }
 </style>
 <core-toggle class="toggle-animation">
-  <i slot="on" class="gg-check"></i>
+  <ion-icon slot="on" name="checkmark-sharp"></ion-icon>
   Label
 </core-toggle>
 </core-knobs>

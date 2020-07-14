@@ -6,7 +6,7 @@
 :host [part="label"] {
   display: flex;
   padding: var(--core-optgroup-padding);
-  height: var(--core-size-sm);
+  height: var(--core-element-height-sm);
   align-items: center;
   font-weight: 400;
   color: var(--core-color-font);

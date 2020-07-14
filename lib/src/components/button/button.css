@@ -10,7 +10,7 @@
   --core-button-transition: none;
   --core-button-cursor: pointer;
   --core-button-display: inline-flex;
-  --core-button-height: var(--core-size-md);
+  --core-button-height: var(--core-element-height-md);
 }
 
 :host {
@@ -51,19 +51,19 @@
 
 :host([size="sm"]) {
   --core-button-font-size: var(--core-font-size-md);
-  --core-button-height: var(--core-size-sm);
+  --core-button-height: var(--core-element-height-sm);
   --core-button-padding: 0 var(--core-space-sm);
 }
 
 :host([size="md"]) {
   --core-button-font-size: var(--core-font-size-md);
-  --core-button-height: var(--core-size-md);
+  --core-button-height: var(--core-element-height-md);
   --core-button-padding: 0 var(--core-space-md);
 }
 
 :host([size="lg"]) {
   --core-button-font-size: var(--core-font-size-md);
-  --core-button-height: var(--core-size-lg);
+  --core-button-height: var(--core-element-height-lg);
   --core-button-padding: 0 var(--core-space-lg);
 }
 
@@ -97,11 +97,11 @@
 
 :host([variant="primary"]) {
   --core-button-bg-color: var(--core-color-primary);
-  --core-button-text-color: var(--core-color-white);
+  --core-button-text-color: var(--core-color-primary-contrast);
 }
 
 :host([variant="primary"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-primary-strong);
+  --core-button-bg-color: var(--core-color-primary-hover);
 }
 
 :host([variant="transparent"]) {
@@ -115,27 +115,27 @@
 
 :host([variant="success"]) {
   --core-button-bg-color: var(--core-color-success);
-  --core-button-text-color: var(--core-color-white);
+  --core-button-text-color: var(--core-color-success-contrast);
 }
 
 :host([variant="success"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-success-strong);
+  --core-button-bg-color: var(--core-color-success-hover);
 }
 
 :host([variant="warning"]) {
   --core-button-bg-color: var(--core-color-warning);
-  --core-button-text-color: var(--core-color-white);
+  --core-button-text-color: var(--core-color-success-contrast);
 }
 
 :host([variant="warning"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-warning-strong);
+  --core-button-bg-color: var(--core-color-warning-hover);
 }
 
 :host([variant="danger"]) {
   --core-button-bg-color: var(--core-color-danger);
-  --core-button-text-color: var(--core-color-white);
+  --core-button-text-color: var(--core-color-danger-contrast);
 }
 
 :host([variant="danger"]:hover:not([disabled])) {
-  --core-button-bg-color: var(--core-color-danger-strong);
+  --core-button-bg-color: var(--core-color-danger-hover);
 }

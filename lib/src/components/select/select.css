@@ -1,8 +1,7 @@
 :host {
   /* ASSIGN TO LOCAL VARIABLES */
-  --core-select-focus-color: var(--core-color-focus);
   --core-select-font-size: 16px;
-  --core-select-min-height: var(--core-size-md);
+  --core-select-min-height: var(--core-element-height-md);
   --core-select-background: none;
   --core-select-padding: 0px;
   --core-select-placeholder-color: var(--core-color-font-weak);
@@ -59,15 +58,15 @@
 }
 
 :host([size="sm"]) {
-  --core-select-min-height: var(--core-size-sm);
+  --core-select-min-height: var(--core-element-height-sm);
 }
 
 :host([size="md"]) {
-  --core-select-min-height: var(--core-size-md);
+  --core-select-min-height: var(--core-element-height-md);
 }
 
 :host([size="lg"]) {
-  --core-select-min-height: var(--core-size-lg);
+  --core-select-min-height: var(--core-element-height-lg);
 }
 
 :host(:hover:not(:focus-within)) {
@@ -75,7 +74,8 @@
 }
 
 :host(:focus-within) {
-  --core-select-border-color: var(--core-select-focus-color);
+  --core-select-border-color: var(--core-color-ui-strong);
+  box-shadow: var(--core-focus-outline);
 }
 
 :host([disabled]) {
@@ -234,6 +234,6 @@ div[part="list"] {
   display: flex;
   align-items: center;
   color: var(--core-color-font-ligth);
-  height: var(--core-size-md);
+  height: var(--core-element-height-md);
   padding: 0 var(--core-space-sm);
 }

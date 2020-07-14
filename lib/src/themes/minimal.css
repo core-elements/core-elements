@@ -2,32 +2,29 @@
   /* COLORS */
   --core-color-primary-hue: 250;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 60%);
-  --core-color-primary-weak: hsl(var(--core-color-primary-hue), 100%, 70%);
-  --core-color-primary-strong: hsl(var(--core-color-primary-hue), 100%, 50%);
-  --core-color-primary-contrast: hsl(var(--core-color-primary-hue), 100%, 100%);
+  --core-color-primary-hover: hsl(var(--core-color-primary-hue), 100%, 50%);
+  --core-color-primary-contrast: white;
+
+  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
+  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
 
   --core-color-focus: var(--core-color-primary);
-  --core-color-focus-weak: var(--core-color-primary-weak);
-  --core-color-focus-strong: var(--core-color-primary-strong);
-  --core-focus-outline: 0px 0px 0px 1px var(--core-color-focus);
+  --core-focus-outline: 0px 0px 0px 2px var(--core-color-focus);
 
   --core-color-success-hue: 130;
   --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
-  --core-color-success-weak: hsl(var(--core-color-success-hue), 48%, 48%);
-  --core-color-success-strong: hsl(var(--core-color-success-hue), 48%, 30%);
-  --core-color-success-contrast: hsl(var(--core-color-success-hue), 48%, 100%);
+  --core-color-success-hover: hsl(var(--core-color-success-hue), 48%, 30%);
+  --core-color-success-contrast: white;
 
   --core-color-warning-hue: 46;
   --core-color-warning: hsl(var(--core-color-warning-hue), 70%, 61%);
-  --core-color-warning-weak: hsl(var(--core-color-warning-hue), 70%, 68%);
-  --core-color-warning-strong: hsl(var(--core-color-warning-hue), 70%, 51%);
-  --core-color-warning-contrast: hsl(var(--core-color-warning-hue), 70%, 100%);
+  --core-color-warning-hover: hsl(var(--core-color-warning-hue), 70%, 51%);
+  --core-color-warning-contrast: white;
 
   --core-color-danger-hue: 349;
   --core-color-danger: hsl(var(--core-color-danger-hue), 75%, 40%);
-  --core-color-danger-weak: hsl(var(--core-color-danger-hue), 75%, 44%);
-  --core-color-danger-strong: hsl(var(--core-color-danger-hue), 75%, 30%);
-  --core-color-danger-contrast: hsl(var(--core-color-danger-hue), 70%, 100%);
+  --core-color-danger-hover: hsl(var(--core-color-danger-hue), 75%, 30%);
+  --core-color-danger-contrast: white;
 
   --core-color-ui-hue: var(--core-color-primary-hue);
   --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 85%);
@@ -38,9 +35,6 @@
   --core-color-font-weak: hsl(var(--core-color-ui-hue), 10%, 50%);
   --core-color-font-strong: hsl(var(--core-color-ui-hue), 10%, 10%);
   --core-color-font-heading: var(--core-color-font-strong);
-
-  --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
-  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
 
   /* SIZES */
   --core-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -82,11 +76,11 @@
   --core-border-radius-xl: 32px;
   --core-border-radius-default: var(--core-border-radius-sm);
 
-  --core-size-xs: 1.5rem;
-  --core-size-sm: 1.8rem;
-  --core-size-md: 2.4rem;
-  --core-size-lg: 3.2rem;
-  --core-size-xl: 4rem;
+  --core-element-height-xs: 1.5rem;
+  --core-element-height-sm: 1.8rem;
+  --core-element-height-md: 2.4rem;
+  --core-element-height-lg: 3.2rem;
+  --core-element-height-xl: 4rem;
 
   /* DEPTH */
   --core-depth-none: none;
@@ -115,27 +109,20 @@
 [mode="dark"] {
   --core-color-primary-hue: 240;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 80%);
-  --core-color-primary-weak: hsl(var(--core-color-primary-hue), 100%, 70%);
-  --core-color-primary-strong: hsl(var(--core-color-primary-hue), 100%, 90%);
+  --core-color-primary-hover: hsl(var(--core-color-primary-hue), 100%, 90%);
+  --core-color-primary-contrast: hsl(255, 20%, 15%);
+
+  --core-color-white: hsl(255, 20%, 15%);
+  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
 
   --core-color-focus: var(--core-color-primary);
-  --core-color-focus-weak: var(--core-color-primary-strong);
-  --core-color-focus-strong: var(--core-color-primary-weak);
-
-  --core-color-secondary-hue: 250;
-  --core-color-secondary: hsl(var(--core-color-secondary-hue), 100%, 50%);
-  --core-color-secondary-weak: hsl(var(--core-color-secondary-hue), 100%, 97%);
-  --core-color-secondary-strong: hsl(
-    var(--core-color-secondary-hue),
-    100%,
-    90%
-  );
+  --core-focus-outline: 0px 0px 0px 2px var(--core-color-focus);
 
   --core-color-success: hsl(var(--core-color-success-hue), 100%, 40%);
-  --core-color-success-strong: hsl(var(--core-color-success-hue), 100%, 30%);
+  --core-color-success-hover: hsl(var(--core-color-success-hue), 100%, 30%);
 
   --core-color-danger: hsl(var(--core-color-danger-hue), 100%, 40%);
-  --core-color-danger-strong: hsl(var(--core-color-danger-hue), 100%, 30%);
+  --core-color-danger-hover: hsl(var(--core-color-danger-hue), 100%, 30%);
 
   --core-color-ui-weak: hsl(var(--core-color-primary-hue), 10%, 20%);
   --core-color-ui: hsl(var(--core-color-primary-hue), 10%, 30%);
@@ -158,9 +145,6 @@
   --core-color-font: hsl(var(--core-color-ui-hue), 10%, 80%);
   --core-color-font-strong: hsl(var(--core-color-ui-hue), 10%, 100%);
   --core-color-font-heading: var(--core-color-font-strong);
-
-  --core-color-white: hsl(255, 20%, 15%);
-  --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
 }
 
 html {

@@ -1,5 +1,5 @@
 :host {
-  --core-accordion-trigger-height: var(--core-size-md);
+  --core-accordion-trigger-height: var(--core-element-height-md);
   --core-accordion-trigger: var(--core-color-white);
   --core-accordion-content-padding: 0;
   --core-accordion-trigger-padding: 0 var(--core-space-md);

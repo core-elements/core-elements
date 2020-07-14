@@ -33,5 +33,5 @@
 
 :host([selected]) {
   --core-tab-color: var(--core-color-font-strong);
-  --core-tab-border-color: var(--core-color-focus);
+  --core-tab-border-color: var(--core-color-primary);
 }

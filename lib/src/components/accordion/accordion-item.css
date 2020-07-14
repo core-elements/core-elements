@@ -4,15 +4,15 @@
 }
 
 :host([size="sm"]) {
-  --core-accordion-trigger-height: var(--core-size-sm);
+  --core-accordion-trigger-height: var(--core-element-height-sm);
 }
 
 :host([size="md"]) {
-  --core-accordion-trigger-height: var(--core-size-md);
+  --core-accordion-trigger-height: var(--core-element-height-md);
 }
 
 :host([size="lg"]) {
-  --core-accordion-trigger-height: var(--core-size-lg);
+  --core-accordion-trigger-height: var(--core-element-height-lg);
 }
 
 :host(:first-of-type) {

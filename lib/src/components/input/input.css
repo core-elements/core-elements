@@ -1,7 +1,7 @@
 :host {
   --core-input-bg-color: var(--core-color-white);
   --core-input-padding: 0 var(--core-space-md);
-  --core-input-height: var(--core-size-md);
+  --core-input-height: var(--core-element-height-md);
   --core-input-border-color: var(--core-color-ui);
   --core-input-border-radius: var(--core-border-radius-default);
   --core-input-box-shadow: none;
@@ -17,17 +17,17 @@
 }
 
 :host([size="sm"]) {
-  --core-input-height: var(--core-size-sm);
+  --core-input-height: var(--core-element-height-sm);
   --core-input-padding: 0 var(--core-space-sm);
 }
 
 :host([size="md"]) {
-  --core-input-height: var(--core-size-md);
+  --core-input-height: var(--core-element-height-md);
   --core-input-padding: 0 var(--core-space-md);
 }
 
 :host([size="lg"]) {
-  --core-input-height: var(--core-size-lg);
+  --core-input-height: var(--core-element-height-lg);
   --core-input-padding: 0 var(--core-space-md);
 }
 
@@ -57,7 +57,8 @@
 }
 
 :host(:focus-within) [part="input"] {
-  --core-input-border-color: var(--core-color-focus);
+  --core-select-border-color: var(--core-color-ui-strong);
+  box-shadow: var(--core-focus-outline);
 }
 
 :host([valid]) [part="input"] {

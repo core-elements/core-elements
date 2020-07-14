@@ -93,7 +93,7 @@
   top: 0;
   width: 100%;
   padding: var(--core-modal-padding);
-  min-height: var(--core-size-lg);
+  min-height: var(--core-element-height-lg);
 }
 
 [part="header-middle"] {
@@ -128,7 +128,7 @@
 [part="footer"] {
   background: var(--core-color-white);
   padding: var(--core-modal-padding);
-  min-height: var(--core-size-md);
+  min-height: var(--core-element-height-md);
   display: block;
   width: 100%;
   position: sticky;

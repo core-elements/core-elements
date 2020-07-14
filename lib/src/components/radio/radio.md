@@ -44,7 +44,7 @@ icon: radio-button-on-outline
   core-radio.choice {
     margin-bottom: var(--core-space-md);
     padding: 0 var(--core-space-md);
-    height: var(--core-size-xl);
+    height: var(--core-element-height-xl);
     border: 2px solid var(--core-color-ui);
   }
   core-radio.choice:hover {

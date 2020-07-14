@@ -1,7 +1,7 @@
 :host {
   --core-textarea-bg-color: var(--core-color-white);
   --core-textarea-padding: 0 var(--core-space-md);
-  --core-textarea-height: var(--core-size-md);
+  --core-textarea-height: var(--core-element-height-md);
   --core-textarea-border-color: var(--core-color-ui);
   --core-textarea-border-radius: var(--core-border-radius-default);
   --core-textarea-box-shadow: none;
@@ -24,7 +24,8 @@
 }
 
 :host(:focus-within) {
-  --core-textarea-border-color: var(--core-color-focus);
+  --core-textarea-border-color: var(--core-color-ui-strong);
+  box-shadow: var(--core-focus-outline);
 }
 
 :host([full]) {

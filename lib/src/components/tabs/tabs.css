@@ -1,5 +1,5 @@
 :host {
-  --core-tab-height: var(--core-size-md);
+  --core-tab-height: var(--core-element-height-md);
   --core-tab-box-shadow: 0;
   --core-tab-border-width: var(--core-border-width-md);
   --core-tab-display: inline-flex;
@@ -38,13 +38,13 @@
 }
 
 :host([size="sm"]) {
-  --core-tab-height: var(--core-size-sm);
+  --core-tab-height: var(--core-element-height-sm);
 }
 
 :host([size="md"]) {
-  --core-tab-height: var(--core-size-md);
+  --core-tab-height: var(--core-element-height-md);
 }
 
 :host([size="lg"]) {
-  --core-tab-height: var(--core-size-lg);
+  --core-tab-height: var(--core-element-height-lg);
 }

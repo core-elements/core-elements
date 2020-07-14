@@ -1,7 +1,6 @@
 :host {
   --core-radio-box-shadow: none;
-  --core-radio-focus-color: var(--core-color-focus);
-  --core-radio-height: var(--core-size-md);
+  --core-radio-height: var(--core-element-height-md);
   --core-radio-box-bg-color: var(--core-color-white);
   --core-radio-box-border: var(--core-border-width-default) solid
     var(--core-color-ui);
@@ -71,7 +70,7 @@
 }
 
 [part="indicator"] {
-  color: var(--core-radio-focus-color);
+  color: var(--core-color-primary);
   fill: currentColor;
 }
 
@@ -79,17 +78,17 @@
   border-radius: 50%;
   width: 60%;
   height: 60%;
-  background: var(--core-radio-focus-color);
+  background: var(--core-color-primary);
 }
 
 :host([size="sm"]) {
-  --core-radio-height: var(--core-size-sm);
+  --core-radio-height: var(--core-element-height-sm);
 }
 
 :host([size="md"]) {
-  --core-radio-height: var(--core-size-md);
+  --core-radio-height: var(--core-element-height-md);
 }
 
 :host([size="lg"]) {
-  --core-radio-height: var(--core-size-lg);
+  --core-radio-height: var(--core-element-height-lg);
 }
