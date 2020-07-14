@@ -43,14 +43,6 @@
   cursor: pointer;
 }
 
-:host([bordered]) slot::slotted(*) {
-  border-bottom: 1px solid var(--core-color-ui);
-}
-
-:host([bordered]) slot::slotted(*:last-of-type) {
-  border-bottom: 0;
-}
-
 :host([inside]) {
   list-style-position: inside;
 }

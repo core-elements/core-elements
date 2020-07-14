@@ -38,12 +38,12 @@ Modal content
 </core-modal>
 </core-knobs>
 
-## With Title
+## With Heading
 
 <core-button onclick="modalTwo.show()">Show modal</core-button>
 
 <core-knobs hideTabs  element="core-modal">
-<core-modal title="Title" id="modalTwo">
+<core-modal heading="Heading" id="modalTwo">
   Modal content
 </core-modal>
 </core-knobs>
@@ -57,7 +57,7 @@ Modal content
 <core-knobs hideTabs  element="core-modal">
 <core-modal id="modalThree">
   <core-button slot="header-start" type="transparent" onclick="modalThree.close()" size="sm">Close</core-button>
-  <core-text slot="header-middle">Title</core-text>
+  <core-text slot="header-middle">Heading</core-text>
   <core-button slot="header-end" type="transparent" size="sm">Save</core-button>
   Modal content
 </core-modal>
