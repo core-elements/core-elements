@@ -6,14 +6,16 @@ icon: file-tray-stacked-outline
 ---
 
 <core-knobs element="core-accordion">
-<core-accordion title="Accordion 1">
-  <core-box padding="md">Content</core-box>
-</core-accordion>
-<core-accordion title="Accordion 2">
-  <core-box padding="md">Content</core-box>
-</core-accordion>
-<core-accordion title="Accordion 3">
-  <core-box padding="md">Content</core-box>
+<core-accordion>
+  <core-accordion-item heading="Accordion 1">
+    <core-box padding="md">Content</core-box>
+  </core-accordion-item>
+  <core-accordion-item heading="Accordion 2">
+    <core-box padding="md">Content</core-box>
+  </core-accordion-item>
+  <core-accordion-item heading="Accordion 3">
+    <core-box padding="md">Content</core-box>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>
 
@@ -29,9 +31,11 @@ icon: file-tray-stacked-outline
     transform: rotate(90deg);
   }
 </style>
-<core-accordion class="indicator" hide-default-indicator title="Title">
-  <i slot="start" class="gg-chevron-right"></i>
-  <core-box padding="md">Content</core-box>
+<core-accordion>
+  <core-accordion-item class="indicator" hide-default-indicator heading="Heading">
+    <i slot="start" class="gg-chevron-right"></i>
+    <core-box padding="md">Content</core-box>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>
 
@@ -48,11 +52,13 @@ icon: file-tray-stacked-outline
     transition: max-height 0.5s ease;
   }
   .animate[open]::part(content) {
-    max-height: 50px;
+    max-height: 100px;
   }
 </style>
-<core-accordion class="animate" title="Title">
-  <core-box padding="md">Content</core-box>
+<core-accordion>
+  <core-accordion-item class="animate" heading="Heading">
+    <core-box padding="md">Content</core-box>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>
 
@@ -81,68 +87,115 @@ Because of this you will need to add keyframes on the slotted content like this:
     animation: 650ms both dropdown;
   }
 </style>
-<core-accordion class="animate-2" title="Title">
-  <div class="content">
-  <core-box padding="md">
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-  </core-box>
-  </div>
+<core-accordion>
+  <core-accordion-item class="animate-2" heading="Heading">
+    <div class="content">
+    <core-box padding="md">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </core-box>
+    </div>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>
 
-## Box
+## Custom
 
 You can override the styles of the trigger by using the `::part(trigger)` selector.
 Remember that the default outline styles are defined with box-shadow and not with outline.
 
 <core-knobs hideTabs element="core-accordion">
 <style>
-  .box {
+  .custom core-accordion-item {
     border: 1px solid var(--core-color-ui);
     border-radius: var(--core-border-radius-md);
   }
-  .box::part(trigger) {
-    width: 100%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-  }
   /* Use focus within to style the box when it has focus */
-  .box:focus-within {
+  .custom core-accordion-item:focus-within {
     border-color: var(--core-color-focus);
   }
-  .box::part(trigger):focus {
+  .custom core-accordion-item::part(trigger):focus {
     color: var(--core-color-focus);
     box-shadow: none;
   }
-  .box::part(trigger):hover {
+  .custom core-accordion-item::part(trigger):hover {
     color: var(--core-color-focus);
   }
-  .box[open] .gg-add-r,
-  .box .gg-remove-r {
+  .custom core-accordion-item[open] .gg-add-r,
+  .custom core-accordion-item .gg-remove-r {
     display: none;
   }
-  .box[open] .gg-remove-r,
-  .box .gg-add-r {
+  .custom core-accordion-item[open] .gg-remove-r,
+  .custom core-accordion-item .gg-add-r {
     display: inline-block;
     margin-right: var(--core-space-md);
   }
 </style>
-<core-accordion size="lg" class="box" title="How do I do this?" hide-default-indicator>
-  <i slot="start" class="gg-add-r"></i>
-  <i slot="start" class="gg-remove-r"></i>
-  <core-box padding="md">This is how you do it</core-box>
+<core-accordion class="custom">
+  <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
+    <i slot="start" class="gg-add-r"></i>
+    <i slot="start" class="gg-remove-r"></i>
+    <core-box padding="md">This is how you do it</core-box>
+  </core-accordion-item>
+</core-accordion>
+</core-knobs>
+
+## Another example
+
+<core-knobs hideTabs element="core-accordion">
+<style>
+  .custom-2 core-accordion-item {
+    border: 0;
+    box-shadow: var(--core-depth-sm);
+    position: relative;
+    margin-bottom: var(--core-space-sm);
+  }
+  .custom-2 [slot="trigger"] {
+    padding: var(--core-space-md);
+  }
+  .custom-2 core-accordion-item {
+    border: 0;
+  }
+  .custom-2 core-button {
+    position: absolute;
+    right: var(--core-space-md);
+    bottom: calc(var(--core-space-md) * -1);
+  }
+  .custom-2 core-accordion-item[open] ion-icon {
+    transform: rotate(180deg);
+  }
+</style>
+<core-accordion mode="single" class="custom-2">
+  <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
+    <div slot="trigger">
+      Hello
+      <core-button variant="primary">
+        <ion-icon name="arrow-down-outline"></ion-icon>
+      </core-button>
+    </div>
+    <core-box padding="md">This is how you do it</core-box>
+  </core-accordion-item>
+  <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
+    <div slot="trigger">
+      Hello
+      <core-button variant="primary">
+          <ion-icon name="arrow-down-outline"></ion-icon>
+      </core-button>
+    </div>
+    <core-box padding="md">This is how you do it</core-box>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>
 
 ## With a menu
 
 <core-knobs hideTabs element="core-accordion">
-<core-accordion title="Hello">
-  <core-menu>
-    <core-menu-item>Menu Item 1</core-menu-item>
-    <core-menu-item>Menu Item 2</core-menu-item>
-    <core-menu-item>Menu Item 3</core-menu-item>
-  </core-menu>
+<core-accordion>
+  <core-accordion-item heading="Hello">
+    <core-menu>
+      <core-menu-item>Menu Item 1</core-menu-item>
+      <core-menu-item>Menu Item 2</core-menu-item>
+      <core-menu-item>Menu Item 3</core-menu-item>
+    </core-menu>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>

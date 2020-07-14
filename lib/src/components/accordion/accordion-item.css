@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+:host([size="sm"]) {
+  --core-accordion-trigger-height: var(--core-size-sm);
+}
+
+:host([size="md"]) {
+  --core-accordion-trigger-height: var(--core-size-md);
+}
+
+:host([size="lg"]) {
+  --core-accordion-trigger-height: var(--core-size-lg);
+}
+
+:host(:first-of-type) {
+  border-top: 1px solid var(--core-accordion-divider-color);
+  border-bottom: 1px solid var(--core-accordion-divider-color);
+}
+
+:host {
+  border-bottom: 1px solid var(--core-accordion-divider-color);
+}
+
+[part="trigger"] {
+  background: var(--core-accordion-trigger-bg);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  margin: 0;
+  min-height: var(--core-accordion-trigger-height);
+  padding: var(--core-accordion-trigger-padding);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: var(--core-font-size);
+  border: 0;
+  outline: 0;
+}
+
+[part="trigger"]:focus {
+  box-shadow: var(--core-focus-outline);
+}
+
+[part="content"] {
+  display: none;
+  width: 100%;
+}
+
+:host([open]) [part="content"] {
+  display: block;
+  --core-accordion-content-padding: var(--core-space-md);
+}
+
+[part="heading"] {
+  flex: 1;
+  display: block;
+}
+
+::slotted([slot="heading"]),
+::slotted([slot="trigger"]) {
+  cursor: pointer;
+}
+
+[part="start"] {
+  display: block;
+  margin-right: var(--core-space-sm);
+}
+
+[part="end"] {
+  display: block;
+  margin-left: var(--core-space-sm);
+}
+
+[part="end"] svg {
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+:host([open]) [part="end"] svg {
+  transform: rotate(-180deg);
+}
