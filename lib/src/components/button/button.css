@@ -93,49 +93,49 @@
   margin-left: var(--core-space-sm);
 }
 
-/* Types */
+/* Variants */
 
-:host([type="primary"]) {
+:host([variant="primary"]) {
   --core-button-bg-color: var(--core-color-primary);
   --core-button-text-color: var(--core-color-white);
 }
 
-:host([type="primary"]:hover:not([disabled])) {
+:host([variant="primary"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-primary-strong);
 }
 
-:host([type="transparent"]) {
+:host([variant="transparent"]) {
   --core-button-bg-color: transparent;
   --core-button-text-color: var(--core-color-black);
 }
 
-:host([type="transparent"]:hover:not([disabled])) {
+:host([variant="transparent"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-ui-weak);
 }
 
-:host([type="success"]) {
+:host([variant="success"]) {
   --core-button-bg-color: var(--core-color-success);
   --core-button-text-color: var(--core-color-white);
 }
 
-:host([type="success"]:hover:not([disabled])) {
+:host([variant="success"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-success-strong);
 }
 
-:host([type="warning"]) {
+:host([variant="warning"]) {
   --core-button-bg-color: var(--core-color-warning);
   --core-button-text-color: var(--core-color-white);
 }
 
-:host([type="warning"]:hover:not([disabled])) {
+:host([variant="warning"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-warning-strong);
 }
 
-:host([type="danger"]) {
+:host([variant="danger"]) {
   --core-button-bg-color: var(--core-color-danger);
   --core-button-text-color: var(--core-color-white);
 }
 
-:host([type="danger"]:hover:not([disabled])) {
+:host([variant="danger"]:hover:not([disabled])) {
   --core-button-bg-color: var(--core-color-danger-strong);
 }

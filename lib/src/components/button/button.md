@@ -9,15 +9,15 @@ icon: tablet-landscape-outline
 <core-button>Button</core-button>
 </core-knobs>
 
-## Types
+## Variants
 
 <core-knobs hideTabs  element="core-button">
 <core-button>Normal</core-button>
-<core-button type="primary">Primary</core-button>
-<core-button type="success">Success</core-button>
-<core-button type="warning">Warning</core-button>
-<core-button type="danger">Danger</core-button>
-<core-button type="transparent">Transparent</core-button>
+<core-button variant="primary">Primary</core-button>
+<core-button variant="success">Success</core-button>
+<core-button variant="warning">Warning</core-button>
+<core-button variant="danger">Danger</core-button>
+<core-button variant="transparent">Transparent</core-button>
 </core-knobs>
 
 ## Rounded
@@ -29,7 +29,7 @@ icon: tablet-landscape-outline
 ## Disabled
 
 <core-knobs hideTabs  element="core-button">
-<core-button onclick="alert('hello')" disabled type="primary">
+<core-button onclick="alert('hello')" disabled variant="primary">
   Primary
 </core-button>
 </core-knobs>
@@ -86,7 +86,7 @@ icon: tablet-landscape-outline
 <div class="group">
   <core-button >Option</core-button>
   <core-button >Option</core-button>
-  <core-button type="primary">Active</core-button>
+  <core-button variant="primary">Active</core-button>
   <core-button>Option</core-button>
 </div>
 </core-knobs>
