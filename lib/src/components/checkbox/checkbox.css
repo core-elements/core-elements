@@ -5,7 +5,7 @@
     var(--core-checkbox-border-color);
   --core-checkbox-cursor: pointer;
   --core-checkbox-box-shadow: none;
-  --core-checkbox-height: var(--core-element-height-md);
+  --core-checkbox-height: var(--core-element-height-default);
   --core-checkbox-border-radius: var(--core-border-radius-default);
   --core-checkbox-indicator-color: transparent;
   --core-checkbox-label-color: currentColor;

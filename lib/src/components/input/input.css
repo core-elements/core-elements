@@ -1,7 +1,7 @@
 :host {
   --core-input-bg-color: var(--core-color-white);
   --core-input-padding: 0 var(--core-space-md);
-  --core-input-height: var(--core-element-height-md);
+  --core-input-height: var(--core-element-height-default);
   --core-input-border-color: var(--core-color-ui);
   --core-input-border-radius: var(--core-border-radius-default);
   --core-input-box-shadow: none;
@@ -47,12 +47,12 @@
   margin: 0;
 }
 
-:host:hover {
+:host(:hover) {
   --core-input-border-color: var(--core-color-ui-strong);
 }
 
 :host(:focus-within) {
-  --core-select-border-color: var(--core-color-ui-strong);
+  --core-input-border-color: var(--core-color-ui-strong);
   box-shadow: var(--core-focus-outline);
 }
 

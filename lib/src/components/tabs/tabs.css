@@ -1,5 +1,5 @@
 :host {
-  --core-tab-height: var(--core-element-height-md);
+  --core-tab-height: var(--core-element-height-default);
   --core-tab-box-shadow: 0;
   --core-tab-border-width: var(--core-border-width-md);
   --core-tab-display: inline-flex;

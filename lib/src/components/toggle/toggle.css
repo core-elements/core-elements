@@ -1,10 +1,8 @@
 :host {
   --core-toggle-box-shadow: none;
-  --core-toggle-height: var(--core-element-height-md);
+  --core-toggle-height: var(--core-element-height-default);
   --core-toggle-box-border-radius: 300px;
-  --core-toggle-indicator-margin: calc(
-    (var(--core-toggle-height) - var(--core-space-md)) * 0.075
-  );
+  --core-toggle-indicator-margin: 4px;
   --core-toggle-indicator-size: calc(
     (var(--core-toggle-height) - var(--core-space-md)) * 0.7
   );
@@ -17,6 +15,7 @@
   display: inline-flex;
   align-items: center;
   min-height: var(--core-toggle-height);
+  margin-right: var(--core-space-sm);
 }
 
 :host([full]) {
@@ -121,7 +120,7 @@
 :host([size="sm"]) {
   --core-toggle-height: var(--core-element-height-sm);
   --core-toggle-box-size: var(--core-element-height-xs);
-  --core-toggle-indicator-margin: 4px;
+  --core-toggle-indicator-margin: 2px;
 }
 
 :host([size="md"]) {

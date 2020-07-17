@@ -10,7 +10,7 @@
   --core-button-transition: none;
   --core-button-cursor: pointer;
   --core-button-display: inline-flex;
-  --core-button-height: var(--core-element-height-md);
+  --core-button-height: var(--core-element-height-default);
 }
 
 :host {

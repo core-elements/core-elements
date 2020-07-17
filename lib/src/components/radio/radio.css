@@ -1,6 +1,6 @@
 :host {
   --core-radio-box-shadow: none;
-  --core-radio-height: var(--core-element-height-md);
+  --core-radio-height: var(--core-element-height-default);
   --core-radio-box-bg-color: var(--core-color-white);
   --core-radio-box-border: var(--core-border-width-default) solid
     var(--core-color-ui);

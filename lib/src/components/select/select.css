@@ -1,7 +1,7 @@
 :host {
   /* ASSIGN TO LOCAL VARIABLES */
   --core-select-font-size: 16px;
-  --core-select-min-height: var(--core-element-height-md);
+  --core-select-min-height: var(--core-element-height-default);
   --core-select-background: none;
   --core-select-padding: 0px;
   --core-select-placeholder-color: var(--core-color-font-weak);
@@ -69,7 +69,7 @@
   --core-select-min-height: var(--core-element-height-lg);
 }
 
-:host(:hover:not(:focus-within)) {
+:host(:hover) {
   --core-select-border-color: var(--core-color-ui-strong);
 }
 

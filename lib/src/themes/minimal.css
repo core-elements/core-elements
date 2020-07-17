@@ -81,6 +81,7 @@
   --core-element-height-md: 2.4rem;
   --core-element-height-lg: 3.2rem;
   --core-element-height-xl: 4rem;
+  --core-element-height-default: var(--core-element-height-md);
 
   /* DEPTH */
   --core-depth-none: none;

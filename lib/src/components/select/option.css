@@ -5,7 +5,7 @@
   --core-option-active-color: var(--core-color-ui-weak);
   --core-option-selected-color: var(--core-color-primary);
   --core-option-font-color: var(--core-color-font);
-  --core-option-min-height: var(--core-element-height-md);
+  --core-option-min-height: var(--core-element-height-default);
 }
 
 :host {

@@ -59,7 +59,7 @@
 }
 
 [part="thumb"]:focus {
-  box-shadow: 0 0 0 2px var(--core-color-focus);
+  box-shadow: var(--core-focus-outline);
 }
 
 [part="labels"] {
