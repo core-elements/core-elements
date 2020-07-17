@@ -18,7 +18,6 @@ With core-elements you get components that can:
 - Access all parts of the component for individual styling
 - Global CSS variables to quickly change colors and properties on all components
 - Local CSS variables to change individual components
-- Or hardcode CSS properties yourself.
 
 ## Global-scoped variables
 
@@ -31,10 +30,10 @@ You can customize the colors and appearance of all the components by setting you
 <core-knobs hideTabs>
   <style>
     .my-theme {
-      --core-color-primary: red;
-      --core-color-primary-hover: darkred;
+      --core-color-primary: green;
+      --core-color-primary-hover: darkgreen;
       --core-color-primary-contrast: white;
-      --core-element-height-md: 4em;
+      --core-element-height-default: 60px;
       --core-border-radius-default: 30px;
       --core-border-width-default: 4px;
       --core-focus-outline: 0px 0px 0px 5px #fbcd83;
@@ -45,8 +44,8 @@ You can customize the colors and appearance of all the components by setting you
     <core-radio name="radio">Radio</core-radio>
     <core-radio name="radio">Radio 2</core-radio>
     <core-checkbox>Checkbox</core-checkbox>
-    <core-button variant="primary">Button</core-button>
     <core-toggle>Toggle</core-toggle>
+    <core-button variant="primary">Button</core-button>
     <core-select placeholder="Select something">
       <core-option value="1">Option 1</core-option>
       <core-option value="2">Option 2</core-option>

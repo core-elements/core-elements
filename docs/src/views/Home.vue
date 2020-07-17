@@ -3,16 +3,16 @@
     <Page class="landing">
       <core-container style="text-align: center" center size="md">
         <core-box margin-y="lg">
-          <core-text tag="h1" weight="500"
-            >Everything you wish HTML elements could do</core-text
-          >
+          <core-text tag="h1" weight="500">Everything you wish HTML elements could do</core-text>
         </core-box>
       </core-container>
       <core-container style="text-align: center" full center size="xs">
         <core-box margin-t="lg" margin-b="xl">
           <core-text tag="p" look="lead">
             Completely customizable components that work in
-            <b>React</b>, <b>Vue</b>, <b>Angular</b>, or any other framwork.
+            <b>React</b>,
+            <b>Vue</b>,
+            <b>Angular</b>, or any other framwork.
           </core-text>
         </core-box>
       </core-container>
@@ -21,26 +21,19 @@
           <router-link
             tag="core-button"
             to="/documentation/introduction"
+            size="lg"
             variant="primary"
-            >Get Started</router-link
-          >
-          <router-link tag="core-button" to="/components"
-            >Components</router-link
-          >
+          >Get Started</router-link>
+          <router-link tag="core-button" to="/components" size="lg">Components</router-link>
         </core-box>
         <core-box margin-y="lg">
-          <core-tabs
-            @change="(e) => (installMethod = e.target.value)"
-            :value="installMethod"
-          >
+          <core-tabs @change="(e) => (installMethod = e.target.value)" :value="installMethod">
             <core-tab>NPM</core-tab>
             <core-tab>CDN</core-tab>
           </core-tabs>
         </core-box>
         <core-box>
-          <pre
-            v-if="installMethod === 'NPM'"
-          ><code align="center" class="hljs">npm install --save core-elements</code></pre>
+          <pre v-if="installMethod === 'NPM'"><code align="center" class="hljs">npm install --save core-elements</code></pre>
           <pre v-if="installMethod === 'CDN'">
               <code align="center" class="hljs"><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/core-elements"</span>&gt;</span><span
   class="hljs-tag"
@@ -103,15 +96,8 @@
       </core-container>
 
       <core-container size="sm" center>
-        <core-box
-          style="text-align: center"
-          margin-t="xl"
-          padding-t="xl"
-          margin-b="xl"
-        >
-          <core-text weight="500" tag="h2"
-            >Finally total control over the select element</core-text
-          >
+        <core-box style="text-align: center" margin-t="xl" padding-t="xl" margin-b="xl">
+          <core-text weight="500" tag="h2">Finally total control over the select element</core-text>
 
           <core-text tag="p">
             Core Elements is a collection of the HTML elements you wished
@@ -137,12 +123,7 @@
             </core-tabs>
           </core-box>
           <core-box>
-            <core-knobs
-              ref="knob"
-              hideTabs
-              v-html="html"
-              element="core-select"
-            ></core-knobs>
+            <core-knobs ref="knob" hideTabs v-html="html" element="core-select"></core-knobs>
           </core-box>
         </core-container>
       </core-container>
@@ -159,7 +140,7 @@ export default {
     return {
       activeSelectExample: "basicSelect",
       installMethod: "NPM",
-      modalOpen: false,
+      modalOpen: false
     };
   },
   computed: {
@@ -320,18 +301,18 @@ export default {
     <core-option value="3">Option 3</core-option>
   </core-select>
       `;
-    },
+    }
   },
   watch: {
-    darkMode: (val) => {
+    darkMode: val => {
       if (val) document.body.setAttribute("mode", "dark");
       else document.body.removeAttribute("mode");
     },
     activeSelectExample: function(val) {
       this.$refs.knob._fetchJson();
       this.$refs.knob._observeProps();
-    },
-  },
+    }
+  }
 };
 </script>
 
