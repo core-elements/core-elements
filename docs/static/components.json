@@ -402,8 +402,7 @@
         },
         {
           "name": "label",
-          "type": "string",
-          "default": "\"\""
+          "type": "string"
         },
         {
           "name": "disabled",
@@ -422,10 +421,6 @@
         }
       ],
       "properties": [
-        {
-          "name": "formElement",
-          "type": "HTMLInputElement | null"
-        },
         {
           "name": "checked",
           "attribute": "checked",
@@ -447,8 +442,7 @@
         {
           "name": "label",
           "attribute": "label",
-          "type": "string",
-          "default": "\"\""
+          "type": "string"
         },
         {
           "name": "disabled",
@@ -1427,6 +1421,10 @@
       "path": "./../../lib/src/components/radio/radio.wc.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "checked",
           "type": "boolean"
         },
@@ -1447,12 +1445,11 @@
           "default": "\"\""
         },
         {
-          "name": "full",
-          "type": "boolean",
-          "default": "false"
+          "name": "label",
+          "type": "string"
         },
         {
-          "name": "disabled",
+          "name": "full",
           "type": "boolean",
           "default": "false"
         }
@@ -1467,8 +1464,9 @@
           "type": "Element | undefined"
         },
         {
-          "name": "formElement",
-          "type": "HTMLInputElement | null"
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
         },
         {
           "name": "checked",
@@ -1495,14 +1493,13 @@
           "default": "\"\""
         },
         {
-          "name": "full",
-          "attribute": "full",
-          "type": "boolean",
-          "default": "false"
+          "name": "label",
+          "attribute": "label",
+          "type": "string"
         },
         {
-          "name": "disabled",
-          "attribute": "disabled",
+          "name": "full",
+          "attribute": "full",
           "type": "boolean",
           "default": "false"
         },
@@ -1519,6 +1516,60 @@
       "events": [
         {
           "name": "change"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--box-shadow",
+          "description": "none"
+        },
+        {
+          "name": "--cursor",
+          "description": "pointer"
+        },
+        {
+          "name": "--height",
+          "description": "var(--core-element-height-default)"
+        },
+        {
+          "name": "--box-border-color",
+          "description": "var(--core-color-ui)"
+        },
+        {
+          "name": "--box-border-width",
+          "description": "var(--core-border-width-default)"
+        },
+        {
+          "name": "--box-border-style",
+          "description": "solid"
+        },
+        {
+          "name": "--box-background",
+          "description": "var(--core-color-white)"
+        },
+        {
+          "name": "--box-border-radius",
+          "description": "50%"
+        },
+        {
+          "name": "--box-size",
+          "description": "calc(var(--height) - var(--core-space-md))"
+        },
+        {
+          "name": "--indicator-color",
+          "description": "transparent"
+        },
+        {
+          "name": "--indicator-size",
+          "description": "60%"
+        },
+        {
+          "name": "--indicator-border-radius",
+          "description": "var(--box-border-radius)"
+        },
+        {
+          "name": "--label-font-size",
+          "description": "var(--core-font-size-md)"
         }
       ]
     },

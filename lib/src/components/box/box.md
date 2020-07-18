@@ -18,7 +18,7 @@ icon: cube-outline
       <core-text tag="h2">Card Title</core-text>
       <core-text tag="h6">Subtitle</core-text>
       <core-box margin-y="md">
-        <core-button type="primary">Click me</core-button>
+        <core-button variant="primary">Click me</core-button>
       </core-box>
     </core-box>
   </core-box>
@@ -68,7 +68,7 @@ icon: cube-outline
       </li>
     </ul>
   </core-box>
-  <core-button full type="primary">Start your free trial</core-button>
+  <core-button full variant="primary">Start your free trial</core-button>
 </core-box>
 </core-knobs>
 

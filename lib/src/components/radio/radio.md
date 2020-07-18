@@ -16,13 +16,11 @@ icon: radio-button-on-outline
 
 <core-knobs hideTabs  element="core-radio">
 <style>
-  core-radio.animate [slot="indicator"] {
-    opacity: 0;
+  .animate [slot="indicator"] {
     transform: rotate(-45deg);
     transition: transform 0.4s ease;
   }
-  core-radio.animate[checked] [slot="indicator"] {
-    opacity: 1;
+  .animate[checked] [slot="indicator"] {
     transform: rotate(0deg);
   }
 </style>
