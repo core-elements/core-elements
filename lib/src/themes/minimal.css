@@ -153,10 +153,13 @@ body.tabbed :focus {
 }
 
 html {
+  font-size: 18px;
+}
+
+body {
   text-rendering: optimizeLegibility;
   transition: background 0.2s ease;
   color: var(--core-color-font);
-  font-size: 18px;
   font-family: var(--core-font-family);
   background-color: var(--core-color-white);
 }
