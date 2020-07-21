@@ -23,8 +23,8 @@
   --core-textarea-border-color: var(--core-color-ui);
 }
 
-:host(:focus-within) {
-  --core-textarea-border-color: var(--core-color-ui-strong);
+:host(:focus-within) [part="input-field"] {
+  --core-textarea-border-color: var(--core-color-primary);
   box-shadow: var(--core-focus-outline);
 }
 
@@ -33,12 +33,12 @@
   width: 100%;
 }
 
-:host([full]) textarea {
+:host([full]) [part="input-field"] {
   width: 100%;
   display: block;
 }
 
-:host textarea {
+[part="input-field"] {
   border-radius: var(--core-border-radius-default);
   box-shadow: var(--core-input-box-shadow);
   box-sizing: border-box;

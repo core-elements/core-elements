@@ -52,7 +52,7 @@
 }
 
 :host(:focus-within) {
-  --core-input-border-color: var(--core-color-ui-strong);
+  --core-input-border-color: var(--core-color-primary);
   box-shadow: var(--core-focus-outline);
 }
 

@@ -5,6 +5,9 @@ import { Knobs } from "core-elements/dist/components/knobs";
 customElements.define("core-knobs", Knobs);
 
 import "core-elements";
+import { outlineWatcher } from "core-elements";
+
+outlineWatcher();
 
 import Vue from "vue";
 import Router from "vue-router";

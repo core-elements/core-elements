@@ -24,10 +24,6 @@
   margin-right: var(--core-space-sm);
 }
 
-:host(:focus) {
-  outline: 0;
-}
-
 :host([full]) {
   display: flex;
   width: 100%;
@@ -39,13 +35,13 @@
   cursor: not-allowed;
 }
 
-:host(:hover:not([disabled]):not([checked])) {
-  --box-background: var(--core-color-ui-weak);
-}
-
-:host(:focus) [part="box"] {
+:host(:focus-within) [part="box"] {
   box-shadow: var(--core-focus-outline);
   outline: 0;
+}
+
+:host(:hover:not([disabled]):not([checked])) {
+  --box-background: var(--core-color-ui-weak);
 }
 
 :host([checked]) {
@@ -89,6 +85,7 @@
   font-size: var(--label-font-size);
   display: block;
   flex: 1;
+  outline: 0;
   margin-left: var(--core-space-sm);
 }
 

@@ -76,7 +76,6 @@
 
 [part="end"] svg {
   transform-origin: center;
-  transition: transform 0.2s ease;
   transform: rotate(0deg);
 }
 

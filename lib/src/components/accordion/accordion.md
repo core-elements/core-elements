@@ -5,7 +5,7 @@ category: Interaction
 icon: file-tray-stacked-outline
 ---
 
-<core-knobs element="core-accordion">
+<core-knobs element="core-accordion-item">
 <core-accordion>
   <core-accordion-item heading="Accordion 1">
     <core-box padding="md">Content</core-box>

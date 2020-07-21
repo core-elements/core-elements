@@ -60,6 +60,28 @@ export default {
   watch: {
     $route: function(val) {
       this.setSubMenu();
+    },
+    html: {
+      handler: function(innerHTML) {
+        setTimeout(() => {
+          const div = document.createElement("div");
+          div.innerHTML = innerHTML;
+          const scripts = [...div.querySelectorAll("script")];
+          scripts.forEach(script => {
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            var code = script.text;
+            try {
+              s.appendChild(document.createTextNode(code));
+              document.body.appendChild(s);
+            } catch (e) {
+              s.text = code;
+              document.body.appendChild(s);
+            }
+          });
+        }, 500);
+      },
+      immediate: true
     }
   },
   methods: {
@@ -80,7 +102,8 @@ export default {
       return components.find(c => c.name === this.$route.params.element);
     },
     html() {
-      return marked(this.component.content);
+      const innerHTML = marked(this.component.content);
+      return innerHTML;
     },
     groupedComponents() {
       return this.components.reduce(

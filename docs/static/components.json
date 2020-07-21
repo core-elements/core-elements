@@ -2,7 +2,7 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "core-accordion",
+      "name": "core-accordion-item",
       "path": "./../../lib/src/components/accordion/accordion-item.wc.js",
       "attributes": [
         {
@@ -382,6 +382,97 @@
       ]
     },
     {
+      "name": "core-button",
+      "path": "./../../lib/src/components/button/button.wc.js",
+      "attributes": [
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "variant",
+          "description": "Button state",
+          "type": "\"\"|\"primary\"|\"transparent\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "squared",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "rounded",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "hasStartSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "hasEndSlot",
+          "type": "Element | null"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "description": "Button state",
+          "type": "\"\"|\"primary\"|\"transparent\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "squared",
+          "attribute": "squared",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "rounded",
+          "attribute": "rounded",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full button",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "description": "Button size",
+          "type": "\"sm\"|\"md\"|\"lg\"",
+          "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
+      ]
+    },
+    {
       "name": "core-checkbox",
       "path": "./../../lib/src/components/checkbox/checkbox.wc.js",
       "attributes": [
@@ -466,6 +557,64 @@
       "events": [
         {
           "name": "change"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--height",
+          "description": "var(--core-element-height-default)"
+        },
+        {
+          "name": "--box-background",
+          "description": "var(--core-color-white)"
+        },
+        {
+          "name": "--box-border-width",
+          "description": "var(--core-border-width-default)"
+        },
+        {
+          "name": "--box-border-color",
+          "description": "var(--core-color-ui)"
+        },
+        {
+          "name": "--box-border-style",
+          "description": "solid"
+        },
+        {
+          "name": "--box-cursor",
+          "description": "pointer"
+        },
+        {
+          "name": "--box-box-shadow",
+          "description": "none"
+        },
+        {
+          "name": "--box-size",
+          "description": "calc(var(--height) - var(--core-space-md))"
+        },
+        {
+          "name": "--box-border-radius",
+          "description": "var(--core-border-radius-default)"
+        },
+        {
+          "name": "--indicator-color",
+          "description": "transparent"
+        },
+        {
+          "name": "--indicator-font-size",
+          "description": "var(--core-font-size-md)"
+        },
+        {
+          "name": "--label-font-size",
+          "description": "var(--core-font-size-md)"
+        },
+        {
+          "name": "--label-color",
+          "description": "currentColor"
+        },
+        {
+          "name": "--label-display",
+          "description": "inline-block"
         }
       ]
     },
@@ -1421,10 +1570,6 @@
       "path": "./../../lib/src/components/radio/radio.wc.js",
       "attributes": [
         {
-          "name": "disabled",
-          "type": "boolean"
-        },
-        {
           "name": "checked",
           "type": "boolean"
         },
@@ -1452,6 +1597,11 @@
           "name": "full",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -1462,11 +1612,6 @@
         {
           "name": "currentCheckedItem",
           "type": "Element | undefined"
-        },
-        {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean"
         },
         {
           "name": "checked",
@@ -1500,6 +1645,12 @@
         {
           "name": "full",
           "attribute": "full",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
           "type": "boolean",
           "default": "false"
         },

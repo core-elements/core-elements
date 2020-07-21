@@ -11,7 +11,7 @@ icon: tablet-landscape-outline
 
 ## Variants
 
-<core-knobs hideTabs  element="core-button">
+<core-knobs hideTabs element="core-button">
 <core-button>Normal</core-button>
 <core-button variant="primary">Primary</core-button>
 <core-button variant="success">Success</core-button>

@@ -27,8 +27,7 @@
 }
 
 :host(:focus) {
-  --core-tab-border-color: var(--core-color-ui);
-  --core-tab-color: var(--core-color-font-strong);
+  --core-tab-box-shadow: var(--core-focus-outline);
 }
 
 :host([selected]) {

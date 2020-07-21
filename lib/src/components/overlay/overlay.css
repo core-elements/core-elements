@@ -27,7 +27,6 @@
   transform: scale(var(--core-overlay-scale))
     translateX(var(--core-overlay-translateX))
     translateY(var(--core-overlay-translateY));
-  transition: all 0.2s ease;
   width: auto;
   border: 0;
   z-index: 900;

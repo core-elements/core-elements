@@ -74,7 +74,7 @@
 }
 
 :host(:focus-within) {
-  --core-select-border-color: var(--core-color-ui-strong);
+  --core-select-border-color: var(--core-color-primary);
   box-shadow: var(--core-focus-outline);
 }
 
@@ -112,7 +112,7 @@
   display: flex;
   align-items: center;
   flex: 1;
-  height: 100%;
+  height: unset;
   justify-content: center;
 }
 

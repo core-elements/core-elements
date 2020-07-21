@@ -8,8 +8,8 @@
   --core-color-white: hsl(var(--core-color-ui-hue), 0%, 100%);
   --core-color-black: hsl(var(--core-color-ui-hue), 0%, 0%);
 
-  --core-color-focus: var(--core-color-primary);
-  --core-focus-outline: 0px 0px 0px 2px var(--core-color-focus);
+  --core-color-focus: #fbcd83;
+  --core-focus-outline: none;
 
   --core-color-success-hue: 130;
   --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
@@ -107,6 +107,13 @@
   --core-timing-function-ease-in-out: ease-in-out;
 }
 
+body.tabbed,
+body.tabbed :focus {
+  --core-focus-outline: 0px 0px 0px 4px var(--core-color-focus);
+  outline: 0;
+  box-shadow: var(--core-focus-outline);
+}
+
 [mode="dark"] {
   --core-color-primary-hue: 240;
   --core-color-primary: hsl(var(--core-color-primary-hue), 100%, 80%);
@@ -115,9 +122,6 @@
 
   --core-color-white: hsl(255, 20%, 15%);
   --core-color-black: hsl(var(--core-color-ui-hue), 0%, 100%);
-
-  --core-color-focus: var(--core-color-primary);
-  --core-focus-outline: 0px 0px 0px 2px var(--core-color-focus);
 
   --core-color-success: hsl(var(--core-color-success-hue), 100%, 40%);
   --core-color-success-hover: hsl(var(--core-color-success-hue), 100%, 30%);
