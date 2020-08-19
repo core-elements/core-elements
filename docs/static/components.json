@@ -1566,6 +1566,118 @@
       ]
     },
     {
+      "name": "core-overlay",
+      "path": "./../../lib/src/components/overlay/overlay.wc.js",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean"
+        },
+        {
+          "name": "full",
+          "description": "Full width",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "position-x",
+          "description": "Overlay horisontal position",
+          "type": "\"left\"|\"center\"|\"right\"",
+          "default": "\"\""
+        },
+        {
+          "name": "position-y",
+          "description": "Overlay vertical position",
+          "type": "\"top\"|\"center\"|\"bottom\"",
+          "default": "\"\""
+        },
+        {
+          "name": "hoverable",
+          "description": "Show overlay on hover",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "close-on-click",
+          "description": "Close when overlay is clicked on",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "toggle",
+          "description": "Toggle overlay",
+          "type": "Function"
+        }
+      ],
+      "properties": [
+        {
+          "name": "triggerEl",
+          "type": "Element | null"
+        },
+        {
+          "name": "contentEl",
+          "type": "Element | null"
+        },
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full width",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "positionX",
+          "attribute": "position-x",
+          "description": "Overlay horisontal position",
+          "type": "\"left\"|\"center\"|\"right\"",
+          "default": "\"\""
+        },
+        {
+          "name": "positionY",
+          "attribute": "position-y",
+          "description": "Overlay vertical position",
+          "type": "\"top\"|\"center\"|\"bottom\"",
+          "default": "\"\""
+        },
+        {
+          "name": "hoverable",
+          "attribute": "hoverable",
+          "description": "Show overlay on hover",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "closeOnClick",
+          "attribute": "close-on-click",
+          "description": "Close when overlay is clicked on",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "toggle",
+          "attribute": "toggle",
+          "description": "Toggle overlay",
+          "type": "Function"
+        }
+      ],
+      "events": [
+        {
+          "name": "open"
+        },
+        {
+          "name": "close"
+        },
+        {
+          "name": "toggle"
+        }
+      ]
+    },
+    {
       "name": "core-radio",
       "path": "./../../lib/src/components/radio/radio.wc.js",
       "attributes": [
@@ -1729,36 +1841,56 @@
       "path": "./../../lib/src/components/range/range.wc.js",
       "attributes": [
         {
+          "name": "sensitivity",
+          "type": "number"
+        },
+        {
           "name": "value",
           "type": "string"
         },
         {
           "name": "min",
-          "type": "number",
+          "description": "Minimum value",
+          "type": "Number",
           "default": "0"
         },
         {
           "name": "max",
-          "type": "number",
+          "description": "Maximum value",
+          "type": "Number",
           "default": "100"
         },
         {
           "name": "step",
-          "type": "number",
+          "description": "Value steps",
+          "type": "Number",
           "default": "10"
         },
         {
-          "name": "sensitivity",
-          "type": "number",
-          "default": "1"
-        },
-        {
           "name": "name",
-          "type": "string",
+          "description": "Value steps",
+          "type": "Number",
           "default": "\"\""
         }
       ],
       "properties": [
+        {
+          "name": "sensitivity",
+          "attribute": "sensitivity",
+          "type": "number"
+        },
+        {
+          "name": "range",
+          "type": "number"
+        },
+        {
+          "name": "isSingle",
+          "type": "boolean"
+        },
+        {
+          "name": "valueCount",
+          "type": "number"
+        },
         {
           "name": "value",
           "attribute": "value",
@@ -1771,31 +1903,29 @@
         {
           "name": "min",
           "attribute": "min",
-          "type": "number",
+          "description": "Minimum value",
+          "type": "Number",
           "default": "0"
         },
         {
           "name": "max",
           "attribute": "max",
-          "type": "number",
+          "description": "Maximum value",
+          "type": "Number",
           "default": "100"
         },
         {
           "name": "step",
           "attribute": "step",
-          "type": "number",
+          "description": "Value steps",
+          "type": "Number",
           "default": "10"
-        },
-        {
-          "name": "sensitivity",
-          "attribute": "sensitivity",
-          "type": "number",
-          "default": "1"
         },
         {
           "name": "name",
           "attribute": "name",
-          "type": "string",
+          "description": "Value steps",
+          "type": "Number",
           "default": "\"\""
         }
       ],
