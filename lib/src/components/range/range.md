@@ -6,5 +6,5 @@ icon: options-outline
 ---
 
 <core-knobs element="core-range">
-  <core-range sensitivity="0.8" step="1" value="10"><core-range>
+  <core-range step="10" max="100" value="10,12"><core-range>
 </core-knobs>
