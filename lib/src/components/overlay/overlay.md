@@ -5,7 +5,7 @@ category: Interaction
 icon: chatbox-outline
 ---
 
-<core-knobs hideEvents element="core-overlay">
+<core-knobs element="core-overlay">
 <core-overlay>
   <core-button slot="trigger" full>Button</core-button>
   <core-box slot="content" padding="sm" depth="sm">
