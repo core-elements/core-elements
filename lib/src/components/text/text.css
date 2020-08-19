@@ -3,11 +3,12 @@
   --core-text-weight: 400;
   --core-text-color: currentColor;
   --core-text-line-height: 1;
+  --core-text-display: inline-block;
 }
 
 :host,
 :host {
-  display: inline-block;
+  display: var(--core-text-display);
   color: var(--core-text-color);
   text-align: inherit;
   line-height: var(--core-text-line-height);
@@ -192,7 +193,8 @@
 :host([tag="h3"]:not([inline])),
 :host([tag="h4"]:not([inline])),
 :host([tag="h5"]:not([inline])),
-:host([tag="h6"]:not([inline])) {
+:host([tag="h6"]:not([inline])),
+:host([tag="p"]:not([inline])) {
   display: block;
   width: 100%;
 }
@@ -202,7 +204,8 @@
 :host([look="h3"]:not([inline])),
 :host([look="h4"]:not([inline])),
 :host([look="h5"]:not([inline])),
-:host([look="h6"]:not([inline])) {
+:host([look="h6"]:not([inline])),
+:host([look="p"]:not([inline])) {
   display: block;
   width: 100%;
 }
