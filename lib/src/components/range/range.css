@@ -2,6 +2,7 @@
   --core-range-label-font-size: inherit;
   --core-range-label-text-transform: initial;
   --core-range-label-text-color: currentColor;
+  --core-range-track-color: var(--core-color-primary);
 }
 
 :host {
@@ -33,7 +34,7 @@
 }
 
 [part="track"] {
-  background: var(--core-color-primary);
+  background: var(--core-range-track-color);
   position: absolute;
   height: 5px;
 }
@@ -44,7 +45,6 @@
   position: absolute;
   z-index: 1;
   cursor: grab;
-  user-drag: none;
   user-select: none;
   touch-action: none;
   height: var(--core-element-height-xs);
@@ -54,7 +54,7 @@
   transform: translateY(-50%)
     translateX(calc(var(--core-element-height-xs) / 2 * -1));
   background-color: var(--core-color-white);
-  border: var(--core-border-width-default) solid var(--core-color-ui);
+  border: var(--core-border-width-default) solid var(--core-range-track-color);
 }
 
 [part="thumb"]:focus {

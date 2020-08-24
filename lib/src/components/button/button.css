@@ -106,7 +106,7 @@
 
 :host([variant="transparent"]) {
   --core-button-bg-color: transparent;
-  --core-button-text-color: var(--core-color-black);
+  --core-button-text-color: currentColor;
 }
 
 :host([variant="transparent"]:hover:not([disabled])) {

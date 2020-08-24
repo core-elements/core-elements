@@ -28,6 +28,7 @@
     "web-component-analyzer": "^1.0.3"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^3.1.4",
     "core-elements": "0.0.33",
     "highlight.js": "^9.18.1",
     "hljs": "^6.2.3",

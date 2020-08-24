@@ -118,7 +118,7 @@ icon: checkbox-outline
       border-color: var(--core-color-ui);
     }
     .choice[checked] {
-      border-color: var(--core-color-focus);
+      border-color: var(--core-color-primary);
     }
   </style>
   <core-checkbox class="choice" full>

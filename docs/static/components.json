@@ -662,6 +662,11 @@
           "default": "false"
         },
         {
+          "name": "gap",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
           "name": "justify-content",
           "description": "Justify content",
           "type": "\"start\"|\"center\"|\"end\"|\"between\"|\"around\"",
@@ -765,6 +770,12 @@
           "attribute": "inline",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "gap",
+          "attribute": "gap",
+          "type": "string",
+          "default": "\"\""
         },
         {
           "name": "j",
