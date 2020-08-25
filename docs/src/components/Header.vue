@@ -81,11 +81,15 @@
                 to="/theme-editor"
                 class="header__nav-item"
               >Theme Editor</router-link>
-              <core-toggle
-                :checked="darkMode"
-                @change="(e) => (darkMode = e.target.checked)"
+              <core-button
+                size="sm"
+                variant="transparent"
+                squared
+                @click="() => darkMode = !darkMode"
                 class="header__nav-item"
-              ></core-toggle>
+              >
+                <ion-icon :name="darkMode ? 'sunny-outline' : 'moon-outline'"></ion-icon>
+              </core-button>
             </nav>
           </div>
         </div>
@@ -100,34 +104,34 @@ export default {
     showSidebar: Boolean,
     hasSidebar: Boolean,
     showInHeader: Boolean,
-    title: String
+    title: String,
   },
   data() {
     return {
       darkMode: localStorage.getItem("darkMode") === "true" ? true : false,
-      showMenu: false
+      showMenu: false,
     };
   },
   watch: {
-    showSidebar: val => {
+    showSidebar: (val) => {
       if (val) document.body.classList.add("no-scroll-mobile");
       else document.body.classList.remove("no-scroll-mobile");
     },
     darkMode: {
-      handler: function(val) {
+      handler: function (val) {
         document.documentElement.setAttribute("mode", val ? "dark" : "light");
         localStorage.setItem("darkMode", val);
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   methods: {
     handleToggleButton() {
       if (this.$route.meta.hasSidebar) {
         this.$emit("toggle-sidebar");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -205,10 +209,6 @@ export default {
 
 .header__nav {
   text-align: left;
-}
-
-.header__nav ion-icon {
-  margin-right: 0.5em;
 }
 
 .header__nav-item {

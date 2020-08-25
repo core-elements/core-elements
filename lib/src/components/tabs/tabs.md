@@ -14,13 +14,13 @@ icon: library-outline
 
 ## With targets
 
-<core-knobs  element="core-tabs">
-<core-tabs full>
+<core-knobs element="core-tabs">
+<core-tabs>
   <core-tab selected target="targetOne">Tab 1</core-tab>
   <core-tab target="targetTwo">Tab 2</core-tab>
 </core-tabs>
-<div id="targetOne">Target 1</div>
-<div id="targetTwo">Target 2</div>
+<core-box id="targetOne">Target 1</core-box>
+<core-box id="targetTwo">Target 2</core-box>
 </core-knobs>
 
 ## Vertical

@@ -1,4 +1,5 @@
 :host {
+  --core-tab-with: auto;
   --core-tab-height: var(--core-element-height-default);
   --core-tab-box-shadow: 0;
   --core-tab-border-width: var(--core-border-width-md);
@@ -13,22 +14,23 @@
 :host {
   display: inline-flex;
   align-items: center;
-  overflow-x: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   height: auto;
   max-width: 100%;
+}
+
+:host::-webkit-scrollbar {
+  display: none;
 }
 
 :host([full]) {
   display: flex;
   width: 100%;
+  flex-wrap: nowrap;
   --core-tab-display: flex;
-}
-
-@media (min-width: 800px) {
-  :host {
-    overflow-x: initial;
-    flex-wrap: wrap;
-  }
+  --core-tab-width: 100%;
 }
 
 :host([vertical]) {

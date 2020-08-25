@@ -17,8 +17,8 @@ import Page from "./Page";
 export default {
   components: { Page },
   props: {
-    showSidebar: Boolean
-  }
+    showSidebar: Boolean,
+  },
 };
 </script>
 
@@ -38,7 +38,7 @@ export default {
   background: var(--core-color-white);
   font-size: 1.5em;
   height: calc(100vh - 60px);
-  overflow-y: scroll;
+  overflow: visible;
 }
 
 .sidebar.show {
@@ -64,6 +64,7 @@ export default {
     position: sticky;
     top: 0;
     font-size: 1.2em;
+    overflow-x: visible;
     overflow-y: auto;
     padding-left: 0;
     padding-right: 0;

@@ -6,11 +6,15 @@
 }
 
 :host {
-  user-drag: none;
   cursor: inherit;
-  display: block;
   height: auto;
+  width: 200px;
+  display: inline-block;
+}
+
+:host([full]) {
   width: 100%;
+  display: block;
 }
 
 [part="line-wrapper"] {
