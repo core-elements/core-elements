@@ -21,6 +21,10 @@
   padding: 0 calc(var(--core-element-height-xs) / 2);
 }
 
+:host([editable]) [part="line"] {
+  cursor: copy;
+}
+
 [part="line"] {
   user-drag: none;
   position: relative;

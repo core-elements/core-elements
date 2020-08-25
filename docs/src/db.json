@@ -202,7 +202,7 @@
       "desc": "Range",
       "category": "Form",
       "icon": "options-outline",
-      "content": "\n<core-knobs element=\"core-range\">\n  <core-range step=\"10\" max=\"100\" value=\"10,20\"><core-range>\n</core-knobs>\n"
+      "content": "\n<core-knobs element=\"core-range\">\n  <core-range step=\"10\" max=\"100\" value=\"10,20\"><core-range>\n</core-knobs>\n\n## Editable\n\n<core-knobs hideTabs element=\"core-range\">\n  <core-range step=\"10\" max=\"100\" value=\"10,20\" editable><core-range>\n</core-knobs>\n"
     },
     {
       "path": "../lib/src/components/select/select.md",

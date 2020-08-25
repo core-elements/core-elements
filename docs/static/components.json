@@ -1875,7 +1875,7 @@
           "name": "step",
           "description": "Value steps",
           "type": "Number",
-          "default": "10"
+          "default": "1"
         },
         {
           "name": "name",
@@ -1930,7 +1930,7 @@
           "attribute": "step",
           "description": "Value steps",
           "type": "Number",
-          "default": "10"
+          "default": "1"
         },
         {
           "name": "name",
