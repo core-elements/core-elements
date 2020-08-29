@@ -49,7 +49,7 @@ icon: radio-button-on-outline
     border-color: var(--core-color-ui);
   }
   core-radio.choice[checked] {
-    border-color: var(--core-color-focus);
+    border-color: var(--core-color-primary);
   }
 </style>
 

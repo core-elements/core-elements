@@ -6,5 +6,11 @@ icon: options-outline
 ---
 
 <core-knobs element="core-range">
-  <core-range sensitivity="0.8" step="1" value="10"><core-range>
+  <core-range step="10" max="100" value="10,20"><core-range>
+</core-knobs>
+
+## Editable
+
+<core-knobs hideTabs element="core-range">
+  <core-range step="10" max="100" value="10,20" editable><core-range>
 </core-knobs>

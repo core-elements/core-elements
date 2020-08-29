@@ -45,7 +45,7 @@
 }
 
 :host([checked]) {
-  --box-border-color: var(--core-color-primary);
+  --box-border-color: var(--core-color-ui);
   --indicator-color: var(--core-color-primary);
 }
 

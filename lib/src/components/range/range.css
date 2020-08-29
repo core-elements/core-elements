@@ -2,14 +2,19 @@
   --core-range-label-font-size: inherit;
   --core-range-label-text-transform: initial;
   --core-range-label-text-color: currentColor;
+  --core-range-track-color: var(--core-color-primary);
 }
 
 :host {
-  user-drag: none;
   cursor: inherit;
-  display: block;
   height: auto;
+  width: 200px;
+  display: inline-block;
+}
+
+:host([full]) {
   width: 100%;
+  display: block;
 }
 
 [part="line-wrapper"] {
@@ -18,6 +23,10 @@
   align-items: center;
   height: var(--core-element-height-xs);
   padding: 0 calc(var(--core-element-height-xs) / 2);
+}
+
+:host([editable]) [part="line"] {
+  cursor: copy;
 }
 
 [part="line"] {
@@ -33,19 +42,17 @@
 }
 
 [part="track"] {
-  background: var(--core-color-primary);
+  background: var(--core-range-track-color);
   position: absolute;
-  transition: all 0.2s ease;
   height: 5px;
 }
 
 [part="thumb"] {
   outline: 0;
-  border: 2px solid var(--core-color-ui);
+  border: 0;
   position: absolute;
   z-index: 1;
   cursor: grab;
-  user-drag: none;
   user-select: none;
   touch-action: none;
   height: var(--core-element-height-xs);
@@ -54,8 +61,8 @@
   top: 50%;
   transform: translateY(-50%)
     translateX(calc(var(--core-element-height-xs) / 2 * -1));
-  transition: all 0.2s ease;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--core-color-white);
+  border: var(--core-border-width-default) solid var(--core-range-track-color);
 }
 
 [part="thumb"]:focus {

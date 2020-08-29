@@ -3,6 +3,12 @@
   display: flex;
 }
 
+@each $i in sm, md, lg, xl {
+  :host([gap="$(i)"]) {
+    gap: var(--core-space-$(i));
+  }
+}
+
 :host([wrap]) {
   flex-wrap: wrap;
 }
