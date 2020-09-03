@@ -13,8 +13,9 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 300px;
-  max-width: 100%;
+  min-width: 40px;
+  width: 100%;
+  max-width: 200px;
   box-shadow: var(--core-input-box-shadow);
   border-radius: var(--core-input-border-radius);
   height: var(--core-input-height);
@@ -23,6 +24,7 @@
 
 :host([full]) {
   width: 100%;
+  max-width: 100%;
   display: flex;
 }
 
