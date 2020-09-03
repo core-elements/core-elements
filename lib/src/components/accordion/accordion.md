@@ -108,17 +108,17 @@ Remember that the default outline styles are defined with box-shadow and not wit
   .custom core-accordion-item {
     border: 1px solid var(--core-color-ui);
     border-radius: var(--core-border-radius-md);
+    margin-bottom: var(--core-space-sm);
   }
   /* Use focus within to style the box when it has focus */
-  .custom core-accordion-item:focus-within {
-    border-color: var(--core-color-focus);
+  .custom core-accordion-item[open] {
+    border-color: var(--core-color-primary);
   }
-  .custom core-accordion-item::part(trigger):focus {
-    color: var(--core-color-focus);
-    box-shadow: none;
+  .custom core-accordion-item[open]::part(trigger) {
+    color: var(--core-color-primary);
   }
   .custom core-accordion-item::part(trigger):hover {
-    color: var(--core-color-focus);
+    color: var(--core-color-primary);
   }
   .custom core-accordion-item[open] .gg-add-r,
   .custom core-accordion-item .gg-remove-r {
@@ -130,7 +130,12 @@ Remember that the default outline styles are defined with box-shadow and not wit
     margin-right: var(--core-space-md);
   }
 </style>
-<core-accordion class="custom">
+<core-accordion mode="single" class="custom">
+  <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
+    <i slot="start" class="gg-add-r"></i>
+    <i slot="start" class="gg-remove-r"></i>
+    <core-box padding="md">This is how you do it</core-box>
+  </core-accordion-item>
   <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
     <i slot="start" class="gg-add-r"></i>
     <i slot="start" class="gg-remove-r"></i>
