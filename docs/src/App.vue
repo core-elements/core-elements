@@ -19,14 +19,14 @@ export default {
   data() {
     return {
       checked: false,
-      showSidebar: false
+      showSidebar: false,
     };
   },
   computed: {
     routerProps() {
       return this.$route.meta;
-    }
-  }
+    },
+  },
 };
 </script>
 
