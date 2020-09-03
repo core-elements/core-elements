@@ -1,10 +1,4 @@
 <style>
-core-input {
-  width: 150px;
-  max-width: 150px;
-  min-width: 150px;
-}
-
 input[type="color"] {
   display: inline-block;
   border: 0;
@@ -123,6 +117,16 @@ input[type="color"]::-webkit-color-swatch {
           <core-option value="2">Option 2</core-option>
           <core-option value="3">Option 3</core-option>
         </core-select>
+      </core-box>
+      <core-box margin-y="lg">
+        <core-accordion>
+          <core-accordion-item heading="Accordion 1"></core-accordion-item>
+          <core-accordion-item heading="Accordion 1"></core-accordion-item>
+        </core-accordion>
+        <core-menu>
+          <core-menu-item>Menu 1</core-menu-item>
+          <core-menu-item>Menu 2</core-menu-item>
+        </core-menu>
       </core-box>
     </main>
   </SidebarLayout>

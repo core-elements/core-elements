@@ -4,7 +4,7 @@
       <nav toc>
         <div class="menu-group" v-for="(menuGroup, name) in groupedComponents" :key="name">
           <core-box margin-b="sm">
-            <core-text weight="500" color="strong">{{ name }}</core-text>
+            <core-text size="sm" weight="500" color="strong">{{ name }}</core-text>
           </core-box>
           <router-link
             @click.native="$emit('toggle-sidebar')"
@@ -54,20 +54,20 @@ export default {
   data() {
     return {
       subMenu: [],
-      components
+      components,
     };
   },
   watch: {
-    $route: function(val) {
+    $route: function (val) {
       this.setSubMenu();
     },
     html: {
-      handler: function(innerHTML) {
+      handler: function (innerHTML) {
         setTimeout(() => {
           const div = document.createElement("div");
           div.innerHTML = innerHTML;
           const scripts = [...div.querySelectorAll("script")];
-          scripts.forEach(script => {
+          scripts.forEach((script) => {
             var s = document.createElement("script");
             s.type = "text/javascript";
             var code = script.text;
@@ -81,25 +81,25 @@ export default {
           });
         }, 500);
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   methods: {
     setSubMenu() {
       setTimeout(() => {
         const headings = [...document.querySelectorAll("h2")];
-        this.subMenu = headings.map(h => ({ id: h.id, title: h.innerText }));
+        this.subMenu = headings.map((h) => ({ id: h.id, title: h.innerText }));
       }, 0);
     },
     goTo(route) {
       this.subMenu = [];
       this.$emit("toggle-sidebar");
       this.$router.push(route);
-    }
+    },
   },
   computed: {
     component() {
-      return components.find(c => c.name === this.$route.params.element);
+      return components.find((c) => c.name === this.$route.params.element);
     },
     html() {
       const innerHTML = marked(this.component.content);
@@ -114,17 +114,17 @@ export default {
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }]
+            [`${catName}`]: [...prevComps, { ...comp }],
           };
         },
         {
           Interaction: [],
           Layout: [],
-          Form: []
+          Form: [],
         }
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -171,19 +171,13 @@ nav[toc] {
   }
 }
 
-nav[toc] label {
-  color: var(--core-color-font-weak);
-  text-transform: uppercase;
-  font-size: 0.7em;
-  display: block;
-}
-
 nav[toc] a {
   color: var(--core-color-font-weak);
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
   font-weight: 400;
+  font-size: var(--core-font-size-xs);
   margin-right: 10px;
 }
 
@@ -198,10 +192,6 @@ nav[toc] a.router-link-exact-active {
 
 nav[toc] a:last-of-type {
   margin-bottom: 30px;
-}
-
-nav[toc] a a {
-  font-size: 1rem;
 }
 
 @media (min-width: 800px) {

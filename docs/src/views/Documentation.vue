@@ -2,21 +2,16 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <div
-          class="menu-group"
-          v-for="(menuGroup, name) in groupedDocs"
-          :key="name"
-        >
+        <div class="menu-group" v-for="(menuGroup, name) in groupedDocs" :key="name">
           <core-box margin-b="sm">
-            <core-text weight="500" color="strong">{{ name }}</core-text>
+            <core-text size="sm" weight="500" color="strong">{{ name }}</core-text>
           </core-box>
           <router-link
             @click.native="$emit('toggle-sidebar')"
             :to="`/documentation/${page.slug}`"
             v-for="(page, i) in menuGroup"
             :key="i"
-            >{{ page.name }}</router-link
-          >
+          >{{ page.name }}</router-link>
         </div>
       </nav>
     </div>
@@ -34,7 +29,7 @@ import { docs } from "../db.json";
 import SidebarLayout from "../layouts/SidebarLayout";
 
 const options = {
-  highlight: function(code, lang) {
+  highlight: function (code, lang) {
     return `<div class="hljs">${hljs.highlight(lang, code).value}</div>`;
   },
 };
@@ -74,6 +69,4 @@ export default {
 };
 </script>
 
-<style>
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
-</style>
+

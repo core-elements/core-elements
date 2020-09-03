@@ -21,10 +21,9 @@
           <router-link
             tag="core-button"
             to="/documentation/introduction"
-            size="lg"
             variant="primary"
           >Get Started</router-link>
-          <router-link tag="core-button" to="/components" size="lg">Components</router-link>
+          <router-link tag="core-button" to="/components">Components</router-link>
         </core-box>
         <core-box margin-y="lg">
           <core-tabs @change="(e) => (installMethod = e.target.value)" :value="installMethod">
@@ -140,7 +139,7 @@ export default {
     return {
       activeSelectExample: "basicSelect",
       installMethod: "NPM",
-      modalOpen: false
+      modalOpen: false,
     };
   },
   computed: {
@@ -301,18 +300,18 @@ export default {
     <core-option value="3">Option 3</core-option>
   </core-select>
       `;
-    }
+    },
   },
   watch: {
-    darkMode: val => {
+    darkMode: (val) => {
       if (val) document.body.setAttribute("mode", "dark");
       else document.body.removeAttribute("mode");
     },
-    activeSelectExample: function(val) {
+    activeSelectExample: function (val) {
       this.$refs.knob._fetchJson();
       this.$refs.knob._observeProps();
-    }
-  }
+    },
+  },
 };
 </script>
 
