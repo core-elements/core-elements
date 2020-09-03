@@ -45,7 +45,7 @@ input[type="color"]::-webkit-color-swatch {
 </style>
 
 <template>
-  <SidebarLayout showSidebar>
+  <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <core-box margin-y="sm">
         <core-accordion mode="single" :key="i" v-for="(group, i) in variables">
@@ -143,6 +143,7 @@ function getProperty(name) {
 }
 
 export default {
+  props: { showSidebar: Boolean, title: String },
   components: { SidebarLayout },
   data() {
     return {
