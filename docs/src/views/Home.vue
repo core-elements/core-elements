@@ -23,7 +23,7 @@
             to="/documentation/introduction"
             variant="primary"
           >Get Started</router-link>
-          <router-link tag="core-button" to="/components">Components</router-link>
+          <router-link tag="core-button" to="/elements">Components</router-link>
         </core-box>
         <core-box margin-y="lg">
           <core-tabs @change="(e) => (installMethod = e.target.value)" :value="installMethod">
