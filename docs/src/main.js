@@ -57,9 +57,9 @@ const router = new Router({
       path: "/theme-editor",
       component: ThemeEditor,
       meta: {
-        title: "Getting Started",
+        title: "Settings",
         showInHeader: true,
-        hasSidebar: false,
+        hasSidebar: true,
       },
     },
   ],
