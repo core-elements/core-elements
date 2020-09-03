@@ -1860,6 +1860,18 @@
           "type": "string"
         },
         {
+          "name": "full",
+          "description": "Full width",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "editable",
+          "description": "Editable",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
           "name": "min",
           "description": "Minimum value",
           "type": "Number",
@@ -1910,6 +1922,20 @@
         {
           "name": "arrayValues",
           "type": "array"
+        },
+        {
+          "name": "full",
+          "attribute": "full",
+          "description": "Full width",
+          "type": "Boolean",
+          "default": "false"
+        },
+        {
+          "name": "editable",
+          "attribute": "editable",
+          "description": "Editable",
+          "type": "Boolean",
+          "default": "false"
         },
         {
           "name": "min",
