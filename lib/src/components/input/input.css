@@ -10,6 +10,7 @@
 }
 
 :host {
+  outline: 0;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +46,7 @@
 
 :host([type="number"]) [part="input-field"]::-webkit-inner-spin-button,
 :host([type="number"]) [part="input-field"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -53,7 +54,8 @@
   --core-input-border-color: var(--core-color-ui-strong);
 }
 
-:host(:focus-within) {
+/* delegatesFocus makes this possible but is experimental */
+:host(:focus) {
   --core-input-border-color: var(--core-color-primary);
   box-shadow: var(--core-focus-outline);
 }
@@ -66,7 +68,7 @@
   --core-input-border-color: var(--core-color-danger);
 }
 
-:host [part="input-field"] {
+[part="input-field"] {
   text-align: inherit;
   color: var(--core-color-font);
   background-color: var(--core-input-bg-color);
@@ -79,7 +81,7 @@
   padding: var(--core-input-padding);
 }
 
-:host [part="input-field"]::placeholder {
+[part="input-field"]::placeholder {
   font-size: inherit;
   color: var(--core-input-placeholder-color);
 }

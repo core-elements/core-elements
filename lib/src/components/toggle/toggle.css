@@ -10,6 +10,7 @@
 }
 
 :host {
+  outline: 0;
   vertical-align: middle;
   cursor: pointer;
   display: inline-flex;
@@ -35,7 +36,7 @@
   vertical-align: middle;
 }
 
-:host(:focus-within) [part="box"] {
+:host(:focus) [part="box"] {
   box-shadow: var(--core-focus-outline);
   outline: 0;
 }

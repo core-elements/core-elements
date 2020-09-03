@@ -24,6 +24,7 @@
 }
 
 :host {
+  outline: 0;
   vertical-align: middle;
   display: inline-flex;
   flex-wrap: wrap;
@@ -73,7 +74,8 @@
   --core-select-border-color: var(--core-color-ui-strong);
 }
 
-:host(:focus-within) {
+/* delegatesFocus makes this possible but is experimental */
+:host(:focus) {
   --core-select-border-color: var(--core-color-primary);
   box-shadow: var(--core-focus-outline);
 }

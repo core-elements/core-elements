@@ -16,6 +16,7 @@
 }
 
 :host {
+  outline: 0;
   display: inline-flex;
   align-items: center;
   margin-right: var(--core-space-sm);
@@ -29,7 +30,7 @@
   margin-right: 0;
 }
 
-:host(:focus-within) [part="box"] {
+:host(:focus) [part="box"] {
   box-shadow: var(--core-focus-outline);
 }
 

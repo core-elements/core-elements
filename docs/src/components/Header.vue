@@ -73,9 +73,14 @@
               >Documentation</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
-                to="/components"
+                to="/elements"
                 class="header__nav-item"
-              >Components</router-link>
+              >Elements</router-link>
+              <router-link
+                v-on:click.native="showMenu = false"
+                to="/patterns"
+                class="header__nav-item"
+              >Patterns</router-link>
               <router-link
                 v-on:click.native="showMenu = false"
                 to="/theme-editor"

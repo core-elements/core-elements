@@ -2,7 +2,7 @@
   <Page>
     <div class="components">
       <core-container center style="text-align: center" size="xs">
-        <core-text tag="h1">Components</core-text>
+        <core-text tag="h1">Elements</core-text>
         <core-text tag="p" look="lead">
           A collection of lightweight elements that implement the most common
           UI patterns in web development
@@ -14,7 +14,7 @@
           <core-select
             :input-value="search"
             @input="(e) => (search = e.target.inputValue)"
-            @select="(e) => $router.push('/components/' + e.target.value)"
+            @select="(e) => $router.push('/elements/' + e.target.value)"
             full
             searchable
             placeholder="Search"
@@ -58,7 +58,7 @@
                   radius="xs"
                   clickable
                   full
-                  :to="`/components/${component.name}`"
+                  :to="`/elements/${component.name}`"
                 >
                   <core-box padding-b="sm">
                     <ion-icon style="font-size: 2rem" :name="component.icon"></ion-icon>
@@ -85,21 +85,21 @@ export default {
     return {
       components,
       category: "All",
-      search: ""
+      search: "",
     };
   },
   computed: {
     tabbedComponents() {
       if (this.category === "All") return this.components;
-      return this.components.filter(comp => comp.category === this.category);
+      return this.components.filter((comp) => comp.category === this.category);
     },
     filteredComponents() {
       if (this.search === "") return this.tabbedComponents;
-      return this.tabbedComponents.filter(comp =>
+      return this.tabbedComponents.filter((comp) =>
         comp.name.toLowerCase().includes(this.search.toLowerCase())
       );
-    }
-  }
+    },
+  },
 };
 </script>
 

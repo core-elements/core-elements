@@ -8,7 +8,7 @@
           </core-box>
           <router-link
             @click.native="$emit('toggle-sidebar')"
-            :to="`/components/${page.name}`"
+            :to="`/elements/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
           >{{ page.name }}</router-link>

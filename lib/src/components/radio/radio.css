@@ -5,7 +5,7 @@
   --box-border-color: var(--core-color-ui);
   --box-border-width: var(--core-border-width-default);
   --box-border-style: solid;
-  --box-background: var(--core-color-white);
+  --box-background-color: var(--core-color-white);
   --box-border-radius: 50%;
   --box-size: calc(var(--height) - var(--core-space-md));
   --indicator-color: transparent;
@@ -15,6 +15,7 @@
 }
 
 :host {
+  outline: 0;
   vertical-align: middle;
   outline: 0;
   min-height: var(--height);
@@ -35,18 +36,18 @@
   cursor: not-allowed;
 }
 
-:host(:focus-within) [part="box"] {
+:host(:focus) [part="box"] {
   box-shadow: var(--core-focus-outline);
-  outline: 0;
 }
 
 :host(:hover:not([disabled]):not([checked])) {
-  --box-background: var(--core-color-ui-weak);
+  --box-background-color: var(--core-color-ui-weak);
 }
 
 :host([checked]) {
-  --box-border-color: var(--core-color-ui);
-  --indicator-color: var(--core-color-primary);
+  --box-background-color: var(--core-color-primary);
+  --box-border-color: var(--core-color-primary);
+  --indicator-color: var(--core-color-primary-contrast);
 }
 
 :host([size="sm"]) {
@@ -65,11 +66,12 @@
 }
 
 [part="box"] {
+  outline: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: var(--box-background);
+  background-color: var(--box-background-color);
   width: var(--box-size);
   height: var(--box-size);
   box-shadow: var(--box-shadow);

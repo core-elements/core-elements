@@ -513,6 +513,10 @@
       ],
       "properties": [
         {
+          "name": "hasLabel",
+          "type": "boolean"
+        },
+        {
           "name": "checked",
           "attribute": "checked",
           "type": "boolean"
@@ -1794,56 +1798,43 @@
       ],
       "cssProperties": [
         {
-          "name": "--box-shadow",
-          "description": "none"
+          "name": "--box-shadow"
         },
         {
-          "name": "--cursor",
-          "description": "pointer"
+          "name": "--cursor"
         },
         {
-          "name": "--height",
-          "description": "var(--core-element-height-default)"
+          "name": "--height"
         },
         {
-          "name": "--box-border-color",
-          "description": "var(--core-color-ui)"
+          "name": "--box-border-color"
         },
         {
-          "name": "--box-border-width",
-          "description": "var(--core-border-width-default)"
+          "name": "--box-border-width"
         },
         {
-          "name": "--box-border-style",
-          "description": "solid"
+          "name": "--box-border-style"
         },
         {
-          "name": "--box-background",
-          "description": "var(--core-color-white)"
+          "name": "--box-background-color"
         },
         {
-          "name": "--box-border-radius",
-          "description": "50%"
+          "name": "--box-border-radius"
         },
         {
-          "name": "--box-size",
-          "description": "calc(var(--height) - var(--core-space-md))"
+          "name": "--box-size"
         },
         {
-          "name": "--indicator-color",
-          "description": "transparent"
+          "name": "--indicator-color"
         },
         {
-          "name": "--indicator-size",
-          "description": "60%"
+          "name": "--indicator-size"
         },
         {
-          "name": "--indicator-border-radius",
-          "description": "var(--box-border-radius)"
+          "name": "--indicator-border-radius"
         },
         {
-          "name": "--label-font-size",
-          "description": "var(--core-font-size-md)"
+          "name": "--label-font-size"
         }
       ]
     },

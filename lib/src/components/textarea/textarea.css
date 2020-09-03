@@ -12,6 +12,7 @@
 }
 
 :host {
+  outline: 0;
   display: inline-block;
   font-size: var(--core-textarea-font-size);
   font-family: var(--core-textarea-font-family);
@@ -23,7 +24,7 @@
   --core-textarea-border-color: var(--core-color-ui);
 }
 
-:host(:focus-within) [part="input-field"] {
+:host(:focus) [part="input-field"] {
   --core-textarea-border-color: var(--core-color-primary);
   box-shadow: var(--core-focus-outline);
 }

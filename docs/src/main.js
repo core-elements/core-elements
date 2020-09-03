@@ -15,6 +15,7 @@ import App from "./App.vue";
 import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
+import Patterns from "./views/Patterns";
 import Documentation from "./views/Documentation";
 import ThemeEditor from "./views/ThemeEditor";
 
@@ -35,14 +36,19 @@ const router = new Router({
       },
     },
     {
-      path: "/components",
-      meta: { title: "Components", showInHeader: true, hasSidebar: false },
+      path: "/elements",
+      meta: { title: "Elements", showInHeader: true, hasSidebar: false },
       component: Components,
     },
     {
-      path: "/components/:element",
+      path: "/elements/:element",
       component: Component,
-      meta: { title: "Select component", hasSidebar: true },
+      meta: { title: "Select element", hasSidebar: true },
+    },
+    {
+      path: "/patterns",
+      component: Patterns,
+      meta: { title: "Patterns", hasSidebar: false },
     },
     {
       path: "/documentation/:slug",
