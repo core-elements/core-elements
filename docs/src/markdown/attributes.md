@@ -32,7 +32,7 @@ I have read terms and conditions
 </core-checkbox>
 <core-button disabled id="CoreButton">Submit</core-checkbox>
 
-<core-box margin-b="lg">
+<core-box mb="lg">
   <core-tabs>
     <core-tab target="javascript" selected>Pure Javascript</core-tab>
     <core-tab target="react">React</core-tab>

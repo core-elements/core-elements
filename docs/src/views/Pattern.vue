@@ -2,13 +2,13 @@
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
       <nav toc>
-        <div class="menu-group" v-for="(menuGroup, name) in groupedComponents" :key="name">
+        <div class="menu-group" v-for="(menuGroup, name) in groupedPatterns" :key="name">
           <core-box mb="sm">
             <core-text size="sm" weight="500" color="strong">{{ name }}</core-text>
           </core-box>
           <router-link
             @click.native="$emit('toggle-sidebar')"
-            :to="`/elements/${page.name}`"
+            :to="`/patterns/${page.name}`"
             v-for="(page, i) in menuGroup"
             :key="i"
           >{{ page.name }}</router-link>
@@ -17,8 +17,8 @@
     </div>
 
     <div class="component">
-      <core-text tag="h1">{{ component.name }}</core-text>
-      <core-text tag="p" look="lead">{{ component.desc }}</core-text>
+      <core-text tag="h1">{{ pattern.name }}</core-text>
+      <core-text tag="p" look="lead">{{ pattern.desc }}</core-text>
 
       <core-box
         bg="white"
@@ -42,7 +42,7 @@
 
 <script>
 import marked from "marked";
-import { components } from "../db.json";
+import { patterns } from "../db.json";
 import SidebarLayout from "../layouts/SidebarLayout";
 
 export default {
@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       subMenu: [],
-      components,
+      patterns,
     };
   },
   watch: {
@@ -98,23 +98,23 @@ export default {
     },
   },
   computed: {
-    component() {
-      return components.find((c) => c.name === this.$route.params.element);
+    pattern() {
+      return this.patterns.find((c) => c.name === this.$route.params.pattern);
     },
     html() {
-      const innerHTML = marked(this.component.content);
+      const innerHTML = marked(this.pattern.content);
       return innerHTML;
     },
-    groupedComponents() {
-      return this.components.reduce(
-        (acc, comp) => {
-          const catName = comp.category || "Uncategorized";
+    groupedPatterns() {
+      return this.patterns.reduce(
+        (acc, pattern) => {
+          const catName = pattern.category || "Uncategorized";
 
-          const prevComps = acc[`${catName}`] ? acc[`${catName}`] : [];
+          const prevPattern = acc[`${catName}`] ? acc[`${catName}`] : [];
 
           return {
             ...acc,
-            [`${catName}`]: [...prevComps, { ...comp }],
+            [`${catName}`]: [...prevPattern, { ...pattern }],
           };
         },
         {

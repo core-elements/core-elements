@@ -1,5 +1,5 @@
 <template>
-  <core-box padding-x="md">
+  <core-box px="md">
     <core-container center size="lg">
       <slot></slot>
     </core-container>

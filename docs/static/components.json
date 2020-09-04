@@ -565,60 +565,46 @@
       ],
       "cssProperties": [
         {
-          "name": "--height",
-          "description": "var(--core-element-height-default)"
+          "name": "--height"
         },
         {
-          "name": "--box-background",
-          "description": "var(--core-color-white)"
+          "name": "--box-background"
         },
         {
-          "name": "--box-border-width",
-          "description": "var(--core-border-width-default)"
+          "name": "--box-border-width"
         },
         {
-          "name": "--box-border-color",
-          "description": "var(--core-color-ui)"
+          "name": "--box-border-color"
         },
         {
-          "name": "--box-border-style",
-          "description": "solid"
+          "name": "--box-border-style"
         },
         {
-          "name": "--box-cursor",
-          "description": "pointer"
+          "name": "--box-cursor"
         },
         {
-          "name": "--box-box-shadow",
-          "description": "none"
+          "name": "--box-box-shadow"
         },
         {
-          "name": "--box-size",
-          "description": "calc(var(--height) - var(--core-space-md))"
+          "name": "--box-size"
         },
         {
-          "name": "--box-border-radius",
-          "description": "var(--core-border-radius-default)"
+          "name": "--box-border-radius"
         },
         {
-          "name": "--indicator-color",
-          "description": "transparent"
+          "name": "--indicator-color"
         },
         {
-          "name": "--indicator-font-size",
-          "description": "var(--core-font-size-md)"
+          "name": "--indicator-font-size"
         },
         {
-          "name": "--label-font-size",
-          "description": "var(--core-font-size-md)"
+          "name": "--label-font-size"
         },
         {
-          "name": "--label-color",
-          "description": "currentColor"
+          "name": "--label-color"
         },
         {
-          "name": "--label-display",
-          "description": "inline-block"
+          "name": "--label-display"
         }
       ]
     },

@@ -10,7 +10,7 @@
       </core-container>
 
       <core-container style="text-align: center" center size="xs">
-        <core-box margin-y="xl">
+        <core-box my="xl">
           <core-select
             :input-value="search"
             @input="(e) => (search = e.target.inputValue)"
@@ -39,7 +39,7 @@
       </core-container>
 
       <core-container center size="sm">
-        <core-box margin-y="xl">
+        <core-box my="xl">
           <core-grid gap-sm="md" gap-md="lg" columns="12">
             <core-grid-item
               sm="6"
@@ -54,13 +54,13 @@
                   style="text-align: center"
                   tag="core-box"
                   depth="sm"
-                  padding="lg"
+                  p="lg"
                   radius="xs"
                   clickable
                   full
                   :to="`/elements/${component.name}`"
                 >
-                  <core-box padding-b="sm">
+                  <core-box pb="sm">
                     <ion-icon style="font-size: 2rem" :name="component.icon"></ion-icon>
                   </core-box>
                   <core-text size="md" weight="400">{{ component.name }}</core-text>

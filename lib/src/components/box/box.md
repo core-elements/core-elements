@@ -6,7 +6,7 @@ icon: cube-outline
 ---
 
 <core-knobs element="core-box">
-<core-box padding="lg" depth="md">Box</core-box>
+<core-box p="lg" depth="md">Box</core-box>
 </core-knobs>
 
 ## Card
@@ -14,10 +14,10 @@ icon: cube-outline
 <core-knobs hideTabs element="core-box">
   <core-box bg="white" inline depth="sm" border="ui-weakest">
     <img width="400" height="250" src="https://placeimg.com/400/250/tech">
-    <core-box padding="md">
+    <core-box p="md">
       <core-text tag="h2">Card Title</core-text>
       <core-text tag="h6">Subtitle</core-text>
-      <core-box margin-y="md">
+      <core-box my="md">
         <core-button variant="primary">Click me</core-button>
       </core-box>
     </core-box>
@@ -45,10 +45,10 @@ icon: cube-outline
     margin-right: 10px;
   }
 </style>
-<core-box class="pricing" bg="ui-weakest" padding="lg" inline depth="sm">
+<core-box class="pricing" bg="ui-weakest" p="lg" inline depth="sm">
   <core-text tag="h2">Small</core-text>
   <core-text tag="p" color="weak" >Free</core-text>
-  <core-box margin-y="lg">
+  <core-box my="lg">
     <ul full size="md">
       <li>
       <i class="gg-check-o"></i>
@@ -75,15 +75,15 @@ icon: cube-outline
 ## Alerts
 
 <core-knobs hideTabs element="core-box">
-  <core-box radius="md" margin-b="md" padding="lg" color="success" bg="white" full border="success">
+  <core-box radius="md" margin-b="md" p="lg" color="success" bg="white" full border="success">
     <core-text>Great! You successfully did a thing!</core-text>
   </core-box>
   </core-box>
-  <core-box radius="md" margin-b="md" padding="lg" color="warning" bg="white" full border="warning">
+  <core-box radius="md" margin-b="md" p="lg" color="warning" bg="white" full border="warning">
     <core-text>Ops! You encountered something dangerous!</core-text>
   </core-box>
   </core-box>
-  <core-box radius="md" margin-b="md" padding="lg" color="danger" bg="white" full border="danger">
+  <core-box radius="md" margin-b="md" p="lg" color="danger" bg="white" full border="danger">
     <core-text>Oy! What are you doing?!</core-text>
   </core-box>
   </core-box>

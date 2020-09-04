@@ -157,6 +157,10 @@ body {
   background-color: var(--core-color-white);
 }
 
+[mode="dark"] {
+  background-color: var(--core-color-white);
+}
+
 body:not(.tabbed) {
   --core-focus-outline: none;
 }

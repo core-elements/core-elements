@@ -8,7 +8,7 @@ icon: chatbox-outline
 <core-knobs element="core-overlay">
 <core-overlay>
   <core-button slot="trigger" full>Button</core-button>
-  <core-box slot="content" padding="sm" depth="sm">
+  <core-box slot="content" p="sm" depth="sm">
     <core-text>Hello</core-text>
   </core-box>
 </core-overlay>
@@ -18,7 +18,7 @@ icon: chatbox-outline
 
 <core-overlay hoverable>
   <core-button slot="trigger" full>Button</core-button>
-  <core-box slot="content" padding="sm" depth="sm">
+  <core-box slot="content" p="sm" depth="sm">
     <core-text>Hello</core-text>
   </core-box>
 </core-overlay>

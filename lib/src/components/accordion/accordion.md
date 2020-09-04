@@ -8,13 +8,13 @@ icon: file-tray-stacked-outline
 <core-knobs element="core-accordion-item">
 <core-accordion>
   <core-accordion-item heading="Accordion 1">
-    <core-box padding="md">Content</core-box>
+    <core-box p="md">Content</core-box>
   </core-accordion-item>
   <core-accordion-item heading="Accordion 2">
-    <core-box padding="md">Content</core-box>
+    <core-box p="md">Content</core-box>
   </core-accordion-item>
   <core-accordion-item heading="Accordion 3">
-    <core-box padding="md">Content</core-box>
+    <core-box p="md">Content</core-box>
   </core-accordion-item>
 </core-accordion>
 </core-knobs>
@@ -34,7 +34,7 @@ icon: file-tray-stacked-outline
 <core-accordion>
   <core-accordion-item class="indicator" hide-default-indicator heading="Heading">
     <i slot="start" class="gg-chevron-right"></i>
-    <core-box padding="md">Content</core-box>
+    <core-box p="md">Content</core-box>
   </core-accordion-item>
 </core-accordion>
 </core-knobs>
@@ -57,7 +57,7 @@ icon: file-tray-stacked-outline
 </style>
 <core-accordion>
   <core-accordion-item class="animate" heading="Heading">
-    <core-box padding="md">Content</core-box>
+    <core-box p="md">Content</core-box>
   </core-accordion-item>
 </core-accordion>
 </core-knobs>
@@ -90,7 +90,7 @@ Because of this you will need to add keyframes on the slotted content like this:
 <core-accordion>
   <core-accordion-item class="animate-2" heading="Heading">
     <div class="content">
-    <core-box padding="md">
+    <core-box p="md">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
     </core-box>
     </div>
@@ -134,12 +134,12 @@ Remember that the default outline styles are defined with box-shadow and not wit
   <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
     <i slot="start" class="gg-add-r"></i>
     <i slot="start" class="gg-remove-r"></i>
-    <core-box padding="md">This is how you do it</core-box>
+    <core-box p="md">This is how you do it</core-box>
   </core-accordion-item>
   <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
     <i slot="start" class="gg-add-r"></i>
     <i slot="start" class="gg-remove-r"></i>
-    <core-box padding="md">This is how you do it</core-box>
+    <core-box p="md">This is how you do it</core-box>
   </core-accordion-item>
 </core-accordion>
 </core-knobs>
@@ -177,7 +177,7 @@ Remember that the default outline styles are defined with box-shadow and not wit
         <ion-icon name="arrow-down-outline"></ion-icon>
       </core-button>
     </div>
-    <core-box padding="md">This is how you do it</core-box>
+    <core-box p="md">This is how you do it</core-box>
   </core-accordion-item>
   <core-accordion-item size="lg" heading="How do I do this?" hide-default-indicator>
     <div slot="trigger">
@@ -186,7 +186,7 @@ Remember that the default outline styles are defined with box-shadow and not wit
           <ion-icon name="arrow-down-outline"></ion-icon>
       </core-button>
     </div>
-    <core-box padding="md">This is how you do it</core-box>
+    <core-box p="md">This is how you do it</core-box>
   </core-accordion-item>
 </core-accordion>
 </core-knobs>

@@ -47,12 +47,12 @@ input[type="color"]::-webkit-color-swatch {
 <template>
   <SidebarLayout :showSidebar="showSidebar">
     <div slot="sidebar">
-      <core-box margin-y="sm">
+      <core-box my="sm">
         <core-accordion mode="single" :key="i" v-for="(group, i) in variables">
           <core-accordion-item size="lg" :heading="group.label">
             <!-- Colors -->
-            <core-box v-if="group.type === 'color'" padding-x="md" padding-b="md">
-              <core-box margin-b="sm" :key="index" v-for="(child, index) in group.children">
+            <core-box v-if="group.type === 'color'" px="md" pb="md">
+              <core-box mb="sm" :key="index" v-for="(child, index) in group.children">
                 <core-text size="xs">{{child.label}}</core-text>
                 <core-flex align-items="center" gap="sm">
                   <input
@@ -69,8 +69,8 @@ input[type="color"]::-webkit-color-swatch {
               </core-box>
             </core-box>
             <!-- Pixels -->
-            <core-box v-if="group.type === 'pixels'" padding-x="md" padding-b="md">
-              <core-box margin-b="sm" :key="index" v-for="(child, index) in group.children">
+            <core-box v-if="group.type === 'pixels'" px="md" pb="md">
+              <core-box mb="sm" :key="index" v-for="(child, index) in group.children">
                 <core-text size="xs">{{child.label}}</core-text>
                 <core-flex align-items="center" gap="sm">
                   <core-input
@@ -87,10 +87,10 @@ input[type="color"]::-webkit-color-swatch {
     </div>
 
     <main>
-      <core-box margin-y="lg">
+      <core-box my="lg">
         <core-text tag="h1">Theme editor</core-text>
       </core-box>
-      <core-box margin-y="lg">
+      <core-box my="lg">
         <core-button>Normal</core-button>
         <core-button variant="primary">Primary</core-button>
         <core-button variant="success">Success</core-button>
@@ -101,7 +101,7 @@ input[type="color"]::-webkit-color-swatch {
         <core-button size="md">Medium</core-button>
         <core-button size="lg">Large</core-button>
       </core-box>
-      <core-box margin-y="lg">
+      <core-box my="lg">
         <core-checkbox>Checkbox</core-checkbox>
         <core-radio>Radio button</core-radio>
         <core-toggle>Toggle</core-toggle>
@@ -118,7 +118,7 @@ input[type="color"]::-webkit-color-swatch {
           <core-option value="3">Option 3</core-option>
         </core-select>
       </core-box>
-      <core-box margin-y="lg">
+      <core-box my="lg">
         <core-accordion>
           <core-accordion-item heading="Accordion 1"></core-accordion-item>
           <core-accordion-item heading="Accordion 1"></core-accordion-item>

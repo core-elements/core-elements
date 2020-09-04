@@ -13,6 +13,18 @@
   cursor: pointer;
 }
 
+:host([text-align="center"]) {
+  text-align: center;
+}
+
+:host([text-align="right"]) {
+  text-align: right;
+}
+
+:host([text-align="left"]) {
+  text-align: left;
+}
+
 @each $i in primary, primary-weak, primary-strong, secondary, secondary-weak,
   secondary-strong, success, warning, danger, ui-weak, ui-strong, white, black
 {
@@ -44,89 +56,89 @@
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding="$(i)"]) {
+  :host([p="$(i)"]) {
     padding: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding-x="$(i)"]) {
+  :host([px="$(i)"]) {
     padding-left: var(--core-space-$(i));
     padding-right: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding-y="$(i)"]) {
+  :host([py="$(i)"]) {
     padding-top: var(--core-space-$(i));
     padding-bottom: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding-l="$(i)"]) {
+  :host([pl="$(i)"]) {
     padding-left: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding-r="$(i)"]) {
+  :host([pr="$(i)"]) {
     padding-right: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding-t="$(i)"]) {
+  :host([pt="$(i)"]) {
     padding-top: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([padding-b="$(i)"]) {
+  :host([pb="$(i)"]) {
     padding-bottom: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin="$(i)"]) {
+  :host([m="$(i)"]) {
     margin: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin-x="$(i)"]) {
+  :host([mx="$(i)"]) {
     margin-left: var(--core-space-$(i));
     margin-right: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin-y="$(i)"]) {
+  :host([my="$(i)"]) {
     margin-top: var(--core-space-$(i));
     margin-bottom: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin-l="$(i)"]) {
+  :host([ml="$(i)"]) {
     margin-left: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin-r="$(i)"]) {
+  :host([mr="$(i)"]) {
     margin-right: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin-t="$(i)"]) {
+  :host([mt="$(i)"]) {
     margin-top: var(--core-space-$(i));
   }
 }
 
 @each $i in none, xs, sm, md, lg, xl {
-  :host([margin-b="$(i)"]) {
+  :host([mb="$(i)"]) {
     margin-bottom: var(--core-space-$(i));
   }
 }

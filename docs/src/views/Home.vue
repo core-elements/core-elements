@@ -2,12 +2,12 @@
   <div>
     <Page class="landing">
       <core-container style="text-align: center" center size="md">
-        <core-box margin-y="lg">
+        <core-box my="lg">
           <core-text tag="h1" weight="500">Everything you wish HTML elements could do</core-text>
         </core-box>
       </core-container>
       <core-container style="text-align: center" full center size="xs">
-        <core-box margin-t="lg" margin-b="xl">
+        <core-box mt="lg" mb="xl">
           <core-text tag="p" look="lead">
             Completely customizable components that work in
             <b>React</b>,
@@ -17,7 +17,7 @@
         </core-box>
       </core-container>
       <core-container style="text-align: center" center size="xs">
-        <core-box margin-y="lg">
+        <core-box my="lg">
           <router-link
             tag="core-button"
             to="/documentation/introduction"
@@ -25,7 +25,7 @@
           >Get Started</router-link>
           <router-link tag="core-button" to="/elements">Components</router-link>
         </core-box>
-        <core-box margin-y="lg">
+        <core-box my="lg">
           <core-tabs @change="(e) => (installMethod = e.target.value)" :value="installMethod">
             <core-tab>NPM</core-tab>
             <core-tab>CDN</core-tab>
@@ -42,13 +42,13 @@
       </core-container>
 
       <core-container center size="md">
-        <core-box margin-t="xl" padding-t="xl" margin-b="xl">
+        <core-box mt="xl" pt="xl" mb="xl">
           <core-text style="text-align: center" tag="h2">Features</core-text>
         </core-box>
 
         <core-grid columns="1" columns-md="3">
           <core-grid-item sm="1" md="1">
-            <core-box class="feature-box" padding="md">
+            <core-box class="feature-box" p="md">
               <ion-icon
                 style="font-size: 2.5rem; color: var(--core-color-font-strong); margin-bottom: 20px;"
                 name="rocket-outline"
@@ -63,7 +63,7 @@
             </core-box>
           </core-grid-item>
           <core-grid-item sm="1" md="1">
-            <core-box class="feature-box" padding="md">
+            <core-box class="feature-box" p="md">
               <ion-icon
                 style="font-size: 2.5rem; color: var(--core-color-font-strong); margin-bottom: 20px;"
                 name="color-fill-outline"
@@ -78,7 +78,7 @@
             </core-box>
           </core-grid-item>
           <core-grid-item sm="1" md="1">
-            <core-box class="feature-box" padding="md">
+            <core-box class="feature-box" p="md">
               <ion-icon
                 style="font-size: 2.5rem; color: var(--core-color-font-strong); margin-bottom: 20px;"
                 name="logo-html5"
@@ -95,7 +95,7 @@
       </core-container>
 
       <core-container size="sm" center>
-        <core-box style="text-align: center" margin-t="xl" padding-t="xl" margin-b="xl">
+        <core-box style="text-align: center" mt="xl" pt="xl" mb="xl">
           <core-text weight="500" tag="h2">Finally total control over the select element</core-text>
 
           <core-text tag="p">
@@ -105,7 +105,7 @@
           </core-text>
         </core-box>
         <core-container center size="xs">
-          <core-box margin-b="lg">
+          <core-box mb="lg">
             <core-tabs
               full
               :value="activeSelectExample"

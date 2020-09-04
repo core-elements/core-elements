@@ -1,5 +1,5 @@
 <template>
-  <core-box class="header" padding-x="md" bg="white">
+  <core-box class="header" px="md" bg="white">
     <core-container center size="lg">
       <core-flex class="header__inner" justify-content="between" align-items="center">
         <div class="header__left">

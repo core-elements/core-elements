@@ -100,7 +100,7 @@ Tips: Don't call your variables things like `--core-color-secondary-light`, cons
 
 Here is an example on how you can use either CSS variables, or normal properties to style a checkbox label.
 
-<core-box padding-b="lg">
+<core-box pb="lg">
   <core-tabs>
     <core-tab value="variables" selected target="variables">CSS Variables</core-tab>
     <core-tab value="properties" target="properties">Regular properties</core-tab>

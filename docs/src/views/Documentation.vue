@@ -3,7 +3,7 @@
     <div slot="sidebar">
       <nav toc>
         <div class="menu-group" v-for="(menuGroup, name) in groupedDocs" :key="name">
-          <core-box margin-b="sm">
+          <core-box mb="sm">
             <core-text size="sm" weight="500" color="strong">{{ name }}</core-text>
           </core-box>
           <router-link

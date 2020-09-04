@@ -16,6 +16,7 @@ import Home from "./views/Home";
 import Components from "./views/Components";
 import Component from "./views/Component";
 import Patterns from "./views/Patterns";
+import Pattern from "./views/Pattern";
 import Documentation from "./views/Documentation";
 import ThemeEditor from "./views/ThemeEditor";
 
@@ -49,6 +50,11 @@ const router = new Router({
       path: "/patterns",
       component: Patterns,
       meta: { title: "Patterns", hasSidebar: false },
+    },
+    {
+      path: "/patterns/:pattern",
+      component: Pattern,
+      meta: { title: "Pattern", hasSidebar: true },
     },
     {
       path: "/documentation/:slug",

@@ -1,6 +1,6 @@
 :host {
   --core-text-size: var(--core-font-size-md);
-  --core-text-weight: 400;
+  --core-text-weight: inherit;
   --core-text-color: currentColor;
   --core-text-line-height: 1;
   --core-text-display: inline-block;
@@ -227,5 +227,11 @@
 @each $i in weak, strong, heading {
   :host([color="$(i)"]) {
     --core-text-color: var(--core-color-font-$(i));
+  }
+}
+
+@each $i in primary, white {
+  :host([color="$(i)"]) {
+    --core-text-color: var(--core-color-$(i));
   }
 }
