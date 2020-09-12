@@ -113,6 +113,18 @@
           "default": "\"\""
         },
         {
+          "name": "text-align",
+          "description": "Text align",
+          "type": "\"left\"|\"center\"|\"right\"",
+          "default": "\"\""
+        },
+        {
+          "name": "bg-src",
+          "description": "Box background image",
+          "type": "String",
+          "default": "\"\""
+        },
+        {
           "name": "color",
           "description": "Box font color",
           "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
@@ -148,85 +160,91 @@
           "default": "false"
         },
         {
-          "name": "padding",
+          "name": "p",
           "description": "Box padding",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "padding-x",
+          "name": "px",
           "description": "Box padding horistonal",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "padding-y",
+          "name": "py",
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "padding-l",
+          "name": "overflow",
+          "description": "Overflow",
+          "type": "\"hidden\"",
+          "default": "\"\""
+        },
+        {
+          "name": "pl",
           "description": "Box margin left",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "padding-r",
+          "name": "pr",
           "description": "Box padding right",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "padding-t",
+          "name": "pt",
           "description": "Box padding top",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "padding-b",
+          "name": "pb",
           "description": "Box padding bottom",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin",
+          "name": "m",
           "description": "Box margin",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin-x",
+          "name": "mx",
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin-y",
+          "name": "my",
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin-l",
+          "name": "ml",
           "description": "Box margin left",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin-r",
+          "name": "mr",
           "description": "Box margin right",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin-t",
+          "name": "mt",
           "description": "Box margin top",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
-          "name": "margin-b",
+          "name": "mb",
           "description": "Box margin bottom",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
@@ -238,6 +256,20 @@
           "attribute": "bg",
           "description": "Box background color",
           "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "default": "\"\""
+        },
+        {
+          "name": "textAlign",
+          "attribute": "text-align",
+          "description": "Text align",
+          "type": "\"left\"|\"center\"|\"right\"",
+          "default": "\"\""
+        },
+        {
+          "name": "bgSrc",
+          "attribute": "bg-src",
+          "description": "Box background image",
+          "type": "String",
           "default": "\"\""
         },
         {
@@ -283,98 +315,105 @@
         },
         {
           "name": "padding",
-          "attribute": "padding",
+          "attribute": "p",
           "description": "Box padding",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "paddingX",
-          "attribute": "padding-x",
+          "attribute": "px",
           "description": "Box padding horistonal",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "paddingY",
-          "attribute": "padding-y",
+          "attribute": "py",
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
+          "name": "overflow",
+          "attribute": "overflow",
+          "description": "Overflow",
+          "type": "\"hidden\"",
+          "default": "\"\""
+        },
+        {
           "name": "paddingL",
-          "attribute": "padding-l",
+          "attribute": "pl",
           "description": "Box margin left",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "paddingR",
-          "attribute": "padding-r",
+          "attribute": "pr",
           "description": "Box padding right",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "paddingT",
-          "attribute": "padding-t",
+          "attribute": "pt",
           "description": "Box padding top",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "paddingB",
-          "attribute": "padding-b",
+          "attribute": "pb",
           "description": "Box padding bottom",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "margin",
-          "attribute": "margin",
+          "attribute": "m",
           "description": "Box margin",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "marginX",
-          "attribute": "margin-x",
+          "attribute": "mx",
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "marginY",
-          "attribute": "margin-y",
+          "attribute": "my",
           "description": "Box padding vertical",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "marginL",
-          "attribute": "margin-l",
+          "attribute": "ml",
           "description": "Box margin left",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "marginR",
-          "attribute": "margin-r",
+          "attribute": "mr",
           "description": "Box margin right",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "marginT",
-          "attribute": "margin-t",
+          "attribute": "mt",
           "description": "Box margin top",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "marginB",
-          "attribute": "margin-b",
+          "attribute": "mb",
           "description": "Box margin bottom",
           "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
@@ -2431,13 +2470,13 @@
         {
           "name": "size",
           "description": "Text size",
-          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
           "default": "\"\""
         },
         {
           "name": "look",
-          "description": "Look like",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
+          "description": "Look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
           "default": "\"\""
         },
         {
@@ -2478,14 +2517,14 @@
           "name": "size",
           "attribute": "size",
           "description": "Text size",
-          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"|\"lead\"",
+          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
           "default": "\"\""
         },
         {
           "name": "look",
           "attribute": "look",
-          "description": "Look like",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"|\"xxl\"",
+          "description": "Look",
+          "type": "\"h1\"|\"h2\"|\"h3\"|\"h4\"|\"h5\"|\"h6\"|\"small\"|\"p\"",
           "default": "\"\""
         },
         {

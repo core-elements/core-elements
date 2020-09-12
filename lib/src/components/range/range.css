@@ -2,19 +2,42 @@
   --core-range-label-font-size: inherit;
   --core-range-label-text-transform: initial;
   --core-range-label-text-color: currentColor;
+  --core-range-height: var(--core-element-height-default);
   --core-range-track-color: var(--core-color-primary);
+  --core-range-thumb-size: calc(var(--core-range-height) / 2);
+  --core-range-track-size: 5px;
 }
 
 :host {
   cursor: inherit;
-  height: auto;
-  width: 200px;
-  display: inline-block;
+  min-height: var(--core-range-height);
+  min-width: 50px;
+  width: 100%;
+  max-width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :host([full]) {
   width: 100%;
+  max-width: 100%;
   display: block;
+}
+
+:host([size="sm"]) {
+  --core-range-track-size: 3px;
+  --core-range-height: var(--core-element-height-sm);
+}
+
+:host([size="md"]) {
+  --core-range-track-size: 5px;
+  --core-range-height: var(--core-element-height-md);
+}
+
+:host([size="lg"]) {
+  --core-range-track-size: 8px;
+  --core-range-height: var(--core-element-height-lg);
 }
 
 [part="line-wrapper"] {
@@ -33,7 +56,7 @@
   user-drag: none;
   position: relative;
   display: block;
-  height: 5px;
+  height: var(--core-range-track-size);
   width: 100%;
   background: var(--core-color-ui);
   border-radius: 4px;
@@ -44,7 +67,7 @@
 [part="track"] {
   background: var(--core-range-track-color);
   position: absolute;
-  height: 5px;
+  height: var(--core-range-track-size);
 }
 
 [part="thumb"] {
@@ -55,12 +78,12 @@
   cursor: grab;
   user-select: none;
   touch-action: none;
-  height: var(--core-element-height-xs);
-  width: var(--core-element-height-xs);
+  height: var(--core-range-thumb-size);
+  width: var(--core-range-thumb-size);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%)
-    translateX(calc(var(--core-element-height-xs) / 2 * -1));
+    translateX(calc(var(--core-range-thumb-size) / 2 * -1));
   background-color: var(--core-color-white);
   border: var(--core-border-width-default) solid var(--core-range-track-color);
 }

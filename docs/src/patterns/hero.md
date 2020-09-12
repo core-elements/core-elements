@@ -1,18 +1,28 @@
 ---
 name: Hero
 desc: Hero
-category: Interaction
-icon: library-outline
+category: Layout
+icon: browsers-outline
+elements: ["box", "overlay", "flex", "text"]
 ---
 
 <core-knobs hideTabs>
 
-<core-box mode="dark" class="hero" px="xl" pb="xl">
+<core-box id="container" mode="dark" class="hero" px="xl" pb="xl">
 
   <core-box py="lg" text-align="center">
     <core-flex justify-content="between">
       <div>Logo</div>
-      <nav>Nav</nav>
+      <core-overlay position-x="right">
+        <core-button slot="trigger" variant="transparent">Menu</core-button>
+        <core-box style="width: 200px" slot="content" depth="md">
+          <core-menu>
+            <core-menu-item>Menu item</core-menu-item>
+            <core-menu-item>Menu item</core-menu-item>
+            <core-menu-item>Menu item</core-menu-item>
+          </core-menu>
+        </core-box>
+      </core-overlay>
     </core-flex>
   </core-box>
 
@@ -31,7 +41,7 @@ icon: library-outline
           <core-input placeholder="Your email address" full></core-input>
         </core-grid-item>
         <core-grid-item sm="6-7">
-          <core-button full>Subscribe</core-button>
+          <core-button variant="primary" full>Subscribe</core-button>
         </core-grid-item>
       </core-grid>
     </core-box>

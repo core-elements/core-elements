@@ -3,6 +3,7 @@ name: Overlay
 desc: Overlay
 category: Interaction
 icon: chatbox-outline
+element: "overlay"
 ---
 
 <core-knobs element="core-overlay">

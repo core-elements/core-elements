@@ -45,25 +45,21 @@
               v-for="pattern in filteredPatterns"
               :key="pattern.name"
             >
-              <core-overlay position-y="top" position-x="center" full hoverable>
-                <router-link
-                  slot="trigger"
-                  style="text-align: center"
-                  tag="core-box"
-                  depth="sm"
-                  p="lg"
-                  radius="xs"
-                  clickable
-                  full
-                  :to="`/patterns/${pattern.name}`"
-                >
-                  <core-box pb="sm">
-                    <ion-icon style="font-size: 2rem" :name="pattern.icon"></ion-icon>
-                  </core-box>
-                  <core-text size="md" weight="400">{{ pattern.name }}</core-text>
-                </router-link>
-                <div mode="dark" class="tooltip" slot="content">{{pattern.desc}}</div>
-              </core-overlay>
+              <router-link
+                style="text-align: center"
+                tag="core-box"
+                depth="sm"
+                p="lg"
+                radius="xs"
+                clickable
+                full
+                :to="`/patterns/${pattern.name}`"
+              >
+                <core-box pb="sm">
+                  <ion-icon style="font-size: 2rem" :name="pattern.icon"></ion-icon>
+                </core-box>
+                <core-text size="md" weight="400">{{ pattern.name }}</core-text>
+              </router-link>
             </core-grid-item>
           </core-grid>
         </core-box>

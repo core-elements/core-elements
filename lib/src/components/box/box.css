@@ -9,6 +9,10 @@
   width: auto;
 }
 
+:host([overflow="hidden"]) {
+  overflow: hidden;
+}
+
 :host([clickable]) {
   cursor: pointer;
 }

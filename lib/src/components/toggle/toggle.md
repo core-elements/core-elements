@@ -9,6 +9,14 @@ icon: toggle-outline
 <core-toggle>Toggle</core-toggle>
 </core-knobs>
 
+## Sizes
+
+<core-knobs hideTabs  element="core-toggle">
+<core-toggle label="Small" size="sm"></core-toggle>
+<core-toggle label="Medium" size="md"></core-toggle>
+<core-toggle label="Large" size="lg"></core-toggle>
+</core-knobs>
+
 ## Custom icons
 
 ### On / Off

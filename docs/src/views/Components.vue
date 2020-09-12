@@ -48,25 +48,21 @@
               v-for="component in filteredComponents"
               :key="component.name"
             >
-              <core-overlay position-y="top" position-x="center" full hoverable>
-                <router-link
-                  slot="trigger"
-                  style="text-align: center"
-                  tag="core-box"
-                  depth="sm"
-                  p="lg"
-                  radius="xs"
-                  clickable
-                  full
-                  :to="`/elements/${component.name}`"
-                >
-                  <core-box pb="sm">
-                    <ion-icon style="font-size: 2rem" :name="component.icon"></ion-icon>
-                  </core-box>
-                  <core-text size="md" weight="400">{{ component.name }}</core-text>
-                </router-link>
-                <div mode="dark" class="tooltip" slot="content">{{component.desc}}</div>
-              </core-overlay>
+              <router-link
+                style="text-align: center"
+                tag="core-box"
+                depth="sm"
+                p="lg"
+                radius="xs"
+                clickable
+                full
+                :to="`/elements/${component.name}`"
+              >
+                <core-box pb="sm">
+                  <ion-icon style="font-size: 2rem" :name="component.icon"></ion-icon>
+                </core-box>
+                <core-text size="md" weight="400">{{ component.name }}</core-text>
+              </router-link>
             </core-grid-item>
           </core-grid>
         </core-box>

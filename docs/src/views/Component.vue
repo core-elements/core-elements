@@ -20,6 +20,13 @@
       <core-text tag="h1">{{ component.name }}</core-text>
       <core-text tag="p" look="lead">{{ component.desc }}</core-text>
 
+      <core-box my="lg" v-if="usedPatterns.length">
+        <core-text tag="span">Used in these patterns:</core-text>
+        <core-box mr="xs" inline v-for="pattern in usedPatterns" :key="pattern.slug">
+          <router-link :to="'/patterns/' + pattern.name">{{pattern.name}}</router-link>
+        </core-box>
+      </core-box>
+
       <core-box
         bg="white"
         style="position: sticky; top: 0; left: 0; z-index: 300"
@@ -42,7 +49,7 @@
 
 <script>
 import marked from "marked";
-import { components } from "../db.json";
+import { components, patterns } from "../db.json";
 import SidebarLayout from "../layouts/SidebarLayout";
 
 export default {
@@ -55,6 +62,7 @@ export default {
     return {
       subMenu: [],
       components,
+      patterns,
     };
   },
   watch: {
@@ -98,6 +106,14 @@ export default {
     },
   },
   computed: {
+    usedPatterns() {
+      return this.patterns.reduce((acc, pattern) => {
+        const element =
+          pattern.elements &&
+          pattern.elements.find((el) => this.component.element == el);
+        return element ? [...acc, pattern] : acc;
+      }, []);
+    },
     component() {
       return components.find((c) => c.name === this.$route.params.element);
     },

@@ -24,6 +24,7 @@
 }
 
 :host {
+  border-width: 2px;
   outline: 0;
   vertical-align: middle;
   display: inline-flex;

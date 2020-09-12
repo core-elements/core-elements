@@ -3,6 +3,7 @@ name: Checkbox
 desc: A checkbox element
 category: Form
 icon: checkbox-outline
+element: "checkbox"
 ---
 
 <core-knobs element="core-checkbox">
@@ -101,32 +102,5 @@ icon: checkbox-outline
   <core-checkbox class="heart">
     <i slot="indicator" class="gg-heart"></i>
     Remove default box styling
-  </core-checkbox>
-</core-knobs>
-
-## Choice buttons
-
-<core-knobs hideTabs  element="core-checkbox">
-  <style>
-    .choice {
-      margin-bottom: var(--core-space-md);
-      padding: var(--core-space-md);
-      height: auto;
-      border: 2px solid var(--core-color-ui);
-    }
-    .choice:hover {
-      border-color: var(--core-color-ui);
-    }
-    .choice[checked] {
-      border-color: var(--core-color-primary);
-    }
-  </style>
-  <core-checkbox class="choice" full>
-    <core-text tag="div" look="h3">French Fries</core-text>
-    <core-text tag="div" look="p">They're really good</core-text>
-  </core-checkbox>
-  <core-checkbox class="choice" full>
-    <core-text tag="div" look="h3">Cheddar</core-text>
-    <core-text tag="div" look="p">Melted over yummy stuff</core-text>
   </core-checkbox>
 </core-knobs>

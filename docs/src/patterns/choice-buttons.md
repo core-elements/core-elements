@@ -1,49 +1,46 @@
 ---
-name: Radio
-desc: Radio button
-category: Form
-icon: radio-button-on-outline
-element: "radio"
+name: Choice buttons
+desc: Choice buttons
+category: Interaction
+icon: albums-outline
+elements: ["checkbox", "radio"]
 ---
 
-<core-knobs  element="core-radio">
-<core-radio name="example-1" value="1">Option 1</core-radio>
-<core-radio name="example-1" value="2">Option 2</core-radio>
-<core-radio name="example-1" value="3">Option 3</core-radio>
-<core-radio name="example-1" value="4" disabled>Option 4</core-radio>
+## Checkbox buttons
+
+<core-knobs hideTabs  element="core-checkbox">
+  <style>
+    .choice {
+      margin-bottom: var(--core-space-md);
+      padding: var(--core-space-md);
+      height: auto;
+      border: 2px solid var(--core-color-ui);
+    }
+    .choice:hover {
+      border-color: var(--core-color-ui);
+    }
+    .choice[checked] {
+      border-color: var(--core-color-primary);
+    }
+  </style>
+  <core-checkbox class="choice" full>
+    <core-text tag="div" look="h3">French Fries</core-text>
+    <core-text tag="div" look="p">They're really good</core-text>
+  </core-checkbox>
+  <core-checkbox class="choice" full>
+    <core-text tag="div" look="h3">Cheddar</core-text>
+    <core-text tag="div" look="p">Melted over yummy stuff</core-text>
+  </core-checkbox>
 </core-knobs>
 
-## Custom icons
-
-<core-knobs hideTabs  element="core-radio">
-<style>
-  .animate [slot="indicator"] {
-    transform: rotate(-45deg);
-    transition: transform 0.4s ease;
-  }
-  .animate[checked] [slot="indicator"] {
-    transform: rotate(0deg);
-  }
-</style>
-
-<core-radio class="animate" name="example-3">
-  Radio
-  <i slot="indicator" class="gg-check"></i>
-</core-radio>
-<core-radio class="animate" name="example-3">
-  Radio
-  <i slot="indicator" class="gg-check"></i>
-</core-radio>
-</core-knobs>
-
-## Choice buttons
+## Radio buttons
 
 <core-knobs hideTabs  element="core-radio">
 <style>
   core-radio.choice {
+    height: auto;
     margin-bottom: var(--core-space-md);
-    padding: 0 var(--core-space-md);
-    height: var(--core-element-height-xl);
+    padding: var(--core-space-md);
     border: 2px solid var(--core-color-ui);
   }
   core-radio.choice:hover {

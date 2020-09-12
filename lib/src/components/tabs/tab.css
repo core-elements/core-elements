@@ -12,7 +12,6 @@
   box-shadow: var(--core-tab-box-shadow);
   outline: 0;
   padding: 0 var(--core-space-sm);
-  margin-right: var(--core-space-sm);
   border-width: var(--core-tab-border-width);
   border-color: var(--core-tab-border-color);
   border-bottom-style: var(--core-tab-border-bottom-style);
