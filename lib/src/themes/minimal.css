@@ -12,19 +12,19 @@
   --core-focus-outline: 0px 0px 0px 4px var(--core-color-focus);
 
   --core-color-success-hue: 130;
-  --core-color-success: hsl(var(--core-color-success-hue), 48%, 44%);
-  --core-color-success-hover: hsl(var(--core-color-success-hue), 48%, 30%);
-  --core-color-success-contrast: white;
+  --core-color-success: hsl(var(--core-color-success-hue), 48%, 80%);
+  --core-color-success-hover: hsl(var(--core-color-success-hue), 48%, 75%);
+  --core-color-success-contrast: hsl(var(--core-color-success-hue), 48%, 20%);
 
   --core-color-warning-hue: 46;
-  --core-color-warning: hsl(var(--core-color-warning-hue), 70%, 61%);
-  --core-color-warning-hover: hsl(var(--core-color-warning-hue), 70%, 51%);
-  --core-color-warning-contrast: white;
+  --core-color-warning: hsl(var(--core-color-warning-hue), 70%, 80%);
+  --core-color-warning-hover: hsl(var(--core-color-warning-hue), 70%, 75%);
+  --core-color-warning-contrast: hsl(var(--core-color-warning-hue), 48%, 25%);
 
   --core-color-danger-hue: 349;
-  --core-color-danger: hsl(var(--core-color-danger-hue), 75%, 40%);
-  --core-color-danger-hover: hsl(var(--core-color-danger-hue), 75%, 30%);
-  --core-color-danger-contrast: white;
+  --core-color-danger: hsl(var(--core-color-danger-hue), 70%, 80%);
+  --core-color-danger-hover: hsl(var(--core-color-danger-hue), 70%, 75%);
+  --core-color-danger-contrast: hsl(var(--core-color-danger-hue), 48%, 30%);
 
   --core-color-ui-hue: var(--core-color-primary-hue);
   --core-color-ui: hsl(var(--core-color-ui-hue), 10%, 85%);

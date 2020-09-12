@@ -23,7 +23,8 @@
 }
 
 :host(:hover) {
-  --core-tab-border-color: var(--core-color-ui);
+  --core-tab-color: var(--core-color-font);
+  --core-tab-border-color: transparent;
 }
 
 :host(:focus) {
@@ -31,6 +32,6 @@
 }
 
 :host([selected]) {
-  --core-tab-color: var(--core-color-font-strong);
+  --core-tab-color: var(--core-color-primary);
   --core-tab-border-color: var(--core-color-primary);
 }

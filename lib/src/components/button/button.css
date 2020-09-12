@@ -124,7 +124,7 @@
 
 :host([variant="warning"]) {
   --core-button-bg-color: var(--core-color-warning);
-  --core-button-text-color: var(--core-color-success-contrast);
+  --core-button-text-color: var(--core-color-warning-contrast);
 }
 
 :host([variant="warning"]:hover:not([disabled])) {
