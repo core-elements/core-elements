@@ -981,31 +981,31 @@
         {
           "name": "gap",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"sm\""
         },
         {
           "name": "gapSm",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "gapMd",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "gapLg",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "gapXl",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
@@ -1019,35 +1019,35 @@
           "name": "gap",
           "attribute": "gap",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"sm\""
         },
         {
           "name": "gapSm",
           "attribute": "gapSm",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "gapMd",
           "attribute": "gapMd",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "gapLg",
           "attribute": "gapLg",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {
           "name": "gapXl",
           "attribute": "gapXl",
           "description": "Grid gap",
-          "type": "\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
+          "type": "\"none\"|\"xs\"|\"sm\"|\"md\"|\"lg\"|\"xl\"",
           "default": "\"\""
         },
         {

@@ -32,6 +32,6 @@
 }
 
 :host([selected]) {
-  --core-tab-color: var(--core-color-primary);
+  --core-tab-color: var(--core-color-black);
   --core-tab-border-color: var(--core-color-primary);
 }
