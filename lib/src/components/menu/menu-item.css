@@ -33,6 +33,11 @@
   outline: 0;
 }
 
+:host([disabled]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 :host([size="sm"]) {
   --core-list-item-height: var(--core-element-height-sm);
   --core-list-item-padding: 0 var(--core-space-md);

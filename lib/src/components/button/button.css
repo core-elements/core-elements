@@ -49,6 +49,18 @@
   cursor: not-allowed;
 }
 
+:host([squared]) {
+  width: var(--core-button-height);
+  height: var(--core-button-height);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+:host([rounded]) {
+  border-radius: 300px;
+}
+
 :host([size="sm"]) {
   --core-button-font-size: var(--core-font-size-md);
   --core-button-height: var(--core-element-height-sm);
@@ -65,18 +77,6 @@
   --core-button-font-size: var(--core-font-size-md);
   --core-button-height: var(--core-element-height-lg);
   --core-button-padding: 0 var(--core-space-lg);
-}
-
-:host([squared]) {
-  width: var(--core-button-height);
-  height: var(--core-button-height);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-:host([rounded]) {
-  border-radius: 300px;
 }
 
 /* Slots */

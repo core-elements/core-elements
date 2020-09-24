@@ -6,7 +6,7 @@ icon: tablet-landscape-outline
 ---
 
 <core-knobs  tab="props" element="core-button">
-<core-button>Button</core-button>
+<core-button disabled>Button</core-button>
 </core-knobs>
 
 ## Variants

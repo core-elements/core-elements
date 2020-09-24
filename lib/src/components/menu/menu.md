@@ -13,6 +13,9 @@ icon: menu-outline
     <core-menu-item>
       Menu item
     </core-menu-item>
+    <core-menu-item disabled>
+      Disabled Menu item
+    </core-menu-item>
   </core-menu>
 </core-knobs>
 
