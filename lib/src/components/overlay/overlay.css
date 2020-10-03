@@ -39,7 +39,6 @@
   visibility: visible;
   --core-overlay-scale: 1;
   --core-overlay-opacity: 1;
-  transition: all 0.2s ease;
 }
 
 :host([position-x="left"]) [part="content"] {

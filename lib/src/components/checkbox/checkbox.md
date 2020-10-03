@@ -7,7 +7,8 @@ element: "checkbox"
 ---
 
 <core-knobs element="core-checkbox">
-  <core-checkbox label="Checkbox"></core-checkbox>
+  <core-checkbox label="Checkbox">
+  </core-checkbox>
 </core-knobs>
 
 ## Sizes

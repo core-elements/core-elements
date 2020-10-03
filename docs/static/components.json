@@ -19,6 +19,11 @@
           "default": "\"\""
         },
         {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
           "name": "hide-default-indicator",
           "type": "boolean",
           "default": "false"
@@ -55,6 +60,12 @@
           "attribute": "size",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
         },
         {
           "name": "hideDefaultIndicator",
@@ -109,7 +120,7 @@
         {
           "name": "bg",
           "description": "Box background color",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "type": "\"primary\"|\"primary-weak\"|\"primary-strong\"|\"success\"|\"success-strong\"|\"success-weak\"|\"warning\"|\"warning-strong\"|\"warning-weak\"|\"danger\"|\"danger-strong\"|\"danger-weak\"|\"ui\"|\"ui-weak\"|\"ui-strong\"",
           "default": "\"\""
         },
         {
@@ -127,13 +138,13 @@
         {
           "name": "color",
           "description": "Box font color",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "type": "\"primary\"|\"primary-weak\"|\"primary-strong\"|\"success\"|\"success-strong\"|\"success-weak\"|\"warning\"|\"warning-strong\"|\"warning-weak\"|\"danger\"|\"danger-strong\"|\"danger-weak\"|\"ui\"|\"ui-weak\"|\"ui-strong\"",
           "default": "\"\""
         },
         {
           "name": "border",
           "description": "Box border",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "type": "\"primary\"|\"primary-weak\"|\"primary-strong\"|\"success\"|\"success-strong\"|\"success-weak\"|\"warning\"|\"warning-strong\"|\"warning-weak\"|\"danger\"|\"danger-strong\"|\"danger-weak\"|\"ui\"|\"ui-weak\"|\"ui-strong\"",
           "default": "\"\""
         },
         {
@@ -255,7 +266,7 @@
           "name": "bg",
           "attribute": "bg",
           "description": "Box background color",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "type": "\"primary\"|\"primary-weak\"|\"primary-strong\"|\"success\"|\"success-strong\"|\"success-weak\"|\"warning\"|\"warning-strong\"|\"warning-weak\"|\"danger\"|\"danger-strong\"|\"danger-weak\"|\"ui\"|\"ui-weak\"|\"ui-strong\"",
           "default": "\"\""
         },
         {
@@ -276,14 +287,14 @@
           "name": "color",
           "attribute": "color",
           "description": "Box font color",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "type": "\"primary\"|\"primary-weak\"|\"primary-strong\"|\"success\"|\"success-strong\"|\"success-weak\"|\"warning\"|\"warning-strong\"|\"warning-weak\"|\"danger\"|\"danger-strong\"|\"danger-weak\"|\"ui\"|\"ui-weak\"|\"ui-strong\"",
           "default": "\"\""
         },
         {
           "name": "border",
           "attribute": "border",
           "description": "Box border",
-          "type": "\"primary\"|\"secondary\"|\"success\"|\"danger\"",
+          "type": "\"primary\"|\"primary-weak\"|\"primary-strong\"|\"success\"|\"success-strong\"|\"success-weak\"|\"warning\"|\"warning-strong\"|\"warning-weak\"|\"danger\"|\"danger-strong\"|\"danger-weak\"|\"ui\"|\"ui-weak\"|\"ui-strong\"",
           "default": "\"\""
         },
         {
@@ -425,6 +436,10 @@
       "path": "./../../lib/src/components/button/button.wc.js",
       "attributes": [
         {
+          "name": "href",
+          "type": "string"
+        },
+        {
           "name": "disabled",
           "type": "boolean"
         },
@@ -458,6 +473,11 @@
         }
       ],
       "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "type": "string"
+        },
         {
           "name": "disabled",
           "attribute": "disabled",
@@ -516,6 +536,10 @@
       "path": "./../../lib/src/components/checkbox/checkbox.wc.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "checked",
           "type": "boolean"
         },
@@ -535,11 +559,6 @@
           "type": "string"
         },
         {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "value",
           "type": "string",
           "default": "\"\""
@@ -551,6 +570,11 @@
         }
       ],
       "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
         {
           "name": "hasLabel",
           "type": "boolean"
@@ -577,12 +601,6 @@
           "name": "label",
           "attribute": "label",
           "type": "string"
-        },
-        {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean",
-          "default": "false"
         },
         {
           "name": "value",
@@ -1529,7 +1547,18 @@
     {
       "name": "core-menu-item",
       "path": "./../../lib/src/components/menu/menu-item.wc.js",
+      "attributes": [
+        {
+          "name": "disabled",
+          "type": "boolean"
+        }
+      ],
       "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
         {
           "name": "showListStart",
           "type": "Element | null"
@@ -1764,6 +1793,10 @@
         {
           "name": "currentCheckedItem",
           "type": "Element | undefined"
+        },
+        {
+          "name": "hasLabel",
+          "type": "boolean"
         },
         {
           "name": "checked",
@@ -2338,6 +2371,10 @@
       "path": "./../../lib/src/components/tabs/tab.wc.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "value",
           "type": "string"
         },
@@ -2352,17 +2389,17 @@
           "default": "\"\""
         },
         {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "hash",
           "type": "string",
           "default": "\"\""
         }
       ],
       "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
         {
           "name": "value",
           "attribute": "value",
@@ -2381,16 +2418,15 @@
           "default": "\"\""
         },
         {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
           "name": "hash",
           "attribute": "hash",
           "type": "string",
           "default": "\"\""
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
         }
       ]
     },

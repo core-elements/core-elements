@@ -40,6 +40,11 @@
   outline: 0;
 }
 
+:host([disabled]) [part="trigger"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 [part="trigger"]:focus {
   box-shadow: var(--core-focus-outline);
 }

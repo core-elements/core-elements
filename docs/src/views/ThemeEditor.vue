@@ -97,6 +97,8 @@ input[type="color"]::-webkit-color-swatch {
         <core-button variant="warning">Warning</core-button>
         <core-button variant="danger">Danger</core-button>
         <core-button variant="transparent">Transparent</core-button>
+      </core-box>
+      <core-box my="lg">
         <core-button size="sm">Small</core-button>
         <core-button size="md">Medium</core-button>
         <core-button size="lg">Large</core-button>
@@ -112,6 +114,8 @@ input[type="color"]::-webkit-color-swatch {
           <core-tab>Tab 3</core-tab>
         </core-tabs>
         <core-input placeholder="Placeholder"></core-input>
+        <core-input valid placeholder="Valid"></core-input>
+        <core-input invalid placeholder="Invalid"></core-input>
         <core-select>
           <core-option selected value="1">Option 1</core-option>
           <core-option value="2">Option 2</core-option>
@@ -353,6 +357,11 @@ export default {
               variable: "core-element-height-md",
               value: getProperty("core-element-height-md"),
               label: "Medium",
+            },
+            {
+              variable: "core-element-height-lg",
+              value: getProperty("core-element-height-lg"),
+              label: "Large",
             },
           ],
         },

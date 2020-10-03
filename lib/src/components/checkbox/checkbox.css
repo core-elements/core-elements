@@ -35,7 +35,7 @@
 }
 
 :host(:hover) {
-  --box-background: var(--core-color-ui-weak);
+  --box-border-color: var(--core-color-ui-strong);
 }
 
 :host([disabled]) {

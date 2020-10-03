@@ -76,10 +76,6 @@
   height: var(--core-toggle-indicator-size);
 }
 
-:host(:hover) [part="indicator"] {
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-}
-
 [part="on"] {
   display: flex;
   align-items: center;

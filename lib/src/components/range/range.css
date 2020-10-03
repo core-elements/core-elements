@@ -92,6 +92,10 @@
   box-shadow: var(--core-focus-outline);
 }
 
+[part="thumb"]:active {
+  cursor: grabbing;
+}
+
 [part="labels"] {
   margin-top: var(--core-space-md);
   display: flex;

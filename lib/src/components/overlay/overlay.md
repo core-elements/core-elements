@@ -39,7 +39,7 @@ element: "overlay"
   }
 </style>
 
-<core-overlay id="overlay" position-x="center" position-y="center">
+<core-overlay id="overlay" position-x="left" position-y="bottom">
   <core-button id="trigger" slot="trigger" full>
     <span>Select an option</span>
     <ion-icon slot="end" name="chevron-down-outline"></ion-icon>

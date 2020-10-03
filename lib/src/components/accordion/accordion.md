@@ -16,6 +16,9 @@ icon: file-tray-stacked-outline
   <core-accordion-item heading="Accordion 3">
     <core-box p="md">Content</core-box>
   </core-accordion-item>
+  <core-accordion-item disabled heading="Disabled Accordion 4">
+    <core-box p="md">Content</core-box>
+  </core-accordion-item>
 </core-accordion>
 </core-knobs>
 

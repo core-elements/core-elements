@@ -41,7 +41,7 @@
 }
 
 :host(:hover:not([disabled]):not([checked])) {
-  --box-background-color: var(--core-color-ui-weak);
+  --box-border-color: var(--core-color-ui-strong);
 }
 
 :host([checked]) {
