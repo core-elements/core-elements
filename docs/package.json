@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.1.4",
-    "core-elements": "0.0.35",
+    "core-elements": "0.0.36",
     "highlight.js": "^9.18.3",
     "hljs": "^6.2.3",
     "marked": "^1.1.1",
