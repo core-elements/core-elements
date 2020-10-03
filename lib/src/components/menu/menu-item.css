@@ -1,6 +1,6 @@
 :host {
   --core-list-item-bg: var(--core-color-white);
-  --core-list-item-border-radius: 0;
+  --core-list-item-border-radius: var(--core-border-radius-default);
 }
 
 :host {

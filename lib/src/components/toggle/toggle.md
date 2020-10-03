@@ -9,7 +9,9 @@ icon: toggle-outline
 <core-toggle>Toggle</core-toggle>
 </core-knobs>
 
-## Sizes
+## Options
+
+### Sizes
 
 <core-knobs hideTabs  element="core-toggle">
 <core-toggle label="Small" size="sm"></core-toggle>
@@ -17,34 +19,9 @@ icon: toggle-outline
 <core-toggle label="Large" size="lg"></core-toggle>
 </core-knobs>
 
-## Custom icons
+## Slots
 
-### On / Off
-
-<core-knobs hideTabs  element="core-toggle">
-<core-toggle checked>
-  <ion-icon slot="on" name="sunny-outline"></ion-icon>
-  Label
-  <ion-icon slot="off" name="moon-outline"></ion-icon>
-</core-toggle>
-</core-knobs>
-
-## Label position
-
-<core-knobs hideTabs  element="core-toggle">
-  <style>
-    .position {
-      flex-direction: row-reverse;
-    }
-    .position::part(label) {
-      margin-right: var(--core-space-md);
-      margin-left: 0;
-    }
-  </style>
-  <core-toggle label="Left label" class="position"></core-toggle>
-</core-knobs>
-
-### Indicator icon
+### Indicator
 
 <core-knobs hideTabs  element="core-toggle">
 <style>
@@ -61,7 +38,34 @@ icon: toggle-outline
 </core-toggle>
 </core-knobs>
 
-## Animate icon
+### On / Off
+
+<core-knobs hideTabs  element="core-toggle">
+<core-toggle checked>
+  <ion-icon slot="on" name="sunny-outline"></ion-icon>
+  Label
+  <ion-icon slot="off" name="moon-outline"></ion-icon>
+</core-toggle>
+</core-knobs>
+
+## Styling
+
+### Label position
+
+<core-knobs hideTabs  element="core-toggle">
+  <style>
+    .position {
+      flex-direction: row-reverse;
+    }
+    .position::part(label) {
+      margin-right: var(--core-space-md);
+      margin-left: 0;
+    }
+  </style>
+  <core-toggle label="Left label" class="position"></core-toggle>
+</core-knobs>
+
+### Animated icon
 
 <core-knobs hideTabs  element="core-toggle">
 <style>

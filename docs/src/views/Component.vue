@@ -27,20 +27,11 @@
         </core-box>
       </core-box>
 
-      <core-box
-        bg="white"
-        style="position: sticky; top: 0; left: 0; z-index: 300"
-        pt="xl"
-        v-if="subMenu.length"
-      >
-        <core-tabs>
-          <router-link
-            tag="core-tab"
-            :to="{ hash: menu.id }"
-            v-for="menu in subMenu"
-            :key="menu.id"
-          >{{ menu.title }}</router-link>
-        </core-tabs>
+      <core-box pt="xl" v-if="subMenu.length">
+        <core-text uppercase size="xs">Overview</core-text>
+        <core-box my="sm" v-for="menu in subMenu" :key="menu.id">
+          <router-link tag="core-text" size="sm" :to="{ hash: menu.id }">{{ menu.title }}</router-link>
+        </core-box>
       </core-box>
       <core-box class="markdown-body" my="xl" v-html="html"></core-box>
     </div>
