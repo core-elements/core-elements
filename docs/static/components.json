@@ -1751,6 +1751,10 @@
       "path": "./../../lib/src/components/radio/radio.wc.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "checked",
           "type": "boolean"
         },
@@ -1778,14 +1782,14 @@
           "name": "full",
           "type": "boolean",
           "default": "false"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false"
         }
       ],
       "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
         {
           "name": "options",
           "type": "Element[]"
@@ -1832,15 +1836,6 @@
           "attribute": "full",
           "type": "boolean",
           "default": "false"
-        },
-        {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "focus"
         },
         {
           "name": "selectNext"
@@ -2635,6 +2630,10 @@
       "path": "./../../lib/src/components/toggle/toggle.wc.js",
       "attributes": [
         {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
           "name": "checked",
           "type": "boolean"
         },
@@ -2663,14 +2662,14 @@
           "name": "name",
           "type": "string",
           "default": "\"\""
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false"
         }
       ],
       "properties": [
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
         {
           "name": "formElement",
           "type": "HTMLInputElement | null"
@@ -2710,12 +2709,6 @@
           "attribute": "name",
           "type": "string",
           "default": "\"\""
-        },
-        {
-          "name": "disabled",
-          "attribute": "disabled",
-          "type": "boolean",
-          "default": "false"
         }
       ],
       "events": [
